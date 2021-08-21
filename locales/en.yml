@@ -1,0 +1,15 @@
+navbar:
+    documentation: Documentation
+    input:
+        placeholder: Search for anything..
+button:
+    about: About
+    back: Back
+    go: GO
+    home: Home
+index:
+    header:
+        title: Your next Vue.js project deserves a better
+        titleHighlight: developer experience
+        description: Inkline is an intuitive, customizable and accessible component library that provides you with the foundation for building high quality Vue.js design systems.
+        button: Get started
