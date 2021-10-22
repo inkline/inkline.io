@@ -4,7 +4,7 @@ description: Indicate the current page’s location depth using a navigation lis
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/breadcrumb'
 </script>
 
 # Breadcrumb

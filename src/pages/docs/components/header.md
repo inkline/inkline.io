@@ -4,7 +4,7 @@ description: A lightweight, responsive header component used for showcasing hero
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/header'
 </script>
 
 # Header

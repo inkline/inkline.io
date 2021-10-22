@@ -4,7 +4,7 @@ description: Provide a loading state for a component or page using a customizabl
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/loader'
 </script>
 
 # Loader

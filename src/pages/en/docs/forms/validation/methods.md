@@ -4,7 +4,7 @@ description: The form validation framework wouldn't be complete without dynamica
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../../examples/forms/validation/methods'
 </script>
 
 # Form Validation Methods

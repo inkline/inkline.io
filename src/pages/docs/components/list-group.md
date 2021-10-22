@@ -4,7 +4,7 @@ description: List groups are flexible components used for displaying a list of r
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/list-group'
 </script>
 
 # List Group

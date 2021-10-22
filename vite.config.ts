@@ -12,6 +12,17 @@ import markdownPrism from 'markdown-it-prism';
 // @ts-expect-error missing types
 import markdownLinkAttributes from 'markdown-it-link-attributes';
 
+function html() {
+    return {
+        name: 'html',
+        transform (code: any, id: string) {
+            if (/\.html$/.test(id)) {
+                return `export default ${JSON.stringify(code)}`;
+            }
+        }
+    };
+}
+
 /**
  * @docs https://vitejs.dev/config/
  */
@@ -68,14 +79,14 @@ export default defineConfig({
             headEnabled: true,
             markdownItSetup(md) {
                 // https://prismjs.com/
-                md.use(markdownPrism)
+                md.use(markdownPrism);
                 md.use(markdownLinkAttributes, {
                     pattern: /^https?:\/\//,
                     attrs: {
                         target: '_blank',
                         rel: 'noopener',
                     },
-                })
+                });
             },
         }),
 
@@ -120,6 +131,8 @@ export default defineConfig({
             compositionOnly: true,
             include: [path.resolve(__dirname, 'locales/**')],
         }),
+
+        html()
     ],
 
     server: {

@@ -6,12 +6,13 @@ import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
 import App from '~/App.vue';
 import { Inkline } from '@inkline/inkline';
+import * as components from '@inkline/inkline/components';
 
 import * as inklineIcons from '@inkline/icons/packs/inkline';
 import { fasSun, fasMoon } from '@inkline/icons/packs/fontawesome/solid';
 import { fabGithub } from '@inkline/icons/packs/fontawesome/brands';
 
-import '~/css/main.scss';
+import '~/main.scss';
 
 const routes = setupLayouts(generatedRoutes);
 
@@ -26,6 +27,7 @@ export const createApp = ViteSSG(App, { routes }, (ctx: ViteSSGContext<true>) =>
             fasMoon,
             fabGithub,
             ...inklineIcons
-        }
+        },
+        components
     });
 });

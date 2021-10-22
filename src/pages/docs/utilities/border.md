@@ -4,7 +4,7 @@ description: Use border utilities to quickly apply border styles to an element. 
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/border'
 </script>
 
 

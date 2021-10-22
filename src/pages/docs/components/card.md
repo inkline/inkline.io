@@ -4,7 +4,7 @@ description: Cards provide you with a flexible and extensible content container 
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/card'
 </script>
 
 # Card

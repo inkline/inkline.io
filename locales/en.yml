@@ -11,5 +11,8 @@ index:
     header:
         title: Your next Vue.js project deserves a better
         titleHighlight: developer experience
-        description: Inkline is an intuitive, customizable and accessible component library that provides you with the foundation for building high quality Vue.js design systems.
+        description: Inkline is an intuitive, customizable and accessible UI Components library that provides you with the foundation for building high quality Vue.js design systems.
         button: Get started
+    designSystem:
+        title: Build your design system. Fast.
+        description: Make components look the way you want, without the hassle. More time to focus on building a great experience for your customers.

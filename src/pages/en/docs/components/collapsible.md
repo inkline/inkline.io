@@ -4,7 +4,7 @@ description: Collapsible elements are used to show and hide content using a smoo
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/collapsible'
 </script>
 
 # Collapsible

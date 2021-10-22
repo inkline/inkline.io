@@ -4,7 +4,7 @@ description: Popovers are useful for conveying information when an user clicks a
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/popover'
 </script>
 
 # Popover

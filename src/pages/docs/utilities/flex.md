@@ -4,7 +4,7 @@ description: Use flexbox utilities to modify the layout, alignment, and sizing o
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/flex'
 </script>
 
 # Flex Utilities

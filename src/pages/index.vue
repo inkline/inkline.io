@@ -3,7 +3,7 @@
         <index-header-section />
         <hr>
         <index-design-system-section />
-        <index-basic-example-embed-section />
+        <!--<index-example-embed-section />-->
     </main>
 </template>
 

@@ -4,7 +4,7 @@ description: Change the display style of components responsively with display ut
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/utilities/display'
 </script>
 
 # Display Utilities

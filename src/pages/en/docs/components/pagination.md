@@ -4,7 +4,7 @@ description: Pagination provides navigation for large series of related content.
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/pagination'
 </script>
 
 

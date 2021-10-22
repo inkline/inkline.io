@@ -4,7 +4,7 @@ description: Group multiple buttons together on a single line using a button gro
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/button-group'
 </script>
 
 # Button Group

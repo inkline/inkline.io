@@ -4,7 +4,7 @@ description: Provide contextual feedback messages for typical user actions using
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/alert'
 </script>
 
 # Alert

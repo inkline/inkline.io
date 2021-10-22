@@ -4,7 +4,7 @@ description: Tab elements are used to switch between multiple sections of relate
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/tabs'
 </script>
 
 # Tabs

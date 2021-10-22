@@ -4,7 +4,7 @@ description: Inkline uses a beautiful, consistent color scheme across the framew
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/color'
 </script>
 
 

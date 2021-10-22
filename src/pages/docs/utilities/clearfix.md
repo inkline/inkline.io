@@ -4,7 +4,7 @@ description: Use the clearfix utility to clear floated content within a containe
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/clearfix'
 </script>
 
 # Clearfix Utilities
@@ -21,7 +21,7 @@ In the following example, without adding the clearfix helper, the wrapping div w
 The clearfix utility is also available as a Sass Mixin.
 
 ~~~scss
-@require '~@inkline/inkline/src/css/mixins/clearfix'
+@require '~@inkline/inkline/css/mixins/clearfix'
 
 .element {
   @include clearfix;

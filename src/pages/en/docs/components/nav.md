@@ -4,7 +4,7 @@ description: Navs are basic navigation components that provide alignment and spa
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/nav'
 </script>
 
 # Nav

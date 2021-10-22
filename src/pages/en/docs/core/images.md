@@ -4,7 +4,7 @@ description: Documentation and examples for images, using lightweight styles and
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/core/images'
 </script>
 
 # Images

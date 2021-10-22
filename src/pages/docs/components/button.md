@@ -4,7 +4,7 @@ description: Inkline provides you with custom button styles with support for mul
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/button'
 </script>
 
 # Button

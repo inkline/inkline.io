@@ -4,7 +4,7 @@ description: Control the visibility, with or without modifying the display of el
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/visibility'
 </script>
 
 # Visibility Utilities

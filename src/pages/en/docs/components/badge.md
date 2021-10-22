@@ -4,7 +4,7 @@ description: Documentation and examples for badges, a small component used for c
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/badge'
 </script>
 
 # Badge

@@ -4,7 +4,7 @@ description: Use common text utilities to control alignment, wrapping, weight, a
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/utilities/text'
 </script>
 
 # Text Utilities

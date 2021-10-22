@@ -4,7 +4,7 @@ description: Create responsive video embeds by keeping the aspect ratio based on
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/embed'
 </script>
 
 # Embed Utilities

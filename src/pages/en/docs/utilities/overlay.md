@@ -4,7 +4,7 @@ description: Make an element overlay its container by adding overlay utilities.
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/utilities/overlay'
 </script>
 
 # Overlay Utilities

@@ -4,7 +4,7 @@ description: Dropdowns are contextual overlays toggled through clicking or hover
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/dropdown'
 </script>
 
 # Dropdown

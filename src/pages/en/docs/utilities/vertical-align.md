@@ -4,7 +4,7 @@ description: Change the vertical alignment of inline, inline block, inline table
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/utilities/vertical-align'
 </script>
 
 # Vertical Align Utilities

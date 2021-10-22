@@ -4,7 +4,7 @@ description: You can use the float utility on any element, for any breakpoint.
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/utilities/float'
 </script>
 
 # Float Utilities

@@ -4,7 +4,7 @@ description: Validators are configurable functions used to check whether an inpu
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/forms/validation/validators'
 </script>
 
 # Form Validators

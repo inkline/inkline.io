@@ -4,7 +4,7 @@ description: You can use the overflow utilities for deciding how content overflo
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/overflow'
 </script>
 
 # Overflow Utilities

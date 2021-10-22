@@ -4,7 +4,7 @@ description: Modals are dialogs that can be used for user notifications, lightbo
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/modal'
 </script>
 
 

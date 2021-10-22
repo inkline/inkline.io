@@ -4,7 +4,7 @@ description: A responsive navigation header that includes support for branding, 
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/navbar'
 </script>
 
 

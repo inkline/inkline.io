@@ -4,7 +4,7 @@ description:  The validation schema defines the form input fields, groups and ho
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../../examples/forms/validation/schema'
 </script>
 
 # Form Validation Schema

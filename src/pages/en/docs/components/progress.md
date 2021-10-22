@@ -4,7 +4,7 @@ description: A custom component for displaying progress with support for stacked
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../../examples/components/progress'
 </script>
 
 # Progress

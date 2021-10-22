@@ -1,3 +1,29 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+import logoWhite from "~/assets/images/brands/osawards-white.svg";
+import logoBlack from "~/assets/images/brands/osawards-black.svg";
+import { colorVariantClass } from '@inkline/inkline/mixins';
+
+export default defineComponent({
+    props: {
+        color: {
+            type: String,
+            default: ''
+        }
+    },
+    setup() {
+        return { logoWhite, logoBlack };
+    },
+    computed: {
+        classes() {
+            return {
+                ...colorVariantClass(this),
+            };
+        }
+    }
+});
+</script>
+
 <template>
     <div :class="['osawards', classes]">
         <img class="logo -white" :src="logoWhite" alt="Open Source Awards - Developer Experience - Vue.js London 2019">
@@ -11,8 +37,8 @@
 </template>
 
 <style lang="scss">
-@import '@inkline/inkline/src/css/variables';
-@import '@inkline/inkline/src/css/mixins';
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 .osawards {
     display: inline-flex;
@@ -60,23 +86,3 @@
     }
 }
 </style>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-import logoWhite from "~/assets/images/brands/osawards-white.svg";
-import logoBlack from "~/assets/images/brands/osawards-black.svg";
-import { colorVariantClass } from '@inkline/inkline/src/mixins';
-
-export default defineComponent({
-    setup() {
-        return { logoWhite, logoBlack };
-    },
-    computed: {
-        classes() {
-            return {
-                ...colorVariantClass(this),
-            };
-        }
-    }
-});
-</script>

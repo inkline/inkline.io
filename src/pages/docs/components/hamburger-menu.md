@@ -4,7 +4,7 @@ description: Inkline's hamburger menu is used to control opening and closing ele
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/hamburger-menu'
 </script>
 
 # Hamburger Menu

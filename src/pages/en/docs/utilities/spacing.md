@@ -4,7 +4,7 @@ description: You can use a wide range of responsive margin and padding utility c
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/utilities/spacing'
 </script>
 
 # Spacing Utilities

@@ -4,7 +4,7 @@ description: Examples for displaying inline and multi-line blocks of code.
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/core/code'
 </script>
 
 # Code

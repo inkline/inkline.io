@@ -4,7 +4,7 @@ description: Make an element as wide or as tall as you need using width and heig
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../examples/utilities/sizing'
 </script>
 
 # Sizing Utilities

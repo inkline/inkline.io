@@ -4,7 +4,7 @@ description: Media objects provide you with a flexible component that can be eas
 ---
 
 <script setup>
-import * as examples from '../examples';
+import * as examples from '../../../examples/components/media'
 </script>
 
 # Media

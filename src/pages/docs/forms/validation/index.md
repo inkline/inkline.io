@@ -4,7 +4,7 @@ description: Inkline provides you with powerful form validation utilities.
 ---
 
 <script setup>
-import * as examples from './examples';
+import * as examples from '../../../../examples/forms/validation'
 </script>
 
 # Form Validation
@@ -55,7 +55,7 @@ export default {
 The form schema prototype is created using the `useForm` utility inside components and will be used as the foundation for form validation schemas.
 
 ~~~js
-import { useForm } from '@inkline/inkline/src/composition-api';
+import { useForm } from '@inkline/inkline/composition-api';
 
 export default {
     setup() {
