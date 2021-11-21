@@ -33,6 +33,7 @@ export default defineConfig({
          */
         alias: {
             '~/': `${path.resolve(__dirname, 'src')}/`,
+            '~@inkline/inkline': '@inkline/inkline',
         },
     },
     plugins: [

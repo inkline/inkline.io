@@ -33,29 +33,26 @@ export default defineComponent({
         </i-row>
         <i-row>
             <i-column class="buttons">
-                <i-button size="lg" color="primary" class="_xs:margin-right:0 _sm:margin-right:1">
+                <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1">
                     {{ t('index.header.button') }}
                 </i-button>
-                <i-button size="lg">
+                <i-button id="github-button" size="lg">
                     <i-icon name="fab-github" class="_margin-right:1/2" />
-                    GitHub
+                    <span>GitHub</span>
                 </i-button>
-            </i-column>
-        </i-row>
-        <i-row>
-            <i-column>
-                <os-awards class="_margin-top:2" />
             </i-column>
         </i-row>
     </i-header>
 </template>
 
 <style lang="scss" scoped>
-@import '@inkline/inkline/css/variables';
-@import '@inkline/inkline/css/mixins';
+@import '~@inkline/inkline/css/variables';
+@import '~@inkline/inkline/css/mixins';
+
+$navbar-height: 72px;
 
 @include i-header() {
-    padding-top: calc(var(----padding-top) + 80px);
+    padding-top: calc(var(----padding-top) + #{$navbar-height});
     padding-bottom: var(----padding-bottom);
     background-repeat: no-repeat;
 
@@ -94,9 +91,11 @@ export default defineComponent({
 
     @include breakpoint-down('md') {
         background-image: url('~/assets/images/header/index-centered.svg');
-        padding-top: calc(var(----padding-top) + 120px);
-        background-position: center -80px;
+        padding-top: calc(340px + #{$navbar-height});
+        background-position: center $navbar-height;
         background-size: 800px auto;
+        height: 100vh;
+        padding-bottom: 0;
 
         .title {
             font-size: display-font-size('d6');
@@ -110,9 +109,24 @@ export default defineComponent({
         .buttons {
             display: flex;
             justify-content: space-between;
+            flex-basis: 100%;
 
             @include i-button() {
-                flex-basis: 50%;
+                min-width: auto;
+            }
+        }
+
+        #get-started-button {
+            width: 100%;
+        }
+
+        #github-button {
+            @include i-icon() {
+                margin-right: 0 !important;
+            }
+
+            span {
+                display: none;
             }
         }
 
@@ -123,6 +137,18 @@ export default defineComponent({
     }
 
     @include breakpoint-down('sm') {
+        .container > .row {
+            background: red;
+            align-self: stretch;
+            flex-direction: column;
+
+            > .column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
         .title {
             font-size: heading-font-size('h1');
         }
@@ -130,35 +156,22 @@ export default defineComponent({
 
     @include breakpoint-down('xs') {
         .title {
-            font-size: heading-font-size('h2');
+            font-size: heading-font-size('h3');
         }
 
         .description {
             font-size: font-size();
         }
-
-        .buttons {
-            flex-direction: column;
-
-            @include i-button() {
-                flex-basis: 100%;
-                margin-right: 0;
-
-                + .button {
-                    margin-top: spacing();
-                }
-            }
-        }
     }
 
     @include breakpoint-up('lg') {
-        background-image: url('~/assets/images/header/index.svg');
-        background-position: 120% top;
+        background-image: url('~/assets/images/header/index-christmas.svg');
+        background-position: 120% $navbar-height;
         background-size: auto 650px;
     }
 
     @include breakpoint-up('xl') {
-        background-position: right top;
+        background-position: right $navbar-height;
         background-size: auto 700px;
     }
 }

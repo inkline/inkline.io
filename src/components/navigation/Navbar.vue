@@ -1,10 +1,9 @@
 <script lang="ts">
-import { defineComponent, inject, ref, onMounted, onBeforeUnmount } from 'vue';
+import { defineComponent, inject, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import logoBlack from '~/assets/images/logo/logo-black.svg';
 import logoWhite from '~/assets/images/logo/logo-white.svg';
 import { Prototype } from '@inkline/inkline';
-import { on, off } from '@inkline/inkline/helpers';
 
 export default defineComponent({
     props: {
@@ -13,9 +12,8 @@ export default defineComponent({
             default: true
         }
     },
-    setup(props) {
+    setup() {
         const { t } = useI18n();
-        const isTransparent = ref(props.transparent);
         const inkline = inject<Prototype>('inkline', {} as any);
         const colorMode = ref(inkline.options.colorMode);
 
@@ -28,26 +26,9 @@ export default defineComponent({
             console.log('wat', mode)
         };
 
-        const onWindowScroll = () => {
-            isTransparent.value = window.scrollY < 48;
-        };
-
-        onMounted(() => {
-            if (props.transparent) {
-                on(window as any, 'scroll', onWindowScroll);
-            }
-        });
-
-        onBeforeUnmount(() => {
-            if (props.transparent) {
-                off(window as any, 'scroll', onWindowScroll);
-            }
-        });
-
         return {
             t,
             colorMode,
-            isTransparent,
             setColorMode,
             logoBlack,
             logoWhite
@@ -58,7 +39,7 @@ export default defineComponent({
 
 
 <template>
-    <i-navbar :class="{ '-transparent': isTransparent }" :collapse="false">
+    <i-navbar :collapse="false">
         <i-navbar-brand to="/" translate="no">
             <img class="logo -black" :src="logoBlack">
             <img class="logo -white" :src="logoWhite">
@@ -73,13 +54,14 @@ export default defineComponent({
             <!--    </template>-->
             <!--</i-input>-->
             <i-nav>
-                <i-nav-item :to="{ name: 'docs-introduction' }">
-                    {{ t('navbar.documentation') }}
+                <i-nav-item id="navbar-item-documentation" :to="{ name: 'docs-introduction' }">
+                    <span>{{ t('navbar.docs') }}</span>
+                    <span>{{ t('navbar.documentation') }}</span>
                 </i-nav-item>
                 <!--<i-nav-item>-->
                 <!--    <i-icon name="ink-search" />-->
                 <!--</i-nav-item>-->
-                <i-nav-item @click="setColorMode">
+                <i-nav-item @click.stop.prevent="setColorMode">
                     <i-icon v-if="colorMode === 'dark'" name="fas-sun" />
                     <i-icon v-else name="fas-moon" />
                 </i-nav-item>
@@ -92,8 +74,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import '@inkline/inkline/css/variables';
-@import '@inkline/inkline/css/mixins';
+@import '~@inkline/inkline/css/variables';
+@import '~@inkline/inkline/css/mixins';
 
 @include i-navbar() {
     ----border-radius: 0;
@@ -121,6 +103,28 @@ export default defineComponent({
         }
     }
 
+    #navbar-item-documentation {
+        @include breakpoint-down('xs') {
+            span:first-child {
+                display: inline-block;
+            }
+
+            span:last-child {
+                display: none;
+            }
+        }
+
+        @include breakpoint-up('sm') {
+            span:first-child {
+                display: none;
+            }
+
+            span:last-child {
+                display: inline-block;
+            }
+        }
+    }
+
     @include variant('light') {
         ----background: var(--color-white);
         ----border-bottom-color: var(--color-gray-10);
@@ -133,56 +137,6 @@ export default defineComponent({
     @include variant('dark') {
         .logo.-black {
             display: none;
-        }
-    }
-
-    &.-transparent {
-        @include variant('light') {
-            ----background: rgba(255, 255, 255, 0.33);
-            ----border-bottom-color: rgba(0, 0, 0, 0.1);
-
-            .logo.-white {
-                display: none;
-            }
-
-            .nav {
-                .nav-item {
-                    @include breakpoint-up('lg') {
-                        color: color('white');
-                    }
-
-                    &:hover,
-                    &:focus {
-                        background: rgba(255, 255, 255, 0.25);
-                    }
-
-                    &:active {
-                        background: rgba(255, 255, 255, 0.33);
-                    }
-                }
-            }
-        }
-
-        @include variant('dark') {
-            ----background: rgba(0, 0, 0, 0.33);
-            ----border-bottom-color: rgba(255, 255, 255, 0.1);
-
-            .logo.-black {
-                display: none;
-            }
-
-            .nav {
-                .nav-item {
-                    &:hover,
-                    &:focus {
-                        background: rgba(0, 0, 0, 0.25);
-                    }
-
-                    &:active {
-                        background: rgba(0, 0, 0, 0.33);
-                    }
-                }
-            }
         }
     }
 }

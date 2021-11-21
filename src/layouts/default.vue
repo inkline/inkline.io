@@ -90,7 +90,7 @@ export default {
 
 <template>
     <main id="documentation-layout">
-        <navbar ref="navbar" :transparent="false" @toggle="toggleSidebarOpen" />
+        <navbar ref="navbar" @toggle="toggleSidebarOpen" />
         <i-container>
             <i-row>
                 <i-column>
