@@ -5,9 +5,12 @@ declare module 'vue' {
   export interface GlobalComponents {
     DesignSystem1: typeof import('./src/components/sections/index/embed/design-system-1.md')['default']
     Example: typeof import('./src/components/common/Example.vue')['default']
+    FeatureBox: typeof import('./src/components/cards/FeatureBox.vue')['default']
     IndexDesignSystemSection: typeof import('./src/components/sections/index/IndexDesignSystemSection.vue')['default']
     IndexExampleEmbedSection: typeof import('./src/components/sections/index/IndexExampleEmbedSection.vue')['default']
     IndexHeaderSection: typeof import('./src/components/sections/index/IndexHeaderSection.vue')['default']
+    IndexOsAwardsSection: typeof import('./src/components/sections/index/IndexOsAwardsSection.vue')['default']
+    IndexUiUxDxSection: typeof import('./src/components/sections/index/IndexUiUxDxSection.vue')['default']
     Navbar: typeof import('./src/components/navigation/Navbar.vue')['default']
     OsAwards: typeof import('./src/components/cards/OsAwards.vue')['default']
     SectionHeader: typeof import('./src/components/common/SectionHeader.vue')['default']

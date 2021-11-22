@@ -1,7 +1,9 @@
 <template>
     <main id="index-page">
         <index-header-section />
+        <index-os-awards-section class="_lg:hidden" />
         <hr>
+        <index-ui-ux-dx-section />
         <index-design-system-section />
         <!--<index-example-embed-section />-->
     </main>

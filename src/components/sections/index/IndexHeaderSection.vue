@@ -2,8 +2,10 @@
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import OsAwards from '~/components/cards/OsAwards.vue';
 
 export default defineComponent({
+    components: { OsAwards },
     setup() {
         const router = useRouter();
         const { t } = useI18n();
@@ -17,31 +19,39 @@ export default defineComponent({
 </script>
 
 <template>
-    <i-header>
-        <i-row>
-            <i-column xl="8" lg="9">
-                <h2 class="title">
-                    {{ t('index.header.title') }}
-                    <span class="_text:primary">
-                        {{ t('index.header.titleHighlight') }}
-                    </span>
-                </h2>
-                <h1 class="lead description _margin-bottom:2">
-                    {{ t('index.header.description') }}
-                </h1>
-            </i-column>
-        </i-row>
-        <i-row>
-            <i-column class="buttons">
-                <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1">
-                    {{ t('index.header.button') }}
-                </i-button>
-                <i-button id="github-button" size="lg">
-                    <i-icon name="fab-github" class="_margin-right:1/2" />
-                    <span>GitHub</span>
-                </i-button>
-            </i-column>
-        </i-row>
+    <i-header fluid>
+        <div class="mobile-background" />
+        <i-container class="header-content">
+            <i-row>
+                <i-column xl="8" lg="9">
+                    <h2 class="title">
+                        {{ t('index.header.title') }}
+                        <span class="_text:primary">
+                            {{ t('index.header.titleHighlight') }}
+                        </span>
+                    </h2>
+                    <h1 class="lead description _margin-bottom:2">
+                        {{ t('index.header.description') }}
+                    </h1>
+                </i-column>
+            </i-row>
+            <i-row>
+                <i-column class="buttons">
+                    <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1">
+                        {{ t('index.header.button') }}
+                    </i-button>
+                    <i-button id="github-button" size="lg">
+                        <i-icon name="fab-github" class="_margin-right:1/2" />
+                        <span>GitHub</span>
+                    </i-button>
+                </i-column>
+            </i-row>
+            <i-row id="index-header-osawards">
+                <i-column>
+                    <os-awards />
+                </i-column>
+            </i-row>
+        </i-container>
     </i-header>
 </template>
 
@@ -54,7 +64,20 @@ $navbar-height: 72px;
 @include i-header() {
     padding-top: calc(var(----padding-top) + #{$navbar-height});
     padding-bottom: var(----padding-bottom);
+    background-image: url('~/assets/images/header/index-christmas.svg');
     background-repeat: no-repeat;
+    background-size: auto 800px;
+    width: 100%;
+
+    .mobile-background {
+        margin-left: calc(var(--spacing) * -1);
+        margin-right: calc(var(--spacing) * -1);
+        background-size: auto 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        flex-grow: 1;
+        background-image: url('~/assets/images/header/index-christmas-centered.svg');
+    }
 
     .title {
         font-size: display-font-size('d5');
@@ -63,6 +86,25 @@ $navbar-height: 72px;
     .description {
         font-size: heading-font-size('h4');
     }
+
+
+    .osawards {
+        width: 376px;
+        margin-top: spacing();
+    }
+
+    @include i-button() {
+        min-width: 180px;
+        font-size: heading-font-size('h4');
+
+        @include i-icon() {
+            height: heading-font-size('h4');
+        }
+    }
+
+    /**
+     * Color variants
+     */
 
     @include variant('light') {
         background-color: color('white');
@@ -80,22 +122,21 @@ $navbar-height: 72px;
         }
     }
 
-    @include i-button() {
-        min-width: 180px;
-        font-size: heading-font-size('h4');
-
-        @include i-icon() {
-            height: heading-font-size('h4');
-        }
-    }
+    /**
+     * Responsive design
+     */
 
     @include breakpoint-down('md') {
-        background-image: url('~/assets/images/header/index-centered.svg');
-        padding-top: calc(340px + #{$navbar-height});
+        background-image: none;
+        padding-top: $navbar-height;
         background-position: center $navbar-height;
-        background-size: 800px auto;
+        background-size: 1280px auto;
         height: 100vh;
         padding-bottom: 0;
+
+        .mobile-background {
+            display: flex;
+        }
 
         .title {
             font-size: display-font-size('d6');
@@ -104,6 +145,27 @@ $navbar-height: 72px;
         .title,
         .description {
             text-align: center;
+        }
+
+        > :deep(.container) {
+            width: 100%;
+            padding: 0;
+
+            > .row {
+                width: 100%;
+                margin: 0;
+                height: 100%;
+
+                > .column {
+                    width: 100%;
+                    padding: 0;
+                    display: flex;
+                    flex-grow: 1;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding-bottom: 1rem;
+                }
+            }
         }
 
         .buttons {
@@ -130,25 +192,12 @@ $navbar-height: 72px;
             }
         }
 
-        .osawards {
-            display: flex;
-            justify-content: center;
+        #index-header-osawards {
+            display: none;
         }
     }
 
     @include breakpoint-down('sm') {
-        .container > .row {
-            background: red;
-            align-self: stretch;
-            flex-direction: column;
-
-            > .column {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-        }
-
         .title {
             font-size: heading-font-size('h1');
         }
@@ -156,7 +205,7 @@ $navbar-height: 72px;
 
     @include breakpoint-down('xs') {
         .title {
-            font-size: heading-font-size('h3');
+            font-size: 7.5vw;
         }
 
         .description {
@@ -165,14 +214,20 @@ $navbar-height: 72px;
     }
 
     @include breakpoint-up('lg') {
-        background-image: url('~/assets/images/header/index-christmas.svg');
-        background-position: 120% $navbar-height;
-        background-size: auto 650px;
+        background-position: 150% 0;
+        padding-top: calc(var(----padding-top) * 0.5 + #{$navbar-height});
+
+        .mobile-background {
+            display: none;
+        }
     }
 
     @include breakpoint-up('xl') {
-        background-position: right $navbar-height;
-        background-size: auto 700px;
+        background-position: right 0;
+    }
+
+    @include breakpoint-up('xxl') {
+        padding-top: calc(var(----padding-top) + #{$navbar-height});
     }
 }
 </style>

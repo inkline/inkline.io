@@ -44,8 +44,8 @@ export default defineComponent({
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    background: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.1);
-    border: 1px solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+    background: hsla(var(--color--primary--h), var(--color--primary--s), var(--color--primary--l), 0.1);
+    border: 1px solid hsla(var(--color--primary--h), var(--color--primary--s), var(--color--primary--l), 0.2);
     padding: spacing() calc(#{spacing()} * 1.75);
     border-radius: border-radius();
     box-shadow: var(--box-shadow-offset-x) var(--box-shadow-offset-y) var(--box-shadow-blur-radius) var(--box-shadow-spread-radius) var(--box-shadow-color);
@@ -80,7 +80,12 @@ export default defineComponent({
             font-size: heading-font-size('h5');
         }
 
+        .category {
+            font-size: 14px;
+        }
+
         .location {
+            font-size: 14px;
             opacity: 0.5;
         }
     }

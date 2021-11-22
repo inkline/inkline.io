@@ -103,31 +103,13 @@ export default defineComponent({
         }
     }
 
-    #navbar-item-documentation {
-        @include breakpoint-down('xs') {
-            span:first-child {
-                display: inline-block;
-            }
-
-            span:last-child {
-                display: none;
-            }
-        }
-
-        @include breakpoint-up('sm') {
-            span:first-child {
-                display: none;
-            }
-
-            span:last-child {
-                display: inline-block;
-            }
-        }
-    }
+    /**
+     * Color variants
+     */
 
     @include variant('light') {
-        ----background: var(--color-white);
-        ----border-bottom-color: var(--color-gray-10);
+        ----background: var(--color--white);
+        ----border-bottom-color: var(--color--gray-10);
 
         .logo.-white {
             display: none;
@@ -137,6 +119,34 @@ export default defineComponent({
     @include variant('dark') {
         .logo.-black {
             display: none;
+        }
+    }
+
+    /**
+     * Responsive design
+     */
+
+    @include breakpoint-down('xs') {
+        #navbar-item-documentation {
+            span:first-child {
+                display: inline-block;
+            }
+
+            span:last-child {
+                display: none;
+            }
+        }
+    }
+
+    @include breakpoint-up('sm') {
+        #navbar-item-documentation {
+            span:first-child {
+                display: none;
+            }
+
+            span:last-child {
+                display: inline-block;
+            }
         }
     }
 }

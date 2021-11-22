@@ -17,3 +17,7 @@ index:
     designSystem:
         title: Build your design system. Fast.
         description: Make components look the way you want, without the hassle. More time to focus on building a great experience for your customers.
+    uiuxdx:
+        title: More than a UI Library
+        description:
+            "UI libraries are only focusing on UI and UX, and they're missing the most important piece of the puzzle - the developer. We believe code quality is directly related to developer happiness. Inkline makes developers happy by providing a great Developer Experience (DX)"

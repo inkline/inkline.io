@@ -186,7 +186,7 @@ export default {
                 width: 16rem;
                 max-width: 100%;
                 background-color: #ffffff;
-                border-right: 1px solid var(--color-gray-30);
+                border-right: 1px solid var(--color--gray-30);
                 box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
                 padding: 0;
                 transition: transform 0.3s ease;

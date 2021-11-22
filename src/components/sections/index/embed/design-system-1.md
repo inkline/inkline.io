@@ -1,6 +1,6 @@
 ~~~css
 :root {
-    --color-primary: #ce1136;
+    --color--primary: #ce1136;
     --border-radius: 1rem;
     --padding-top: 1rem;
     --padding-right: 1rem;
