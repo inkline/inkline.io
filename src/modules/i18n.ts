@@ -5,6 +5,7 @@ import { UserModule } from '~/types';
 // https://vitejs.dev/guide/features.html#glob-import
 const messages = Object.fromEntries(
     Object.entries(
+        // @ts-ignore
         import.meta.globEager('../../locales/*.y(a)?ml'))
         .map(([key, value]) => {
             const yaml = key.endsWith('.yaml');

@@ -3,7 +3,12 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    DesignSystem1: typeof import('./src/components/sections/index/embed/design-system-1.md')['default']
+    DesignSystemDefaultCode: typeof import('./src/components/sections/index/code/design-system-default-code.md')['default']
+    DesignSystemLoginCard: typeof import('./src/components/sections/index/components/DesignSystemLoginCard.vue')['default']
+    DesignSystemPostCard: typeof import('./src/components/sections/index/components/DesignSystemPostCard.vue')['default']
+    DesignSystemPricingCard: typeof import('./src/components/sections/index/components/DesignSystemPricingCard.vue')['default']
+    DesignSystemProfileCard: typeof import('./src/components/sections/index/components/DesignSystemProfileCard.vue')['default']
+    DesignSystemTasksCard: typeof import('./src/components/sections/index/components/DesignSystemTasksCard.vue')['default']
     Example: typeof import('./src/components/common/Example.vue')['default']
     FeatureBox: typeof import('./src/components/cards/FeatureBox.vue')['default']
     IndexDesignSystemSection: typeof import('./src/components/sections/index/IndexDesignSystemSection.vue')['default']

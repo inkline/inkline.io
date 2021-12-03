@@ -9,7 +9,7 @@ import { Inkline } from '@inkline/inkline';
 import * as components from '@inkline/inkline/components';
 
 import * as inklineIcons from '@inkline/icons/packs/inkline';
-import { fasSun, fasBook, fasMoon } from '@inkline/icons/packs/fontawesome/solid';
+import { fasSun, fasBook, fasMoon, fasStar, fasShoppingCart, fasCheckCircle } from '@inkline/icons/packs/fontawesome/solid';
 import { fabGithub } from '@inkline/icons/packs/fontawesome/brands';
 
 import '~/main.scss';
@@ -26,6 +26,9 @@ export const createApp = ViteSSG(App, { routes }, (ctx: ViteSSGContext<true>) =>
             fasSun,
             fasBook,
             fasMoon,
+            fasStar,
+            fasCheckCircle,
+            fasShoppingCart,
             fabGithub,
             ...inklineIcons
         },

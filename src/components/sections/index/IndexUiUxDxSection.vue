@@ -42,36 +42,36 @@ export default defineComponent({
             <i-column md="6" lg="4">
                 <FeatureBox
                     :image="UIIcon"
-                    title="User Interface"
-                    description="Designed to be mobile-first, Inkline looks great on phones, tablets, laptops and desktops."
+                    :title="t('index.features.ui.title')"
+                    :description="t('index.features.ui.description')"
                 />
             </i-column>
             <i-column md="6" lg="4">
                 <FeatureBox
                     :image="UXIcon"
-                    title="User Experience"
-                    description="Out of the box accessibility, WAI-ARIA standards and beautiful user experience design."
+                    :title="t('index.features.ux.title')"
+                    :description="t('index.features.ux.description')"
                 />
             </i-column>
             <i-column md="6" lg="4">
                 <FeatureBox
                     :image="DXIcon"
-                    title="Developer Experience"
-                    description="The code base is designed to be intuitive, easy to use, clean, and consistent to the core."
+                    :title="t('index.features.dx.title')"
+                    :description="t('index.features.dx.description')"
                 />
             </i-column>
             <i-column md="6" offset-lg="2" lg="4">
                 <FeatureBox
                     :image="ModularIcon"
-                    title="Accessible"
-                    description="Accessible to its core, you can expect to find configurable WAI-ARIA with sensible defaults."
+                    :title="t('index.features.accessible.title')"
+                    :description="t('index.features.accessible.description')"
                 />
             </i-column>
             <i-column md="6" offset-md="3" lg="4" offset-lg="0">
                 <FeatureBox
                     :image="CustomizableIcon"
-                    title="Customizable"
-                    description="Discover thousands of easily customizable CSS Variables and Component options."
+                    :title="t('index.features.customizable.title')"
+                    :description="t('index.features.customizable.description')"
                 />
             </i-column>
         </i-row>

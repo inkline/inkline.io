@@ -36,14 +36,16 @@ export default defineComponent({
                 </i-column>
             </i-row>
             <i-row>
-                <i-column class="buttons">
-                    <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1">
-                        {{ t('index.header.button') }}
-                    </i-button>
-                    <i-button id="github-button" size="lg">
-                        <i-icon name="fab-github" class="_margin-right:1/2" />
-                        <span>GitHub</span>
-                    </i-button>
+                <i-column>
+                    <div class="header-buttons">
+                        <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1" :to="{ name: 'docs-introduction' }">
+                            {{ t('index.header.button') }}
+                        </i-button>
+                        <i-button id="github-button" size="lg" href="https://github.com/inkline/inkline">
+                            <i-icon name="fab-github" class="_margin-right:1/2" />
+                            <span>GitHub</span>
+                        </i-button>
+                    </div>
                 </i-column>
             </i-row>
             <i-row id="index-header-osawards">
@@ -70,8 +72,6 @@ $navbar-height: 72px;
     width: 100%;
 
     .mobile-background {
-        margin-left: calc(var(--spacing) * -1);
-        margin-right: calc(var(--spacing) * -1);
         background-size: auto 100%;
         background-position: center center;
         background-repeat: no-repeat;
@@ -150,15 +150,18 @@ $navbar-height: 72px;
         > :deep(.container) {
             width: 100%;
             padding: 0;
+            margin: 0;
 
             > .row {
                 width: 100%;
-                margin: 0;
                 height: 100%;
+                padding: 0;
+                margin: 0;
 
                 > .column {
                     width: 100%;
                     padding: 0;
+                    margin: 0;
                     display: flex;
                     flex-grow: 1;
                     flex-direction: column;
@@ -168,7 +171,7 @@ $navbar-height: 72px;
             }
         }
 
-        .buttons {
+        .header-buttons {
             display: flex;
             justify-content: space-between;
             flex-basis: 100%;
@@ -228,6 +231,16 @@ $navbar-height: 72px;
 
     @include breakpoint-up('xxl') {
         padding-top: calc(var(----padding-top) + #{$navbar-height});
+    }
+
+    @media screen and (min-width: 1920px) {
+        background-size: auto 920px;
+    }
+
+    @media screen and (min-width: 2560px) {
+        background-size: auto 800px;
+        background-position: right 0;
+        background-image: url('~/assets/images/header/index-christmas-wide.svg');
     }
 }
 </style>
