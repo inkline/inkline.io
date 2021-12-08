@@ -1,11 +1,17 @@
 <script>
 import { defineComponent } from 'vue';
+import todoOne from '~/assets/images/sample/todo-one.jpg';
+import todoTwo from '~/assets/images/sample/todo-two.jpg';
+import todoThree from '~/assets/images/sample/todo-three.jpg';
 
 const date = new Date();
 
 export default defineComponent({
     setup() {
         return {
+            todoOne,
+            todoTwo,
+            todoThree,
             dayName: date.toLocaleString('en-US', { weekday:'long' }),
             today: date.toLocaleDateString()
         };
@@ -20,10 +26,10 @@ export default defineComponent({
             </p>
             <span class="_text:muted">{{ today }}</span>
         </div>
-        <hr />
-        <i-media class="_margin-bottom:1">
+        <hr class="_margin:0">
+        <i-media class="_margin-top:1 _margin-bottom:1">
             <template #image>
-                <img class="_border-radius" src="https://via.placeholder.com/80" height="80" width="80" alt="Card Image">
+                <img class="_border-radius" :src="todoOne" height="80" width="80" alt="Try Inkline - Vue.js UI UX DX Library">
             </template>
             <p class="h4 _margin-bottom:0">
                 Try Inkline
@@ -37,7 +43,7 @@ export default defineComponent({
         </i-media>
         <i-media class="_margin-bottom:1">
             <template #image>
-                <img class="_border-radius" src="https://via.placeholder.com/80" height="80" width="80" alt="Card Image">
+                <img class="_border-radius" :src="todoTwo" height="80" width="80" alt="Learn Vue.js 3 - Vue.js UI UX DX Library">
             </template>
             <p class="h4 _margin-bottom:0">
                 Learn Vue.js 3
@@ -51,7 +57,7 @@ export default defineComponent({
         </i-media>
         <i-media class="_margin-bottom:1">
             <template #image>
-                <img class="_border-radius" src="https://via.placeholder.com/80" height="80" width="80" alt="Card Image">
+                <img class="_border-radius" :src="todoThree" height="80" width="80" alt="Build Vue.js Application - Vue.js UI UX DX Library">
             </template>
             <p class="h4 _margin-bottom:0">
                 Build application
@@ -75,12 +81,19 @@ export default defineComponent({
 
 @include i-card() {
     :deep(img) {
-        width: auto;
+        width: 80px;
     }
 
     @include i-media() {
         :deep(.media-body) {
             flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include i-progress() {
+                flex-basis: auto;
+            }
 
             p {
                 line-height: 16px;

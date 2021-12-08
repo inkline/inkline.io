@@ -83,12 +83,10 @@ export default defineComponent({
 @import "~@inkline/inkline/css/mixins";
 
 @include i-header() {
-    @include variant('light') {
-        background: white;
-    }
+    background: transparent;
 
     .feature-box {
-        padding: 1rem 0;
+        padding: var(--spacing) 0;
     }
 }
 </style>

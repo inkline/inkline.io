@@ -115,7 +115,7 @@ $navbar-height: 72px;
     }
 
     @include variant('dark') {
-        background-color: color('gray-85');
+        background-color: color('gray-90');
 
         .description {
             color: color('gray-30')

@@ -20,9 +20,9 @@ index:
         description: Make components look the way you want, without the hassle. More time to focus on building a great experience for your customers.
         styles:
             default: Default
-            illustration: Illustration
+            modern: Modern
+            minimalist: Minimalist
             glassmorphism: Glassmorphism
-            minimalism: Minimalism
     uiuxdx:
         title: More than a UI Library
         description:
@@ -43,3 +43,7 @@ index:
         customizable:
             title: Customizable
             description: Discover thousands of easily customizable CSS Variables and Component options.
+    sponsors:
+        description:
+            Inkline is an MIT licensed open source project and is completely free to use. Inkline only grows thanks to the help and support of its partners, sponsors and backers. Please, consider supporting us!
+        button: Become a sponsor

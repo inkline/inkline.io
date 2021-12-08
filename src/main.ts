@@ -9,8 +9,16 @@ import { Inkline } from '@inkline/inkline';
 import * as components from '@inkline/inkline/components';
 
 import * as inklineIcons from '@inkline/icons/packs/inkline';
-import { fasSun, fasBook, fasMoon, fasStar, fasShoppingCart, fasCheckCircle } from '@inkline/icons/packs/fontawesome/solid';
-import { fabGithub } from '@inkline/icons/packs/fontawesome/brands';
+import {
+    fasSun,
+    fasBook,
+    fasMoon,
+    fasStar,
+    fasShoppingCart,
+    fasCheckCircle,
+    fasHeart,
+} from '@inkline/icons/packs/fontawesome/solid';
+import { fabGithub, fabTwitter, fabDiscord } from '@inkline/icons/packs/fontawesome/brands';
 
 import '~/main.scss';
 
@@ -27,9 +35,12 @@ export const createApp = ViteSSG(App, { routes }, (ctx: ViteSSGContext<true>) =>
             fasBook,
             fasMoon,
             fasStar,
+            fasHeart,
             fasCheckCircle,
             fasShoppingCart,
             fabGithub,
+            fabTwitter,
+            fabDiscord,
             ...inklineIcons
         },
         components

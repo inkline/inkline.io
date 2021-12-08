@@ -2,8 +2,6 @@
     <main id="home-layout">
         <navbar />
         <router-view />
-        <div>
-            [Home Layout]
-        </div>
+        <Footer />
     </main>
 </template>

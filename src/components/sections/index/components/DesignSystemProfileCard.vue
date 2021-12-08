@@ -1,10 +1,27 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+    props: {
+        cover: {
+            type: String,
+            default: ''
+        },
+        profile: {
+            type: String,
+            default: ''
+        }
+    }
+});
+</script>
+
 <template>
     <i-card>
         <template #image>
-            <img src="https://via.placeholder.com/300x150" alt="Card Image">
+            <img :src="cover" alt="Cover - Inkline - Vue.js UI UX DX Library">
         </template>
         <div class="profile-header">
-            <img src="https://via.placeholder.com/80x80" alt="Card Image">
+            <img :src="profile" width="80" height="80" alt="Alex Grozav - Inkline - Vue.js UI UX DX Library">
             <div>
                 <p class="h4 _margin-bottom:0">
                     Alex Grozav
@@ -48,7 +65,8 @@
 
 @include i-card() {
     img {
-        width: auto;
+        height: auto;
+        width: 100%;
     }
 
     .profile-header {
@@ -56,6 +74,8 @@
         align-items: center;
 
         img {
+            height: auto;
+            width: 80px;
             margin-right: spacing();
             border-radius: var(----border-radius);
         }

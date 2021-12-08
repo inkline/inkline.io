@@ -61,7 +61,7 @@ export default defineComponent({
                 <!--<i-nav-item>-->
                 <!--    <i-icon name="ink-search" />-->
                 <!--</i-nav-item>-->
-                <i-nav-item @click.stop.prevent="setColorMode">
+                <i-nav-item @click="setColorMode">
                     <i-icon v-if="colorMode === 'dark'" name="fas-sun" />
                     <i-icon v-else name="fas-moon" />
                 </i-nav-item>
