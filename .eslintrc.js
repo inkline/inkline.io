@@ -1,37 +1,38 @@
 module.exports = {
-    root: true,
     env: {
         node: true,
         jest: true,
-        browser: true
+        browser: true,
+        es2021: true
     },
-    parser: 'vue-eslint-parser',
+    extends: [
+        '@vue/typescript/recommended',
+        'plugin:vue/vue3-recommended',
+        'standard'
+    ],
     parserOptions: {
+        ecmaVersion: 12,
         parser: '@typescript-eslint/parser',
         sourceType: 'module'
     },
     plugins: [
+        'vue',
         '@typescript-eslint'
     ],
-    extends: [
-        'eslint:recommended',
-        'plugin:vue/vue3-recommended',
-        'plugin:@typescript-eslint/recommended',
-        'alloy',
-        'alloy/vue',
-    ],
     rules: {
-        'indent': ['warn', 4],
-        'semi': ['warn', 'always'],
+        indent: ['warn', 4],
+        semi: ['warn', 'always'],
+        'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+        'no-prototype-builtins': 'off',
+        'max-params': 'off',
+        'max-nested-callbacks': 'off',
         'vue/html-indent': ['warn', 4],
         'vue/max-attributes-per-line': 'off',
         'vue/custom-event-name-casing': 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-        'no-prototype-builtins': 'off',
-        'object-curly-spacing': ['warn', 'always'],
-        'quotes': ['warn', 'single'],
-        'max-params': 'off',
-        'max-nested-callbacks': 'off',
+        'vue/multi-word-component-names': 'off',
+        'vue/require-prop-types': 'off',
+        'vue/comment-directive': 'off',
+        'vue/v-on-event-hyphenation': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',

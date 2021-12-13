@@ -6,7 +6,7 @@ import OsAwards from '~/components/cards/OsAwards.vue';
 
 export default defineComponent({
     components: { OsAwards },
-    setup() {
+    setup () {
         const router = useRouter();
         const { t } = useI18n();
 
@@ -58,8 +58,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import '~@inkline/inkline/css/variables';
-@import '~@inkline/inkline/css/mixins';
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 $navbar-height: 72px;
 
@@ -86,7 +86,6 @@ $navbar-height: 72px;
     .description {
         font-size: heading-font-size('h4');
     }
-
 
     .osawards {
         width: 376px;

@@ -1,0 +1,50 @@
+.installation-card {
+    margin-bottom: var(--spacing);
+    display: block;
+
+    .card-body {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .image {
+        width: 40px;
+        height: 30px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        img,
+        svg {
+            height: 100%;
+            width: auto;
+            margin-right: var(--spacing);
+        }
+    }
+
+    .card-body > .inkline-icon {
+        margin-left: auto;
+        transform: rotate(-90deg);
+        transition: transform var(--transition-duration) var(--transition-easing);
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        @include i-card() {
+            @include variant('light') {
+                ----border-color: var(--color--gray-30);
+            }
+
+            @include variant('dark') {
+                ----border-color: var(--color--gray-70);
+            }
+        }
+
+        .card-body > .inkline-icon {
+            transform: rotate(-90deg) translateY(-16px);
+        }
+    }
+}

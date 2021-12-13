@@ -1,3 +1,9 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({});
+</script>
+
 <template>
     <div class="section-header">
         <h2 class="title d5">
@@ -12,9 +18,3 @@
 <style lang="scss">
 .section-header {}
 </style>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({});
-</script>

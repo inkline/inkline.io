@@ -1,6 +1,6 @@
 import { off, on } from '@inkline/inkline/helpers';
 
-function matchParentWidth(element: HTMLElement) {
+function matchParentWidth (element: HTMLElement) {
     const parentStyle = getComputedStyle(element.parentElement as any);
     const width = parseInt(parentStyle.width, 10);
     const padding = parseInt(parentStyle.paddingLeft, 10) + parseInt(parentStyle.paddingRight, 10);
@@ -9,13 +9,13 @@ function matchParentWidth(element: HTMLElement) {
 }
 
 export default {
-    beforeMount(element: HTMLElement) {
+    beforeMount (element: HTMLElement) {
         on(window as any, 'resize', () => matchParentWidth(element));
     },
-    beforeUnmount(element: HTMLElement) {
+    beforeUnmount (element: HTMLElement) {
         off(window as any, 'resize', () => matchParentWidth(element));
     },
-    mounted(element: HTMLElement) {
+    mounted (element: HTMLElement) {
         matchParentWidth(element);
     }
 };

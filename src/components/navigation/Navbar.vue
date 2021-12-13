@@ -12,7 +12,7 @@ export default defineComponent({
             default: true
         }
     },
-    setup() {
+    setup () {
         const { t } = useI18n();
         const inkline = inject<Prototype>('inkline', {} as any);
         const colorMode = ref(inkline.options.colorMode);
@@ -22,8 +22,6 @@ export default defineComponent({
 
             inkline.options.colorMode = mode;
             colorMode.value = mode;
-
-            console.log('wat', mode)
         };
 
         return {
@@ -36,7 +34,6 @@ export default defineComponent({
     }
 });
 </script>
-
 
 <template>
     <i-navbar :collapse="false">
@@ -68,14 +65,15 @@ export default defineComponent({
                 <i-nav-item :to="{ name: 'docs-introduction' }">
                     <i-icon name="fab-github" />
                 </i-nav-item>
+                <slot />
             </i-nav>
         </i-navbar-collapsible>
     </i-navbar>
 </template>
 
 <style lang="scss" scoped>
-@import '~@inkline/inkline/css/variables';
-@import '~@inkline/inkline/css/mixins';
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 @include i-navbar() {
     ----border-radius: 0;

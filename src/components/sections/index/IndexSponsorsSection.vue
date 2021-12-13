@@ -47,7 +47,7 @@ const sponsors = [
 ];
 
 export default defineComponent({
-    setup() {
+    setup () {
         const { t } = useI18n();
 
         return {
@@ -101,8 +101,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import "~@inkline/inkline/css/variables";
-@import "~@inkline/inkline/css/mixins";
+@import "@inkline/inkline/css/variables";
+@import "@inkline/inkline/css/mixins";
 
 @include i-header() {
     background: transparent;
@@ -184,6 +184,34 @@ export default defineComponent({
 
     &[data-sponsor="nuxt"] img {
         height: 35px;
+    }
+
+    @include breakpoint-down('md') {
+        img {
+            height: 30px;
+        }
+
+        &[data-sponsor="tidelift"] img {
+            height: 25px;
+        }
+
+        &[data-sponsor="nuxt"] img {
+            height: 25px;
+        }
+    }
+
+    @include breakpoint-down('sm') {
+        img {
+            height: 25px;
+        }
+
+        &[data-sponsor="tidelift"] img {
+            height: 20px;
+        }
+
+        &[data-sponsor="nuxt"] img {
+            height: 20px;
+        }
     }
 }
 </style>

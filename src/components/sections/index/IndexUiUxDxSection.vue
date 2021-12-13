@@ -9,7 +9,7 @@ import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
-    setup() {
+    setup () {
         const { t } = useI18n();
 
         return {
@@ -79,8 +79,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import "~@inkline/inkline/css/variables";
-@import "~@inkline/inkline/css/mixins";
+@import "@inkline/inkline/css/variables";
+@import "@inkline/inkline/css/mixins";
 
 @include i-header() {
     background: transparent;

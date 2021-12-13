@@ -1,0 +1,39 @@
+@use 'sass:math';
+
+$step-number-size: 32px;
+
+.install-step {
+    display: block;
+    position: relative;
+    padding-left: $step-number-size;
+    padding-bottom: var(--spacing);
+    margin-left: math.div($step-number-size, 2);
+    border-left: 1px solid var(--color--light);
+
+    .install-step-title {
+        font-size: var(--font-size--lg);
+        font-weight: var(--font-weight--semibold);
+        display: flex;
+        align-items: center;
+    }
+
+    > p:first-child {
+        margin-top: 0;
+    }
+
+    .install-step-number {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: $step-number-size;
+        height: $step-number-size;
+        position: absolute;
+        left: - math.div($step-number-size, 2);
+        top: -4px;
+        border: 1px solid var(--color--light);
+        border-radius: 50%;
+        background: var(--color--white);
+        font-size: var(--font-size--md);
+        font-weight: var(--font-weight--normal);
+    }
+}

@@ -7,12 +7,12 @@ import todoThree from '~/assets/images/sample/todo-three.jpg';
 const date = new Date();
 
 export default defineComponent({
-    setup() {
+    setup () {
         return {
             todoOne,
             todoTwo,
             todoThree,
-            dayName: date.toLocaleString('en-US', { weekday:'long' }),
+            dayName: date.toLocaleString('en-US', { weekday: 'long' }),
             today: date.toLocaleDateString()
         };
     }
@@ -76,8 +76,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import "~@inkline/inkline/css/mixins";
-@import "~@inkline/inkline/css/variables";
+@import "@inkline/inkline/css/mixins";
+@import "@inkline/inkline/css/variables";
 
 @include i-card() {
     :deep(img) {

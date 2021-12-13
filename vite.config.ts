@@ -3,20 +3,24 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import pages from 'vite-plugin-pages';
 import layouts from 'vite-plugin-vue-layouts';
-import components from 'vite-plugin-components';
+import components from 'unplugin-vue-components/vite';
 import markdown from 'vite-plugin-md';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 import i18n from '@intlify/vite-plugin-vue-i18n';
 
 import markdownPrism from 'markdown-it-prism';
 // @ts-expect-error missing types
+import markdownNamedHeadings from 'markdown-it-named-headings';
+// @ts-expect-error missing types
 import markdownLinkAttributes from 'markdown-it-link-attributes';
 
-function html() {
+function html () {
     return {
         name: 'html',
         transform (code: any, id: string) {
-            if (/\.html$/.test(id)) {
+            const isIndexHtml = id.replace(__dirname, '') === '/index.html';
+
+            if (/\.html$/.test(id) && !isIndexHtml) {
                 return `export default ${JSON.stringify(code)}`;
             }
         }
@@ -32,24 +36,22 @@ export default defineConfig({
          * @docs https://vitejs.dev/config/#resolve-alias
          */
         alias: {
-            '~/': `${path.resolve(__dirname, 'src')}/`,
-            '~@inkline/inkline': '@inkline/inkline',
-            '~@inkline/icons': '@inkline/icons',
-        },
+            '~/': `${path.resolve(__dirname, 'src')}/`
+        }
     },
     plugins: [
         /**
          * @docs https://github.com/vitejs/vite/tree/main/packages/plugin-vue#readme
          */
         vue({
-            include: [/\.vue$/, /\.md$/],
+            include: [/\.vue$/, /\.md$/]
         }),
 
         /**
          * @docs https://github.com/hannoeru/vite-plugin-pages
          */
         pages({
-            extensions: ['vue', 'md'],
+            extensions: ['vue', 'md']
         }),
 
         /**
@@ -61,16 +63,9 @@ export default defineConfig({
          * @docs https://github.com/antfu/vite-plugin-components
          */
         components({
-            // search for subdirectories
-            deep: true,
-            // allow auto load markdown components under `./src/components/`
             extensions: ['vue', 'md'],
-            // allow auto import and register components used in markdown
-            customLoaderMatcher: (id: string) => id.endsWith('.md'),
-            // generate `components.d.ts` for ts support with Volar
-            globalComponentsDeclaration: true,
-            // Allow subdirectories as namespace prefix for components.
-            directoryAsNamespace: false,
+            include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+            dts: 'src/components.d.ts'
         }),
 
         /**
@@ -79,17 +74,22 @@ export default defineConfig({
         markdown({
             wrapperClasses: 'markdown',
             headEnabled: true,
-            markdownItSetup(md) {
+            markdownItSetup (md) {
                 // https://prismjs.com/
-                md.use(markdownPrism);
+                md.use(markdownPrism, {
+                    plugins: [
+                        'inline-color'
+                    ]
+                });
+                md.use(markdownNamedHeadings);
                 md.use(markdownLinkAttributes, {
                     pattern: /^https?:\/\//,
                     attrs: {
                         target: '_blank',
-                        rel: 'noopener',
-                    },
+                        rel: 'noopener'
+                    }
                 });
-            },
+            }
         }),
 
         /**
@@ -108,21 +108,21 @@ export default defineConfig({
                     {
                         src: '/pwa-192x192.png',
                         sizes: '192x192',
-                        type: 'image/png',
+                        type: 'image/png'
+                    },
+                    {
+                        src: '/pwa-512x512.png',
+                        sizes: '512x512',
+                        type: 'image/png'
                     },
                     {
                         src: '/pwa-512x512.png',
                         sizes: '512x512',
                         type: 'image/png',
-                    },
-                    {
-                        src: '/pwa-512x512.png',
-                        sizes: '512x512',
-                        type: 'image/png',
-                        purpose: 'any maskable',
-                    },
-                ],
-            },
+                        purpose: 'any maskable'
+                    }
+                ]
+            }
         }),
 
         /**
@@ -131,10 +131,10 @@ export default defineConfig({
         i18n({
             runtimeOnly: true,
             compositionOnly: true,
-            include: [path.resolve(__dirname, 'locales/**')],
+            include: [path.resolve(__dirname, 'locales/**')]
         }),
 
-        html()
+        // html()
     ],
 
     server: {
@@ -142,8 +142,8 @@ export default defineConfig({
             /**
              * @docs https://vitejs.dev/config/#server-fs-strict
              */
-            strict: true,
-        },
+            strict: true
+        }
     },
 
     /**
@@ -151,7 +151,7 @@ export default defineConfig({
      */
     ssgOptions: {
         script: 'async',
-        formatting: 'minify',
+        formatting: 'minify'
     },
 
     /**
@@ -165,6 +165,6 @@ export default defineConfig({
         ],
         exclude: [
             'vue-demi'
-        ],
-    },
+        ]
+    }
 });

@@ -3,18 +3,17 @@ import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
-    setup() {
+    setup () {
         const { t } = useI18n();
         const year = (new Date()).getFullYear();
 
         return {
             t,
-            year,
+            year
         };
     }
 });
 </script>
-
 
 <template>
     <footer>
@@ -47,7 +46,7 @@ export default defineComponent({
             </i-row>
             <i-row class="_text:muted _margin-top:1">
                 <i-column>
-                    Copyright &copy; 2017-{{year}}, Inkline
+                    Copyright &copy; 2017-{{ year }}, Inkline
                 </i-column>
             </i-row>
         </i-container>
@@ -55,8 +54,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import '~@inkline/inkline/css/variables';
-@import '~@inkline/inkline/css/mixins';
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 footer {
     background: var(--color--gray-90);
@@ -65,6 +64,10 @@ footer {
     text-align: center;
 
     ul {
+        li {
+            --list--padding--inline: 1.5rem;
+        }
+
         @include i-icon() {
             ----size: 2rem;
 

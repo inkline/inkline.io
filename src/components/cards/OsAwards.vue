@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import logoWhite from "~/assets/images/brands/osawards-white.svg";
-import logoBlack from "~/assets/images/brands/osawards-black.svg";
+import logoWhite from '~/assets/images/brands/osawards-white.svg';
+import logoBlack from '~/assets/images/brands/osawards-black.svg';
 import { colorVariantClass } from '@inkline/inkline/mixins';
 
 export default defineComponent({
@@ -11,13 +11,13 @@ export default defineComponent({
             default: ''
         }
     },
-    setup() {
+    setup () {
         return { logoWhite, logoBlack };
     },
     computed: {
-        classes() {
+        classes () {
             return {
-                ...colorVariantClass(this),
+                ...colorVariantClass(this)
             };
         }
     }

@@ -14,7 +14,7 @@ export default defineComponent({
         image: {
             type: String,
             default: ''
-        },
+        }
     }
 });
 </script>
@@ -28,8 +28,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-@import '~@inkline/inkline/css/mixins';
-@import '~@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
+@import '@inkline/inkline/css/variables';
 
 .feature-box {
     text-align: center;

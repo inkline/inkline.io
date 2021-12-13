@@ -8,11 +8,11 @@ const coverImages: { [key: string]: any } = {
     default: coverImage,
     modern: coverImage,
     minimalist: coverImage,
-    glassmorphism: coverImage,
+    glassmorphism: coverImage
 };
 
 export default defineComponent({
-    setup() {
+    setup () {
         const { t } = useI18n();
         const styles = ref([
             'default',
@@ -22,13 +22,12 @@ export default defineComponent({
         ]);
         const selectedStyle = ref('default');
 
-
         return {
             t,
             selectedStyle,
             styles,
             profileImage,
-            coverImage: coverImages[selectedStyle.value],
+            coverImage: coverImages[selectedStyle.value]
         };
     }
 });
@@ -83,8 +82,8 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@import "~@inkline/inkline/css/variables";
-@import "~@inkline/inkline/css/mixins";
+@import "@inkline/inkline/css/variables";
+@import "@inkline/inkline/css/mixins";
 
 @include i-header() {
     .section-header {

@@ -1,7 +1,11 @@
 <template>
     <i-card>
-        <p class="h5 _font-weight:normal">Basic</p>
-        <p class="h1">Free</p>
+        <p class="h5 _font-weight:normal">
+            Basic
+        </p>
+        <p class="h1">
+            Free
+        </p>
         <p>Free forever and always improving. Perfect for individuals and businesses of any size.</p>
         <ul class="list -unstyled">
             <li>
