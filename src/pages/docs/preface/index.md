@@ -4,7 +4,9 @@ description: Inkline is a modern UI/UX Library for Vue.js, designed for creating
 ---
 
 # About Inkline
-## Inkline is the customizable Vue.js UI Library that favors not only **User Interface** and **User Experience**, but also **Developer Experience**, using a consistent and expressive API. Inkline has been designed for creating flawless responsive web applications.
+## Inkline is the intuitive UI Components library that gives you the foundation for building high quality, accessible, and customizable Vue.js Design Systems.
+
+Inkline aims to provide a great User Interface (UI), User Experience (UX), and Developer Experience (DX), using a consistent and expressive API. Inkline has been designed for creating flawless responsive web applications.
 
 In October 2019, Inkline has been awarded as a finalist for the <a href="https://osawards.com/vue/" rel="nofollow">Vue.js London 2019 Open Source Awards</a>, for the Developer Experience category.
 
@@ -24,7 +26,8 @@ In our view, when using Inkline as a framework you should get a great looking, r
 - ###### Responsiveness
     <p>Components should look great on any screen size, ranging from phones and tablets to laptops and desktops.</p>
 - ###### Customization
-    <p>Components should be customizable using color variants, design modifiers, and SCSS variables.</p>
+    <p>Components should be customizable using color variants, design modifiers, and CSS Variables.</p>
+    <p>All of Inkline's CSS Variables are inter-connected and propagate throughout the whole design system where applicable, providing you with a beautiful, consistent, and configurable design.</p>
 
 ##### **UX** - User Experience
 A web application created with Inkline should be natural and intuitive to use. The best User Experience should be great out of the box:
@@ -51,14 +54,15 @@ Last but not least, Inkline code should be a pleasure to write. This is a featur
     <p>Webpack introduced the concept of Tree shaking. Tree shaking simply means that any module that remains unused will not be included in the final bundle that gets deployed. Inkline fully takes advantage of it.</p>
 - ###### Testing
     <p>The framework needs to be well tested. Unit tests and integration tests should have a target of 100% code coverage.</p>
+- ###### Completely Typed
+    <p>Inkline is written entirely in TypeScript and provides first-class TypeScript support.</p>
 
 ### FAQs
 Here is a list of frequently asked questions. If you think a common question is missing from the list, please create an issue <a href="https://github.com/inkline/inkline/issues" rel="nofollow">here</a>.
 
-1. **How is Inkline different from other UI Frameworks?**
-    <p>Inkline offers an easily customizable design base for your web application. Most of the other frameworks focus on providing a predefined design style such as Material Design and are hard to extend and truly make your own.</p>
-    <p>Feature-wise, some of the other frameworks offer more components, but Inkline is constantly growing and offering a great Form Validation solution.</p>
+1. **How is Inkline different from other UI Libraries?**
+    <p>Inkline offers complete control over the look and feel of your web application using thousands of inter-connected variables. Most of the other frameworks focus on providing a predefined design style such as Material Design and are hard to extend and truly make your own.</p>
+    <p>Inkline is constantly growing and offers a great Form Validation, Datatable and Select solution.</p>
 2. **What was the inspiration when creating Inkline?**
-    <p>Inkline is inspired by some of the well-established UI Frameworks out there, but we took our own approach in everything. Inkline aims to be as developer-friendly as possible. The main design inspirations are Bootstrap and Bulma.</p>
-3. **Does Inkline support tree-shaking?**
-    <p>It does, and it does it very well! You can find how to set Inkline up for tree shaking in the <router-link :to="{ name: 'docs-introduction' }">Getting Started</router-link> guide.</p>
+    <p>Inkline is inspired by some of the well-established UI Frameworks out there, but we took our own approach in everything. Inkline aims to be as developer-friendly as possible.</p>
+   <p>Inkline is strongly inspired by projects such as Bootstrap, Vuetify, Buefy, Chakra, and Tailwind.</p>

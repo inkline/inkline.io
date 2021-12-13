@@ -53,12 +53,12 @@ Be sure to have your pages set up with the latest design and development standar
 </html>
 ~~~
 
-<div class="_margin-top-1">
-    <a class="link-card" href="https://jsfiddle.net/alexgrozav/0dknfs6L/">
-        <i-card>
-            <div class="image"><img src="/images/jsfiddle.svg" alt="JSFiddle" /></div>
-            <span>Try on JSFiddle</span>
-            <i-icon icon="chevron-right"></i-icon>
-        </i-card>
-    </a>
-</div>
+<a class="installation-card _margin-top:3" href="https://jsfiddle.net/alexgrozav/0dknfs6L/">
+    <i-card>
+        <div class="image">
+            <img src="../../../../assets/images/environments/cdn.svg" alt="CDN Installation - Inkline UI UX DX Library" />
+        </div>
+        <span>Try on JSFiddle</span>
+        <i-icon name="ink-chevron-down"></i-icon>
+    </i-card>
+</a>

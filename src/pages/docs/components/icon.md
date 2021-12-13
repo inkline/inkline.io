@@ -4,7 +4,7 @@ description: Inkline provides you with an awesome universal icon component that 
 ---
 
 <script setup>
-import IntegrationsTable from '../examples/integrations.vue';
+import IntegrationsTable from '@inkline/inkline/components/IIcon/examples/integrations.vue';
 import * as examples from '../../../examples/components/icon'
 </script>
 

@@ -1,37 +1,37 @@
 ---
-title: Vue.js CLI Installation
-description: Install Inkline for any application created using the Vue.js CLI.
+title: Generic Installation
+description: Install Inkline for an application created using any other bundler or framework.
 ---
 
-# Vue.js CLI Installation
-## Install Inkline for any application created using the Vue.js CLI.
+# Generic Installation
+## Install Inkline for an application created using any other bundler or framework.
 
 ### Installation
 
 <div class="install-step _margin-top:2">
 <div class="install-step-title"><span class="install-step-number">1</span> Create a project</div> 
 
-Create a new Vue.js application using the `npm init` command below or using the [Vue.js CLI](https://cli.vuejs.org/guide/creating-a-project.html), and follow the instructions provided by the installation wizard.
+Create a new application using a Front End Development Tool that supports modern javascript (or typescript) such as:
 
-~~~bash
-npm init vue my-vue-app
-
-cd my-vue-app 
-
-npm install
-~~~
+- <a href="https://vitejs.dev" rel="noopener nofollow">Vite.js</a> (recommended)
+- <a href="https://webpack.js.org" rel="noopener nofollow">Webpack.js</a>
+- <a href="https://astro.build" rel="noopener nofollow">Astro.build</a>
+- <a href="https://rollupjs.org" rel="noopener nofollow">Rollup.js</a>
+- <a href="https://parceljs.org" rel="noopener nofollow">Parcel.js</a>
 
 </div>
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">2</span> Install Inkline and dependencies</div> 
 
-Install and save Inkline as a project dependency. 
+Install and save Inkline as a project dependency.
 
 ~~~bash
 npm install --save @inkline/inkline
 ~~~
 
-Inkline uses [Sass](https://sass-lang.com) to pre-process and compile its CSS files. You will need to install it as a development dependency in order to compile the stylesheets.
+Inkline uses [Sass](https://sass-lang.com) to pre-process and compile its CSS files. You will need to install it as a development dependency in order to compile the stylesheets. 
+
+Depending on the build tool you're using, you might need to install additional loaders to handle `.scss` files.
 
 ~~~bash
 npm install --save-dev sass

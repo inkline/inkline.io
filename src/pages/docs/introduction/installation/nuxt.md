@@ -1,88 +1,89 @@
 ---
-title: Nuxt.js Installation
-description: Install Inkline using the official Nuxt.js module and get Inkline automatically set up for you.
+title: Nuxt.js CLI Installation
+description: Install Inkline for any application created using Nuxt.js.
 ---
 
 # Nuxt.js Installation
-## Install Inkline using the official Nuxt.js module and get Inkline automatically set up for you.
+## Install Inkline for any application created using Nuxt.js.
 
 ### Installation
-After you've [created a Nuxt.js Project](https://nuxtjs.org/guide/installation/), install Inkline using the following command:
+
+<div class="install-step _margin-top:2">
+<div class="install-step-title"><span class="install-step-number">1</span> Create a project</div> 
+
+Create a new Nuxt.js application using the `nuxi` CLI command below or using the [Nuxt.js guide](https://v3.nuxtjs.org/getting-started/installation), and follow the instructions provided by the installation wizard.
 
 ~~~bash
-npm install --save-dev @inkline/nuxt
+npx nuxi init my-nuxt-app
+
+cd my-nuxt-app
+
+npm install
 ~~~
 
-Inkline uses Sass as a peer dependency to compile its styles, so we'll need to add it to our Nuxt.js installation as well:
+</div>
+<div class="install-step">
+<div class="install-step-title"><span class="install-step-number">2</span> Install Inkline and dependencies</div> 
+
+Install and save Inkline as a project dependency.
 
 ~~~bash
-npm install --save-dev node-sass@4 sass-loader@10
+npm install --save @inkline/inkline
 ~~~
 
-Next, add `@inkline/nuxt` to the `modules` section of your `nuxt.config.js` file:
+Inkline uses [Sass](https://sass-lang.com) to pre-process and compile its CSS files. You will need to install it as a development dependency in order to compile the stylesheets.
+
+~~~bash
+npm install --save-dev sass
+~~~
+
+</div>
+<div class="install-step">
+<div class="install-step-title"><span class="install-step-number">3</span> Configure your project and design</div> 
+
+Open your `src/main.js` or `src/main.ts` file and configure your application to use Inkline.
 
 ~~~js
-module.exports = {
-    // ... The rest of the configuration 
+import { createApp } from 'vue';
+import App from './App.vue';
+import "./main.scss";
 
-    modules: [ '@inkline/nuxt' ]
-}
+import { Inkline } from '@inkline/inkline';
+import * as components from '@inkline/inkline/components';
+
+const app = createApp(App);
+
+app.use(Inkline, {
+    components,
+});
+    
+app.mount('#app');
 ~~~
 
-### Integration
-By following the steps above, you have added Inkline to your Nuxt.js project. This provides you with some amazing features out of the box:
 
-- Easy setup with best practices
-- Dynamic component imports integration using <a href="https://github.com/nuxt/components" rel="nofollow noreferrer">@nuxt/components</a>
-- Perfectly optimized automatic tree shaking
+</div>
+<div class="install-step">
+<div class="install-step-title"><span class="install-step-number">4</span> Configure your design</div> 
 
-### Plugin Options
-Optionally, you can configure your <nuxt-link :to="{ name: 'docs-introduction-plugin-options' }">Plugin Options</nuxt-link> through the Nuxt.js Module by using the `inkline` field:
-
-~~~js
-module.exports = {
-    // ... The rest of the configuration 
-
-    modules: [ '@inkline/nuxt' ],
-    inkline: {
-        config: {
-            variant: 'dark'
-        }   
-    }
-}
-~~~
-
-### Customization
-Customizing Inkline is very straightforward. First, install a utility plugin to easily import our variables file:
-
-~~~bash
-npm install --save-dev @nuxtjs/style-resources
-~~~
-
-Next, create a `variables.scss` file inside of your `assets` folder. The important part is to make sure our `variables.scss` file gets included before every Sass file that Inkline provides.
+Next, create a new file called `src/main.scss` and import Inkline. Learn more about the Design System.
 
 ~~~scss
-// assets/variables.scss
+@import "@inkline/inkline/css";
 
-$color-primary: #178bb2;
-$color-secondary: #5d65b9;
-~~~
-
-
-Add the `@nuxtjs/style-resources` entry to the `modules` field in your `nuxt.config.js` file, and configure it to import our `assets/variables.scss` file:
-
-~~~js
-const path = require('path');
-
-module.exports = {
-    // ... The rest of the configuration 
-  
-    modules: [
-        '@nuxtjs/style-resources',
-        '@inkline/nuxt'
-    ],
-    styleResources: {
-        scss: ['~/assets/variables.scss']
-    }
+:root {
+    --color--primary--h: 195deg;
+    --color--primary--s: 77%;
+    --color--primary--l: 39%;
 }
 ~~~
+</div>
+<div class="install-step">
+<div class="install-step-title"><span class="install-step-number">5</span> Enjoy using Inkline</div> 
+
+Awesome work! You can now start using all the features that Inkline has to offer.
+</div>
+
+### Next steps
+
+- [Read about the Design System]()
+- [Read about Components]()

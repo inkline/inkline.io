@@ -1,22 +1,22 @@
 ---
-title: Vue.js CLI Installation
-description: Install Inkline for any application created using the Vue.js CLI.
+title: Vite.js CLI Installation
+description: Install Inkline for any application created using Vite.js.
 ---
 
-# Vue.js CLI Installation
-## Install Inkline for any application created using the Vue.js CLI.
+# Vite.js Installation
+## Install Inkline for any application created using Vite.js.
 
 ### Installation
 
 <div class="install-step _margin-top:2">
 <div class="install-step-title"><span class="install-step-number">1</span> Create a project</div> 
 
-Create a new Vue.js application using the `npm init` command below or using the [Vue.js CLI](https://cli.vuejs.org/guide/creating-a-project.html), and follow the instructions provided by the installation wizard.
+Create a new Vite.js + Vue.js application using the `npm init` command below or using the [Vite.js guide](https://vitejs.dev/guide/), and follow the instructions provided by the installation wizard.
 
 ~~~bash
-npm init vue my-vue-app
+npm init vite my-vite-app -- --template vue
 
-cd my-vue-app 
+cd my-vite-app 
 
 npm install
 ~~~
