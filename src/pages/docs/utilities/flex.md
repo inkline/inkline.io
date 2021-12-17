@@ -1,10 +1,40 @@
 ---
-title: Flex Utilities
+title: Flex Utilities - Inkline
 description: Use flexbox utilities to modify the layout, alignment, and sizing of components and more. 
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/flex'
+import {
+    FlexAlignContentExample,
+    FlexAlignItemsExample,
+    FlexAlignSelfExample,
+    FlexDirectionColumnExample,
+    FlexDirectionRowExample,
+    FlexFillExample,
+    FlexGrowExample,
+    FlexShrinkExample,
+    FlexWrapExample,
+    FlexExample,
+    FlexInlineFlexExample,
+    FlexJustifyContentExample,
+    FlexMarginAutoExample,
+    FlexOrderExample
+} from '@inkline/inkline/stories/utilities/flex';
+
+import { default as FlexAlignContentExampleHTML } from '@inkline/inkline/stories/utilities/flex/align-content.html?raw';
+import { default as FlexAlignItemsExampleHTML } from '@inkline/inkline/stories/utilities/flex/align-items.html?raw';
+import { default as FlexAlignSelfExampleHTML } from '@inkline/inkline/stories/utilities/flex/align-self.html?raw';
+import { default as FlexDirectionColumnExampleHTML } from '@inkline/inkline/stories/utilities/flex/flex-direction-column.html?raw';
+import { default as FlexDirectionRowExampleHTML } from '@inkline/inkline/stories/utilities/flex/flex-direction-row.html?raw';
+import { default as FlexFillExampleHTML } from '@inkline/inkline/stories/utilities/flex/flex-fill.html?raw';
+import { default as FlexGrowExampleHTML } from '@inkline/inkline/stories/utilities/flex/flex-grow.html?raw';
+import { default as FlexShrinkExampleHTML } from '@inkline/inkline/stories/utilities/flex/flex-shrink.html?raw';
+import { default as FlexWrapExampleHTML } from '@inkline/inkline/stories/utilities/flex/flex-wrap.html?raw';
+import { default as FlexExampleHTML } from '@inkline/inkline/stories/utilities/flex/flex.html?raw';
+import { default as FlexInlineFlexExampleHTML } from '@inkline/inkline/stories/utilities/flex/inline-flex.html?raw';
+import { default as FlexJustifyContentExampleHTML } from '@inkline/inkline/stories/utilities/flex/justify-content.html?raw';
+import { default as FlexMarginAutoExampleHTML } from '@inkline/inkline/stories/utilities/flex/margin-auto.html?raw';
+import { default as FlexOrderExampleHTML } from '@inkline/inkline/stories/utilities/flex/order.html?raw';
 </script>
 
 # Flex Utilities
@@ -14,9 +44,9 @@ import * as examples from '../../../examples/utilities/flex'
 ### Flex Behavior
 Apply `display: flex` using CSS or the `._display-flex` helper to create a flexbox container and transform direct children elements into flex items. 
 
-<example type="flex" :component="examples.FlexExample" :html="examples.FlexExampleHTML"></example>
+<example type="flex" :component="FlexExample" :html="FlexExampleHTML"></example>
 
-<example type="flex" :component="examples.FlexInlineFlexExample" :html="examples.FlexInlineFlexExampleHTML"></example>
+<example type="flex" :component="FlexInlineFlexExample" :html="FlexInlineFlexExampleHTML"></example>
 
 Flexbox utilities can also be applied responsively. Here are the available helper classes::
 
@@ -31,12 +61,12 @@ Set the direction of flex items in a flex container with direction utilities. Th
 #### Row Direction
 Setting a row direction will cause the flexbox items to flow horizontally.
 
-<example type="flex" :component="examples.FlexDirectionRowExample" :html="examples.FlexDirectionRowExampleHTML"></example>
+<example type="flex" :component="FlexDirectionRowExample" :html="FlexDirectionRowExampleHTML"></example>
 
 #### Column Direction
 Setting a column direction will cause the flexbox items to flow vertically.
 
-<example type="flex" :component="examples.FlexDirectionColumnExample" :html="examples.FlexDirectionColumnExampleHTML"></example>
+<example type="flex" :component="FlexDirectionColumnExample" :html="FlexDirectionColumnExampleHTML"></example>
 
 Flexbox direction utilities can also be applied responsively. Here are the available helper classes::
 
@@ -52,7 +82,7 @@ Flexbox direction utilities can also be applied responsively. Here are the avail
 ### Justify Content
 Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis if `flex-direction: row`, y-axis if `flex-direction: column`).
 
-<example type="flex" :component="examples.FlexJustifyContentExample" :html="examples.FlexJustifyContentExampleHTML"></example>
+<example type="flex" :component="FlexJustifyContentExample" :html="FlexJustifyContentExampleHTML"></example>
 
 Flexbox justify content utilities can also be applied responsively. Here are the available helper classes::
 
@@ -70,7 +100,7 @@ Flexbox justify content utilities can also be applied responsively. Here are the
 ### Align Items
 Use `_align-items` utilities on flexbox containers to change the alignment of flex items on the secondary axis (the y-axis if `flex-direction: row`, x-axis if `flex-direction: column`). 
 
-<example type="flex" :component="examples.FlexAlignItemsExample" :html="examples.FlexAlignItemsExampleHTML"></example>
+<example type="flex" :component="FlexAlignItemsExample" :html="FlexAlignItemsExampleHTML"></example>
 
 **Note:** The wrappers of the items above have a fixed height.
 
@@ -90,7 +120,7 @@ Flexbox align items utilities can also be applied responsively. Here are the ava
 ### Align Self
 Use `align-self` utilities on a flexbox item to change the alignment of the item on the secondary axis (the y-axis if `flex-direction: row`, x-axis if `flex-direction: column`).
 
-<example type="flex -tall" :component="examples.FlexAlignSelfExample" :html="examples.FlexAlignSelfExampleHTML"></example>
+<example type="flex -tall" :component="FlexAlignSelfExample" :html="FlexAlignSelfExampleHTML"></example>
 
 Flexbox align self utilities can also be applied responsively. Here are the available helper classes::
 
@@ -111,7 +141,7 @@ Use `align-content` utilities on flexbox containers to align flex content on the
 
 For demonstration purposes, the examples below use `._flex-wrap:wrap`, an increased `height`, and large number of items.
 
-<example type="flex -tall" :component="examples.FlexAlignContentExample" :html="examples.FlexAlignContentExampleHTML"></example>
+<example type="flex -tall" :component="FlexAlignContentExample" :html="FlexAlignContentExampleHTML"></example>
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::
 
@@ -131,7 +161,7 @@ Flexbox shrink and grow utilities can also be applied responsively. Here are the
 ### Fill
 Use `._flex:fill` utilities on a on a series of flexbox items to force them into widths equal to their content.
 
-<example type="flex" :component="examples.FlexFillExample" :html="examples.FlexFillExampleHTML"></example>
+<example type="flex" :component="FlexFillExample" :html="FlexFillExampleHTML"></example>
 
 Flexbox fill utilities can also be applied responsively. Here are the available helper classes::
 
@@ -141,11 +171,11 @@ Flexbox fill utilities can also be applied responsively. Here are the available 
 ### Grow and shrink
 Use `._flex-grow:1` and `_flex-grow:0` utilities to toggle a flex item’s ability to grow to fill available space. In the example below. A value of `1` uses all available space it can, while allowing the remaining two flex items their necessary space.
 
-<example type="flex" :component="examples.FlexGrowExample" :html="examples.FlexGrowExampleHTML"></example>
+<example type="flex" :component="FlexGrowExample" :html="FlexGrowExampleHTML"></example>
 
 Use the `._flex-shrink:1` and `._flex-shrink:0` utilities to toggle a flex item’s ability to shrink if necessary. This can be used together with a `width: 100%` div to make some flex items cover as little space as possible.
 
-<example type="flex" :component="examples.FlexShrinkExample" :html="examples.FlexShrinkExampleHTML"></example>
+<example type="flex" :component="FlexShrinkExample" :html="FlexShrinkExampleHTML"></example>
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::
 
@@ -161,12 +191,12 @@ Flexbox shrink and grow utilities can also be applied responsively. Here are the
 ### Auto Margins
 When you mix flex alignments with auto margins you can obtain some pretty unique and useful layouts.
 
-<example type="flex" :component="examples.FlexMarginAutoExample" :html="examples.FlexMarginAutoExampleHTML"></example>
+<example type="flex" :component="FlexMarginAutoExample" :html="FlexMarginAutoExampleHTML"></example>
 
 ### Wrapping
 Change how flex items wrap in a flex container. To have wrapping disabled (browser default) use `._flex-wrap:nowrap`. To enable wrapping, use `._flex-wrap:wrap`, or reverse wrapping with `._flex-wrap:wrap-reverse`.
 
-<example type="flex" :component="examples.FlexWrapExample" :html="examples.FlexWrapExampleHTML"></example>
+<example type="flex" :component="FlexWrapExample" :html="FlexWrapExampleHTML"></example>
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::
 
@@ -180,7 +210,7 @@ Flexbox shrink and grow utilities can also be applied responsively. Here are the
 ### Order
 You can change the order of flex items with a handful of order utilities. You can use `._order:first` to make an item first or `._order:last` to make an item last. You can use `_order:{value}` (where value can be a number from `0` to `12`) to change the order of elements to a specific position.
 
-<example type="flex" :component="examples.FlexOrderExample" :html="examples.FlexOrderExampleHTML"></example>
+<example type="flex" :component="FlexOrderExample" :html="FlexOrderExampleHTML"></example>
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::
 

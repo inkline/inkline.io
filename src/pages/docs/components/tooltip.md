@@ -1,10 +1,24 @@
 ---
-title: Tooltip
+title: Tooltip - Inkline
 description: Tooltips are useful for conveying information when an user hovers over an element.
 ---
 
 <script setup>
-import * as examples from '../../../examples/components/tooltip'
+import {
+    ITooltipBasicExample,
+    ITooltipColorVariantsExample,
+    ITooltipSizeVariantsExample,
+    ITooltipFreeformExample,
+    ITooltipPlacementExample,
+    ITooltipTriggerExample
+} from '@inkline/inkline/components/ITooltip/examples';
+import { default as ITooltipBasicExampleHTML } from '@inkline/inkline/components/ITooltip/examples/basic.html?raw';
+import { default as ITooltipColorVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/color-variants.html?raw';
+import { default as ITooltipSizeVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/size-variants.html?raw';
+import { default as ITooltipFreeformExampleHTML } from '@inkline/inkline/components/ITooltip/examples/freeform.html?raw';
+import { default as ITooltipPlacementExampleHTML } from '@inkline/inkline/components/ITooltip/examples/placement.html?raw';
+import { default as ITooltipTriggerExampleHTML } from '@inkline/inkline/components/ITooltip/examples/trigger.html?raw';
+import { default as ITooltipTriggerExampleJS } from '@inkline/inkline/components/ITooltip/examples/trigger.js?raw';
 </script>
 
 # Tooltip
@@ -13,7 +27,7 @@ import * as examples from '../../../examples/components/tooltip'
 ### Basic Example
 Wrap the trigger element (such as an `<i-button>`) and provide a `<template #body>` inside an `<i-tooltip>` component to create a tooltip.
 
-<example :component="examples.ITooltipBasicExample" :html="examples.ITooltipBasicExampleHTML"></example>
+<example :component="ITooltipBasicExample" :html="ITooltipBasicExampleHTML"></example>
 
 ### Placement
 Trigger tooltips at the `top`, `bottom`, `left` or `right` of elements by using the `placement` property. 
@@ -33,25 +47,25 @@ Each position also has a `-start` or `-end` variant that sets the tooltip to the
 - `right-start`
 - `right-end`
 
-<example :component="examples.ITooltipPlacementExample" :html="examples.ITooltipPlacementExampleHTML"></example>
+<example :component="ITooltipPlacementExample" :html="ITooltipPlacementExampleHTML"></example>
 
 ### Freeform
 Tooltips can contain text of virtually any size. You can control the wrapping and the maximum width of the tooltip by setting `white-space: normal` and a fixed `width` property on the tooltip content.
 
-<example :component="examples.ITooltipFreeformExample" :html="examples.ITooltipFreeformExampleHTML"></example>
+<example :component="ITooltipFreeformExample" :html="ITooltipFreeformExampleHTML"></example>
 
 ### Trigger Type
 You can use the `trigger` property to trigger the tooltip on `hover` or `click`. By default, tooltips are triggered on `hover`, a design decision made to improve user experience.
 
-<example :component="examples.ITooltipTriggerExample" :html="examples.ITooltipTriggerExampleHTML" :js="examples.ITooltipTriggerExampleJS"></example>
+<example :component="ITooltipTriggerExample" :html="ITooltipTriggerExampleHTML" :js="ITooltipTriggerExampleJS"></example>
 
 ### Size Variants
 You're able to use the `size` property to control the size of your tooltips, using one of the available sizes: `sm`, `md`, and `lg`. 
 The default size is set to `md`.
 
-<example :component="examples.ITooltipSizeVariantsExample" :html="examples.ITooltipSizeVariantsExampleHTML"></example>
+<example :component="ITooltipSizeVariantsExample" :html="ITooltipSizeVariantsExampleHTML"></example>
 
 ### Color Variants
 You can choose a light or dark color for your tooltip using the `color` modifier.
 
-<example :component="examples.ITooltipColorVariantsExample" :html="examples.ITooltipColorVariantsExampleHTML"></example>
+<example :component="ITooltipColorVariantsExample" :html="ITooltipColorVariantsExampleHTML"></example>

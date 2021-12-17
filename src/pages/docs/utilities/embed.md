@@ -1,10 +1,13 @@
 ---
-title: Embed Utilities
+title: Embed Utilities - Inkline
 description: Create responsive video embeds by keeping the aspect ratio based on the parent element width. 
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/embed'
+import {
+    EmbedBasicExample
+} from '@inkline/inkline/stories/utilities/embed';
+import { default as EmbedBasicExampleHTML } from '@inkline/inkline/stories/utilities/embed/basic.html?raw';
 </script>
 
 # Embed Utilities
@@ -14,7 +17,7 @@ import * as examples from '../../../examples/utilities/embed'
 ### Basic Example
 Embed styles are directly applied to `<iframe>`, `<embed>`, `<video>`, and `<object>` elements.
 
-<example :component="examples.EmbedBasicExample" :html="examples.EmbedBasicExampleHTML"></example>
+<example :component="EmbedBasicExample" :html="EmbedBasicExampleHTML"></example>
 
 ### Aspect Ratios
 Aspect ratios can be customized with embed helper classes. The following aspect ratio classes are available:

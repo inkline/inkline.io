@@ -14,19 +14,6 @@ import markdownNamedHeadings from 'markdown-it-named-headings';
 // @ts-expect-error missing types
 import markdownLinkAttributes from 'markdown-it-link-attributes';
 
-function html () {
-    return {
-        name: 'html',
-        transform (code: any, id: string) {
-            const isIndexHtml = id.replace(__dirname, '') === '/index.html';
-
-            if (/\.html$/.test(id) && !isIndexHtml) {
-                return `export default ${JSON.stringify(code)}`;
-            }
-        }
-    };
-}
-
 /**
  * @docs https://vitejs.dev/config/
  */
@@ -44,7 +31,18 @@ export default defineConfig({
          * @docs https://github.com/vitejs/vite/tree/main/packages/plugin-vue#readme
          */
         vue({
-            include: [/\.vue$/, /\.md$/]
+            include: [/\.vue$/, /\.md$/],
+            template: {
+                ssr: true,
+                compilerOptions: {
+                    directiveTransforms: {
+                        clickOutside: () => ({
+                            props: [],
+                            needRuntime: true
+                        })
+                    }
+                }
+            }
         }),
 
         /**
@@ -132,9 +130,7 @@ export default defineConfig({
             runtimeOnly: true,
             compositionOnly: true,
             include: [path.resolve(__dirname, 'locales/**')]
-        }),
-
-        // html()
+        })
     ],
 
     server: {
@@ -161,10 +157,22 @@ export default defineConfig({
         include: [
             'vue',
             'vue-router',
-            '@vueuse/core'
+            '@vueuse/core',
+            '@inkline/inkline',
+            '@inkline/icons',
+            '@popperjs/core'
         ],
         exclude: [
             'vue-demi'
         ]
+    },
+
+    /**
+     * @docs https://vitejs.dev/config/#css-preprocessoroptions
+     */
+    css: {
+        preprocessorOptions: {
+            scss: { charset: false }
+        }
     }
 });

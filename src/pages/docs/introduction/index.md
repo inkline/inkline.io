@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting Started - Inkline
 description: Get started with Inkline and experience well written, designed and tested front end code.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Plugin Options
+title: Plugin Options - Inkline
 description: Make Inkline your own by changing its many global configuration options.
 ---
 

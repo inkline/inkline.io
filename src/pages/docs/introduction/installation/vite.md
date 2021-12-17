@@ -1,5 +1,5 @@
 ---
-title: Vite.js CLI Installation
+title: Vite.js CLI Installation - Inkline
 description: Install Inkline for any application created using Vite.js.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: About Inkline
+title: About Inkline - Inkline
 description: Inkline is a modern UI/UX Library for Vue.js, designed for creating flawless content-rich responsive web applications.
 ---
 

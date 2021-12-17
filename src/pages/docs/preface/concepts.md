@@ -1,5 +1,5 @@
 ---
-title: Concepts
+title: Concepts - Inkline
 description: Learn more about the concepts used throughout the UI Components library and Inkline's design decisions.
 ---
 
@@ -65,36 +65,30 @@ Utility classes are general-purpose helper classes meant to override values. Cla
 ~~~
 
 ##### CSS Variables
-CSS Variables in Inkline have levels of abstraction. This way we're able to override the design of the application and the components both globally and individually. Component CSS Variables, although based on the Global CSS Variables, can have calculated or derived values for the same property. 
+CSS Variables in Inkline have levels of abstraction. This way we're able to override the design of the application and the components both globally and individually. 
 
 We've designed CSS Variables in Inkline to fall under one of two categories:
 
 - **Global CSS Variables**
-    
-    The Global CSS Variables are prefixed with `--` (e.g. `--padding-left`, `--border-left-width`), live under the `:root` selector, and provide inter-connected values that affect the overall design of the application. 
+
+    Global variables are prefixed with `--`.
+
+    ~~~scss
+    var(--padding-top);
+    var(--padding-right);
+    var(--padding-bottom);
+    var(--padding-left);
+    ~~~
+
 - **Local CSS Variables**
 
-    The Local CSS Variables are prefixed with `----` (e.g. `----padding-left`, `----background`, `----color`), live under individual component selectors, and have values based on the Global CSS Variables. 
+    Global variables are prefixed with `----`.
 
-Generally, CSS Variables have the following naming convention:
+    ~~~scss
+    var(----color);
+    var(----color--hover);
+    var(----link--color--hover);
+    var(----header--link--color--hover);
+    ~~~
 
-~~~scss
-var(--element--modifier--property--state);
-var(----element--modifier--property--state);
-~~~
-
-Here are some examples: 
-
-~~~scss
-var(--padding-top);
-var(--padding-right);
-var(--padding-bottom);
-var(--padding-left);
-
-var(----color);
-var(----color--hover);
-var(----link--color--hover);
-var(----header--link--color--hover);
-~~~
-
-Read more about the Design System <router-link :to="{ name: 'docs-introduction-design-system' }">here</router-link>.
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about the Design System.

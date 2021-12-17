@@ -1,5 +1,5 @@
 ---
-title: Position Utilities
+title: Position Utilities - Inkline
 description: Use position utilities for quickly setting the position of an element.
 ---
 

@@ -76,6 +76,9 @@ export default defineComponent({
 
     @include breakpoint-down('md') {
         margin-left: 0;
+    }
+
+    @include breakpoint-down('lg') {
         margin-right: 0;
     }
 
@@ -88,6 +91,12 @@ export default defineComponent({
                 font-weight: var(--font-weight--normal);
             }
         }
+    }
+}
+
+#page-navigation {
+    @include breakpoint-down('lg') {
+        display: none;
     }
 }
 </style>

@@ -1,10 +1,15 @@
 ---
-title: Vertical Align Utilities
+title: Vertical Align Utilities - Inkline
 description: Change the vertical alignment of inline, inline block, inline table, and table cell elements. 
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/vertical-align'
+import {
+    VerticalAlignBasicExample,
+    VerticalAlignTableExample
+} from '@inkline/inkline/stories/utilities/vertical-align';
+import { default as VerticalAlignBasicExampleHTML } from '@inkline/inkline/stories/utilities/vertical-align/basic.html?raw';
+import { default as VerticalAlignTableExampleHTML } from '@inkline/inkline/stories/utilities/vertical-align/table.html?raw';
 </script>
 
 # Vertical Align Utilities
@@ -14,9 +19,9 @@ import * as examples from '../../../examples/utilities/vertical-align'
 ### Text Alignment
 You can use vertical align utilities to change the alignment of elements. Please note that vertical-align only affects `inline`, `inline-block`, `inline-table`, and `table-cell` elements.
 
-<example :component="examples.VerticalAlignBasicExample" :html="examples.VerticalAlignBasicExampleHTML"></example>
+<example :component="VerticalAlignBasicExample" :html="VerticalAlignBasicExampleHTML"></example>
 
 ### Table Cell Alignment
 You can use vertical align utilities to change the alignment of table cells.
 
-<example :component="examples.VerticalAlignTableExample" :html="examples.VerticalAlignTableExampleHTML"></example>
+<example :component="VerticalAlignTableExample" :html="VerticalAlignTableExampleHTML"></example>

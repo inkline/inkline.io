@@ -6,10 +6,12 @@
     "lint": "eslint --ext .vue,.ts,.js src",
     "preview": "vite preview",
     "preview-https": "serve dist",
-    "docgen": "ts-node scripts/docgen.ts"
+    "docgen": "ts-node scripts/docgen.ts",
+    "postinstall": "node scripts/patch.js"
   },
   "dependencies": {
-    "@inkline/inkline": "3.0.0-beta.43",
+    "@inkline/icons": "1.4.13",
+    "@inkline/inkline": "3.0.0-beta.51",
     "@vueuse/core": "7.3.0",
     "markdown-it-named-headings": "^1.1.0",
     "nprogress": "0.2.0",

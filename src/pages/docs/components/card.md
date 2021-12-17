@@ -1,10 +1,23 @@
 ---
-title: Card
+title: Card - Inkline
 description: Cards provide you with a flexible and extensible content container with multiple color variants and options.
 ---
 
 <script setup>
-import * as examples from '../../../examples/components/card'
+import {
+    ICardBasicExample,
+    ICardBodyExample,
+    ICardHeaderFooterExample,
+    ICardColorVariantsExample,
+    ICardImageExample,
+    ICardSizeVariantsExample
+} from '@inkline/inkline/components/ICard/examples';
+import { default as ICardBasicExampleHTML } from '@inkline/inkline/components/ICard/examples/basic.html?raw';
+import { default as ICardBodyExampleHTML } from '@inkline/inkline/components/ICard/examples/card-body.html?raw';
+import { default as ICardHeaderFooterExampleHTML } from '@inkline/inkline/components/ICard/examples/card-header-footer.html?raw';
+import { default as ICardColorVariantsExampleHTML } from '@inkline/inkline/components/ICard/examples/color-variants.html?raw';
+import { default as ICardImageExampleHTML } from '@inkline/inkline/components/ICard/examples/image.html?raw';
+import { default as ICardSizeVariantsExampleHTML } from '@inkline/inkline/components/ICard/examples/size-variants.html?raw';
 </script>
 
 # Card
@@ -18,31 +31,31 @@ Cards are customizable content holders built with as little markup and styles as
 
 By default, cards are set to have `width: 100%`, fully spanning the width of the parent container. 
 
-<example type="card" :component="examples.ICardBasicExample" :html="examples.ICardBasicExampleHTML"></example>
+<example type="card" :component="ICardBasicExample" :html="ICardBasicExampleHTML"></example>
 
 ### Body
 The building block of a card is the card body. All the content placed in the default component slot will be placed inside the body.
 
-<example type="card" :component="examples.ICardBodyExample" :html="examples.ICardBodyExampleHTML"></example>
+<example type="card" :component="ICardBodyExample" :html="ICardBodyExampleHTML"></example>
 
 ### Header and Footer
 Optionally, you can provide a header or a footer for your cards.
 
-<example type="card" :component="examples.ICardHeaderFooterExample" :html="examples.ICardHeaderFooterExampleHTML"></example>
+<example type="card" :component="ICardHeaderFooterExample" :html="ICardHeaderFooterExampleHTML"></example>
 
 ### Image Header
 You can provide an image at the top of the card, using the `image` slot.
 
-<example type="card" :component="examples.ICardImageExample" :html="examples.ICardImageExampleHTML"></example>
+<example type="card" :component="ICardImageExample" :html="ICardImageExampleHTML"></example>
 
 ### Size Variants
 You're able to use the `size` modifier to control the text and spacing size of your cards, using one of the available sizes: `sm`, `md`, and `lg`. 
 The default size is set to `md`.
 
-<example type="card" :component="examples.ICardSizeVariantsExample" :html="examples.ICardSizeVariantsExampleHTML"></example>
+<example type="card" :component="ICardSizeVariantsExample" :html="ICardSizeVariantsExampleHTML"></example>
 
 ### Color Variants
 Inkline includes several predefined card colors that you can use within your application. You can apply a style using the `color` property.
 
-<example type="card" :component="examples.ICardColorVariantsExample" :html="examples.ICardColorVariantsExampleHTML"></example>
+<example type="card" :component="ICardColorVariantsExample" :html="ICardColorVariantsExampleHTML"></example>
 

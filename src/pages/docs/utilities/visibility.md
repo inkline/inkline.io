@@ -1,10 +1,13 @@
 ---
-title: Visibility Utilities
+title: Visibility Utilities - Inkline
 description: Control the visibility, with or without modifying the display of elements. 
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/visibility'
+import {
+    VisibilityBasicExample
+} from '@inkline/inkline/stories/utilities/visibility';
+import { default as VisibilityBasicExampleHTML } from '@inkline/inkline/stories/utilities/visibility/basic.html?raw';
 </script>
 
 # Visibility Utilities
@@ -35,4 +38,4 @@ Visibility utilities can be applied responsively using the following helper clas
 - `._{xs|sm|md|lg|xl|xxl}:hidden`
 - `._{xs|sm|md|lg|xl|xxl}:visible`
 
-<example :component="examples.VisibilityBasicExample" :html="examples.VisibilityBasicExampleHTML"></example>
+<example :component="VisibilityBasicExample" :html="VisibilityBasicExampleHTML"></example>

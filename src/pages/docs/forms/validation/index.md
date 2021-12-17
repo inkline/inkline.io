@@ -1,10 +1,20 @@
 ---
-title: Form Validation
+title: Form Validation - Inkline
 description: Inkline provides you with powerful form validation utilities. 
 ---
 
 <script setup>
-import * as examples from '../../../../examples/forms/validation'
+import {
+    IFormValidationBasicExample,
+    IFormValidationBasicBindingExample,
+    IFormValidationBasicValidatorsExample
+} from '@inkline/inkline/stories/forms/validation';
+import { default as IFormValidationBasicExampleHTML } from '@inkline/inkline/stories/forms/validation/basic.html?raw';
+import { default as IFormValidationBasicExampleJS } from '@inkline/inkline/stories/forms/validation/basic.js?raw';
+import { default as IFormValidationBasicBindingExampleHTML } from '@inkline/inkline/stories/forms/validation/basic-binding.html?raw';
+import { default as IFormValidationBasicBindingExampleJS } from '@inkline/inkline/stories/forms/validation/basic-binding.js?raw';
+import { default as IFormValidationBasicValidatorsExampleHTML } from '@inkline/inkline/stories/forms/validation/basic-validators.html?raw';
+import { default as IFormValidationBasicValidatorsExampleJS } from '@inkline/inkline/stories/forms/validation/basic-validators.js?raw';
 </script>
 
 # Form Validation
@@ -72,13 +82,15 @@ export default {
 }       
 ~~~
 
+<example :component="IFormValidationBasicExample" :html="IFormValidationBasicExampleHTML" :js="IFormValidationBasicExampleJS"></example>
+
 #### 2. Connecting the schema to the form components
 
 Next, the created `form` object needs to be bound to the form input components inside your template as follows:
  - The form component handles field value changes using the `v-model` directive
  - Each field name inside the defined schema connects to an input using the `name` property in your template
 
-<example :component="examples.IFormValidationBasicBindingExample" :html="examples.IFormValidationBasicBindingExampleHTML" :js="examples.IFormValidationBasicBindingExampleJS"></example>
+<example :component="IFormValidationBasicBindingExample" :html="IFormValidationBasicBindingExampleHTML" :js="IFormValidationBasicBindingExampleJS"></example>
 
 For the example above, `this.form.username` and `this.form.password` would be objects containing the field value, errors and validation statuses.
 
@@ -137,7 +149,7 @@ export default {
 }       
 ~~~
 
-<example :component="examples.IFormValidationBasicValidatorsExample" :html="examples.IFormValidationBasicValidatorsExampleHTML" :js="examples.IFormValidationBasicValidatorsExampleJS"></example>
+<example :component="IFormValidationBasicValidatorsExample" :html="IFormValidationBasicValidatorsExampleHTML" :js="IFormValidationBasicValidatorsExampleJS"></example>
 
 You can also register custom validators for your form schema.
 

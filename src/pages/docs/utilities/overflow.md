@@ -1,10 +1,13 @@
 ---
-title: Overflow Utilities
+title: Overflow Utilities - Inkline
 description: You can use the overflow utilities for deciding how content overflows an element.
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/overflow'
+import {
+    OverflowBasicExample
+} from '@inkline/inkline/stories/utilities/overflow';
+import { default as OverflowBasicExampleHTML } from '@inkline/inkline/stories/utilities/overflow/basic.html?raw';
 </script>
 
 # Overflow Utilities
@@ -13,4 +16,4 @@ import * as examples from '../../../examples/utilities/overflow'
 
 Overflow functionality is provided for two values by default, and they are not responsive.
 
-<example type="overflow" :component="examples.OverflowBasicExample" :html="examples.OverflowBasicExampleHTML"></example>
+<example type="overflow" :component="OverflowBasicExample" :html="OverflowBasicExampleHTML"></example>

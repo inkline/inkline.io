@@ -10,10 +10,14 @@ function matchParentWidth (element: HTMLElement) {
 
 export default {
     beforeMount (element: HTMLElement) {
-        on(window as any, 'resize', () => matchParentWidth(element));
+        if (typeof window !== 'undefined') {
+            on(window as any, 'resize', () => matchParentWidth(element));
+        }
     },
     beforeUnmount (element: HTMLElement) {
-        off(window as any, 'resize', () => matchParentWidth(element));
+        if (typeof window !== 'undefined') {
+            off(window as any, 'resize', () => matchParentWidth(element));
+        }
     },
     mounted (element: HTMLElement) {
         matchParentWidth(element);

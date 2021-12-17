@@ -1,10 +1,43 @@
 ---
-title: Text Utilities
+title: Text Utilities - Inkline
 description: Use common text utilities to control alignment, wrapping, weight, and more. 
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/text'
+import {
+    TextFontMonospaceExample,
+    TextFontSizeExample,
+    TextFontStyleItalicExample,
+    TextFontWeightRelativeExample,
+    TextFontWeightExample,
+    TextAlignJustifyExample,
+    TextAlignResponsiveExample,
+    TextAlignExample,
+    TextBreakExample,
+    TextDecorationExample,
+    TextMutedExample,
+    TextNowrapExample,
+    TextResetExample,
+    TextTransformExample,
+    TextTruncateExample,
+    TextWrapExample
+} from '@inkline/inkline/stories/utilities/text';
+import { default as TextFontMonospaceExampleHTML } from '@inkline/inkline/stories/utilities/text/font-monospace.html?raw';
+import { default as TextFontSizeExampleHTML } from '@inkline/inkline/stories/utilities/text/font-size.html?raw';
+import { default as TextFontStyleItalicExampleHTML } from '@inkline/inkline/stories/utilities/text/font-style-italic.html?raw';
+import { default as TextFontWeightRelativeExampleHTML } from '@inkline/inkline/stories/utilities/text/font-weight-relative.html?raw';
+import { default as TextFontWeightExampleHTML } from '@inkline/inkline/stories/utilities/text/font-weight.html?raw';
+import { default as TextAlignJustifyExampleHTML } from '@inkline/inkline/stories/utilities/text/text-align-justify.html?raw';
+import { default as TextAlignResponsiveExampleHTML } from '@inkline/inkline/stories/utilities/text/text-align-responsive.html?raw';
+import { default as TextAlignExampleHTML } from '@inkline/inkline/stories/utilities/text/text-align.html?raw';
+import { default as TextBreakExampleHTML } from '@inkline/inkline/stories/utilities/text/text-break.html?raw';
+import { default as TextDecorationExampleHTML } from '@inkline/inkline/stories/utilities/text/text-decoration.html?raw';
+import { default as TextMutedExampleHTML } from '@inkline/inkline/stories/utilities/text/text-muted.html?raw';
+import { default as TextNowrapExampleHTML } from '@inkline/inkline/stories/utilities/text/text-nowrap.html?raw';
+import { default as TextResetExampleHTML } from '@inkline/inkline/stories/utilities/text/text-reset.html?raw';
+import { default as TextTransformExampleHTML } from '@inkline/inkline/stories/utilities/text/text-transform.html?raw';
+import { default as TextTruncateExampleHTML } from '@inkline/inkline/stories/utilities/text/text-truncate.html?raw';
+import { default as TextWrapExampleHTML } from '@inkline/inkline/stories/utilities/text/text-wrap.html?raw';
 </script>
 
 # Text Utilities
@@ -14,13 +47,13 @@ import * as examples from '../../../examples/utilities/text'
 ### Text Alignment
 Use text alignment utilities to easily align text in components. 
 
-<example :component="examples.TextAlignJustifyExample" :html="examples.TextAlignJustifyExampleHTML"></example>
+<example :component="TextAlignJustifyExample" :html="TextAlignJustifyExampleHTML"></example>
 
-<example :component="examples.TextAlignExample" :html="examples.TextAlignExampleHTML"></example>
+<example :component="TextAlignExample" :html="TextAlignExampleHTML"></example>
 
 `For left, right, and center alignment, Inkline provides you with responsive classes that use the same breakpoints as the grid system.
 
-<example :component="examples.TextAlignResponsiveExample" :html="examples.TextAlignResponsiveExampleHTML"></example>
+<example :component="TextAlignResponsiveExample" :html="TextAlignResponsiveExampleHTML"></example>
 
 You can use the following text alignment utility classes:
 
@@ -35,17 +68,17 @@ You can use the following text alignment utility classes:
 ### Text Wrapping and Overflow
 You can wrap text using the `._white-space:normal` utility class.
 
-<example :component="examples.TextWrapExample" :html="examples.TextWrapExampleHTML"></example>
+<example :component="TextWrapExample" :html="TextWrapExampleHTML"></example>
 
 You can also prevent text from wrapping with a `._white-space:nowrap` utility class.
 
-<example :component="examples.TextNowrapExample" :html="examples.TextNowrapExampleHTML"></example>
+<example :component="TextNowrapExample" :html="TextNowrapExampleHTML"></example>
 
 Text wrapping utilities also come with breakpoint-specific classes, same as text alignment classes.
 
 For longer content, adding the `._text:truncate` utility class will truncate the text with an ellipsis. Truncation requires `display: inline-block` or `display: block`.
 
-<example :component="examples.TextTruncateExample" :html="examples.TextTruncateExampleHTML"></example>
+<example :component="TextTruncateExample" :html="TextTruncateExampleHTML"></example>
 
 You can use the following white space utility classes:
 
@@ -59,7 +92,7 @@ You can use the following white space utility classes:
 ### Word Break
 Prevent long strings of text from breaking your layout by using `._text:break-word`. Behind the scenes, it uses `overflow-wrap: break-word` and `word-break: break-word` for IE & Edge compatibility.
 
-<example :component="examples.TextBreakExample" :html="examples.TextBreakExampleHTML"></example>
+<example :component="TextBreakExample" :html="TextBreakExampleHTML"></example>
 
 You can use the following word break utility classes:
 
@@ -68,7 +101,7 @@ You can use the following word break utility classes:
 ### Text Transform
 You can transform text in components using text capitalization classes.
 
-<example :component="examples.TextTransformExample" :html="examples.TextTransformExampleHTML"></example>
+<example :component="TextTransformExample" :html="TextTransformExampleHTML"></example>
 
 You can use the following text transform utility classes:
 
@@ -79,11 +112,11 @@ You can use the following text transform utility classes:
 ### Font Weights and Italics
 You can change the weight (boldness) of your text italicize it using these utility classes.
 
-<example :component="examples.TextFontWeightExample" :html="examples.TextFontWeightExampleHTML"></example>
+<example :component="TextFontWeightExample" :html="TextFontWeightExampleHTML"></example>
 
-<example :component="examples.TextFontWeightRelativeExample" :html="examples.TextFontWeightRelativeExampleHTML"></example>
+<example :component="TextFontWeightRelativeExample" :html="TextFontWeightRelativeExampleHTML"></example>
 
-<example :component="examples.TextFontStyleItalicExample" :html="examples.TextFontStyleItalicExampleHTML"></example>
+<example :component="TextFontStyleItalicExample" :html="TextFontStyleItalicExampleHTML"></example>
 
 
 You can use the following font weight and style utility classes:
@@ -101,7 +134,7 @@ You can use the following font weight and style utility classes:
 ### Font Size
 Change your font size using one of the font-size utilities.
 
-<example :component="examples.TextFontSizeExample" :html="examples.TextFontSizeExampleHTML"></example>
+<example :component="TextFontSizeExample" :html="TextFontSizeExampleHTML"></example>
 
 You can use the following font weight utility classes:
 
@@ -114,7 +147,7 @@ You can use the following font weight utility classes:
 ### Monospace
 Change your text to be monospaced using the `._font-family:monospace` utility.
 
-<example :component="examples.TextFontMonospaceExample" :html="examples.TextFontMonospaceExampleHTML"></example>
+<example :component="TextFontMonospaceExample" :html="TextFontMonospaceExampleHTML"></example>
 
 You can use the following font weight utility classes:
 
@@ -123,7 +156,7 @@ You can use the following font weight utility classes:
 ### Text Decoration
 Remove text decoration using the `._text-decoration:none` utility.
 
-<example :component="examples.TextDecorationExample" :html="examples.TextDecorationExampleHTML"></example>
+<example :component="TextDecorationExample" :html="TextDecorationExampleHTML"></example>
 
 You can use the following text decoration utility classes:
 
@@ -132,7 +165,7 @@ You can use the following text decoration utility classes:
 ### Muted Text
 Make your text stand out less using the `._text:muted` utility.
 
-<example :component="examples.TextMutedExample" :html="examples.TextMutedExampleHTML"></example>
+<example :component="TextMutedExample" :html="TextMutedExampleHTML"></example>
 
 You can use the following text muted utility classes:
 
@@ -141,7 +174,7 @@ You can use the following text muted utility classes:
 ### Text Reset
 Make your text or link inherit the parent's color using the `._text:reset` utility.
 
-<example :component="examples.TextResetExample" :html="examples.TextResetExampleHTML"></example>
+<example :component="TextResetExample" :html="TextResetExampleHTML"></example>
 
 You can use the following text reset utility classes:
 

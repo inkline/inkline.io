@@ -1,10 +1,15 @@
 ---
-title: Select Pagination
+title: Select Pagination - Inkline
 description: Pagination is handled using a simple and efficient infinite scrolling algorithm. The select component is used for selecting a value from a large list of options, with autocomplete support. 
 ---
 
 <script setup>
-import * as examples from '../../../../examples/forms/select/pagination'
+
+import {
+    ISelectPaginationExample
+} from '@inkline/inkline/components/ISelect/examples';
+import { default as ISelectPaginationExampleHTML } from '@inkline/inkline/components/ISelect/examples/pagination.html?raw';
+import { default as ISelectPaginationExampleJS } from '@inkline/inkline/components/ISelect/examples/pagination.js?raw';
 </script>
 
 
@@ -20,7 +25,7 @@ There are some considerations to be made when using infinite scrolling paginatio
 - You must provide a loading state using the `loading` property
 - You must update the available `options` array manually
 
-<example :component="examples.ISelectPaginationExample" :html="examples.ISelectPaginationExampleHTML" :js="examples.ISelectPaginationExampleJS"></example>
+<example :component="ISelectPaginationExample" :html="ISelectPaginationExampleHTML" :js="ISelectPaginationExampleJS"></example>
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Screen Reader
+title: Screen Reader - Inkline
 description: Use screen reader utilities to hide elements on all devices except screen readers.
 ---
 

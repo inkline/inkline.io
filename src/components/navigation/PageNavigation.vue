@@ -43,11 +43,13 @@ export default defineComponent({
             const element: HTMLElement | null = document.querySelector(hash);
             const top = (element?.offsetTop || 0) - scrollBehavior.top;
 
-            window.scrollTo({
-                top: top >= 0 ? top : 0,
-                left: scrollBehavior.left,
-                behavior: 'smooth'
-            });
+            if (typeof window !== 'undefined') {
+                window.scrollTo({
+                    top: top >= 0 ? top : 0,
+                    left: scrollBehavior.left,
+                    behavior: 'smooth'
+                });
+            }
 
             router.replace({ ...route, hash });
         };

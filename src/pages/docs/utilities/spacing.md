@@ -1,10 +1,21 @@
 ---
-title: Spacing Utilities
+title: Spacing Utilities - Inkline
 description: You can use a wide range of responsive margin and padding utility classes to modify an element’s appearance. 
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/spacing'
+import {
+    SpacingBottomExample,
+    SpacingHorizontalCenterExample,
+    SpacingLeftExample,
+    SpacingRightExample,
+    SpacingTopExample
+} from '@inkline/inkline/stories/utilities/spacing';
+import { default as SpacingBottomExampleHTML } from '@inkline/inkline/stories/utilities/spacing/bottom.html?raw';
+import { default as SpacingHorizontalCenterExampleHTML } from '@inkline/inkline/stories/utilities/spacing/horizontal-center.html?raw';
+import { default as SpacingLeftExampleHTML } from '@inkline/inkline/stories/utilities/spacing/left.html?raw';
+import { default as SpacingRightExampleHTML } from '@inkline/inkline/stories/utilities/spacing/right.html?raw';
+import { default as SpacingTopExampleHTML } from '@inkline/inkline/stories/utilities/spacing/top.html?raw';
 </script>
 
 # Spacing Utilities
@@ -61,15 +72,15 @@ You can add more sizes by adding entries to the `$spacings` Sass variable.
 ### Basic Example
 Here are some examples of these utility classes:
 
-<example type="spacing -vertical" :component="examples.SpacingTopExample" :html="examples.SpacingTopExampleHTML"></example>
+<example type="spacing -vertical" :component="SpacingTopExample" :html="SpacingTopExampleHTML"></example>
 
-<example type="spacing -vertical" :component="examples.SpacingBottomExample" :html="examples.SpacingBottomExampleHTML"></example>
+<example type="spacing -vertical" :component="SpacingBottomExample" :html="SpacingBottomExampleHTML"></example>
 
-<example type="spacing" :component="examples.SpacingLeftExample" :html="examples.SpacingLeftExampleHTML"></example>
+<example type="spacing" :component="SpacingLeftExample" :html="SpacingLeftExampleHTML"></example>
 
-<example type="spacing" :component="examples.SpacingRightExample" :html="examples.SpacingRightExampleHTML"></example>
+<example type="spacing" :component="SpacingRightExample" :html="SpacingRightExampleHTML"></example>
 
 ### Horizontal Centering
 You can set a `left` and `right` margin using the `x` side parameter, such as `._margin-x:auto`. The `._margin-x:auto` class is useful for horizontally centering fixed-width block level content.
 
-<example type="spacing" :component="examples.SpacingHorizontalCenterExample" :html="examples.SpacingHorizontalCenterExampleHTML"></example>
+<example type="spacing" :component="SpacingHorizontalCenterExample" :html="SpacingHorizontalCenterExampleHTML"></example>

@@ -1,10 +1,15 @@
 ---
-title: Advanced Select 
+title: Advanced Select  - Inkline
 description: The select component easily supports complex scenarios, with asynchronous autocomplete and pagination. 
 ---
 
 <script setup>
-import * as examples from '../../../../examples/forms/select/advanced'
+
+import {
+    ISelectAdvancedExample
+} from '@inkline/inkline/components/ISelect/examples';
+import { default as ISelectAdvancedExampleHTML } from '@inkline/inkline/components/ISelect/examples/advanced.html?raw';
+import { default as ISelectAdvancedExampleJS } from '@inkline/inkline/components/ISelect/examples/advanced.js?raw';
 </script>
 
 
@@ -23,7 +28,7 @@ In some scenarios you need to search large amounts of data. You'll be able to ea
 
 Here you can see an example using asynchronous search and infinite scrolling:
 
-<example :component="examples.ISelectAdvancedExample" :html="examples.ISelectAdvancedExampleHTML" :js="examples.ISelectAdvancedExampleJS"></example>
+<example :component="ISelectAdvancedExample" :html="ISelectAdvancedExampleHTML" :js="ISelectAdvancedExampleJS"></example>
 
 
 

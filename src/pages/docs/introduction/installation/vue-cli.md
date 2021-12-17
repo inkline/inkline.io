@@ -1,5 +1,5 @@
 ---
-title: Vue.js CLI Installation
+title: Vue.js CLI Installation - Inkline
 description: Install Inkline for any application created using the Vue.js CLI.
 ---
 

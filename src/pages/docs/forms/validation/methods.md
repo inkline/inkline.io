@@ -1,10 +1,17 @@
 ---
-title: Form Validation Methods
+title: Form Validation Methods - Inkline
 description: The form validation framework wouldn't be complete without dynamically added fields and groups.
 ---
 
 <script setup>
-import * as examples from '../../../../examples/forms/validation/methods'
+import {
+    IFormValidationMethodsGroupsObjectExample,
+    IFormValidationMethodsGroupsArrayExample
+} from '@inkline/inkline/stories/forms/validation/methods';
+import { default as IFormValidationMethodsGroupsObjectExampleHTML } from '@inkline/inkline/stories/forms/validation/methods/groups-object.html?raw';
+import { default as IFormValidationMethodsGroupsObjectExampleJS } from '@inkline/inkline/stories/forms/validation/methods/groups-object.js?raw';
+import { default as IFormValidationMethodsGroupsArrayExampleHTML } from '@inkline/inkline/stories/forms/validation/methods/groups-array.html?raw';
+import { default as IFormValidationMethodsGroupsArrayExampleJS } from '@inkline/inkline/stories/forms/validation/methods/groups-array.js?raw';
 </script>
 
 # Form Validation Methods
@@ -22,7 +29,7 @@ this.form.group[field] = this.$inkline.form(fieldSchema);
 this.form.group[field] = useForm(fieldSchema);
 ~~~
 
-<example :component="examples.IFormValidationMethodsGroupsObjectExample" :html="examples.IFormValidationMethodsGroupsObjectExampleHTML" :js="examples.IFormValidationMethodsGroupsObjectExampleJS"></example>
+<example :component="IFormValidationMethodsGroupsObjectExample" :html="IFormValidationMethodsGroupsObjectExampleHTML" :js="IFormValidationMethodsGroupsObjectExampleJS"></example>
 
 You can use `options.group` to specify whether the value being set is a group of fields. If not specified or set to `false`, the field will be a standalone field.
 
@@ -37,6 +44,6 @@ this.form.group.splice(0, 1, this.$inkline.form(fieldSchema));
 this.form.group.splice(0, 1, useForm(fieldSchema));
 ~~~
 
-<example :component="examples.IFormValidationMethodsGroupsArrayExample" :html="examples.IFormValidationMethodsGroupsArrayExampleHTML" :js="examples.IFormValidationMethodsGroupsArrayExampleJS"></example>
+<example :component="IFormValidationMethodsGroupsArrayExample" :html="IFormValidationMethodsGroupsArrayExampleHTML" :js="IFormValidationMethodsGroupsArrayExampleJS"></example>
 
 You can use `options.group` to specify whether the value being added is a group of fields. If not specified or set to `false`, the field will be a standalone field.

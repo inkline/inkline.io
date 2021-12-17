@@ -1,10 +1,15 @@
 ---
-title: Display Utilities
+title: Display Utilities - Inkline
 description: Change the display style of components responsively with display utilities. 
 ---
 
 <script setup>
-import * as examples from '../../../examples/utilities/display'
+import {
+    DisplayBlockExample,
+    DisplayInlineExample
+} from '@inkline/inkline/stories/utilities/display';
+import { default as DisplayBlockExampleHTML } from '@inkline/inkline/stories/utilities/display/block.html?raw';
+import { default as DisplayInlineExampleHTML } from '@inkline/inkline/stories/utilities/display/inline.html?raw';
 </script>
 
 # Display Utilities
@@ -44,9 +49,9 @@ And `breakpoint` is one of:
 
 The media queries affect screen widths with the given breakpoint. For example, `._lg:display:none` sets `display: none;` on large screens.
 
-<example :component="examples.DisplayInlineExample" :html="examples.DisplayInlineExampleHTML"></example>
+<example :component="DisplayInlineExample" :html="DisplayInlineExampleHTML"></example>
 
-<example :component="examples.DisplayBlockExample" :html="examples.DisplayBlockExampleHTML"></example>
+<example :component="DisplayBlockExample" :html="DisplayBlockExampleHTML"></example>
 
 ### Print
 Change the display value of elements when printing with the print display utility classes.

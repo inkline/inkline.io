@@ -1,10 +1,18 @@
 ---
-title: Select Autocomplete
+title: Select Autocomplete - Inkline
 description: The select autocomplete functionality allows you to search for a specific option with result highlighting. 
 ---
 
 <script setup>
-import * as examples from '../../../../examples/forms/select/autocomplete'
+
+import {
+    ISelectAutocompleteExample,
+    ISelectAutocompleteAsyncExample
+} from '@inkline/inkline/components/ISelect/examples';
+import { default as ISelectAutocompleteExampleHTML } from '@inkline/inkline/components/ISelect/examples/autocomplete.html?raw';
+import { default as ISelectAutocompleteExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete.js?raw';
+import { default as ISelectAutocompleteAsyncExampleHTML } from '@inkline/inkline/components/ISelect/examples/autocomplete-async.html?raw';
+import { default as ISelectAutocompleteAsyncExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete-async.js?raw';
 </script>
 
 
@@ -19,12 +27,12 @@ There are some considerations to be made when using autocomplete:
 - You must provide a loading state using the `loading` property, if done asynchronously
 - You must update the available `options` array manually
 
-<example :component="examples.ISelectAutocompleteExample" :html="examples.ISelectAutocompleteExampleHTML" :js="examples.ISelectAutocompleteExampleJS"></example>
+<example :component="ISelectAutocompleteExample" :html="ISelectAutocompleteExampleHTML" :js="ISelectAutocompleteExampleJS"></example>
 
 ### Async Example
 Combining the select autocomplete with your backend search is easy. Here's how to do it: 
 
-<example :component="examples.ISelectAutocompleteAsyncExample" :html="examples.ISelectAutocompleteAsyncExampleHTML" :js="examples.ISelectAutocompleteAsyncExampleJS"></example>
+<example :component="ISelectAutocompleteAsyncExample" :html="ISelectAutocompleteAsyncExampleHTML" :js="ISelectAutocompleteAsyncExampleJS"></example>
 
 If you're looking for an example that uses pagination as well, check out the <router-link :to="{ name: 'docs-forms-select-advanced' }">Advanced Select</router-link> section.
 
