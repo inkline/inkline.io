@@ -1,4 +1,5 @@
 {
+  "name": "@inkline/docs",
   "private": true,
   "scripts": {
     "dev": "vite",
