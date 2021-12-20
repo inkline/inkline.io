@@ -136,7 +136,12 @@ export default defineConfig({
         /**
          * @docs https://github.com/JonasKruckenberg/imagetools
          */
-        imagetools()
+        imagetools({
+            exclude: [],
+            defaultDirectives: (): URLSearchParams => {
+                return new URLSearchParams('quality=80');
+            }
+        })
     ],
 
     server: {

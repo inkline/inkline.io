@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite-ssg build",
-    "postbuild": "ts-node scripts/postbuild.ts",
     "lint": "eslint --ext .vue,.ts,.js src",
     "preview": "vite preview",
     "preview-https": "serve dist",
