@@ -22,18 +22,21 @@ export default defineComponent({
                 <i-column>
                     <ul class="list -inline">
                         <li>
-                            <a href="https://github.com/inkline/inkline" target="_blank">
+                            <a href="https://github.com/inkline/inkline" target="_blank" rel="noopener">
                                 <i-icon name="fab-github" />
+                                <span class="_visually-hidden">GitHub</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/inkline" target="_blank">
+                            <a href="https://twitter.com/inkline" target="_blank" rel="noopener">
                                 <i-icon name="fab-twitter" />
+                                <span class="_visually-hidden">Twitter</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://discord.gg/gzRpZysq" target="_blank">
+                            <a href="https://discord.gg/gzRpZysq" target="_blank" rel="noopener">
                                 <i-icon name="fab-discord" />
+                                <span class="_visually-hidden">Discord</span>
                             </a>
                         </li>
                     </ul>
@@ -41,7 +44,10 @@ export default defineComponent({
             </i-row>
             <i-row class="lead">
                 <i-column>
-                    Designed and built with <i-icon name="fas-heart" /> by <a href="https://grozav.com" target="_blank">@alexgrozav</a>.
+                    Designed and built with
+                    <i-icon name="fas-heart" />
+                    by
+                    <a href="https://grozav.com" target="_blank" rel="noopener">@alexgrozav</a>.
                 </i-column>
             </i-row>
             <i-row class="_text:muted _margin-top:1">

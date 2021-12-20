@@ -38,8 +38,8 @@ export default defineComponent({
 <template>
     <i-navbar :collapse="false">
         <i-navbar-brand to="/" translate="no">
-            <img class="logo -black" :src="logoBlack">
-            <img class="logo -white" :src="logoWhite">
+            <img alt="Inkline Logo" class="logo -black" :src="logoBlack">
+            <img alt="Inkline Logo" class="logo -white" :src="logoWhite">
             Inkline
         </i-navbar-brand>
         <i-navbar-collapsible class="_justify-content:end">
@@ -61,9 +61,15 @@ export default defineComponent({
                 <i-nav-item @click="setColorMode">
                     <i-icon v-if="colorMode === 'dark'" name="fas-sun" />
                     <i-icon v-else name="fas-moon" />
+                    <span class="_visually-hidden">
+                        <span>{{ t('navbar.colorMode') }}</span>
+                    </span>
                 </i-nav-item>
-                <i-nav-item :to="{ name: 'docs-introduction' }">
+                <i-nav-item href="https://github.com/inkline/inkline" rel="noopener">
                     <i-icon name="fab-github" />
+                    <span class="_visually-hidden">
+                        GitHub
+                    </span>
                 </i-nav-item>
                 <slot />
             </i-nav>

@@ -6,6 +6,7 @@ import layouts from 'vite-plugin-vue-layouts';
 import components from 'unplugin-vue-components/vite';
 import markdown from 'vite-plugin-md';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
+import { imagetools } from 'vite-imagetools'
 import i18n from '@intlify/vite-plugin-vue-i18n';
 
 import markdownPrism from 'markdown-it-prism';
@@ -130,7 +131,12 @@ export default defineConfig({
             runtimeOnly: true,
             compositionOnly: true,
             include: [path.resolve(__dirname, 'locales/**')]
-        })
+        }),
+
+        /**
+         * @docs https://github.com/JonasKruckenberg/imagetools
+         */
+        imagetools()
     ],
 
     server: {

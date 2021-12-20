@@ -38,7 +38,7 @@ export default defineComponent({
                 Discover Inkline's intuitive way of building and designing web applications.
             </p>
             <i-progress size="sm">
-                <i-progress-bar color="primary" value="90" />
+                <i-progress-bar aria-label="Try Inkline Progress" color="primary" value="90" />
             </i-progress>
         </i-media>
         <i-media class="_margin-bottom:1">
@@ -52,7 +52,7 @@ export default defineComponent({
                 Learn Vue.js 3, then improve my developer experience using Inkline.
             </p>
             <i-progress size="sm">
-                <i-progress-bar color="primary" value="75" />
+                <i-progress-bar aria-label="Learn Vue.js 3 Progress" color="primary" value="75" />
             </i-progress>
         </i-media>
         <i-media class="_margin-bottom:1">
@@ -66,7 +66,7 @@ export default defineComponent({
                 Install Inkline, integrate it with your application and enjoy good developer experience.
             </p>
             <i-progress size="sm">
-                <i-progress-bar color="primary" value="45" />
+                <i-progress-bar aria-label="Build application Progress" color="primary" value="45" />
             </i-progress>
         </i-media>
         <i-button block>

@@ -41,7 +41,7 @@ export default defineComponent({
                         <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1" :to="{ name: 'docs-introduction' }">
                             {{ t('index.header.button') }}
                         </i-button>
-                        <i-button id="github-button" size="lg" href="https://github.com/inkline/inkline">
+                        <i-button id="github-button" aria-label="GitHub" size="lg" href="https://github.com/inkline/inkline" rel="noopener">
                             <i-icon name="fab-github" class="_margin-right:1/2" />
                             <span>GitHub</span>
                         </i-button>

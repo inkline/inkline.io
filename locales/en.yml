@@ -1,6 +1,7 @@
 navbar:
     documentation: Documentation
     docs: Docs
+    colorMode: Switch color mode
     input:
         placeholder: Search for anything..
 button:
