@@ -12,6 +12,8 @@ import {
     IPaginationQuickLinksExample,
     IPaginationSizeVariantsExample
 } from '@inkline/inkline/components/IPagination/examples';
+import { manifest } from '@inkline/inkline/components/IPagination/manifest';
+
 import { default as IPaginationBasicExampleHTML } from '@inkline/inkline/components/IPagination/examples/basic.html?raw';
 import { default as IPaginationBasicExampleJS } from '@inkline/inkline/components/IPagination/examples/basic.js?raw';
 import { default as IPaginationColorVariantsExampleHTML } from '@inkline/inkline/components/IPagination/examples/color-variants.html?raw';

@@ -4,6 +4,7 @@ description: Provide a loading state for a component or page using a customizabl
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/ILoader/manifest';
 import {
     ILoaderBasicExample,
     ILoaderColorVariantsExample,
@@ -45,3 +46,20 @@ If you set the `size` property to `auto`, the loader will fit the container that
 You're able to provide some additional text by using the `default` loader slot.
 
 <example type="icon" :component="ILoaderTextExample" :html="ILoaderTextExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

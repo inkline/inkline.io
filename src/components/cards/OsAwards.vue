@@ -26,8 +26,8 @@ export default defineComponent({
 
 <template>
     <div :class="['osawards', classes]">
-        <img class="logo -white" :src="logoWhite" alt="Open Source Awards - Developer Experience - Vue.js London 2019">
-        <img class="logo -black" :src="logoBlack" alt="Open Source Awards - Developer Experience - Vue.js London 2019">
+        <img class="logo -white" height="80" width="80" :src="logoWhite" alt="Open Source Awards - Developer Experience - Vue.js London 2019">
+        <img class="logo -black" height="80" width="80" :src="logoBlack" alt="Open Source Awards - Developer Experience - Vue.js London 2019">
         <div class="description">
             <strong class="title">Open Source Awards </strong>
             <span class="category">Developer Experience Nominee</span>

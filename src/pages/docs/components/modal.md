@@ -4,6 +4,7 @@ description: Modals are dialogs that can be used for user notifications, lightbo
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IModal/manifest';
 import {
     IModalBasicExample,
     IModalColorVariantsExample,
@@ -37,3 +38,25 @@ The default size is set to `md`.
 Inkline includes multiple predefined modal styles, each serving its own semantic purpose. You can set the style of a `<i-modal>` using the `color` property. By default, modals use the `light` variant.
 
 <example type="modal" :component="IModalColorVariantsExample" :html="IModalColorVariantsExampleHTML" :js="IModalBasicExampleJS"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

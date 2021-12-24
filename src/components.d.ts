@@ -4,12 +4,14 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CssVariablesTable: typeof import('./components/tables/CssVariablesTable.vue')['default']
     DesignSystemDefaultCode: typeof import('./components/sections/index/code/design-system-default-code.md')['default']
     DesignSystemLoginCard: typeof import('./components/sections/index/components/DesignSystemLoginCard.vue')['default']
     DesignSystemPostCard: typeof import('./components/sections/index/components/DesignSystemPostCard.vue')['default']
     DesignSystemPricingCard: typeof import('./components/sections/index/components/DesignSystemPricingCard.vue')['default']
     DesignSystemProfileCard: typeof import('./components/sections/index/components/DesignSystemProfileCard.vue')['default']
     DesignSystemTasksCard: typeof import('./components/sections/index/components/DesignSystemTasksCard.vue')['default']
+    EventsTable: typeof import('./components/tables/EventsTable.vue')['default']
     Example: typeof import('./components/common/Example.vue')['default']
     FeatureBox: typeof import('./components/cards/FeatureBox.vue')['default']
     Footer: typeof import('./components/navigation/Footer.vue')['default']
@@ -22,8 +24,10 @@ declare module 'vue' {
     Navbar: typeof import('./components/navigation/Navbar.vue')['default']
     OsAwards: typeof import('./components/cards/OsAwards.vue')['default']
     PageNavigation: typeof import('./components/navigation/PageNavigation.vue')['default']
+    PropsTable: typeof import('./components/tables/PropsTable.vue')['default']
     SectionHeader: typeof import('./components/common/SectionHeader.vue')['default']
     Sidebar: typeof import('./components/navigation/Sidebar.vue')['default']
+    SlotsTable: typeof import('./components/tables/SlotsTable.vue')['default']
   }
 }
 

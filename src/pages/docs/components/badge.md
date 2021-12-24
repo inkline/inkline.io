@@ -4,6 +4,7 @@ description: Documentation and examples for badges, a small component used for c
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IBadge/manifest';
 import {
     IBadgeBasicExample,
     IBadgeColorVariantsExample,
@@ -40,3 +41,21 @@ You're able to use the `size` modifier to control the text and spacing size of y
 Badges always match the size of the immediate parent element by using relative font sizing and `em` units.
 
 <example :component="IBadgeHeadingExample" :html="IBadgeHeadingExampleHTML"></example>
+
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

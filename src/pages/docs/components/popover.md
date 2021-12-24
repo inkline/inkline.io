@@ -11,6 +11,8 @@ import {
     IPopoverPlacementExample,
     IPopoverTriggerExample
 } from '@inkline/inkline/components/IPopover/examples';
+import { manifest } from '@inkline/inkline/components/IPopover/manifest';
+
 import { default as IPopoverBasicExampleHTML } from '@inkline/inkline/components/IPopover/examples/basic.html?raw';
 import { default as IPopoverColorVariantsExampleHTML } from '@inkline/inkline/components/IPopover/examples/color-variants.html?raw';
 import { default as IPopoverSizeVariantsExampleHTML } from '@inkline/inkline/components/IPopover/examples/size-variants.html?raw';

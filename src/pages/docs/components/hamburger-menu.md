@@ -4,6 +4,7 @@ description: Inkline's hamburger menu is used to control opening and closing ele
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IHamburgerMenu/manifest';
 import {
     IHamburgerMenuAnimationExample,
     IHamburgerMenuBasicExample,
@@ -35,3 +36,25 @@ You can set the style of a `<i-hamburger-menu>` using the `color` property, whic
 The `<i-hamburger-menu>` menu component supports various closed state animations. You can choose a closed state icon using the `animation` property.
 
 <example :component="IHamburgerMenuAnimationExample" :html="IHamburgerMenuAnimationExampleHTML" :js="IHamburgerMenuAnimationExampleJS"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

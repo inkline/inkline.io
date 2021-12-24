@@ -4,6 +4,7 @@ description: Media objects provide you with a flexible component that can be eas
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IMedia/manifest';
 import {
     IMediaAlignmentExample,
     IMediaBasicExample,
@@ -31,3 +32,15 @@ Media components can be nested inside one another to create a parent-child relat
 The media element in a media component can be aligned with flexbox helper classes to the top (default), middle, or end of the `.media-body` content.
 
 <example :component="IMediaAlignmentExample" :html="IMediaAlignmentExampleHTML"></example>
+
+### Configuration
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

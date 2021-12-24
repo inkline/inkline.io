@@ -23,6 +23,9 @@ import {
     fasGlobe
 } from '@inkline/icons/packs/fontawesome/solid';
 import {
+    farClone
+} from '@inkline/icons/packs/fontawesome/regular';
+import {
     fabGithub,
     fabTwitter,
     fabDiscord
@@ -63,6 +66,7 @@ export const createApp = ViteSSG(App, {
             fabTwitter,
             fabDiscord,
             fasGlobe,
+            farClone,
             ...inklineIcons
         },
         components

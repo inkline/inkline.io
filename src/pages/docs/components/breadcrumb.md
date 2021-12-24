@@ -4,6 +4,7 @@ description: Indicate the current page’s location depth using a navigation lis
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IBreadcrumb/manifest';
 import {
     IBreadcrumbBasicExample,
     IBreadcrumbColorVariantsExample,
@@ -49,3 +50,20 @@ Breadcrumb items will be automatically converted to link anchors `<a>` when prov
 The `<i-breadcrumb-item>` component is well integrated with the Vue Router plugin and will be converted to a `<router-link>` when using the `to` property.
 
 <example :component="IBreadcrumbRoutingExample" :html="IBreadcrumbRoutingExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

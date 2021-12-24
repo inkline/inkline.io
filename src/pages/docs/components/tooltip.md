@@ -12,6 +12,8 @@ import {
     ITooltipPlacementExample,
     ITooltipTriggerExample
 } from '@inkline/inkline/components/ITooltip/examples';
+import { manifest } from '@inkline/inkline/components/ITooltip/manifest';
+
 import { default as ITooltipBasicExampleHTML } from '@inkline/inkline/components/ITooltip/examples/basic.html?raw';
 import { default as ITooltipColorVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/color-variants.html?raw';
 import { default as ITooltipSizeVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/size-variants.html?raw';

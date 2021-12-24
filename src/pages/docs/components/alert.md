@@ -4,6 +4,7 @@ description: Provide contextual feedback messages for typical user actions using
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IAlert/manifest';
 import { 
     IAlertColorVariantsExample,
     IAlertDismissibleExample,
@@ -50,3 +51,25 @@ You can also add an icon to the `<i-alert>` component by providing an `icon` slo
 You can dismiss alerts using a combination of the provided `dismissible` property and `v-model` directive. The `dismissible` property will be used to show the dismiss icon. The `v-model` directive will show or hide the alert, resetting dismissed alerts when needed.
 
 <example :component="IAlertDismissibleExample" :html="IAlertDismissibleExampleHTML" :js="IAlertDismissibleExampleJS"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

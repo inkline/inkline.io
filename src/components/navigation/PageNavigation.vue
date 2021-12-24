@@ -20,7 +20,6 @@ export default defineComponent({
             const headings: any = document.querySelectorAll('.markdown > h3, .markdown > h4, .markdown > h5');
 
             tableOfContents.value = [...headings].reduce((acc, { id, nodeName, textContent }) => {
-                console.log(nodeName, textContent);
                 if (nodeName.toLowerCase() === 'h3') {
                     acc.push({
                         id,

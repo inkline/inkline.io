@@ -15,7 +15,6 @@ First, if you haven't already, create a file called `src/main.scss` that will be
 This is where our CSS Variables will live. Or, if you're more experienced with Sass, extract these into a variables file. Here's an example of how the file should look like:
 
 ~~~scss
-// main.scss
 @import "@inkline/inkline/css";
 
 :root {
@@ -30,9 +29,14 @@ This is where our CSS Variables will live. Or, if you're more experienced with S
     --color--primary--s: 77%;
     --color--primary--l: 39%;
 }
+
+@include i-button() {
+    ----padding-left: 2rem;
+    ----padding-right: 2rem;
+}
 ~~~
 
-### CSS Variables
+### CSS Variables Types
 CSS Variables in Inkline have two levels of abstraction. This way we're able to override the design of the application and the components both globally and individually. Component CSS Variables, although based on the Global CSS Variables, can have calculated or derived values for the same property.
 
 We've designed CSS Variables in Inkline to fall under one of two categories:

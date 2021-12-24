@@ -95,7 +95,7 @@ app.use(Inkline, {
 
     ~~~js
     app.use(Inkline, {
-        locale: 'en'
+        validateOn: ['blur']
     });
     ~~~
     

@@ -4,6 +4,7 @@ description: List groups are flexible components used for displaying a list of r
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IListGroup/manifest';
 import {
     IListGroupBasicExample,
     IListGroupBorderlessExample,
@@ -64,3 +65,20 @@ You can disable the border of your list group by setting the `border` property t
 The `<i-list-group-item>` accepts any type of content, allowing you to create large sized list group items.
 
 <example type="icon" :component="IListGroupContentExample" :html="IListGroupContentExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

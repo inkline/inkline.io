@@ -71,6 +71,18 @@ export default defineComponent({
                             {
                                 title: 'Overview',
                                 url: { name: 'docs-introduction-design-system' }
+                            },
+                            {
+                                title: 'Global Variables',
+                                url: { name: 'docs-introduction-design-system-global-variables' }
+                            },
+                            {
+                                title: 'Local Variables',
+                                url: { name: 'docs-introduction-design-system-local-variables' }
+                            },
+                            {
+                                title: 'Sass Functions',
+                                url: { name: 'docs-introduction-design-system-sass-functions' }
                             }
                         ]
                     }

@@ -74,8 +74,8 @@ export default defineComponent({
                 <design-system-post-card class="_xl:hidden _margin-bottom:2" />
             </i-column>
             <i-column lg="6" xl="4">
-                <design-system-pricing-card class="_xl:visible _margin-bottom:2" />
-                <design-system-post-card class="_xl:visible _margin-bottom:2" />
+                <design-system-pricing-card class="_xxl:visible _margin-bottom:2" />
+                <design-system-post-card class="_xxl:visible _margin-bottom:2" />
             </i-column>
         </i-row>
     </i-header>

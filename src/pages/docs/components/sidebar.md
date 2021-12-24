@@ -17,6 +17,8 @@ import {
     ISidebarRoutingExample,
     ISidebarRoutingActiveExample
 } from '@inkline/inkline/components/ISidebar/examples';
+import { manifest } from '@inkline/inkline/components/ISidebar/manifest';
+
 import { default as ISidebarBasicExampleHTML } from '@inkline/inkline/components/ISidebar/examples/basic.html?raw';
 import { default as ISidebarBasicExampleJS } from '@inkline/inkline/components/ISidebar/examples/basic.js?raw';
 import { default as ISidebarCollapseBreakpointExampleHTML } from '@inkline/inkline/components/ISidebar/examples/collapse-breakpoint.html?raw';

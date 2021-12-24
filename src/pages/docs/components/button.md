@@ -4,6 +4,7 @@ description: One of the core building blocks of an application. Buttons can repr
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IButton/manifest';
 import {
     IButtonBasicExample,
     IButtonBlockExample,
@@ -118,3 +119,20 @@ Buttons will be automatically converted to link anchors `<a>` when providing a `
 The `<i-button>` component is also integrated with the [Vue Router](https://router.vuejs.org) plugin and will be converted to a `<router-link>` or `<nuxt-link>` when using the `to` property.
 
 <example :component="IButtonRoutingExample" :html="IButtonRoutingExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

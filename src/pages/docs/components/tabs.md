@@ -10,6 +10,8 @@ import {
     ITabsSizeVariantsExample,
     ITabsStretchExample
 } from '@inkline/inkline/components/ITabs/examples';
+import { manifest } from '@inkline/inkline/components/ITabs/manifest';
+
 import { default as ITabsBasicExampleHTML } from '@inkline/inkline/components/ITabs/examples/basic.html?raw';
 import { default as ITabsBasicExampleJS } from '@inkline/inkline/components/ITabs/examples/basic.js?raw';
 import { default as ITabsColorVariantsExampleHTML } from '@inkline/inkline/components/ITabs/examples/color-variants.html?raw';

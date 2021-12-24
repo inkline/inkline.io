@@ -71,18 +71,21 @@ export default defineComponent({
         <i-row>
             <i-column>
                 <div class="_display:flex _justify-content:center _align-items:center _flex-wrap:wrap">
-                    <a
+                    <div
                         v-for="sponsor in sponsors"
                         :key="sponsor.name"
                         class="sponsor"
                         :data-sponsor="sponsor.name.toLowerCase()"
-                        :href="sponsor.url"
-                        target="_blank"
-                        rel="sponsored noopener"
                     >
-                        <img class="image -light" :src="sponsor.image.light" :alt="sponsor.name">
-                        <img class="image -dark" :src="sponsor.image.dark" :alt="sponsor.name">
-                    </a>
+                        <a
+                            class="_overlay-link"
+                            :href="sponsor.url"
+                            target="_blank"
+                            rel="sponsored noopener"
+                        />
+                        <img class="image -light" height="45" :src="sponsor.image.light" :alt="sponsor.name">
+                        <img class="image -dark" height="45" :src="sponsor.image.dark" :alt="sponsor.name">
+                    </div>
                 </div>
             </i-column>
         </i-row>
@@ -160,6 +163,7 @@ export default defineComponent({
 }
 
 .sponsor {
+    position: relative;
     display: inline-flex;
     margin: 0 calc(var(--spacing) * 2) calc(var(--spacing) * 2);
 

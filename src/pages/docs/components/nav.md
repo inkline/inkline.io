@@ -4,6 +4,8 @@ description: Navs are basic navigation components that provide alignment and spa
 ---
 
 <script setup>
+import { manifest as navManifest } from '@inkline/inkline/components/INav/manifest';
+import { manifest as navItemManifest } from '@inkline/inkline/components/INav/components/INavItem/manifest';
 import {
     INavBasicExample,
     INavColorVariantsExample,
@@ -57,3 +59,28 @@ The `<i-nav-item>` component is well integrated with the Vue Router plugin and w
 You can control the active state of your `<i-nav-item>` using the `active` property. When you provide a `to` property you're converting the component into a `router-link`, therefore you can use the `active-class` and `exact-active-class` properties and set them to `-active`.
 
 <example :component="INavStateActiveExample" :html="INavStateActiveExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<div class="h5"><code>&lt;i-nav&gt;</code></div>
+<props-table :manifest="navManifest"></props-table>
+
+<div class="h5"><code>&lt;i-nav-item&gt;</code></div>
+<props-table :manifest="navItemManifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<div class="h5"><code>&lt;i-nav&gt;</code></div>
+<slots-table :manifest="navManifest"></slots-table>
+
+<div class="h5"><code>&lt;i-nav-item&gt;</code></div>
+<slots-table :manifest="navItemManifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="navManifest" type="local"></css-variables-table>

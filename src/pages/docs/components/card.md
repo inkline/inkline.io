@@ -4,6 +4,7 @@ description: Cards provide you with a flexible and extensible content container 
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/ICard/manifest';
 import {
     ICardBasicExample,
     ICardBodyExample,
@@ -59,3 +60,20 @@ Inkline includes several predefined card colors that you can use within your app
 
 <example type="card" :component="ICardColorVariantsExample" :html="ICardColorVariantsExampleHTML"></example>
 
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

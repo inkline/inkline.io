@@ -4,6 +4,7 @@ description: Collapsible elements are used to show and hide content using a smoo
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/ICollapsible/manifest';
 import {
     ICollapsibleAccordionExample,
     ICollapsibleBasicExample,
@@ -55,3 +56,25 @@ You're able to use the `size` modifier to control the text and spacing size of y
 The default size is set to `md`.
 
 <example :component="ICollapsibleSizeVariantsExample" :html="ICollapsibleSizeVariantsExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

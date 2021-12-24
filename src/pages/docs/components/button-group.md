@@ -4,6 +4,7 @@ description: Group multiple buttons together on a single line using a button gro
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IButtonGroup/manifest';
 import {
     IButtonGroupBasicExample,
     IButtonGroupBlockExample,
@@ -74,3 +75,15 @@ You can also nest `block` button groups.
 You can make button groups look inactive or disabled by adding the `disabled` boolean property.
 
 <example :component="IButtonGroupDisabledExample" :html="IButtonGroupDisabledExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>

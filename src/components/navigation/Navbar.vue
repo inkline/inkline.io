@@ -38,8 +38,8 @@ export default defineComponent({
 <template>
     <i-navbar :collapse="false">
         <i-navbar-brand to="/" translate="no">
-            <img alt="Inkline Logo" class="logo -black" :src="logoBlack">
-            <img alt="Inkline Logo" class="logo -white" :src="logoWhite">
+            <img alt="Inkline Logo" class="logo -black" height="24" width="22.5" :src="logoBlack">
+            <img alt="Inkline Logo" class="logo -white" height="24" width="22.5" :src="logoWhite">
             Inkline
         </i-navbar-brand>
         <i-navbar-collapsible class="_justify-content:end">
