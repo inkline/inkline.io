@@ -15,7 +15,8 @@ As seen in the <router-link :to="{ name: 'docs-introduction-design-system' }">De
 To make things easy, we provide Sass Helpers for selecting components and variants, so that you don't have to remember the component classes.
 
 ~~~scss
-@import "@inkline/inkline/css";
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 :root {
   // ... Global CSS Variables

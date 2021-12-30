@@ -58,7 +58,7 @@ Besides thumbnails, you can opt for a retro look having a larger bottom border u
 <example :component="ImagesPolaroidExample" :html="ImagesPolaroidExampleHTML"></example>
 
 ### Image Alignment
-Align images with the helper classes or text alignment classes. Block-level images can be centered using the `._margin-x-auto` margin utility class.
+Align images with the helper classes or text alignment classes. Block-level images can be centered using the `._margin-x:auto` margin utility class.
 
 <example :component="ImagesAlignmentLeftExample" :html="ImagesAlignmentLeftExampleHTML"></example>
 

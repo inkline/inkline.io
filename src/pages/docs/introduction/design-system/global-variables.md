@@ -34,7 +34,8 @@ As seen in the <router-link :to="{ name: 'docs-introduction-design-system' }">De
 Here's an example of how it could look like:
 
 ~~~scss
-@import "@inkline/inkline/css";
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 :root {
     --padding-top: 1rem;

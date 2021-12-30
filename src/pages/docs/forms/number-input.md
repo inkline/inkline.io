@@ -4,6 +4,8 @@ description: Number Inputs are form components used to for easily inputting and 
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/INumberInput/manifest';
+import { manifest as inputManifest } from '@inkline/inkline/components/IInput/manifest';
 import {
     INumberInputBasicExample,
     INumberInputColorVariantsExample,
@@ -110,3 +112,24 @@ You're able to use the `size` modifier to control the size of your number inputs
 <example :component="INumberInputSizeVariantsExample" :html="INumberInputSizeVariantsExampleHTML" :js="INumberInputSizeVariantsExampleJS"></example>
 
 
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="inputManifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component. Changing the CSS Variables of the <router-link :to="{ name: 'docs-forms-input' }">Input Component</router-link> will directly affect the design of the Number Input Component as well.
+
+<css-variables-table :manifest="inputManifest" type="local"></css-variables-table>

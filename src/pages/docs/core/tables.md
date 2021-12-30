@@ -4,6 +4,7 @@ description: Documentation and examples for opt-in styling of tables with Inklin
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/ITable/manifest';
 import {
     ITableBasicExample,
     ITableBorderedExample,
@@ -61,3 +62,20 @@ You can target specific responsive breakpoints by setting a value to the `respon
 Tables can be themed using the `color` property. You can use colors such as `light`, `dark`, `primary`, `secondary`, `info`, `success`, `warning`, and `danger`. You can set a variant for the table as a whole or individual table elements. By default, tables have the `light` variant. You can use a variation of any of the above classes to create the table design you need.
 
 <example :component="ITableColorVariantsExample" :html="ITableColorVariantsExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

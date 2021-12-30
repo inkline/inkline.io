@@ -4,6 +4,7 @@ description: Inkline's grid system is modelled as a 12 columns layout using flex
 ---
 
 <script setup>
+import { manifest as columnManifest } from '@inkline/inkline/components/IColumn/manifest';
 import {
     IColumnAutoWidthExample,
     IColumnNestedExample,
@@ -25,6 +26,7 @@ import { default as IColumnReorderingLastExampleHTML } from '@inkline/inkline/co
 import { default as IColumnResponsiveExampleHTML } from '@inkline/inkline/components/IColumn/examples/responsive.html?raw';
 import { default as IColumnWidthExampleHTML } from '@inkline/inkline/components/IColumn/examples/width.html?raw';
 
+import { manifest as rowManifest } from '@inkline/inkline/components/IRow/manifest';
 import {
     IRowDistributionAroundExample,
     IRowDistributionBetweenExample,
@@ -46,6 +48,7 @@ import { default as IRowVerticalAlignmentTopExampleHTML } from '@inkline/inkline
 import { default as IRowVerticalAlignmentMiddleExampleHTML } from '@inkline/inkline/components/IRow/examples/vertical-alignment-middle.html?raw';
 import { default as IRowVerticalAlignmentBottomExampleHTML } from '@inkline/inkline/components/IRow/examples/vertical-alignment-bottom.html?raw';
 
+import { manifest as containerManifest } from '@inkline/inkline/components/IContainer/manifest';
 import {
     IContainerFluidExample
 } from '@inkline/inkline/components/IContainer/examples';
@@ -101,58 +104,80 @@ while you can place columns only inside a row.
 ### Horizontal Alignment
 You can align columns horizontally to the start, center, or end of a row.
 
-#### `start` and `start-{breakpoint}`
+#### `start`
 
 <example type="grid" :component="IRowHorizontalAlignmentStartExample" :html="IRowHorizontalAlignmentStartExampleHTML"></example>
 
-#### `center` and `center-{breakpoint}`
+You can use `start-{breakpoint}` to target screen sizes starting from a specific breakpoint.
+
+#### `center`
 
 <example type="grid" :component="IRowHorizontalAlignmentCenterExample" :html="IRowHorizontalAlignmentCenterExampleHTML"></example>
 
-#### `end` and `end-{breakpoint}`
+You can use `center-{breakpoint}` to target screen sizes starting from a specific breakpoint.
+
+#### `end`
 
 <example type="grid" :component="IRowHorizontalAlignmentEndExample" :html="IRowHorizontalAlignmentEndExampleHTML"></example>
+
+You can use `end-{breakpoint}` to target screen sizes starting from a specific breakpoint.
 
 ### Vertical Alignment
 You can align columns vertically to the top, middle or bottom of the row.
 
-#### `top` and `top-{breakpoint}`
+#### `top`
 
 <example type="grid -vertical-alignment-example" :component="IRowVerticalAlignmentTopExample" :html="IRowVerticalAlignmentTopExampleHTML"></example>
 
-#### `middle` and `middle-{breakpoint}`
+You can use `top-{breakpoint}` to target screen sizes starting from a specific breakpoint.
+
+#### `middle`
 
 <example type="grid -vertical-alignment-example" :component="IRowVerticalAlignmentMiddleExample" :html="IRowVerticalAlignmentMiddleExampleHTML"></example>
 
-#### `bottom` and `bottom-{breakpoint}`
+You can use `middle-{breakpoint}` to target screen sizes starting from a specific breakpoint.
+
+#### `bottom`
 
 <example type="grid -vertical-alignment-example" :component="IRowVerticalAlignmentBottomExample" :html="IRowVerticalAlignmentBottomExampleHTML"></example>
+
+You can use `bottom-{breakpoint}` to target screen sizes starting from a specific breakpoint.
 
 ### Distribution
 Distribute the spacing between the columns of a row.
 
-#### `around` and `around-{breakpoint}`
+#### `around`
 
 <example type="grid" :component="IRowDistributionAroundExample" :html="IRowDistributionAroundExampleHTML"></example>
 
-#### `between` and `between-{breakpoint}`
+You can use `around-{breakpoint}` to target screen sizes starting from a specific breakpoint.
+
+#### `between`
 
 <example type="grid" :component="IRowDistributionBetweenExample" :html="IRowDistributionBetweenExampleHTML"></example>
+
+You can use `between-{breakpoint}` to target screen sizes starting from a specific breakpoint.
 
 ### Reordering
 Reorder columns using helper classes.
 
-#### `reverse` and `reverse-{breakpoint}`
+#### `reverse`
 
 <example type="grid" :component="IRowReorderingReverseExample" :html="IRowReorderingReverseExampleHTML"></example>
 
-#### `first` and `first-{breakpont}`
+You can use `reverse-{breakpoint}` to target screen sizes starting from a specific breakpoint.
+
+#### `first`
 
 <example type="grid" :component="IColumnReorderingFirstExample" :html="IColumnReorderingFirstExampleHTML"></example>
 
-#### `last` and `last-{breakpoint}`
+You can use `first-{breakpoint}` to target screen sizes starting from a specific breakpoint.
+
+#### `last`
 
 <example type="grid" :component="IColumnReorderingLastExample" :html="IColumnReorderingLastExampleHTML"></example>
+
+You can use `last-{breakpoint}` to target screen sizes starting from a specific breakpoint.
 
 ### Responsive Width
 You can specify column counts for each breakpoint. Try to resize your browser window!
@@ -164,3 +189,34 @@ You can make the `<i-container>` component fill the whole width of the parent el
 
 <example type="grid" :component="IContainerFluidExample" :html="IContainerFluidExampleHTML"></example>
 
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<div class="h5"><code>&lt;i-container&gt;</code></div>
+<props-table :manifest="containerManifest"></props-table>
+
+<div class="h5"><code>&lt;i-row&gt;</code></div>
+<props-table :manifest="rowManifest"></props-table>
+
+<div class="h5"><code>&lt;i-column&gt;</code></div>
+<props-table :manifest="columnManifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<div class="h5"><code>&lt;i-container&gt;</code></div>
+<slots-table :manifest="containerManifest"></slots-table>
+
+<div class="h5"><code>&lt;i-row&gt;</code></div>
+<slots-table :manifest="rowManifest"></slots-table>
+
+<div class="h5"><code>&lt;i-column&gt;</code></div>
+<slots-table :manifest="columnManifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<div class="h5"><code>&lt;i-container&gt;</code></div>
+<css-variables-table :manifest="containerManifest"></css-variables-table>

@@ -48,13 +48,6 @@ when zooming.
 When more control is needed, you should check out the textual utility classes. Each font size, style and 
 weight also has a corresponding helper class to style other elements the same.
 
-### Configuration @TODO
-When configuring the CSS Variables, change the `var(--font-family--primary--`, `$font-size`, and `$line-height-base` variables 
-as our typographic base applied to the `<body>`. Set the global link color via `$link-color` and apply link underlines 
-only on `:hover`. The defaults for these global variables are defined in `config/_typography.scss`. 
-
-To learn more about style configuration, please make sure you followed the Customization part of your <router-link to="/docs/introduction/getting-started">installation</router-link>.
-
 ### Headings
 All HTML headings, `<h1>` through `<h6>`, have their size calculated based on the specified `$font-size-base`.
 
@@ -147,3 +140,7 @@ Remove a list’s bullets and apply some light margin using the `-inline` list m
 Remove a list’s bullets and apply some light margin using the `-inline` list modifier.
 
 <example :component="TypographyDescriptionListExample" :html="TypographyDescriptionListExampleHTML"></example>
+
+### Configuration
+
+To learn more about configuring the design of your application's typography, please make sure you follow the <router-link :to="{ name: 'docs-introduction-design-system-global-variables' }">Global Variables</router-link> section of the design system documentation.

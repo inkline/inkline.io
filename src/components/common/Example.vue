@@ -135,6 +135,10 @@ export default defineComponent({
             width: auto;
         }
 
+        .layout + .layout {
+            margin-top: spacing();
+        }
+
         @extend %border-utilities-preview;
         @extend %color-utilities-preview;
         @extend %flex-utilities-preview;

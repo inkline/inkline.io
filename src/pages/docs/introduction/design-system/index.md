@@ -15,7 +15,8 @@ First, if you haven't already, create a file called `src/main.scss` that will be
 This is where our CSS Variables will live. Or, if you're more experienced with Sass, extract these into a variables file. Here's an example of how the file should look like:
 
 ~~~scss
-@import "@inkline/inkline/css";
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 :root {
     --spacing: 1rem;

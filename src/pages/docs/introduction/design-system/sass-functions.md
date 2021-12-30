@@ -34,8 +34,16 @@ border-radius($size-key);
 }
 ~~~
 
+##### Result
 
-#### Breakpoints
+~~~css
+.element {
+    border-radius: var(--border-radius);
+}
+~~~
+
+
+### Breakpoints
 Inkline provides breakpoint getter functions to quickly retrieve any breakpoint variable variant.
 
 ##### Functions
@@ -69,7 +77,23 @@ breakpoint($breakpoint-key);
 }
 ~~~
 
-#### Colors
+##### Result
+
+~~~css
+@media screen and (max-width: 768px) {
+    .element {}
+}
+
+@media screen and (max-width: 768px) {
+    .element {}
+}
+
+@media screen and (min-width: 768px) {
+    .element {}
+}
+~~~
+
+### Colors
 Inkline provides color getter functions to quickly retrieve any color variable variant.
 
 ##### Functions
@@ -92,7 +116,16 @@ color($color-key);
 }
 ~~~
 
-#### Gutter
+##### Result
+
+~~~css
+.element {
+    background: var(--color--white);
+    color: var(--color--primary);
+}
+~~~
+
+### Gutter
 Inkline provides gutter getter functions to quickly retrieve any gutter variable variant. The gutter is used for spacing grid elements such as column, row, and container.
 
 ##### Functions
@@ -114,7 +147,15 @@ gutter($size-key);
 }
 ~~~
 
-#### Scale ratio
+##### Result
+
+~~~css
+.element {
+    margin-right: var(--gutter--sm);
+}
+~~~
+
+### Scale ratio
 Inkline provides scale ratio getter functions to quickly retrieve any scale ratio variable variant.
 
 ##### Functions
@@ -132,11 +173,20 @@ scale-ratio($scale-ratio-key);
 @import '@inkline/inkline/css/mixins';
 
 .element {
-    padding: calc(#{spacing()} * #{scale-ratio('major-fourth')});
+    padding: calc(#{spacing()} * #{scale-ratio('major-third')});
 }
 ~~~
 
-#### Sizes
+##### Result
+
+~~~css
+.element {
+    padding: calc(var(--spacing) * var(--scale-ratio--major-third));
+}
+~~~
+
+
+### Sizes
 Inkline provides size getter functions to quickly retrieve any size variable variant.
 
 ##### Functions
@@ -160,7 +210,16 @@ size-multiplier($size-multiplier-key);
 }
 ~~~
 
-#### Spacing
+##### Result
+
+~~~css
+.element {
+    padding: calc(var(--spacing) * var(--size-multiplier--lg));
+}
+~~~
+
+
+### Spacing
 Inkline provides spacing getter functions to quickly retrieve any spacing variable variant.
 
 ##### Functions
@@ -178,11 +237,19 @@ spacing($spacing-key);
 @import '@inkline/inkline/css/mixins';
 
 .element {
-    padding: calc(#{spacing('2')});
+    padding: spacing('2');
 }
 ~~~
 
-#### Typography
+##### Result
+
+~~~css
+.element {
+    padding: calc(var(--spacing) * 2);
+}
+~~~
+
+### Typography
 Inkline provides typography getter functions to quickly retrieve any typography variable variant.
 
 ##### Functions
@@ -215,7 +282,17 @@ display-font-size($display-font-size-key);
 }
 ~~~
 
-#### Z-Index
+##### Result
+
+~~~css
+.title {
+    font-family: var(--font-family-secondary--base);
+    font-size: var(--font-size--lg);
+    font-weight: var(--font-weight--bold);
+}
+~~~
+
+### Z-Index
 Inkline provides z-index getter functions to quickly retrieve any z-index variable variant.
 
 ##### Functions
@@ -240,4 +317,14 @@ z-index($z-index-key);
 }
 ~~~
 
+##### Result
+
+~~~css
+.element {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: var(--z-index--tooltip);
+}
+~~~
 

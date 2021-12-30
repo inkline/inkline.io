@@ -46,10 +46,12 @@ Open your `src/main.js` or `src/main.ts` file and configure your application to 
 ~~~js
 import { createApp } from 'vue';
 import App from './App.vue';
-import "./main.scss";
 
 import { Inkline } from '@inkline/inkline';
 import * as components from '@inkline/inkline/components';
+
+import '@inkline/inkline/inkline.scss';
+import "./main.scss";
 
 const app = createApp(App);
 
@@ -68,7 +70,8 @@ app.mount('#app');
 Next, create a new file called `src/main.scss` and import Inkline. Learn more about the Design System.
 
 ~~~scss
-@import "@inkline/inkline/css";
+@import '@inkline/inkline/css/variables';
+@import '@inkline/inkline/css/mixins';
 
 :root {
     --color--primary--h: 195deg;

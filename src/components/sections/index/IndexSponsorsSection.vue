@@ -7,8 +7,10 @@ import nuxtImageLight from '~/assets/images/sponsors/nuxt-light.png';
 import nuxtImageDark from '~/assets/images/sponsors/nuxt-dark.png';
 import DigitalOceanImageLight from '~/assets/images/sponsors/digitalocean-light.png';
 import DigitalOceanImageDark from '~/assets/images/sponsors/digitalocean-dark.png';
-import tideliftImageLight from '~/assets/images/sponsors/tidelift-light.png';
-import tideliftImageDark from '~/assets/images/sponsors/tidelift-dark.png';
+import icons8ImageLight from '~/assets/images/sponsors/icons8-light.png';
+import icons8ImageDark from '~/assets/images/sponsors/icons8-dark.png';
+// import tideliftImageLight from '~/assets/images/sponsors/tidelift-light.png';
+// import tideliftImageDark from '~/assets/images/sponsors/tidelift-dark.png';
 import patreonImage from '~/assets/images/sponsors/patreon.png';
 
 const sponsors = [
@@ -29,13 +31,21 @@ const sponsors = [
         }
     },
     {
-        name: 'Tidelift',
-        url: 'https://tidelift.com',
+        name: 'Icons8',
+        url: 'https://icons8.com?ref=alexgrozav',
         image: {
-            light: tideliftImageLight,
-            dark: tideliftImageDark
+            light: icons8ImageLight,
+            dark: icons8ImageDark
         }
     },
+    // {
+    //     name: 'Tidelift',
+    //     url: 'https://tidelift.com',
+    //     image: {
+    //         light: tideliftImageLight,
+    //         dark: tideliftImageDark
+    //     }
+    // },
     {
         name: 'Nuxt',
         url: 'https://nuxtjs.org',
@@ -94,7 +104,7 @@ export default defineComponent({
                 <p class="_text:muted">
                     {{ t('index.sponsors.description') }}
                 </p>
-                <i-button href="https://www.patreon.com/bePatron?u=18449490" color="primary" size="lg" class="-patreon _margin-top:2">
+                <i-button href="https://www.patreon.com/bePatron?u=18449490" target="_blank" color="primary" size="lg" class="-patreon _margin-top:2">
                     <img :src="patreonImage" alt="Patreon">
                     {{ t('index.sponsors.button') }}
                 </i-button>

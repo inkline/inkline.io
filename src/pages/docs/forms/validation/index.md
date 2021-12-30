@@ -82,8 +82,6 @@ export default {
 }       
 ~~~
 
-<example :component="IFormValidationBasicExample" :html="IFormValidationBasicExampleHTML" :js="IFormValidationBasicExampleJS"></example>
-
 #### 2. Connecting the schema to the form components
 
 Next, the created `form` object needs to be bound to the form input components inside your template as follows:

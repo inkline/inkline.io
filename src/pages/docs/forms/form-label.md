@@ -4,6 +4,7 @@ description: Form component used to add text labels to form groups.
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IForm/components/IFormLabel/manifest';
 import {
     IFormLabelBasicExample,
     IFormLabelPlacementExample,
@@ -42,3 +43,20 @@ You can add labels to either side of your input, and position it using the optio
 You're able to use the `size` property to control the size of your form labels, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. Setting the size on a `<i-form-group>` will also affect form labels.
 
 <example :component="IFormLabelSizeVariantsExample" :html="IFormLabelSizeVariantsExampleHTML" :js="IFormLabelSizeVariantsExampleJS"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

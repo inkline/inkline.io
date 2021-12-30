@@ -4,6 +4,7 @@ description: Pagination provides navigation for large series of related content.
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IPagination/manifest';
 import {
     IPaginationBasicExample,
     IPaginationColorVariantsExample,
@@ -12,8 +13,6 @@ import {
     IPaginationQuickLinksExample,
     IPaginationSizeVariantsExample
 } from '@inkline/inkline/components/IPagination/examples';
-import { manifest } from '@inkline/inkline/components/IPagination/manifest';
-
 import { default as IPaginationBasicExampleHTML } from '@inkline/inkline/components/IPagination/examples/basic.html?raw';
 import { default as IPaginationBasicExampleJS } from '@inkline/inkline/components/IPagination/examples/basic.js?raw';
 import { default as IPaginationColorVariantsExampleHTML } from '@inkline/inkline/components/IPagination/examples/color-variants.html?raw';
@@ -63,3 +62,25 @@ To make things even better, you can responsively control the number of items at 
 You're able to use the `quickLink` property to allow the user to click the `…` item to quickly jump through pages, a number of items equal to `limit` at a time. 
 
 <example :component="IPaginationQuickLinksExample" :html="IPaginationQuickLinksExampleHTML" :js="IPaginationQuickLinksExampleJS"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

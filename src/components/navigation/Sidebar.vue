@@ -399,12 +399,12 @@ export default defineComponent({
                     </router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'docs-introduction' }">
+                    <a href="https://jsfiddle.net/alexgrozav/0dknfs6L/" target="_blank">
                         <i-badge color="secondary">
                             <i-icon name="fas-code" size="sm" />
                         </i-badge>
                         <span>Playground</span>
-                    </router-link>
+                    </a>
                 </li>
                 <li>
                     <a href="https://inkline.io/storybook" target="_blank">

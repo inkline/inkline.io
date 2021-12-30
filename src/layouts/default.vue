@@ -16,7 +16,7 @@ export default defineComponent({
 <template>
     <i-layout id="documentation-layout">
         <i-layout-header>
-            <navbar ref="navbar">
+            <navbar type="docs" ref="navbar">
                 <i-hamburger-menu v-model="sidebarOpen" class="_lg:hidden" />
             </navbar>
         </i-layout-header>
@@ -62,10 +62,6 @@ export default defineComponent({
                 padding-top: var(--article--margin-top);
             }
         }
-    }
-
-    :deep(#navbar-item-documentation) {
-        display: none;
     }
 }
 

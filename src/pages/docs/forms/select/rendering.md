@@ -4,7 +4,6 @@ description: Use the various rendering options for the select options and define
 ---
 
 <script setup>
-
 import {
     ISelectRenderingRenderFunctionExample,
     ISelectRenderingValueByPathExample,

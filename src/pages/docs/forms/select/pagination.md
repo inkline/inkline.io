@@ -4,7 +4,6 @@ description: Pagination is handled using a simple and efficient infinite scrolli
 ---
 
 <script setup>
-
 import {
     ISelectPaginationExample
 } from '@inkline/inkline/components/ISelect/examples';

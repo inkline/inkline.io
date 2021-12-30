@@ -11,6 +11,7 @@ declare module 'vue' {
     DesignSystemPricingCard: typeof import('./components/sections/index/components/DesignSystemPricingCard.vue')['default']
     DesignSystemProfileCard: typeof import('./components/sections/index/components/DesignSystemProfileCard.vue')['default']
     DesignSystemTasksCard: typeof import('./components/sections/index/components/DesignSystemTasksCard.vue')['default']
+    Docsearch: typeof import('./components/forms/Docsearch.vue')['default']
     EventsTable: typeof import('./components/tables/EventsTable.vue')['default']
     Example: typeof import('./components/common/Example.vue')['default']
     FeatureBox: typeof import('./components/cards/FeatureBox.vue')['default']

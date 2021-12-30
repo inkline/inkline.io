@@ -4,6 +4,7 @@ description: Popovers are useful for conveying information when an user clicks a
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IPopover/manifest';
 import {
     IPopoverBasicExample,
     IPopoverColorVariantsExample,
@@ -11,8 +12,6 @@ import {
     IPopoverPlacementExample,
     IPopoverTriggerExample
 } from '@inkline/inkline/components/IPopover/examples';
-import { manifest } from '@inkline/inkline/components/IPopover/manifest';
-
 import { default as IPopoverBasicExampleHTML } from '@inkline/inkline/components/IPopover/examples/basic.html?raw';
 import { default as IPopoverColorVariantsExampleHTML } from '@inkline/inkline/components/IPopover/examples/color-variants.html?raw';
 import { default as IPopoverSizeVariantsExampleHTML } from '@inkline/inkline/components/IPopover/examples/size-variants.html?raw';
@@ -66,3 +65,25 @@ The default size is set to `md`.
 You can choose a light or dark color for your popover using the `color` modifier.
 
 <example :component="IPopoverColorVariantsExample" :html="IPopoverColorVariantsExampleHTML"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

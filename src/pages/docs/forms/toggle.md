@@ -4,6 +4,7 @@ description: Toggles are boolean form components used for easily enabling or dis
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IToggle/manifest';
 import {
     IToggleBasicExample,
     IToggleColorVariantsExample,
@@ -52,5 +53,24 @@ You can use the `color` property to set a `light` or `dark` color for your toggl
 
 <example :component="IToggleColorVariantsExample" :html="IToggleColorVariantsExampleHTML" :js="IToggleColorVariantsExampleJS"></example>
 
+### Configuration
 
+#### Props
+Use props to modify the component's design and behavior.
 
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

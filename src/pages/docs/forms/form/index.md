@@ -4,6 +4,7 @@ description: Forms are the main wrapper components for form elements, with power
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IForm/manifest';
 import {
     IFormBasicExample,
     IFormDisabledExample,
@@ -59,3 +60,20 @@ All of the form components inside the `<i-form>` will inherit the parent form gr
 <example :component="IFormSizeVariantsMdExample" :html="IFormSizeVariantsMdExampleHTML" :js="IFormSizeVariantsMdExampleJS"></example>
 
 <example :component="IFormSizeVariantsLgExample" :html="IFormSizeVariantsLgExampleHTML" :js="IFormSizeVariantsLgExampleJS"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>

@@ -5,7 +5,6 @@ import { ViteSSG, ViteSSGContext } from 'vite-ssg';
 import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
 import App from '~/App.vue';
-import '~/main.scss';
 
 import { Inkline } from '@inkline/inkline';
 import * as components from '@inkline/inkline/components';
@@ -31,6 +30,9 @@ import {
     fabDiscord
 } from '@inkline/icons/packs/fontawesome/brands';
 import { scrollBehavior } from '~/config';
+
+import '@inkline/inkline/inkline.scss';
+import '~/main.scss';
 
 const routes = setupLayouts(generatedRoutes);
 

@@ -8,7 +8,7 @@ $step-number-size: 32px;
     padding-left: $step-number-size;
     padding-bottom: var(--spacing);
     margin-left: math.div($step-number-size, 2);
-    border-left: 1px solid var(--color--light);
+    border-left: 1px solid var(--border-color);
 
     .install-step-title {
         font-size: var(--font-size--lg);
@@ -30,10 +30,14 @@ $step-number-size: 32px;
         position: absolute;
         left: - math.div($step-number-size, 2);
         top: -4px;
-        border: 1px solid var(--color--light);
+        border: 1px solid var(--border-color);
         border-radius: 50%;
         background: var(--color--white);
         font-size: var(--font-size--md);
         font-weight: var(--font-weight--normal);
+
+        .inkline.-dark & {
+            background: var(--color--dark);
+        }
     }
 }

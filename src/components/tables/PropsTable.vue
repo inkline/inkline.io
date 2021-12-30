@@ -10,8 +10,18 @@ export default defineComponent({
         }
     },
     setup (props) {
+        const propToString = (prop: string) => /^[A-Z0-9]/.test(prop) || /[{(['"+-]/.test(prop) || ['true', 'false'].includes(prop)
+            ? prop
+            : `'${prop}'`;
+
+        const propType = (type: string[]) => type.length > 0
+            ? type.map((prop: string) => propToString(prop)).join(' | ')
+            : 'Any';
+
         return {
-            props: props.manifest.props
+            props: props.manifest.props,
+            propToString,
+            propType
         };
     }
 });
@@ -32,12 +42,12 @@ export default defineComponent({
 
                 <div class="td property-type">
                     <span>Type</span>
-                    <code>{{ prop.type.join(', ') }}</code>
+                    <code>{{ propType(prop.type) }}</code>
                 </div>
 
                 <div class="td property-default">
                     <span>Default</span>
-                    <code>{{ prop.default }}</code>
+                    <code>{{ propToString(prop.default) }}</code>
                 </div>
             </div>
             <div class="tr">

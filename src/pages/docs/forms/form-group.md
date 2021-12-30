@@ -4,6 +4,7 @@ description: Form groups are the easiest way to add structure and spacing to for
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IForm/components/IFormGroup/manifest';
 import {
     IFormGroupBasicExample,
     IFormGroupDisabledExample,
@@ -69,3 +70,20 @@ You can nest form groups in order to control the `disabled`, `readonly` and `siz
 <example :component="IFormGroupNestingReadonlyExample" :html="IFormGroupNestingReadonlyExampleHTML" :js="IFormGroupNestingReadonlyExampleJS"></example>
 
 <example :component="IFormGroupNestingSizeVariantsLgExample" :html="IFormGroupNestingSizeVariantsLgExampleHTML" :js="IFormGroupNestingSizeVariantsLgExampleJS"></example>
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

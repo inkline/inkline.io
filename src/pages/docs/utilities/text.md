@@ -20,7 +20,8 @@ import {
     TextResetExample,
     TextTransformExample,
     TextTruncateExample,
-    TextWrapExample
+    TextWrapExample,
+    TextListsExample
 } from '@inkline/inkline/stories/utilities/text';
 import { default as TextFontMonospaceExampleHTML } from '@inkline/inkline/stories/utilities/text/font-monospace.html?raw';
 import { default as TextFontSizeExampleHTML } from '@inkline/inkline/stories/utilities/text/font-size.html?raw';
@@ -38,6 +39,7 @@ import { default as TextResetExampleHTML } from '@inkline/inkline/stories/utilit
 import { default as TextTransformExampleHTML } from '@inkline/inkline/stories/utilities/text/text-transform.html?raw';
 import { default as TextTruncateExampleHTML } from '@inkline/inkline/stories/utilities/text/text-truncate.html?raw';
 import { default as TextWrapExampleHTML } from '@inkline/inkline/stories/utilities/text/text-wrap.html?raw';
+import { default as TextListsExampleHTML } from '@inkline/inkline/stories/utilities/text/lists.html?raw';
 </script>
 
 # Text Utilities
@@ -184,3 +186,9 @@ You can use the following text reset utility classes:
 You can make your text disappear without hiding the element by using the `text-indent: -10000px` trick. This is available through the following utility class:
 
 - `_text:hide`
+
+### Lists
+You can use list utilities to obtain inline and unstyled lists.
+
+<example :component="TextListsExample" :html="TextListsExampleHTML"></example>
+

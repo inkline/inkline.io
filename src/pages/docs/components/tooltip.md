@@ -4,6 +4,7 @@ description: Tooltips are useful for conveying information when an user hovers o
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/ITooltip/manifest';
 import {
     ITooltipBasicExample,
     ITooltipColorVariantsExample,
@@ -12,8 +13,6 @@ import {
     ITooltipPlacementExample,
     ITooltipTriggerExample
 } from '@inkline/inkline/components/ITooltip/examples';
-import { manifest } from '@inkline/inkline/components/ITooltip/manifest';
-
 import { default as ITooltipBasicExampleHTML } from '@inkline/inkline/components/ITooltip/examples/basic.html?raw';
 import { default as ITooltipColorVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/color-variants.html?raw';
 import { default as ITooltipSizeVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/size-variants.html?raw';
@@ -71,3 +70,26 @@ The default size is set to `md`.
 You can choose a light or dark color for your tooltip using the `color` modifier.
 
 <example :component="ITooltipColorVariantsExample" :html="ITooltipColorVariantsExampleHTML"></example>
+
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

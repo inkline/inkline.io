@@ -4,14 +4,13 @@ description: Tab elements are used to switch between multiple sections of relate
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/ITabs/manifest';
 import {
     ITabsBasicExample,
     ITabsColorVariantsExample,
     ITabsSizeVariantsExample,
     ITabsStretchExample
 } from '@inkline/inkline/components/ITabs/examples';
-import { manifest } from '@inkline/inkline/components/ITabs/manifest';
-
 import { default as ITabsBasicExampleHTML } from '@inkline/inkline/components/ITabs/examples/basic.html?raw';
 import { default as ITabsBasicExampleJS } from '@inkline/inkline/components/ITabs/examples/basic.js?raw';
 import { default as ITabsColorVariantsExampleHTML } from '@inkline/inkline/components/ITabs/examples/color-variants.html?raw';
@@ -50,3 +49,26 @@ The default size is set to `md`.
 Inkline includes basic predefined tabs styles that you can use within your application. You can apply a style using the `color` property.
 
 <example :component="ITabsColorVariantsExample" :html="ITabsColorVariantsExampleHTML" :js="ITabsColorVariantsExampleJS"></example>
+
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>

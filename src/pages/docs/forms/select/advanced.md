@@ -4,7 +4,6 @@ description: The select component easily supports complex scenarios, with asynch
 ---
 
 <script setup>
-
 import {
     ISelectAdvancedExample
 } from '@inkline/inkline/components/ISelect/examples';

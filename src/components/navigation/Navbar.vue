@@ -7,6 +7,10 @@ import { Prototype } from '@inkline/inkline';
 
 export default defineComponent({
     props: {
+        type: {
+            type: String,
+            default: 'default'
+        },
         transparent: {
             type: Boolean,
             default: true
@@ -40,7 +44,7 @@ export default defineComponent({
         <i-navbar-brand to="/" translate="no">
             <img alt="Inkline Logo" class="logo -black" height="24" width="22.5" :src="logoBlack">
             <img alt="Inkline Logo" class="logo -white" height="24" width="22.5" :src="logoWhite">
-            Inkline
+            <span>Inkline</span>
         </i-navbar-brand>
         <i-navbar-collapsible class="_justify-content:end">
             <!--<i-input :placeholder="t('navbar.input.placeholder')">-->
@@ -51,13 +55,13 @@ export default defineComponent({
             <!--    </template>-->
             <!--</i-input>-->
             <i-nav>
-                <i-nav-item id="navbar-item-documentation" :to="{ name: 'docs-introduction' }">
+                <i-nav-item v-if="type === 'docs'" id="navbar-item-docsearch">
+                    <docsearch />
+                </i-nav-item>
+                <i-nav-item v-if="type === 'default'" id="navbar-item-documentation" :to="{ name: 'docs-introduction' }">
                     <span>{{ t('navbar.docs') }}</span>
                     <span>{{ t('navbar.documentation') }}</span>
                 </i-nav-item>
-                <!--<i-nav-item>-->
-                <!--    <i-icon name="ink-search" />-->
-                <!--</i-nav-item>-->
                 <i-nav-item @click="setColorMode">
                     <i-icon v-if="colorMode === 'dark'" name="fas-sun" />
                     <i-icon v-else name="fas-moon" />
@@ -107,6 +111,11 @@ export default defineComponent({
         }
     }
 
+    #navbar-item-docsearch {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     /**
      * Color variants
      */
@@ -129,6 +138,20 @@ export default defineComponent({
     /**
      * Responsive design
      */
+
+    @media screen and (max-width: 360px) {
+        .navbar-brand {
+            margin-right: 0;
+
+            img {
+                margin-right: 0;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
 
     @include breakpoint-down('xs') {
         #navbar-item-documentation {

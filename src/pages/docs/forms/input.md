@@ -4,6 +4,7 @@ description: Form component used for inputting data directly from the keyboard.
 ---
 
 <script setup>
+import { manifest } from '@inkline/inkline/components/IInput/manifest';
 import {
     IInputBasicExample,
     IInputColorVariantsExample,
@@ -95,5 +96,28 @@ You can use the `color` property to set a `light` or `dark` color for your input
 You're able to use the `size` modifier to control the size of your inputs, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`.
 
 <example :component="IInputSizeVariantsExample" :html="IInputSizeVariantsExampleHTML" :js="IInputSizeVariantsExampleJS"></example>
+
+
+### Configuration
+
+#### Props
+Use props to modify the component's design and behavior.
+
+<props-table :manifest="manifest"></props-table>
+
+#### Slots
+Use slots to insert custom content into well-defined component locations.
+
+<slots-table :manifest="manifest"></slots-table>
+
+#### Events
+Use events to react to something happening inside the component.
+
+<events-table :manifest="manifest"></events-table>
+
+#### CSS Variables
+<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
+
+<css-variables-table :manifest="manifest" type="local"></css-variables-table>
 
 
