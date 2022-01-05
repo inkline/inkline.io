@@ -66,7 +66,7 @@ export default defineConfig({
         components({
             extensions: ['vue', 'md'],
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-            dts: true,
+            dts: 'src/components.d.ts',
             resolvers: [
                 iconsResolver({
                     prefix: 'icon'
@@ -153,9 +153,7 @@ export default defineConfig({
         /**
          * @docs https://github.com/antfu/unplugin-icons
          */
-        icons({
-            prefix: 'icon'
-        })
+        icons()
     ],
 
     server: {
@@ -173,7 +171,7 @@ export default defineConfig({
     ssgOptions: {
         script: 'async',
         formatting: 'minify',
-        format: 'esm'
+        format: 'cjs'
     },
 
     /**

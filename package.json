@@ -13,7 +13,7 @@
   "dependencies": {
     "@docsearch/css": "3.0.0-alpha.42",
     "@docsearch/js": "3.0.0-alpha.42",
-    "@inkline/inkline": "3.0.0-rc.11",
+    "@inkline/inkline": "3.0.2",
     "@vueuse/core": "7.3.0",
     "copy-to-clipboard": "3.3.1",
     "nprogress": "0.2.0",

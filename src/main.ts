@@ -6,7 +6,7 @@ import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
 import App from '~/App.vue';
 
-import { Inkline, components } from '@inkline/inkline/inkline.mjs';
+import { Inkline, components } from '@inkline/inkline';
 import { scrollBehavior } from '~/config';
 
 import '@inkline/inkline/inkline.scss';
