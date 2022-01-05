@@ -34,7 +34,7 @@ export default defineComponent({
                             </a>
                         </li>
                         <li>
-                            <a href="https://discord.gg/gzRpZysq" target="_blank" rel="noopener">
+                            <a href="https://discord.gg/hpus7x2n" target="_blank" rel="noopener">
                                 <icon-fa-brands-discord />
                                 <span class="_visually-hidden">Discord</span>
                             </a>
