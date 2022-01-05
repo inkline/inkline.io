@@ -4,22 +4,47 @@ import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import OsAwards from '~/components/cards/OsAwards.vue';
 
+interface SeasonalTheme {
+    class: string;
+    from: Date;
+    to: Date;
+}
+
+const today = new Date();
+const year = today.getFullYear();
+const seasonalThemes: SeasonalTheme[] = [
+    {
+        class: 'christmas',
+        from: new Date(year, 0, 1),
+        to: new Date(year, 0, 10)
+    },
+    {
+        class: 'christmas',
+        from: new Date(year, 11, 1),
+        to: new Date(year, 11, 31)
+    }
+];
+
 export default defineComponent({
     components: { OsAwards },
     setup () {
         const router = useRouter();
         const { t } = useI18n();
 
+        const theme = seasonalThemes
+            .find((theme) => (theme.from.valueOf() <= today.valueOf()) && (today.valueOf() <= theme.to.valueOf()));
+
         return {
             router,
-            t
+            t,
+            theme: `-${theme?.class || 'default'}`
         };
     }
 });
 </script>
 
 <template>
-    <i-header fluid>
+    <i-header fluid :class="theme">
         <div class="mobile-background" />
         <i-container class="header-content">
             <i-row>
@@ -66,17 +91,17 @@ $navbar-height: 72px;
 @include i-header() {
     padding-top: calc(var(----padding-top) + #{$navbar-height});
     padding-bottom: var(----padding-bottom);
-    background-image: url('~/assets/images/header/index-christmas.svg');
     background-repeat: no-repeat;
     background-size: auto 800px;
     width: 100%;
+    background-image: url('~/assets/images/header/index.svg');
 
     .mobile-background {
         background-size: auto 100%;
         background-position: center center;
         background-repeat: no-repeat;
         flex-grow: 1;
-        background-image: url('~/assets/images/header/index-christmas-centered.svg');
+        background-image: url('~/assets/images/header/index-centered.svg');
     }
 
     .title {
@@ -126,7 +151,7 @@ $navbar-height: 72px;
      */
 
     @include breakpoint-down('md') {
-        background-image: none;
+        background-image: none !important;
         padding-top: $navbar-height;
         background-position: center $navbar-height;
         background-size: 1280px auto;
@@ -239,7 +264,19 @@ $navbar-height: 72px;
     @media screen and (min-width: 2560px) {
         background-size: auto 800px;
         background-position: right 0;
-        background-image: url('~/assets/images/header/index-christmas-wide.svg');
+        background-image: url('~/assets/images/header/index-wide.svg');
+    }
+
+    &.-christmas {
+        background-image: url('~/assets/images/header/index-christmas.svg');
+
+        .mobile-background {
+            background-image: url('~/assets/images/header/index-christmas-centered.svg');
+        }
+
+        @media screen and (min-width: 2560px) {
+            background-image: url('~/assets/images/header/index-christmas-wide.svg');
+        }
     }
 }
 </style>
