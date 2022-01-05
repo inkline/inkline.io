@@ -4,7 +4,7 @@ description: Group multiple buttons together on a single line using a button gro
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IButtonGroup/manifest';
+import { manifest } from '@inkline/inkline/components/IButtonGroup/manifest.mjs';
 import {
     IButtonGroupBasicExample,
     IButtonGroupBlockExample,
@@ -15,7 +15,7 @@ import {
     IButtonGroupVerticalExample,
     IButtonGroupVerticalBlockExample,
     IButtonGroupVerticalSizeVariantsExample
-} from '@inkline/inkline/components/IButtonGroup/examples';
+} from '@inkline/inkline/components/IButtonGroup/examples/index.mjs';
 import { default as IButtonGroupBasicExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/basic.html?raw';
 import { default as IButtonGroupBlockExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/block.html?raw';
 import { default as IButtonGroupDisabledExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/disabled.html?raw';

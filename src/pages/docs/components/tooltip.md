@@ -4,7 +4,7 @@ description: Tooltips are useful for conveying information when an user hovers o
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ITooltip/manifest';
+import { manifest } from '@inkline/inkline/components/ITooltip/manifest.mjs';
 import {
     ITooltipBasicExample,
     ITooltipColorVariantsExample,
@@ -12,14 +12,14 @@ import {
     ITooltipFreeformExample,
     ITooltipPlacementExample,
     ITooltipTriggerExample
-} from '@inkline/inkline/components/ITooltip/examples';
+} from '@inkline/inkline/components/ITooltip/examples/index.mjs';
 import { default as ITooltipBasicExampleHTML } from '@inkline/inkline/components/ITooltip/examples/basic.html?raw';
 import { default as ITooltipColorVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/color-variants.html?raw';
 import { default as ITooltipSizeVariantsExampleHTML } from '@inkline/inkline/components/ITooltip/examples/size-variants.html?raw';
 import { default as ITooltipFreeformExampleHTML } from '@inkline/inkline/components/ITooltip/examples/freeform.html?raw';
 import { default as ITooltipPlacementExampleHTML } from '@inkline/inkline/components/ITooltip/examples/placement.html?raw';
 import { default as ITooltipTriggerExampleHTML } from '@inkline/inkline/components/ITooltip/examples/trigger.html?raw';
-import { default as ITooltipTriggerExampleJS } from '@inkline/inkline/components/ITooltip/examples/trigger.js?raw';
+import { default as ITooltipTriggerExampleJS } from '@inkline/inkline/components/ITooltip/examples/trigger.mjs?raw';
 </script>
 
 # Tooltip

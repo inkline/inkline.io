@@ -11,8 +11,8 @@ import {
     IProgressSizeVariantsExample,
     IProgressStackedExample,
     IProgressValueExample
-} from '@inkline/inkline/components/IProgress/examples';
-import { manifest } from '@inkline/inkline/components/IProgress/manifest';
+} from '@inkline/inkline/components/IProgress/examples/index.mjs';
+import { manifest } from '@inkline/inkline/components/IProgress/manifest.mjs';
 
 import { default as IProgressBasicExampleHTML } from '@inkline/inkline/components/IProgress/examples/basic.html?raw';
 import { default as IProgressBarColorVariantsExampleHTML } from '@inkline/inkline/components/IProgress/examples/bar-color-variants.html?raw';

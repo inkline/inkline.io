@@ -47,16 +47,15 @@ Open your `src/main.js` or `src/main.ts` file and configure your application to 
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import { Inkline } from '@inkline/inkline';
-import * as components from '@inkline/inkline/components';
-
+import { Inkline, components } from '@inkline/inkline';
 import '@inkline/inkline/inkline.scss';
+
 import "./main.scss";
 
 const app = createApp(App);
 
 app.use(Inkline, {
-    components,
+    components
 });
     
 app.mount('#app');

@@ -8,11 +8,11 @@ description: The select autocomplete functionality allows you to search for a sp
 import {
     ISelectAutocompleteExample,
     ISelectAutocompleteAsyncExample
-} from '@inkline/inkline/components/ISelect/examples';
+} from '@inkline/inkline/components/ISelect/examples/index.mjs';
 import { default as ISelectAutocompleteExampleHTML } from '@inkline/inkline/components/ISelect/examples/autocomplete.html?raw';
-import { default as ISelectAutocompleteExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete.js?raw';
+import { default as ISelectAutocompleteExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete.mjs?raw';
 import { default as ISelectAutocompleteAsyncExampleHTML } from '@inkline/inkline/components/ISelect/examples/autocomplete-async.html?raw';
-import { default as ISelectAutocompleteAsyncExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete-async.js?raw';
+import { default as ISelectAutocompleteAsyncExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete-async.mjs?raw';
 </script>
 
 

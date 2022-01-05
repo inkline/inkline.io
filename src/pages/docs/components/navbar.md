@@ -4,7 +4,7 @@ description: A responsive navigation header that includes support for branding, 
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/INavbar/manifest';
+import { manifest } from '@inkline/inkline/components/INavbar/manifest.mjs';
 import {
     INavbarBasicExample,
     INavbarCollapseBreakpointExample,
@@ -17,13 +17,13 @@ import {
     INavbarSizeVariantsExample,
     INavbarRoutingExample,
     INavbarRoutingActiveExample
-} from '@inkline/inkline/components/INavbar/examples';
+} from '@inkline/inkline/components/INavbar/examples/index.mjs';
 import { default as INavbarBasicExampleHTML } from '@inkline/inkline/components/INavbar/examples/basic.html?raw';
 import { default as INavbarCollapseBreakpointExampleHTML } from '@inkline/inkline/components/INavbar/examples/collapse-breakpoint.html?raw';
 import { default as INavbarCollapseTrueExampleHTML } from '@inkline/inkline/components/INavbar/examples/collapse-true.html?raw';
 import { default as INavbarCollapseFalseExampleHTML } from '@inkline/inkline/components/INavbar/examples/collapse-false.html?raw';
 import { default as INavbarCollapseManualExampleHTML } from '@inkline/inkline/components/INavbar/examples/collapse-manual.html?raw';
-import { default as INavbarCollapseManualExampleJS } from '@inkline/inkline/components/INavbar/examples/collapse-manual.js?raw';
+import { default as INavbarCollapseManualExampleJS } from '@inkline/inkline/components/INavbar/examples/collapse-manual.mjs?raw';
 import { default as INavbarColorVariantsExampleHTML } from '@inkline/inkline/components/INavbar/examples/color-variants.html?raw';
 import { default as INavbarDropdownExampleHTML } from '@inkline/inkline/components/INavbar/examples/dropdown.html?raw';
 import { default as INavbarNavPlacementExampleHTML } from '@inkline/inkline/components/INavbar/examples/nav-placement.html?raw';

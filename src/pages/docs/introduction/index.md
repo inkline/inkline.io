@@ -56,7 +56,7 @@ Inkline offers official integrations for Vue CLI and Nuxt.js, but can be easily 
 <router-link class="installation-card" :to="{ name: 'docs-introduction-installation-cdn' }">
     <i-card>
         <div class="image">
-            <i-icon name="fas-globe"></i-icon>
+            <icon-fa-solid-globe></icon-fa-solid-globe>
         </div>
         <span>CDN Installation</span>
         <i-icon name="ink-chevron-down"></i-icon>

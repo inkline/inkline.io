@@ -74,7 +74,7 @@ export default defineComponent({
         <i-row>
             <i-column class="_text:center _margin-bottom:5">
                 <span>
-                    <i-icon name="fas-heart" />
+                    <icon-fa-solid-heart />
                 </span>
             </i-column>
         </i-row>
@@ -165,8 +165,8 @@ export default defineComponent({
         }
     }
 
-    .inkline-icon {
-        ----size: 4rem;
+    svg {
+        font-size: 4rem;
 
         color: color('red');
     }

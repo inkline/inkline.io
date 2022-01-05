@@ -11,7 +11,7 @@ import {
     BorderColorStateExample,
     BorderRadiusExample,
     BorderRemoveExample
-} from '@inkline/inkline/stories/utilities/border';
+} from '@inkline/inkline/stories/utilities/border/index.mjs';
 import { default as BorderAddExampleHTML } from '@inkline/inkline/stories/utilities/border/add.html?raw';
 import { default as BorderColorBrandExampleHTML } from '@inkline/inkline/stories/utilities/border/color-brand.html?raw';
 import { default as BorderColorNeutralExampleHTML } from '@inkline/inkline/stories/utilities/border/color-neutral.html?raw';

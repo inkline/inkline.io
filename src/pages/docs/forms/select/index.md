@@ -4,7 +4,7 @@ description: Form component used for selecting a value from a large list of opti
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ISelect/manifest';
+import { manifest } from '@inkline/inkline/components/ISelect/manifest.mjs';
 import {
     ISelectBasicExample,
     ISelectColorVariantsExample,
@@ -18,31 +18,31 @@ import {
     ISelectPrependAppendButtonExample,
     ISelectPrefixSuffixExample,
     ISelectReadonlyExample,
-} from '@inkline/inkline/components/ISelect/examples';
+} from '@inkline/inkline/components/ISelect/examples/index.mjs';
 import { default as ISelectBasicExampleHTML } from '@inkline/inkline/components/ISelect/examples/basic.html?raw';
-import { default as ISelectBasicExampleJS } from '@inkline/inkline/components/ISelect/examples/basic.js?raw';
+import { default as ISelectBasicExampleJS } from '@inkline/inkline/components/ISelect/examples/basic.mjs?raw';
 import { default as ISelectColorVariantsExampleHTML } from '@inkline/inkline/components/ISelect/examples/color-variants.html?raw';
-import { default as ISelectColorVariantsExampleJS } from '@inkline/inkline/components/ISelect/examples/color-variants.js?raw';
+import { default as ISelectColorVariantsExampleJS } from '@inkline/inkline/components/ISelect/examples/color-variants.mjs?raw';
 import { default as ISelectClearableExampleHTML } from '@inkline/inkline/components/ISelect/examples/clearable.html?raw';
-import { default as ISelectClearableExampleJS } from '@inkline/inkline/components/ISelect/examples/clearable.js?raw';
+import { default as ISelectClearableExampleJS } from '@inkline/inkline/components/ISelect/examples/clearable.mjs?raw';
 import { default as ISelectDisabledExampleHTML } from '@inkline/inkline/components/ISelect/examples/disabled.html?raw';
-import { default as ISelectDisabledExampleJS } from '@inkline/inkline/components/ISelect/examples/disabled.js?raw';
+import { default as ISelectDisabledExampleJS } from '@inkline/inkline/components/ISelect/examples/disabled.mjs?raw';
 import { default as ISelectDisabledOptionExampleHTML } from '@inkline/inkline/components/ISelect/examples/disabled-option.html?raw';
-import { default as ISelectDisabledOptionExampleJS } from '@inkline/inkline/components/ISelect/examples/disabled-option.js?raw';
+import { default as ISelectDisabledOptionExampleJS } from '@inkline/inkline/components/ISelect/examples/disabled-option.mjs?raw';
 import { default as ISelectHeaderFooterExampleHTML } from '@inkline/inkline/components/ISelect/examples/header-and-footer.html?raw';
-import { default as ISelectHeaderFooterExampleJS } from '@inkline/inkline/components/ISelect/examples/header-and-footer.js?raw';
+import { default as ISelectHeaderFooterExampleJS } from '@inkline/inkline/components/ISelect/examples/header-and-footer.mjs?raw';
 import { default as ISelectMarkupExampleHTML } from '@inkline/inkline/components/ISelect/examples/markup.html?raw';
-import { default as ISelectMarkupExampleJS } from '@inkline/inkline/components/ISelect/examples/markup.js?raw';
+import { default as ISelectMarkupExampleJS } from '@inkline/inkline/components/ISelect/examples/markup.mjs?raw';
 import { default as ISelectSizeVariantsExampleHTML } from '@inkline/inkline/components/ISelect/examples/size-variants.html?raw';
-import { default as ISelectSizeVariantsExampleJS } from '@inkline/inkline/components/ISelect/examples/size-variants.js?raw';
+import { default as ISelectSizeVariantsExampleJS } from '@inkline/inkline/components/ISelect/examples/size-variants.mjs?raw';
 import { default as ISelectPrependAppendTextExampleHTML } from '@inkline/inkline/components/ISelect/examples/prepend-append-text.html?raw';
-import { default as ISelectPrependAppendTextExampleJS } from '@inkline/inkline/components/ISelect/examples/prepend-append-text.js?raw';
+import { default as ISelectPrependAppendTextExampleJS } from '@inkline/inkline/components/ISelect/examples/prepend-append-text.mjs?raw';
 import { default as ISelectPrependAppendButtonExampleHTML } from '@inkline/inkline/components/ISelect/examples/prepend-append-button.html?raw';
-import { default as ISelectPrependAppendButtonExampleJS } from '@inkline/inkline/components/ISelect/examples/prepend-append-button.js?raw';
+import { default as ISelectPrependAppendButtonExampleJS } from '@inkline/inkline/components/ISelect/examples/prepend-append-button.mjs?raw';
 import { default as ISelectPrefixSuffixExampleHTML } from '@inkline/inkline/components/ISelect/examples/prefix-suffix.html?raw';
-import { default as ISelectPrefixSuffixExampleJS } from '@inkline/inkline/components/ISelect/examples/prefix-suffix.js?raw';
+import { default as ISelectPrefixSuffixExampleJS } from '@inkline/inkline/components/ISelect/examples/prefix-suffix.mjs?raw';
 import { default as ISelectReadonlyExampleHTML } from '@inkline/inkline/components/ISelect/examples/readonly.html?raw';
-import { default as ISelectReadonlyExampleJS } from '@inkline/inkline/components/ISelect/examples/readonly.js?raw';
+import { default as ISelectReadonlyExampleJS } from '@inkline/inkline/components/ISelect/examples/readonly.mjs?raw';
 </script>
 
 

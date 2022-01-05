@@ -4,7 +4,7 @@ description: A responsive navigation sidebar that includes support for branding,
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ISidebar/manifest';
+import { manifest } from '@inkline/inkline/components/ISidebar/manifest.mjs';
 import {
     ISidebarBasicExample,
     ISidebarCollapseBreakpointExample,
@@ -17,27 +17,27 @@ import {
     ISidebarPlacementExample,
     ISidebarRoutingExample,
     ISidebarRoutingActiveExample
-} from '@inkline/inkline/components/ISidebar/examples';
+} from '@inkline/inkline/components/ISidebar/examples/index.mjs';
 import { default as ISidebarBasicExampleHTML } from '@inkline/inkline/components/ISidebar/examples/basic.html?raw';
-import { default as ISidebarBasicExampleJS } from '@inkline/inkline/components/ISidebar/examples/basic.js?raw';
+import { default as ISidebarBasicExampleJS } from '@inkline/inkline/components/ISidebar/examples/basic.mjs?raw';
 import { default as ISidebarCollapseBreakpointExampleHTML } from '@inkline/inkline/components/ISidebar/examples/collapse-breakpoint.html?raw';
-import { default as ISidebarCollapseBreakpointExampleJS } from '@inkline/inkline/components/ISidebar/examples/collapse-breakpoint.js?raw';
+import { default as ISidebarCollapseBreakpointExampleJS } from '@inkline/inkline/components/ISidebar/examples/collapse-breakpoint.mjs?raw';
 import { default as ISidebarCollapseTrueExampleHTML } from '@inkline/inkline/components/ISidebar/examples/collapse-true.html?raw';
 import { default as ISidebarCollapseFalseExampleHTML } from '@inkline/inkline/components/ISidebar/examples/collapse-false.html?raw';
 import { default as ISidebarColorVariantsExampleHTML } from '@inkline/inkline/components/ISidebar/examples/color-variants.html?raw';
-import { default as ISidebarColorVariantsExampleJS } from '@inkline/inkline/components/ISidebar/examples/color-variants.js?raw';
+import { default as ISidebarColorVariantsExampleJS } from '@inkline/inkline/components/ISidebar/examples/color-variants.mjs?raw';
 import { default as ISidebarCollapsePositionExampleHTML } from '@inkline/inkline/components/ISidebar/examples/collapse-position.html?raw';
-import { default as ISidebarCollapsePositionExampleJS } from '@inkline/inkline/components/ISidebar/examples/collapse-position.js?raw';
+import { default as ISidebarCollapsePositionExampleJS } from '@inkline/inkline/components/ISidebar/examples/collapse-position.mjs?raw';
 import { default as ISidebarCollapsibleExampleHTML } from '@inkline/inkline/components/ISidebar/examples/collapsible.html?raw';
-import { default as ISidebarCollapsibleExampleJS } from '@inkline/inkline/components/ISidebar/examples/collapsible.js?raw';
+import { default as ISidebarCollapsibleExampleJS } from '@inkline/inkline/components/ISidebar/examples/collapsible.mjs?raw';
 import { default as ISidebarSizeVariantsExampleHTML } from '@inkline/inkline/components/ISidebar/examples/size-variants.html?raw';
-import { default as ISidebarSizeVariantsExampleJS } from '@inkline/inkline/components/ISidebar/examples/size-variants.js?raw';
+import { default as ISidebarSizeVariantsExampleJS } from '@inkline/inkline/components/ISidebar/examples/size-variants.mjs?raw';
 import { default as ISidebarPlacementExampleHTML } from '@inkline/inkline/components/ISidebar/examples/placement.html?raw';
-import { default as ISidebarPlacementExampleJS } from '@inkline/inkline/components/ISidebar/examples/placement.js?raw';
+import { default as ISidebarPlacementExampleJS } from '@inkline/inkline/components/ISidebar/examples/placement.mjs?raw';
 import { default as ISidebarRoutingExampleHTML } from '@inkline/inkline/components/ISidebar/examples/routing.html?raw';
-import { default as ISidebarRoutingExampleJS } from '@inkline/inkline/components/ISidebar/examples/routing.js?raw';
+import { default as ISidebarRoutingExampleJS } from '@inkline/inkline/components/ISidebar/examples/routing.mjs?raw';
 import { default as ISidebarRoutingActiveExampleHTML } from '@inkline/inkline/components/ISidebar/examples/routing-active.html?raw';
-import { default as ISidebarRoutingActiveExampleJS } from '@inkline/inkline/components/ISidebar/examples/routing-active.js?raw';
+import { default as ISidebarRoutingActiveExampleJS } from '@inkline/inkline/components/ISidebar/examples/routing-active.mjs?raw';
 </script>
 
 

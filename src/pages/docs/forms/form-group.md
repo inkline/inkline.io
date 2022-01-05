@@ -4,7 +4,7 @@ description: Form groups are the easiest way to add structure and spacing to for
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IForm/components/IFormGroup/manifest';
+import { manifest } from '@inkline/inkline/components/IForm/components/IFormGroup/manifest.mjs';
 import {
     IFormGroupBasicExample,
     IFormGroupDisabledExample,
@@ -15,25 +15,25 @@ import {
     IFormGroupSizeVariantsSmExample,
     IFormGroupSizeVariantsMdExample,
     IFormGroupSizeVariantsLgExample
-} from '@inkline/inkline/components/IForm/components/IFormGroup/examples';
+} from '@inkline/inkline/components/IForm/components/IFormGroup/examples/index.mjs';
 import { default as IFormGroupBasicExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/basic.html?raw';
-import { default as IFormGroupBasicExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/basic.js?raw';
+import { default as IFormGroupBasicExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/basic.mjs?raw';
 import { default as IFormGroupDisabledExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/disabled.html?raw';
-import { default as IFormGroupDisabledExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/disabled.js?raw';
+import { default as IFormGroupDisabledExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/disabled.mjs?raw';
 import { default as IFormGroupNestingExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting.html?raw';
-import { default as IFormGroupNestingExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting.js?raw';
+import { default as IFormGroupNestingExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting.mjs?raw';
 import { default as IFormGroupNestingDisabledExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-disabled.html?raw';
-import { default as IFormGroupNestingDisabledExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-disabled.js?raw';
+import { default as IFormGroupNestingDisabledExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-disabled.mjs?raw';
 import { default as IFormGroupNestingReadonlyExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-readonly.html?raw';
-import { default as IFormGroupNestingReadonlyExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-readonly.js?raw';
+import { default as IFormGroupNestingReadonlyExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-readonly.mjs?raw';
 import { default as IFormGroupNestingSizeVariantsLgExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-size-variants-lg.html?raw';
-import { default as IFormGroupNestingSizeVariantsLgExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-size-variants-lg.js?raw';
+import { default as IFormGroupNestingSizeVariantsLgExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/nesting-size-variants-lg.mjs?raw';
 import { default as IFormGroupSizeVariantsSmExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-sm.html?raw';
-import { default as IFormGroupSizeVariantsSmExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-sm.js?raw';
+import { default as IFormGroupSizeVariantsSmExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-sm.mjs?raw';
 import { default as IFormGroupSizeVariantsMdExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-md.html?raw';
-import { default as IFormGroupSizeVariantsMdExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-md.js?raw';
+import { default as IFormGroupSizeVariantsMdExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-md.mjs?raw';
 import { default as IFormGroupSizeVariantsLgExampleHTML } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-lg.html?raw';
-import { default as IFormGroupSizeVariantsLgExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-lg.js?raw';
+import { default as IFormGroupSizeVariantsLgExampleJS } from '@inkline/inkline/components/IForm/components/IFormGroup/examples/size-variants-lg.mjs?raw';
 </script>
 
 # Form Group

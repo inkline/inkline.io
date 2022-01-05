@@ -4,7 +4,7 @@ description: Radio inputs allow the user to select multiple options from a set.
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IRadio/manifest';
+import { manifest } from '@inkline/inkline/components/IRadio/manifest.mjs';
 import {
     IRadioBasicExample,
     IRadioColorVariantsExample,
@@ -14,23 +14,23 @@ import {
     IRadioNativeExample,
     IRadioReadonlyExample,
     IRadioSizeVariantsExample
-} from '@inkline/inkline/components/IRadio/examples';
+} from '@inkline/inkline/components/IRadio/examples/index.mjs';
 import { default as IRadioBasicExampleHTML } from '@inkline/inkline/components/IRadio/examples/basic.html?raw';
-import { default as IRadioBasicExampleJS } from '@inkline/inkline/components/IRadio/examples/basic.js?raw';
+import { default as IRadioBasicExampleJS } from '@inkline/inkline/components/IRadio/examples/basic.mjs?raw';
 import { default as IRadioColorVariantsExampleHTML } from '@inkline/inkline/components/IRadio/examples/color-variants.html?raw';
-import { default as IRadioColorVariantsExampleJS } from '@inkline/inkline/components/IRadio/examples/color-variants.js?raw';
+import { default as IRadioColorVariantsExampleJS } from '@inkline/inkline/components/IRadio/examples/color-variants.mjs?raw';
 import { default as IRadioDisabledExampleHTML } from '@inkline/inkline/components/IRadio/examples/disabled.html?raw';
-import { default as IRadioDisabledExampleJS } from '@inkline/inkline/components/IRadio/examples/disabled.js?raw';
+import { default as IRadioDisabledExampleJS } from '@inkline/inkline/components/IRadio/examples/disabled.mjs?raw';
 import { default as IRadioGroupDisabledExampleHTML } from '@inkline/inkline/components/IRadio/examples/group-disabled.html?raw';
-import { default as IRadioGroupDisabledExampleJS } from '@inkline/inkline/components/IRadio/examples/group-disabled.js?raw';
+import { default as IRadioGroupDisabledExampleJS } from '@inkline/inkline/components/IRadio/examples/group-disabled.mjs?raw';
 import { default as IRadioGroupSizeVariantsExampleHTML } from '@inkline/inkline/components/IRadio/examples/group-size-variants.html?raw';
-import { default as IRadioGroupSizeVariantsExampleJS } from '@inkline/inkline/components/IRadio/examples/group-size-variants.js?raw';
+import { default as IRadioGroupSizeVariantsExampleJS } from '@inkline/inkline/components/IRadio/examples/group-size-variants.mjs?raw';
 import { default as IRadioNativeExampleHTML } from '@inkline/inkline/components/IRadio/examples/native.html?raw';
-import { default as IRadioNativeExampleJS } from '@inkline/inkline/components/IRadio/examples/native.js?raw';
+import { default as IRadioNativeExampleJS } from '@inkline/inkline/components/IRadio/examples/native.mjs?raw';
 import { default as IRadioReadonlyExampleHTML } from '@inkline/inkline/components/IRadio/examples/readonly.html?raw';
-import { default as IRadioReadonlyExampleJS } from '@inkline/inkline/components/IRadio/examples/readonly.js?raw';
+import { default as IRadioReadonlyExampleJS } from '@inkline/inkline/components/IRadio/examples/readonly.mjs?raw';
 import { default as IRadioSizeVariantsExampleHTML } from '@inkline/inkline/components/IRadio/examples/size-variants.html?raw';
-import { default as IRadioSizeVariantsExampleJS } from '@inkline/inkline/components/IRadio/examples/size-variants.js?raw';
+import { default as IRadioSizeVariantsExampleJS } from '@inkline/inkline/components/IRadio/examples/size-variants.mjs?raw';
 </script>
 
 # Radio

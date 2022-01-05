@@ -4,8 +4,8 @@ description: Navs are basic navigation components that provide alignment and spa
 ---
 
 <script setup>
-import { manifest as navManifest } from '@inkline/inkline/components/INav/manifest';
-import { manifest as navItemManifest } from '@inkline/inkline/components/INav/components/INavItem/manifest';
+import { manifest as navManifest } from '@inkline/inkline/components/INav/manifest.mjs';
+import { manifest as navItemManifest } from '@inkline/inkline/components/INav/components/INavItem/manifest.mjs';
 import {
     INavBasicExample,
     INavColorVariantsExample,
@@ -13,7 +13,7 @@ import {
     INavSizeVariantsExample,
     INavStateActiveExample,
     INavVerticalExample
-} from '@inkline/inkline/components/INav/examples';
+} from '@inkline/inkline/components/INav/examples/index.mjs';
 import { default as INavBasicExampleHTML } from '@inkline/inkline/components/INav/examples/basic.html?raw';
 import { default as INavColorVariantsExampleHTML } from '@inkline/inkline/components/INav/examples/color-variants.html?raw';
 import { default as INavRoutingExampleHTML } from '@inkline/inkline/components/INav/examples/routing.html?raw';

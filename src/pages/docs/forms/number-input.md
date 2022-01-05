@@ -4,8 +4,8 @@ description: Number Inputs are form components used to for easily inputting and 
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/INumberInput/manifest';
-import { manifest as inputManifest } from '@inkline/inkline/components/IInput/manifest';
+import { manifest } from '@inkline/inkline/components/INumberInput/manifest.mjs';
+import { manifest as inputManifest } from '@inkline/inkline/components/IInput/manifest.mjs';
 import {
     INumberInputBasicExample,
     INumberInputColorVariantsExample,
@@ -20,33 +20,33 @@ import {
     INumberInputPrependAppendButtonExample,
     INumberInputPrependAppendDropdownExample,
     INumberInputPrefixSuffixExample
-} from '@inkline/inkline/components/INumberInput/examples';
+} from '@inkline/inkline/components/INumberInput/examples/index.mjs';
 import { default as INumberInputBasicExampleHTML } from '@inkline/inkline/components/INumberInput/examples/basic.html?raw';
-import { default as INumberInputBasicExampleJS } from '@inkline/inkline/components/INumberInput/examples/basic.js?raw';
+import { default as INumberInputBasicExampleJS } from '@inkline/inkline/components/INumberInput/examples/basic.mjs?raw';
 import { default as INumberInputColorVariantsExampleHTML } from '@inkline/inkline/components/INumberInput/examples/color-variants.html?raw';
-import { default as INumberInputColorVariantsExampleJS } from '@inkline/inkline/components/INumberInput/examples/color-variants.js?raw';
+import { default as INumberInputColorVariantsExampleJS } from '@inkline/inkline/components/INumberInput/examples/color-variants.mjs?raw';
 import { default as INumberInputClearableExampleHTML } from '@inkline/inkline/components/INumberInput/examples/clearable.html?raw';
-import { default as INumberInputClearableExampleJS } from '@inkline/inkline/components/INumberInput/examples/clearable.js?raw';
+import { default as INumberInputClearableExampleJS } from '@inkline/inkline/components/INumberInput/examples/clearable.mjs?raw';
 import { default as INumberInputDisabledExampleHTML } from '@inkline/inkline/components/INumberInput/examples/disabled.html?raw';
-import { default as INumberInputDisabledExampleJS } from '@inkline/inkline/components/INumberInput/examples/disabled.js?raw';
+import { default as INumberInputDisabledExampleJS } from '@inkline/inkline/components/INumberInput/examples/disabled.mjs?raw';
 import { default as INumberInputMinMaxExampleHTML } from '@inkline/inkline/components/INumberInput/examples/minmax.html?raw';
-import { default as INumberInputMinMaxExampleJS } from '@inkline/inkline/components/INumberInput/examples/minmax.js?raw';
+import { default as INumberInputMinMaxExampleJS } from '@inkline/inkline/components/INumberInput/examples/minmax.mjs?raw';
 import { default as INumberInputPrecisionExampleHTML } from '@inkline/inkline/components/INumberInput/examples/precision.html?raw';
-import { default as INumberInputPrecisionExampleJS } from '@inkline/inkline/components/INumberInput/examples/precision.js?raw';
+import { default as INumberInputPrecisionExampleJS } from '@inkline/inkline/components/INumberInput/examples/precision.mjs?raw';
 import { default as INumberInputReadonlyExampleHTML } from '@inkline/inkline/components/INumberInput/examples/readonly.html?raw';
-import { default as INumberInputReadonlyExampleJS } from '@inkline/inkline/components/INumberInput/examples/readonly.js?raw';
+import { default as INumberInputReadonlyExampleJS } from '@inkline/inkline/components/INumberInput/examples/readonly.mjs?raw';
 import { default as INumberInputSizeVariantsExampleHTML } from '@inkline/inkline/components/INumberInput/examples/size-variants.html?raw';
-import { default as INumberInputSizeVariantsExampleJS } from '@inkline/inkline/components/INumberInput/examples/size-variants.js?raw';
+import { default as INumberInputSizeVariantsExampleJS } from '@inkline/inkline/components/INumberInput/examples/size-variants.mjs?raw';
 import { default as INumberInputStepSizeExampleHTML } from '@inkline/inkline/components/INumberInput/examples/step-size.html?raw';
-import { default as INumberInputStepSizeExampleJS } from '@inkline/inkline/components/INumberInput/examples/step-size.js?raw';
+import { default as INumberInputStepSizeExampleJS } from '@inkline/inkline/components/INumberInput/examples/step-size.mjs?raw';
 import { default as INumberInputPrependAppendTextExampleHTML } from '@inkline/inkline/components/INumberInput/examples/prepend-append-text.html?raw';
-import { default as INumberInputPrependAppendTextExampleJS } from '@inkline/inkline/components/INumberInput/examples/prepend-append-text.js?raw';
+import { default as INumberInputPrependAppendTextExampleJS } from '@inkline/inkline/components/INumberInput/examples/prepend-append-text.mjs?raw';
 import { default as INumberInputPrependAppendButtonExampleHTML } from '@inkline/inkline/components/INumberInput/examples/prepend-append-button.html?raw';
-import { default as INumberInputPrependAppendButtonExampleJS } from '@inkline/inkline/components/INumberInput/examples/prepend-append-button.js?raw';
+import { default as INumberInputPrependAppendButtonExampleJS } from '@inkline/inkline/components/INumberInput/examples/prepend-append-button.mjs?raw';
 import { default as INumberInputPrependAppendDropdownExampleHTML } from '@inkline/inkline/components/INumberInput/examples/prepend-append-dropdown.html?raw';
-import { default as INumberInputPrependAppendDropdownExampleJS } from '@inkline/inkline/components/INumberInput/examples/prepend-append-dropdown.js?raw';
+import { default as INumberInputPrependAppendDropdownExampleJS } from '@inkline/inkline/components/INumberInput/examples/prepend-append-dropdown.mjs?raw';
 import { default as INumberInputPrefixSuffixExampleHTML } from '@inkline/inkline/components/INumberInput/examples/prefix-suffix.html?raw';
-import { default as INumberInputPrefixSuffixExampleJS } from '@inkline/inkline/components/INumberInput/examples/prefix-suffix.js?raw';
+import { default as INumberInputPrefixSuffixExampleJS } from '@inkline/inkline/components/INumberInput/examples/prefix-suffix.mjs?raw';
 </script>
 
 # Number Input

@@ -4,7 +4,7 @@ description: Collapsible elements are used to show and hide content using a smoo
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ICollapsible/manifest';
+import { manifest } from '@inkline/inkline/components/ICollapsible/manifest.mjs';
 import {
     ICollapsibleAccordionExample,
     ICollapsibleBasicExample,
@@ -12,12 +12,12 @@ import {
     ICollapsibleDefaultOpenExample,
     ICollapsibleHeaderExample,
     ICollapsibleSizeVariantsExample
-} from '@inkline/inkline/components/ICollapsible/examples';
+} from '@inkline/inkline/components/ICollapsible/examples/index.mjs';
 import { default as ICollapsibleAccordionExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/accordion.html?raw';
 import { default as ICollapsibleBasicExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/basic.html?raw';
 import { default as ICollapsibleColorVariantsExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/color-variants.html?raw';
 import { default as ICollapsibleDefaultOpenExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/default-open.html?raw';
-import { default as ICollapsibleDefaultOpenExampleJS } from '@inkline/inkline/components/ICollapsible/examples/default-open.js?raw';
+import { default as ICollapsibleDefaultOpenExampleJS } from '@inkline/inkline/components/ICollapsible/examples/default-open.mjs?raw';
 import { default as ICollapsibleHeaderExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/header.html?raw';
 import { default as ICollapsibleSizeVariantsExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/size-variants.html?raw';
 </script>

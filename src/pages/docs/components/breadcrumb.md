@@ -4,20 +4,20 @@ description: Indicate the current page’s location depth using a navigation lis
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IBreadcrumb/manifest';
+import { manifest } from '@inkline/inkline/components/IBreadcrumb/manifest.mjs';
 import {
     IBreadcrumbBasicExample,
     IBreadcrumbColorVariantsExample,
     IBreadcrumbRoutingExample,
     IBreadcrumbSizeVariantsExample,
     IBreadcrumbDynamicallyGeneratedExample
-} from '@inkline/inkline/components/IBreadcrumb/examples';
+} from '@inkline/inkline/components/IBreadcrumb/examples/index.mjs';
 import { default as IBreadcrumbBasicExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/basic.html?raw';
 import { default as IBreadcrumbColorVariantsExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/color-variants.html?raw';
 import { default as IBreadcrumbRoutingExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/routing.html?raw';
 import { default as IBreadcrumbSizeVariantsExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/size-variants.html?raw';
 import { default as IBreadcrumbDynamicallyGeneratedExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.html?raw';
-import { default as IBreadcrumbDynamicallyGeneratedExampleJS } from '@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.js?raw';
+import { default as IBreadcrumbDynamicallyGeneratedExampleJS } from '@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.mjs?raw';
 </script>
 
 # Breadcrumb

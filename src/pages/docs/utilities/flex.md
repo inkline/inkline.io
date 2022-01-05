@@ -19,8 +19,7 @@ import {
     FlexJustifyContentExample,
     FlexMarginAutoExample,
     FlexOrderExample
-} from '@inkline/inkline/stories/utilities/flex';
-
+} from '@inkline/inkline/stories/utilities/flex/index.mjs';
 import { default as FlexAlignContentExampleHTML } from '@inkline/inkline/stories/utilities/flex/align-content.html?raw';
 import { default as FlexAlignItemsExampleHTML } from '@inkline/inkline/stories/utilities/flex/align-items.html?raw';
 import { default as FlexAlignSelfExampleHTML } from '@inkline/inkline/stories/utilities/flex/align-self.html?raw';

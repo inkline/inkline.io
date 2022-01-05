@@ -6,9 +6,9 @@ description: The select component easily supports complex scenarios, with asynch
 <script setup>
 import {
     ISelectAdvancedExample
-} from '@inkline/inkline/components/ISelect/examples';
+} from '@inkline/inkline/components/ISelect/examples/index.mjs';
 import { default as ISelectAdvancedExampleHTML } from '@inkline/inkline/components/ISelect/examples/advanced.html?raw';
-import { default as ISelectAdvancedExampleJS } from '@inkline/inkline/components/ISelect/examples/advanced.js?raw';
+import { default as ISelectAdvancedExampleJS } from '@inkline/inkline/components/ISelect/examples/advanced.mjs?raw';
 </script>
 
 

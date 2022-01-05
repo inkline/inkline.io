@@ -4,7 +4,7 @@ description: Dropdowns are contextual overlays toggled through clicking or hover
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IDropdown/manifest';
+import { manifest } from '@inkline/inkline/components/IDropdown/manifest.mjs';
 import {
     IDropdownBasicExample,
     IDropdownColorVariantsExample,
@@ -16,7 +16,7 @@ import {
     IDropdownRoutingExample,
     IDropdownStateActiveExample,
     IDropdownTriggerExample
-} from '@inkline/inkline/components/IDropdown/examples';
+} from '@inkline/inkline/components/IDropdown/examples/index.mjs';
 import { default as IDropdownBasicExampleHTML } from '@inkline/inkline/components/IDropdown/examples/basic.html?raw';
 import { default as IDropdownColorVariantsExampleHTML } from '@inkline/inkline/components/IDropdown/examples/color-variants.html?raw';
 import { default as IDropdownHeaderFooterExampleHTML } from '@inkline/inkline/components/IDropdown/examples/header-footer.html?raw';
@@ -27,7 +27,7 @@ import { default as IDropdownPlacementExampleHTML } from '@inkline/inkline/compo
 import { default as IDropdownRoutingExampleHTML } from '@inkline/inkline/components/IDropdown/examples/routing.html?raw';
 import { default as IDropdownStateActiveExampleHTML } from '@inkline/inkline/components/IDropdown/examples/state-active.html?raw';
 import { default as IDropdownTriggerExampleHTML } from '@inkline/inkline/components/IDropdown/examples/trigger.html?raw';
-import { default as IDropdownTriggerExampleJS } from '@inkline/inkline/components/IDropdown/examples/trigger.js?raw';
+import { default as IDropdownTriggerExampleJS } from '@inkline/inkline/components/IDropdown/examples/trigger.mjs?raw';
 </script>
 
 # Dropdown

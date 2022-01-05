@@ -4,11 +4,11 @@ description: Build basic layouts using Inkline's built-in layout components.
 ---
 
 <script setup>
-import { manifest as layoutManifest } from '@inkline/inkline/components/ILayout/manifest';
-import { manifest as layoutHeaderManifest } from '@inkline/inkline/components/ILayout/components/ILayoutHeader/manifest';
-import { manifest as layoutContentManifest } from '@inkline/inkline/components/ILayout/components/ILayoutContent/manifest';
-import { manifest as layoutAsideManifest } from '@inkline/inkline/components/ILayout/components/ILayoutAside/manifest';
-import { manifest as layoutFooterManifest } from '@inkline/inkline/components/ILayout/components/ILayoutFooter/manifest';
+import { manifest as layoutManifest } from '@inkline/inkline/components/ILayout/manifest.mjs';
+import { manifest as layoutHeaderManifest } from '@inkline/inkline/components/ILayout/components/ILayoutHeader/manifest.mjs';
+import { manifest as layoutContentManifest } from '@inkline/inkline/components/ILayout/components/ILayoutContent/manifest.mjs';
+import { manifest as layoutAsideManifest } from '@inkline/inkline/components/ILayout/components/ILayoutAside/manifest.mjs';
+import { manifest as layoutFooterManifest } from '@inkline/inkline/components/ILayout/components/ILayoutFooter/manifest.mjs';
 import {
     ILayoutBasicExample,
     ILayoutContentHeaderExample,
@@ -19,7 +19,7 @@ import {
     ILayoutLeftAndRightAsidesWithContentHeaderFooterExample,
     ILayoutLeftAsideWithContentHeaderFooterExample,
     ILayoutRightAsideWithContentHeaderFooterExample
-} from '@inkline/inkline/components/ILayout/examples';
+} from '@inkline/inkline/components/ILayout/examples/index.mjs';
 import { default as ILayoutBasicExampleHTML } from '@inkline/inkline/components/ILayout/examples/basic.html?raw';
 import { default as ILayoutContentHeaderExampleHTML } from '@inkline/inkline/components/ILayout/examples/content-header.html?raw';
 import { default as ILayoutContentHeaderFooterExampleHTML } from '@inkline/inkline/components/ILayout/examples/content-header-footer.html?raw';

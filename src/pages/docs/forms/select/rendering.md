@@ -8,13 +8,13 @@ import {
     ISelectRenderingRenderFunctionExample,
     ISelectRenderingValueByPathExample,
     ISelectRenderingScopedSlotExample
-} from '@inkline/inkline/components/ISelect/examples';
+} from '@inkline/inkline/components/ISelect/examples/index.mjs';
 import { default as ISelectRenderingRenderFunctionExampleHTML } from '@inkline/inkline/components/ISelect/examples/rendering-render-function.html?raw';
-import { default as ISelectRenderingRenderFunctionExampleJS } from '@inkline/inkline/components/ISelect/examples/rendering-render-function.js?raw';
+import { default as ISelectRenderingRenderFunctionExampleJS } from '@inkline/inkline/components/ISelect/examples/rendering-render-function.mjs?raw';
 import { default as ISelectRenderingValueByPathExampleHTML } from '@inkline/inkline/components/ISelect/examples/rendering-value-by-path.html?raw';
-import { default as ISelectRenderingValueByPathExampleJS } from '@inkline/inkline/components/ISelect/examples/rendering-value-by-path.js?raw';
+import { default as ISelectRenderingValueByPathExampleJS } from '@inkline/inkline/components/ISelect/examples/rendering-value-by-path.mjs?raw';
 import { default as ISelectRenderingScopedSlotExampleHTML } from '@inkline/inkline/components/ISelect/examples/rendering-scoped-slot.html?raw';
-import { default as ISelectRenderingScopedSlotExampleJS } from '@inkline/inkline/components/ISelect/examples/rendering-scoped-slot.js?raw';
+import { default as ISelectRenderingScopedSlotExampleJS } from '@inkline/inkline/components/ISelect/examples/rendering-scoped-slot.mjs?raw';
 </script>
 
 

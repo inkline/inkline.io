@@ -393,7 +393,7 @@ export default defineComponent({
                 <li class="-active">
                     <router-link :to="{ name: 'docs-introduction' }">
                         <i-badge color="primary">
-                            <i-icon name="fas-book" size="sm" />
+                            <icon-fa-solid-book size="sm" />
                         </i-badge>
                         <span>Documentation</span>
                     </router-link>
@@ -401,7 +401,7 @@ export default defineComponent({
                 <li>
                     <a href="https://jsfiddle.net/alexgrozav/0dknfs6L/" target="_blank">
                         <i-badge color="secondary">
-                            <i-icon name="fas-code" size="sm" />
+                            <icon-fa-solid-code />
                         </i-badge>
                         <span>Playground</span>
                     </a>
@@ -417,7 +417,7 @@ export default defineComponent({
                 <li>
                     <a href="https://github.com/inkline/inkline/discussions" target="_blank">
                         <i-badge color="dark">
-                            <i-icon name="fas-comments" size="sm" />
+                            <icon-fa-solid-comments />
                         </i-badge>
                         <span>Community</span>
                     </a>

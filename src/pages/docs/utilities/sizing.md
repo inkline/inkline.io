@@ -9,7 +9,7 @@ import {
     SizingMaxHeightExample,
     SizingMaxWidthExample,
     SizingWidthExample
-} from '@inkline/inkline/stories/utilities/sizing';
+} from '@inkline/inkline/stories/utilities/sizing/index.mjs';
 import { default as SizingHeightExampleHTML } from '@inkline/inkline/stories/utilities/sizing/height.html?raw';
 import { default as SizingMaxHeightExampleHTML } from '@inkline/inkline/stories/utilities/sizing/max-height.html?raw';
 import { default as SizingMaxWidthExampleHTML } from '@inkline/inkline/stories/utilities/sizing/max-width.html?raw';

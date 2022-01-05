@@ -4,24 +4,24 @@ description: Toggles are boolean form components used for easily enabling or dis
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IToggle/manifest';
+import { manifest } from '@inkline/inkline/components/IToggle/manifest.mjs';
 import {
     IToggleBasicExample,
     IToggleColorVariantsExample,
     IToggleDisabledExample,
     IToggleReadonlyExample,
     IToggleSizeVariantsExample
-} from '@inkline/inkline/components/IToggle/examples';
+} from '@inkline/inkline/components/IToggle/examples/index.mjs';
 import { default as IToggleBasicExampleHTML } from '@inkline/inkline/components/IToggle/examples/basic.html?raw';
-import { default as IToggleBasicExampleJS } from '@inkline/inkline/components/IToggle/examples/basic.js?raw';
+import { default as IToggleBasicExampleJS } from '@inkline/inkline/components/IToggle/examples/basic.mjs?raw';
 import { default as IToggleColorVariantsExampleHTML } from '@inkline/inkline/components/IToggle/examples/color-variants.html?raw';
-import { default as IToggleColorVariantsExampleJS } from '@inkline/inkline/components/IToggle/examples/color-variants.js?raw';
+import { default as IToggleColorVariantsExampleJS } from '@inkline/inkline/components/IToggle/examples/color-variants.mjs?raw';
 import { default as IToggleDisabledExampleHTML } from '@inkline/inkline/components/IToggle/examples/disabled.html?raw';
-import { default as IToggleDisabledExampleJS } from '@inkline/inkline/components/IToggle/examples/disabled.js?raw';
+import { default as IToggleDisabledExampleJS } from '@inkline/inkline/components/IToggle/examples/disabled.mjs?raw';
 import { default as IToggleReadonlyExampleHTML } from '@inkline/inkline/components/IToggle/examples/readonly.html?raw';
-import { default as IToggleReadonlyExampleJS } from '@inkline/inkline/components/IToggle/examples/readonly.js?raw';
+import { default as IToggleReadonlyExampleJS } from '@inkline/inkline/components/IToggle/examples/readonly.mjs?raw';
 import { default as IToggleSizeVariantsExampleHTML } from '@inkline/inkline/components/IToggle/examples/size-variants.html?raw';
-import { default as IToggleSizeVariantsExampleJS } from '@inkline/inkline/components/IToggle/examples/size-variants.js?raw';
+import { default as IToggleSizeVariantsExampleJS } from '@inkline/inkline/components/IToggle/examples/size-variants.mjs?raw';
 </script>
 
 # Toggle

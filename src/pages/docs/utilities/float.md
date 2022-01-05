@@ -7,7 +7,7 @@ description: You can use the float utility on any element, for any breakpoint.
 import {
     FloatBasicExample,
     FloatResponsiveExample
-} from '@inkline/inkline/stories/utilities/float';
+} from '@inkline/inkline/stories/utilities/float/index.mjs';
 import { default as FloatBasicExampleHTML } from '@inkline/inkline/stories/utilities/float/basic.html?raw';
 import { default as FloatResponsiveExampleHTML } from '@inkline/inkline/stories/utilities/float/responsive.html?raw';
 </script>

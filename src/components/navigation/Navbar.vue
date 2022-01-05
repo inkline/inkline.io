@@ -63,14 +63,14 @@ export default defineComponent({
                     <span>{{ t('navbar.documentation') }}</span>
                 </i-nav-item>
                 <i-nav-item @click="setColorMode">
-                    <i-icon v-if="colorMode === 'dark'" name="fas-sun" />
-                    <i-icon v-else name="fas-moon" />
+                    <icon-fa-solid-sun v-if="colorMode === 'dark'" />
+                    <icon-fa-solid-moon v-else />
                     <span class="_visually-hidden">
                         <span>{{ t('navbar.colorMode') }}</span>
                     </span>
                 </i-nav-item>
                 <i-nav-item href="https://github.com/inkline/inkline" rel="noopener">
-                    <i-icon name="fab-github" />
+                    <icon-fa-brands-github />
                     <span class="_visually-hidden">
                         GitHub
                     </span>
@@ -108,6 +108,7 @@ export default defineComponent({
             ----border-radius: var(--border-radius);
             background: transparent;
             cursor: pointer;
+            display: inline-flex;
         }
     }
 

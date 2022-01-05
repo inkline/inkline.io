@@ -7,7 +7,7 @@ description: Make an element overlay its container by adding overlay utilities.
 import {
     OverlayBasicExample,
     OverlayLinkExample
-} from '@inkline/inkline/stories/utilities/overlay';
+} from '@inkline/inkline/stories/utilities/overlay/index.mjs';
 import { default as OverlayBasicExampleHTML } from '@inkline/inkline/stories/utilities/overlay/basic.html?raw';
 import { default as OverlayLinkExampleHTML } from '@inkline/inkline/stories/utilities/overlay/link.html?raw';
 </script>

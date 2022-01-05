@@ -4,20 +4,20 @@ description: Popovers are useful for conveying information when an user clicks a
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IPopover/manifest';
+import { manifest } from '@inkline/inkline/components/IPopover/manifest.mjs';
 import {
     IPopoverBasicExample,
     IPopoverColorVariantsExample,
     IPopoverSizeVariantsExample,
     IPopoverPlacementExample,
     IPopoverTriggerExample
-} from '@inkline/inkline/components/IPopover/examples';
+} from '@inkline/inkline/components/IPopover/examples/index.mjs';
 import { default as IPopoverBasicExampleHTML } from '@inkline/inkline/components/IPopover/examples/basic.html?raw';
 import { default as IPopoverColorVariantsExampleHTML } from '@inkline/inkline/components/IPopover/examples/color-variants.html?raw';
 import { default as IPopoverSizeVariantsExampleHTML } from '@inkline/inkline/components/IPopover/examples/size-variants.html?raw';
 import { default as IPopoverPlacementExampleHTML } from '@inkline/inkline/components/IPopover/examples/placement.html?raw';
 import { default as IPopoverTriggerExampleHTML } from '@inkline/inkline/components/IPopover/examples/trigger.html?raw';
-import { default as IPopoverTriggerExampleJS } from '@inkline/inkline/components/IPopover/examples/trigger.js?raw';
+import { default as IPopoverTriggerExampleJS } from '@inkline/inkline/components/IPopover/examples/trigger.mjs?raw';
 </script>
 
 # Popover

@@ -42,7 +42,7 @@ export default defineComponent({
                             {{ t('index.header.button') }}
                         </i-button>
                         <i-button id="github-button" aria-label="GitHub" size="lg" href="https://github.com/inkline/inkline" rel="noopener">
-                            <i-icon name="fab-github" class="_margin-right:1/2" />
+                            <icon-fa-brands-github class="_margin-right:1/2" />
                             <span>GitHub</span>
                         </i-button>
                     </div>
@@ -96,7 +96,7 @@ $navbar-height: 72px;
         min-width: 180px;
         font-size: heading-font-size('h4');
 
-        @include i-icon() {
+        svg {
             height: heading-font-size('h4');
         }
     }
@@ -185,7 +185,7 @@ $navbar-height: 72px;
         }
 
         #github-button {
-            @include i-icon() {
+            svg {
                 margin-right: 0 !important;
             }
 

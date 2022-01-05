@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue';
 import logoWhite from '~/assets/images/brands/osawards-white.svg';
 import logoBlack from '~/assets/images/brands/osawards-black.svg';
-import { colorVariantClass } from '@inkline/inkline/mixins';
+import { colorVariantClass } from '@inkline/inkline';
 
 export default defineComponent({
     props: {

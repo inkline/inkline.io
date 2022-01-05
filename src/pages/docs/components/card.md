@@ -4,7 +4,7 @@ description: Cards provide you with a flexible and extensible content container 
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ICard/manifest';
+import { manifest } from '@inkline/inkline/components/ICard/manifest.mjs';
 import {
     ICardBasicExample,
     ICardBodyExample,
@@ -12,7 +12,7 @@ import {
     ICardColorVariantsExample,
     ICardImageExample,
     ICardSizeVariantsExample
-} from '@inkline/inkline/components/ICard/examples';
+} from '@inkline/inkline/components/ICard/examples/index.mjs';
 import { default as ICardBasicExampleHTML } from '@inkline/inkline/components/ICard/examples/basic.html?raw';
 import { default as ICardBodyExampleHTML } from '@inkline/inkline/components/ICard/examples/card-body.html?raw';
 import { default as ICardHeaderFooterExampleHTML } from '@inkline/inkline/components/ICard/examples/card-header-footer.html?raw';

@@ -4,7 +4,7 @@ description: List groups are flexible components used for displaying a list of r
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IListGroup/manifest';
+import { manifest } from '@inkline/inkline/components/IListGroup/manifest.mjs';
 import {
     IListGroupBasicExample,
     IListGroupBorderlessExample,
@@ -13,7 +13,7 @@ import {
     IListGroupSizeVariantsExample,
     IListGroupStateActiveExample,
     IListGroupStateDisabledExample
-} from '@inkline/inkline/components/IListGroup/examples';
+} from '@inkline/inkline/components/IListGroup/examples/index.mjs';
 import { default as IListGroupBasicExampleHTML } from '@inkline/inkline/components/IListGroup/examples/basic.html?raw';
 import { default as IListGroupBorderlessExampleHTML } from '@inkline/inkline/components/IListGroup/examples/borderless.html?raw';
 import { default as IListGroupContentExampleHTML } from '@inkline/inkline/components/IListGroup/examples/content.html?raw';

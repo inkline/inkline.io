@@ -107,7 +107,7 @@ export default defineComponent({
                 </i-tab>
                 <i-button class="clipboard" size="sm" @click="copyToClipboard">
                     <i-icon v-if="copied" name="ink-check" class="_text:success" />
-                    <i-icon v-else name="far-clone" />
+                    <icon-fa-regular-clone v-else />
                 </i-button>
             </i-tabs>
         </template>

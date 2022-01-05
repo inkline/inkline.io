@@ -14,7 +14,7 @@ import {
     ImagesPolaroidExample,
     ImagesResponsiveExample,
     ImagesThumbnailExample
-} from '@inkline/inkline/stories/core/images';
+} from '@inkline/inkline/stories/core/images/index.mjs';
 import { default as ImagesAlignmentCenterExampleHTML } from '@inkline/inkline/stories/core/images/alignment-center.html?raw';
 import { default as ImagesAlignmentLeftExampleHTML } from '@inkline/inkline/stories/core/images/alignment-left.html?raw';
 import { default as ImagesAlignmentMarginAutoExampleHTML } from '@inkline/inkline/stories/core/images/alignment-margin-auto.html?raw';

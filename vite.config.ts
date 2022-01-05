@@ -3,11 +3,13 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import pages from 'vite-plugin-pages';
 import layouts from 'vite-plugin-vue-layouts';
-import components from 'unplugin-vue-components/vite';
 import markdown from 'vite-plugin-md';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 import { imagetools } from 'vite-imagetools'
 import i18n from '@intlify/vite-plugin-vue-i18n';
+import icons from 'unplugin-icons/vite';
+import iconsResolver from 'unplugin-icons/resolver';
+import components from 'unplugin-vue-components/vite';
 
 import markdownPrism from 'markdown-it-prism';
 // @ts-expect-error missing types
@@ -59,12 +61,17 @@ export default defineConfig({
         layouts(),
 
         /**
-         * @docs https://github.com/antfu/vite-plugin-components
+         * @docs https://github.com/antfu/unplugin-vue-components
          */
         components({
             extensions: ['vue', 'md'],
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-            dts: 'src/components.d.ts'
+            dts: true,
+            resolvers: [
+                iconsResolver({
+                    prefix: 'icon'
+                })
+            ]
         }),
 
         /**
@@ -141,6 +148,13 @@ export default defineConfig({
             defaultDirectives: (): URLSearchParams => {
                 return new URLSearchParams('quality=80');
             }
+        }),
+
+        /**
+         * @docs https://github.com/antfu/unplugin-icons
+         */
+        icons({
+            prefix: 'icon'
         })
     ],
 
@@ -158,7 +172,8 @@ export default defineConfig({
      */
     ssgOptions: {
         script: 'async',
-        formatting: 'minify'
+        formatting: 'minify',
+        format: 'esm'
     },
 
     /**
@@ -170,7 +185,6 @@ export default defineConfig({
             'vue-router',
             '@vueuse/core',
             '@inkline/inkline',
-            '@inkline/icons',
             '@popperjs/core'
         ],
         exclude: [

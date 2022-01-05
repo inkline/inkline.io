@@ -9,15 +9,15 @@
         <p>Free forever and always improving. Perfect for individuals and businesses of any size.</p>
         <ul class="list -unstyled">
             <li>
-                <i-icon name="fas-check-circle" class="_text:success _margin-right:1/2" />
+                <icon-fa-solid-check-circle class="_text:success _margin-right:1/2" />
                 <span>Easy to use</span>
             </li>
             <li>
-                <i-icon name="fas-check-circle" class="_text:success _margin-right:1/2" />
+                <icon-fa-solid-check-circle class="_text:success _margin-right:1/2" />
                 <span>Monthly updates</span>
             </li>
             <li>
-                <i-icon name="fas-check-circle" class="_text:success _margin-right:1/2" />
+                <icon-fa-solid-check-circle class="_text:success _margin-right:1/2" />
                 <strong>Free for a lifetime.</strong>
             </li>
         </ul>

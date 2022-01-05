@@ -5,16 +5,13 @@ description: Inkline provides you with powerful form validation utilities.
 
 <script setup>
 import {
-    IFormValidationBasicExample,
     IFormValidationBasicBindingExample,
     IFormValidationBasicValidatorsExample
-} from '@inkline/inkline/stories/forms/validation';
-import { default as IFormValidationBasicExampleHTML } from '@inkline/inkline/stories/forms/validation/basic.html?raw';
-import { default as IFormValidationBasicExampleJS } from '@inkline/inkline/stories/forms/validation/basic.js?raw';
+} from '@inkline/inkline/stories/forms/validation/index.mjs';
 import { default as IFormValidationBasicBindingExampleHTML } from '@inkline/inkline/stories/forms/validation/basic-binding.html?raw';
-import { default as IFormValidationBasicBindingExampleJS } from '@inkline/inkline/stories/forms/validation/basic-binding.js?raw';
+import { default as IFormValidationBasicBindingExampleJS } from '@inkline/inkline/stories/forms/validation/basic-binding.mjs?raw';
 import { default as IFormValidationBasicValidatorsExampleHTML } from '@inkline/inkline/stories/forms/validation/basic-validators.html?raw';
-import { default as IFormValidationBasicValidatorsExampleJS } from '@inkline/inkline/stories/forms/validation/basic-validators.js?raw';
+import { default as IFormValidationBasicValidatorsExampleJS } from '@inkline/inkline/stories/forms/validation/basic-validators.mjs?raw';
 </script>
 
 # Form Validation

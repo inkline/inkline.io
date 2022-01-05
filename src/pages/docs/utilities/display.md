@@ -7,7 +7,7 @@ description: Change the display style of components responsively with display ut
 import {
     DisplayBlockExample,
     DisplayInlineExample
-} from '@inkline/inkline/stories/utilities/display';
+} from '@inkline/inkline/stories/utilities/display/index.mjs';
 import { default as DisplayBlockExampleHTML } from '@inkline/inkline/stories/utilities/display/block.html?raw';
 import { default as DisplayInlineExampleHTML } from '@inkline/inkline/stories/utilities/display/inline.html?raw';
 </script>

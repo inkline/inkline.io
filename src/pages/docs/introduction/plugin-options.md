@@ -39,29 +39,6 @@ app.use(Inkline, {
     
     Register components globally during plugin installation.
 
-##### icons
-- **Type**: `object`
-- **Default**: `{}`
-- **Usage**: 
-
-    ~~~js
-    import * as inklineIcons from '@inkline/icons/packs/inkline';
-    import { fasCircle } from '@inkline/icons/packs/fontawesome';
-
-    app.use(Inkline, {
-        icons: {
-            ...inklineIcons,
-            fasCircle
-        }
-    });
-    ~~~
-    
-    Register icons to be available within the `<i-icon>` component.
-
-    ~~~html
-    <i-icon name="fas-circle" />
-    ~~~
-
 ##### colorMode
 - **Type**: `'system' | 'light' | 'dark' | string`
 - **Default**: `'system'`

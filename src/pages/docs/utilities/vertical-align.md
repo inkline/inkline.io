@@ -7,7 +7,7 @@ description: Change the vertical alignment of inline, inline block, inline table
 import {
     VerticalAlignBasicExample,
     VerticalAlignTableExample
-} from '@inkline/inkline/stories/utilities/vertical-align';
+} from '@inkline/inkline/stories/utilities/vertical-align/index.mjs';
 import { default as VerticalAlignBasicExampleHTML } from '@inkline/inkline/stories/utilities/vertical-align/basic.html?raw';
 import { default as VerticalAlignTableExampleHTML } from '@inkline/inkline/stories/utilities/vertical-align/table.html?raw';
 </script>

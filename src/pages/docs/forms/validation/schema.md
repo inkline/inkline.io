@@ -11,19 +11,19 @@ import {
     IFormValidationSchemaErrorVisibilityExample,
     IFormValidationSchemaGroupsObjectExample,
     IFormValidationSchemaGroupsArrayExample
-} from '@inkline/inkline/stories/forms/validation/schema';
+} from '@inkline/inkline/stories/forms/validation/schema/index.mjs';
 import { default as IFormValidationSchemaDefaultValueExampleHTML } from '@inkline/inkline/stories/forms/validation/schema/default-value.html?raw';
-import { default as IFormValidationSchemaDefaultValueExampleJS } from '@inkline/inkline/stories/forms/validation/schema/default-value.js?raw';
+import { default as IFormValidationSchemaDefaultValueExampleJS } from '@inkline/inkline/stories/forms/validation/schema/default-value.mjs?raw';
 import { default as IFormValidationSchemaValidationMessageExampleHTML } from '@inkline/inkline/stories/forms/validation/schema/validation-message.html?raw';
-import { default as IFormValidationSchemaValidationMessageExampleJS } from '@inkline/inkline/stories/forms/validation/schema/validation-message.js?raw';
+import { default as IFormValidationSchemaValidationMessageExampleJS } from '@inkline/inkline/stories/forms/validation/schema/validation-message.mjs?raw';
 import { default as IFormValidationSchemaValidationEventExampleHTML } from '@inkline/inkline/stories/forms/validation/schema/validation-event.html?raw';
-import { default as IFormValidationSchemaValidationEventExampleJS } from '@inkline/inkline/stories/forms/validation/schema/validation-event.js?raw';
+import { default as IFormValidationSchemaValidationEventExampleJS } from '@inkline/inkline/stories/forms/validation/schema/validation-event.mjs?raw';
 import { default as IFormValidationSchemaErrorVisibilityExampleHTML } from '@inkline/inkline/stories/forms/validation/schema/error-visibility.html?raw';
-import { default as IFormValidationSchemaErrorVisibilityExampleJS } from '@inkline/inkline/stories/forms/validation/schema/error-visibility.js?raw';
+import { default as IFormValidationSchemaErrorVisibilityExampleJS } from '@inkline/inkline/stories/forms/validation/schema/error-visibility.mjs?raw';
 import { default as IFormValidationSchemaGroupsObjectExampleHTML } from '@inkline/inkline/stories/forms/validation/schema/groups-object.html?raw';
-import { default as IFormValidationSchemaGroupsObjectExampleJS } from '@inkline/inkline/stories/forms/validation/schema/groups-object.js?raw';
+import { default as IFormValidationSchemaGroupsObjectExampleJS } from '@inkline/inkline/stories/forms/validation/schema/groups-object.mjs?raw';
 import { default as IFormValidationSchemaGroupsArrayExampleHTML } from '@inkline/inkline/stories/forms/validation/schema/groups-array.html?raw';
-import { default as IFormValidationSchemaGroupsArrayExampleJS } from '@inkline/inkline/stories/forms/validation/schema/groups-array.js?raw';
+import { default as IFormValidationSchemaGroupsArrayExampleJS } from '@inkline/inkline/stories/forms/validation/schema/groups-array.mjs?raw';
 </script>
 
 # Form Validation Schema

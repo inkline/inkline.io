@@ -4,14 +4,14 @@ description: Provide a loading state for a component or page using a customizabl
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ILoader/manifest';
+import { manifest } from '@inkline/inkline/components/ILoader/manifest.mjs';
 import {
     ILoaderBasicExample,
     ILoaderColorVariantsExample,
     ILoaderSizeAutoExample,
     ILoaderSizeVariantsExample,
     ILoaderTextExample
-} from '@inkline/inkline/components/ILoader/examples';
+} from '@inkline/inkline/components/ILoader/examples/index.mjs';
 import { default as ILoaderBasicExampleHTML } from '@inkline/inkline/components/ILoader/examples/basic.html?raw';
 import { default as ILoaderColorVariantsExampleHTML } from '@inkline/inkline/components/ILoader/examples/color-variants.html?raw';
 import { default as ILoaderSizeAutoExampleHTML } from '@inkline/inkline/components/ILoader/examples/size-auto.html?raw';

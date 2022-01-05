@@ -23,7 +23,8 @@
         }
     }
 
-    .card-body > .inkline-icon {
+    .card-body > .inkline-icon,
+    .card-body > svg {
         margin-left: auto;
         transform: rotate(-90deg);
         transition: transform var(--transition-duration) var(--transition-easing);
@@ -43,7 +44,8 @@
             }
         }
 
-        .card-body > .inkline-icon {
+        .card-body > .inkline-icon,
+        .card-body > svg {
             transform: rotate(-90deg) translateY(-16px);
         }
     }

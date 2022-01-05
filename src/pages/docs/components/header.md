@@ -4,14 +4,14 @@ description: A lightweight, responsive header component used for showcasing hero
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IHeader/manifest';
+import { manifest } from '@inkline/inkline/components/IHeader/manifest.mjs';
 import {
     IHeaderBasicExample,
     IHeaderColorVariantsExample,
     IHeaderCoverExample,
     IHeaderFullscreenExample,
     IHeaderSizeVariantsExample
-} from '@inkline/inkline/components/IHeader/examples';
+} from '@inkline/inkline/components/IHeader/examples/index.mjs';
 import { default as IHeaderBasicExampleHTML } from '@inkline/inkline/components/IHeader/examples/basic.html?raw';
 import { default as IHeaderColorVariantsExampleHTML } from '@inkline/inkline/components/IHeader/examples/color-variants.html?raw';
 import { default as IHeaderCoverExampleHTML } from '@inkline/inkline/components/IHeader/examples/cover.html?raw';

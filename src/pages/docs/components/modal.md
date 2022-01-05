@@ -4,18 +4,18 @@ description: Modals are dialogs that can be used for user notifications, lightbo
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IModal/manifest';
+import { manifest } from '@inkline/inkline/components/IModal/manifest.mjs';
 import {
     IModalBasicExample,
     IModalColorVariantsExample,
     IModalSizeVariantsExample
-} from '@inkline/inkline/components/IModal/examples';
+} from '@inkline/inkline/components/IModal/examples/index.mjs';
 import { default as IModalBasicExampleHTML } from '@inkline/inkline/components/IModal/examples/basic.html?raw';
-import { default as IModalBasicExampleJS } from '@inkline/inkline/components/IModal/examples/basic.js?raw';
+import { default as IModalBasicExampleJS } from '@inkline/inkline/components/IModal/examples/basic.mjs?raw';
 import { default as IModalColorVariantsExampleHTML } from '@inkline/inkline/components/IModal/examples/color-variants.html?raw';
-import { default as IModalColorVariantsExampleJS } from '@inkline/inkline/components/IModal/examples/color-variants.js?raw';
+import { default as IModalColorVariantsExampleJS } from '@inkline/inkline/components/IModal/examples/color-variants.mjs?raw';
 import { default as IModalSizeVariantsExampleHTML } from '@inkline/inkline/components/IModal/examples/size-variants.html?raw';
-import { default as IModalSizeVariantsExampleJS } from '@inkline/inkline/components/IModal/examples/size-variants.js?raw';
+import { default as IModalSizeVariantsExampleJS } from '@inkline/inkline/components/IModal/examples/size-variants.mjs?raw';
 </script>
 
 

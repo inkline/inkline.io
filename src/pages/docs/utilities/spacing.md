@@ -10,7 +10,7 @@ import {
     SpacingLeftExample,
     SpacingRightExample,
     SpacingTopExample
-} from '@inkline/inkline/stories/utilities/spacing';
+} from '@inkline/inkline/stories/utilities/spacing/index.mjs';
 import { default as SpacingBottomExampleHTML } from '@inkline/inkline/stories/utilities/spacing/bottom.html?raw';
 import { default as SpacingHorizontalCenterExampleHTML } from '@inkline/inkline/stories/utilities/spacing/horizontal-center.html?raw';
 import { default as SpacingLeftExampleHTML } from '@inkline/inkline/stories/utilities/spacing/left.html?raw';

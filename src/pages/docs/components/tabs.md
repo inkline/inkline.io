@@ -4,21 +4,21 @@ description: Tab elements are used to switch between multiple sections of relate
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ITabs/manifest';
+import { manifest } from '@inkline/inkline/components/ITabs/manifest.mjs';
 import {
     ITabsBasicExample,
     ITabsColorVariantsExample,
     ITabsSizeVariantsExample,
     ITabsStretchExample
-} from '@inkline/inkline/components/ITabs/examples';
+} from '@inkline/inkline/components/ITabs/examples/index.mjs';
 import { default as ITabsBasicExampleHTML } from '@inkline/inkline/components/ITabs/examples/basic.html?raw';
-import { default as ITabsBasicExampleJS } from '@inkline/inkline/components/ITabs/examples/basic.js?raw';
+import { default as ITabsBasicExampleJS } from '@inkline/inkline/components/ITabs/examples/basic.mjs?raw';
 import { default as ITabsColorVariantsExampleHTML } from '@inkline/inkline/components/ITabs/examples/color-variants.html?raw';
-import { default as ITabsColorVariantsExampleJS } from '@inkline/inkline/components/ITabs/examples/color-variants.js?raw';
+import { default as ITabsColorVariantsExampleJS } from '@inkline/inkline/components/ITabs/examples/color-variants.mjs?raw';
 import { default as ITabsSizeVariantsExampleHTML } from '@inkline/inkline/components/ITabs/examples/size-variants.html?raw';
-import { default as ITabsSizeVariantsExampleJS } from '@inkline/inkline/components/ITabs/examples/size-variants.js?raw';
+import { default as ITabsSizeVariantsExampleJS } from '@inkline/inkline/components/ITabs/examples/size-variants.mjs?raw';
 import { default as ITabsStretchExampleHTML } from '@inkline/inkline/components/ITabs/examples/stretch.html?raw';
-import { default as ITabsStretchExampleJS } from '@inkline/inkline/components/ITabs/examples/stretch.js?raw';
+import { default as ITabsStretchExampleJS } from '@inkline/inkline/components/ITabs/examples/stretch.mjs?raw';
 </script>
 
 # Tabs

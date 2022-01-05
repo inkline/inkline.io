@@ -4,7 +4,7 @@ description: Checkbox inputs allow the user to select multiple options from a se
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ICheckbox/manifest';
+import { manifest } from '@inkline/inkline/components/ICheckbox/manifest.mjs';
 import {
     ICheckboxBasicExample,
     ICheckboxColorVariantsExample,
@@ -17,29 +17,29 @@ import {
     ICheckboxNativeExample,
     ICheckboxReadonlyExample,
     ICheckboxSizeVariantsExample
-} from '@inkline/inkline/components/ICheckbox/examples';
+} from '@inkline/inkline/components/ICheckbox/examples/index.mjs';
 import { default as ICheckboxBasicExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/basic.html?raw';
-import { default as ICheckboxBasicExampleJS } from '@inkline/inkline/components/ICheckbox/examples/basic.js?raw';
+import { default as ICheckboxBasicExampleJS } from '@inkline/inkline/components/ICheckbox/examples/basic.mjs?raw';
 import { default as ICheckboxColorVariantsExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/color-variants.html?raw';
-import { default as ICheckboxColorVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/color-variants.js?raw';
+import { default as ICheckboxColorVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/color-variants.mjs?raw';
 import { default as ICheckboxDisabledExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/disabled.html?raw';
-import { default as ICheckboxDisabledExampleJS } from '@inkline/inkline/components/ICheckbox/examples/disabled.js?raw';
+import { default as ICheckboxDisabledExampleJS } from '@inkline/inkline/components/ICheckbox/examples/disabled.mjs?raw';
 import { default as ICheckboxGroupExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/group.html?raw';
-import { default as ICheckboxGroupExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group.js?raw';
+import { default as ICheckboxGroupExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group.mjs?raw';
 import { default as ICheckboxGroupDisabledExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/group-disabled.html?raw';
-import { default as ICheckboxGroupDisabledExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group-disabled.js?raw';
+import { default as ICheckboxGroupDisabledExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group-disabled.mjs?raw';
 import { default as ICheckboxGroupSizeVariantsExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/group-size-variants.html?raw';
-import { default as ICheckboxGroupSizeVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group-size-variants.js?raw';
+import { default as ICheckboxGroupSizeVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group-size-variants.mjs?raw';
 import { default as ICheckboxGroupColorVariantsExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/group-color-variants.html?raw';
-import { default as ICheckboxGroupColorVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group-color-variants.js?raw';
+import { default as ICheckboxGroupColorVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/group-color-variants.mjs?raw';
 import { default as ICheckboxIndeterminateExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/indeterminate.html?raw';
-import { default as ICheckboxIndeterminateExampleJS } from '@inkline/inkline/components/ICheckbox/examples/indeterminate.js?raw';
+import { default as ICheckboxIndeterminateExampleJS } from '@inkline/inkline/components/ICheckbox/examples/indeterminate.mjs?raw';
 import { default as ICheckboxNativeExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/native.html?raw';
-import { default as ICheckboxNativeExampleJS } from '@inkline/inkline/components/ICheckbox/examples/native.js?raw';
+import { default as ICheckboxNativeExampleJS } from '@inkline/inkline/components/ICheckbox/examples/native.mjs?raw';
 import { default as ICheckboxReadonlyExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/readonly.html?raw';
-import { default as ICheckboxReadonlyExampleJS } from '@inkline/inkline/components/ICheckbox/examples/readonly.js?raw';
+import { default as ICheckboxReadonlyExampleJS } from '@inkline/inkline/components/ICheckbox/examples/readonly.mjs?raw';
 import { default as ICheckboxSizeVariantsExampleHTML } from '@inkline/inkline/components/ICheckbox/examples/size-variants.html?raw';
-import { default as ICheckboxSizeVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/size-variants.js?raw';
+import { default as ICheckboxSizeVariantsExampleJS } from '@inkline/inkline/components/ICheckbox/examples/size-variants.mjs?raw';
 </script>
 
 # Checkbox

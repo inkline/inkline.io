@@ -23,19 +23,19 @@ export default defineComponent({
                     <ul class="list -inline">
                         <li>
                             <a href="https://github.com/inkline/inkline" target="_blank" rel="noopener">
-                                <i-icon name="fab-github" />
+                                <icon-fa-brands-github />
                                 <span class="_visually-hidden">GitHub</span>
                             </a>
                         </li>
                         <li>
                             <a href="https://twitter.com/inkline" target="_blank" rel="noopener">
-                                <i-icon name="fab-twitter" />
+                                <icon-fa-brands-twitter />
                                 <span class="_visually-hidden">Twitter</span>
                             </a>
                         </li>
                         <li>
                             <a href="https://discord.gg/gzRpZysq" target="_blank" rel="noopener">
-                                <i-icon name="fab-discord" />
+                                <icon-fa-brands-discord />
                                 <span class="_visually-hidden">Discord</span>
                             </a>
                         </li>
@@ -43,9 +43,9 @@ export default defineComponent({
                 </i-column>
             </i-row>
             <i-row class="lead">
-                <i-column>
+                <i-column center>
                     Designed and built with
-                    <i-icon name="fas-heart" />
+                    <icon-fa-solid-heart />
                     by
                     <a href="https://grozav.com" target="_blank" rel="noopener">@alexgrozav</a>.
                 </i-column>
@@ -74,8 +74,8 @@ footer {
             --list--padding--inline: 1.5rem;
         }
 
-        @include i-icon() {
-            ----size: 2rem;
+        svg {
+            font-size: 2rem;
 
             color: var(--color--white);
             transition: color 0.3s ease;

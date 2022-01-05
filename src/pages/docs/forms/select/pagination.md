@@ -6,9 +6,9 @@ description: Pagination is handled using a simple and efficient infinite scrolli
 <script setup>
 import {
     ISelectPaginationExample
-} from '@inkline/inkline/components/ISelect/examples';
+} from '@inkline/inkline/components/ISelect/examples/index.mjs';
 import { default as ISelectPaginationExampleHTML } from '@inkline/inkline/components/ISelect/examples/pagination.html?raw';
-import { default as ISelectPaginationExampleJS } from '@inkline/inkline/components/ISelect/examples/pagination.js?raw';
+import { default as ISelectPaginationExampleJS } from '@inkline/inkline/components/ISelect/examples/pagination.mjs?raw';
 </script>
 
 

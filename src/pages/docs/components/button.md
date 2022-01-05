@@ -4,7 +4,7 @@ description: One of the core building blocks of an application. Buttons can repr
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IButton/manifest';
+import { manifest } from '@inkline/inkline/components/IButton/manifest.mjs';
 import {
     IButtonBasicExample,
     IButtonBlockExample,
@@ -21,7 +21,7 @@ import {
     IButtonStateActiveExample,
     IButtonStateDisabledExample,
     IButtonStateLoadingExample
-} from '@inkline/inkline/components/IButton/examples';
+} from '@inkline/inkline/components/IButton/examples/index.mjs';
 import { default as IButtonBasicExampleHTML } from '@inkline/inkline/components/IButton/examples/basic.html?raw';
 import { default as IButtonBlockExampleHTML } from '@inkline/inkline/components/IButton/examples/block.html?raw';
 import { default as IButtonTagExampleHTML } from '@inkline/inkline/components/IButton/examples/button-tag.html?raw';

@@ -1,18 +1,15 @@
 ---
 title: Icon - Inkline
-description: Inkline provides you with an awesome universal icon component that you can use with your favorite icon library.
+description: Inkline comes bundled with a lightweight icon component that provides you with the most commonly used icons.
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IIcon/manifest';
-import IntegrationsTable from '@inkline/inkline/components/IIcon/examples/integrations.vue';
+import { manifest } from '@inkline/inkline/components/IIcon/manifest.mjs';
 import {
-    IIconBasicExample,
     IIconIconsExample,
     IIconColorVariantsExample,
     IIconSizeVariantsExample
-} from '@inkline/inkline/components/IIcon/examples';
-import { default as IIconBasicExampleHTML } from '@inkline/inkline/components/IIcon/examples/basic.html?raw';
+} from '@inkline/inkline/components/IIcon/examples/index.mjs';
 import { default as IIconColorVariantsExampleHTML } from '@inkline/inkline/components/IIcon/examples/color-variants.html?raw';
 import { default as IIconIconsExampleHTML } from '@inkline/inkline/components/IIcon/examples/icons.html?raw';
 import { default as IIconSizeVariantsExampleHTML } from '@inkline/inkline/components/IIcon/examples/size-variants.html?raw';
@@ -20,7 +17,7 @@ import { default as IIconSizeVariantsExampleHTML } from '@inkline/inkline/compon
 
 # Icon
 
-## Inkline provides you with an awesome universal icon component that you can use with your favorite icon library.
+## Inkline comes bundled with a lightweight icon component that provides you with the most commonly used icons.
 
 ### Basic Example
 
@@ -39,15 +36,6 @@ You're able to use the `size` modifier to control the size of your icon, using o
 You can also use text size utility classes to set the size of Inkline's icons.
 
 <example type="icon" :component="IIconSizeVariantsExample" :html="IIconSizeVariantsExampleHTML"></example>
-
-### Integrations
-
-Inkline provides integrations with the most popular free icon packs, out of the box. Here's why we chose this approach:
-- You have one simple component for all icon packs
-- The icons are rendered as SVGs and can be scaled up to any size
-- Small file size, natively tree-shakeable
-
-<integrations-table></integrations-table>
 
 ### Configuration
 

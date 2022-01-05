@@ -4,7 +4,7 @@ description: Pagination provides navigation for large series of related content.
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IPagination/manifest';
+import { manifest } from '@inkline/inkline/components/IPagination/manifest.mjs';
 import {
     IPaginationBasicExample,
     IPaginationColorVariantsExample,
@@ -12,19 +12,19 @@ import {
     IPaginationLimitResponsiveExample,
     IPaginationQuickLinksExample,
     IPaginationSizeVariantsExample
-} from '@inkline/inkline/components/IPagination/examples';
+} from '@inkline/inkline/components/IPagination/examples/index.mjs';
 import { default as IPaginationBasicExampleHTML } from '@inkline/inkline/components/IPagination/examples/basic.html?raw';
-import { default as IPaginationBasicExampleJS } from '@inkline/inkline/components/IPagination/examples/basic.js?raw';
+import { default as IPaginationBasicExampleJS } from '@inkline/inkline/components/IPagination/examples/basic.mjs?raw';
 import { default as IPaginationColorVariantsExampleHTML } from '@inkline/inkline/components/IPagination/examples/color-variants.html?raw';
-import { default as IPaginationColorVariantsExampleJS } from '@inkline/inkline/components/IPagination/examples/color-variants.js?raw';
+import { default as IPaginationColorVariantsExampleJS } from '@inkline/inkline/components/IPagination/examples/color-variants.mjs?raw';
 import { default as IPaginationLimitExampleHTML } from '@inkline/inkline/components/IPagination/examples/limit.html?raw';
-import { default as IPaginationLimitExampleJS } from '@inkline/inkline/components/IPagination/examples/limit.js?raw';
+import { default as IPaginationLimitExampleJS } from '@inkline/inkline/components/IPagination/examples/limit.mjs?raw';
 import { default as IPaginationLimitResponsiveExampleHTML } from '@inkline/inkline/components/IPagination/examples/limit-responsive.html?raw';
-import { default as IPaginationLimitResponsiveExampleJS } from '@inkline/inkline/components/IPagination/examples/limit-responsive.js?raw';
+import { default as IPaginationLimitResponsiveExampleJS } from '@inkline/inkline/components/IPagination/examples/limit-responsive.mjs?raw';
 import { default as IPaginationQuickLinksExampleHTML } from '@inkline/inkline/components/IPagination/examples/quick-links.html?raw';
-import { default as IPaginationQuickLinksExampleJS } from '@inkline/inkline/components/IPagination/examples/quick-links.js?raw';
+import { default as IPaginationQuickLinksExampleJS } from '@inkline/inkline/components/IPagination/examples/quick-links.mjs?raw';
 import { default as IPaginationSizeVariantsExampleHTML } from '@inkline/inkline/components/IPagination/examples/size-variants.html?raw';
-import { default as IPaginationSizeVariantsExampleJS } from '@inkline/inkline/components/IPagination/examples/size-variants.js?raw';
+import { default as IPaginationSizeVariantsExampleJS } from '@inkline/inkline/components/IPagination/examples/size-variants.mjs?raw';
 </script>
 
 

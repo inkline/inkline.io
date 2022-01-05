@@ -22,7 +22,7 @@ import {
     TextTruncateExample,
     TextWrapExample,
     TextListsExample
-} from '@inkline/inkline/stories/utilities/text';
+} from '@inkline/inkline/stories/utilities/text/index.mjs';
 import { default as TextFontMonospaceExampleHTML } from '@inkline/inkline/stories/utilities/text/font-monospace.html?raw';
 import { default as TextFontSizeExampleHTML } from '@inkline/inkline/stories/utilities/text/font-size.html?raw';
 import { default as TextFontStyleItalicExampleHTML } from '@inkline/inkline/stories/utilities/text/font-style-italic.html?raw';

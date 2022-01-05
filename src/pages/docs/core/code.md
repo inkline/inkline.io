@@ -10,7 +10,7 @@ import {
     CodeSampleOutputExample,
     CodeUserInputExample,
     CodeVariablesExample
-} from '@inkline/inkline/stories/core/code';
+} from '@inkline/inkline/stories/core/code/index.mjs';
 import { default as CodeBlockExampleHTML } from '@inkline/inkline/stories/core/code/block.html?raw';
 import { default as CodeInlineExampleHTML } from '@inkline/inkline/stories/core/code/inline.html?raw';
 import { default as CodeSampleOutputExampleHTML } from '@inkline/inkline/stories/core/code/sample-output.html?raw';

@@ -6,29 +6,7 @@ import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
 import App from '~/App.vue';
 
-import { Inkline } from '@inkline/inkline';
-import * as components from '@inkline/inkline/components';
-import * as inklineIcons from '@inkline/icons/packs/inkline';
-import {
-    fasSun,
-    fasBook,
-    fasMoon,
-    fasStar,
-    fasShoppingCart,
-    fasCheckCircle,
-    fasHeart,
-    fasCode,
-    fasComments,
-    fasGlobe
-} from '@inkline/icons/packs/fontawesome/solid';
-import {
-    farClone
-} from '@inkline/icons/packs/fontawesome/regular';
-import {
-    fabGithub,
-    fabTwitter,
-    fabDiscord
-} from '@inkline/icons/packs/fontawesome/brands';
+import { Inkline, components } from '@inkline/inkline/inkline.mjs';
 import { scrollBehavior } from '~/config';
 
 import '@inkline/inkline/inkline.scss';
@@ -54,23 +32,6 @@ export const createApp = ViteSSG(App, {
         .map((module) => module.install?.(ctx));
 
     ctx.app.use(Inkline, {
-        icons: {
-            fasSun,
-            fasBook,
-            fasMoon,
-            fasStar,
-            fasHeart,
-            fasCheckCircle,
-            fasShoppingCart,
-            fasCode,
-            fasComments,
-            fabGithub,
-            fabTwitter,
-            fabDiscord,
-            fasGlobe,
-            farClone,
-            ...inklineIcons
-        },
         components
     });
 });

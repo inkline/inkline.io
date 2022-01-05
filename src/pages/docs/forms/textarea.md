@@ -4,8 +4,8 @@ description: Form components used for inputting data directly from the keyboard,
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ITextarea/manifest';
-import { manifest as inputManifest } from '@inkline/inkline/components/IInput/manifest';
+import { manifest } from '@inkline/inkline/components/ITextarea/manifest.mjs';
+import { manifest as inputManifest } from '@inkline/inkline/components/IInput/manifest.mjs';
 import {
     ITextareaBasicExample,
     ITextareaColorVariantsExample,
@@ -17,27 +17,27 @@ import {
     ITextareaPrependAppendButtonExample,
     ITextareaPrependAppendDropdownExample,
     ITextareaPrefixSuffixExample
-} from '@inkline/inkline/components/ITextarea/examples';
+} from '@inkline/inkline/components/ITextarea/examples/index.mjs';
 import { default as ITextareaBasicExampleHTML } from '@inkline/inkline/components/ITextarea/examples/basic.html?raw';
-import { default as ITextareaBasicExampleJS } from '@inkline/inkline/components/ITextarea/examples/basic.js?raw';
+import { default as ITextareaBasicExampleJS } from '@inkline/inkline/components/ITextarea/examples/basic.mjs?raw';
 import { default as ITextareaColorVariantsExampleHTML } from '@inkline/inkline/components/ITextarea/examples/color-variants.html?raw';
-import { default as ITextareaColorVariantsExampleJS } from '@inkline/inkline/components/ITextarea/examples/color-variants.js?raw';
+import { default as ITextareaColorVariantsExampleJS } from '@inkline/inkline/components/ITextarea/examples/color-variants.mjs?raw';
 import { default as ITextareaClearableExampleHTML } from '@inkline/inkline/components/ITextarea/examples/clearable.html?raw';
-import { default as ITextareaClearableExampleJS } from '@inkline/inkline/components/ITextarea/examples/clearable.js?raw';
+import { default as ITextareaClearableExampleJS } from '@inkline/inkline/components/ITextarea/examples/clearable.mjs?raw';
 import { default as ITextareaDisabledExampleHTML } from '@inkline/inkline/components/ITextarea/examples/disabled.html?raw';
-import { default as ITextareaDisabledExampleJS } from '@inkline/inkline/components/ITextarea/examples/disabled.js?raw';
+import { default as ITextareaDisabledExampleJS } from '@inkline/inkline/components/ITextarea/examples/disabled.mjs?raw';
 import { default as ITextareaReadonlyExampleHTML } from '@inkline/inkline/components/ITextarea/examples/readonly.html?raw';
-import { default as ITextareaReadonlyExampleJS } from '@inkline/inkline/components/ITextarea/examples/readonly.js?raw';
+import { default as ITextareaReadonlyExampleJS } from '@inkline/inkline/components/ITextarea/examples/readonly.mjs?raw';
 import { default as ITextareaSizeVariantsExampleHTML } from '@inkline/inkline/components/ITextarea/examples/size-variants.html?raw';
-import { default as ITextareaSizeVariantsExampleJS } from '@inkline/inkline/components/ITextarea/examples/size-variants.js?raw';
+import { default as ITextareaSizeVariantsExampleJS } from '@inkline/inkline/components/ITextarea/examples/size-variants.mjs?raw';
 import { default as ITextareaPrependAppendTextExampleHTML } from '@inkline/inkline/components/ITextarea/examples/prepend-append-text.html?raw';
-import { default as ITextareaPrependAppendTextExampleJS } from '@inkline/inkline/components/ITextarea/examples/prepend-append-text.js?raw';
+import { default as ITextareaPrependAppendTextExampleJS } from '@inkline/inkline/components/ITextarea/examples/prepend-append-text.mjs?raw';
 import { default as ITextareaPrependAppendButtonExampleHTML } from '@inkline/inkline/components/ITextarea/examples/prepend-append-button.html?raw';
-import { default as ITextareaPrependAppendButtonExampleJS } from '@inkline/inkline/components/ITextarea/examples/prepend-append-button.js?raw';
+import { default as ITextareaPrependAppendButtonExampleJS } from '@inkline/inkline/components/ITextarea/examples/prepend-append-button.mjs?raw';
 import { default as ITextareaPrependAppendDropdownExampleHTML } from '@inkline/inkline/components/ITextarea/examples/prepend-append-dropdown.html?raw';
-import { default as ITextareaPrependAppendDropdownExampleJS } from '@inkline/inkline/components/ITextarea/examples/prepend-append-dropdown.js?raw';
+import { default as ITextareaPrependAppendDropdownExampleJS } from '@inkline/inkline/components/ITextarea/examples/prepend-append-dropdown.mjs?raw';
 import { default as ITextareaPrefixSuffixExampleHTML } from '@inkline/inkline/components/ITextarea/examples/prefix-suffix.html?raw';
-import { default as ITextareaPrefixSuffixExampleJS } from '@inkline/inkline/components/ITextarea/examples/prefix-suffix.js?raw';
+import { default as ITextareaPrefixSuffixExampleJS } from '@inkline/inkline/components/ITextarea/examples/prefix-suffix.mjs?raw';
 </script>
 
 # Textarea

@@ -7,11 +7,11 @@ description: The form validation framework wouldn't be complete without dynamica
 import {
     IFormValidationMethodsGroupsObjectExample,
     IFormValidationMethodsGroupsArrayExample
-} from '@inkline/inkline/stories/forms/validation/methods';
+} from '@inkline/inkline/stories/forms/validation/methods/index.mjs';
 import { default as IFormValidationMethodsGroupsObjectExampleHTML } from '@inkline/inkline/stories/forms/validation/methods/groups-object.html?raw';
-import { default as IFormValidationMethodsGroupsObjectExampleJS } from '@inkline/inkline/stories/forms/validation/methods/groups-object.js?raw';
+import { default as IFormValidationMethodsGroupsObjectExampleJS } from '@inkline/inkline/stories/forms/validation/methods/groups-object.mjs?raw';
 import { default as IFormValidationMethodsGroupsArrayExampleHTML } from '@inkline/inkline/stories/forms/validation/methods/groups-array.html?raw';
-import { default as IFormValidationMethodsGroupsArrayExampleJS } from '@inkline/inkline/stories/forms/validation/methods/groups-array.js?raw';
+import { default as IFormValidationMethodsGroupsArrayExampleJS } from '@inkline/inkline/stories/forms/validation/methods/groups-array.mjs?raw';
 </script>
 
 # Form Validation Methods

@@ -4,22 +4,23 @@ description: Configure the global CSS Variables of the design system to instantl
 ---
 
 <script setup>
-import { manifest as animationsManifest } from '@inkline/inkline/css/variables/animations/manifest';
-import { manifest as borderManifest } from '@inkline/inkline/css/variables/border/manifest';
-import { manifest as boxShadowManifest } from '@inkline/inkline/css/variables/box-shadow/manifest';
-import { manifest as breakpointsManifest } from '@inkline/inkline/css/variables/breakpoints/manifest';
-import { manifest as colorsManifest } from '@inkline/inkline/css/variables/colors/manifest';
-import { manifest as coreManifest } from '@inkline/inkline/css/variables/core/manifest';
-import { manifest as gridManifest } from '@inkline/inkline/css/variables/grid/manifest';
-import { manifest as gutterManifest } from '@inkline/inkline/css/variables/gutter/manifest';
-import { manifest as imagesManifest } from '@inkline/inkline/css/variables/images/manifest';
-import { manifest as printManifest } from '@inkline/inkline/css/variables/print/manifest';
-import { manifest as ratiosManifest } from '@inkline/inkline/css/variables/ratios/manifest';
-import { manifest as sizesManifest } from '@inkline/inkline/css/variables/sizes/manifest';
-import { manifest as spacingManifest } from '@inkline/inkline/css/variables/spacing/manifest';
-import { manifest as typographyManifest } from '@inkline/inkline/css/variables/typography/manifest';
-import { manifest as zIndexManifest } from '@inkline/inkline/css/variables/z-index/manifest';
-import { ColorPicker } from "vue-accessible-color-picker";
+import { manifest as animationsManifest } from '@inkline/inkline/css/variables/animations/manifest.mjs';
+import { manifest as borderManifest } from '@inkline/inkline/css/variables/border/manifest.mjs';
+import { manifest as boxShadowManifest } from '@inkline/inkline/css/variables/box-shadow/manifest.mjs';
+import { manifest as breakpointsManifest } from '@inkline/inkline/css/variables/breakpoints/manifest.mjs';
+import { manifest as colorsManifest } from '@inkline/inkline/css/variables/colors/manifest.mjs';
+import { manifest as coreManifest } from '@inkline/inkline/css/variables/core/manifest.mjs';
+import { manifest as gridManifest } from '@inkline/inkline/css/variables/grid/manifest.mjs';
+import { manifest as gutterManifest } from '@inkline/inkline/css/variables/gutter/manifest.mjs';
+import { manifest as imagesManifest } from '@inkline/inkline/css/variables/images/manifest.mjs';
+import { manifest as printManifest } from '@inkline/inkline/css/variables/print/manifest.mjs';
+import { manifest as ratiosManifest } from '@inkline/inkline/css/variables/ratios/manifest.mjs';
+import { manifest as sizesManifest } from '@inkline/inkline/css/variables/sizes/manifest.mjs';
+import { manifest as spacingManifest } from '@inkline/inkline/css/variables/spacing/manifest.mjs';
+import { manifest as typographyManifest } from '@inkline/inkline/css/variables/typography/manifest.mjs';
+import { manifest as zIndexManifest } from '@inkline/inkline/css/variables/z-index/manifest.mjs';
+import ColorPickerPackage from "vue-accessible-color-picker";
+const { ColorPicker } = ColorPickerPackage;
 </script>
 
 # Global Variables

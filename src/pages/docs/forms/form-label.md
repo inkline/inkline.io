@@ -4,21 +4,21 @@ description: Form component used to add text labels to form groups.
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IForm/components/IFormLabel/manifest';
+import { manifest } from '@inkline/inkline/components/IForm/components/IFormLabel/manifest.mjs';
 import {
     IFormLabelBasicExample,
     IFormLabelPlacementExample,
     IFormLabelRequiredExample,
     IFormLabelSizeVariantsExample
-} from '@inkline/inkline/components/IForm/components/IFormLabel/examples';
+} from '@inkline/inkline/components/IForm/components/IFormLabel/examples/index.mjs';
 import { default as IFormLabelBasicExampleHTML } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/basic.html?raw';
-import { default as IFormLabelBasicExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/basic.js?raw';
+import { default as IFormLabelBasicExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/basic.mjs?raw';
 import { default as IFormLabelPlacementExampleHTML } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/placement.html?raw';
-import { default as IFormLabelPlacementExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/placement.js?raw';
+import { default as IFormLabelPlacementExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/placement.mjs?raw';
 import { default as IFormLabelRequiredExampleHTML } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/required.html?raw';
-import { default as IFormLabelRequiredExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/required.js?raw';
+import { default as IFormLabelRequiredExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/required.mjs?raw';
 import { default as IFormLabelSizeVariantsExampleHTML } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/size-variants.html?raw';
-import { default as IFormLabelSizeVariantsExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/size-variants.js?raw';
+import { default as IFormLabelSizeVariantsExampleJS } from '@inkline/inkline/components/IForm/components/IFormLabel/examples/size-variants.mjs?raw';
 </script>
 
 # Form Label

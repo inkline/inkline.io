@@ -4,7 +4,7 @@ description: Inkline's grid system is modelled as a 12 columns layout using flex
 ---
 
 <script setup>
-import { manifest as columnManifest } from '@inkline/inkline/components/IColumn/manifest';
+import { manifest as columnManifest } from '@inkline/inkline/components/IColumn/manifest.mjs';
 import {
     IColumnAutoWidthExample,
     IColumnNestedExample,
@@ -15,7 +15,7 @@ import {
     IColumnReorderingLastExample,
     IColumnResponsiveExample,
     IColumnWidthExample
-} from '@inkline/inkline/components/IColumn/examples';
+} from '@inkline/inkline/components/IColumn/examples/index.mjs';
 import { default as IColumnAutoWidthExampleHTML } from '@inkline/inkline/components/IColumn/examples/auto-width.html?raw';
 import { default as IColumnNestedExampleHTML } from '@inkline/inkline/components/IColumn/examples/nested.html?raw';
 import { default as IColumnOffsetExampleHTML } from '@inkline/inkline/components/IColumn/examples/offset.html?raw';
@@ -26,7 +26,7 @@ import { default as IColumnReorderingLastExampleHTML } from '@inkline/inkline/co
 import { default as IColumnResponsiveExampleHTML } from '@inkline/inkline/components/IColumn/examples/responsive.html?raw';
 import { default as IColumnWidthExampleHTML } from '@inkline/inkline/components/IColumn/examples/width.html?raw';
 
-import { manifest as rowManifest } from '@inkline/inkline/components/IRow/manifest';
+import { manifest as rowManifest } from '@inkline/inkline/components/IRow/manifest.mjs';
 import {
     IRowDistributionAroundExample,
     IRowDistributionBetweenExample,
@@ -37,7 +37,7 @@ import {
     IRowVerticalAlignmentTopExample,
     IRowVerticalAlignmentMiddleExample,
     IRowVerticalAlignmentBottomExample
-} from '@inkline/inkline/components/IRow/examples';
+} from '@inkline/inkline/components/IRow/examples/index.mjs';
 import { default as IRowDistributionAroundExampleHTML } from '@inkline/inkline/components/IRow/examples/distribution-around.html?raw';
 import { default as IRowDistributionBetweenExampleHTML } from '@inkline/inkline/components/IRow/examples/distribution-between.html?raw';
 import { default as IRowHorizontalAlignmentStartExampleHTML } from '@inkline/inkline/components/IRow/examples/horizontal-alignment-start.html?raw';
@@ -48,10 +48,10 @@ import { default as IRowVerticalAlignmentTopExampleHTML } from '@inkline/inkline
 import { default as IRowVerticalAlignmentMiddleExampleHTML } from '@inkline/inkline/components/IRow/examples/vertical-alignment-middle.html?raw';
 import { default as IRowVerticalAlignmentBottomExampleHTML } from '@inkline/inkline/components/IRow/examples/vertical-alignment-bottom.html?raw';
 
-import { manifest as containerManifest } from '@inkline/inkline/components/IContainer/manifest';
+import { manifest as containerManifest } from '@inkline/inkline/components/IContainer/manifest.mjs';
 import {
     IContainerFluidExample
-} from '@inkline/inkline/components/IContainer/examples';
+} from '@inkline/inkline/components/IContainer/examples/index.mjs';
 import { default as IContainerFluidExampleHTML } from '@inkline/inkline/components/IContainer/examples/fluid.html?raw';
 </script>
 

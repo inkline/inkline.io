@@ -16,29 +16,29 @@ import {
     IFormValidationValidatorsRequiredExample,
     IFormValidationValidatorsSameAsExample,
     IFormValidationValidatorsCustomExample
-} from '@inkline/inkline/stories/forms/validation/validators';
+} from '@inkline/inkline/stories/forms/validation/validators/index.mjs';
 import { default as IFormValidationValidatorsAlphaExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/alpha.html?raw';
-import { default as IFormValidationValidatorsAlphaExampleJS } from '@inkline/inkline/stories/forms/validation/validators/alpha.js?raw';
+import { default as IFormValidationValidatorsAlphaExampleJS } from '@inkline/inkline/stories/forms/validation/validators/alpha.mjs?raw';
 import { default as IFormValidationValidatorsAlphanumericExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/alphanumeric.html?raw';
-import { default as IFormValidationValidatorsAlphanumericExampleJS } from '@inkline/inkline/stories/forms/validation/validators/alphanumeric.js?raw';
+import { default as IFormValidationValidatorsAlphanumericExampleJS } from '@inkline/inkline/stories/forms/validation/validators/alphanumeric.mjs?raw';
 import { default as IFormValidationValidatorsEmailExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/email.html?raw';
-import { default as IFormValidationValidatorsEmailExampleJS } from '@inkline/inkline/stories/forms/validation/validators/email.js?raw';
+import { default as IFormValidationValidatorsEmailExampleJS } from '@inkline/inkline/stories/forms/validation/validators/email.mjs?raw';
 import { default as IFormValidationValidatorsMinExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/min.html?raw';
-import { default as IFormValidationValidatorsMinExampleJS } from '@inkline/inkline/stories/forms/validation/validators/min.js?raw';
+import { default as IFormValidationValidatorsMinExampleJS } from '@inkline/inkline/stories/forms/validation/validators/min.mjs?raw';
 import { default as IFormValidationValidatorsMaxExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/max.html?raw';
-import { default as IFormValidationValidatorsMaxExampleJS } from '@inkline/inkline/stories/forms/validation/validators/max.js?raw';
+import { default as IFormValidationValidatorsMaxExampleJS } from '@inkline/inkline/stories/forms/validation/validators/max.mjs?raw';
 import { default as IFormValidationValidatorsMinLengthExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/min-length.html?raw';
-import { default as IFormValidationValidatorsMinLengthExampleJS } from '@inkline/inkline/stories/forms/validation/validators/min-length.js?raw';
+import { default as IFormValidationValidatorsMinLengthExampleJS } from '@inkline/inkline/stories/forms/validation/validators/min-length.mjs?raw';
 import { default as IFormValidationValidatorsMaxLengthExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/max-length.html?raw';
-import { default as IFormValidationValidatorsMaxLengthExampleJS } from '@inkline/inkline/stories/forms/validation/validators/max-length.js?raw';
+import { default as IFormValidationValidatorsMaxLengthExampleJS } from '@inkline/inkline/stories/forms/validation/validators/max-length.mjs?raw';
 import { default as IFormValidationValidatorsNumberExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/number.html?raw';
-import { default as IFormValidationValidatorsNumberExampleJS } from '@inkline/inkline/stories/forms/validation/validators/number.js?raw';
+import { default as IFormValidationValidatorsNumberExampleJS } from '@inkline/inkline/stories/forms/validation/validators/number.mjs?raw';
 import { default as IFormValidationValidatorsRequiredExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/required.html?raw';
-import { default as IFormValidationValidatorsRequiredExampleJS } from '@inkline/inkline/stories/forms/validation/validators/required.js?raw';
+import { default as IFormValidationValidatorsRequiredExampleJS } from '@inkline/inkline/stories/forms/validation/validators/required.mjs?raw';
 import { default as IFormValidationValidatorsSameAsExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/same-as.html?raw';
-import { default as IFormValidationValidatorsSameAsExampleJS } from '@inkline/inkline/stories/forms/validation/validators/same-as.js?raw';
+import { default as IFormValidationValidatorsSameAsExampleJS } from '@inkline/inkline/stories/forms/validation/validators/same-as.mjs?raw';
 import { default as IFormValidationValidatorsCustomExampleHTML } from '@inkline/inkline/stories/forms/validation/validators/custom.html?raw';
-import { default as IFormValidationValidatorsCustomExampleJS } from '@inkline/inkline/stories/forms/validation/validators/custom.js?raw';
+import { default as IFormValidationValidatorsCustomExampleJS } from '@inkline/inkline/stories/forms/validation/validators/custom.mjs?raw';
 </script>
 
 # Form Validators

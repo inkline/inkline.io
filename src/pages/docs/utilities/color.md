@@ -47,7 +47,7 @@ import {
     ColorStateTextExample,
     ColorStateWarningBackgroundExample,
     ColorStateWarningTextExample
-} from '@inkline/inkline/stories/utilities/color';
+} from '@inkline/inkline/stories/utilities/color/index.mjs';
 import { default as ColorBasicBackgroundExampleHTML } from '@inkline/inkline/stories/utilities/color/basic-background.html?raw';
 import { default as ColorBasicBlueBackgroundExampleHTML } from '@inkline/inkline/stories/utilities/color/basic-blue-background.html?raw';
 import { default as ColorBasicBlueTextExampleHTML } from '@inkline/inkline/stories/utilities/color/basic-blue-text.html?raw';

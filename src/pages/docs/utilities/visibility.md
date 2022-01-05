@@ -6,7 +6,7 @@ description: Control the visibility, with or without modifying the display of el
 <script setup>
 import {
     VisibilityBasicExample
-} from '@inkline/inkline/stories/utilities/visibility';
+} from '@inkline/inkline/stories/utilities/visibility/index.mjs';
 import { default as VisibilityBasicExampleHTML } from '@inkline/inkline/stories/utilities/visibility/basic.html?raw';
 </script>
 

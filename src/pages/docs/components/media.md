@@ -4,12 +4,12 @@ description: Media objects provide you with a flexible component that can be eas
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IMedia/manifest';
+import { manifest } from '@inkline/inkline/components/IMedia/manifest.mjs';
 import {
     IMediaAlignmentExample,
     IMediaBasicExample,
     IMediaNestingExample
-} from '@inkline/inkline/components/IMedia/examples';
+} from '@inkline/inkline/components/IMedia/examples/index.mjs';
 import { default as IMediaAlignmentExampleHTML } from '@inkline/inkline/components/IMedia/examples/alignment.html?raw';
 import { default as IMediaBasicExampleHTML } from '@inkline/inkline/components/IMedia/examples/basic.html?raw';
 import { default as IMediaNestingExampleHTML } from '@inkline/inkline/components/IMedia/examples/nesting.html?raw';

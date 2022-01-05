@@ -4,13 +4,13 @@ description: Documentation and examples for badges, a small component used for c
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IBadge/manifest';
+import { manifest } from '@inkline/inkline/components/IBadge/manifest.mjs';
 import {
     IBadgeBasicExample,
     IBadgeColorVariantsExample,
     IBadgeHeadingExample,
     IBadgeSizeVariantsExample
-} from '@inkline/inkline/components/IBadge/examples';
+} from '@inkline/inkline/components/IBadge/examples/index.mjs';
 import { default as IBadgeBasicExampleHTML } from '@inkline/inkline/components/IBadge/examples/basic.html?raw';
 import { default as IBadgeColorVariantsExampleHTML } from '@inkline/inkline/components/IBadge/examples/color-variants.html?raw';
 import { default as IBadgeHeadingExampleHTML } from '@inkline/inkline/components/IBadge/examples/heading.html?raw';

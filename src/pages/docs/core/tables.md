@@ -4,7 +4,7 @@ description: Documentation and examples for opt-in styling of tables with Inklin
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/ITable/manifest';
+import { manifest } from '@inkline/inkline/components/ITable/manifest.mjs';
 import {
     ITableBasicExample,
     ITableBorderedExample,
@@ -12,7 +12,7 @@ import {
     ITableHoverExample,
     ITableResponsiveExample,
     ITableStripedExample
-} from '@inkline/inkline/components/ITable/examples';
+} from '@inkline/inkline/components/ITable/examples/index.mjs';
 import { default as ITableBasicExampleHTML } from '@inkline/inkline/components/ITable/examples/basic.html?raw';
 import { default as ITableBorderedExampleHTML } from '@inkline/inkline/components/ITable/examples/bordered.html?raw';
 import { default as ITableColorVariantsExampleHTML } from '@inkline/inkline/components/ITable/examples/color-variants.html?raw';

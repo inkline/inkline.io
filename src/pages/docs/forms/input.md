@@ -4,7 +4,7 @@ description: Form component used for inputting data directly from the keyboard.
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IInput/manifest';
+import { manifest } from '@inkline/inkline/components/IInput/manifest.mjs';
 import {
     IInputBasicExample,
     IInputColorVariantsExample,
@@ -17,29 +17,29 @@ import {
     IInputPrependAppendDropdownExample,
     IInputPrefixSuffixExample,
     IInputTypeExample
-} from '@inkline/inkline/components/IInput/examples';
+} from '@inkline/inkline/components/IInput/examples/index.mjs';
 import { default as IInputBasicExampleHTML } from '@inkline/inkline/components/IInput/examples/basic.html?raw';
-import { default as IInputBasicExampleJS } from '@inkline/inkline/components/IInput/examples/basic.js?raw';
+import { default as IInputBasicExampleJS } from '@inkline/inkline/components/IInput/examples/basic.mjs?raw';
 import { default as IInputColorVariantsExampleHTML } from '@inkline/inkline/components/IInput/examples/color-variants.html?raw';
-import { default as IInputColorVariantsExampleJS } from '@inkline/inkline/components/IInput/examples/color-variants.js?raw';
+import { default as IInputColorVariantsExampleJS } from '@inkline/inkline/components/IInput/examples/color-variants.mjs?raw';
 import { default as IInputClearableExampleHTML } from '@inkline/inkline/components/IInput/examples/clearable.html?raw';
-import { default as IInputClearableExampleJS } from '@inkline/inkline/components/IInput/examples/clearable.js?raw';
+import { default as IInputClearableExampleJS } from '@inkline/inkline/components/IInput/examples/clearable.mjs?raw';
 import { default as IInputDisabledExampleHTML } from '@inkline/inkline/components/IInput/examples/disabled.html?raw';
-import { default as IInputDisabledExampleJS } from '@inkline/inkline/components/IInput/examples/disabled.js?raw';
+import { default as IInputDisabledExampleJS } from '@inkline/inkline/components/IInput/examples/disabled.mjs?raw';
 import { default as IInputReadonlyExampleHTML } from '@inkline/inkline/components/IInput/examples/readonly.html?raw';
-import { default as IInputReadonlyExampleJS } from '@inkline/inkline/components/IInput/examples/readonly.js?raw';
+import { default as IInputReadonlyExampleJS } from '@inkline/inkline/components/IInput/examples/readonly.mjs?raw';
 import { default as IInputSizeVariantsExampleHTML } from '@inkline/inkline/components/IInput/examples/size-variants.html?raw';
-import { default as IInputSizeVariantsExampleJS } from '@inkline/inkline/components/IInput/examples/size-variants.js?raw';
+import { default as IInputSizeVariantsExampleJS } from '@inkline/inkline/components/IInput/examples/size-variants.mjs?raw';
 import { default as IInputPrependAppendTextExampleHTML } from '@inkline/inkline/components/IInput/examples/prepend-append-text.html?raw';
-import { default as IInputPrependAppendTextExampleJS } from '@inkline/inkline/components/IInput/examples/prepend-append-text.js?raw';
+import { default as IInputPrependAppendTextExampleJS } from '@inkline/inkline/components/IInput/examples/prepend-append-text.mjs?raw';
 import { default as IInputPrependAppendButtonExampleHTML } from '@inkline/inkline/components/IInput/examples/prepend-append-button.html?raw';
-import { default as IInputPrependAppendButtonExampleJS } from '@inkline/inkline/components/IInput/examples/prepend-append-button.js?raw';
+import { default as IInputPrependAppendButtonExampleJS } from '@inkline/inkline/components/IInput/examples/prepend-append-button.mjs?raw';
 import { default as IInputPrependAppendDropdownExampleHTML } from '@inkline/inkline/components/IInput/examples/prepend-append-dropdown.html?raw';
-import { default as IInputPrependAppendDropdownExampleJS } from '@inkline/inkline/components/IInput/examples/prepend-append-dropdown.js?raw';
+import { default as IInputPrependAppendDropdownExampleJS } from '@inkline/inkline/components/IInput/examples/prepend-append-dropdown.mjs?raw';
 import { default as IInputPrefixSuffixExampleHTML } from '@inkline/inkline/components/IInput/examples/prefix-suffix.html?raw';
-import { default as IInputPrefixSuffixExampleJS } from '@inkline/inkline/components/IInput/examples/prefix-suffix.js?raw';
+import { default as IInputPrefixSuffixExampleJS } from '@inkline/inkline/components/IInput/examples/prefix-suffix.mjs?raw';
 import { default as IInputTypeExampleHTML } from '@inkline/inkline/components/IInput/examples/type.html?raw';
-import { default as IInputTypeExampleJS } from '@inkline/inkline/components/IInput/examples/type.js?raw';
+import { default as IInputTypeExampleJS } from '@inkline/inkline/components/IInput/examples/type.mjs?raw';
 </script>
 
 

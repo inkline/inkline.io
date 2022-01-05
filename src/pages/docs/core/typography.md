@@ -20,7 +20,7 @@ import {
     TypographyTextWrappingExample,
     TypographyUnorderedListExample,
     TypographyUnstyledListExample
-} from '@inkline/inkline/stories/core/typography';
+} from '@inkline/inkline/stories/core/typography/index.mjs';
 import { default as TypographyAbbreviationsExampleHTML } from '@inkline/inkline/stories/core/typography/abbreviations.html?raw';
 import { default as TypographyBlockquotesExampleHTML } from '@inkline/inkline/stories/core/typography/blockquotes.html?raw';
 import { default as TypographyDescriptionListExampleHTML } from '@inkline/inkline/stories/core/typography/description-list.html?raw';

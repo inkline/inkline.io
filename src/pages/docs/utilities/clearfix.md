@@ -6,7 +6,7 @@ description: Use the clearfix utility to clear floated content within a containe
 <script setup>
 import {
     ClearfixBasicExample
-} from '@inkline/inkline/stories/utilities/clearfix';
+} from '@inkline/inkline/stories/utilities/clearfix/index.mjs';
 import { default as ClearfixBasicExampleHTML } from '@inkline/inkline/stories/utilities/clearfix/basic.html?raw';
 </script>
 

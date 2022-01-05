@@ -6,7 +6,7 @@ description: Create responsive video embeds by keeping the aspect ratio based on
 <script setup>
 import {
     EmbedBasicExample
-} from '@inkline/inkline/stories/utilities/embed';
+} from '@inkline/inkline/stories/utilities/embed/index.mjs';
 import { default as EmbedBasicExampleHTML } from '@inkline/inkline/stories/utilities/embed/basic.html?raw';
 </script>
 

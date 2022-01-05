@@ -4,17 +4,17 @@ description: Provide contextual feedback messages for typical user actions using
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IAlert/manifest';
+import { manifest } from '@inkline/inkline/components/IAlert/manifest.mjs';
 import { 
     IAlertColorVariantsExample,
     IAlertDismissibleExample,
     IAlertContentExample,
     IAlertIconExample,
     IAlertSizeVariantsExample
-} from '@inkline/inkline/components/IAlert/examples';
+} from '@inkline/inkline/components/IAlert/examples/index.mjs';
 import { default as IAlertColorVariantsExampleHTML } from '@inkline/inkline/components/IAlert/examples/color-variants.html?raw';
 import { default as IAlertDismissibleExampleHTML } from '@inkline/inkline/components/IAlert/examples/dismissible.html?raw';
-import { default as IAlertDismissibleExampleJS } from '@inkline/inkline/components/IAlert/examples/dismissible.js?raw';
+import { default as IAlertDismissibleExampleJS } from '@inkline/inkline/components/IAlert/examples/dismissible.mjs?raw';
 import { default as IAlertContentExampleHTML } from '@inkline/inkline/components/IAlert/examples/content.html?raw';
 import { default as IAlertIconExampleHTML } from '@inkline/inkline/components/IAlert/examples/icon.html?raw';
 import { default as IAlertSizeVariantsExampleHTML } from '@inkline/inkline/components/IAlert/examples/size-variants.html?raw';

@@ -6,7 +6,7 @@ description: You can use the overflow utilities for deciding how content overflo
 <script setup>
 import {
     OverflowBasicExample
-} from '@inkline/inkline/stories/utilities/overflow';
+} from '@inkline/inkline/stories/utilities/overflow/index.mjs';
 import { default as OverflowBasicExampleHTML } from '@inkline/inkline/stories/utilities/overflow/basic.html?raw';
 </script>
 

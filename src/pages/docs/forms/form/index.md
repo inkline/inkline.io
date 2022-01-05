@@ -4,7 +4,7 @@ description: Forms are the main wrapper components for form elements, with power
 ---
 
 <script setup>
-import { manifest } from '@inkline/inkline/components/IForm/manifest';
+import { manifest } from '@inkline/inkline/components/IForm/manifest.mjs';
 import {
     IFormBasicExample,
     IFormDisabledExample,
@@ -12,19 +12,19 @@ import {
     IFormSizeVariantsSmExample,
     IFormSizeVariantsMdExample,
     IFormSizeVariantsLgExample
-} from '@inkline/inkline/components/IForm/examples';
+} from '@inkline/inkline/components/IForm/examples/index.mjs';
 import { default as IFormBasicExampleHTML } from '@inkline/inkline/components/IForm/examples/basic.html?raw';
-import { default as IFormBasicExampleJS } from '@inkline/inkline/components/IForm/examples/basic.js?raw';
+import { default as IFormBasicExampleJS } from '@inkline/inkline/components/IForm/examples/basic.mjs?raw';
 import { default as IFormDisabledExampleHTML } from '@inkline/inkline/components/IForm/examples/disabled.html?raw';
-import { default as IFormDisabledExampleJS } from '@inkline/inkline/components/IForm/examples/disabled.js?raw';
+import { default as IFormDisabledExampleJS } from '@inkline/inkline/components/IForm/examples/disabled.mjs?raw';
 import { default as IFormReadonlyExampleHTML } from '@inkline/inkline/components/IForm/examples/readonly.html?raw';
-import { default as IFormReadonlyExampleJS } from '@inkline/inkline/components/IForm/examples/readonly.js?raw';
+import { default as IFormReadonlyExampleJS } from '@inkline/inkline/components/IForm/examples/readonly.mjs?raw';
 import { default as IFormSizeVariantsSmExampleHTML } from '@inkline/inkline/components/IForm/examples/size-variants-sm.html?raw';
-import { default as IFormSizeVariantsSmExampleJS } from '@inkline/inkline/components/IForm/examples/size-variants-sm.js?raw';
+import { default as IFormSizeVariantsSmExampleJS } from '@inkline/inkline/components/IForm/examples/size-variants-sm.mjs?raw';
 import { default as IFormSizeVariantsMdExampleHTML } from '@inkline/inkline/components/IForm/examples/size-variants-md.html?raw';
-import { default as IFormSizeVariantsMdExampleJS } from '@inkline/inkline/components/IForm/examples/size-variants-md.js?raw';
+import { default as IFormSizeVariantsMdExampleJS } from '@inkline/inkline/components/IForm/examples/size-variants-md.mjs?raw';
 import { default as IFormSizeVariantsLgExampleHTML } from '@inkline/inkline/components/IForm/examples/size-variants-lg.html?raw';
-import { default as IFormSizeVariantsLgExampleJS } from '@inkline/inkline/components/IForm/examples/size-variants-lg.js?raw';
+import { default as IFormSizeVariantsLgExampleJS } from '@inkline/inkline/components/IForm/examples/size-variants-lg.mjs?raw';
 </script>
 
 # Form
