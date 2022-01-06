@@ -21,6 +21,7 @@
     "prism-theme-vars": "0.2.2",
     "prismjs": "1.25.0",
     "qs": "6.10.2",
+    "rollbar": "^2.24.0",
     "vue": "3.2.26",
     "vue-accessible-color-picker": "3.2.0",
     "vue-demi": "0.12.1",

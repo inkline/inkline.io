@@ -13,6 +13,14 @@ declare module '@docsearch/js' {
     }) => {};
 }
 
+declare module 'rollbar' {
+    export default class Rollbar {
+        constructor(options) {}
+
+        error(options) {}
+    }
+}
+
 declare module '*.vue' {
     import type { DefineComponent } from 'vue';
     const component: DefineComponent<{}, {}, any>;
