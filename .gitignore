@@ -4,6 +4,7 @@
 *.local
 dist
 dist-ssr
+src/components.d.ts
 node_modules
 # intellij stuff
 .idea/

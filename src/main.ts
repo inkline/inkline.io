@@ -14,6 +14,8 @@ import '~/main.scss';
 
 const routes = setupLayouts(generatedRoutes);
 
+routes.push({ path: '/storybook' } as any);
+
 export const createApp = ViteSSG(App, {
     routes,
     scrollBehavior (to) {
