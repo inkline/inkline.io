@@ -13,8 +13,6 @@ import '@inkline/inkline/inkline.scss';
 import '~/main.scss';
 
 const routes = setupLayouts(generatedRoutes);
-routes.pop();
-console.log(routes);
 
 export const createApp = ViteSSG(App, {
     routes,
