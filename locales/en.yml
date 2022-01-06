@@ -19,6 +19,7 @@ index:
         title: Build your design system.
         titleHighlight: Fast.
         description: Make components look the way you want, without the hassle. More time to focus on building a great experience for your customers.
+        choose: Choose an example
         styles:
             default: Default
             modern: Modern

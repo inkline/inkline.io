@@ -52,6 +52,11 @@ export default defineComponent({
         </i-row>
         <i-row middle center class="_margin-y:4">
             <i-column class="style-selector">
+                <p class="h5 _margin-top:0">
+                    {{ t(`index.designSystem.choose`) }}
+                    <br>
+                    <icon-fa-solid-arrow-down class="_margin-top:1" />
+                </p>
                 <i-button
                     v-for="style in styles"
                     :key="style"
@@ -74,8 +79,8 @@ export default defineComponent({
                 <design-system-post-card class="_xl:hidden _margin-bottom:2" />
             </i-column>
             <i-column lg="6" xl="4">
-                <design-system-pricing-card class="_xxl:visible _margin-bottom:2" />
-                <design-system-post-card class="_xxl:visible _margin-bottom:2" />
+                <design-system-pricing-card class="_xl:visible _margin-bottom:2" />
+                <design-system-post-card class="_xl:visible _margin-bottom:2" />
             </i-column>
         </i-row>
     </i-header>

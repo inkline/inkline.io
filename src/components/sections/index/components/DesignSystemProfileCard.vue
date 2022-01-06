@@ -53,7 +53,7 @@ export default defineComponent({
                 </div>
             </i-column>
         </i-row>
-        <i-button block color="primary">
+        <i-button block color="primary" href="http://twitter.com/alexgrozav" target="_blank">
             Follow
         </i-button>
     </i-card>

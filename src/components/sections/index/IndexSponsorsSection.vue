@@ -213,19 +213,5 @@ export default defineComponent({
             height: 25px;
         }
     }
-
-    @include breakpoint-down('sm') {
-        img {
-            height: 25px;
-        }
-
-        &[data-sponsor="tidelift"] img {
-            height: 20px;
-        }
-
-        &[data-sponsor="nuxt"] img {
-            height: 20px;
-        }
-    }
 }
 </style>

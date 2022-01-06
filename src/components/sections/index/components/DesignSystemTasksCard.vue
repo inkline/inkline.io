@@ -70,7 +70,7 @@ export default defineComponent({
             </i-progress>
         </i-media>
         <i-button block>
-            Show all tasks
+            Example button
         </i-button>
     </i-card>
 </template>
