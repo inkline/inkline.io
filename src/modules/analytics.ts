@@ -10,7 +10,7 @@ export const install: UserModule = ({ isClient, app }) => {
         app: 'inkline',
         plugins: [
             googleTagManager({
-                trackingId: 'GTM-KD44VC3'
+                containerId: 'GTM-KD44VC3'
             })
         ]
     });
