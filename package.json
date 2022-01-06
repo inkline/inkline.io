@@ -13,9 +13,10 @@
   "dependencies": {
     "@docsearch/css": "3.0.0-alpha.42",
     "@docsearch/js": "3.0.0-alpha.42",
-    "@inkline/inkline": "3.0.2",
+    "@inkline/inkline": "3.0.4",
     "@vueuse/core": "7.3.0",
     "copy-to-clipboard": "3.3.1",
+    "miragejs": "0.1.43",
     "nprogress": "0.2.0",
     "prism-theme-vars": "0.2.2",
     "prismjs": "1.25.0",

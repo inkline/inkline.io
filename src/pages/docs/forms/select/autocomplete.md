@@ -13,6 +13,9 @@ import { default as ISelectAutocompleteExampleHTML } from '@inkline/inkline/comp
 import { default as ISelectAutocompleteExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete.mjs?raw';
 import { default as ISelectAutocompleteAsyncExampleHTML } from '@inkline/inkline/components/ISelect/examples/autocomplete-async.html?raw';
 import { default as ISelectAutocompleteAsyncExampleJS } from '@inkline/inkline/components/ISelect/examples/autocomplete-async.mjs?raw';
+import { useServer } from '@inkline/inkline/__mocks__/useServer.mjs';
+
+useServer();
 </script>
 
 

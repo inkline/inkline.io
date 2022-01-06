@@ -9,6 +9,9 @@ import {
 } from '@inkline/inkline/components/ISelect/examples/index.mjs';
 import { default as ISelectPaginationExampleHTML } from '@inkline/inkline/components/ISelect/examples/pagination.html?raw';
 import { default as ISelectPaginationExampleJS } from '@inkline/inkline/components/ISelect/examples/pagination.mjs?raw';
+import { useServer } from '@inkline/inkline/__mocks__/useServer.mjs';
+
+useServer();
 </script>
 
 

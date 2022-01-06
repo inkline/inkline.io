@@ -9,6 +9,9 @@ import {
 } from '@inkline/inkline/components/ISelect/examples/index.mjs';
 import { default as ISelectAdvancedExampleHTML } from '@inkline/inkline/components/ISelect/examples/advanced.html?raw';
 import { default as ISelectAdvancedExampleJS } from '@inkline/inkline/components/ISelect/examples/advanced.mjs?raw';
+import { useServer } from '@inkline/inkline/__mocks__/useServer.mjs';
+
+useServer();
 </script>
 
 
