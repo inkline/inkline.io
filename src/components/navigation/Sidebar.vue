@@ -399,19 +399,19 @@ export default defineComponent({
                     </router-link>
                 </li>
                 <li>
+                    <a href="https://inkline.io/storybook/" target="_blank">
+                        <i-badge color="pink" class="-storybook">
+                            <img :src="storybookLogo" alt="Storybook">
+                        </i-badge>
+                        <span>Storybook</span>
+                    </a>
+                </li>
+                <li>
                     <a href="https://jsfiddle.net/alexgrozav/0dknfs6L/" target="_blank">
                         <i-badge color="secondary">
                             <icon-fa-solid-code />
                         </i-badge>
                         <span>Playground</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://inkline.io/storybook" target="_blank">
-                        <i-badge color="pink" class="-storybook">
-                            <img :src="storybookLogo" alt="Storybook">
-                        </i-badge>
-                        <span>Storybook</span>
                     </a>
                 </li>
                 <li>
