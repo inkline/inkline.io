@@ -44,10 +44,12 @@ export default defineComponent({
             </i-row>
             <i-row class="lead">
                 <i-column center>
-                    Designed and built with
-                    <icon-fa-solid-heart />
-                    by
-                    <a href="https://grozav.com" target="_blank" rel="noopener">@alexgrozav</a>.
+                    <div class="_display:flex _align-items:center _justify-content:center _flex-wrap:wrap">
+                        Designed and built with
+                        <icon-fa-solid-heart class="_margin-x:1/2" />
+                        by
+                        <a href="https://grozav.com" target="_blank" rel="noopener" class="_margin-left:1/2">@alexgrozav</a>.
+                    </div>
                 </i-column>
             </i-row>
             <i-row class="_text:muted _margin-top:1">
