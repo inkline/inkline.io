@@ -12,9 +12,9 @@ import { scrollBehavior } from '~/config';
 import '@inkline/inkline/inkline.scss';
 import '~/main.scss';
 
-const routes = setupLayouts(generatedRoutes);
-
-routes.push({ path: '/storybook' } as any);
+const routes = [
+    { path: '/storybook' }
+].concat(setupLayouts(generatedRoutes));
 
 export const createApp = ViteSSG(App, {
     routes,
