@@ -13,6 +13,16 @@ import '@inkline/inkline/inkline.scss';
 import '~/main.scss';
 
 const routes = setupLayouts(generatedRoutes);
+const catchAllRoute = routes
+    .find((route) => route.path === '/:all(.*)*');
+
+if (catchAllRoute) {
+    catchAllRoute.beforeEnter = (to) => {
+        return ![
+            '/storybook'
+        ].find((blacklistedPath) => to.path.startsWith(blacklistedPath));
+    };
+}
 
 export const createApp = ViteSSG(App, {
     routes,

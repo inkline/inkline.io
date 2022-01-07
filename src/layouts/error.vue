@@ -17,12 +17,21 @@ export default defineComponent({
 </script>
 
 <template>
-    <main>
+    <main id="error-layout">
+        <navbar type="default" />
         <router-view />
-        <div>
-            <button @click="router.back()">
-                {{ t('button.back') }}
-            </button>
-        </div>
+        <Footer />
     </main>
 </template>
+
+<style lang="scss">
+#error-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    footer {
+        margin-top: auto;
+    }
+}
+</style>

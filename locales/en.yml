@@ -49,3 +49,9 @@ index:
         description:
             Inkline is an MIT licensed open source project and is completely free to use. Inkline only grows thanks to the help and support of its partners, sponsors and backers. Please, consider supporting us!
         button: Become a sponsor
+errors:
+    404:
+        name: Error 404
+        title: Oops! The box inclined
+        description: The page you're looking for no longer exists.
+        button: Go back
