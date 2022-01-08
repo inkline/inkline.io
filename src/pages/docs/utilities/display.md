@@ -47,7 +47,7 @@ And `breakpoint` is one of:
 - `xl`
 - `xxl`
 
-The media queries affect screen widths with the given breakpoint. For example, `._lg:display:none` sets `display: none;` on large screens.
+The media queries affect screen widths with the given breakpoint. For example, `_lg:display:none` sets `display: none;` on large screens.
 
 <example :component="DisplayInlineExample" :html="DisplayInlineExampleHTML"></example>
 

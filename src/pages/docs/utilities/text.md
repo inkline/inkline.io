@@ -68,17 +68,17 @@ You can use the following text alignment utility classes:
 - `_{xs|sm|md|lg|xl|xxl}:text-align:right` or `_{xs|sm|md|lg|xl|xxl}:text:right`
 
 ### Text Wrapping and Overflow
-You can wrap text using the `._white-space:normal` utility class.
+You can wrap text using the `_white-space:normal` utility class.
 
 <example :component="TextWrapExample" :html="TextWrapExampleHTML"></example>
 
-You can also prevent text from wrapping with a `._white-space:nowrap` utility class.
+You can also prevent text from wrapping with a `_white-space:nowrap` utility class.
 
 <example :component="TextNowrapExample" :html="TextNowrapExampleHTML"></example>
 
 Text wrapping utilities also come with breakpoint-specific classes, same as text alignment classes.
 
-For longer content, adding the `._text:truncate` utility class will truncate the text with an ellipsis. Truncation requires `display: inline-block` or `display: block`.
+For longer content, adding the `_text:truncate` utility class will truncate the text with an ellipsis. Truncation requires `display: inline-block` or `display: block`.
 
 <example :component="TextTruncateExample" :html="TextTruncateExampleHTML"></example>
 
@@ -92,7 +92,7 @@ You can use the following white space utility classes:
 - `_{xs|sm|md|lg|xl|xxl}:text:truncate`
 
 ### Word Break
-Prevent long strings of text from breaking your layout by using `._text:break-word`. Behind the scenes, it uses `overflow-wrap: break-word` and `word-break: break-word` for IE & Edge compatibility.
+Prevent long strings of text from breaking your layout by using `_text:break-word`. Behind the scenes, it uses `overflow-wrap: break-word` and `word-break: break-word` for IE & Edge compatibility.
 
 <example :component="TextBreakExample" :html="TextBreakExampleHTML"></example>
 
@@ -147,7 +147,7 @@ You can use the following font weight utility classes:
 - `_font-size:xl` or `_text:xl`
 
 ### Monospace
-Change your text to be monospaced using the `._font-family:monospace` utility.
+Change your text to be monospaced using the `_font-family:monospace` utility.
 
 <example :component="TextFontMonospaceExample" :html="TextFontMonospaceExampleHTML"></example>
 
@@ -156,7 +156,7 @@ You can use the following font weight utility classes:
 - `_font-family:monospace` or `_text:monospace`
 
 ### Text Decoration
-Remove text decoration using the `._text-decoration:none` utility.
+Remove text decoration using the `_text-decoration:none` utility.
 
 <example :component="TextDecorationExample" :html="TextDecorationExampleHTML"></example>
 
@@ -165,7 +165,7 @@ You can use the following text decoration utility classes:
 - `_text-decoration:none` 
 
 ### Muted Text
-Make your text stand out less using the `._text:muted` utility.
+Make your text stand out less using the `_text:muted` utility.
 
 <example :component="TextMutedExample" :html="TextMutedExampleHTML"></example>
 
@@ -174,7 +174,7 @@ You can use the following text muted utility classes:
 - `_text:muted` or `_color:muted` 
 
 ### Text Reset
-Make your text or link inherit the parent's color using the `._text:reset` utility.
+Make your text or link inherit the parent's color using the `_text:reset` utility.
 
 <example :component="TextResetExample" :html="TextResetExampleHTML"></example>
 

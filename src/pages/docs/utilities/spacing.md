@@ -81,6 +81,6 @@ Here are some examples of these utility classes:
 <example type="spacing" :component="SpacingRightExample" :html="SpacingRightExampleHTML"></example>
 
 ### Horizontal Centering
-You can set a `left` and `right` margin using the `x` side parameter, such as `._margin-x:auto`. The `._margin-x:auto` class is useful for horizontally centering fixed-width block level content.
+You can set a `left` and `right` margin using the `x` side parameter, such as `_margin-x:auto`. The `_margin-x:auto` class is useful for horizontally centering fixed-width block level content.
 
 <example type="spacing" :component="SpacingHorizontalCenterExample" :html="SpacingHorizontalCenterExampleHTML"></example>
