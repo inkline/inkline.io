@@ -42,6 +42,7 @@ export const createApp = ViteSSG(App, {
         .map((module) => module.install?.(ctx));
 
     ctx.app.use(Inkline, {
-        components
+        components,
+        colorMode: 'light'
     });
 });
