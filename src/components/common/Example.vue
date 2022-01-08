@@ -120,7 +120,9 @@ export default defineComponent({
 @import "@inkline/inkline/css/preview";
 
 .example {
-    ----padding: #{spacing('1/2')};
+    > .card-body {
+        padding: spacing('1/2');
+    }
 
     .example-body {
         display: block;
@@ -137,6 +139,16 @@ export default defineComponent({
 
         .layout + .layout {
             margin-top: spacing();
+        }
+
+        > picture {
+            margin: 0;
+        }
+
+        > img,
+        > picture > img {
+            margin: spacing('1/2');
+            max-width: calc(100% - #{spacing()});
         }
 
         @extend %border-utilities-preview;
