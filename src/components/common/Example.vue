@@ -169,6 +169,16 @@ export default defineComponent({
             }
         }
 
+        .tab {
+            .tab-body {
+                > pre {
+                    > code {
+                        white-space: pre;
+                    }
+                }
+            }
+        }
+
         .clipboard {
             position: absolute;
             top: calc(var(--spacing) * 2 + 56px);
