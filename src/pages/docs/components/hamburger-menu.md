@@ -44,11 +44,6 @@ Use props to modify the component's design and behavior.
 
 <props-table :manifest="manifest"></props-table>
 
-#### Slots
-Use slots to insert custom content into well-defined component locations.
-
-<slots-table :manifest="manifest"></slots-table>
-
 #### Events
 Use events to react to something happening inside the component.
 
