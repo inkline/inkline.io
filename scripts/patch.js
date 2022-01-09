@@ -38,7 +38,7 @@ console.log('[patch-vue-directive-ssr] patched successful');
     const content = fs.readFileSync(dependencyPath, 'utf-8');
     const patched = content
         .replace(/j\.async =/m, 'j.defer =')
-        .replace(/f\.parentNode\.insertBefore/m, 'd.body.append');
+        .replace(/f\.parentNode\.insertBefore/m, 'd.body.appendChild');
 
     fs.writeFileSync(dependencyPath, patched, 'utf-8');
 });
