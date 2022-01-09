@@ -35,9 +35,10 @@ console.log('[patch-vue-directive-ssr] patched successful');
     path.resolve(__dirname, '..', 'node_modules', '@analytics', 'google-tag-manager', 'lib', 'analytics-plugin-google-tag-manager.browser.cjs.js'),
     path.resolve(__dirname, '..', 'node_modules', '@analytics', 'google-tag-manager', 'lib', 'analytics-plugin-google-tag-manager.browser.es.js')
 ].forEach((dependencyPath) => {
-    const reg = /j.async =/m;
     const content = fs.readFileSync(dependencyPath, 'utf-8');
-    const patched = content.replace(reg, 'j.defer =');
+    const patched = content
+        .replace(/j\.async =/m, 'j.defer =')
+        .replace(/f\.parentNode\.insertBefore/m, 'd.body.append');
 
     fs.writeFileSync(dependencyPath, patched, 'utf-8');
 });
