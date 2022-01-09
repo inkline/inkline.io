@@ -3,7 +3,7 @@ import Rollbar from 'rollbar';
 
 // https://docs.rollbar.com/docs/vue-js
 export const install: UserModule = ({ isClient, app }) => {
-    if (!isClient) { return; }
+    if (!isClient || process.env.NODE_ENV === 'development') { return; }
 
     const rollbar = new Rollbar({
         accessToken: 'a666e99cf45947f3b8ea418609dfd1ba',
