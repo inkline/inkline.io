@@ -55,7 +55,7 @@ export default defineComponent({
                 <p class="h5 _margin-top:0">
                     {{ t(`index.designSystem.choose`) }}
                     <br>
-                    <icon-fa-solid-arrow-down class="_margin-top:1" />
+                    <icon-la-arrow-down class="_margin-top:1" />
                 </p>
                 <i-button
                     v-for="style in styles"
