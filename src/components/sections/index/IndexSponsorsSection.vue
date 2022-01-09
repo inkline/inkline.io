@@ -103,7 +103,7 @@ export default defineComponent({
                             target="_blank"
                             rel="sponsored noopener"
                         >
-                            <span class="_visibility:hidden">
+                            <span class="_visually-hidden">
                                 {{ sponsor.name }}
                             </span>
                         </a>
