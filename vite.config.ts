@@ -53,8 +53,8 @@ export default defineConfig({
          */
         pages({
             extensions: ['vue', 'md'],
-            onRoutesGenerated: async (routes) => {
-                await sitemapResolver(routes);
+            onRoutesGenerated: (routes) => {
+                sitemapResolver(routes).then(() => console.log('Sitemap generated.'));
 
                 return routes;
             }
