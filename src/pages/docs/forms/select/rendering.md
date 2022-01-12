@@ -1,5 +1,5 @@
 ---
-title: Select Rendering - Inkline
+title: Select - Rendering - Inkline
 description: Use the various rendering options for the select options and define your data without restrictions. 
 ---
 
@@ -17,8 +17,7 @@ import { default as ISelectRenderingScopedSlotExampleHTML } from '@inkline/inkli
 import { default as ISelectRenderingScopedSlotExampleJS } from '@inkline/inkline/components/ISelect/examples/rendering-scoped-slot.mjs?raw';
 </script>
 
-
-# Select Rendering
+# Select - Rendering
 ## Use the various rendering options for the select options and define your data without restrictions
 
 ### Value by Path

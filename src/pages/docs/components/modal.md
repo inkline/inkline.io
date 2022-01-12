@@ -18,8 +18,6 @@ import { default as IModalSizeVariantsExampleHTML } from '@inkline/inkline/compo
 import { default as IModalSizeVariantsExampleJS } from '@inkline/inkline/components/IModal/examples/size-variants.mjs?raw';
 </script>
 
-
-
 # Modal
 ## Modals are dialogs that can be used for lightboxes, user notifications, or completely custom content.
 

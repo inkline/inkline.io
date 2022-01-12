@@ -1,5 +1,5 @@
 ---
-title: Form Validation Methods - Inkline
+title: Form Validation - Methods - Inkline
 description: The form validation framework wouldn't be complete without dynamically added fields and groups.
 ---
 
@@ -14,7 +14,7 @@ import { default as IFormValidationMethodsGroupsArrayExampleHTML } from '@inklin
 import { default as IFormValidationMethodsGroupsArrayExampleJS } from '@inkline/inkline/stories/forms/validation/methods/groups-array.mjs?raw';
 </script>
 
-# Form Validation Methods
+# Form Validation - Methods
 ## The form validation framework wouldn't be complete without dynamically added fields and groups.
 
 Inkline provides a simple API for adding and removing fields.

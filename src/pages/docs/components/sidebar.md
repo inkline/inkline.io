@@ -40,7 +40,6 @@ import { default as ISidebarRoutingActiveExampleHTML } from '@inkline/inkline/co
 import { default as ISidebarRoutingActiveExampleJS } from '@inkline/inkline/components/ISidebar/examples/routing-active.mjs?raw';
 </script>
 
-
 # Sidebar
 ## A responsive navigation sidebar that includes support for branding, navigation, forms and more.
 

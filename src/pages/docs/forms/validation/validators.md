@@ -1,5 +1,5 @@
 ---
-title: Form Validators - Inkline
+title: Form Validation - Validators - Inkline
 description: Validators are configurable functions used to check whether an input value matches a specific criteria.
 ---
 
@@ -41,7 +41,7 @@ import { default as IFormValidationValidatorsCustomExampleHTML } from '@inkline/
 import { default as IFormValidationValidatorsCustomExampleJS } from '@inkline/inkline/stories/forms/validation/validators/custom.mjs?raw';
 </script>
 
-# Form Validators
+# Form Validation - Validators
 ## Validators are configurable functions used to check whether an input value matches a specific criteria.
 
 There are several validation options that can be used in the `validators` field:

@@ -1,5 +1,5 @@
 ---
-title: Select Autocomplete - Inkline
+title: Select - Autocomplete - Inkline
 description: The select autocomplete functionality allows you to search for a specific option with result highlighting. 
 ---
 
@@ -19,7 +19,7 @@ useServer();
 </script>
 
 
-# Select Autocomplete
+# Select - Autocomplete
 ## The select autocomplete functionality allows you to search for a specific option with result highlighting
 
 ### Basic Example

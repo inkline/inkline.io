@@ -1,5 +1,5 @@
 ---
-title: Nuxt.js CLI Installation - Inkline
+title: Nuxt.js Installation - Inkline
 description: Install Inkline for any application created using Nuxt.js.
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: Local Variables - Design System - Inkline
+title: Design System - Local Variables - Inkline
 description: Configure the local CSS Variables to change the look and feel of individual components.
 ---
 
-# Local Variables
+# Design System - Local Variables
 ## Configure the local CSS Variables to change the look and feel of individual components.
 
 Inkline's local CSS Variables are component-specific and directly reference the global CSS Variables. Changing any global variable will propagate to the components.

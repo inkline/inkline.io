@@ -1,5 +1,5 @@
 ---
-title: Form Validation Schema - Inkline
+title: Form Validation - Schema - Inkline
 description:  The validation schema defines the form input fields, groups and how they work together.
 ---
 
@@ -26,7 +26,7 @@ import { default as IFormValidationSchemaGroupsArrayExampleHTML } from '@inkline
 import { default as IFormValidationSchemaGroupsArrayExampleJS } from '@inkline/inkline/stories/forms/validation/schema/groups-array.mjs?raw';
 </script>
 
-# Form Validation Schema
+# Form Validation - Schema
 ## The validation schema defines the form input fields, groups and how they work together.
 
 From the <router-link :to="{ name: 'docs-forms-validation' }">Overview</router-link> page we've learned:

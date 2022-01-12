@@ -1,5 +1,5 @@
 ---
-title: Select Pagination - Inkline
+title: Select - Pagination - Inkline
 description: Pagination is handled using a simple and efficient infinite scrolling algorithm. The select component is used for selecting a value from a large list of options, with autocomplete support. 
 ---
 
@@ -14,8 +14,7 @@ import { useServer } from '@inkline/inkline/__mocks__/useServer.mjs';
 useServer();
 </script>
 
-
-# Select Pagination
+# Select - Pagination
 ## Pagination is handled using a simple and efficient infinite scrolling algorithm
 
 ### Basic Example

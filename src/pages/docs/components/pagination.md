@@ -27,7 +27,6 @@ import { default as IPaginationSizeVariantsExampleHTML } from '@inkline/inkline/
 import { default as IPaginationSizeVariantsExampleJS } from '@inkline/inkline/components/IPagination/examples/size-variants.mjs?raw';
 </script>
 
-
 # Pagination
 ## Pagination provides navigation for large series of related content.
 

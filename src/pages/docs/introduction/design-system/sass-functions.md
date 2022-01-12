@@ -1,9 +1,9 @@
 ---
-title: Sass Functions - Design System - Inkline
+title: Design System - Sass Functions - Inkline
 description: Configure the global CSS Variables of the design system to instantly change the look and feel of your application.
 ---
 
-# Sass Functions
+# Design System - Sass Functions
 ## Configure the global CSS Variables of the design system to instantly change the look and feel of your application.
 
 All of Inkline's Global CSS Variables propagate throughout the application and are used for design elements such as spacing, border, colors, and typography.

@@ -92,7 +92,6 @@ import { default as ColorStateWarningBackgroundExampleHTML } from '@inkline/inkl
 import { default as ColorStateWarningTextExampleHTML } from '@inkline/inkline/stories/utilities/color/state-warning-text.html?raw';
 </script>
 
-
 # Color Utilities
 
 ## Inkline uses a beautiful, consistent color scheme across the framework. 

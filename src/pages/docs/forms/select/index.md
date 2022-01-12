@@ -45,7 +45,6 @@ import { default as ISelectReadonlyExampleHTML } from '@inkline/inkline/componen
 import { default as ISelectReadonlyExampleJS } from '@inkline/inkline/components/ISelect/examples/readonly.mjs?raw';
 </script>
 
-
 # Select
 ## Form component used for selecting a value from a large list of options, with autocomplete and pagination support
 

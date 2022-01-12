@@ -1,5 +1,5 @@
 ---
-title: Global Variables - Design System - Inkline
+title: Design System - Global Variables - Inkline
 description: Configure the global CSS Variables of the design system to instantly change the look and feel of your application.
 ---
 
@@ -23,7 +23,7 @@ import ColorPickerPackage from "vue-accessible-color-picker";
 const { ColorPicker } = ColorPickerPackage;
 </script>
 
-# Global Variables
+# Design System - Global Variables
 ## Configure the global CSS Variables of the design system to instantly change the look and feel of your application.
 
 All of Inkline's Global CSS Variables propagate throughout the application and are used for design elements such as spacing, border, colors, and typography.

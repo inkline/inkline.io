@@ -32,7 +32,6 @@ import { default as INavbarRoutingExampleHTML } from '@inkline/inkline/component
 import { default as INavbarRoutingActiveExampleHTML } from '@inkline/inkline/components/INavbar/examples/routing-active.html?raw';
 </script>
 
-
 # Navbar
 ## A responsive navigation header that includes support for branding, navigation, forms and more.
 
