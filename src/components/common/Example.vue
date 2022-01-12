@@ -120,7 +120,9 @@ export default defineComponent({
 @import "@inkline/inkline/css/preview";
 
 .example {
-    ----padding: #{spacing('1/2')};
+    > .card-body {
+        padding: spacing('1/2');
+    }
 
     .example-body {
         display: block;
@@ -139,6 +141,16 @@ export default defineComponent({
             margin-top: spacing();
         }
 
+        > picture {
+            margin: 0;
+        }
+
+        > img,
+        > picture > img {
+            margin: spacing('1/2');
+            max-width: calc(100% - #{spacing()});
+        }
+
         @extend %border-utilities-preview;
         @extend %color-utilities-preview;
         @extend %flex-utilities-preview;
@@ -154,6 +166,16 @@ export default defineComponent({
 
             .tab-title {
                 min-width: 100px;
+            }
+        }
+
+        .tab {
+            .tab-body {
+                > pre {
+                    > code {
+                        white-space: pre;
+                    }
+                }
             }
         }
 

@@ -17,12 +17,12 @@ import { default as OverlayLinkExampleHTML } from '@inkline/inkline/stories/util
 ## Make an element overlay its container by adding overlay utilities. 
 
 ### Basic Example
-Add the `._overlay` utility class to an element to make it cover the entire containing block. The containing block refers to a parent element with `position: relative;`.
+Add the `_overlay` utility class to an element to make it cover the entire containing block. The containing block refers to a parent element with `position: relative;`.
 
 <example :component="OverlayBasicExample" :html="OverlayBasicExampleHTML"></example>
 
 ### Overlay Link
 
-Add the `._overlay-link` utility class to a link to make the entire containing block clickable using a `::after` pseudo element. In most cases, the containing block refers to the parent element with `position: relative;`.
+Add the `_overlay-link` utility class to a link to make the entire containing block clickable using a `::after` pseudo element. In most cases, the containing block refers to the parent element with `position: relative;`.
 
 <example type="card" :component="OverlayLinkExample" :html="OverlayLinkExampleHTML"></example>

@@ -44,7 +44,7 @@ You can use border addition and removal utilities together with border color uti
 
 <example type="border-utilities -with-border" :component="BorderColorNeutralExample" :html="BorderColorNeutralExampleHTML"></example>
 
-Position specific border colors are also available. Use `._border-{position}-color-{variant}` to set the color of a specific border side (i.e. `._border-top-color-primary`). 
+Position specific border colors are also available. Use `_border-{position}-color:{variant}` to set the color of a specific border side (i.e. `_border-top-color:primary`). 
 
 ### Border Radius
 You can use border radius utilities to add rounded corners to your elements.

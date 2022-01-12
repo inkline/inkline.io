@@ -2,12 +2,11 @@ const path = require('path');
 const glob = require('glob');
 const fs = require('fs');
 
-const pkgName = 'patch-vue-directive-ssr';
-
 [
     ...glob.sync(path.resolve(__dirname, '..', 'node_modules', '**', 'compiler-ssr.cjs.js')),
     ...glob.sync(path.resolve(__dirname, '..', 'node_modules', '**', 'compiler-sfc.esm-browser.js'))
 ].forEach((dependencyPath) => {
+    const pkgName = 'patch-vue-directive-ssr';
     const reg = /^(\s*const directiveTransform = context\.directiveTransforms\[prop\.name])(.*)$/m;
     const content = fs.readFileSync(dependencyPath, 'utf-8');
 
@@ -25,9 +24,22 @@ const pkgName = 'patch-vue-directive-ssr';
 
     if (replaced) {
         fs.writeFileSync(dependencyPath, patched, 'utf-8');
-        console.log(`[${pkgName}] patched successful`);
     } else if (!found) {
         console.error(`[${pkgName}] can't find entry to patch, lastest version tested is ${dependencyPath}@3.0.7. If you on longer face any build issues with directive SSR/SSG, you can remove this patch safely.`);
         process.exit(1);
     }
 });
+console.log('[patch-vue-directive-ssr] patched successful');
+
+[
+    path.resolve(__dirname, '..', 'node_modules', '@analytics', 'google-tag-manager', 'lib', 'analytics-plugin-google-tag-manager.browser.cjs.js'),
+    path.resolve(__dirname, '..', 'node_modules', '@analytics', 'google-tag-manager', 'lib', 'analytics-plugin-google-tag-manager.browser.es.js')
+].forEach((dependencyPath) => {
+    const content = fs.readFileSync(dependencyPath, 'utf-8');
+    const patched = content
+        .replace(/j\.async =/m, 'j.defer =')
+        .replace(/f\.parentNode\.insertBefore/m, 'd.body.appendChild');
+
+    fs.writeFileSync(dependencyPath, patched, 'utf-8');
+});
+console.log('[@analytics/google-tag-manager] patched successful');

@@ -41,7 +41,7 @@ import { default as FlexOrderExampleHTML } from '@inkline/inkline/stories/utilit
 ## Use flexbox utilities to modify the layout, alignment, and sizing of components and more. 
 
 ### Flex Behavior
-Apply `display: flex` using CSS or the `._display-flex` helper to create a flexbox container and transform direct children elements into flex items. 
+Apply `display: flex` using CSS or the `_display:flex` helper to create a flexbox container and transform direct children elements into flex items. 
 
 <example type="flex" :component="FlexExample" :html="FlexExampleHTML"></example>
 
@@ -79,7 +79,7 @@ Flexbox direction utilities can also be applied responsively. Here are the avail
 - `._{xs|sm|md|lg|xl|xxl}:flex-direction:column-reverse`
 
 ### Justify Content
-Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis if `flex-direction: row`, y-axis if `flex-direction: column`).
+Use `_justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis if `flex-direction: row`, y-axis if `flex-direction: column`).
 
 <example type="flex" :component="FlexJustifyContentExample" :html="FlexJustifyContentExampleHTML"></example>
 
@@ -117,7 +117,7 @@ Flexbox align items utilities can also be applied responsively. Here are the ava
 - `._align-items-{xs|sm|md|lg|xl|xxl}-stretch`
 
 ### Align Self
-Use `align-self` utilities on a flexbox item to change the alignment of the item on the secondary axis (the y-axis if `flex-direction: row`, x-axis if `flex-direction: column`).
+Use `_align-self` utilities on a flexbox item to change the alignment of the item on the secondary axis (the y-axis if `flex-direction: row`, x-axis if `flex-direction: column`).
 
 <example type="flex -tall" :component="FlexAlignSelfExample" :html="FlexAlignSelfExampleHTML"></example>
 
@@ -136,7 +136,7 @@ Flexbox align self utilities can also be applied responsively. Here are the avai
 
 
 ### Align Content
-Use `align-content` utilities on flexbox containers to align flex content on the secondary axis. You can use one of `start`, `end`, `center`, `between`, `around`, or `stretch`.
+Use `_align-content` utilities on flexbox containers to align flex content on the secondary axis. You can use one of `start`, `end`, `center`, `between`, `around`, or `stretch`.
 
 For demonstration purposes, the examples below use `._flex-wrap:wrap`, an increased `height`, and large number of items.
 
@@ -158,7 +158,7 @@ Flexbox shrink and grow utilities can also be applied responsively. Here are the
 - `._{xs|sm|md|lg|xl|xxl}:align-content:space-stretch`
 
 ### Fill
-Use `._flex:fill` utilities on a on a series of flexbox items to force them into widths equal to their content.
+Use `_flex:fill` utilities on a on a series of flexbox items to force them into widths equal to their content.
 
 <example type="flex" :component="FlexFillExample" :html="FlexFillExampleHTML"></example>
 
@@ -168,11 +168,11 @@ Flexbox fill utilities can also be applied responsively. Here are the available 
 - `._{xs|sm|md|lg|xl|xxl}:flex:fill`
 
 ### Grow and shrink
-Use `._flex-grow:1` and `_flex-grow:0` utilities to toggle a flex item’s ability to grow to fill available space. In the example below. A value of `1` uses all available space it can, while allowing the remaining two flex items their necessary space.
+Use `_flex-grow:1` and `_flex-grow:0` utilities to toggle a flex item’s ability to grow to fill available space. In the example below. A value of `1` uses all available space it can, while allowing the remaining two flex items their necessary space.
 
 <example type="flex" :component="FlexGrowExample" :html="FlexGrowExampleHTML"></example>
 
-Use the `._flex-shrink:1` and `._flex-shrink:0` utilities to toggle a flex item’s ability to shrink if necessary. This can be used together with a `width: 100%` div to make some flex items cover as little space as possible.
+Use the `_flex-shrink:1` and `_flex-shrink:0` utilities to toggle a flex item’s ability to shrink if necessary. This can be used together with a `width: 100%` div to make some flex items cover as little space as possible.
 
 <example type="flex" :component="FlexShrinkExample" :html="FlexShrinkExampleHTML"></example>
 
@@ -193,7 +193,7 @@ When you mix flex alignments with auto margins you can obtain some pretty unique
 <example type="flex" :component="FlexMarginAutoExample" :html="FlexMarginAutoExampleHTML"></example>
 
 ### Wrapping
-Change how flex items wrap in a flex container. To have wrapping disabled (browser default) use `._flex-wrap:nowrap`. To enable wrapping, use `._flex-wrap:wrap`, or reverse wrapping with `._flex-wrap:wrap-reverse`.
+Change how flex items wrap in a flex container. To have wrapping disabled (browser default) use `_flex-wrap:nowrap`. To enable wrapping, use `_flex-wrap:wrap`, or reverse wrapping with `_flex-wrap:wrap-reverse`.
 
 <example type="flex" :component="FlexWrapExample" :html="FlexWrapExampleHTML"></example>
 
@@ -207,7 +207,7 @@ Flexbox shrink and grow utilities can also be applied responsively. Here are the
 - `._{xs|sm|md|lg|xl|xxl}:flex-wrap:nowrap`
 
 ### Order
-You can change the order of flex items with a handful of order utilities. You can use `._order:first` to make an item first or `._order:last` to make an item last. You can use `_order:{value}` (where value can be a number from `0` to `12`) to change the order of elements to a specific position.
+You can change the order of flex items with a handful of order utilities. You can use `_order:first` to make an item first or `_order:last` to make an item last. You can use `_order:{value}` (where value can be a number from `0` to `12`) to change the order of elements to a specific position.
 
 <example type="flex" :component="FlexOrderExample" :html="FlexOrderExampleHTML"></example>
 

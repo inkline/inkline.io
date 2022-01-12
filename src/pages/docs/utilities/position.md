@@ -39,7 +39,7 @@ You can position an element at the bottom of the viewport. This is usually used 
 ~~~
 
 ### Sticky Top
-Position an element at the top of the viewport, but only after you scroll past it. The `._sticky-top` utility uses `position: sticky`, which isn’t fully supported in all browsers.
+Position an element at the top of the viewport, but only after you scroll past it. The `_sticky-top` utility uses `position: sticky`, which isn’t fully supported in all browsers.
 
 IE11 and IE10 will render `position: sticky` as `position: relative`. We wrap the styles in a `@supports` query, limiting the stickiness to only browsers that can render it properly.
 

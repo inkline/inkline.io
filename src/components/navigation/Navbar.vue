@@ -19,10 +19,14 @@ export default defineComponent({
     setup () {
         const { t } = useI18n();
         const inkline = inject<Prototype>('inkline', {} as any);
-        const colorMode = ref(inkline.options.colorMode);
+        let colorMode = ref(inkline.options.colorMode);
+
+        if (colorMode.value === 'system') {
+            colorMode.value = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
 
         const setColorMode = () => {
-            const mode = inkline.options.colorMode === 'dark' ? 'light' : 'dark';
+            const mode = colorMode.value === 'dark' ? 'light' : 'dark';
 
             inkline.options.colorMode = mode;
             colorMode.value = mode;

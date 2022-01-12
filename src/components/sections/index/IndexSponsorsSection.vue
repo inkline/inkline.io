@@ -19,7 +19,9 @@ const sponsors = [
         url: 'https://vueschool.io',
         image: {
             light: vueSchoolImageLight,
-            dark: vueSchoolImageDark
+            dark: vueSchoolImageDark,
+            height: 60,
+            width: 282
         }
     },
     {
@@ -27,7 +29,9 @@ const sponsors = [
         url: 'https://m.do.co/c/b3ab46156be7',
         image: {
             light: DigitalOceanImageLight,
-            dark: DigitalOceanImageDark
+            dark: DigitalOceanImageDark,
+            height: 60,
+            width: 358
         }
     },
     {
@@ -35,7 +39,9 @@ const sponsors = [
         url: 'https://icons8.com?ref=alexgrozav',
         image: {
             light: icons8ImageLight,
-            dark: icons8ImageDark
+            dark: icons8ImageDark,
+            height: 60,
+            width: 195
         }
     },
     // {
@@ -43,7 +49,9 @@ const sponsors = [
     //     url: 'https://tidelift.com',
     //     image: {
     //         light: tideliftImageLight,
-    //         dark: tideliftImageDark
+    //         dark: tideliftImageDark,
+    //         height: 60,
+    //         width: 300
     //     }
     // },
     {
@@ -51,7 +59,9 @@ const sponsors = [
         url: 'https://nuxtjs.org',
         image: {
             light: nuxtImageLight,
-            dark: nuxtImageDark
+            dark: nuxtImageDark,
+            height: 60,
+            width: 288
         }
     }
 ];
@@ -92,9 +102,13 @@ export default defineComponent({
                             :href="sponsor.url"
                             target="_blank"
                             rel="sponsored noopener"
-                        />
-                        <img class="image -light" height="45" :src="sponsor.image.light" :alt="sponsor.name">
-                        <img class="image -dark" height="45" :src="sponsor.image.dark" :alt="sponsor.name">
+                        >
+                            <span class="_visually-hidden">
+                                {{ sponsor.name }}
+                            </span>
+                        </a>
+                        <img class="image -light" :width="sponsor.image.width" :height="sponsor.image.height" :src="sponsor.image.light" :alt="sponsor.name">
+                        <img class="image -dark" :width="sponsor.image.width" :height="sponsor.image.height" :src="sponsor.image.dark" :alt="sponsor.name">
                     </div>
                 </div>
             </i-column>

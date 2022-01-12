@@ -30,7 +30,8 @@ export default defineComponent({
             </div>
         </div>
         <p>
-            Web development enthusiast. Former Envato author. Creator of Inkline. Generally awesome.
+            Front-end development enthusiast. Loves coding, designing, writing, drawing, and painting. The mind behind
+            Inkline. Generally awesome.
         </p>
         <hr>
         <i-row class="_margin-bottom:1">
