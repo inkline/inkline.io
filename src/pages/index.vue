@@ -4,7 +4,6 @@
         <index-os-awards-section class="_lg:hidden" />
         <hr>
         <index-ui-ux-dx-section />
-        <hr>
         <index-sponsors-section />
         <index-design-system-section />
         <!--<index-example-embed-section />-->

@@ -132,9 +132,9 @@ export default defineComponent({
 @import "@inkline/inkline/css/mixins";
 
 @include i-header() {
-    background: transparent;
-
     @include variant('light') {
+        ----background: var(--color--gray-05);
+
         .sponsor img {
             &.-light {
                 display: block;
@@ -147,6 +147,8 @@ export default defineComponent({
     }
 
     @include variant('dark') {
+        ----background: var(--color--gray-85);
+
         .sponsor img {
             &.-light {
                 display: none;
@@ -193,7 +195,7 @@ export default defineComponent({
 
     img {
         transition: all 0.3s ease;
-        opacity: 0.5;
+        opacity: 0.66;
         height: 45px;
         width: auto;
         filter: grayscale(100%);
