@@ -155,6 +155,7 @@ export default defineComponent({
         @extend %color-utilities-preview;
         @extend %flex-utilities-preview;
         @extend %spacing-utilities-preview;
+        @extend %sizing-utilities-preview;
         @extend %card-preview;
         @extend %layout-preview;
         @extend %grid-preview;

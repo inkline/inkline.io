@@ -14,7 +14,7 @@
     "@analytics/google-tag-manager": "0.5.1",
     "@docsearch/css": "3.0.0-alpha.42",
     "@docsearch/js": "3.0.0-alpha.42",
-    "@inkline/inkline": "3.0.4",
+    "@inkline/inkline": "3.0.5",
     "@vueuse/core": "7.3.0",
     "analytics": "^0.7.21",
     "copy-to-clipboard": "3.3.1",

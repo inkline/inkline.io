@@ -100,6 +100,9 @@ export default defineComponent({
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-easing);
     transition-property: background-color;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 
     .logo {
         height: 24px;
