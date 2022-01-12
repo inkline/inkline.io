@@ -20,7 +20,7 @@ import { sitemapResolver } from './scripts/sitemap';
 /**
  * @docs https://vitejs.dev/config/
  */
-export default defineConfig({
+export default defineConfig(({ command }) => ({
     resolve: {
         /**
          * @docs https://vitejs.dev/config/#resolve-alias
@@ -54,7 +54,9 @@ export default defineConfig({
         pages({
             extensions: ['vue', 'md'],
             onRoutesGenerated: (routes) => {
-                sitemapResolver(routes).then(() => console.log('Sitemap generated.'));
+                if (command === 'build') {
+                    sitemapResolver(routes).then(() => console.log('Sitemap generated.'));
+                }
 
                 return routes;
             }
@@ -203,4 +205,4 @@ export default defineConfig({
             scss: { charset: false }
         }
     }
-});
+}));

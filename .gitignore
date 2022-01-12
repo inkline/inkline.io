@@ -1,13 +1,22 @@
 .DS_Store
-.vite-ssg-dist
-.vite-ssg-temp
 *.local
+
+# Node
+node_modules
+
+# Build
 dist
 dist-ssr
-src/components.d.ts
-node_modules
-# intellij stuff
+.vite-ssg-dist
+.vite-ssg-temp
+
+# IDE
 .idea/
-# logs
+
+# Logs
 *.log
 coverage
+
+# Generated
+src/components.d.ts
+public/sitemap.xml
