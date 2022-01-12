@@ -27,5 +27,5 @@ export const sitemapResolver = async (routes: { path: string; component: string;
     }
 
     const sitemap = sitemapTemplate({ entries });
-    await fs.writeFile(path.resolve(__dirname, '..', 'dist', 'sitemap.xml'), sitemap);
+    await fs.writeFile(path.resolve(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
 };
