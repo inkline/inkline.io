@@ -5,17 +5,17 @@ import pages from 'vite-plugin-pages';
 import layouts from 'vite-plugin-vue-layouts';
 import markdown from 'vite-plugin-md';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
-import { imagetools } from 'vite-imagetools'
+import { imagetools } from 'vite-imagetools';
 import i18n from '@intlify/vite-plugin-vue-i18n';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
 import components from 'unplugin-vue-components/vite';
-
 import markdownPrism from 'markdown-it-prism';
 // @ts-expect-error missing types
 import markdownNamedHeadings from 'markdown-it-named-headings';
 // @ts-expect-error missing types
 import markdownLinkAttributes from 'markdown-it-link-attributes';
+import { sitemapResolver } from './scripts/sitemap';
 
 /**
  * @docs https://vitejs.dev/config/
@@ -52,7 +52,12 @@ export default defineConfig({
          * @docs https://github.com/hannoeru/vite-plugin-pages
          */
         pages({
-            extensions: ['vue', 'md']
+            extensions: ['vue', 'md'],
+            onRoutesGenerated: async (routes) => {
+                await sitemapResolver(routes);
+
+                return routes;
+            }
         }),
 
         /**
