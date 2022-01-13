@@ -7,7 +7,7 @@ import generatedRoutes from 'virtual:generated-pages';
 import { createHead } from '@vueuse/head';
 import App from '~/App.vue';
 
-import { Inkline } from '@inkline/inkline';
+import { Inkline, components } from '@inkline/inkline';
 import { scrollBehavior } from '~/config';
 
 import '@inkline/inkline/inkline.scss';
@@ -46,6 +46,7 @@ export const createApp = ViteSSG(App, {
 
     ctx.app.use(head);
     ctx.app.use(Inkline, {
+        components,
         colorMode: 'light'
     });
 });

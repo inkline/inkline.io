@@ -19,25 +19,6 @@ import markdownLinkAttributes from 'markdown-it-link-attributes';
 import { sitemapResolver } from './scripts/sitemap';
 
 /**
- * Resolver for Inkline
- *
- * @link https://github.com/inkline/inkline
- */
-export function InklineResolver (): ComponentResolver {
-    return {
-        type: 'component',
-        resolve: (name: string) => {
-            if (name.match(/^I[A-Z]/)) {
-                return {
-                    importName: name,
-                    path: '@inkline/inkline'
-                };
-            }
-        }
-    };
-}
-
-/**
  * @docs https://vitejs.dev/config/
  */
 export default defineConfig(({ command }) => ({
@@ -97,8 +78,7 @@ export default defineConfig(({ command }) => ({
             resolvers: [
                 iconsResolver({
                     prefix: 'icon'
-                }),
-                InklineResolver()
+                })
             ]
         }),
 
