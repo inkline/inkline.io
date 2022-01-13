@@ -19,8 +19,8 @@ import { manifest as sizesManifest } from '@inkline/inkline/css/variables/sizes/
 import { manifest as spacingManifest } from '@inkline/inkline/css/variables/spacing/manifest.mjs';
 import { manifest as typographyManifest } from '@inkline/inkline/css/variables/typography/manifest.mjs';
 import { manifest as zIndexManifest } from '@inkline/inkline/css/variables/z-index/manifest.mjs';
-import ColorPickerPackage from "vue-accessible-color-picker";
-const { ColorPicker } = ColorPickerPackage;
+
+import { ColorPicker } from "vue-accessible-color-picker";
 </script>
 
 # Design System - Global Variables
@@ -85,7 +85,7 @@ Here are all the Global CSS Variables that you can configure:
         </template>
         <template #copy-button>
             <span class="_visually-hidden">Copy color</span>
-            <i-icon name="far-clone"></i-icon>
+            <icon-fa-regular-clone></icon-fa-regular-clone>
         </template>
         <template #format-switch-button>
             <span class="_visually-hidden">Switch format</span>
