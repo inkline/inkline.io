@@ -403,15 +403,19 @@ export default defineComponent({
                         <i-badge color="pink" class="-storybook">
                             <img :src="storybookLogo" alt="Storybook">
                         </i-badge>
-                        <span>Storybook</span>
+                        <span>
+                            Storybook <span class="_visually-hidden">(opens new window)</span>
+                        </span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://jsfiddle.net/alexgrozav/0dknfs6L/" target="_blank">
+                    <a href="https://stackblitz.com/edit/inkline?file=src/App.vue" target="_blank">
                         <i-badge color="secondary">
                             <icon-fa-solid-code />
                         </i-badge>
-                        <span>Playground</span>
+                        <span>
+                            Playground <span class="_visually-hidden">(opens new window)</span>
+                        </span>
                     </a>
                 </li>
                 <li>
@@ -419,7 +423,9 @@ export default defineComponent({
                         <i-badge color="dark">
                             <icon-fa-solid-comments />
                         </i-badge>
-                        <span>Community</span>
+                        <span>
+                            Community <span class="_visually-hidden">(opens new window)</span>
+                        </span>
                     </a>
                 </li>
             </ul>
