@@ -10,7 +10,6 @@ import i18n from '@intlify/vite-plugin-vue-i18n';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
 import components from 'unplugin-vue-components/vite';
-import { ComponentResolver } from 'unplugin-vue-components';
 import markdownPrism from 'markdown-it-prism';
 // @ts-expect-error missing types
 import markdownNamedHeadings from 'markdown-it-named-headings';
