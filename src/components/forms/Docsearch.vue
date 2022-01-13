@@ -1,6 +1,5 @@
 <script lang="ts">
 import docsearch from '@docsearch/js';
-import '@docsearch/css';
 import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({

@@ -1,3 +1,5 @@
+@import '@docsearch/css';
+
 :root {
     --docsearch-primary-color: var(--color--primary);
     --docsearch-text-color: var(--body--color);
@@ -92,9 +94,13 @@
 
     &.DocSearch-Container {
         z-index: 1050;
+        position: fixed;
+        top: 0;
+        left: 0;
 
         .DocSearch-Form {
             .DocSearch-Input {
+                height: auto;
                 border-radius: border-radius('lg');
                 font-size: font-size('lg');
                 padding: calc(#{spacing()} / 2 * #{size-multiplier('lg')}) calc(#{spacing()} * #{size-multiplier('lg')});
