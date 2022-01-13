@@ -2,32 +2,37 @@
     margin-bottom: var(--spacing);
     display: block;
 
-    .card-body {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .image {
-        width: 40px;
-        height: 30px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-
-        img,
-        svg {
-            height: 100%;
-            width: auto;
-            margin-right: var(--spacing);
+    @include i-card() {
+        .card-body {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transition-property: background-color, border-color, color;
+            transition-timing-function: var(--transition-easing);
+            transition-duration: var(--transition-duration);
         }
-    }
 
-    .card-body > .inkline-icon,
-    .card-body > svg {
-        margin-left: auto;
-        transform: rotate(-90deg);
-        transition: transform var(--transition-duration) var(--transition-easing);
+        .image {
+            width: 40px;
+            height: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            img,
+            svg {
+                height: 100%;
+                width: auto;
+                margin-right: var(--spacing);
+            }
+        }
+
+        .card-body > .inkline-icon,
+        .card-body > svg {
+            margin-left: auto;
+            transform: rotate(-90deg);
+            transition: transform var(--transition-duration) var(--transition-easing);
+        }
     }
 
     &:hover,

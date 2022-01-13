@@ -63,9 +63,15 @@
         font-weight: var(--font-weight--normal);
         border-radius: var(--border-radius);
         border: 1px solid var(--border-color--light);
-        transition-property: border-color, color;
+        transition-property: background, border-color, color;
         transition-duration: var(--transition-duration);
         transition-timing-function: var(--transition-easing);
+
+        svg {
+            transition-property: color;
+            transition-duration: var(--transition-duration);
+            transition-timing-function: var(--transition-easing);
+        }
 
         &:hover,
         &:focus {
