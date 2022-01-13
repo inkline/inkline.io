@@ -1,6 +1,7 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref} from 'vue';
 import storybookLogo from '~/assets/images/sponsors/storybook.svg';
+import { onBeforeRouteLeave } from 'vue-router';
 
 export default defineComponent({
     props: {
@@ -10,7 +11,7 @@ export default defineComponent({
         }
     },
     emits: ['update:modelValue'],
-    setup () {
+    setup (props, { emit }) {
         const menu = ref([
             {
                 title: 'Preface',
@@ -371,6 +372,10 @@ export default defineComponent({
                 ]
             }
         ]);
+
+        onBeforeRouteLeave(() => {
+            emit('update:modelValue', false);
+        });
 
         return {
             menu,
