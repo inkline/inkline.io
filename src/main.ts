@@ -2,8 +2,9 @@
 
 import 'vue-global-api';
 import { ViteSSG, ViteSSGContext } from 'vite-ssg';
-import generatedRoutes from 'virtual:generated-pages';
 import { setupLayouts } from 'virtual:generated-layouts';
+import generatedRoutes from 'virtual:generated-pages';
+import { createHead } from '@vueuse/head';
 import App from '~/App.vue';
 
 import { Inkline, components } from '@inkline/inkline';
@@ -11,6 +12,8 @@ import { scrollBehavior } from '~/config';
 
 import '@inkline/inkline/inkline.scss';
 import '~/main.scss';
+
+const head = createHead();
 
 const routes = setupLayouts(generatedRoutes);
 const catchAllRoute = routes
@@ -41,6 +44,7 @@ export const createApp = ViteSSG(App, {
     Object.values(import.meta.globEager('./modules/*.ts'))
         .map((module) => module.install?.(ctx));
 
+    ctx.app.use(head);
     ctx.app.use(Inkline, {
         components,
         colorMode: 'light'
