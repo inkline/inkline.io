@@ -10,12 +10,32 @@ import i18n from '@intlify/vite-plugin-vue-i18n';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
 import components from 'unplugin-vue-components/vite';
+import { ComponentResolver } from 'unplugin-vue-components';
 import markdownPrism from 'markdown-it-prism';
 // @ts-expect-error missing types
 import markdownNamedHeadings from 'markdown-it-named-headings';
 // @ts-expect-error missing types
 import markdownLinkAttributes from 'markdown-it-link-attributes';
 import { sitemapResolver } from './scripts/sitemap';
+
+/**
+ * Resolver for Inkline
+ *
+ * @link https://github.com/inkline/inkline
+ */
+export function InklineResolver (): ComponentResolver {
+    return {
+        type: 'component',
+        resolve: (name: string) => {
+            if (name.match(/^I[A-Z]/)) {
+                return {
+                    importName: name,
+                    path: '@inkline/inkline'
+                };
+            }
+        }
+    };
+}
 
 /**
  * @docs https://vitejs.dev/config/
@@ -77,7 +97,8 @@ export default defineConfig(({ command }) => ({
             resolvers: [
                 iconsResolver({
                     prefix: 'icon'
-                })
+                }),
+                InklineResolver()
             ]
         }),
 
@@ -190,7 +211,10 @@ export default defineConfig(({ command }) => ({
             'vue-router',
             '@vueuse/core',
             '@inkline/inkline',
-            '@popperjs/core'
+            '@popperjs/core',
+            '@docsearch/js',
+            'prismjs',
+            'copy-to-clipboard'
         ],
         exclude: [
             'vue-demi'
