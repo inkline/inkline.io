@@ -141,6 +141,10 @@ export default defineComponent({
             margin-top: spacing();
         }
 
+        > .container {
+            max-width: calc(100% - #{spacing()})
+        }
+
         > picture {
             margin: 0;
         }
