@@ -65,8 +65,8 @@ When adding a new feature to the library, make sure you update the documentation
 ### Testing
 Before providing a pull request be sure to test the feature you are adding. Inkline's target code coverage is 100% and we're proudly consistent with that.
 
-<a href="https://coveralls.io/github/inkline/inkline?branch=master" rel="nofollow">
-    <img src="https://coveralls.io/repos/github/inkline/inkline/badge.svg?branch=master" alt="Coverage Status" data-canonical-src="https://coveralls.io/repos/github/inkline/inkline/badge.svg?branch=master" style="max-width:100%;">
+<a href="https://coveralls.io/github/inkline/inkline?branch=main" rel="nofollow">
+    <img src="https://coveralls.io/repos/github/inkline/inkline/badge.svg?branch=main" alt="Coverage Status" data-canonical-src="https://coveralls.io/repos/github/inkline/inkline/badge.svg?branch=main" style="max-width:100%;">
 </a>
 
 
@@ -78,11 +78,8 @@ Good pull requests — patches, improvements, new features are a fantastic help.
 
 Please adhere to the [coding guidelines](#code-guidelines) used throughout the project (indentation, accurate comments, etc.) and any other requirements (such as test coverage).
 
-**Do not edit `inkline.css`, or `inkline.js`
-directly!** Those files are automatically generated. You should edit the source files in [`/src`](https://github.com/inkline/inkline/tree/master/src) instead.
-
-Similarly, when contributing to Inkline's documentation, you should edit the documentation source files in
-[the `/src` directory](https://github.com/inkline/inkline.io/tree/master/src).
+You should edit the source files in [`/src`](https://github.com/inkline/inkline/tree/main/src) instead. Similarly, when contributing to Inkline's documentation, you should edit the documentation source files in
+the [`/src`](https://github.com/inkline/inkline.io/tree/main/src) directory.
 
 Adhering to the following process is the best way to get your work included in the project:
 
@@ -100,7 +97,7 @@ Adhering to the following process is the best way to get your work included in t
    git remote add upstream https://github.com/inkline/inkline.git
    ```
 
-2. Create a new topic branch (off the main project master branch) to
+2. Create a new topic branch (off the main project main branch) to
    contain your feature, change, or fix:
 
    ```bash
@@ -112,10 +109,10 @@ Adhering to the following process is the best way to get your work included in t
    [interactive rebase](https://help.github.com/en/github/using-git/about-git-rebase)
    feature to tidy up your commits before making them public.
 
-4. Locally rebase the upstream master branch into your topic branch:
+4. Locally rebase the upstream main branch into your topic branch:
 
    ```bash
-   git pull --rebase upstream master
+   git pull --rebase upstream main
    ```
 
 5. Push your topic branch up to your fork:
@@ -125,7 +122,7 @@ Adhering to the following process is the best way to get your work included in t
    ```
 
 6. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-   with a clear title and description against the `master` branch.
+   with a clear title and description against the `main` branch.
 
 ### Local Development
 
@@ -140,4 +137,4 @@ Adhering to the following process is the best way to get your work included in t
 5. To test, run `npm run test:dev` to run the UI Library tests in development mode. Make sure you run `npm run test` to run all the tests once before creating a pull request.
 
 ### License
-By contributing your code, you agree to license your contribution under the <a href="https://github.com/inkline/inkline/blob/master/LICENSE" rel="nofollow" target="_blank">MIT License</a>. By contributing to the documentation, you agree to license your contribution under the <a href="https://github.com/inkline/inkline.io/blob/master/LICENSE" rel="nofollow" target="_blank">Creative Commons Attribution 3.0 Unported License</a>.
+By contributing your code, you agree to license your contribution under the <a href="https://github.com/inkline/inkline/blob/main/LICENSE" rel="nofollow" target="_blank">MIT License</a>. By contributing to the documentation, you agree to license your contribution under the <a href="https://github.com/inkline/inkline.io/blob/main/LICENSE" rel="nofollow" target="_blank">Creative Commons Attribution 3.0 Unported License</a>.
