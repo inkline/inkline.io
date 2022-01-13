@@ -179,6 +179,7 @@ export default defineComponent({
                 > pre {
                     > code {
                         white-space: pre;
+                        word-wrap: normal;
                     }
                 }
             }
