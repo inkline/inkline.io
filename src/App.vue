@@ -15,7 +15,7 @@ export default defineComponent({
             meta: [
                 {
                     name: 'description',
-                    content: 'Inkline is the customizable Vue.js UI/UX Library, designed for creating flawless responsive web applications with the best user and developer experience.'
+                    content: 'Inkline is the intuitive UI UX DX Components library that gives you the foundation for building high-quality, accessible, and customizable Vue.js Design Systems'
                 }
             ]
         });
