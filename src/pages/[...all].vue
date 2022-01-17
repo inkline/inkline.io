@@ -2,10 +2,21 @@
 import { useI18n } from 'vue-i18n';
 import { defineComponent } from 'vue';
 import image404 from '~/assets/images/illustrations/404.svg';
+import { useHead } from '@vueuse/head';
 
 export default defineComponent({
     setup () {
         const { t } = useI18n();
+
+        useHead({
+            title: 'Error 404 - Inkline',
+            meta: [
+                {
+                    name: 'description',
+                    content: 'Inkline is the intuitive UI UX DX Components library that gives you the foundation for building high-quality, accessible, and customizable Vue.js Design Systems.'
+                }
+            ]
+        });
 
         return {
             t,

@@ -14,12 +14,23 @@
 import { ref, defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import { useHead } from '@vueuse/head';
 
 export default defineComponent({
     setup () {
         const name = ref('');
         const router = useRouter();
         const { t } = useI18n();
+
+        useHead({
+            title: 'Vue.js UI UX DX Library - Inkline',
+            meta: [
+                {
+                    name: 'description',
+                    content: 'Inkline is the intuitive UI UX DX Components library that gives you the foundation for building high-quality, accessible, and customizable Vue.js Design Systems.'
+                }
+            ]
+        });
 
         return {
             name,
