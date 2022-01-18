@@ -1,5 +1,5 @@
 ---
-title: Visibility Utilities - Inkline
+title: Utilities - Visibility - Inkline
 description: Control the visibility, with or without modifying the display of elements. 
 ---
 
@@ -10,7 +10,7 @@ import {
 import { default as VisibilityBasicExampleHTML } from '@inkline/inkline/stories/utilities/visibility/basic.html?raw';
 </script>
 
-# Visibility Utilities
+# Utilities - Visibility
 
 ## Control the visibility, with or without modifying the display of elements. 
 

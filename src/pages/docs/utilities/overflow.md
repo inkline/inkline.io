@@ -1,5 +1,5 @@
 ---
-title: Overflow Utilities - Inkline
+title: Utilities - Overflow - Inkline
 description: You can use the overflow utilities for deciding how content overflows an element.
 ---
 
@@ -10,7 +10,7 @@ import {
 import { default as OverflowBasicExampleHTML } from '@inkline/inkline/stories/utilities/overflow/basic.html?raw';
 </script>
 
-# Overflow Utilities
+# Utilities - Overflow
 
 ## You can use the overflow utilities for deciding how content overflows an element.
 

@@ -1,5 +1,5 @@
 ---
-title: Display Utilities - Inkline
+title: Utilities - Display - Inkline
 description: Change the display style of components responsively with display utilities. 
 ---
 
@@ -12,7 +12,7 @@ import { default as DisplayBlockExampleHTML } from '@inkline/inkline/stories/uti
 import { default as DisplayInlineExampleHTML } from '@inkline/inkline/stories/utilities/display/inline.html?raw';
 </script>
 
-# Display Utilities
+# Utilities - Display
 
 ## Change the display style of components responsively with display utilities. 
 

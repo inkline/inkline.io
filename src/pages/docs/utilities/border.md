@@ -1,5 +1,5 @@
 ---
-title: Border Utilities - Inkline
+title: Utilities - Border - Inkline
 description: Use border utilities to quickly apply border styles to an element. Great for images, buttons, or any other element. 
 ---
 
@@ -21,7 +21,7 @@ import { default as BorderRemoveExampleHTML } from '@inkline/inkline/stories/uti
 </script>
 
 
-# Border Utilities
+# Utilities - Border
 
 ## Use border utilities to quickly apply border styles to an element. Great for images, buttons, or any other element. 
 

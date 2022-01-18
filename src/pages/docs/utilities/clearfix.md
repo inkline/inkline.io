@@ -1,5 +1,5 @@
 ---
-title: Clearfix Utilities - Inkline
+title: Utilities - Clearfix - Inkline
 description: Use the clearfix utility to clear floated content within a container. 
 ---
 
@@ -10,7 +10,7 @@ import {
 import { default as ClearfixBasicExampleHTML } from '@inkline/inkline/stories/utilities/clearfix/basic.html?raw';
 </script>
 
-# Clearfix Utilities
+# Utilities - Clearfix
 
 ## Use the clearfix utility to clear floated content within a container. 
 

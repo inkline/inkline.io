@@ -1,5 +1,5 @@
 ---
-title: Embed Utilities - Inkline
+title: Utilities - Embed - Inkline
 description: Create responsive video embeds by keeping the aspect ratio based on the parent element width. 
 ---
 
@@ -10,7 +10,7 @@ import {
 import { default as EmbedBasicExampleHTML } from '@inkline/inkline/stories/utilities/embed/basic.html?raw';
 </script>
 
-# Embed Utilities
+# Utilities - Embed
 
 ## Create responsive video embeds by keeping the aspect ratio based on the parent element width. 
 

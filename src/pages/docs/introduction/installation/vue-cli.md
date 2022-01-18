@@ -1,9 +1,9 @@
 ---
-title: Vue.js CLI Installation - Inkline
+title: Installation - Vue.js CLI - Inkline
 description: Install Inkline for any application created using the Vue.js CLI.
 ---
 
-# Vue.js CLI Installation
+# Installation - Vue.js CLI
 ## Install Inkline for any application created using the Vue.js CLI.
 
 ### Installation
@@ -84,8 +84,3 @@ Next, create a new file called `src/main.scss` and import Inkline. Learn more ab
 
 Awesome work! You can now start using all the features that Inkline has to offer.
 </div>
-
-### Next steps
-
-- [Read about the Design System]()
-- [Read about Components]()

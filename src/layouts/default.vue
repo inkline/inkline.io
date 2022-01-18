@@ -1,8 +1,10 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import PageFooterNavigation from "~/components/navigation/PageFooterNavigation.vue";
 
 export default defineComponent({
     name: 'Documentation',
+    components: {PageFooterNavigation},
     setup () {
         const sidebarOpen = ref(false);
 
@@ -26,6 +28,7 @@ export default defineComponent({
                     <sidebar v-model="sidebarOpen" />
                     <article id="documentation-page">
                         <router-view />
+                        <page-footer-navigation />
                     </article>
                     <page-navigation />
                 </i-container>

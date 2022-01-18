@@ -1,9 +1,9 @@
 ---
-title: Position Utilities - Inkline
+title: Utilities - Position - Inkline
 description: Use position utilities for quickly setting the position of an element.
 ---
 
-# Position Utilities
+# Utilities - Position
 ## Use position utilities for quickly setting the position of an element.
 
 The most common positioning classes are available:

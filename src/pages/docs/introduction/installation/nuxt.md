@@ -1,9 +1,9 @@
 ---
-title: Nuxt.js Installation - Inkline
+title: Installation - Nuxt.js - Inkline
 description: Install Inkline for any application created using Nuxt.js.
 ---
 
-# Nuxt.js Installation
+# Installation - Nuxt.js
 ## Install Inkline for any application created using Nuxt.js.
 
 ### Installation
@@ -84,8 +84,3 @@ Next, create a new file called `src/main.scss` and import Inkline. Learn more ab
 
 Awesome work! You can now start using all the features that Inkline has to offer.
 </div>
-
-### Next steps
-
-- [Read about the Design System]()
-- [Read about Components]()

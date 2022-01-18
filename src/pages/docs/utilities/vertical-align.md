@@ -1,5 +1,5 @@
 ---
-title: Vertical Align Utilities - Inkline
+title: Utilities - Vertical Align - Inkline
 description: Change the vertical alignment of inline, inline block, inline table, and table cell elements. 
 ---
 
@@ -12,7 +12,7 @@ import { default as VerticalAlignBasicExampleHTML } from '@inkline/inkline/stori
 import { default as VerticalAlignTableExampleHTML } from '@inkline/inkline/stories/utilities/vertical-align/table.html?raw';
 </script>
 
-# Vertical Align Utilities
+# Utilities - Vertical Align
 
 ## Change the vertical alignment of inline, inline block, inline table, and table cell elements. 
 

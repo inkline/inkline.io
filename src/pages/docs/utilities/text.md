@@ -1,5 +1,5 @@
 ---
-title: Text Utilities - Inkline
+title: Utilities - Text - Inkline
 description: Use common text utilities to control alignment, wrapping, weight, and more. 
 ---
 
@@ -42,7 +42,7 @@ import { default as TextWrapExampleHTML } from '@inkline/inkline/stories/utiliti
 import { default as TextListsExampleHTML } from '@inkline/inkline/stories/utilities/text/lists.html?raw';
 </script>
 
-# Text Utilities
+# Utilities - Text
 
 ## Use common text utilities to control alignment, wrapping, weight, and more. 
 

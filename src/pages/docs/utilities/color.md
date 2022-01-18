@@ -1,5 +1,5 @@
 ---
-title: Color Utilities - Inkline
+title: Utilities - Color - Inkline
 description: Inkline uses a beautiful, consistent color scheme across the framework. 
 ---
 
@@ -92,7 +92,7 @@ import { default as ColorStateWarningBackgroundExampleHTML } from '@inkline/inkl
 import { default as ColorStateWarningTextExampleHTML } from '@inkline/inkline/stories/utilities/color/state-warning-text.html?raw';
 </script>
 
-# Color Utilities
+# Utilities - Color
 
 ## Inkline uses a beautiful, consistent color scheme across the framework. 
 

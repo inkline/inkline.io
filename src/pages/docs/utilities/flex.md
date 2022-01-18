@@ -1,5 +1,5 @@
 ---
-title: Flex Utilities - Inkline
+title: Utilities - Flex - Inkline
 description: Use flexbox utilities to modify the layout, alignment, and sizing of components and more. 
 ---
 
@@ -36,7 +36,7 @@ import { default as FlexMarginAutoExampleHTML } from '@inkline/inkline/stories/u
 import { default as FlexOrderExampleHTML } from '@inkline/inkline/stories/utilities/flex/order.html?raw';
 </script>
 
-# Flex Utilities
+# Utilities - Flex
 
 ## Use flexbox utilities to modify the layout, alignment, and sizing of components and more. 
 

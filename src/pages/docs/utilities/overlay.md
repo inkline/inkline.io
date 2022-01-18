@@ -1,5 +1,5 @@
 ---
-title: Overlay Utilities - Inkline
+title: Utilities - Overlay - Inkline
 description: Make an element overlay its container by adding overlay utilities. 
 ---
 
@@ -12,7 +12,7 @@ import { default as OverlayBasicExampleHTML } from '@inkline/inkline/stories/uti
 import { default as OverlayLinkExampleHTML } from '@inkline/inkline/stories/utilities/overlay/link.html?raw';
 </script>
 
-# Overlay Utilities
+# Utilities - Overlay
 
 ## Make an element overlay its container by adding overlay utilities. 
 

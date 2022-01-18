@@ -1,5 +1,5 @@
 ---
-title: Float Utilities - Inkline
+title: Utilities - Float - Inkline
 description: You can use the float utility on any element, for any breakpoint. 
 ---
 
@@ -12,7 +12,7 @@ import { default as FloatBasicExampleHTML } from '@inkline/inkline/stories/utili
 import { default as FloatResponsiveExampleHTML } from '@inkline/inkline/stories/utilities/float/responsive.html?raw';
 </script>
 
-# Float Utilities
+# Utilities - Float
 
 ## You can use the float utility on any element, for any breakpoint. 
 

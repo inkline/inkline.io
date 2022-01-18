@@ -1,5 +1,5 @@
 ---
-title: Sizing Utilities - Inkline
+title: Utilities - Sizing - Inkline
 description: Make an element as wide or as tall as you need using width and height utilities. 
 ---
 
@@ -16,7 +16,7 @@ import { default as SizingMaxWidthExampleHTML } from '@inkline/inkline/stories/u
 import { default as SizingWidthExampleHTML } from '@inkline/inkline/stories/utilities/sizing/width.html?raw';
 </script>
 
-# Sizing Utilities
+# Utilities - Sizing
 
 ## Make an element as wide or as tall as you need using width and height utilities. 
 

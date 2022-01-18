@@ -1,5 +1,5 @@
 ---
-title: Spacing Utilities - Inkline
+title: Utilities - Spacing - Inkline
 description: You can use a wide range of responsive margin and padding utility classes to modify an element’s appearance. 
 ---
 
@@ -18,7 +18,7 @@ import { default as SpacingRightExampleHTML } from '@inkline/inkline/stories/uti
 import { default as SpacingTopExampleHTML } from '@inkline/inkline/stories/utilities/spacing/top.html?raw';
 </script>
 
-# Spacing Utilities
+# Utilities - Spacing
 
 ## You can use a wide range of responsive margin and padding utility classes to modify an element’s appearance. 
 

@@ -4,6 +4,10 @@ navbar:
     colorMode: Switch color mode
     input:
         placeholder: Search for anything..
+pageNavigation:
+    footer:
+        cta: Caught a mistake or want to contribute to the documentation?
+        edit: Edit this page on GitHub!
 button:
     about: About
     back: Back
@@ -55,3 +59,7 @@ errors:
         title: Oops! The box inclined
         description: The page you're looking for no longer exists.
         button: Go back
+common:
+    next: Next
+    previous: Previous
+    opensNewWindow: (opens new window)

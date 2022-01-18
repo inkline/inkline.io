@@ -1,9 +1,9 @@
 ---
-title: Generic Installation - Inkline
+title: Installation - Generic - Inkline
 description: Install Inkline for an application created using any other bundler or framework.
 ---
 
-# Generic Installation
+# Installation - Generic
 ## Install Inkline for an application created using any other bundler or framework.
 
 ### Installation
@@ -84,8 +84,3 @@ Next, create a new file called `src/main.scss` and import Inkline. Learn more ab
 
 Awesome work! You can now start using all the features that Inkline has to offer.
 </div>
-
-### Next steps
-
-- [Read about the Design System]()
-- [Read about Components]()
