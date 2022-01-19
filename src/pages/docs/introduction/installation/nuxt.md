@@ -39,26 +39,24 @@ npm install --save-dev sass
 
 </div>
 <div class="install-step">
-<div class="install-step-title"><span class="install-step-number">3</span> Configure your project and design</div> 
+<div class="install-step-title"><span class="install-step-number">3</span> Configure your project</div> 
 
 Open your `src/main.js` or `src/main.ts` file and configure your application to use Inkline.
 
 ~~~js
-import { createApp } from 'vue';
-import App from './App.vue';
+import { defineNuxtConfig } from 'nuxt3';
 
-import { Inkline, components } from '@inkline/inkline';
-import '@inkline/inkline/inkline.scss';
-
-import "./main.scss";
-
-const app = createApp(App);
-
-app.use(Inkline, {
-    components
+export default defineNuxtConfig({
+    buildModules: [
+        '~/modules/inkline'
+    ],
+    css: [
+        '~/main.scss'
+    ],
+    inkline: {
+        // Plugin options (optional)
+    }
 });
-    
-app.mount('#app');
 ~~~
 
 
@@ -66,7 +64,7 @@ app.mount('#app');
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">4</span> Configure your design</div> 
 
-Next, create a new file called `src/main.scss` and import Inkline. Learn more about the Design System.
+Next, create a new file called `main.scss` and import Inkline. Learn more about the Design System.
 
 ~~~scss
 @import '@inkline/inkline/css/variables';

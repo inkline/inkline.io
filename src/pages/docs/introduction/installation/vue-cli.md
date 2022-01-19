@@ -39,7 +39,7 @@ npm install --save-dev sass
 
 </div>
 <div class="install-step">
-<div class="install-step-title"><span class="install-step-number">3</span> Configure your project and design</div> 
+<div class="install-step-title"><span class="install-step-number">3</span> Configure your project</div> 
 
 Open your `src/main.js` or `src/main.ts` file and configure your application to use Inkline.
 
