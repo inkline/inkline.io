@@ -48,7 +48,7 @@ import { defineNuxtConfig } from 'nuxt3';
 
 export default defineNuxtConfig({
     buildModules: [
-        '~/modules/inkline'
+        '@inkline/nuxt'
     ],
     css: [
         '~/main.scss'
