@@ -82,3 +82,13 @@ Next, create a new file called `main.scss` and import Inkline. Learn more about 
 
 Awesome work! You can now start using all the features that Inkline has to offer.
 </div>
+
+<i-alert color="warning" class="_margin-top:2">
+    <template #icon>
+        <i-icon name="ink-warning" />
+    </template>
+
+Nuxt 3 is not yet recommended for production use. If you run into issues, check the [Troubleshooting Guide](https://github.com/inkline/nuxt-module-inkline#troubleshooting).
+
+</i-alert>
+
