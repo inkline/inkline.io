@@ -41,7 +41,7 @@ npm install --save-dev sass
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">3</span> Configure your project</div> 
 
-Open your `src/main.js` or `src/main.ts` file and configure your application to use Inkline.
+Open your `nuxt.config.ts` or `nuxt.config.js` file and configure your application to use Inkline.
 
 ~~~js
 import { defineNuxtConfig } from 'nuxt3';
