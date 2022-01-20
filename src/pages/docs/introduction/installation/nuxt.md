@@ -28,7 +28,7 @@ npm install
 Install and save Inkline as a project dependency.
 
 ~~~bash
-npm install --save @inkline/inkline
+npm install --save @inkline/inkline @inkline/nuxt
 ~~~
 
 Inkline uses [Sass](https://sass-lang.com) to pre-process and compile its CSS files. You will need to install it as a development dependency in order to compile the stylesheets.
