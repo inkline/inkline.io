@@ -48,7 +48,7 @@ export default defineComponent({
                         Designed and built with
                         <icon-fa-solid-heart class="_margin-x:1/2" />
                         by
-                        <a href="https://grozav.com" target="_blank" rel="noopener" class="_margin-left:1/2">@alexgrozav</a>
+                        <a href="https://github.com/alexgrozav" target="_blank" rel="noopener" class="_margin-left:1/2">@alexgrozav</a>
                     </div>
                 </i-column>
             </i-row>
