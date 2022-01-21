@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite-ssg build",
     "lint": "eslint --ext .vue,.ts,.js src",
+    "test": "",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "docgen": "ts-node scripts/docgen.ts",
