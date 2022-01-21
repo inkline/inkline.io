@@ -22,6 +22,15 @@
 </p>
 
 <br/>
+
+<p align="center">
+    <a href="https://github.com/inkline/inkline/actions">
+        <img src="https://github.com/inkline/inkline.io/workflows/Build/badge.svg" alt="Build">
+    </a>
+</p>
+
+
+<br/>
 <br/>
 
 ## Running documentation locally
