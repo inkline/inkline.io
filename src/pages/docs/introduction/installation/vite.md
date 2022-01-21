@@ -1,10 +1,10 @@
 ---
 title: Installation - Vite.js - Inkline
-description: Install Inkline for any application created using Vite.js.
+description: Install Inkline for any Vue.js 3 + Vite.js application, as recommended by the community.
 ---
 
 # Installation - Vite.js
-## Install Inkline for any application created using Vite.js.
+## Install Inkline for any Vue.js 3 + Vite.js application, as recommended by the community.
 
 ### Installation
 
@@ -14,9 +14,9 @@ description: Install Inkline for any application created using Vite.js.
 Create a new Vite.js + Vue.js application using the `npm init` command below or using the [Vite.js guide](https://vitejs.dev/guide/), and follow the instructions provided by the installation wizard.
 
 ~~~bash
-npm init vite my-vite-app -- --template vue
+npm init vue my-vue-app
 
-cd my-vite-app 
+cd my-vue-app
 
 npm install
 ~~~

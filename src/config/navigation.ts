@@ -42,14 +42,6 @@ export const navigation: NavigationPage[] = [
                 title: 'Installation',
                 children: [
                     {
-                        title: 'Vue.js CLI',
-                        url: { name: 'docs-introduction-installation-vue-cli' },
-                        navigation: {
-                            previous: 'docs-introduction',
-                            next: 'docs-introduction-plugin-options'
-                        }
-                    },
-                    {
                         title: 'Vite.js',
                         url: { name: 'docs-introduction-installation-vite' },
                         navigation: {
@@ -58,7 +50,15 @@ export const navigation: NavigationPage[] = [
                         }
                     },
                     {
-                        title: 'Nuxt.js',
+                        title: 'Vue.js CLI',
+                        url: { name: 'docs-introduction-installation-vue-cli' },
+                        navigation: {
+                            previous: 'docs-introduction',
+                            next: 'docs-introduction-plugin-options'
+                        }
+                    },
+                    {
+                        title: 'Nuxt.js 3',
                         url: { name: 'docs-introduction-installation-nuxt' },
                         navigation: {
                             previous: 'docs-introduction',

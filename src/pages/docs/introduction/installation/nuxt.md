@@ -1,17 +1,17 @@
 ---
-title: Installation - Nuxt.js - Inkline
-description: Install Inkline for any application created using Nuxt.js.
+title: Installation - Nuxt.js 3 - Inkline
+description: Install Inkline for any application created using Nuxt.js 3.
 ---
 
-# Installation - Nuxt.js
-## Install Inkline for any application created using Nuxt.js.
+# Installation - Nuxt.js 3
+## Install Inkline for any application created using Nuxt.js 3.
 
 ### Installation
 
 <div class="install-step _margin-top:2">
 <div class="install-step-title"><span class="install-step-number">1</span> Create a project</div> 
 
-Create a new Nuxt.js application using the `nuxi` CLI command below or using the [Nuxt.js guide](https://v3.nuxtjs.org/getting-started/installation), and follow the instructions provided by the installation wizard.
+Create a new Nuxt.js application using the `nuxi` CLI command below or using the [Nuxt.js 3 guide](https://v3.nuxtjs.org/getting-started/installation), and follow the instructions provided by the installation wizard.
 
 ~~~bash
 npx nuxi init my-nuxt-app
@@ -41,7 +41,7 @@ npm install --save-dev sass
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">3</span> Configure your project</div> 
 
-Open your `nuxt.config.ts` or `nuxt.config.js` file and configure your application to use Inkline.
+Open your `nuxt.config.ts` or `nuxt.config.js` file and configure your application to use Inkline. Inkline components will be imported automatically as needed.
 
 ~~~js
 import { defineNuxtConfig } from 'nuxt3';
@@ -58,7 +58,6 @@ export default defineNuxtConfig({
     }
 });
 ~~~
-
 
 </div>
 <div class="install-step">

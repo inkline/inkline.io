@@ -7,12 +7,16 @@
 <h1 align="center">Inkline</h1>
     
 <p align="center">
-    Documentation and homepage for Inkline, built with Vite.js and publicly hosted on DigitalOcean. Inkline is written and maintained by <a href="https://twitter.com/alexgrozav">@alexgrozav</a>. 
+    Documentation and homepage for Inkline, built with Vite.js and publicly hosted on DigitalOcean.<br/>Inkline is written and maintained by <a href="https://twitter.com/alexgrozav">@alexgrozav</a>. 
     <br/>
     <br/>
     <a href="https://inkline.io">Homepage</a>
     ·
     <a href="https://inkline.io/docs/introduction">Documentation</a>
+    ·
+    <a href="https://inkline.io/storybook/">Storybook</a>
+    ·
+    <a href="https://stackblitz.com/edit/inkline?file=src/App.vue">Playground</a>
     ·
     <a href="https://github.com/inkline/inkline/issues">Issue Tracker</a>
 </p>

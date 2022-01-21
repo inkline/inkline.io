@@ -1,5 +1,6 @@
 {
   "name": "@inkline/docs",
+  "description": "Documentation and homepage for Inkline, built with Vite.js and publicly hosted on DigitalOcean.",
   "private": true,
   "scripts": {
     "dev": "vite",
