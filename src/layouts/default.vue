@@ -1,10 +1,10 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import PageFooterNavigation from "~/components/navigation/PageFooterNavigation.vue";
+import PageFooterNavigation from '~/components/navigation/PageFooterNavigation.vue';
 
 export default defineComponent({
     name: 'Documentation',
-    components: {PageFooterNavigation},
+    components: { PageFooterNavigation },
     setup () {
         const sidebarOpen = ref(false);
 
@@ -18,7 +18,7 @@ export default defineComponent({
 <template>
     <i-layout id="documentation-layout">
         <i-layout-header>
-            <navbar type="docs" ref="navbar">
+            <navbar ref="navbar" type="docs">
                 <i-hamburger-menu v-model="sidebarOpen" class="_lg:hidden" />
             </navbar>
         </i-layout-header>
