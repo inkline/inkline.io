@@ -63,7 +63,7 @@ export default defineNuxtConfig({
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">4</span> Configure your design</div> 
 
-Next, create a new file called `main.scss` and import Inkline. Learn more about the Design System.
+Next, create a new file called `main.scss` and import Inkline. [Learn more](/docs/introduction/design-system) about the Design System.
 
 ~~~scss
 @import '@inkline/inkline/css/variables';
