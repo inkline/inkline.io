@@ -1,7 +1,6 @@
 <script lang="ts">
 import { useI18n } from 'vue-i18n';
 import { defineComponent } from 'vue';
-import image404 from '~/assets/images/illustrations/404.svg';
 import { useHead } from '@vueuse/head';
 
 export default defineComponent({
@@ -19,8 +18,7 @@ export default defineComponent({
         });
 
         return {
-            t,
-            image404
+            t
         };
     }
 });
@@ -30,7 +28,7 @@ export default defineComponent({
     <i-container>
         <i-row>
             <i-column>
-                <img class="image -fluid" :src="image404" alt="Error 404">
+                <img class="image -fluid" src="../../assets/images/illustrations/404.svg" alt="Error 404">
                 <h1 class="d5 _margin-top:1/2">
                     {{ t('errors.404.title') }}
                 </h1>
@@ -40,8 +38,8 @@ export default defineComponent({
                     </strong>
                     {{ t('errors.404.description') }}
                 </p>
-                <router-link to="/" class="_font-size:lg">
-                    {{ t('errors.404.button') }}
+                <router-link to="/" class="_font-size:lg _display:inline-flex _align-items:center _justify-content:center">
+                    <icon-la-arrow-left class="_margin-right:1/2" /> {{ t('errors.404.button') }}
                 </router-link>
             </i-column>
         </i-row>
@@ -58,7 +56,7 @@ export default defineComponent({
 
     img {
         max-width: 480px;
-        margin-bottom: spacing('4');
+        margin-bottom: #{spacing('4')};
     }
 }
 </style>
