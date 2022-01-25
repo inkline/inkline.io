@@ -42,11 +42,11 @@ export const createApp = ViteSSG(App, {
     ctx.head!.addHeadObjs(ref<HeadObjectPlain>({
         meta: [
             {
-                name: 'og:image',
+                property: 'og:image',
                 content: 'https://inkline.io/assets/images/og-image.png'
             },
             {
-                name: 'og:type',
+                property: 'og:type',
                 content: 'website'
             },
             {
@@ -68,7 +68,7 @@ export const createApp = ViteSSG(App, {
         ctx.head!.addHeadObjs(ref<HeadObjectPlain>({
             meta: [
                 {
-                    name: 'og:url',
+                    property: 'og:url',
                     content: `https://inkline.io${to.fullPath}`
                 }
             ]
