@@ -42,6 +42,10 @@ export const createApp = ViteSSG(App, {
     ctx.head!.addHeadObjs(ref<HeadObjectPlain>({
         meta: [
             {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1'
+            },
+            {
                 property: 'og:image',
                 content: 'https://inkline.io/assets/images/og-image.png'
             },
