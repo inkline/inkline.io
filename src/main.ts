@@ -16,6 +16,35 @@ import '~/main.scss';
 const head = createHead();
 const routes = setupLayouts(generatedRoutes);
 
+[
+    {
+        name: 'og:image',
+        content: 'https://inkline.io/assets/images/og-image.png'
+    },
+    {
+        name: 'og:type',
+        content: 'website'
+    },
+    {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+    },
+    {
+        name: 'twitter:site',
+        content: '@inkline'
+    },
+    {
+        name: 'twitter:creator',
+        content: '@alexgrozav'
+    }
+].forEach((meta) => {
+    head!.addHeadObjs({
+        value: {
+            meta
+        }
+    } as any);
+});
+
 export const createApp = ViteSSG(App, {
     routes,
     scrollBehavior (to) {
@@ -37,5 +66,16 @@ export const createApp = ViteSSG(App, {
     ctx.app.use(Inkline, {
         components,
         colorMode: 'light'
+    });
+
+    ctx.router.afterEach((to) => {
+        head!.addHeadObjs({
+            value: {
+                meta: {
+                    name: 'og:url',
+                    content: `https://inkline.io${to.fullPath}`
+                }
+            }
+        } as any);
     });
 });

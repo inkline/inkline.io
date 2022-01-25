@@ -22,12 +22,23 @@ export default defineComponent({
         const router = useRouter();
         const { t } = useI18n();
 
+        const title = 'Vue.js UI UX DX Library - Inkline';
+        const description = 'Inkline is the intuitive UI Components library that gives you a developer-friendly foundation for building high-quality, accessible, and customizable Vue.js 3 Design Systems.';
+
         useHead({
-            title: 'Vue.js UI UX DX Library - Inkline',
+            title,
             meta: [
                 {
+                    name: 'og:title',
+                    content: title
+                },
+                {
                     name: 'description',
-                    content: 'Inkline is the intuitive UI Components library that gives you a developer-friendly foundation for building high-quality, accessible, and customizable Vue.js 3 Design Systems.'
+                    content: description
+                },
+                {
+                    name: 'og:description',
+                    content: description
                 }
             ]
         });
