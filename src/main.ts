@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import 'vue-global-api';
+import { ref } from 'vue';
 import { ViteSSG, ViteSSGContext } from 'vite-ssg';
 import { setupLayouts } from 'virtual:generated-layouts';
 import generatedRoutes from 'virtual:generated-pages';
@@ -11,6 +12,7 @@ import { scrollBehavior } from '~/config';
 
 import '@inkline/inkline/inkline.scss';
 import '~/main.scss';
+import { HeadObjectPlain } from '@vueuse/head';
 
 const routes = setupLayouts(generatedRoutes);
 
@@ -37,43 +39,39 @@ export const createApp = ViteSSG(App, {
         colorMode: 'light'
     });
 
-    [
-        {
-            name: 'og:image',
-            content: 'https://inkline.io/assets/images/og-image.png'
-        },
-        {
-            name: 'og:type',
-            content: 'website'
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image'
-        },
-        {
-            name: 'twitter:site',
-            content: '@inkline'
-        },
-        {
-            name: 'twitter:creator',
-            content: '@alexgrozav'
-        }
-    ].forEach((meta) => {
-        ctx.head!.addHeadObjs({
-            value: {
-                meta
+    ctx.head!.addHeadObjs(ref<HeadObjectPlain>({
+        meta: [
+            {
+                name: 'og:image',
+                content: 'https://inkline.io/assets/images/og-image.png'
+            },
+            {
+                name: 'og:type',
+                content: 'website'
+            },
+            {
+                name: 'twitter:card',
+                content: 'summary_large_image'
+            },
+            {
+                name: 'twitter:site',
+                content: '@inkline'
+            },
+            {
+                name: 'twitter:creator',
+                content: '@alexgrozav'
             }
-        } as any);
-    });
+        ]
+    }));
 
     ctx.router.afterEach((to) => {
-        ctx.head!.addHeadObjs({
-            value: {
-                meta: {
+        ctx.head!.addHeadObjs(ref<HeadObjectPlain>({
+            meta: [
+                {
                     name: 'og:url',
                     content: `https://inkline.io${to.fullPath}`
                 }
-            }
-        } as any);
+            ]
+        }));
     });
 });

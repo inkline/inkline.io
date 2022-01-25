@@ -55,7 +55,7 @@ export default defineConfig(({ command }) => ({
             extensions: ['vue', 'md'],
             onRoutesGenerated: (routes) => {
                 if (command === 'build') {
-                    sitemapResolver(routes).then(() => console.log('Sitemap generated.'));
+                    sitemapResolver(routes).then(() => console.log('\n\nSitemap generated.\n'));
                 }
 
                 return routes;

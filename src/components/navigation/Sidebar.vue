@@ -49,7 +49,7 @@ export default defineComponent({
                     </router-link>
                 </li>
                 <li>
-                    <a href="https://inkline.io/storybook/" target="_blank">
+                    <a href="https://storybook.inkline.io/" target="_blank">
                         <i-badge color="pink" class="-storybook">
                             <img :src="storybookLogo" alt="Storybook">
                         </i-badge>
