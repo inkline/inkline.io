@@ -55,6 +55,11 @@ module.exports = {
 }
 ~~~
 
+If you opted for creating a TypeScript installation, you will most likely need to install Babel.
+
+~~~bash
+vue add babel
+~~~
 
 </div>
 <div class="install-step">
