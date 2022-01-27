@@ -1,12 +1,8 @@
-/* eslint-disable import/no-duplicates */
-
-declare interface Window {
-    // extend the window
-}
+/* eslint-disable import/no-duplicates no-useless-constructor @typescript-eslint/no-unused-vars */
 
 declare module '*.vue' {
     import type { DefineComponent } from 'vue';
-    const component: DefineComponent<{}, {}, any>;
+    const component: DefineComponent<unknown, unknown, any>;
     export default component;
 }
 
@@ -33,18 +29,18 @@ declare module '@docsearch/js' {
 
 declare module 'rollbar' {
     export default class Rollbar {
-        constructor(options) {}
+        constructor (options) {}
 
-        error(options) {}
+        error (options) {}
     }
 }
 
 declare module 'analytics' {
     export default (options) => ({
         page: () => {}
-    })
+    });
 }
 
 declare module '@analytics/google-tag-manager' {
-    export default (options) => ({})
+    export default (options) => ({});
 }

@@ -4,12 +4,11 @@ import * as fse from 'fs-extra';
 import glob from 'glob';
 import { languages } from '../src/config';
 
-export function toKebabCase(string: string) {
+export function toKebabCase (string: string) {
     const regExp = /([A-Z])/g;
 
     return string.replace(regExp, (match, p) => '-' + p.toLowerCase());
 }
-
 
 const remap: Record<string, { target: string }> = {
     'components/layout': {
@@ -59,7 +58,7 @@ const remap: Record<string, { target: string }> = {
     },
     'components/select/rendering': {
         target: 'forms/select/rendering'
-    },
+    }
 };
 
 const examplesImportRegEx = /import \* as examples from ['"].+['"];/;
@@ -83,6 +82,10 @@ const pagesDir = path.resolve(__dirname, '..', 'src', 'pages');
  * @source ./node_modules/@inkline/inkline/src/*.md
  */
 glob(path.resolve(sourceDir, '!(src)/**/en.md'), async (err: Error | null, files: string[]) => {
+    if (err) {
+        process.exit();
+    }
+
     const targetFiles = files.map((file) => {
         const docsPath = file
             .replace(`${sourceDir}${path.sep}`, '')

@@ -11,6 +11,7 @@ module.exports = {
     extends: [
         '@vue/typescript/recommended',
         'plugin:vue/vue3-recommended',
+        'plugin:cypress/recommended',
         'standard'
     ],
     parserOptions: {
