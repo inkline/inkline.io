@@ -1,23 +1,18 @@
 import { createI18n } from 'vue-i18n';
 import { UserModule } from '~/types';
 
-// import i18n resources
-// https://vitejs.dev/guide/features.html#glob-import
-const messages = Object.fromEntries(
-    Object.entries(
-        // @ts-ignore
-        import.meta.globEager('../../locales/*.y(a)?ml'))
-        .map(([key, value]) => {
-            const yaml = key.endsWith('.yaml');
-            return [key.slice(14, yaml ? -5 : -4), value.default];
-        })
-);
+import en from '../i18n/en.yml';
 
+/**
+ * @docs https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+ */
 export const install: UserModule = ({ app }) => {
     const i18n = createI18n({
         legacy: false,
         locale: 'en',
-        messages
+        messages: {
+            en
+        }
     });
 
     app.use(i18n);

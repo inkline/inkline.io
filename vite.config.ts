@@ -1,12 +1,14 @@
 import path from 'path';
 import { defineConfig } from 'vite';
+
+// Plugins
 import vue from '@vitejs/plugin-vue';
 import pages from 'vite-plugin-pages';
 import layouts from 'vite-plugin-vue-layouts';
+import i18n from '@intlify/vite-plugin-vue-i18n';
 import markdown from 'vite-plugin-md';
 import { VitePWA as pwa } from 'vite-plugin-pwa';
 import { imagetools } from 'vite-imagetools';
-import i18n from '@intlify/vite-plugin-vue-i18n';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
 import components from 'unplugin-vue-components/vite';
@@ -15,20 +17,14 @@ import markdownPrism from 'markdown-it-prism';
 import markdownNamedHeadings from 'markdown-it-named-headings';
 // @ts-expect-error missing types
 import markdownLinkAttributes from 'markdown-it-link-attributes';
-import { sitemapResolver } from './scripts/sitemap';
+
+// Resolvers
+import { sitemapResolver } from './resolvers/sitemap';
 
 /**
  * @docs https://vitejs.dev/config/
  */
 export default defineConfig(({ command }) => ({
-    resolve: {
-        /**
-         * @docs https://vitejs.dev/config/#resolve-alias
-         */
-        alias: {
-            '~/': `${path.resolve(__dirname, 'src')}/`
-        }
-    },
     plugins: [
         /**
          * @docs https://github.com/vitejs/vite/tree/main/packages/plugin-vue#readme
@@ -45,6 +41,23 @@ export default defineConfig(({ command }) => ({
                         })
                     }
                 }
+            }
+        }),
+
+        /**
+         * @docs https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+         */
+        i18n({
+            include: path.resolve(__dirname, 'src/i18n/**')
+        }),
+
+        /**
+         * @docs https://github.com/JonasKruckenberg/imagetools
+         */
+        imagetools({
+            exclude: [],
+            defaultDirectives: (): URLSearchParams => {
+                return new URLSearchParams('quality=80');
             }
         }),
 
@@ -80,6 +93,11 @@ export default defineConfig(({ command }) => ({
                 })
             ]
         }),
+
+        /**
+         * @docs https://github.com/antfu/unplugin-icons
+         */
+        icons(),
 
         /**
          * @docs https://github.com/antfu/vite-plugin-md
@@ -136,32 +154,17 @@ export default defineConfig(({ command }) => ({
                     }
                 ]
             }
-        }),
-
-        /**
-         * @docs https://github.com/intlify/vite-plugin-vue-i18n
-         */
-        i18n({
-            runtimeOnly: true,
-            compositionOnly: true,
-            include: [path.resolve(__dirname, 'locales/**')]
-        }),
-
-        /**
-         * @docs https://github.com/JonasKruckenberg/imagetools
-         */
-        imagetools({
-            exclude: [],
-            defaultDirectives: (): URLSearchParams => {
-                return new URLSearchParams('quality=80');
-            }
-        }),
-
-        /**
-         * @docs https://github.com/antfu/unplugin-icons
-         */
-        icons()
+        })
     ],
+
+    resolve: {
+        /**
+         * @docs https://vitejs.dev/config/#resolve-alias
+         */
+        alias: {
+            '~': `${path.resolve(__dirname, 'src')}`
+        }
+    },
 
     server: {
         fs: {
@@ -173,39 +176,20 @@ export default defineConfig(({ command }) => ({
     },
 
     /**
-     * @docs https://github.com/antfu/vite-ssg
-     */
-    ssgOptions: {
-        script: 'async',
-        formatting: 'minify',
-        format: 'cjs'
-    },
-
-    /**
-     * @docs https://vitejs.dev/config/#dep-optimization-options
-     */
-    optimizeDeps: {
-        include: [
-            'vue',
-            'vue-router',
-            '@vueuse/core',
-            '@inkline/inkline',
-            '@popperjs/core',
-            '@docsearch/js',
-            'prismjs',
-            'copy-to-clipboard'
-        ],
-        exclude: [
-            'vue-demi'
-        ]
-    },
-
-    /**
      * @docs https://vitejs.dev/config/#css-preprocessoroptions
      */
     css: {
         preprocessorOptions: {
             scss: { charset: false }
         }
+    },
+
+    /**
+     * @docs https://github.com/antfu/vite-ssg
+     */
+    ssgOptions: {
+        script: 'async',
+        formatting: 'minify',
+        format: 'cjs'
     }
 }));

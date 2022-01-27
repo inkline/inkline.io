@@ -63,7 +63,7 @@ export default defineComponent({
             <i-row>
                 <i-column>
                     <div class="header-buttons">
-                        <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1" :to="{ name: 'docs-introduction' }">
+                        <i-button id="get-started-button" size="lg" color="primary" class="_xs:margin-right:1" :to="{ path: '/docs/introduction' }">
                             {{ t('index.header.button') }}
                         </i-button>
                         <i-button id="github-button" aria-label="GitHub" size="lg" href="https://github.com/inkline/inkline" rel="noopener">

@@ -6,7 +6,7 @@
         <index-ui-ux-dx-section />
         <index-sponsors-section />
         <index-design-system-section />
-        <!--<index-example-embed-section />-->
+        <index-example-embed-section />
     </main>
 </template>
 
@@ -14,7 +14,7 @@
 import { ref, defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import { useHead } from '@vueuse/head';
+import { useMeta } from '~/helpers';
 
 export default defineComponent({
     setup () {
@@ -22,25 +22,9 @@ export default defineComponent({
         const router = useRouter();
         const { t } = useI18n();
 
-        const title = 'Vue.js UI UX DX Library - Inkline';
-        const description = 'Inkline is the intuitive UI Components library that gives you a developer-friendly foundation for building high-quality, accessible, and customizable Vue.js 3 Design Systems.';
-
-        useHead({
-            title,
-            meta: [
-                {
-                    name: 'og:title',
-                    content: title
-                },
-                {
-                    name: 'description',
-                    content: description
-                },
-                {
-                    name: 'og:description',
-                    content: description
-                }
-            ]
+        useMeta({
+            title: 'Vue.js UI UX DX Library - Inkline',
+            description: 'Inkline is the intuitive UI Components library that gives you a developer-friendly foundation for building high-quality, accessible, and customizable Vue.js 3 Design Systems.'
         });
 
         return {

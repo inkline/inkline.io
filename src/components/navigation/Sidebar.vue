@@ -41,7 +41,7 @@ export default defineComponent({
         <aside>
             <ul id="sidebar-apps" class="list -unstyled">
                 <li class="-active">
-                    <router-link :to="{ name: 'docs-introduction' }">
+                    <router-link :to="{ path: '/docs/introduction' }">
                         <i-badge color="primary">
                             <icon-fa-solid-book size="sm" />
                         </i-badge>

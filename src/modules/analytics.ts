@@ -2,7 +2,9 @@ import { UserModule } from '~/types';
 import createAnalytics from 'analytics';
 import googleTagManager from '@analytics/google-tag-manager';
 
-// https://docs.rollbar.com/docs/vue-js
+/**
+ * @docs https://getanalytics.io
+ */
 export const install: UserModule = ({ isClient, app }) => {
     if (!isClient || process.env.NODE_ENV === 'development') { return; }
 

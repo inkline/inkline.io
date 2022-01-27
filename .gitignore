@@ -1,5 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS
 .DS_Store
 *.local
+
+# Tests
+/cypress/videos/
+/cypress/screenshots/
+coverage
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Node
 node_modules
@@ -9,13 +34,6 @@ dist
 dist-ssr
 .vite-ssg-dist
 .vite-ssg-temp
-
-# IDE
-.idea/
-
-# Logs
-*.log
-coverage
 
 # Generated
 src/components.d.ts

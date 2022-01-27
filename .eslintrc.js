@@ -1,13 +1,16 @@
+/* eslint-env node */
 module.exports = {
+    root: true,
     env: {
         node: true,
         jest: true,
         browser: true,
-        es2021: true
+        es2021: true,
+        'vue/setup-compiler-macros': true
     },
     extends: [
         '@vue/typescript/recommended',
-        'plugin:vue/vue3-recommended',
+        'plugin:vue/vue3-essential',
         'standard'
     ],
     parserOptions: {
@@ -18,6 +21,16 @@ module.exports = {
     plugins: [
         'vue',
         '@typescript-eslint'
+    ],
+    overrides: [
+        {
+            files: [
+                'cypress/integration/**.spec.{js,ts,jsx,tsx}'
+            ],
+            extends: [
+                'plugin:cypress/recommended'
+            ]
+        }
     ],
     rules: {
         indent: ['warn', 4],

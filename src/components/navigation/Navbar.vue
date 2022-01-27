@@ -21,8 +21,8 @@ export default defineComponent({
         const inkline = inject<Prototype>('inkline', {} as any);
         const colorMode = ref(inkline.options.colorMode);
 
-        if (colorMode.value === 'system') {
-            colorMode.value = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        if (colorMode.value === 'system' && typeof window !== 'undefined') {
+            colorMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
 
         const setColorMode = () => {
@@ -62,7 +62,7 @@ export default defineComponent({
                 <i-nav-item v-if="type === 'docs'" id="navbar-item-docsearch">
                     <docsearch />
                 </i-nav-item>
-                <i-nav-item v-if="type === 'default'" id="navbar-item-documentation" :to="{ name: 'docs-introduction' }">
+                <i-nav-item v-if="type === 'default'" id="navbar-item-documentation" :to="{ path: '/docs/introduction' }">
                     <span>{{ t('navbar.docs') }}</span>
                     <span>{{ t('navbar.documentation') }}</span>
                 </i-nav-item>

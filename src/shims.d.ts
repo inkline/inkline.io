@@ -1,7 +1,7 @@
 /* eslint-disable import/no-duplicates */
 
 declare interface Window {
-  // extend the window
+    // extend the window
 }
 
 declare module '*.vue' {
@@ -12,9 +12,14 @@ declare module '*.vue' {
 
 // with vite-plugin-md, markdowns can be treat as Vue components
 declare module '*.md' {
-  import { ComponentOptions } from 'vue';
-  const component: ComponentOptions;
-  export default component;
+    import { ComponentOptions } from 'vue';
+    const component: ComponentOptions;
+    export default component;
+}
+
+declare module '*.yml' {
+    const contents: Record<string, string | string[] | Record<string, string> | Record<string, string>[]>;
+    export default contents;
 }
 
 declare module '@docsearch/js' {
