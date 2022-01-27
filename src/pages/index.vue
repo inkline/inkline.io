@@ -6,7 +6,6 @@
         <index-ui-ux-dx-section />
         <index-sponsors-section />
         <index-design-system-section />
-        <index-example-embed-section />
     </main>
 </template>
 
