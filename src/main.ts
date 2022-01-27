@@ -1,81 +1,18 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-
-import 'vue-global-api';
-import { ref } from 'vue';
-import { ViteSSG, ViteSSGContext } from 'vite-ssg';
+import { ViteSSG } from 'vite-ssg';
+import App from './app.vue';
 import { setupLayouts } from 'virtual:generated-layouts';
 import generatedRoutes from 'virtual:generated-pages';
-import App from '~/App.vue';
-
-import { Inkline, components } from '@inkline/inkline';
 import { scrollBehavior } from '~/config';
+import * as modules from '~/modules';
 
 import '@inkline/inkline/inkline.scss';
 import '~/main.scss';
-import { HeadObjectPlain } from '@vueuse/head';
 
 const routes = setupLayouts(generatedRoutes);
 
 export const createApp = ViteSSG(App, {
     routes,
-    scrollBehavior (to) {
-        if (to.hash) {
-            return {
-                el: to.hash,
-                ...scrollBehavior
-            };
-        }
-
-        return { top: 0, left: 0 };
-    }
-}, (ctx: ViteSSGContext<true>) => {
-    // @ts-ignore
-    Object.values(import.meta.globEager('./modules/*.ts'))
-        .map((module) => module.install?.(ctx));
-
-    // ctx.app.use(head);
-    ctx.app.use(Inkline, {
-        components,
-        colorMode: 'light'
-    });
-
-    ctx.head!.addHeadObjs(ref<HeadObjectPlain>({
-        meta: [
-            {
-                name: 'viewport',
-                content: 'width=device-width, initial-scale=1'
-            },
-            {
-                property: 'og:image',
-                content: 'https://inkline.io/assets/images/og-image.png'
-            },
-            {
-                property: 'og:type',
-                content: 'website'
-            },
-            {
-                name: 'twitter:card',
-                content: 'summary_large_image'
-            },
-            {
-                name: 'twitter:site',
-                content: '@inkline'
-            },
-            {
-                name: 'twitter:creator',
-                content: '@alexgrozav'
-            }
-        ]
-    }));
-
-    ctx.router.afterEach((to) => {
-        ctx.head!.addHeadObjs(ref<HeadObjectPlain>({
-            meta: [
-                {
-                    property: 'og:url',
-                    content: `https://inkline.io${to.fullPath}`
-                }
-            ]
-        }));
-    });
+    scrollBehavior
+}, (ctx) => {
+    Object.values(modules).forEach((module) => module(ctx));
 });

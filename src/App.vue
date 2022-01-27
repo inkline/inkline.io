@@ -1,9 +1,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useHead } from '@vueuse/head';
+import { useRoute } from 'vue-router';
 
 export default defineComponent({
     setup () {
+        const route = useRoute();
+
         /**
          * You can use this to manipulate the document head in any components,
          * they will be rendered correctly in the html results with vite-ssg
@@ -11,11 +14,34 @@ export default defineComponent({
          * @docs https://github.com/vueuse/head
          */
         useHead({
-            title: 'Vue.js UI UX DX Library - Inkline',
             meta: [
                 {
-                    name: 'description',
-                    content: 'Inkline is the intuitive UI UX DX Components library that gives you the foundation for building high-quality, accessible, and customizable Vue.js Design Systems.'
+                    name: 'viewport',
+                    content: 'width=device-width, initial-scale=1'
+                },
+                {
+                    property: 'og:image',
+                    content: 'https://inkline.io/assets/images/og-image.png'
+                },
+                {
+                    property: 'og:type',
+                    content: 'website'
+                },
+                {
+                    name: 'twitter:card',
+                    content: 'summary_large_image'
+                },
+                {
+                    name: 'twitter:site',
+                    content: '@inkline'
+                },
+                {
+                    name: 'twitter:creator',
+                    content: '@alexgrozav'
+                },
+                {
+                    property: 'og:url',
+                    content: `https://inkline.io${route.fullPath}`
                 }
             ]
         });

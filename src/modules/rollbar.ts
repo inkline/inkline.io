@@ -1,7 +1,9 @@
 import { UserModule } from '~/types';
 import Rollbar from 'rollbar';
 
-// https://docs.rollbar.com/docs/vue-js
+/**
+ * @docs https://docs.rollbar.com/docs/vue-js
+ */
 export const install: UserModule = ({ isClient, app }) => {
     if (!isClient || process.env.NODE_ENV === 'development') { return; }
 

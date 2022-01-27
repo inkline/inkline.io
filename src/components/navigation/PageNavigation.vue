@@ -1,14 +1,20 @@
 <script lang="ts">
 import { defineComponent, ref, watch, nextTick, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { scrollBehavior } from '~/config';
+import { scrollBehaviorOptions } from '~/config';
+
+interface TableOfContentsEntry {
+    id: string;
+    title: string;
+    children: TableOfContentsEntry[]
+}
 
 export default defineComponent({
     setup () {
         const router = useRouter();
         const route = useRoute();
         const title = ref();
-        const tableOfContents = ref([]);
+        const tableOfContents = ref<TableOfContentsEntry[]>([]);
 
         const setTitle = () => {
             const h1 = document.querySelector('.markdown > h1:first-child');
@@ -40,12 +46,12 @@ export default defineComponent({
         const scrollTo = (id: string) => {
             const hash = `#${id}`;
             const element: HTMLElement | null = document.querySelector(hash);
-            const top = (element?.offsetTop || 0) - scrollBehavior.top;
+            const top = (element?.offsetTop || 0) - scrollBehaviorOptions.top;
 
             if (typeof window !== 'undefined') {
                 window.scrollTo({
                     top: top >= 0 ? top : 0,
-                    left: scrollBehavior.left,
+                    left: scrollBehaviorOptions.left,
                     behavior: 'smooth'
                 });
             }
