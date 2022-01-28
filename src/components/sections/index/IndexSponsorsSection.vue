@@ -11,7 +11,6 @@ import icons8ImageLight from '~/assets/images/sponsors/icons8-light.png';
 import icons8ImageDark from '~/assets/images/sponsors/icons8-dark.png';
 // import tideliftImageLight from '~/assets/images/sponsors/tidelift-light.png';
 // import tideliftImageDark from '~/assets/images/sponsors/tidelift-dark.png';
-import patreonImage from '~/assets/images/sponsors/patreon.png';
 
 const sponsors = [
     {
@@ -72,8 +71,7 @@ export default defineComponent({
 
         return {
             t,
-            sponsors,
-            patreonImage
+            sponsors
         };
     }
 });
@@ -118,8 +116,8 @@ export default defineComponent({
                 <p class="_text:muted">
                     {{ t('index.sponsors.description') }}
                 </p>
-                <i-button href="https://www.patreon.com/bePatron?u=18449490" target="_blank" color="primary" size="lg" class="-patreon _margin-top:2">
-                    <img :src="patreonImage" alt="Patreon">
+                <i-button href="https://github.com/sponsors/alexgrozav" target="_blank" color="danger" size="lg" class="_margin-top:2">
+                    <icon-fa-solid-heart class="_color:white _margin-right:1/2" width="20" height="20" />
                     {{ t('index.sponsors.button') }}
                 </i-button>
             </i-column>
@@ -157,27 +155,6 @@ export default defineComponent({
             &.-dark {
                 display: block;
             }
-        }
-    }
-
-    .button.-patreon {
-        ----background: #f25f5c;
-        ----border-color: #d95250;
-
-        &:hover,
-        &:focus {
-            ----background: #e15856;
-            ----border-color: #d95250;
-        }
-
-        &:active {
-            ----background: #c74d4b;
-            ----border-color: #d95250;
-        }
-
-        img {
-            height: 24px;
-            margin-right: spacing('1/2');
         }
     }
 
