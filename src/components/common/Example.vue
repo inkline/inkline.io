@@ -137,6 +137,10 @@ export default defineComponent({
             width: auto;
         }
 
+        > .navbar {
+            z-index: 1;
+        }
+
         .layout + .layout {
             margin-top: spacing();
         }
@@ -149,8 +153,8 @@ export default defineComponent({
             margin: 0;
         }
 
-        > img,
-        > picture > img {
+        img,
+        picture > img {
             margin: spacing('1/2');
             max-width: calc(100% - #{spacing()});
         }
