@@ -91,6 +91,13 @@ export const navigation: NavigationPage[] = [
                 }
             },
             {
+                title: 'Guides',
+                url: { path: '/docs/introduction/guides' },
+                navigation: {
+                    previous: '/docs/introduction '
+                }
+            },
+            {
                 title: 'Design System',
                 children: [
                     {
@@ -111,13 +118,6 @@ export const navigation: NavigationPage[] = [
                         url: { path: '/docs/introduction/design-system/sass-functions' }
                     }
                 ]
-            },
-            {
-                title: 'Guides',
-                url: { path: '/docs/introduction/guides' },
-                navigation: {
-                    previous: '/docs/introduction/design-system'
-                }
             }
         ]
     },
