@@ -94,8 +94,9 @@ export const navigation: NavigationPage[] = [
                 title: 'Guides',
                 url: { path: '/docs/introduction/guides' },
                 navigation: {
-                    previous: '/docs/introduction '
-                }
+                    previous: '/docs/introduction'
+                },
+                index: true
             },
             {
                 title: 'Design System',
