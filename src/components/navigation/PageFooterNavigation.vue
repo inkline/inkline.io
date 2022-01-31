@@ -33,7 +33,7 @@ export default defineComponent({
         const githubUrl = ref('');
 
         const setAdjacentRoutes = (route: RouteLocationNormalizedLoaded) => {
-            const currentPageIndex = pages.findIndex((page) => page.url!.name === route.name);
+            const currentPageIndex = pages.findIndex((page) => page.url!.path === route.fullPath);
             const currentPage = pages[currentPageIndex];
 
             if (!currentPage) {
@@ -41,10 +41,10 @@ export default defineComponent({
             }
 
             previous.value = currentPage.navigation?.previous
-                ? pages.find((page) => page.url!.name === currentPage.navigation?.previous)
+                ? pages.find((page) => page.url!.path === currentPage.navigation?.previous)
                 : pages[currentPageIndex - 1];
             next.value = currentPage.navigation?.next
-                ? pages.find((page) => page.url!.name === currentPage.navigation?.next)
+                ? pages.find((page) => page.url!.path === currentPage.navigation?.next)
                 : pages[currentPageIndex + 1];
 
             githubUrl.value = githubUrlTemplate(route.path, currentPage.index);
