@@ -82,7 +82,7 @@ We've designed CSS Variables in Inkline to fall under one of two categories:
 
 - **Local CSS Variables**
 
-    Global variables are prefixed with `----`.
+    Local variables are prefixed with `----`.
 
     ~~~scss
     var(----color);
