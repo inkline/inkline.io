@@ -190,6 +190,7 @@ export default defineConfig(({ command }) => ({
     ssgOptions: {
         script: 'async',
         formatting: 'minify',
-        format: 'cjs'
+        format: 'cjs',
+        dirStyle: 'nested'
     }
 }));
