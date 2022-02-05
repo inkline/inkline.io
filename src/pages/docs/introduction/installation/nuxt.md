@@ -60,7 +60,7 @@ export default defineNuxtConfig({
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">4</span> Configure your design</div> 
 
-Next, open your `app.vue` file and add a style block to configure Inkline's CSS Variables. [Learn more](/docs/introduction/design-system) about the Design System.
+Next, open your `app.vue` file and add the style block below to configure Inkline's CSS Variables. [Learn more](/docs/introduction/design-system) about the Design System.
 
 ~~~html
 <style lang="scss">
