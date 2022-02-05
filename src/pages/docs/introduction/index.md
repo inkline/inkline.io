@@ -38,7 +38,7 @@ Inkline offers official integrations for Vite.js (recommended), Vue.js CLI and N
         <div class="image">
             <img src="../../../assets/images/environments/nuxtjs.svg" alt="Nuxt.js Installation - Inkline UI UX DX Library" />
         </div>
-        <span>Nuxt.js 3 Installation</span>
+        <span>Nuxt.js Installation</span>
         <i-icon name="ink-chevron-down"></i-icon>
     </i-card>
 </router-link>

@@ -1,17 +1,17 @@
 ---
-title: Installation - Nuxt.js 3 - Inkline
-description: Install Inkline for any application created using Nuxt.js 3.
+title: Installation - Nuxt.js - Inkline
+description: Install Inkline for any application created using Nuxt.js.
 ---
 
-# Installation - Nuxt.js 3
-## Install Inkline for any application created using Nuxt.js 3.
+# Installation - Nuxt.js
+## Install Inkline for any application created using Nuxt.js.
 
 ### Installation
 
 <div class="install-step _margin-top:2">
 <div class="install-step-title"><span class="install-step-number">1</span> Create a project</div> 
 
-Create a new Nuxt.js application using the `nuxi` CLI command below or using the [Nuxt.js 3 guide](https://v3.nuxtjs.org/getting-started/installation), and follow the instructions provided by the installation wizard.
+Create a new Nuxt.js application using the `nuxi` CLI command below or using the [Nuxt.js guide](https://v3.nuxtjs.org/getting-started/installation), and follow the instructions provided by the installation wizard.
 
 ~~~bash
 npx nuxi init my-nuxt-app
@@ -50,9 +50,6 @@ export default defineNuxtConfig({
     buildModules: [
         '@inkline/nuxt'
     ],
-    css: [
-        '~/main.scss'
-    ],
     inkline: {
         // Plugin options (optional)
     }
@@ -63,9 +60,10 @@ export default defineNuxtConfig({
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">4</span> Configure your design</div> 
 
-Next, create a new file called `main.scss` and import Inkline. [Learn more](/docs/introduction/design-system) about the Design System.
+Next, open your `app.vue` file and add a style block to configure Inkline's CSS Variables. [Learn more](/docs/introduction/design-system) about the Design System.
 
-~~~scss
+~~~html
+<style lang="scss">
 @import '@inkline/inkline/css/variables';
 @import '@inkline/inkline/css/mixins';
 
@@ -74,6 +72,7 @@ Next, create a new file called `main.scss` and import Inkline. [Learn more](/doc
     --color--primary--s: 77%;
     --color--primary--l: 39%;
 }
+</style>
 ~~~
 </div>
 <div class="install-step">

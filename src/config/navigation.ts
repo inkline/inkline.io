@@ -58,7 +58,7 @@ export const navigation: NavigationPage[] = [
                         }
                     },
                     {
-                        title: 'Nuxt.js 3',
+                        title: 'Nuxt.js',
                         url: { path: '/docs/introduction/installation/nuxt' },
                         navigation: {
                             previous: '/docs/introduction',
