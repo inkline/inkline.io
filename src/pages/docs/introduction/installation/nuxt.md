@@ -47,7 +47,7 @@ Open your `nuxt.config.ts` or `nuxt.config.js` file and configure your applicati
 import { defineNuxtConfig } from 'nuxt3';
 
 export default defineNuxtConfig({
-    buildModules: [
+    modules: [
         '@inkline/nuxt'
     ],
     inkline: {
