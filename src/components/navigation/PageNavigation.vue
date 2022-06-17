@@ -14,6 +14,7 @@ export default defineComponent({
         const router = useRouter();
         const route = useRoute();
         const title = ref();
+        const carbonads = ref<HTMLElement | null>(null);
         const tableOfContents = ref<TableOfContentsEntry[]>([]);
 
         const setTitle = () => {
@@ -59,10 +60,23 @@ export default defineComponent({
             router.replace({ ...route, hash });
         };
 
+        const loadAds = () => {
+            if (carbonads.value) {
+                const script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+                script.id = '_carbonads_js';
+                script.src = '//cdn.carbonads.com/carbon.js?serve=CEAICK7U&placement=wwwinklineio';
+
+                carbonads.value.appendChild(script);
+            }
+        }
+
         onMounted(() => {
             nextTick(() => {
                 setTitle();
                 setTableOfContents();
+                loadAds();
             });
         });
 
@@ -76,6 +90,7 @@ export default defineComponent({
         return {
             title,
             tableOfContents,
+            carbonads,
             scrollTo
         };
     }
@@ -83,7 +98,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <aside v-show="tableOfContents.length > 0" id="page-navigation">
+    <aside id="page-navigation">
         <div class="title _font-weight:semibold _font-size:lg _text:muted">
             {{ title }}
         </div>
@@ -98,6 +113,7 @@ export default defineComponent({
                 </ul>
             </li>
         </ul>
+        <div ref="carbonads" />
     </aside>
 </template>
 
@@ -110,15 +126,10 @@ export default defineComponent({
     width: var(--sidebar-width);
     position: fixed;
     top: 0;
+    bottom: 0;
     right: calc(var(--spacing) * 2);
     text-align: right;
-    opacity: 0.5;
     transition: opacity var(--transition-duration) var(--transition-easing);
-
-    &:hover,
-    &:focus-within {
-        opacity: 1;
-    }
 
     > .title {
         margin-bottom: calc(var(--spacing) / 2);
