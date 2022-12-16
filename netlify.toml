@@ -1,0 +1,7 @@
+[build]
+    base = "."
+    publish = "dist/"
+    command = "npm run build && npm run export"
+
+[context.production]
+    command = "npm run build && npm run export"
