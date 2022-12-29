@@ -38,3 +38,10 @@ dist-ssr
 # Generated
 src/components.d.ts
 public/sitemap.xml
+
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env

@@ -5,9 +5,9 @@
 </p>
 
 <h1 align="center">Inkline</h1>
-    
+
 <p align="center">
-    Documentation and homepage for Inkline, built with Vite.js and publicly hosted on Vercel.<br/><br/> Inkline is written and maintained by <a href="https://github.com/alexgrozav">@alexgrozav</a>. 
+    Documentation and homepage for Inkline, built with Vite.js and publicly hosted on Vercel.<br/><br/> Inkline is written and maintained by <a href="https://github.com/alexgrozav">@alexgrozav</a>.
     <br/>
     <br/>
     <a href="https://inkline.io">Homepage</a>
@@ -38,7 +38,6 @@
     </a>
 </p>
 
-
 <br/>
 <br/>
 
@@ -49,15 +48,17 @@
 3. Open `http://localhost:3000` in your browser.
 
 ## Creator
-**Alex Grozav**
 
-- <https://grozav.com>
-- <https://twitter.com/alexgrozav>
-- <https://facebook.com/alexgrozav>
-- <https://github.com/alexgrozav>
+### Alex Grozav
+
+-   <https://grozav.com>
+-   <https://twitter.com/alexgrozav>
+-   <https://facebook.com/alexgrozav>
+-   <https://github.com/alexgrozav>
 
 If you use Inkline in your daily work and feel that it has made your life easier, please consider sponsoring me on [Github Sponsors](https://github.com/sponsors/alexgrozav). 💖
 
 ## Copyright and license
-Homepage and documentation copyright 2017-2022 [Inkline Authors](https://github.com/inkline/inkline.io/graphs/contributors). 
+
+Homepage and documentation copyright 2017-2022 [Inkline Authors](https://github.com/inkline/inkline.io/graphs/contributors).
 Docs released under [MIT License](https://github.com/inkline/inkline/blob/master/packages/docs/LICENSE).
