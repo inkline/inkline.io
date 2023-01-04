@@ -22,6 +22,7 @@
         "@nuxt/content": "^2.2.2",
         "@nuxtjs/i18n": "^8.0.0-beta.7",
         "@vue/eslint-config-typescript": "^11.0.2",
+        "esbuild": "^0.16.13",
         "eslint": "^8.30.0",
         "eslint-plugin-vue": "^9.8.0",
         "markdownlint": "^0.26.2",
