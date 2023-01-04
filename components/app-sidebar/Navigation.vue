@@ -151,7 +151,7 @@ export default defineComponent({
                     }
 
                     .-dark & {
-                        border-left-color: var(--color-dark);
+                        border-left-color: var(--color-gray-700);
                     }
 
                     &.router-link-exact-active {
