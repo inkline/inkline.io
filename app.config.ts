@@ -1,5 +1,5 @@
 export default defineAppConfig({
     features: {
-        premium: true
+        premium: false
     }
 });

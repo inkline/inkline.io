@@ -18,7 +18,7 @@ export default defineComponent({
 </script>
 <template>
     <main id="default-layout">
-        <AppNavbar />g
+        <AppNavbar />
         <slot />
     </main>
 </template>

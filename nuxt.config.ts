@@ -9,6 +9,10 @@ export default defineNuxtConfig({
      */
     modules: ['@nuxt/content', '@inkline/plugin/nuxt', '@nuxtjs/i18n', 'nuxt-icon'],
     /**
+     * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#css
+     */
+    css: ['~/css/index.scss'],
+    /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#app
      */
     app: {
@@ -33,17 +37,18 @@ export default defineNuxtConfig({
     i18n: {
         strategy: 'prefix_and_default',
         defaultLocale: 'en',
-        locales: [
-            {
-                code: 'en',
-                iso: 'en',
-                json: en
+        locales: [{ code: 'en', iso: 'en', json: en }],
+        vueI18n: {
+            legacy: false,
+            locale: 'en',
+            messages: {
+                en
             }
-        ]
+        }
         /**
          * @docs https://v8.i18n.nuxtjs.org/guide/lazy-load-translations Not yet supported
          */
-        // lazy: true
+        // lazy: true,
         // langDir: '~/i18n/'
     },
     /**

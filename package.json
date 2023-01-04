@@ -17,6 +17,8 @@
         "@grozav/eslint-config": "^1.1.4",
         "@grozav/stylelint-config": "^1.0.0",
         "@iconify/json": "^2.1.158",
+        "@inkline/config": "^1.7.9",
+        "@inkline/plugin": "^1.3.1",
         "@nuxt/content": "^2.2.2",
         "@nuxtjs/i18n": "^8.0.0-beta.7",
         "@vue/eslint-config-typescript": "^11.0.2",
@@ -72,7 +74,6 @@
         "url": "git+https://github.com/inkline/inkline.io.git"
     },
     "dependencies": {
-        "@inkline/inkline": "^4.0.0-beta.9",
-        "@inkline/plugin": "^1.2.1"
+        "@inkline/inkline": "^4.0.0-beta.19"
     }
 }
