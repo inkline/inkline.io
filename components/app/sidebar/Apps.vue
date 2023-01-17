@@ -12,8 +12,9 @@ export default defineComponent({
     }
 });
 </script>
+
 <template>
-    <ul id="sidebar-apps" class="_list:unstyled">
+    <ul class="app-sidebar-apps _list:unstyled">
         <li class="-active">
             <NuxtLink :to="{ path: '/docs' }">
                 <IBadge color="primary">
@@ -31,6 +32,7 @@ export default defineComponent({
                     Storybook
                     <span class="_visually-hidden">{{ t('common.opensNewWindow') }}</span>
                 </span>
+                <Icon name="ri:external-link-fill" class="_text:weakest _margin-left:1/4" />
             </a>
         </li>
         <li>
@@ -42,19 +44,21 @@ export default defineComponent({
                     Playground
                     <span class="_visually-hidden">{{ t('common.opensNewWindow') }}</span>
                 </span>
+                <Icon name="ri:external-link-fill" class="_text:weakest _margin-left:1/4" />
             </a>
         </li>
-        <!--<li>-->
-        <!--    <a href="https://github.com/inkline/inkline/releases" target="_blank">-->
-        <!--        <IBadge color="warning">-->
-        <!--            <Icon name="fa-solid:list" size="16" />-->
-        <!--        </IBadge>-->
-        <!--        <span>-->
-        <!--            Changelog-->
-        <!--            <span class="_visually-hidden">{{ t('common.opensNewWindow') }}</span>-->
-        <!--        </span>-->
-        <!--    </a>-->
-        <!--</li>-->
+        <li>
+            <a href="https://github.com/inkline/inkline/releases" target="_blank">
+                <IBadge color="warning">
+                    <Icon name="fa-solid:list" size="16" />
+                </IBadge>
+                <span>
+                    Changelog
+                    <span class="_visually-hidden">{{ t('common.opensNewWindow') }}</span>
+                </span>
+                <Icon name="ri:external-link-fill" class="_text:weakest _margin-left:1/4" />
+            </a>
+        </li>
         <li>
             <a href="https://chat.inkline.io" target="_blank">
                 <IBadge color="dark">
@@ -64,48 +68,47 @@ export default defineComponent({
                     Community
                     <span class="_visually-hidden">{{ t('common.opensNewWindow') }}</span>
                 </span>
+                <Icon name="ri:external-link-fill" class="_text:weakest _margin-left:1/4" />
             </a>
         </li>
     </ul>
 </template>
 
-<style lang="scss">
-#sidebar-apps {
-    padding-top: var(--padding-top-2);
+<style lang="scss" scoped>
+.app-sidebar-apps {
+    padding-top: var(--article--padding-top);
     padding-bottom: var(--padding-bottom-2);
-    margin: 0;
+    margin: 0 var(--margin-right-1-2) 0 0;
 
     li {
-        margin-bottom: var(--margin-bottom);
+        margin: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         a {
             display: flex;
             align-items: center;
+            padding: var(--padding-1-2);
+            border-radius: var(--border-radius);
+            color: var(--body--color);
             text-decoration: none;
+            transition: background-color var(--transition-duration)
+                var(--transition-timing-function);
+            outline: 0;
 
-            .-light & {
-                color: var(--color-gray-800);
-            }
+            &:hover,
+            &:focus {
+                background: rgba(0, 0, 0, 0.075);
 
-            .-dark & {
-                color: var(--color-gray-200);
-            }
-
-            &:hover .-storybook,
-            &:focus .-storybook {
-                --sidebar--background: #dc3971;
+                .-storybook {
+                    --sidebar--background: #dc3971;
+                }
             }
         }
 
         &.-active a {
-            .-light & {
-                color: var(--color-gray-900);
-            }
-
-            .-dark & {
-                color: var(--color-gray-50);
-            }
-
             font-weight: var(--font-weight-semibold);
         }
     }

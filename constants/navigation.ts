@@ -24,7 +24,7 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'Getting started',
-        active: /\/docs\/(about|concepts|installation.+)/,
+        active: /\/docs\/(about|concepts|installation).*/,
         children: [
             {
                 title: 'About Inkline',
@@ -37,18 +37,11 @@ export const navigation: NavigationPage[] = [
             },
             {
                 title: 'Installation',
+                url: { path: '/docs/installation' },
                 children: [
                     {
                         title: 'Vite.js',
                         url: { path: '/docs/installation/vite' },
-                        navigation: {
-                            previous: '/docs/concepts',
-                            next: '/docs/configuration'
-                        }
-                    },
-                    {
-                        title: 'Vue.js CLI',
-                        url: { path: '/docs/installation/vue-cli' },
                         navigation: {
                             previous: '/docs/concepts',
                             next: '/docs/configuration'
@@ -63,8 +56,16 @@ export const navigation: NavigationPage[] = [
                         }
                     },
                     {
-                        title: 'Generic',
-                        url: { path: '/docs/installation/generic' },
+                        title: 'Webpack',
+                        url: { path: '/docs/installation/webpack' },
+                        navigation: {
+                            previous: '/docs/concepts',
+                            next: '/docs/configuration'
+                        }
+                    },
+                    {
+                        title: 'Manual',
+                        url: { path: '/docs/installation/manual' },
                         navigation: {
                             previous: '/docs/concepts',
                             next: '/docs/configuration'
@@ -84,6 +85,7 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'Configuration',
+        active: /\/docs\/configuration.*/,
         children: [
             {
                 title: 'Overview',
@@ -91,11 +93,11 @@ export const navigation: NavigationPage[] = [
             },
             {
                 title: 'Theme Options',
-                url: { path: '/docs/configuration/plugin-options' }
+                url: { path: '/docs/configuration/theme' }
             },
             {
                 title: 'Plugin Options',
-                url: { path: '/docs/configuration/plugin-options' }
+                url: { path: '/docs/configuration/plugin' }
             }
         ]
     },

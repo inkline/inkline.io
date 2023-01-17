@@ -1,3 +1,4 @@
+import { defineNuxtConfig } from 'nuxt/config';
 import en from './i18n/en';
 
 /**
@@ -29,7 +30,11 @@ export default defineNuxtConfig({
      * @docs https://content.nuxtjs.org
      */
     content: {
-        documentDriven: true
+        documentDriven: true,
+        highlight: {
+            theme: 'css-variables',
+            preload: ['diff', 'json', 'js', 'ts', 'css', 'scss', 'shell', 'html', 'md', 'yaml']
+        }
     },
     /**
      * @docs https://v8.i18n.nuxtjs.org
@@ -57,6 +62,11 @@ export default defineNuxtConfig({
     inkline: {
         globals: {
             colorMode: 'light'
+        }
+    },
+    vite: {
+        optimizeDeps: {
+            exclude: ['@inkline/config', '@inkline/inkline']
         }
     }
 });

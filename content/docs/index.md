@@ -1,14 +1,67 @@
 ---
-title: TEST
+title: Documentation
+description: Documentation for Inkline, the intuitive UI Library for Vue.js 3 Design Systems.
 layout: docs
 ---
 
-# Document Driven
+# Inkline
+## Documentation for Inkline, the intuitive UI Library for Vue.js 3 Design Systems.
 
-This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
+Inkline is the intuitive UI Components library that gives you a developer-friendly foundation for building high-quality, accessible, and customizable Vue.js 3 Design Systems.
 
-Try to navigate to [/about](/about).
+Inkline provides a great User Interface, User Experience, and Developer Experience, emphasizing a consistent and expressive API. It has been designed for creating flawless, unique experiences.
 
----
+<br>
 
-Look at the [Document Driven documentation](https://content.nuxtjs.org/guide/writing/document-driven) to learn more.
+::ContentRow
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/installation" icon="icon-park-solid:install" title="Installation" }
+        Get started with Inkline
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/configuration" title="Configuration" icon="icon-park-solid:config" }
+        Theming and plugin options
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/ui/design-tokens" title="Design Tokens" icon="ion:md-color-palette" }
+        Colors, spacing, and more
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/ui/typography" title="Typography" icon="octicon:typography-16" }
+        Headings, paragraphs, and more
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/ui/layout" title="Layout" icon="ph:layout-fill" }
+        Headers, footers, asides, and more
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/ui/grid" title="Grid" icon="mingcute:layout-grid-fill" }
+        Containers, rows, columns, and more
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/components" title="Components" icon="fa-solid:cubes" }
+        50+ components to choose from
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/forms" title="Forms" icon="bi:ui-checks-grid" }
+        Inputs, validation, and more
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/utilities" title="Utilities" icon="material-symbols:format-paint" }
+        Tailwind style utility classes
+        ::
+    ::
+    ::ContentColumn{ md="6" }
+        ::ContentFeatureCard{ to="/docs/examples" title="Examples" icon="heroicons:beaker-20-solid" }
+        Examples pages to start with
+        ::
+    ::
+::

@@ -42,7 +42,11 @@ export default defineComponent({
 });
 </script>
 <template>
-    <ICollapsible class="sidebar-navigation" color="transparent" :model-value="activeCategories">
+    <ICollapsible
+        class="app-sidebar-navigation"
+        color="transparent"
+        :model-value="activeCategories"
+    >
         <template v-for="(category, categoryIndex) in menu" :key="categoryIndex">
             <NuxtLink v-if="category.url" :to="localePath(category.url)">
                 {{ category.title }}
@@ -91,24 +95,41 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-.sidebar-navigation {
+.app-sidebar-navigation {
     --collapsible--padding-top: 0;
     --collapsible--padding-right: 0;
     --collapsible--padding-bottom: 0;
     --collapsible--padding-left: 0;
+    --collapsible--header--padding-right: var(--padding-right-1-2);
+
+    padding-right: var(--padding-right-1-2);
+
+    > * {
+        margin-bottom: 2px;
+    }
 
     :deep(.icon) {
         opacity: 0.25;
     }
 
+    :deep(.collapsible-header),
+    > a {
+        outline: 0;
+        border-radius: var(--border-radius);
+        transition: background-color var(--transition-duration) var(--transition-timing-function);
+
+        &:hover,
+        &:focus {
+            background: rgba(0, 0, 0, 0.075) !important;
+        }
+    }
+
     .collapsible-header span,
     > a {
-        padding-top: var(--padding-top-1-2);
-        padding-bottom: var(--padding-bottom-1-2);
-        padding-right: var(--padding-right);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: var(--app-sidebar-navigation--padding, var(--padding-1-2));
         font-weight: var(--font-weight-semibold);
         color: var(--body--color);
 
@@ -117,34 +138,40 @@ export default defineComponent({
         }
     }
 
-    .sidebar-category {
-        --collapsible--header--padding-right: var(--padding-right);
-
+    :deep(.sidebar-category) {
         &.-current {
             --collapsible--icon--color: var(--color-primary);
 
-            :deep(.icon) {
+            .icon {
                 opacity: 1;
             }
+        }
+
+        .sidebar-category-menu {
+            margin: 0 0 0 var(--margin-left-1-2);
+        }
+
+        .sidebar-page-menu {
+            margin: 0;
         }
 
         .sidebar-category-menu,
         .sidebar-page-menu {
             list-style: none;
             padding: 0;
-            margin: 0;
 
             li {
                 margin: 0;
 
                 a,
                 span {
-                    transition-property: color, border-color;
+                    transition-property: background-color, border-color;
                     transition-duration: var(--transition-duration);
                     transition-timing-function: var(--transition-easing);
                     display: flex;
                     border-left-style: var(--border-left-style);
                     border-left-width: var(--border-left-width);
+                    outline: 0;
 
                     .-light & {
                         border-left-color: var(--color-light);

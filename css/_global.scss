@@ -1,4 +1,29 @@
 :root {
     --sidebar--width: 16rem;
-    --navbar--height: 4rem;
+    --navbar--height: 4.75rem;
+    --article--padding-top: var(--margin-top-2);
+    --article--padding-bottom: var(--margin-top-2);
+}
+
+.inkline-scrollbar {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color--gray-50);
+        border: var(--border-color);
+        border-radius: var(--border-radius)
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--color--gray-10);
+    }
+
+    .inkline {
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    }
 }

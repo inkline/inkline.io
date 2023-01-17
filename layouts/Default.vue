@@ -16,9 +16,21 @@ export default defineComponent({
     }
 });
 </script>
+
 <template>
     <main id="default-layout">
         <AppNavbar />
         <slot />
     </main>
 </template>
+
+<style lang="scss">
+#default-layout {
+    .app-navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}
+</style>

@@ -3,6 +3,12 @@ import { defineComponent } from 'vue';
 import { useInkline } from '@inkline/inkline';
 
 export default defineComponent({
+    props: {
+        docs: {
+            type: Boolean,
+            default: false
+        }
+    },
     setup() {
         const localePath = useLocalePath();
         const { t } = useI18n();
@@ -25,7 +31,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <INavbar>
+    <INavbar class="app-navbar">
         <INavbarBrand :to="localePath('/')"> Inkline </INavbarBrand>
         <INavbarCollapsible>
             <INav class="_margin-left:auto">
@@ -78,12 +84,11 @@ export default defineComponent({
                     <IButton :to="localePath('/signup')" color="primary" class="_margin-left:1">
                         {{ t('navigation.signup') }}
                     </IButton>
-                    <template #fallback>
-                        <IButton :to="localePath('/docs')" color="primary" class="_margin-left:1">
-                            {{ t('navigation.getStarted') }}
-                        </IButton>
-                    </template>
                 </FeatureFlag>
+            </INav>
+            <INav v-if="docs">
+                <span class="_text:weakest _margin-left:1 _margin-y:1/2">Documentation</span>
+                <AppSidebarNavigation />
             </INav>
         </INavbarCollapsible>
     </INavbar>
@@ -92,13 +97,45 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '@inkline/inkline/css/mixins';
 
-.navbar {
+.app-navbar {
     --navbar--light--background: var(--color-white);
     --navbar--light--item--background: var(--color-white);
     --navbar--light--item--hover--background: var(--color-light);
     --navbar--light--collapsed--background: transparent;
 
     --navbar--dark--collapsed--background: transparent;
+
+    &.-open {
+        height: 100%;
+        align-items: flex-start;
+
+        :deep(> .container) {
+            overflow: auto;
+            max-height: 100%;
+        }
+    }
+
+    .router-link-exact-active {
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .app-sidebar-navigation,
+    .app-sidebar-apps {
+        width: 100%;
+        margin: 0;
+    }
+
+    .app-sidebar-navigation {
+        --app-sidebar-navigation--padding: var(--padding-top-1-2) var(--padding-right)
+            var(--padding-bottom-1-2) var(--padding-left);
+    }
+
+    @include breakpoint-up('lg') {
+        .app-sidebar-navigation,
+        .app-sidebar-apps {
+            display: none;
+        }
+    }
 
     @include breakpoint-down('md') {
         .nav.navbar-icons {

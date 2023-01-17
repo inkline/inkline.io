@@ -29,17 +29,16 @@ export default defineComponent({
 </script>
 
 <template>
-    <ISidebar id="sidebar" :collapse="false">
+    <ISidebar class="app-sidebar" :collapse="false">
         <AppSidebarApps />
         <AppSidebarNavigation />
     </ISidebar>
 </template>
 
 <style lang="scss" scoped>
-@import '@inkline/inkline/css/variables';
 @import '@inkline/inkline/css/mixins';
 
-.sidebar-wrapper {
+.app-sidebar {
     --sidebar--background: transparent;
     --sidebar--border-top-width: 0;
     --sidebar--border-bottom-width: 0;
@@ -48,5 +47,7 @@ export default defineComponent({
     --sidebar--padding-right: 0;
     --sidebar--padding-bottom: 0;
     --sidebar--padding-left: 0;
+
+    margin-left: calc(var(--margin-left-1-2) * -1);
 }
 </style>

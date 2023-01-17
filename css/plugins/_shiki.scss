@@ -1,0 +1,30 @@
+/* https://github.com/antfu/shiki-theme-vars */
+.inkline {
+    &:not(.dark-theme) {
+        --shiki-color-background: #f8f8f8;
+        --shiki-color-text: #393a34;
+        --shiki-token-constant: #a65e2b;
+        --shiki-token-string: #b56959;
+        --shiki-token-comment: #a0ada0;
+        --shiki-token-keyword: #1c6b48;
+        --shiki-token-parameter: #1c6b48;
+        --shiki-token-function: #6c7834;
+        --shiki-token-string-expression: #b56959;
+        --shiki-token-punctuation: #8e8f8b;
+        --shiki-token-link: #1c6b48;
+    }
+
+    &.dark-theme {
+        --shiki-color-background: #151515;
+        --shiki-color-text: #d4cfbf;
+        --shiki-token-constant: #a65e2b;
+        --shiki-token-string: #b56959;
+        --shiki-token-comment: #a0ada0;
+        --shiki-token-keyword: #1c6b48;
+        --shiki-token-parameter: #1c6b48;
+        --shiki-token-function: #6c7834;
+        --shiki-token-string-expression: #b56959;
+        --shiki-token-punctuation: #8e8f8b;
+        --shiki-token-link: #1c6b48;
+    }
+}
