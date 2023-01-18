@@ -2,10 +2,11 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    setup() {
-        const active = ref('config');
+    setup(props, { slots }) {
+        const active = ref(Object.keys(slots)[0]);
         const tabs = ref([
-            { name: 'config', title: 'Configuration' },
+            { name: 'config', title: 'inkline.config.ts' },
+            { name: 'main', title: 'main.ts' },
             { name: 'output', title: 'Output' }
         ]);
 
@@ -18,11 +19,13 @@ export default defineComponent({
 </script>
 
 <template>
-    <ITabs class="content-tabs" v-model="active" v-bind="$attrs">
+    <ITabs v-model="active" class="content-tabs" v-bind="$attrs">
         <template #header>
-            <ITabTitle v-for="tab in tabs" :key="tab.name" :for="tab.name">
-                {{ tab.title }}
-            </ITabTitle>
+            <template v-for="tab in tabs">
+                <ITabTitle v-if="$slots[tab.name]" :key="tab.name" :for="tab.name">
+                    {{ tab.title }}
+                </ITabTitle>
+            </template>
         </template>
         <template v-for="tab in tabs">
             <ITab v-if="$slots[tab.name]" :key="tab.name" :name="tab.name">

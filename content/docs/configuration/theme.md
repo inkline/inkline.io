@@ -1,17 +1,17 @@
 ---
 title: Theme Options - Configuration - Inkline
-description: Inkline comes with a powerful theme configuration file, with a very flexible, intuitive interface.
+description: Inkline comes with a powerful theme configuration file, featuring a very flexible, intuitive interface.
 layout: docs
 ---
 
 # Theme Options
-## Inkline comes with a powerful theme configuration file, with a very flexible, intuitive interface.
+## Inkline comes with a powerful theme configuration file, featuring a very flexible, intuitive interface.
 
 Inkline now supports an **`inkline.config.ts`** theme configuration file using [@inkline/config](https://github.com/inkline/config), our cutting-edge CSS/Sass code generator.
 
 This allows you to quickly and easily generate a comprehensive set of CSS variables for your Vue.js 3 Design System. With its intuitive interface and advanced features, you can easily customize your website's design and layout to suit your needs.
 
-### Theme 
+### theme 
 `theme[name]`
 
 The config supports multiple themes.
@@ -60,7 +60,7 @@ export default defineConfig({
 
 
 
-### Animation 
+### animation 
 `theme[name].animation`
 
 ::ContentTabs
@@ -88,7 +88,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Border 
+### border 
 `theme[name].border`
 
 ::ContentTabs
@@ -152,7 +152,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Border Radius 
+### borderRadius 
 `theme[name].borderRadius`
 
 ::ContentTabs
@@ -202,7 +202,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Box Shadow 
+### boxShadow 
 `theme[name].boxShadow`
 
 ::ContentTabs
@@ -237,7 +237,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Breakpoints 
+### breakpoints 
 `theme[name].breakpoints`
 
 ::ContentTabs
@@ -273,7 +273,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Color 
+### color 
 `theme[name].color`
 
 ::ContentTabs
@@ -340,7 +340,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Margin 
+### margin 
 `theme[name].margin`
 
 ::ContentTabs
@@ -390,7 +390,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Padding 
+### padding 
 `theme[name].padding`
 
 ::ContentTabs
@@ -440,7 +440,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Scale Ratio 
+### scaleRatio 
 `theme[name].scaleRatio`
 
 ::ContentTabs
@@ -488,7 +488,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Size 
+### size 
 `theme[name].size`
 
 ::ContentTabs
@@ -526,7 +526,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Typography 
+### typography 
 `theme[name].typography`
 
 ::ContentTabs
@@ -604,7 +604,7 @@ export default defineConfig({
 ~~~
 ::
 
-### Elements 
+### elements 
 `theme[name].elements`
 
 The `elements` property provides a way to add generic element-specific variables. Each nested key inside of `elements` will be concatenated to the variable name using a `--` (double dash), unless it's part of a known CSS property (i.e. `body.margin.top` -> `body--margin-top`).
@@ -643,7 +643,7 @@ export default defineConfig({
 ::
 
 
-### Variants 
+### variants 
 `theme[name].variants`
 
 Variants provide a way to apply modifiers to generate multiple variable versions based on the initial base value.
@@ -722,7 +722,7 @@ Number type values accept the following variant modifiers:
 - `subtract`
 
 
-### Defaults
+### defaults
 
 The configuration provides sensible, overridable, interdependent defaults that work well in any Design System.
 
@@ -989,10 +989,6 @@ export default defineConfig({
                 }
             }
         }
-    },
-    build: {
-        extName: '.scss',
-        themeSelector: '.<% themeName %>-theme'
     }
 });
 ~~~
