@@ -12,9 +12,9 @@
     --border-bottom-style: solid;
     --border-left-style: solid;
     --border-style: var(--border-top-style) var(--border-right-style) var(--border-bottom-style) var(--border-left-style);
-    --border-top-color: #c4cdd0;
-    --border-right-color: #c4cdd0;
-    --border-bottom-color: #c4cdd0;
-    --border-left-color: #c4cdd0;
+    --border-top-color: var(--color-gray-200);
+    --border-right-color: var(--color-gray-200);
+    --border-bottom-color: var(--color-gray-200);
+    --border-left-color: var(--color-gray-200);
     --border-color: var(--border-top-color) var(--border-right-color) var(--border-bottom-color) var(--border-left-color);
 }
