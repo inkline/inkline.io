@@ -1,5 +1,4 @@
-import { definePageMeta, useLocaleHead } from '#imports';
-import { PageMeta } from 'nuxt/dist/pages/runtime/composables';
+import { useLocaleHead } from '#imports';
 
 export function usePageSEOMeta() {
     return useLocaleHead({

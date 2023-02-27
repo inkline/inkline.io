@@ -32,9 +32,10 @@ Inkline will automatically detect your Nuxt.js development environment and gener
 npx inkline init
 ~~~
 
-Using the [Inkline CLI](https://github.com/inkline/cli) command above, Inkline will:
-- Create or update your **`nuxt.config.ts`** file
-- Create your **`inkline.config.ts`** file
+Using the [Inkline CLI](https://github.com/inkline/cli) command above, Inkline has:
+- Created or updated your **`nuxt.config.ts`** file
+- Created your **`inkline.config.ts`** file
+- Updated your **`package.json`** file
 
 If you want to set up Inkline manually, read the [Manual Installation guide](/docs/installation/manual).
 

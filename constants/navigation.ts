@@ -24,7 +24,7 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'Getting started',
-        active: /\/docs\/(about|concepts|installation).*/,
+        active: /\/docs\/(about|concepts|installation)(\/.+)?/,
         children: [
             {
                 title: 'About Inkline',
@@ -56,7 +56,7 @@ export const navigation: NavigationPage[] = [
                         }
                     },
                     {
-                        title: 'Webpack',
+                        title: 'Webpack.js',
                         url: { path: '/docs/installation/webpack' },
                         navigation: {
                             previous: '/docs/concepts',
@@ -85,15 +85,40 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'Configuration',
-        active: /\/docs\/configuration.*/,
+        active: /\/docs\/configuration(\/.+)?/,
         children: [
             {
-                title: 'Overview',
-                url: { path: '/docs/configuration' }
+                title: 'Configuration File',
+                url: { path: '/docs/configuration/file' }
             },
             {
-                title: 'Theme Options',
-                url: { path: '/docs/configuration/theme' }
+                title: 'Module Options',
+                children: [
+                    {
+                        title: 'Vite.js',
+                        url: { path: '/docs/configuration/vite' },
+                        navigation: {
+                            previous: '/docs/configuration/file',
+                            next: '/docs/configuration/plugin'
+                        }
+                    },
+                    {
+                        title: 'Nuxt.js',
+                        url: { path: '/docs/configuration/nuxt' },
+                        navigation: {
+                            previous: '/docs/configuration/file',
+                            next: '/docs/configuration/plugin'
+                        }
+                    },
+                    {
+                        title: 'Webpack.js',
+                        url: { path: '/docs/configuration/webpack' },
+                        navigation: {
+                            previous: '/docs/configuration/file',
+                            next: '/docs/configuration/plugin'
+                        }
+                    }
+                ]
             },
             {
                 title: 'Plugin Options',
@@ -103,6 +128,7 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'UI Guidelines',
+        active: /\/docs\/ui(\/.+)?/,
         children: [
             {
                 title: 'Design Tokens',

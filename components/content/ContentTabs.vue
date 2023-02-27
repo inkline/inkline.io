@@ -1,11 +1,14 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
     setup(props, { slots }) {
         const active = ref(Object.keys(slots)[0]);
         const tabs = ref([
             { name: 'config', title: 'inkline.config.ts' },
+            { name: 'vite', title: 'vite.config.ts' },
+            { name: 'nuxt', title: 'nuxt.config.ts' },
+            { name: 'webpack', title: 'webpack.config.js' },
             { name: 'main', title: 'main.ts' },
             { name: 'output', title: 'Output' }
         ]);

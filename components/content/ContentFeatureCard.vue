@@ -1,7 +1,7 @@
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
-import { RouteLocation, RouteLocationRaw } from 'vue-router';
-import { useLocalePath } from '#i18n';
+import { computed, defineComponent, PropType } from 'vue';
+import { RouteLocation } from 'vue-router';
+import { useLocalePath } from 'vue-i18n-routing';
 
 export default defineComponent({
     props: {

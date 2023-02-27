@@ -1,6 +1,11 @@
 export default {
     common: {
-        opensNewWindow: 'Opens in a new window'
+        opensNewWindow: 'Opens in a new window',
+        copyToClipboard: 'Copy to clipboard',
+        copiedToClipboard: 'Copied to clipboard',
+        example: 'Example',
+        token: 'Token',
+        description: 'Description'
     },
     navigation: {
         home: 'Home',

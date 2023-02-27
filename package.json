@@ -14,17 +14,19 @@
         "lint:markdown": "markdownlint '**/*.md'"
     },
     "dependencies": {
-        "@inkline/inkline": "^4.0.0-rc.8",
+        "@inkline/inkline": "^4.0.0-rc.13",
+        "copy-to-clipboard": "^3.3.3",
         "prism-theme-vars": "^0.2.4"
     },
     "devDependencies": {
         "@grozav/eslint-config": "^1.1.4",
         "@grozav/stylelint-config": "^1.0.0",
         "@iconify/json": "^2.1.158",
-        "@inkline/config": "^1.7.10",
-        "@inkline/plugin": "1.4",
-        "@nuxt/content": "^2.2.2",
+        "@inkline/config": "^1.7.13",
+        "@inkline/plugin": "^1.4.1",
+        "@nuxt/content": "^2.4.3",
         "@nuxtjs/i18n": "^8.0.0-beta.7",
+        "@types/node": "^18.14.0",
         "@vue/eslint-config-typescript": "^11.0.2",
         "esbuild": "^0.16.13",
         "eslint": "^8.30.0",
@@ -32,7 +34,7 @@
         "markdownlint": "^0.26.2",
         "markdownlint-cli": "^0.32.2",
         "npm-run-all": "^4.1.5",
-        "nuxt": "^3.0.0",
+        "nuxt": "3.2.1",
         "nuxt-icon": "^0.1.8",
         "postcss-html": "^1.5.0",
         "postcss-preset-env": "^7.8.3",
@@ -77,5 +79,8 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/inkline/inkline.io.git"
+    },
+    "overrides": {
+        "nitropack": "2.2.1"
     }
 }

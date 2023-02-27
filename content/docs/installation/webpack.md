@@ -41,10 +41,11 @@ Inkline will automatically detect your Webpack.js development environment and ge
 npx inkline init
 ~~~
 
-Using the [Inkline CLI](https://github.com/inkline/cli) command above, Inkline will:
-- Create or update your **`webpack.config.ts`** file
-- Create your **`inkline.config.ts`** file
-- Update your **`src/main.ts`** file
+Using the [Inkline CLI](https://github.com/inkline/cli) command above, Inkline has:
+- Created or updated your **`webpack.config.ts`** file
+- Created your **`inkline.config.ts`** file
+- Updated your **`src/main.ts`** file
+- Updated your **`package.json`** file
 
 If you want to set up Inkline manually, read the [Manual Installation guide](/docs/installation/manual).
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { useHead, useLocaleHead } from '#imports';
 
 export default defineComponent({
@@ -36,6 +36,7 @@ export default defineComponent({
                 </IContainer>
             </ILayoutContent>
         </ILayout>
+        <IToastContainer />
     </ILayout>
 </template>
 
@@ -46,8 +47,10 @@ export default defineComponent({
     min-height: 100vh;
 
     .container {
-        padding-left: 0;
-        padding-right: 0;
+        @include breakpoint-up('sm') {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     .app-sidebar,
@@ -73,7 +76,7 @@ export default defineComponent({
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 999;
     }
 }
 

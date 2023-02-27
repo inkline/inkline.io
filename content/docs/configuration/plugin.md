@@ -36,11 +36,15 @@ app.use(Inkline, {
 To configure Plugin Options for Nuxt.js, read the [Module Configuration Reference](https://github.com/inkline/plugin#nuxtjs).
 ::
 
-### color
-- **Type**: `'light' | 'dark' | string`
-- **Default**: `''`
-- **Usage**:
 
+::ContentConfigurationProperty
+#name
+### color
+#type
+`'light' | 'dark' | string`
+#value
+`''`
+#default
 Sets the default `color` property value to use for components. When left empty, the prop default value will change from **light** to **dark** according to the chosen `colorMode`.
 
 ::ContentTabs
@@ -51,13 +55,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
 
+::ContentConfigurationProperty
+#name
 ### colorMode
-- **Type**: `'system' | 'light' | 'dark' | string`
-- **Default**: `'system'`
-- **Usage**:
-
+#type
+`'system' | 'light' | 'dark' | string`
+#value
+`'system'`
+#default
 Sets the preferred color mode to the chosen option. When set to **`system`**, it will use `prefers-color-scheme: dark` to determine **`light`** or **`dark`** mode.
 
 ::ContentTabs
@@ -68,12 +76,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
+
+::ContentConfigurationProperty
+#name
 ### colorModeStrategy
-- **Type**: `'localStorage' | null`
-- **Default**: `'localStorage'`
-- **Usage**:
-
+#type
+`'localStorage' | null`
+#value
+`'localStorage'`
+#default
 Sets the caching mechanism for storing the `colorMode`.
 
 ::ContentTabs
@@ -84,12 +97,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
+
+::ContentConfigurationProperty
+#name
 ### components
-- **Type**: `object`
-- **Default**: `{}`
-- **Usage**:
-
+#type
+`Record<string, Component>`
+#value
+`{}`
+#default
 Register components globally during plugin installation.
 
 ::ContentTabs
@@ -104,12 +122,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
+
+::ContentConfigurationProperty
+#name
 ### componentOptions
-- **Type**: `object`
-- **Default**: `{}`
-- **Usage**:
-
+#type
+`Record<string, Record<string, any>>`
+#value
+`{}`
+#default
 Used to override the `color` and `size` prop default values of specific components.
 
 ::ContentTabs
@@ -125,13 +148,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
 
+::ContentConfigurationProperty
+#name
 ### icons
-- **Type**: `object`
-- **Default**: `{}`
-- **Usage**:
-
+#type
+`Record<string, Svgson>`
+#value
+`{}`
+#default
 This is defined in [Svgson](https://www.npmjs.com/package/svgson) format and used for internal Inkline icons only. We would recommend using a tool like [unplugin-icons](https://github.com/antfu/unplugin-icons) for dynamically loading thousands of individual icons.
 
 ::ContentTabs
@@ -144,12 +171,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
+
+::ContentConfigurationProperty
+#name
 ### locale
-- **Type**: `'en' | string`
-- **Default**: `'en'`
-- **Usage**:
-
+#type
+`'en' | string`
+#value
+`'en'`
+#default
 Sets the locale to be used for generic messages such as validation errors.
 
 ::ContentTabs
@@ -160,30 +192,39 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
 
+::ContentConfigurationProperty
+#name
 ### renderMode
-- **Type**: `'client' | 'universal'`
-- **Default**: `'en'`
-- **Usage**:
-
+#type
+`'client' | 'universal'`
+#value
+`'client'`
+#default
 Set the render mode to **Client** or **Universal (SSR/SSG)**. This is mainly used for storing the preferred `colorMode` correctly and is handled automatically by our available integrations.
 
 ::ContentTabs
 #main
 ~~~js
 app.use(Inkline, {
-    locale: 'en'
+    renderMode: 'client'
 });
 ~~~
 ::
+::
 
+
+::ContentConfigurationProperty
+#name
 ### routerComponent
-- **Type**: VueComponent | `string`
-- **Default**: `'router-link'`
-- **Usage**:
-
-Sets the routing component to be used for `Linkable` components such as `<i-button>`, `<i-list-group-item>`, `<i-nav-item>` and `<i-navbar-brand>`.
+#type
+`Component | string`
+#value
+`'client'`
+#default
+Sets the routing component to be used for `Linkable` components such as `<IButton>`, `<IListGroupItem>`, `<INavItem>` and `<INavbarBrand>`. When using a string type, the component must be registered globally.
 
 ::ContentTabs
 #main
@@ -193,13 +234,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
 
+::ContentConfigurationProperty
+#name
 ### size
-- **Type**: `'sm' | 'md' | 'lg' | string`
-- **Default**: `''`
-- **Usage**:
-
+#type
+`'sm' | 'md' | 'lg' | string`
+#value
+`''`
+#default
 Sets the default `size` property value to use for components. When left empty, the prop default value will fallback to `md` (medium) size.
 
 ::ContentTabs
@@ -210,13 +255,17 @@ app.use(Inkline, {
 });
 ~~~
 ::
+::
 
 
+::ContentConfigurationProperty
+#name
 ### validateOn
-- **Type**: `Array<'input' | 'blur' | string>`
-- **Default**: `['input', 'blur']`
-- **Usage**:
-
+#type
+`Array<'input' | 'blur' | string>`
+#value
+`['input', 'blur']`
+#default
 Sets the events that trigger the form validation.
 
 ::ContentTabs
@@ -227,4 +276,4 @@ app.use(Inkline, {
 });
 ~~~
 ::
-
+::

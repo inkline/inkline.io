@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { onBeforeRouteLeave } from 'vue-router';
-import { useI18n } from 'vue-i18n';
+import { useI18n, onBeforeRouteLeave } from '#imports';
 import { navigation } from '~/constants';
 
 export default defineComponent({

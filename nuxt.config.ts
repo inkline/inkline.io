@@ -37,6 +37,10 @@ export default defineNuxtConfig({
         }
     },
     /**
+     * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#devserver
+     */
+    devServer: {},
+    /**
      * @docs https://v8.i18n.nuxtjs.org
      */
     i18n: {
@@ -64,9 +68,18 @@ export default defineNuxtConfig({
             colorMode: 'light'
         }
     },
+    /**
+     * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#vite
+     */
     vite: {
         optimizeDeps: {
             exclude: ['@inkline/config', '@inkline/inkline']
         }
+    },
+    /**
+     * @docs https://nuxt.com/docs/guide/concepts/auto-imports#disable-auto-imports
+     */
+    imports: {
+        autoImport: false
     }
 });

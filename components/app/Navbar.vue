@@ -1,6 +1,8 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { useInkline } from '@inkline/inkline';
+import { defineComponent, markRaw } from 'vue';
+import { INavItem } from '@inkline/inkline';
+import { useI18n } from 'vue-i18n';
+import { useLocalePath } from 'vue-i18n-routing';
 
 export default defineComponent({
     props: {
@@ -13,18 +15,10 @@ export default defineComponent({
         const localePath = useLocalePath();
         const { t } = useI18n();
 
-        const inkline = useInkline();
-        const colorMode = computed<'light' | 'dark'>(() => inkline.options.colorMode);
-
-        function toggleColorMode() {
-            inkline.options.colorMode = colorMode.value === 'light' ? 'dark' : 'light';
-        }
-
         return {
             t,
-            colorMode,
-            localePath,
-            toggleColorMode
+            colorSwitcherComponent: markRaw(INavItem),
+            localePath
         };
     }
 });
@@ -43,7 +37,7 @@ export default defineComponent({
                         {{ t('navigation.pricing') }}
                     </INavItem>
                 </FeatureFlag>
-                <INavItem :to="localePath('/docs')">
+                <INavItem :class="docs ? '_lg:visible' : ''" :to="localePath('/docs')">
                     {{ t('navigation.documentation') }}
                 </INavItem>
             </INav>
@@ -62,19 +56,7 @@ export default defineComponent({
                 >
                     <Icon name="bi:discord" size="20px" />
                 </INavItem>
-                <INavItem
-                    class="_cursor:pointer"
-                    :title="
-                        t('navigation.switchColorMode', {
-                            colorMode: colorMode === 'light' ? 'dark' : 'light'
-                        })
-                    "
-                    stop-propagation
-                    @click="toggleColorMode"
-                >
-                    <Icon v-if="colorMode === 'light'" name="fa6-solid:moon" size="20px" />
-                    <Icon v-else name="fa6-solid:sun" size="20px" />
-                </INavItem>
+                <AppColorModeSwitcher stop-propagation :tag="colorSwitcherComponent" />
             </INav>
             <INav>
                 <FeatureFlag name="premium">
@@ -86,8 +68,10 @@ export default defineComponent({
                     </IButton>
                 </FeatureFlag>
             </INav>
-            <INav v-if="docs">
-                <span class="_text:weakest _margin-left:1 _margin-y:1/2">Documentation</span>
+            <INav v-if="docs" class="_lg:hidden">
+                <span class="_text:weakest _margin-left:1 _margin-y:1/2">
+                    {{ t('navigation.documentation') }}
+                </span>
                 <AppSidebarNavigation />
             </INav>
         </INavbarCollapsible>
