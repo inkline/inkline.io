@@ -22,7 +22,7 @@ By updating the base CSS variable for a color, all corresponding variants based 
 ::ContentDesignTokensHeader
 ::
 
-::ContentDesignToken{ title="Primary Color" type="color" token="--color-primary" }
+::ContentDesignToken{ title="Primary Color" token="--color-primary" }
 Primary brand color for Inkline. This color provides accessible contrast when used for text on light background.
 #variants
     ::ContentDesignToken{ title="Primary Tint 150 Color" size="sm" type="color" token="--color-primary-tint-150" }
@@ -327,6 +327,41 @@ Purple is a regal and mysterious color that is often associated with luxury, cre
 Pink is a soft color that can represent sweetness, romance, and playfulness. It is often used in UI Design to convey a sense of warmth, gentleness, and compassion.
 ::
 
+#### Text Colors
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Contrast Text for Light Color" type="text" token="--contrast-text--color-light" }
+The contrast text for light backgrounds is a dark-colored text that provides a high contrast ratio against a light-colored background. This type of text is often used to ensure legibility and accessibility for users with visual impairments.
+::
+
+::ContentDesignToken{ title="Contrast Text for Dark Color" type="text" token="--contrast-text--color-dark" }
+The contrast text on dark backgrounds is a light-colored text that provides a high contrast ratio against a dark-colored background. This type of text is also used to ensure legibility and accessibility for users with visual impairments.
+::
+
+::ContentDesignToken{ title="Light Text Color" type="text" token="--text--color-light" }
+The light text color can be used to create a softer and more approachable look and feel in UI Design, and can also be used to create a sense of contrast and emphasis.
+::
+
+::ContentDesignToken{ title="Dark Text Color" type="text" token="--text--color-dark" }
+The dark text color can be used to create a more sophisticated and elegant look and feel in UI Dsign, and can also be used to convey a sense of depth and richness.
+::
+
+### Animation
+CSS transitions allow for smooth and gradual changes to occur over a specified duration. Transitions can be triggered by various events, such as hover, click, or page load, and can be applied to different properties such as background-color, opacity, width, height, and more.
+
+[Read about border configuration](/docs/configuration/file#animation)
+
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Transition Duration" icon="ic:outline-hourglass-top" token="--transition-duration" }
+This value defines the length of time it takes for an element to transition from one state to another. The duration is specified in seconds or milliseconds, and can be set to any positive number.
+::
+
+::ContentDesignToken{ title="Transition Timing Function" icon="material-symbols:animation" token="--transition-timing-function" }
+This is used to define the easing function to be used in CSS transitions. An easing function defines the rate at which the transition progresses over time, affecting the speed and smoothness of the transition.
+::
 
 ### Border
 The border CSS Variables are used to define the properties of an element's border, such as its width, color, and style. By using variables to define these properties, you can ensure consistency across your design and make it easy to update borders across your components.
@@ -405,78 +440,78 @@ Border radiuses define the curvature of the corners of an element's border. Inkl
 ::ContentDesignTokensHeader
 ::
 
-::ContentDesignToken{ title="Border Top Left Radius" type="border-radius" token="--border-top-left-radius" }
+::ContentDesignToken{ title="Border Top Left Radius" token="--border-top-left-radius" }
 Design token used to set the border radius value for the top-left corner of an element's border.
 #variants
-    ::ContentDesignToken{ title="Border Top Left Radius Extra-small" type="border-radius" size="sm" token="--border-top-left-radius-xs" }
+    ::ContentDesignToken{ title="Extra-small Border Top Left Radius" size="sm" token="--border-top-left-radius-xs" }
     ::
-    ::ContentDesignToken{ title="Border Top Left Radius Small" type="border-radius" size="sm" token="--border-top-left-radius-sm" }
+    ::ContentDesignToken{ title="Small Border Top Left Radius" size="sm" token="--border-top-left-radius-sm" }
     ::
-    ::ContentDesignToken{ title="Border Top Left Radius Medium" type="border-radius" size="sm" token="--border-top-left-radius-md" }
+    ::ContentDesignToken{ title="Medium Border Top Left Radius" size="sm" token="--border-top-left-radius-md" }
     ::
-    ::ContentDesignToken{ title="Border Top Left Radius Large" type="border-radius" size="sm" token="--border-top-left-radius-lg" }
+    ::ContentDesignToken{ title="Large Border Top Left Radius" size="sm" token="--border-top-left-radius-lg" }
     ::
-    ::ContentDesignToken{ title="Border Top Left Radius Extra-large" type="border-radius" size="sm" token="--border-top-left-radius-xl" }
+    ::ContentDesignToken{ title="Extra-large Border Top Left Radius" size="sm" token="--border-top-left-radius-xl" }
     ::
 ::
 
-::ContentDesignToken{ title="Border Top Right Radius" type="border-radius" token="--border-top-right-radius" }
+::ContentDesignToken{ title="Border Top Right Radius" token="--border-top-right-radius" }
 Design token used to set the border radius value for the top-right corner of an element's border.
 #variants
-    ::ContentDesignToken{ title="Border Top Right Radius Extra-small" type="border-radius" size="sm" token="--border-top-right-radius-xs" }
+    ::ContentDesignToken{ title="Extra-small Border Top Right Radius" size="sm" token="--border-top-right-radius-xs" }
     ::
-    ::ContentDesignToken{ title="Border Top Right Radius Small" type="border-radius" size="sm" token="--border-top-right-radius-sm" }
+    ::ContentDesignToken{ title="Small Border Top Right Radius" size="sm" token="--border-top-right-radius-sm" }
     ::
-    ::ContentDesignToken{ title="Border Top Right Radius Medium" type="border-radius" size="sm" token="--border-top-right-radius-md" }
+    ::ContentDesignToken{ title="Medium Border Top Right Radius" size="sm" token="--border-top-right-radius-md" }
     ::
-    ::ContentDesignToken{ title="Border Top Right Radius Large" type="border-radius" size="sm" token="--border-top-right-radius-lg" }
+    ::ContentDesignToken{ title="Large Border Top Right Radius" size="sm" token="--border-top-right-radius-lg" }
     ::
-    ::ContentDesignToken{ title="Border Top Right Radius Extra-large" type="border-radius" size="sm" token="--border-top-right-radius-xl" }
+    ::ContentDesignToken{ title="Extra-large Border Top Right Radius" size="sm" token="--border-top-right-radius-xl" }
     ::
 ::
 
-::ContentDesignToken{ title="Border Bottom Left Radius" type="border-radius" token="--border-bottom-left-radius" }
+::ContentDesignToken{ title="Border Bottom Left Radius" token="--border-bottom-left-radius" }
 Design token used to set the border radius value for the bottom-left corner of an element's border.
 #variants
-    ::ContentDesignToken{ title="Border Bottom Left Radius Extra-small" type="border-radius" size="sm" token="--border-bottom-left-radius-xs" }
+    ::ContentDesignToken{ title="Extra-small Border Bottom Left Radius" size="sm" token="--border-bottom-left-radius-xs" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Left Radius Small" type="border-radius" size="sm" token="--border-bottom-left-radius-sm" }
+    ::ContentDesignToken{ title="Small Border Bottom Left Radius" size="sm" token="--border-bottom-left-radius-sm" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Left Radius Medium" type="border-radius" size="sm" token="--border-bottom-left-radius-md" }
+    ::ContentDesignToken{ title="Medium Border Bottom Left Radius" size="sm" token="--border-bottom-left-radius-md" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Left Radius Large" type="border-radius" size="sm" token="--border-bottom-left-radius-lg" }
+    ::ContentDesignToken{ title="Large Border Bottom Left Radius" size="sm" token="--border-bottom-left-radius-lg" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Left Radius Extra-large" type="border-radius" size="sm" token="--border-bottom-left-radius-xl" }
+    ::ContentDesignToken{ title="Extra-large Border Bottom Left Radius" size="sm" token="--border-bottom-left-radius-xl" }
     ::
 ::
 
-::ContentDesignToken{ title="Border Bottom Right Radius" type="border-radius" token="--border-bottom-right-radius" }
+::ContentDesignToken{ title="Border Bottom Right Radius" token="--border-bottom-right-radius" }
 Design token used to set the border radius value for the bottom-right corner of an element's border.
 #variants
-    ::ContentDesignToken{ title="Border Bottom Right Radius Extra-small" type="border-radius" size="sm" token="--border-bottom-right-radius-xs" }
+    ::ContentDesignToken{ title="Extra-small Border Bottom Right Radius" size="sm" token="--border-bottom-right-radius-xs" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Right Radius Small" type="border-radius" size="sm" token="--border-bottom-right-radius-sm" }
+    ::ContentDesignToken{ title="Small Border Bottom Right Radius" size="sm" token="--border-bottom-right-radius-sm" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Right Radius Medium" type="border-radius" size="sm" token="--border-bottom-right-radius-md" }
+    ::ContentDesignToken{ title="Medium Border Bottom Right Radius" size="sm" token="--border-bottom-right-radius-md" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Right Radius Large" type="border-radius" size="sm" token="--border-bottom-right-radius-lg" }
+    ::ContentDesignToken{ title="Large Border Bottom Right Radius" size="sm" token="--border-bottom-right-radius-lg" }
     ::
-    ::ContentDesignToken{ title="Border Bottom Right Radius Extra-large" type="border-radius" size="sm" token="--border-bottom-right-radius-xl" }
+    ::ContentDesignToken{ title="Extra-large Border Bottom Right Radius" size="sm" token="--border-bottom-right-radius-xl" }
     ::
 ::
 
-::ContentDesignToken{ title="Border Radius" type="border-radius" token="--border-radius" }
+::ContentDesignToken{ title="Border Radius" token="--border-radius" }
 Inkline includes a composed border-radius design token used to set all four corners of an element's border at once. This value is composed automatically based on the four individual corner values documented above.
 #variants
-    ::ContentDesignToken{ title="Border Radius Extra-small" type="border-radius" size="sm" token="--border-radius-xs" }
+    ::ContentDesignToken{ title="Extra-small Border Radius" size="sm" token="--border-radius-xs" }
     ::
-    ::ContentDesignToken{ title="Border Radius Small" type="border-radius" size="sm" token="--border-radius-sm" }
+    ::ContentDesignToken{ title="Small Border Radius" size="sm" token="--border-radius-sm" }
     ::
-    ::ContentDesignToken{ title="Border Radius Medium" type="border-radius" size="sm" token="--border-radius-md" }
+    ::ContentDesignToken{ title="Medium Border Radius" size="sm" token="--border-radius-md" }
     ::
-    ::ContentDesignToken{ title="Border Radius Large" type="border-radius" size="sm" token="--border-radius-lg" }
+    ::ContentDesignToken{ title="Large Border Radius" size="sm" token="--border-radius-lg" }
     ::
-    ::ContentDesignToken{ title="Border Radius Extra-large" type="border-radius" size="sm" token="--border-radius-xl" }
+    ::ContentDesignToken{ title="Extra-large Border Radius" size="sm" token="--border-radius-xl" }
     ::
 ::
 
@@ -515,40 +550,632 @@ Inkline includes a composed box shadow design token, composed automatically base
 ::
 
 
+### Breakpoints
+Breakpoints refer to specific screen sizes where the layout of a website or application changes to accommodate the different screen sizes and resolutions. 
+
+In Inkline, breakpoints are defined using CSS media queries that are based on the device's width. There are six pre-defined breakpoints that can be used to create responsive designs:
+
+- `xs`: Extra-small screens (less than 576px)
+- `sm`: Small screens (576px or more)
+- `md`: Medium screens (768px or more)
+- `lg`: Large screens (992px or more)
+- `xl`: Extra-large screens (1200px or more)
+- `2xl`: Extra-extra-large screens (1400px or more)
+
+[Read about breakpoints configuration](/docs/configuration/file#breakpoints)
+
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Extra-small Breakpoint" icon="material-symbols:resize" token="--breakpoint-xs" }
+This value represents the starting point for the extra-small devices screen size range. It is typically used for mobile devices with smaller screens, such as smartphones.
+::
+
+::ContentDesignToken{ title="Small Breakpoint" icon="material-symbols:resize" token="--breakpoint-sm" }
+This value represents the starting point for the small devices screen size range. It is designed for small screens such as smartphones in portrait orientation or small tablets.
+::
+
+::ContentDesignToken{ title="Medium Breakpoint" icon="material-symbols:resize" token="--breakpoint-md" }
+This value represents the starting point for the medium devices screen size range. It is used to define the styles for medium-sized screens such as tablets or smaller laptops.
+::
+
+::ContentDesignToken{ title="Large Breakpoint" icon="material-symbols:resize" token="--breakpoint-lg" }
+This value represents the starting point for the large devices screen size range. It is typically used to target larger screens such as large tablets, laptops and desktops.
+::
+
+::ContentDesignToken{ title="Extra-large Breakpoint" icon="material-symbols:resize" token="--breakpoint-xl" }
+This value represents the starting point for the extra-large devices screen size range. It is typically used to target larger screens such as large tablets, laptops and desktops.
+::
+
+::ContentDesignToken{ title="Extra-extra-large Breakpoint" icon="material-symbols:resize" token="--breakpoint-2xl" }
+This value represents the starting point for the extra-extra-large devices screen size range. It is typically used to target extra large desktop screens.
+::
+
+### Elements
+Inkline's configuration also provides variables for common elements such as the body background and color.
+
+[Read about elements configuration](/docs/configuration/file#elements)
+
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Body Background" token="--body--background" }
+This value sets the background color of the body element.
+::
+
+::ContentDesignToken{ title="Body Color" token="--body--color" }
+This value sets the text color of the body element.
+::
+
+
+### Grid
+Inkline's grid system is based on a 12-column layout, which provides flexibility and versatility in designing responsive layouts. The grid system also includes options for gutters and responsive sizes, which can be adjusted to create different spacing and layout options.
+
+The grid system is designed to be modular and customizable, so you can easily adapt it to your project's specific needs and requirements.
+
+[Read about elements configuration](/docs/configuration/file#elements)
+
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Grid Columns" icon="radix-icons:columns" token="--grid--columns" }
+This value sets the number of columns in the grid system, which is set to 12 columns by default in Inkline. This variable is used to calculate the width of each column in the grid system, based on the total width of the container element.
+::
+
+::ContentDesignToken{ title="Grid Gutter" icon="icon-park-outline:horizontal-spacing-between-items" token="--grid--gutter" }
+This value sets the size of the gutter (the space between columns) in the grid system.
+#variants
+    ::ContentDesignToken{ title="Extra-small Grid Gutter" size="sm" icon="icon-park-outline:horizontal-spacing-between-items" token="--grid--xs--gutter" }
+    ::
+    ::ContentDesignToken{ title="Small Grid Gutter" size="sm" icon="icon-park-outline:horizontal-spacing-between-items" token="--grid--sm--gutter" }
+    ::
+    ::ContentDesignToken{ title="Medium Grid Gutter" size="sm" icon="icon-park-outline:horizontal-spacing-between-items" token="--grid--md--gutter" }
+    ::
+    ::ContentDesignToken{ title="Large Grid Gutter" size="sm" icon="icon-park-outline:horizontal-spacing-between-items" token="--grid--lg--gutter" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Grid Gutter" size="sm" icon="icon-park-outline:horizontal-spacing-between-items" token="--grid--xl--gutter" }
+    ::
+::
+
+### Scale Ratio
+In design, a scale ratio is a mathematical relationship between different elements or components that ensures visual harmony and balance. In typography, scale ratios are commonly used to determine font sizes and line heights that are in proportion to one another. This creates a harmonious and balanced visual hierarchy within the text.
+
+[Read about scale ratio configuration](/docs/configuration/file#scaleratio)
+
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Scale Ratio" icon="ri:scales-fill" token="--scale-ratio" }
+This value sets the design system's scale ratio. Inkline uses a modular scale system based on the minor third scale ratio by default. This means that each step in the scale is 1.2 times larger or smaller than the previous step.
+#variants
+    ::ContentDesignToken{ title="Scale Ratio ^ 1" size="sm" icon="ri:scales-fill" token="--scale-ratio-pow-1" }
+    ::
+    ::ContentDesignToken{ title="Scale Ratio ^ 2" size="sm" icon="ri:scales-fill" token="--scale-ratio-pow-2" }
+    ::
+    ::ContentDesignToken{ title="Scale Ratio ^ 3" size="sm" icon="ri:scales-fill" token="--scale-ratio-pow-3" }
+    ::
+    ::ContentDesignToken{ title="Scale Ratio ^ 4" size="sm" icon="ri:scales-fill" token="--scale-ratio-pow-4" }
+    ::
+    ::ContentDesignToken{ title="Scale Ratio ^ 5" size="sm" icon="ri:scales-fill" token="--scale-ratio-pow-5" }
+    ::
+    ::ContentDesignToken{ title="Scale Ratio ^ 6" size="sm" icon="ri:scales-fill" token="--scale-ratio-pow-6" }
+    ::
+::
+::ContentDesignToken{ title="Minor Second Scale Ratio" icon="ri:scales-fill" token="--scale-ratio-minor-second" }
+The minor second scale ratio, also known as the "diminished second", is a musical interval that represents a ratio of 16/15.
+::
+::ContentDesignToken{ title="Major Second Scale Ratio" icon="ri:scales-fill" token="--scale-ratio-major-second" }
+The major second scale ratio is a musical interval that represents a ratio of 9/8.
+::
+::ContentDesignToken{ title="Minor Third Scale Ratio" icon="ri:scales-fill" token="--scale-ratio-minor-third" }
+The minor third scale ratio is a musical interval representing a ratio of 6/5. In design, this ratio is often used as a modular scale factor to create consistent and harmonious typography and layout.
+::
+::ContentDesignToken{ title="Major Third Scale Ratio" icon="ri:scales-fill" token="--scale-ratio-major-third" }
+The major third scale ratio is a musical interval representing a ratio of 5/4.
+::
+::ContentDesignToken{ title="Perfect Fourth Scale Ratio" icon="ri:scales-fill" token="--scale-ratio-perfect-fourth" }
+The perfect fourth scale ratio is a musical interval representing a ratio of 4/3.
+::
+::ContentDesignToken{ title="Augmented Fourth Scale Ratio" icon="ri:scales-fill" token="--scale-ratio-augmented-fourth" }
+The augmented fourth scale ratio is a musical interval representing a ratio of 45/32.
+::
+::ContentDesignToken{ title="Perfect Fifth Scale Ratio" icon="ri:scales-fill" token="--scale-ratio-perfect-fifth" }
+The perfect fifth scale ratio is a musical interval representing a ratio of 3/2.
+::
+
+
+### Sizes
+Inkline provides a set of predefined sizes and percentage values that can be used to create consistent layout. The size multiplier variable is used to compute any size-based variants of components, such as font sizes, padding, margin, and border radius.
+
+[Read about typography configuration](/docs/configuration/file#sizes)
+
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Size Multiplier" icon="material-symbols:resize" token="--size-multiplier" } 
+The value that is used to compute size-based variants of components, such as font sizes, padding, margin, and border radius.
+#variants
+    ::ContentDesignToken{ title="Extra-extra-small Size Multiplier" icon="material-symbols:resize" token="--size-multiplier-2xs" }
+    ::
+    ::ContentDesignToken{ title="Extra-small Size Multiplier" icon="material-symbols:resize" token="--size-multiplier-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Size Multiplier" icon="material-symbols:resize" token="--size-multiplier-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Size Multiplier" icon="material-symbols:resize" token="--size-multiplier-md" }
+    ::
+    ::ContentDesignToken{ title="Large Size Multiplier" icon="material-symbols:resize" token="--size-multiplier-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Size Multiplier" icon="material-symbols:resize" token="--size-multiplier-xl" }
+    ::
+    ::ContentDesignToken{ title="Extra-extra-large Size Multiplier" icon="material-symbols:resize" token="--size-multiplier-2xl" }
+    ::
+::
+
+::ContentDesignToken{ title="0% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-0" }
+The predefined value used for 0% size percentages.
+::
+
+::ContentDesignToken{ title="25% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-25" }
+The predefined value used for 25% size percentages.
+::
+
+::ContentDesignToken{ title="50% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-50" }
+The predefined value used for 50% size percentages.
+::
+
+::ContentDesignToken{ title="75% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-75" }
+The predefined value used for 75% size percentages.
+::
+
+::ContentDesignToken{ title="100% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-100" }
+The predefined value used for 100% size percentages.
+::
+
+### Spacing
+Inkline uses a modular scale to establish a harmonious relationship between font sizes, spacing, and other typographic elements. This ensures that text is easy to read and visually appealing across a range of screen sizes and resolutions.
+
+You can use a wide range of font weights, styles, and sizes to provide flexibility and variety in your design. The default values provide guidance on typography best practices, including font choices, line lengths, and spacing. Using these can help you create visually appealing and effective typography for your project.
+
+[Read about spacing configuration](/docs/configuration/file#margin)
+
+::ContentDesignTokensHeader
+::
+
+::ContentDesignToken{ title="Margin Top" token="--margin-top" }
+Design token used to set the margin value for the top side of an element. All margin-top variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Margin Top" size="sm" token="--margin-top-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Margin Top" size="sm" token="--margin-top-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Margin Top" size="sm" token="--margin-top-md" }
+    ::
+    ::ContentDesignToken{ title="Large Margin Top" size="sm" token="--margin-top-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Margin Top" size="sm" token="--margin-top-xl" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 2" size="sm" token="--margin-top-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 3" size="sm" token="--margin-top-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 4" size="sm" token="--margin-top-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 5" size="sm" token="--margin-top-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 1 / 5" size="sm" token="--margin-top-1-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 1 / 4" size="sm" token="--margin-top-1-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 1 / 3" size="sm" token="--margin-top-1-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 1 / 2" size="sm" token="--margin-top-1-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 2 / 3" size="sm" token="--margin-top-2-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Top * 3 / 4" size="sm" token="--margin-top-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Margin Right" token="--margin-right" }
+Design token used to set the margin value for the right side of an element. All margin-right variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Margin Right" size="sm" token="--margin-right-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Margin Right" size="sm" token="--margin-right-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Margin Right" size="sm" token="--margin-right-md" }
+    ::
+    ::ContentDesignToken{ title="Large Margin Right" size="sm" token="--margin-right-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Margin Right" size="sm" token="--margin-right-xl" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 2" size="sm" token="--margin-right-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 3" size="sm" token="--margin-right-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 4" size="sm" token="--margin-right-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 5" size="sm" token="--margin-right-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 1 / 5" size="sm" token="--margin-right-1-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 1 / 4" size="sm" token="--margin-right-1-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 1 / 3" size="sm" token="--margin-right-1-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 1 / 2" size="sm" token="--margin-right-1-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 2 / 3" size="sm" token="--margin-right-2-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Right * 3 / 4" size="sm" token="--margin-right-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Margin Bottom" token="--margin-bottom" }
+Design token used to set the margin value for the bottom side of an element. All margin-bottom variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Margin Bottom" size="sm" token="--margin-bottom-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Margin Bottom" size="sm" token="--margin-bottom-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Margin Bottom" size="sm" token="--margin-bottom-md" }
+    ::
+    ::ContentDesignToken{ title="Large Margin Bottom" size="sm" token="--margin-bottom-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Margin Bottom" size="sm" token="--margin-bottom-xl" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 2" size="sm" token="--margin-bottom-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 3" size="sm" token="--margin-bottom-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 4" size="sm" token="--margin-bottom-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 5" size="sm" token="--margin-bottom-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 1 / 5" size="sm" token="--margin-bottom-1-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 1 / 4" size="sm" token="--margin-bottom-1-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 1 / 3" size="sm" token="--margin-bottom-1-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 1 / 2" size="sm" token="--margin-bottom-1-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 2 / 3" size="sm" token="--margin-bottom-2-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Bottom * 3 / 4" size="sm" token="--margin-bottom-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Margin Left" token="--margin-left" }
+Design token used to set the margin value for the left side of an element. All margin-left variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Margin Left" size="sm" token="--margin-left-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Margin Left" size="sm" token="--margin-left-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Margin Left" size="sm" token="--margin-left-md" }
+    ::
+    ::ContentDesignToken{ title="Large Margin Left" size="sm" token="--margin-left-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Margin Left" size="sm" token="--margin-left-xl" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 2" size="sm" token="--margin-left-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 3" size="sm" token="--margin-left-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 4" size="sm" token="--margin-left-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 5" size="sm" token="--margin-left-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 1 / 5" size="sm" token="--margin-left-1-5" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 1 / 4" size="sm" token="--margin-left-1-4" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 1 / 3" size="sm" token="--margin-left-1-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 1 / 2" size="sm" token="--margin-left-1-2" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 2 / 3" size="sm" token="--margin-left-2-3" }
+    ::
+    ::ContentDesignToken{ title="Margin Left * 3 / 4" size="sm" token="--margin-left-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Margin" token="--margin" }
+Design token used to set the margin value for all four sides of an element. This value is composed automatically based on the four individual side values documented above.
+#variants
+    ::ContentDesignToken{ title="Extra-small Margin" size="sm" token="--margin-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Margin" size="sm" token="--margin-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Margin" size="sm" token="--margin-md" }
+    ::
+    ::ContentDesignToken{ title="Large Margin" size="sm" token="--margin-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Margin" size="sm" token="--margin-xl" }
+    ::
+    ::ContentDesignToken{ title="Margin * 2" size="sm" token="--margin-2" }
+    ::
+    ::ContentDesignToken{ title="Margin * 3" size="sm" token="--margin-3" }
+    ::
+    ::ContentDesignToken{ title="Margin * 4" size="sm" token="--margin-4" }
+    ::
+    ::ContentDesignToken{ title="Margin * 5" size="sm" token="--margin-5" }
+    ::
+    ::ContentDesignToken{ title="Margin * 1 / 5" size="sm" token="--margin-1-5" }
+    ::
+    ::ContentDesignToken{ title="Margin * 1 / 4" size="sm" token="--margin-1-4" }
+    ::
+    ::ContentDesignToken{ title="Margin * 1 / 3" size="sm" token="--margin-1-3" }
+    ::
+    ::ContentDesignToken{ title="Margin * 1 / 2" size="sm" token="--margin-1-2" }
+    ::
+    ::ContentDesignToken{ title="Margin * 2 / 3" size="sm" token="--margin-2-3" }
+    ::
+    ::ContentDesignToken{ title="Margin * 3 / 4" size="sm" token="--margin-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Padding Top" token="--padding-top" }
+Design token used to set the padding value for the top side of an element. All padding-top variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Padding Top" size="sm" token="--padding-top-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Padding Top" size="sm" token="--padding-top-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Padding Top" size="sm" token="--padding-top-md" }
+    ::
+    ::ContentDesignToken{ title="Large Padding Top" size="sm" token="--padding-top-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Padding Top" size="sm" token="--padding-top-xl" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 2" size="sm" token="--padding-top-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 3" size="sm" token="--padding-top-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 4" size="sm" token="--padding-top-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 5" size="sm" token="--padding-top-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 1 / 5" size="sm" token="--padding-top-1-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 1 / 4" size="sm" token="--padding-top-1-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 1 / 3" size="sm" token="--padding-top-1-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 1 / 2" size="sm" token="--padding-top-1-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 2 / 3" size="sm" token="--padding-top-2-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Top * 3 / 4" size="sm" token="--padding-top-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Padding Right" token="--padding-right" }
+Design token used to set the padding value for the right side of an element. All padding-right variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Padding Right" size="sm" token="--padding-right-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Padding Right" size="sm" token="--padding-right-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Padding Right" size="sm" token="--padding-right-md" }
+    ::
+    ::ContentDesignToken{ title="Large Padding Right" size="sm" token="--padding-right-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Padding Right" size="sm" token="--padding-right-xl" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 2" size="sm" token="--padding-right-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 3" size="sm" token="--padding-right-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 4" size="sm" token="--padding-right-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 5" size="sm" token="--padding-right-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 1 / 5" size="sm" token="--padding-right-1-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 1 / 4" size="sm" token="--padding-right-1-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 1 / 3" size="sm" token="--padding-right-1-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 1 / 2" size="sm" token="--padding-right-1-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 2 / 3" size="sm" token="--padding-right-2-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Right * 3 / 4" size="sm" token="--padding-right-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Padding Bottom" token="--padding-bottom" }
+Design token used to set the padding value for the bottom side of an element. All padding-bottom variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Padding Bottom" size="sm" token="--padding-bottom-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Padding Bottom" size="sm" token="--padding-bottom-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Padding Bottom" size="sm" token="--padding-bottom-md" }
+    ::
+    ::ContentDesignToken{ title="Large Padding Bottom" size="sm" token="--padding-bottom-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Padding Bottom" size="sm" token="--padding-bottom-xl" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 2" size="sm" token="--padding-bottom-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 3" size="sm" token="--padding-bottom-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 4" size="sm" token="--padding-bottom-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 5" size="sm" token="--padding-bottom-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 1 / 5" size="sm" token="--padding-bottom-1-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 1 / 4" size="sm" token="--padding-bottom-1-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 1 / 3" size="sm" token="--padding-bottom-1-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 1 / 2" size="sm" token="--padding-bottom-1-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 2 / 3" size="sm" token="--padding-bottom-2-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Bottom * 3 / 4" size="sm" token="--padding-bottom-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Padding Left" token="--padding-left" }
+Design token used to set the padding value for the left side of an element. All padding-left variants are computed using this base value.
+#variants
+    ::ContentDesignToken{ title="Extra-small Padding Left" size="sm" token="--padding-left-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Padding Left" size="sm" token="--padding-left-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Padding Left" size="sm" token="--padding-left-md" }
+    ::
+    ::ContentDesignToken{ title="Large Padding Left" size="sm" token="--padding-left-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Padding Left" size="sm" token="--padding-left-xl" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 2" size="sm" token="--padding-left-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 3" size="sm" token="--padding-left-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 4" size="sm" token="--padding-left-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 5" size="sm" token="--padding-left-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 1 / 5" size="sm" token="--padding-left-1-5" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 1 / 4" size="sm" token="--padding-left-1-4" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 1 / 3" size="sm" token="--padding-left-1-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 1 / 2" size="sm" token="--padding-left-1-2" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 2 / 3" size="sm" token="--padding-left-2-3" }
+    ::
+    ::ContentDesignToken{ title="Padding Left * 3 / 4" size="sm" token="--padding-left-3-4" }
+    ::
+::
+
+::ContentDesignToken{ title="Padding" token="--padding" }
+Design token used to set the padding value for all four sides of an element. This value is composed automatically based on the four individual side values documented above.
+#variants
+    ::ContentDesignToken{ title="Extra-small Padding" size="sm" token="--padding-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Padding" size="sm" token="--padding-sm" }
+    ::
+    ::ContentDesignToken{ title="Medium Padding" size="sm" token="--padding-md" }
+    ::
+    ::ContentDesignToken{ title="Large Padding" size="sm" token="--padding-lg" }
+    ::
+    ::ContentDesignToken{ title="Extra-large Padding" size="sm" token="--padding-xl" }
+    ::
+    ::ContentDesignToken{ title="Padding * 2" size="sm" token="--padding-2" }
+    ::
+    ::ContentDesignToken{ title="Padding * 3" size="sm" token="--padding-3" }
+    ::
+    ::ContentDesignToken{ title="Padding * 4" size="sm" token="--padding-4" }
+    ::
+    ::ContentDesignToken{ title="Padding * 5" size="sm" token="--padding-5" }
+    ::
+    ::ContentDesignToken{ title="Padding * 1 / 5" size="sm" token="--padding-1-5" }
+    ::
+    ::ContentDesignToken{ title="Padding * 1 / 4" size="sm" token="--padding-1-4" }
+    ::
+    ::ContentDesignToken{ title="Padding * 1 / 3" size="sm" token="--padding-1-3" }
+    ::
+    ::ContentDesignToken{ title="Padding * 1 / 2" size="sm" token="--padding-1-2" }
+    ::
+    ::ContentDesignToken{ title="Padding * 2 / 3" size="sm" token="--padding-2-3" }
+    ::
+    ::ContentDesignToken{ title="Padding * 3 / 4" size="sm" token="--padding-3-4" }
+    ::
+::
+
 ### Typography
+Inkline uses a modular scale to establish a harmonious relationship between font sizes, spacing, and other typographic elements. This ensures that text is easy to read and visually appealing across a range of screen sizes and resolutions.
+
+You can use a wide range of font weights, styles, and sizes to provide flexibility and variety in your design. The default values provide guidance on typography best practices, including font choices, line lengths, and spacing. Using these can help you create visually appealing and effective typography for your project.
 
 [Read about typography configuration](/docs/configuration/file#typography)
 
-#### Text Colors
 ::ContentDesignTokensHeader
 ::
 
-::ContentDesignToken{ title="Contrast Text for Light Color" type="text" token="--contrast-text--color-light" }
-The contrast text for light backgrounds is a dark-colored text that provides a high contrast ratio against a light-colored background. This type of text is often used to ensure legibility and accessibility for users with visual impairments.
+::ContentDesignToken{ title="Primary Font Family Base" token="--font-family-primary-base" }
+This value is used to define the primary font family for the body text. This variable can be set to any valid font family value, such as a specific font name, a generic font family like sans-serif, or a custom font stack.
 ::
 
-::ContentDesignToken{ title="Contrast Text for Dark Color" type="text" token="--contrast-text--color-dark" }
-The contrast text on dark backgrounds is a light-colored text that provides a high contrast ratio against a dark-colored background. This type of text is also used to ensure legibility and accessibility for users with visual impairments. 
+::ContentDesignToken{ title="Primary Font Family Monospace" token="--font-family-primary-monospace" }
+This value is used to define the primary monospace font family. Monospace fonts are useful for displaying code, as each character takes up the same amount of space, making it easier to align code and read it.
 ::
 
-::ContentDesignToken{ title="Light Text Color" type="text" token="--text--color-light" }
-The light text color can be used to create a softer and more approachable look and feel in UI Design, and can also be used to create a sense of contrast and emphasis.
+::ContentDesignToken{ title="Primary Font Family Print" token="--font-family-primary-print" }
+This value represents the primary font family, when used for print media. This font family is typically different from the font family used for screen media and is optimized for legibility and clarity when printed on paper.
 ::
 
-::ContentDesignToken{ title="Dark Text Color" type="text" token="--text--color-dark" }
-The dark text color can be used to create a more sophisticated and elegant look and feel in UI Dsign, and can also be used to convey a sense of depth and richness.
+::ContentDesignToken{ title="Secondary Font Family Base" token="--font-family-secondary-base" }
+This value is used to define the secondary font family used for headings and display texts. This variable can be set to any valid font family value, such as a specific font name, a generic font family like sans-serif, or a custom font stack.
 ::
 
-### Box Shadow
-Box shadow can be used to create a variety of effects, such as adding depth to buttons, highlighting elements on hover, or creating a sense of elevation.
-
-The box shadow property takes several values, including the horizontal and vertical offset of the shadow, its blur radius, its spread radius, and its color. By adjusting these values, you can create custom shadow effects that complement your design system.
-
-[Read about box shadow configuration](/docs/configuration/file#boxshadow)
-
-::ContentDesignTokensHeader
+::ContentDesignToken{ title="Secondary Font Family Monospace" token="--font-family-secondary-monospace" }
+This value is used to define the secondary monospace font family. Monospace fonts are useful for displaying code, as each character takes up the same amount of space, making it easier to align code and read it.
 ::
 
-::ContentDesignToken{ title="Box Shadow Offset X" type="box-shadow" token="--box-shadow-offset-x" }
-This value is used to set the horizontal offset of the box shadow. A positive value moves the shadow to the right of the box, while a negative value moves it to the left.
+::ContentDesignToken{ title="Secondary Font Family Print" token="--font-family-secondary-print" }
+This value represents the secondary font family used for headings and display texts, when used for print media. This font family is typically different from the font family used for screen media and is optimized for legibility and clarity when printed on paper.
+::
+
+::ContentDesignToken{ title="Extra-light Font Weight" token="--font-weight-extralight" }
+The extra-light font weight has a relatively low stroke contrast and is often used in display typography, particularly for headings and titles, to create a delicate and elegant appearance.
+::
+
+::ContentDesignToken{ title="Light Font Weight" token="--font-weight-light" }
+The light font weight is often used for headings and subheadings, as it provides a subtle emphasis without overwhelming the text. It can also be used for body text in certain cases, particularly for large blocks of text where a lighter weight is easier on the eyes.
+::
+
+::ContentDesignToken{ title="Normal Font Weight" token="--font-weight-normal" }
+The normal font weight is the default weight for most fonts and is typically equivalent to a font-weight of 400. It is considered neither too heavy nor too light and is suitable for most body text.
+::
+
+::ContentDesignToken{ title="Semi-bold Font Weight" token="--font-weight-semibold" }
+The semi-bold font weight is slightly thicker than the normal font weight, but not as bold as a bold weight. It is typically used to add emphasis and hierarchy to headings, subheadings, and other important elements on a web page.
+::
+
+::ContentDesignToken{ title="Bold Font Weight" token="--font-weight-bold" }
+The bold weight is a commonly used font weight in typography. It is often used for headings, subheadings, and other important text elements to make them stand out and grab the reader's attention.
+::
+
+::ContentDesignToken{ title="Black Font Weight" token="--font-weight-black" }
+The black font weight is one of the boldest font weights available and is typically used for headings or other important text that needs to be emphasized. It is thicker than the bold font weight and can create a dramatic effect when used in the right context.
+::
+
+::ContentDesignToken{ title="Lighter Font Weight" token="--font-weight-lighter" }
+The lighter font weight is a relative font weight value that makes the text appear lighter than the parent element's font weight.
+::
+
+::ContentDesignToken{ title="Bolder Font Weight" token="--font-weight-bolder" }
+The bolder font weight is a relative font weight value that makes the text appear bolder than the parent element's font weight.
+::
+
+::ContentDesignToken{ title="Font Size" token="--font-size" }
+This value allows you to define the base font size for all elements of the UI.
+#variants
+    ::ContentDesignToken{ title="Extra-small Font Size" token="--font-size-xs" }
+    ::
+    ::ContentDesignToken{ title="Small Font Size" token="--font-size-sm" }
+    ::
+    ::ContentDesignToken{ title="Small Font Size" token="--font-size-md" }
+    ::
+    ::ContentDesignToken{ title="Small Font Size" token="--font-size-lg" }
+    ::
+    ::ContentDesignToken{ title="Small Font Size" token="--font-size-xl" }
+    ::
+::
+
+::ContentDesignToken{ title="Line Height" token="--line-height" }
+Line height refers to the amount of vertical space between lines of text. It can affect the readability, legibility, and overall aesthetic of your text.
+::
+
+::ContentDesignToken{ title="Letter Spacing" token="--letter-spacing" }
+Letter spacing (also known as tracking) refers to the amount of horizontal space between letters in a word or block of text.  It can affect the legibility, readability, and overall aesthetic of your text.
 ::

@@ -22,7 +22,10 @@ export default defineComponent({
         });
 
         const resolvedCssVariable = computed(() => {
-            if (tokenParts.value[1]?.includes('color') || tokenParts.value[0]?.includes('color')) {
+            if (
+                cssVariable.value.startsWith('hsla') &&
+                (tokenParts.value[1]?.includes('color') || tokenParts.value[0]?.includes('color'))
+            ) {
                 return cssVariable.value.replace(/(\d+)\.\d+/g, '$1');
             }
 

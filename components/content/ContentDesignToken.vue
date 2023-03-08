@@ -1,5 +1,7 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
+import { useDesignToken } from '~/composables/useDesignToken';
+import { powModifiersList, sizeModifiersList } from '~/constants';
 
 export default defineComponent({
     props: {
@@ -7,19 +9,7 @@ export default defineComponent({
             type: String,
             default: ''
         },
-        type: {
-            type: String,
-            default: ''
-        },
-        codeType: {
-            type: String,
-            default: ''
-        },
-        previewType: {
-            type: String,
-            default: ''
-        },
-        valueType: {
+        icon: {
             type: String,
             default: ''
         },
@@ -38,16 +28,27 @@ export default defineComponent({
             code: false
         });
 
-        const resolvedCodeType = computed(() => {
-            return props.codeType || props.type;
+        const token = computed(() => props.token);
+        const { propertyName, modifierName, tokenType, cssVariable } = useDesignToken(token);
+
+        const codeType = computed(() => {
+            if (tokenType.value === 'generic' && modifierName.value) {
+                if (propertyName.value === 'size-multiplier') {
+                    return 'pow-multiplier';
+                } else if (sizeModifiersList.includes(modifierName.value)) {
+                    return 'size-multiplier';
+                }
+            }
+
+            return tokenType.value;
         });
 
-        const resolvedPreviewType = computed(() => {
-            return props.previewType || props.type;
-        });
+        const previewProps = computed(() => {
+            if (tokenType.value === 'text') {
+                return { text: true, background: false };
+            } else if (tokenType.value === 'spacing') return { childElement: true };
 
-        const cssVariable = computed(() => {
-            return `var(${props.token})`;
+            return {};
         });
 
         const classes = computed(() => ({
@@ -70,8 +71,8 @@ export default defineComponent({
             cssVariable,
             styles,
             classes,
-            resolvedCodeType,
-            resolvedPreviewType,
+            previewProps,
+            codeType,
             toggleIsActive
         };
     }
@@ -81,7 +82,12 @@ export default defineComponent({
 <template>
     <div class="design-token" :class="{ [`-${size}`]: true }" :style="styles">
         <div class="_margin-right:1">
-            <ExampleDesignTokensPreview :token="token" :size="size" />
+            <ExampleDesignTokensPreview
+                :token="token"
+                :icon="icon"
+                :size="size"
+                v-bind="previewProps"
+            />
         </div>
         <div class="design-token-content">
             <div class="design-token-header">
@@ -130,23 +136,7 @@ export default defineComponent({
                         <slot />
                     </div>
                     <div class="design-token-code" v-show="isActive.code">
-                        <ExampleDesignTokensCodeColor
-                            v-if="resolvedCodeType === 'color'"
-                            :token="token"
-                        />
-                        <ExampleDesignTokensCodeBorderRadius
-                            v-if="resolvedCodeType === 'border-radius'"
-                            :token="token"
-                        />
-                        <ExampleDesignTokensCodeBorder
-                            v-if="resolvedCodeType === 'border'"
-                            :token="token"
-                        />
-                        <ExampleDesignTokensCodeBoxShadow
-                            v-if="resolvedCodeType === 'box-shadow'"
-                            :token="token"
-                        />
-                        <ExampleDesignTokensCodeGeneric v-else :token="token" />
+                        <ExampleDesignTokensCode :type="codeType" :token="token" />
                     </div>
                     <div v-if="$slots.variants" v-show="isActive.variants">
                         <slot name="variants" />
@@ -159,21 +149,19 @@ export default defineComponent({
 
 <style lang="scss">
 .design-token {
-    margin-left: var(--margin-left);
-    margin-right: var(--margin-right);
-    padding: var(--padding-top) 0 var(--padding-bottom) 0;
+    padding: var(--padding);
     position: relative;
     display: flex;
     flex-direction: row;
+    width: 100%;
 
-    &.-variant {
+    .design-token {
         margin-left: 0;
         margin-right: 0;
     }
 
     .design-token-content {
         display: block;
-        width: calc(100% - 80px - var(--margin-right));
         flex: 1 1 100%;
 
         .design-token-header {
@@ -200,6 +188,8 @@ export default defineComponent({
         }
 
         .design-token-code {
+            max-width: 100%;
+
             pre {
                 max-width: 100%;
                 overflow: auto;

@@ -13,7 +13,7 @@ By using it, Inkline now supports an **`inkline.config.ts`** theme configuration
 
 ### Default Configuration
 
-The configuration provides sensible, overridable, interdependent defaults that work well in any Design System.
+The configuration provides sensible, overridable, interdependent defaults that work well in any Design System. Inkline's default [Design Tokens](/docs/ui/design-tokens) are generated using the following configuration:
 
 ::ContentTabs
 #config
