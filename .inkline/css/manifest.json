@@ -813,24 +813,19 @@
     "dark": {
         "border": {
             "top": {
-                "color": {
-                    "width": "var(--color-gray-700)"
-                }
+                "color": "var(--color-gray-700)"
             },
             "right": {
-                "color": {
-                    "width": "var(--color-gray-700)"
-                }
+                "color": "var(--color-gray-700)"
             },
             "bottom": {
-                "color": {
-                    "width": "var(--color-gray-700)"
-                }
+                "color": "var(--color-gray-700)"
             },
             "left": {
-                "color": {
-                    "width": "var(--color-gray-700)"
-                }
+                "color": "var(--color-gray-700)"
+            },
+            "color": {
+                "width": "var(--color-gray-700)"
             }
         },
         "typography": {

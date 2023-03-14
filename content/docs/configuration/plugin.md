@@ -33,7 +33,7 @@ app.use(Inkline, {
 ::
 
 ::ContentAlert{type="info"}
-To configure Plugin Options for Nuxt.js, read the [Module Configuration Reference](https://github.com/inkline/plugin#nuxtjs).
+To configure Plugin Options for Nuxt, read the [Module Configuration Reference](https://github.com/inkline/plugin#nuxtjs).
 ::
 
 

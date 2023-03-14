@@ -1,11 +1,11 @@
 ---
-title: Module Options - Nuxt.js - Inkline
-description: Effortlessly customize Inkline's Configuration using the Nuxt.js Module options.
+title: Module Options - Nuxt - Inkline
+description: Effortlessly customize Inkline's Configuration using the Nuxt Module options.
 layout: docs
 ---
 
-# Module Options - Nuxt.js
-## Effortlessly customize Inkline's Configuration using the Nuxt.js Module options.
+# Module Options - Nuxt
+## Effortlessly customize Inkline's Configuration using the Nuxt Module options.
 
 Here are the **default configuration options**:
 
