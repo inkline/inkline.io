@@ -48,7 +48,7 @@ export const navigation: NavigationPage[] = [
                         }
                     },
                     {
-                        title: 'Nuxt.js',
+                        title: 'Nuxt',
                         url: { path: '/docs/installation/nuxt' },
                         navigation: {
                             previous: '/docs/concepts',
@@ -103,7 +103,7 @@ export const navigation: NavigationPage[] = [
                         }
                     },
                     {
-                        title: 'Nuxt.js',
+                        title: 'Nuxt',
                         url: { path: '/docs/configuration/nuxt' },
                         navigation: {
                             previous: '/docs/configuration/file',

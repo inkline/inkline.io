@@ -1,18 +1,18 @@
 ---
-title: Installation - Nuxt.js - Inkline
-description: Install Inkline for any application created using Nuxt.js.
+title: Installation - Nuxt - Inkline
+description: Install Inkline for any application created using Nuxt.
 layout: docs
 ---
 
-# Installation - Nuxt.js
-## Install Inkline for any application created using Nuxt.js.
+# Installation - Nuxt
+## Install Inkline for any application created using Nuxt.
 
 ### Installation
 
 <div class="install-step _margin-top:2">
 <div class="install-step-title"><span class="install-step-number">1</span> Create a project</div> 
 
-Create a new Nuxt.js application using the `nuxi` CLI command below or using the [Nuxt.js guide](https://v3.nuxtjs.org/getting-started/installation), and follow the instructions provided by the installation wizard.
+Create a new Nuxt application using the `nuxi` CLI command below or using the [Nuxt guide](https://nuxt.com/docs/getting-started/introduction), and follow the instructions provided by the installation wizard.
 
 ~~~bash
 npx nuxi init my-nuxt-app
@@ -26,7 +26,7 @@ npm install
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">2</span> Install Inkline</div> 
 
-Inkline will automatically detect your Nuxt.js development environment and generate a basic configuration for your application.
+Inkline will automatically detect your Nuxt development environment and generate a basic configuration for your application.
 
 ~~~bash
 npx inkline init

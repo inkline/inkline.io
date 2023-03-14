@@ -17,7 +17,7 @@ By using it, Inkline now supports an **`inkline.config.ts`** theme configuration
 
 ### Integration Options
 
-The easiest and fastest way to use Inkline with your favorite development environment. We officially support integrations with Nuxt.js, Vite.js, and Webpack.js.
+The easiest and fastest way to use Inkline with your favorite development environment. We officially support integrations with Nuxt, Vite.js, and Webpack.js.
 
 ::ContentLinkCard{ to="/docs/configuration/theme" title="Go to Theme Options" icon="ion:md-color-palette" }
 ::

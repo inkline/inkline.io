@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from 'nuxt/config';
 import en from './i18n/en';
 
 /**

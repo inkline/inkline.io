@@ -8,7 +8,7 @@ layout: docs
 ## Install Inkline for any application created using Webpack.
 
 ::ContentAlert{color="warning"}
-For new applications, please use **[Vite.js](/docs/installation/vite)** or **[Nuxt.js](/docs/installation/nuxt)**.
+For new applications, please use **[Vite.js](/docs/installation/vite)** or **[Nuxt](/docs/installation/nuxt)**.
 The Vue.js CLI and Webpack.js are no longer recommended by the Vue.js community.
 ::
 

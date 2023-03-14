@@ -51,7 +51,7 @@ export default defineConfig({
 ~~~
 
 ::ContentAlert
-If you're using [Vite.js](/docs/installation/vite), [Nuxt.js](/docs/installation/nuxt), or [Webpack.js](/docs/installation/webpack) please use the official [@inkline/plugin](https://github.com/inkline/plugin) integration. The plugin will automatically rebuild your variables when the config file changes.
+If you're using [Vite.js](/docs/installation/vite), [Nuxt](/docs/installation/nuxt), or [Webpack.js](/docs/installation/webpack) please use the official [@inkline/plugin](https://github.com/inkline/plugin) integration. The plugin will automatically rebuild your variables when the config file changes.
 ::
 
 </div>
