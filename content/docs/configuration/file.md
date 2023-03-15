@@ -1,15 +1,13 @@
 ---
 title: Theme Options - Configuration - Inkline
-description: Inkline comes with a powerful theme configuration file, featuring a very flexible, intuitive format.
+description: Customize your Vue.js 3 Design System with Inkline's configuration file. Easily adjust colors, typography, spacing, and more.
 layout: docs
 ---
 
 # Configuration File
-## Inkline comes with a powerful theme configuration file, featuring a very flexible, intuitive format.
+## Customize your Vue.js 3 Design System with Inkline's configuration file. Easily adjust colors, typography, spacing, and more.
 
-The [@inkline/config](https://github.com/inkline/config) package is a powerful tool that can be used to generate a comprehensive set of CSS Variables with sensible defaults for your Vue.js 3 Design System.
-
-By using it, Inkline now supports an **`inkline.config.ts`** theme configuration file using which you can customize various aspects of your Design System, including colors, typography, spacing, and more.
+The [@inkline/config](https://github.com/inkline/config) package generates a comprehensive set of CSS Variables with sensible defaults. With the **`inkline.config.ts`** theme configuration file, you can easily customize various aspects of your Design System.
 
 ### Default Configuration
 
@@ -17,7 +15,7 @@ The configuration provides sensible, overridable, interdependent defaults that w
 
 ::ContentTabs
 #config
-<!-- Autodocs(src="@inkline/config/examples/defaults.ts" lang="ts") -->
+<!-- Autodocs{src="@inkline/config/examples/defaults.ts" lang="ts"} -->
 ::             
 
 ### theme 

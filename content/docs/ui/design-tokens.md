@@ -350,7 +350,7 @@ The dark text color can be used to create a more sophisticated and elegant look 
 ### Animation
 CSS transitions allow for smooth and gradual changes to occur over a specified duration. Transitions can be triggered by various events, such as hover, click, or page load, and can be applied to different properties such as background-color, opacity, width, height, and more.
 
-[Read about border configuration](/docs/configuration/file#animation)
+[Read about animation configuration](/docs/configuration/file#animation)
 
 ::ContentDesignTokensHeader
 ::
@@ -687,7 +687,7 @@ The perfect fifth scale ratio is a musical interval representing a ratio of 3/2.
 ### Sizes
 Inkline provides a set of predefined sizes and percentage values that can be used to create consistent layout. The size multiplier variable is used to compute any size-based variants of components, such as font sizes, padding, margin, and border radius.
 
-[Read about typography configuration](/docs/configuration/file#sizes)
+[Read about sizes configuration](/docs/configuration/file#sizes)
 
 ::ContentDesignTokensHeader
 ::

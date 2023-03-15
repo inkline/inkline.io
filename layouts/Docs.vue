@@ -171,6 +171,19 @@ export default defineComponent({
                 margin-bottom: var(--margin-bottom-2);
             }
         }
+
+        > table {
+            width: 100%;
+            margin-bottom: var(--margin-bottom);
+
+            th,
+            td {
+                padding: var(--padding-xs);
+                border-style: var(--border-style);
+                border-width: var(--border-width);
+                border-color: var(--border-color);
+            }
+        }
     }
 }
 </style>

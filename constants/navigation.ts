@@ -135,8 +135,8 @@ export const navigation: NavigationPage[] = [
                 url: { path: '/docs/ui/design-tokens' }
             },
             {
-                title: 'Sass Mixins',
-                url: { path: '/docs/ui/sass-mixins' }
+                title: 'Breakpoints',
+                url: { path: '/docs/ui/breakpoints' }
             },
             {
                 title: 'Layout',

@@ -2,7 +2,7 @@ import { createRequire } from 'module';
 import { readFile } from 'fs/promises';
 
 export default defineNitroPlugin((nitroApp) => {
-    const autodocsRegEx = /<!--\s*Autodocs\s*\((.+)\)\s*-->/g;
+    const autodocsRegEx = /<!--\s*Autodocs\s*\{(.+)\}\s*-->/g;
     const paramsRegEx = /(\w+)="([^"]+)"/g;
     let require = createRequire(import.meta.url);
 

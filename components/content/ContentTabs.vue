@@ -5,11 +5,15 @@ export default defineComponent({
     setup(props, { slots }) {
         const active = ref(Object.keys(slots)[0]);
         const tabs = ref([
+            { name: 'preview', title: 'Preview' },
             { name: 'config', title: 'inkline.config.ts' },
             { name: 'vite', title: 'vite.config.ts' },
             { name: 'nuxt', title: 'nuxt.config.ts' },
             { name: 'webpack', title: 'webpack.config.js' },
             { name: 'main', title: 'main.ts' },
+            { name: 'app', title: 'App.vue' },
+            { name: 'vue', title: 'Component.vue' },
+            { name: 'scss', title: 'style.scss' },
             { name: 'output', title: 'Output' }
         ]);
 

@@ -25,6 +25,25 @@ export default defineNuxtConfig({
             meta: [{ name: 'description', content: 'My amazing site.' }]
         }
     },
+    components: {
+        dirs: [
+            {
+                path: '~/components/global',
+                global: true
+            },
+            {
+                path: '~/components/content',
+                global: true
+            },
+            '~/components',
+            {
+                path: 'node_modules/@inkline/inkline/components/ILayout/examples',
+                prefix: 'ILayoutExample',
+                global: true,
+                extensions: ['.vue']
+            }
+        ]
+    },
     /**
      * @docs https://content.nuxtjs.org
      */
