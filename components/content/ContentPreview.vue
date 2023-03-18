@@ -1,19 +1,60 @@
 <script lang="ts">
-import { RenderFunction, DefineComponent, defineComponent, PropType } from 'vue';
+import {
+    RenderFunction,
+    DefineComponent,
+    defineComponent,
+    PropType,
+    ref,
+    Component,
+    h,
+    computed,
+    onMounted,
+    markRaw
+} from 'vue';
+import { ILoader } from '@inkline/inkline';
 
 export default defineComponent({
     props: {
-        component: {
-            type: [Function, Object] as PropType<RenderFunction | DefineComponent>,
+        src: {
+            type: String,
             required: true
         }
+    },
+    setup(props) {
+        const dynamicComponent = ref<Component | undefined>(() => h(ILoader));
+        const pathParts = computed(() => props.src.split('/').slice(1));
+
+        onMounted(async () => {
+            try {
+                let componentModule;
+                if (pathParts.value[0] === 'components') {
+                    componentModule = await import(
+                        `../../node_modules/@inkline/inkline/${pathParts.value[0]}/${pathParts.value[1]}/examples/${pathParts.value[3]}.vue`
+                    );
+                } else {
+                    componentModule = await import(
+                        `../../node_modules/@inkline/inkline/stories/${pathParts.value[1]}/${pathParts.value[2]}/${pathParts.value[3]}.vue`
+                    );
+                }
+
+                dynamicComponent.value = markRaw(componentModule.default);
+            } catch (error) {
+                console.error(error);
+
+                dynamicComponent.value = () => h('div', {}, 'Not found');
+            }
+        });
+
+        return {
+            dynamicComponent
+        };
     }
 });
 </script>
 
 <template>
     <div class="content-preview">
-        <component :is="component" />
+        <component :is="dynamicComponent" />
     </div>
 </template>
 

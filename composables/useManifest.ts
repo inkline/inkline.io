@@ -9,7 +9,7 @@ export function useManifest(componentName: Ref<string>) {
     onMounted(async () => {
         if (!manifestCache.has(componentName.value)) {
             const manifestModule = await import(
-                `../../node_modules/@inkline/inkline/components/${componentName.value}/manifest.mjs`
+                `../node_modules/@inkline/inkline/components/${componentName.value}/manifest.mjs`
             );
 
             manifest.value = manifestModule.default as ComponentManifest;

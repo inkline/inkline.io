@@ -88,7 +88,36 @@ provide the element positioning only, without colors and paddings.
 
 ### Props
 
+##### ILayout
 ::ContentComponentProps{component="ILayout"}
+::
+
+### Slots
+
+##### ILayout
+::ContentComponentSlots{component="ILayout"}
+::
+
+##### ILayoutHeader
+::ContentComponentSlots{component="ILayoutHeader"}
+::
+
+##### ILayoutAside
+::ContentComponentSlots{component="ILayoutAside"}
+::
+
+##### ILayoutContent
+::ContentComponentSlots{component="ILayoutContent"}
+::
+
+##### ILayoutFooter
+::ContentComponentSlots{component="ILayoutFooter"}
+::
+
+### Design Tokens
+
+##### ILayoutAside
+::ContentComponentDesignTokens{component="ILayoutAside"}
 ::
 
 [//]: # ()

@@ -20,7 +20,7 @@ export default defineComponent({
 <template>
     <IRow class="design-tokens-header">
         <IColumn md="8"> {{ t('common.description') }} </IColumn>
-        <IColumn md="4"> {{ t('common.token') }} </IColumn>
+        <IColumn md="4" class="_text:right"> {{ t('common.token') }} </IColumn>
     </IRow>
 </template>
 
