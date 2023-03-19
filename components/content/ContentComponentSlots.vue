@@ -1,6 +1,7 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { useManifest } from '~/composables';
+import { ConfigurationTableColumn } from '~/types';
 
 export default defineComponent({
     props: {
@@ -14,31 +15,19 @@ export default defineComponent({
         const { manifest } = useManifest(componentName);
         const componentSlots = computed(() => manifest.value?.slots || []);
 
+        const columns = ref<ConfigurationTableColumn[]>([
+            { label: 'Slot', key: 'name', type: 'code' },
+            { label: '', key: 'description', type: 'plaintext' }
+        ]);
+
         return {
-            componentSlots
+            componentSlots,
+            columns
         };
     }
 });
 </script>
 
 <template>
-    <ConfigurationTable v-show="componentSlots.length > 0" type="slots">
-        <li v-for="slot in componentSlots" :key="slot.name" class="tbody">
-            <div class="tr">
-                <div class="td property-name">
-                    <span>Property</span>
-                    <div>
-                        <code>
-                            {{ slot.name }}
-                        </code>
-                    </div>
-                </div>
-            </div>
-            <div class="tr">
-                <div class="td property-description">
-                    {{ slot.description }}
-                </div>
-            </div>
-        </li>
-    </ConfigurationTable>
+    <ConfigurationTable :rows="componentSlots" :columns="columns" />
 </template>

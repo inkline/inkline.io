@@ -1,7 +1,7 @@
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
 import { useDesignToken } from '~/composables/useDesignToken';
-import { powModifiersList, sizeModifiersList } from '~/constants';
+import { sizeModifiersList } from '~/constants';
 
 export default defineComponent({
     props: {

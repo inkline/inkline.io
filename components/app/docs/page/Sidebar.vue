@@ -117,8 +117,10 @@ export default defineComponent({
 
 .app-docs-page-sidebar {
     width: var(--sidebar--width);
+    padding-bottom: var(--padding-bottom);
     text-align: right;
     transition: opacity var(--transition-duration) var(--transition-timing-function);
+    overflow: auto;
 
     > .title {
         margin-bottom: calc(var(--spacing) / 2);

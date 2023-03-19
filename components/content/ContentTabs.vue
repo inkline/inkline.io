@@ -63,8 +63,10 @@ export default defineComponent({
         border-top-left-radius: 0;
         border-top-right-radius: 0;
 
-        pre {
-            margin-bottom: 0;
+        .tab-body {
+            > pre {
+                margin-bottom: 0;
+            }
         }
     }
 }

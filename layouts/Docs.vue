@@ -26,7 +26,7 @@ export default defineComponent({
         </ILayoutHeader>
         <ILayout vertical>
             <ILayoutContent>
-                <IContainer>
+                <IContainer id="documentation-layout-container">
                     <AppSidebar />
                     <article id="documentation-page">
                         <slot />
@@ -46,13 +46,6 @@ export default defineComponent({
 #documentation-layout {
     min-height: 100vh;
 
-    .container {
-        @include breakpoint-up('sm') {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
     .app-sidebar,
     .app-docs-page-sidebar {
         position: fixed;
@@ -62,14 +55,28 @@ export default defineComponent({
         width: var(--sidebar--width);
     }
 
-    .app-sidebar .sidebar-content {
-        padding-top: var(--navbar--height);
-        padding-bottom: var(--article--padding-bottom);
+    .app-sidebar {
+        .sidebar-content {
+            padding-top: var(--navbar--height);
+            padding-bottom: var(--article--padding-bottom);
+        }
     }
 
     .app-docs-page-sidebar {
-        right: var(--margin-right-2);
-        margin-top: calc(var(--article--padding-top) + var(--navbar--height));
+        margin-top: var(--navbar--height);
+        padding-top: var(--article--padding-top);
+        padding-right: var(--padding-right);
+        right: var(--margin-right);
+
+        @include breakpoint-down('lg') {
+            display: none;
+        }
+    }
+
+    .app-sidebar {
+        @include breakpoint-down('md') {
+            display: none;
+        }
     }
 
     .app-navbar {
@@ -80,15 +87,10 @@ export default defineComponent({
     }
 }
 
-.app-docs-page-sidebar {
-    @include breakpoint-down('lg') {
-        display: none;
-    }
-}
-
-.app-sidebar {
-    @include breakpoint-down('md') {
-        display: none;
+#documentation-layout-container {
+    @include breakpoint-up('sm') {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -104,14 +106,6 @@ export default defineComponent({
 
     @include breakpoint-down('lg') {
         margin-right: 0;
-    }
-
-    pre {
-        background: var(--shiki-color-background);
-        padding: var(--padding);
-        border-radius: var(--border-radius);
-        font-family: var(--font-family-primary-monospace);
-        font-size: var(--font-size-sm);
     }
 
     > div {
@@ -183,6 +177,19 @@ export default defineComponent({
                 border-width: var(--border-width);
                 border-color: var(--border-color);
             }
+        }
+
+        > .alert {
+            margin-bottom: var(--margin-bottom);
+        }
+
+        > pre,
+        .tab > .tab-body > pre {
+            background: var(--shiki-color-background);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            font-family: var(--font-family-primary-monospace);
+            font-size: var(--font-size-sm);
         }
     }
 }

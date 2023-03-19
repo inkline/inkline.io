@@ -1,7 +1,8 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { useManifest } from '~/composables';
 import { cssVariableDisplayValue } from '~/utils';
+import { ConfigurationTableColumn } from '~/types';
 
 export default defineComponent({
     props: {
@@ -15,36 +16,25 @@ export default defineComponent({
         const { manifest } = useManifest(componentName);
         const cssVariables = computed(() => manifest.value?.css?.variables || []);
 
+        const columns = ref<ConfigurationTableColumn[]>([
+            { label: 'Token', key: 'name', type: 'code', width: 4 },
+            {
+                label: 'Value',
+                key: 'value',
+                type: 'code',
+                width: 8,
+                render: (row) => cssVariableDisplayValue(row.value)
+            }
+        ]);
+
         return {
             cssVariables,
-            cssVariableDisplayValue
+            columns
         };
     }
 });
 </script>
 
 <template>
-    <ConfigurationTable v-show="cssVariables.length > 0" type="css-variables">
-        <li v-for="variable in cssVariables" :key="variable.name" class="tbody">
-            <div class="tr">
-                <div class="td property-name">
-                    <span>Property</span>
-                    <div>
-                        <code> {{ variable.name }} </code>
-                    </div>
-                </div>
-
-                <div class="td property-value">
-                    <span>Value</span>
-                    <code>{{ cssVariableDisplayValue(variable) }}</code>
-                </div>
-            </div>
-            <div v-if="variable.description" class="tr">
-                <div class="td property-description">
-                    <span>Description</span>
-                    {{ variable.description }}
-                </div>
-            </div>
-        </li>
-    </ConfigurationTable>
+    <ConfigurationTable :rows="cssVariables" :columns="columns" />
 </template>

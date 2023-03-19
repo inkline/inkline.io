@@ -1,19 +1,60 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
+import { ConfigurationTableColumn } from '~/types';
 
 export default defineComponent({
     props: {
-        type: {
-            type: String,
-            default: ''
+        columns: {
+            type: Array as PropType<ConfigurationTableColumn[]>,
+            default: () => []
+        },
+        rows: {
+            type: Array as PropType<Record<string, any>[]>,
+            default: () => []
         }
+    },
+    setup() {
+        function renderTdValue(row: Record<string, any>, column: ConfigurationTableColumn) {
+            const value = row[column.key];
+
+            if (column.render) {
+                return column.render(row, column);
+            } else if (typeof value === 'string') {
+                return value;
+            } else if (typeof value === 'boolean') {
+                return value ? 'true' : 'false';
+            } else if (typeof value === 'number') {
+                return value;
+            } else if (Array.isArray(value)) {
+                return value.join(', ');
+            } else if (typeof value === 'object') {
+                return JSON.stringify(value);
+            }
+
+            return value;
+        }
+
+        return {
+            renderTdValue
+        };
     }
 });
 </script>
 
 <template>
-    <ul :class="`configuration-table -${type}`">
-        <slot />
+    <ul class="configuration-table">
+        <IRow v-for="row in rows" :key="row.name" class="tr">
+            <IColumn
+                v-for="column in columns"
+                :key="column.key"
+                :md="column.width || 12"
+                class="td"
+            >
+                <div v-if="column.label" class="label">{{ column.label }}</div>
+                <code v-if="column.type === 'code'">{{ renderTdValue(row, column) }}</code>
+                <span v-else>{{ renderTdValue(row, column) }}</span>
+            </IColumn>
+        </IRow>
     </ul>
 </template>
 
@@ -32,104 +73,36 @@ export default defineComponent({
     border-top-color: var(--border-top-color);
     border-bottom-color: var(--border-bottom-color);
     transition-property: border;
-    transition-timing-function: var(--transition-easing);
+    transition-timing-function: var(--transition-timing-function);
     transition-duration: var(--transition-duration);
 
-    .tbody {
-        padding: var(--padding);
-        border-bottom: 1px solid var(--border-color--light);
+    .tr {
         margin: 0;
+        padding-top: var(--padding-top);
+        padding-bottom: var(--padding-bottom);
+        border-bottom: var(--border-bottom-width) var(--border-bottom-style)
+            var(--border-bottom-color);
         transition-property: border;
-        transition-timing-function: var(--transition-easing);
+        transition-timing-function: var(--transition-timing-function);
         transition-duration: var(--transition-duration);
 
         &:last-child {
             border-bottom: 0;
         }
 
-        .tr {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        .td {
+            margin-bottom: var(--margin-bottom-1-2);
 
-            + .tr {
-                margin-top: calc(var(--padding-top) / 2);
-            }
-
-            .td {
-                + .td {
-                    margin-left: calc(var(--margin-left) / 2);
-                }
-
-                span {
-                    display: block;
-                    font-weight: var(--font-weight-semibold);
-                    font-size: var(--font-size-sm);
-                    color: var(--text--color-weak);
-                    margin-bottom: calc(var(--margin-bottom) / 4);
-                }
-
-                code {
-                    background: var(--color-gray-50);
-                    white-space: nowrap;
-                    overflow: auto;
-                    width: 100%;
-                    display: block;
-                }
-
-                &.property-name {
-                    > div {
-                        display: flex;
-                        align-items: center;
-                    }
-
-                    .inkline-icon {
-                        margin-right: calc(var(--margin-right) / 2);
-                    }
-
-                    code {
-                        width: auto;
-                    }
-                }
-
-                &:not(.property-name) {
-                    code {
-                        color: var(--body--color);
-                    }
-                }
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }
 
-    &.-css-variables {
-        .tbody .tr:first-child {
-            .td {
-                width: 50%;
-            }
-        }
-    }
-
-    &.-props {
-        .tbody .tr:first-child .td {
-            width: 33.3333%;
-        }
-    }
-
-    &.-slots {
-        .tbody .tr:first-child .td {
-            width: 100%;
-        }
-    }
-
-    .tbody .tr:first-child {
-        @include breakpoint-down('sm') {
-            flex-direction: column;
-
-            .td {
-                width: 100% !important;
-                margin: 0;
-            }
-        }
+    .label {
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-semibold);
+        color: var(--text-color-weaker);
     }
 }
 </style>

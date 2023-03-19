@@ -32,7 +32,7 @@ export default defineComponent({
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     background: var(--color-gray-100);
-    color: var(--text--color-weak);
+    color: var(--text-color-weak);
 
     .dark-theme & {
         background: var(--color-gray-900);

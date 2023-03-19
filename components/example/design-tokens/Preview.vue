@@ -119,14 +119,15 @@ export default defineComponent({
 
     &.-icon {
         line-height: 0;
-        color: var(--text--color-weaker);
+        color: var(--text-color-weaker);
     }
 
     &.-background[class*='-token-color'] {
         background: var(--design-token);
     }
 
-    &.-text[class*='-token-color'] {
+    &.-text[class*='-token-color'],
+    &.-text[class*='-token-text-color'] {
         color: var(--design-token);
     }
 
