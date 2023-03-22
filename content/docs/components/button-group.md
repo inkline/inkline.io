@@ -3,87 +3,110 @@ title: Button Group - Inkline
 description: Group multiple buttons together on a single line using a button group. 
 ---
 
-<script setup>
-import { manifest } from '@inkline/inkline/components/IButtonGroup/manifest.mjs';
-import {
-    IButtonGroupBasicExample,
-    IButtonGroupBlockExample,
-    IButtonGroupDisabledExample,
-    IButtonGroupNestedExample,
-    IButtonGroupNestedBlockExample,
-    IButtonGroupSizeVariantsExample,
-    IButtonGroupVerticalExample,
-    IButtonGroupVerticalBlockExample,
-    IButtonGroupVerticalSizeVariantsExample
-} from '@inkline/inkline/components/IButtonGroup/examples/index.mjs';
-import { default as IButtonGroupBasicExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/basic.html?raw';
-import { default as IButtonGroupBlockExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/block.html?raw';
-import { default as IButtonGroupDisabledExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/disabled.html?raw';
-import { default as IButtonGroupNestedExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/nested.html?raw';
-import { default as IButtonGroupNestedBlockExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/nested-block.html?raw';
-import { default as IButtonGroupSizeVariantsExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/size-variants.html?raw';
-import { default as IButtonGroupVerticalExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/vertical.html?raw';
-import { default as IButtonGroupVerticalBlockExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/vertical-block.html?raw';
-import { default as IButtonGroupVerticalSizeVariantsExampleHTML } from '@inkline/inkline/components/IButtonGroup/examples/vertical-size-variants.html?raw';
-</script>
-
 # Button Group
-
 ## Group multiple buttons together on a single line using a button group. 
 
 ### Basic Example
-You can group a series of `<i-button>` components inside a `<i-button-group>` to display them inline, conveying additional meaning.
+You can group a series of `<IButton>` components inside a `<IButtonGroup>` to display them inline, conveying additional meaning.
 
-<example :component="IButtonGroupBasicExample" :html="IButtonGroupBasicExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/basic"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/basic.vue" lang="vue"} -->
+::
 
 ### Size Variants
 You're able to use the `size` modifier to control the size of your button group, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`.
 
-<example :component="IButtonGroupSizeVariantsExample" :html="IButtonGroupSizeVariantsExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/size-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/size-variants.vue" lang="vue"} -->
+::
 
 ### Block Variant
 You can create block button groups that span the full width of a parent by adding the `block` property.
 
-<example :component="IButtonGroupBlockExample" :html="IButtonGroupBlockExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/block"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/block.vue" lang="vue"} -->
+::
 
 ### Vertical Basic Example
 Using the `vertical` property, you can stack a set of buttons vertically rather than horizontally.
 
-<example :component="IButtonGroupVerticalExample" :html="IButtonGroupVerticalExampleHTML"></example>
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/vertical"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical.vue" lang="vue"} -->
+::
 
 ### Vertical Size Variants
 Just like horizontal button groups, the size of vertical button groups can also be controlled using the `size` modifier. The default size is set to `md`.
 
-<example :component="IButtonGroupVerticalSizeVariantsExample" :html="IButtonGroupVerticalSizeVariantsExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/vertical-size-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical-size-variants.vue" lang="vue"} -->
+::
 
 ### Vertical Block 
 Just like horizontal block button groups, you can also set vertical button groups to span full width of its parent by adding the `block` property.
 
-<example :component="IButtonGroupVerticalBlockExample" :html="IButtonGroupVerticalBlockExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/vertical-block"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical-block.vue" lang="vue"} -->
+::
 
 ### Nested
 When placing a `<i-button-group>` inside another `<i-button-group>`, you'll get a mixed series of buttons that will render seamlessly.
 
-<example :component="IButtonGroupNestedExample" :html="IButtonGroupNestedExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/nested"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/nested.vue" lang="vue"} -->
+::
 
 ### Nested Block
 You can also nest `block` button groups.
 
-<example :component="IButtonGroupNestedBlockExample" :html="IButtonGroupNestedBlockExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/nested-block"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/nested-block.vue" lang="vue"} -->
+::
+
 
 ### Disabled
 You can make button groups look inactive or disabled by adding the `disabled` boolean property.
 
-<example :component="IButtonGroupDisabledExample" :html="IButtonGroupDisabledExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IButtonGroup/examples/disabled"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/disabled.vue" lang="vue"} -->
+::
 
-### Configuration
 
-#### Props
-Use props to modify the component's design and behavior.
+### Props
+::ContentComponentProps{component="IButtonGroup"}
+::
 
-<props-table :manifest="manifest"></props-table>
+### Slots
+::ContentComponentSlots{component="IButtonGroup"}
+::
 
-#### Slots
-Use slots to insert custom content into well-defined component locations.
-
-<slots-table :manifest="manifest"></slots-table>
+### Design Tokens
+::ContentComponentDesignTokens{component="IButtonGroup"}
+::

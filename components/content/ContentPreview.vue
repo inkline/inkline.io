@@ -18,9 +18,20 @@ export default defineComponent({
         src: {
             type: String,
             required: true
+        },
+        off: {
+            type: String,
+            default: ''
         }
     },
     setup(props) {
+        const classes = computed(() =>
+            props.off
+                .split(' ')
+                .map((name) => `-without-${name}`)
+                .join(' ')
+        );
+
         const dynamicComponent = ref<Component | undefined>(() =>
             h(
                 'div',
@@ -54,6 +65,7 @@ export default defineComponent({
         });
 
         return {
+            classes,
             dynamicComponent
         };
     }
@@ -61,7 +73,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="content-preview">
+    <div class="content-preview" :class="classes">
         <component :is="dynamicComponent" />
     </div>
 </template>
@@ -132,7 +144,9 @@ export default defineComponent({
     @extend %tabs-preview;
     @extend %toast-preview;
 
-    @extend %layout-local-preview;
+    &:not(.-without-layout) {
+        @extend %layout-local-preview;
+    }
 
     @extend %border-utilities-preview;
     @extend %color-utilities-preview;

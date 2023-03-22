@@ -1,12 +1,12 @@
 import { ComponentManifestCssVariable } from '@inkline/inkline/types';
 
-function parseVariable(variable: ComponentManifestCssVariable): string {
+export function parseDesignTokenValue(variable: ComponentManifestCssVariable): string {
     let resolvedValue;
     if (variable.value) {
         resolvedValue =
             typeof variable.value === 'string'
                 ? variable.value
-                : variable.value.map(parseVariable).join(' ');
+                : variable.value.map(parseDesignTokenValue).join(' ');
     }
 
     if (resolvedValue) {
@@ -14,8 +14,4 @@ function parseVariable(variable: ComponentManifestCssVariable): string {
     } else {
         return `var(${variable.name})`;
     }
-}
-
-export function cssVariableDisplayValue(values: ComponentManifestCssVariable[]): string {
-    return values.map(parseVariable).join(' ');
 }

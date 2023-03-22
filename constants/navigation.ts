@@ -162,6 +162,7 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'Components',
+        active: /\/docs\/components(\/.+)?/,
         children: [
             {
                 title: 'Alert',
@@ -248,12 +249,12 @@ export const navigation: NavigationPage[] = [
                 url: { path: '/docs/components/sidebar' }
             },
             {
-                title: 'Tabs',
-                url: { path: '/docs/components/tabs' }
-            },
-            {
                 title: 'Table',
                 url: { path: '/docs/components/table' }
+            },
+            {
+                title: 'Tabs',
+                url: { path: '/docs/components/tabs' }
             },
             {
                 title: 'Tooltip',

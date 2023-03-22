@@ -17,7 +17,7 @@ export default defineComponent({
 
         const columns = ref<ConfigurationTableColumn[]>([
             { label: 'Event', key: 'name', type: 'code' },
-            { label: '', key: 'description', type: 'plaintext' }
+            { label: '', key: 'description' }
         ]);
 
         return {

@@ -83,7 +83,7 @@ export default defineComponent({
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 999;
+        z-index: 9999;
     }
 }
 
@@ -109,12 +109,12 @@ export default defineComponent({
     }
 
     > div {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        > h1,
+        > h2,
+        > h3,
+        > h4,
+        > h5,
+        > h6 {
             margin-top: 2.5rem;
 
             > a {
@@ -184,6 +184,7 @@ export default defineComponent({
         }
 
         > pre,
+        .pre,
         .tab > .tab-body > pre {
             background: var(--shiki-color-background);
             padding: var(--padding);

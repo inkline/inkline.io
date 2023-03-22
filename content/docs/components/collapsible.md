@@ -3,78 +3,95 @@ title: Collapsible - Inkline
 description: Collapsible elements are used to show and hide content using a smooth reveal transition. 
 ---
 
-<script setup>
-import { manifest } from '@inkline/inkline/components/ICollapsible/manifest.mjs';
-import {
-    ICollapsibleAccordionExample,
-    ICollapsibleBasicExample,
-    ICollapsibleColorVariantsExample,
-    ICollapsibleDefaultOpenExample,
-    ICollapsibleHeaderExample,
-    ICollapsibleSizeVariantsExample
-} from '@inkline/inkline/components/ICollapsible/examples/index.mjs';
-import { default as ICollapsibleAccordionExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/accordion.html?raw';
-import { default as ICollapsibleBasicExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/basic.html?raw';
-import { default as ICollapsibleColorVariantsExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/color-variants.html?raw';
-import { default as ICollapsibleDefaultOpenExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/default-open.html?raw';
-import { default as ICollapsibleDefaultOpenExampleJS } from '@inkline/inkline/components/ICollapsible/examples/default-open.mjs?raw';
-import { default as ICollapsibleHeaderExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/header.html?raw';
-import { default as ICollapsibleSizeVariantsExampleHTML } from '@inkline/inkline/components/ICollapsible/examples/size-variants.html?raw';
-</script>
-
 # Collapsible
-
 ## Collapsible elements are used to show and hide content using a smooth reveal transition. 
 
 ### Basic Example
 Collapsing an element will animate the height from zero to its default value. This component is useful for creating clearly separated content sections such as FAQ pages.
 
-<example :component="ICollapsibleBasicExample" :html="ICollapsibleBasicExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ICollapsible/examples/basic"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/basic.vue" lang="vue"} -->
+::
 
 ### Item Header
 You can use the `header` slot to provide a custom title for the collapsible panel's heading. 
 
-<example :component="ICollapsibleHeaderExample" :html="ICollapsibleHeaderExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ICollapsible/examples/header"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/header.vue" lang="vue"} -->
+::
 
 ### Default Open Panels
 Panels can be opened by default, on page load, using the `v-model` directive of the `<i-collapsible>` component. First, you'll need to assign an `id` to the `<i-collapsible-item>` components which will identify the open panels.
- 
- <example :component="ICollapsibleDefaultOpenExample" :html="ICollapsibleDefaultOpenExampleHTML" :js="ICollapsibleDefaultOpenExampleJS"></example>
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ICollapsible/examples/default-open"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/default-open.vue" lang="vue"} -->
+::
 
 ### Accordion
 Accordion collapsible groups can have only one content panel open at a single time. This behaviour can be set using the `accordion` property.
 
-<example :component="ICollapsibleAccordionExample" :html="ICollapsibleAccordionExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ICollapsible/examples/accordion"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/accordion.vue" lang="vue"} -->
+::
 
 ### Color Variants
 Inkline includes basic predefined collapsible colors that you can use within your application. You can apply a style using the `color` property.
 
-<example :component="ICollapsibleColorVariantsExample" :html="ICollapsibleColorVariantsExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ICollapsible/examples/color-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/color-variants.vue" lang="vue"} -->
+::
 
 ### Size Variants
 You're able to use the `size` modifier to control the text and spacing size of your collapsible, using one of the available sizes: `sm`, `md`, and `lg`.
 The default size is set to `md`.
 
-<example :component="ICollapsibleSizeVariantsExample" :html="ICollapsibleSizeVariantsExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ICollapsible/examples/size-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/size-variants.vue" lang="vue"} -->
+::
 
-### Configuration
+### Props
+##### ICollapsible
+::ContentComponentProps{component="ICollapsible"}
+::
+##### ICollapsibleItem
+::ContentComponentProps{component="ICollapsibleItem"}
+::
 
-#### Props
-Use props to modify the component's design and behavior.
+### Slots
+##### ICollapsible
+::ContentComponentSlots{component="ICollapsible"}
+::
+##### ICollapsibleItem
+::ContentComponentSlots{component="ICollapsibleItem"}
+::
 
-<props-table :manifest="manifest"></props-table>
+### Events
+##### ICollapsible
+::ContentComponentEvents{component="ICollapsible"}
+::
 
-#### Slots
-Use slots to insert custom content into well-defined component locations.
-
-<slots-table :manifest="manifest"></slots-table>
-
-#### Events
-Use events to react to something happening inside the component.
-
-<events-table :manifest="manifest"></events-table>
-
-#### CSS Variables
-<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
-
-<css-variables-table :manifest="manifest" type="local"></css-variables-table>
+### Design Tokens
+##### ICollapsible
+::ContentComponentDesignTokens{component="ICollapsible"}
+::
+##### ICollapsibleItem
+::ContentComponentDesignTokens{component="ICollapsibleItem"}
+::

@@ -19,7 +19,7 @@ export default defineComponent({
             { label: 'Property', key: 'name', type: 'code', width: 4 },
             { label: 'Type', key: 'type', type: 'code', width: 4 },
             { label: 'Default', key: 'default', type: 'code', width: 4 },
-            { label: '', key: 'description', type: 'plaintext' }
+            { label: '', key: 'description' }
         ]);
 
         return {

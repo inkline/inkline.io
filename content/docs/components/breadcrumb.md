@@ -1,69 +1,85 @@
 ---
 title: Breadcrumb - Inkline
-description: Indicate the current page’s location depth using a navigation list that automatically adds separators using CSS.
+description: Improve your website's navigation with Inkline's breadcrumb component. Displays the hierarchical structure of your pages and automatically adds separators.
 ---
 
-<script setup>
-import { manifest } from '@inkline/inkline/components/IBreadcrumb/manifest.mjs';
-import {
-    IBreadcrumbBasicExample,
-    IBreadcrumbColorVariantsExample,
-    IBreadcrumbRoutingExample,
-    IBreadcrumbSizeVariantsExample,
-    IBreadcrumbDynamicallyGeneratedExample
-} from '@inkline/inkline/components/IBreadcrumb/examples/index.mjs';
-import { default as IBreadcrumbBasicExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/basic.html?raw';
-import { default as IBreadcrumbColorVariantsExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/color-variants.html?raw';
-import { default as IBreadcrumbRoutingExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/routing.html?raw';
-import { default as IBreadcrumbSizeVariantsExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/size-variants.html?raw';
-import { default as IBreadcrumbDynamicallyGeneratedExampleHTML } from '@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.html?raw';
-import { default as IBreadcrumbDynamicallyGeneratedExampleJS } from '@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.mjs?raw';
-</script>
-
 # Breadcrumb
+## Improve your website's navigation with Inkline's breadcrumb component. Displays the hierarchical structure of your pages and automatically adds separators.
 
-## Indicate the current page’s location depth using a navigation list that automatically adds separators using CSS.
+Breadcrumbs improve website navigation by providing users with a clear path to where they are within the site hierarchy, making it easier to backtrack or move forward to related pages. They are particularly useful for large websites or e-commerce sites with deep content hierarchies.
 
-Separators are automatically added in CSS through `::before` and `content`. You can change the separator by changing the `$breadcrumb-divider` Sass variable.
+The separators are automatically added using the CSS `::before` pseudo-element and can be changed by updating the `--breadcrumb--separator` CSS variable.
 
-<example :component="IBreadcrumbBasicExample" :html="IBreadcrumbBasicExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IBreadcrumb/examples/basic"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/basic.vue" lang="vue"} -->
+::
 
 ### Dynamically Generated
 You can generate and bind breadcrumbs from your JS data using a combination of `v-for` and `v-bind` as follows:
 
-<example :component="IBreadcrumbDynamicallyGeneratedExample" :html="IBreadcrumbDynamicallyGeneratedExampleHTML" :js="IBreadcrumbDynamicallyGeneratedExampleJS"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IBreadcrumb/examples/dynamically-generated"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.vue" lang="vue"} -->
+::
 
 ### Color Variants
-
 Inkline includes predefined breadcrumb color variants, each serving its own semantic purpose, which you can control using the `color` property.
 
-<example :component="IBreadcrumbColorVariantsExample" :html="IBreadcrumbColorVariantsExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IBreadcrumb/examples/color-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/color-variants.vue" lang="vue"} -->
+::
 
 ### Size Variants
 You're able to use the `size` modifier to control the text and spacing size of your breadcrumb, using one of the available sizes: `sm`, `md`, and `lg`. 
 
-<example :component="IBreadcrumbSizeVariantsExample" :html="IBreadcrumbSizeVariantsExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IBreadcrumb/examples/size-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/size-variants.vue" lang="vue"} -->
+::
 
 ### Linking and Routing
 Breadcrumb items will be automatically converted to link anchors `<a>` when providing a `href` property. You can also specify `target` and `rel` properties.
 
 The `<i-breadcrumb-item>` component is well integrated with the Vue Router plugin and will be converted to a `<router-link>` when using the `to` property.
 
-<example :component="IBreadcrumbRoutingExample" :html="IBreadcrumbRoutingExampleHTML"></example>
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IBreadcrumb/examples/routing"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/routing.vue" lang="vue"} -->
+::
 
-### Configuration
+### Props
+##### IBreadcrumb
+::ContentComponentProps{component="IBreadcrumb"}
+::
+##### IBreadcrumbItem
+::ContentComponentProps{component="IBreadcrumbItem"}
+::
 
-#### Props
-Use props to modify the component's design and behavior.
+### Slots
+##### IBreadcrumb
+::ContentComponentSlots{component="IBreadcrumb"}
+::
+##### IBreadcrumbItem
+::ContentComponentSlots{component="IBreadcrumbItem"}
+::
 
-<props-table :manifest="manifest"></props-table>
+### Design Tokens
+##### IBreadcrumb
+::ContentComponentDesignTokens{component="IBreadcrumb"}
+::
+##### IBreadcrumbItem
+::ContentComponentDesignTokens{component="IBreadcrumbItem"}
+::
 
-#### Slots
-Use slots to insert custom content into well-defined component locations.
-
-<slots-table :manifest="manifest"></slots-table>
-
-#### CSS Variables
-<router-link :to="{ name: 'docs-introduction-design-system' }">Read more</router-link> about configuring Inkline's Design System variables to update the look and feel of the component.
-
-<css-variables-table :manifest="manifest" type="local"></css-variables-table>

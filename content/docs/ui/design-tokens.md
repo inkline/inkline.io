@@ -423,7 +423,7 @@ Design token used to set the left border style of an element.
 Design token used to set the border style for all four sides of an element at once. This value is composed automatically based on the four individual side values documented above.
 ::
 
-::ContentDesignToken{ title="Border Top Color" valuetoken="--border-top-color" }
+::ContentDesignToken{ title="Border Top Color" token="--border-top-color" }
 Design token used to set the top border color of an element.
 ::
 

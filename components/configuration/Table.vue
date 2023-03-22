@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { computed, defineComponent, PropType, VNode } from 'vue';
 import { ConfigurationTableColumn } from '~/types';
 
 export default defineComponent({
@@ -13,7 +13,7 @@ export default defineComponent({
             default: () => []
         }
     },
-    setup() {
+    setup(props) {
         function renderTdValue(row: Record<string, any>, column: ConfigurationTableColumn) {
             const value = row[column.key];
 
@@ -34,8 +34,37 @@ export default defineComponent({
             return value;
         }
 
+        const prerenderedTdValues = computed(() => {
+            const prerendered: Record<string, Record<string, string | VNode>> = {};
+
+            props.rows.forEach((row) => {
+                prerendered[row.name] = {};
+                props.columns.forEach((column) => {
+                    prerendered[row.name][column.key] = renderTdValue(row, column);
+                });
+            });
+
+            return prerendered;
+        });
+
+        const tdVisibleValues = computed(() => {
+            const visible: Record<string, Record<string, boolean>> = {};
+
+            props.rows.forEach((row) => {
+                visible[row.name] = {};
+                props.columns.forEach((column) => {
+                    visible[row.name][column.key] = column.visible
+                        ? column.visible(row, column)
+                        : true;
+                });
+            });
+
+            return visible;
+        });
+
         return {
-            renderTdValue
+            prerenderedTdValues,
+            tdVisibleValues
         };
     }
 });
@@ -44,16 +73,24 @@ export default defineComponent({
 <template>
     <ul class="configuration-table">
         <IRow v-for="row in rows" :key="row.name" class="tr">
-            <IColumn
-                v-for="column in columns"
-                :key="column.key"
-                :md="column.width || 12"
-                class="td"
-            >
-                <div v-if="column.label" class="label">{{ column.label }}</div>
-                <code v-if="column.type === 'code'">{{ renderTdValue(row, column) }}</code>
-                <span v-else>{{ renderTdValue(row, column) }}</span>
-            </IColumn>
+            <template v-for="column in columns">
+                <IColumn
+                    v-if="tdVisibleValues[row.name][column.key]"
+                    :key="column.key"
+                    :md="column.width || 12"
+                    class="td"
+                >
+                    <div v-if="column.label" class="label">{{ column.label }}</div>
+                    <code v-if="column.type === 'code'">{{
+                        prerenderedTdValues[row.name][column.key]
+                    }}</code>
+                    <component
+                        v-else-if="typeof prerenderedTdValues[row.name][column.key] === 'object'"
+                        :is="prerenderedTdValues[row.name][column.key]"
+                    />
+                    <span v-else>{{ prerenderedTdValues[row.name][column.key] }}</span>
+                </IColumn>
+            </template>
         </IRow>
     </ul>
 </template>
