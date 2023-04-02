@@ -6,7 +6,6 @@ description: Group multiple buttons together on a single line using a button gro
 # Button Group
 ## Group multiple buttons together on a single line using a button group. 
 
-### Basic Example
 You can group a series of `<IButton>` components inside a `<IButtonGroup>` to display them inline, conveying additional meaning.
 
 ::ContentTabs

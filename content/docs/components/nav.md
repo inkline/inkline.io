@@ -6,7 +6,6 @@ description: Navs are basic navigation components that provide alignment and spa
 # Nav
 ## Navs are basic navigation components that provide alignment and spacing between items.
 
-### Example
 Navigation components make use of the base `<i-nav>` component for building all types of navigation styles. 
 
 ::ContentTabs

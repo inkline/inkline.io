@@ -65,6 +65,7 @@ export default defineComponent({
                 <ul v-if="category.children" class="sidebar-category-menu">
                     <li
                         v-for="(page, pageIndex) in category.children"
+                        v-show="!page.hidden"
                         :key="`${categoryIndex}-${pageIndex}`"
                         class="sidebar-page"
                     >

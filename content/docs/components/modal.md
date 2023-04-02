@@ -6,7 +6,6 @@ description: Modals are dialogs that can be used for user notifications, lightbo
 # Modal
 ## Modals are dialogs that can be used for lightboxes, user notifications, or completely custom content.
 
-### Example
 To create a modal, create an element (such as an `<i-button>`) as a trigger and the `v-model` on an `<i-modal>` component to control its visibility. Everything inside the `<i-modal>` is rendered as the modal body. Optionally, you can provide a modal header and footer using `#header` and `#footer` slots.
 
 ::ContentTabs

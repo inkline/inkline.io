@@ -6,7 +6,6 @@ description: Media objects provide you with a flexible component that can be eas
 # Media
 ## Media objects provide you with a flexible component that can be easily nested and repeated, such as blog comments and tweets.
 
-### Example
 Media objects are useful for repetitive components that have a media element positioned alongside them, such as an user image or blog post image.
 
 ::ContentTabs

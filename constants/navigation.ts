@@ -8,6 +8,7 @@ export interface NavigationPage {
         previous?: string;
     };
     active?: RegExp;
+    hidden?: boolean;
     index?: boolean;
     children?: Omit<NavigationPage, 'active'>[];
 }
@@ -264,7 +265,35 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'Forms',
+        active: /\/docs\/forms(\/.+)?/,
         children: [
+            {
+                title: 'Autocomplete',
+                hidden: true,
+                children: [
+                    {
+                        title: 'Overview',
+                        url: { path: '/docs/forms/autocomplete' },
+                        index: true
+                    },
+                    {
+                        title: 'Pagination',
+                        url: { path: '/docs/forms/autocomplete/pagination' }
+                    },
+                    {
+                        title: 'Filtering',
+                        url: { path: '/docs/forms/autocomplete/filtering' }
+                    },
+                    {
+                        title: 'Rendering',
+                        url: { path: '/docs/forms/autocomplete/rendering' }
+                    },
+                    {
+                        title: 'Advanced',
+                        url: { path: '/docs/forms/autocomplete/advanced' }
+                    }
+                ]
+            },
             {
                 title: 'Checkbox',
                 url: { path: '/docs/forms/checkbox' }
@@ -283,29 +312,7 @@ export const navigation: NavigationPage[] = [
             },
             {
                 title: 'Select',
-                children: [
-                    {
-                        title: 'Overview',
-                        url: { path: '/docs/forms/select' },
-                        index: true
-                    },
-                    {
-                        title: 'Pagination',
-                        url: { path: '/docs/forms/select/pagination' }
-                    },
-                    {
-                        title: 'Autocomplete',
-                        url: { path: '/docs/forms/select/autocomplete' }
-                    },
-                    {
-                        title: 'Rendering',
-                        url: { path: '/docs/forms/select/rendering' }
-                    },
-                    {
-                        title: 'Advanced',
-                        url: { path: '/docs/forms/select/advanced' }
-                    }
-                ]
+                url: { path: '/docs/forms/select' }
             },
             {
                 title: 'Textarea',
@@ -329,12 +336,8 @@ export const navigation: NavigationPage[] = [
             },
             {
                 title: 'Form Validation',
+                url: { path: '/docs/forms/validation' },
                 children: [
-                    {
-                        title: 'Overview',
-                        url: { path: '/docs/forms/validation' },
-                        index: true
-                    },
                     {
                         title: 'Schema',
                         url: { path: '/docs/forms/validation/schema' }
@@ -353,7 +356,29 @@ export const navigation: NavigationPage[] = [
     },
     {
         title: 'Utilities',
+        active: /\/docs\/utilities(\/.+)?/,
         children: [
+            {
+                title: 'Overview',
+                url: { path: '/docs/utilities' }
+            },
+            {
+                title: 'Variants',
+                children: [
+                    {
+                        title: 'Breakpoint',
+                        url: { path: '/docs/utilities/variants/breakpoint' }
+                    },
+                    {
+                        title: 'Important',
+                        url: { path: '/docs/utilities/variants/important' }
+                    },
+                    {
+                        title: 'Media Query',
+                        url: { path: '/docs/utilities/variants/media-query' }
+                    }
+                ]
+            },
             {
                 title: 'Border',
                 url: { path: '/docs/utilities/border' }

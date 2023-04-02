@@ -1,4 +1,6 @@
 import en from './i18n/en';
+import { resolve } from 'pathe';
+import { partytownVite } from '@builder.io/partytown/utils';
 
 /**
  * @docs https://nuxt.com/docs/api/configuration/nuxt-config
@@ -7,7 +9,13 @@ export default defineNuxtConfig({
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#modules
      */
-    modules: ['@nuxt/content', '@inkline/plugin/nuxt', '@nuxtjs/i18n', 'nuxt-icon'],
+    modules: [
+        '@nuxt/content',
+        '@inkline/plugin/nuxt',
+        '@nuxtjs/i18n',
+        '@nuxtjs/partytown',
+        'nuxt-icon'
+    ],
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#css
      */
@@ -90,6 +98,11 @@ export default defineNuxtConfig({
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#vite
      */
     vite: {
+        plugins: [
+            partytownVite({
+                dest: resolve(__dirname, 'dist', '~partytown')
+            })
+        ],
         optimizeDeps: {
             exclude: ['@inkline/config', '@inkline/inkline']
         }

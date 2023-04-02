@@ -6,7 +6,6 @@ description: Documentation and examples for opt-in styling of tables with Inklin
 # Tables
 ## Documentation and examples for opt-in styling of tables with Inkline.
 
-### Basic Example
 Using the most basic table markup, here’s how tables look in Inkline. All table styles are inherited in Inkline, meaning any nested tables will be styled in the same manner as the parent.
 
 ::ContentTabs

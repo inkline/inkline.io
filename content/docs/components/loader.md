@@ -6,7 +6,6 @@ description: Provide a loading state for a component or page using a customizabl
 # Loader
 ## Provide a loading state for a component or page using a customizable loading spinner. 
 
-### Basic Example
 Use the loader component whenever you have an action that requires the user to wait for its completion. The loader component is very versatile and can be adapted to any container size.
 
 ::ContentTabs

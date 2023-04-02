@@ -8,7 +8,6 @@ description: Cards provide you with a flexible and extensible content container 
 
 A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. 
 
-### Basic Example
 Cards are customizable content holders built with as little markup and styles as possible. They are based on flexbox, offering easy alignment and they mix well with other components. 
 
 By default, cards are set to have `width: 100%`, fully spanning the width of the parent container. 

@@ -6,7 +6,6 @@ description: A responsive navigation sidebar that includes support for branding,
 # Sidebar
 ## A responsive navigation sidebar that includes support for branding, navigation, forms and more.
 
-### Basic Example
 Here’s an example on how to use the `<i-sidebar>` inside a dashboard layout. The sidebar automatically collapses responsively.
 
 ::ContentTabs

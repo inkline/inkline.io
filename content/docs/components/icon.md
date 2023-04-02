@@ -6,8 +6,6 @@ description: Inkline comes bundled with a lightweight icon component that provid
 # Icon
 ## Inkline comes bundled with a lightweight icon component that provides you with the most commonly used icons.
 
-### Basic Example
-
 Here’s an example of the basic icons included with the `<i-icon>` component.
 
 ::ContentTabs

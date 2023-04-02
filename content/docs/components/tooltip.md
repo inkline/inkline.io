@@ -6,7 +6,6 @@ description: Tooltips are useful for conveying information when an user hovers o
 # Tooltip
 ## Tooltips are useful for conveying information when an user hovers over an element.
 
-### Basic Example
 Wrap the trigger element (such as an `<i-button>`) and provide a `<template #body>` inside an `<i-tooltip>` component to create a tooltip.
 
 ::ContentTabs

@@ -6,7 +6,6 @@ description: A responsive navigation header that includes support for branding, 
 # Navbar
 ## A responsive navigation header that includes support for branding, navigation, forms and more.
 
-### Basic Example
 Here’s an example of the basic components included in a  `<i-navbar>` that automatically collapses responsively.
 
 ::ContentTabs
@@ -96,9 +95,9 @@ Sometimes, it's necessary to control whether the collapsed Navbar is open or not
 
 ::ContentTabs
 #preview
-:ContentPreview{src="/components/INavbar/examples/collapse-manual"}
+:ContentPreview{src="/components/INavbar/examples/collapsed-state"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapse-manual.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapsed-state.vue" lang="vue"} -->
 ::
 
 ### Linking and Routing

@@ -6,7 +6,6 @@ description: A lightweight, responsive header component used for showcasing hero
 # Header
 ## A lightweight, responsive header component used for showcasing hero unit style content.
 
-### Basic Example
 Here’s an example of a basic header component. Usually, this component is used on homepages and landing pages and has an attractive background image.
 
 ::ContentTabs

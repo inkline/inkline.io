@@ -28,6 +28,7 @@ export default defineComponent({
         const classes = computed(() =>
             props.off
                 .split(' ')
+                .filter((name) => name)
                 .map((name) => `-without-${name}`)
                 .join(' ')
         );
@@ -51,9 +52,15 @@ export default defineComponent({
                         `../../node_modules/@inkline/inkline/${pathParts.value[0]}/${pathParts.value[1]}/examples/${pathParts.value[3]}.vue`
                     );
                 } else {
-                    componentModule = await import(
-                        `../../node_modules/@inkline/inkline/stories/${pathParts.value[1]}/${pathParts.value[2]}/${pathParts.value[3]}.vue`
-                    );
+                    if (pathParts.value.length === 5) {
+                        componentModule = await import(
+                            `../../node_modules/@inkline/inkline/stories/${pathParts.value[1]}/${pathParts.value[2]}/${pathParts.value[3]}/${pathParts.value[4]}.vue`
+                        );
+                    } else {
+                        componentModule = await import(
+                            `../../node_modules/@inkline/inkline/stories/${pathParts.value[1]}/${pathParts.value[2]}/${pathParts.value[3]}.vue`
+                        );
+                    }
                 }
 
                 dynamicComponent.value = markRaw(componentModule.default);

@@ -6,7 +6,6 @@ description: Pagination provides navigation for large series of related content.
 # Pagination
 ## Pagination provides navigation for large series of related content.
 
-### Basic Example
 Pagination items are automatically generated based on the `items-total` and the `items-per-page` properties. The currently selected page is accessible using `v-model`.
 
 ::ContentTabs

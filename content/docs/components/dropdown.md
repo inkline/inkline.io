@@ -6,7 +6,6 @@ description: Dropdowns are contextual overlays toggled through clicking or hover
 # Dropdown
 ## Dropdowns are contextual overlays toggled through clicking or hovering, usually used for displaying a list of links.
 
-### Basic Example
 Wrap the trigger element (such as an `<i-button>`) and provide a `<template #body>` inside an `<i-dropdown>` component to create a dropdown.
 
 ::ContentTabs

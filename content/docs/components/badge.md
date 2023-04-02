@@ -4,7 +4,6 @@ description: Documentation and examples for badges, a small component used for c
 ---
 
 # Badge
-
 ## Documentation and examples for badges, a small component used for counting and labeling.
 
 Badges are simple components used for counting, notifications, and labeling items. They're small, colorful and can easily draw attention to them.

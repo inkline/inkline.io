@@ -88,5 +88,4 @@ var(--button--primary--disabled--background);
 ```
 
 
-
-<router-link to="/docs/ui/design-tokens' }">Read more</router-link> about the Design Tokens.
+[Read more](/docs/ui/design-tokens) about the Design Tokens.

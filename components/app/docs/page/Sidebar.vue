@@ -16,12 +16,14 @@ export default defineComponent({
         const router = useRouter();
         const route = useRoute();
         const title = ref();
+        const titleId = ref();
         const tableOfContents = ref<TableOfContentsEntry[]>([]);
 
         const setTitle = () => {
             const h1 = document.querySelector(`${docsPageSelector} > h1:first-child`);
 
             title.value = h1?.textContent;
+            titleId.value = h1?.getAttribute('id');
         };
 
         const setTableOfContents = () => {
@@ -82,6 +84,7 @@ export default defineComponent({
 
         return {
             title,
+            titleId,
             tableOfContents,
             scrollTo
         };
@@ -91,9 +94,9 @@ export default defineComponent({
 
 <template>
     <aside class="app-docs-page-sidebar">
-        <div class="title _font-weight:semibold _font-size:lg _text:muted">
+        <a class="title _font-weight:semibold _font-size:lg _text:muted" @click="scrollTo(titleId)">
             {{ title }}
-        </div>
+        </a>
         <ul class="list -unstyled">
             <li v-for="(heading, headingIndex) in tableOfContents" :key="headingIndex">
                 <span @click="scrollTo(heading.id)">{{ heading.title }}</span>
@@ -123,6 +126,8 @@ export default defineComponent({
     overflow: auto;
 
     > .title {
+        cursor: pointer;
+        color: var(--body--color);
         margin-bottom: calc(var(--spacing) / 2);
     }
 

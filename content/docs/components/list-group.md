@@ -6,7 +6,6 @@ description: List groups are flexible components used for displaying a list of r
 # List Group
 ## List groups are flexible components used for displaying a list of related content.
 
-### Basic Example
 List groups support any content inside of them. Take advantage of their flexibility to display list of items, as well as vertical navigation.
 
 ::ContentTabs

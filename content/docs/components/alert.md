@@ -4,10 +4,7 @@ description: Provide contextual feedback messages for typical user actions using
 ---
 
 # Alert
-
 ## Provide contextual feedback messages for typical user actions using the alert component.
-
-### Color Variants
 
 Alerts are contextual feedback messages usable for any length of text, and can have an optional dismiss button. For choosing the context of the alert, use the `color` property.
 
@@ -17,7 +14,6 @@ Alerts are contextual feedback messages usable for any length of text, and can h
 #vue
 <!-- Autodocs{src="@inkline/inkline/components/IAlert/examples/color-variants.vue" lang="vue"} -->
 ::
-
 
 ### Size Variants
 You're able to use the `size` modifier to control the text and spacing size of your alerts, using one of the available sizes: `sm`, `md`, and `lg`.

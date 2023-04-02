@@ -61,7 +61,7 @@ Inkline provides a great User Interface, User Experience, and Developer Experien
     ::
     ::ContentColumn{ md="6" }
         ::ContentFeatureCard{ to="/docs/examples" title="Examples" icon="heroicons:beaker-20-solid" }
-        Examples pages to start with
+        Example pages to start with
         ::
     ::
 ::
