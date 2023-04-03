@@ -1,6 +1,5 @@
 import en from './i18n/en';
 import { resolve } from 'pathe';
-import { partytownVite } from '@builder.io/partytown/utils';
 
 /**
  * @docs https://nuxt.com/docs/api/configuration/nuxt-config
@@ -9,13 +8,7 @@ export default defineNuxtConfig({
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#modules
      */
-    modules: [
-        '@nuxt/content',
-        '@inkline/plugin/nuxt',
-        '@nuxtjs/i18n',
-        '@nuxtjs/partytown',
-        'nuxt-icon'
-    ],
+    modules: ['@nuxt/content', '@inkline/plugin/nuxt', '@nuxtjs/i18n', 'nuxt-icon'],
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#css
      */
@@ -33,6 +26,9 @@ export default defineNuxtConfig({
             meta: [{ name: 'description', content: 'My amazing site.' }]
         }
     },
+    /**
+     * @docs https://nuxt.com/docs/api/configuration/nuxt-config#components
+     */
     components: {
         dirs: [
             {
@@ -43,13 +39,7 @@ export default defineNuxtConfig({
                 path: '~/components/content',
                 global: true
             },
-            '~/components',
-            {
-                path: 'node_modules/@inkline/inkline/components/ILayout/examples',
-                prefix: 'ILayoutExample',
-                global: true,
-                extensions: ['.vue']
-            }
+            '~/components'
         ]
     },
     /**
@@ -98,11 +88,6 @@ export default defineNuxtConfig({
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#vite
      */
     vite: {
-        plugins: [
-            partytownVite({
-                dest: resolve(__dirname, 'dist', '~partytown')
-            })
-        ],
         optimizeDeps: {
             exclude: ['@inkline/config', '@inkline/inkline']
         }

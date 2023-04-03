@@ -3,6 +3,7 @@ import { defineComponent, markRaw } from 'vue';
 import { INavItem } from '@inkline/inkline';
 import { useI18n } from 'vue-i18n';
 import { useLocalePath } from 'vue-i18n-routing';
+import { useTelemetry } from '~/composables';
 
 export default defineComponent({
     props: {
@@ -12,13 +13,30 @@ export default defineComponent({
         }
     },
     setup() {
+        const { track } = useTelemetry();
         const localePath = useLocalePath();
         const { t } = useI18n();
+
+        function onNavbarBrandClick() {
+            track('user clicked on navbar brand', {
+                section: 'navbar',
+                type: 'navigation'
+            });
+        }
+
+        function onLinkClick(name: string, external = false) {
+            track(`user clicked on ${name} link${external ? ' (external)' : ''}`, {
+                section: 'navbar',
+                type: 'navigation'
+            });
+        }
 
         return {
             t,
             colorSwitcherComponent: markRaw(INavItem),
-            localePath
+            localePath,
+            onNavbarBrandClick,
+            onLinkClick
         };
     }
 });
@@ -26,18 +44,22 @@ export default defineComponent({
 
 <template>
     <INavbar class="app-navbar">
-        <INavbarBrand :to="localePath('/')"> Inkline </INavbarBrand>
+        <INavbarBrand :to="localePath('/')" @click="onNavbarBrandClick"> Inkline </INavbarBrand>
         <INavbarCollapsible>
             <INav class="_margin-left:auto">
-                <INavItem :to="localePath('/')">
+                <INavItem :to="localePath('/')" @click="onLinkClick('home')">
                     {{ t('navigation.home') }}
                 </INavItem>
                 <FeatureFlag name="premium">
-                    <INavItem :to="localePath('/pricing')">
+                    <INavItem :to="localePath('/pricing')" @click="onLinkClick('pricing')">
                         {{ t('navigation.pricing') }}
                     </INavItem>
                 </FeatureFlag>
-                <INavItem :class="docs ? '_lg:visible' : ''" :to="localePath('/docs')">
+                <INavItem
+                    :class="docs ? '_lg:visible' : ''"
+                    :to="localePath('/docs')"
+                    @click="onLinkClick('docs')"
+                >
                     {{ t('navigation.documentation') }}
                 </INavItem>
             </INav>
@@ -46,6 +68,7 @@ export default defineComponent({
                     href="https://github.com/inkline/inkline"
                     target="_blank"
                     :title="t('navigation.github')"
+                    @click="onLinkClick('github', true)"
                 >
                     <Icon name="bi:github" size="20px" />
                 </INavItem>
@@ -53,6 +76,7 @@ export default defineComponent({
                     href="https://chat.inkline.io"
                     target="_blank"
                     :title="t('navigation.discord')"
+                    @click="onLinkClick('discord', true)"
                 >
                     <Icon name="bi:discord" size="20px" />
                 </INavItem>
@@ -60,10 +84,15 @@ export default defineComponent({
             </INav>
             <INav>
                 <FeatureFlag name="premium">
-                    <INavItem :to="localePath('/login')">
+                    <INavItem :to="localePath('/login')" @click="onLinkClick('login')">
                         {{ t('navigation.signin') }}
                     </INavItem>
-                    <IButton :to="localePath('/signup')" color="primary" class="_margin-left:1">
+                    <IButton
+                        :to="localePath('/signup')"
+                        color="primary"
+                        class="_margin-left:1"
+                        @click="onLinkClick('signup')"
+                    >
                         {{ t('navigation.signup') }}
                     </IButton>
                 </FeatureFlag>
