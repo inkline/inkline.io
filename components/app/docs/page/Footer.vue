@@ -1,30 +1,32 @@
 <script lang="ts">
 import { defineComponent, ref, watch, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { navigation } from '~/constants';
+// import { navigation } from '~/constants';
 import { RouteLocationNormalizedLoaded, useRoute } from 'vue-router';
 
-const pages = navigation
-    .map((group) =>
-        group.children
-            ? group.children.map((child) => ({
-                  ...child,
-                  title:
-                      group.title === 'Utilities' ? `${group.title} - ${child.title}` : child.title,
-                  group: group.title
-              }))
-            : group
-    )
-    .flat()
-    .map((entry) =>
-        entry.children
-            ? entry.children.map((child) => ({
-                  ...child,
-                  title: `${entry.title} - ${child.title}`
-              }))
-            : entry
-    )
-    .flat();
+// const pages = navigation
+//     .map((group) =>
+//         group.children
+//             ? group.children.map((child) => ({
+//                   ...child,
+//                   title:
+//                       group.title === 'Utilities' ? `${group.title} - ${child.title}` : child.title,
+//                   group: group.title
+//               }))
+//             : group
+//     )
+//     .flat()
+//     .map((entry) =>
+//         entry.children
+//             ? entry.children.map((child) => ({
+//                   ...child,
+//                   title: `${entry.title} - ${child.title}`
+//               }))
+//             : entry
+//     )
+//     .flat();
+
+const pages = [];
 
 const githubUrlTemplate = (path: string, isIndex?: boolean) =>
     `https://github.com/inkline/inkline.io/tree/main/content${path}${isIndex ? '/index' : ''}.md`;

@@ -1,7 +1,6 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import { useI18n, onBeforeRouteLeave } from '#imports';
-import { navigation } from '~/constants';
 
 export default defineComponent({
     props: {
@@ -12,7 +11,6 @@ export default defineComponent({
     },
     emits: ['update:modelValue'],
     setup(props, { emit }) {
-        const menu = ref(navigation);
         const { t } = useI18n();
 
         onBeforeRouteLeave(() => {
@@ -20,8 +18,7 @@ export default defineComponent({
         });
 
         return {
-            t,
-            menu
+            t
         };
     }
 });
@@ -29,24 +26,29 @@ export default defineComponent({
 
 <template>
     <ISidebar class="app-sidebar" :collapse="false">
-        <AppSidebarApps />
-        <AppSidebarNavigation />
+        <slot />
     </ISidebar>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@inkline/inkline/css/mixins';
 
 .app-sidebar {
-    --sidebar--background: transparent;
+    --sidebar--light--background: transparent;
+    --sidebar--dark--background: transparent;
     --sidebar--border-top-width: 0;
     --sidebar--border-bottom-width: 0;
     --sidebar--border-left-width: 0;
-    --sidebar--padding-top: 0;
-    --sidebar--padding-right: 0;
-    --sidebar--padding-bottom: 0;
-    --sidebar--padding-left: 0;
+    --sidebar--md--padding-top: 0;
+    --sidebar--md--padding-right: 0;
+    --sidebar--md--padding-bottom: 0;
+    --sidebar--md--padding-left: 0;
 
-    margin-left: calc(var(--margin-left-1-2) * -1);
+    .sidebar-content {
+        //padding-left: var(--padding-left-1-2);
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 </style>

@@ -20,7 +20,7 @@ Inkline provides a great User Interface, User Experience, and Developer Experien
         ::
     ::
     ::ContentColumn{ md="6" }
-        ::ContentFeatureCard{ to="/docs/configuration" title="Configuration" icon="icon-park-solid:config" }
+        ::ContentFeatureCard{ to="/docs/configuration/file" title="Configuration" icon="icon-park-solid:config" }
         Theming and plugin options
         ::
     ::
@@ -45,23 +45,25 @@ Inkline provides a great User Interface, User Experience, and Developer Experien
         ::
     ::
     ::ContentColumn{ md="6" }
-        ::ContentFeatureCard{ to="/docs/components" title="Components" icon="fa-solid:cubes" }
+        ::ContentFeatureCard{ to="/docs/components/alert" title="Components" icon="fa-solid:cubes" }
         50+ components to choose from
         ::
     ::
     ::ContentColumn{ md="6" }
-        ::ContentFeatureCard{ to="/docs/forms" title="Forms" icon="bi:ui-checks-grid" }
+        ::ContentFeatureCard{ to="/docs/forms/checkbox" title="Forms" icon="bi:ui-checks-grid" }
         Inputs, validation, and more
         ::
     ::
     ::ContentColumn{ md="6" }
-        ::ContentFeatureCard{ to="/docs/utilities" title="Utilities" icon="material-symbols:format-paint" }
+        ::ContentFeatureCard{ to="/docs/utilities/border" title="Utilities" icon="material-symbols:format-paint" }
         Tailwind style utility classes
         ::
     ::
     ::ContentColumn{ md="6" }
-        ::ContentFeatureCard{ to="/docs/examples" title="Examples" icon="heroicons:beaker-20-solid" }
+        ::ContentFeatureCard{ to="/docs" title="Examples (coming soon)" icon="heroicons:beaker-20-solid" }
         Example pages to start with
         ::
     ::
 ::
+
+

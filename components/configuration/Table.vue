@@ -96,7 +96,6 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-@import '@inkline/inkline/css/variables';
 @import '@inkline/inkline/css/mixins';
 
 .configuration-table {

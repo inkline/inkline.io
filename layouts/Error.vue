@@ -18,9 +18,20 @@ export default defineComponent({
 </script>
 
 <template>
-    <main id="default-layout">
+    <main id="error-layout">
         <AppNavbar />
         <slot />
-        <IToastContainer />
     </main>
 </template>
+
+<style lang="scss">
+#error-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    footer {
+        margin-top: auto;
+    }
+}
+</style>

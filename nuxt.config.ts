@@ -8,7 +8,13 @@ export default defineNuxtConfig({
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#modules
      */
-    modules: ['@nuxt/content', '@inkline/plugin/nuxt', '@nuxtjs/i18n', 'nuxt-icon'],
+    modules: [
+        '@nuxt/content',
+        '@nuxt/image-edge',
+        '@inkline/plugin/nuxt',
+        '@nuxtjs/i18n',
+        'nuxt-icon'
+    ],
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#css
      */
@@ -83,6 +89,12 @@ export default defineNuxtConfig({
         globals: {
             colorMode: 'light'
         }
+    },
+    /**
+     * @docs https://v1.image.nuxtjs.org/configuration
+     */
+    image: {
+        dir: 'assets'
     },
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#vite

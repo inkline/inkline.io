@@ -46,7 +46,7 @@ export default defineComponent({
 .content-tabs {
     margin-bottom: var(--margin-bottom-2);
 
-    .tabs-header {
+    > .tabs-header {
         justify-content: flex-end;
         margin-bottom: 0;
         border-bottom: 0;
@@ -59,7 +59,7 @@ export default defineComponent({
         }
     }
 
-    .tab {
+    > .tab {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
 

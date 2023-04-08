@@ -5,6 +5,12 @@ import { definePageMeta } from '#imports';
 export default defineComponent({
     setup() {
         definePageMeta({
+            meta: {
+                description: {
+                    content:
+                        'Inkline is the intuitive UI Components library for building a high-quality, developer-friendly, configurable, and accessible Vue.js Design System.'
+                }
+            },
             layout: 'default'
         });
 
@@ -15,6 +21,7 @@ export default defineComponent({
 
 <template>
     <NuxtLayout>
-        <h1 class="_background:secondary">Hello world!</h1>
+        <HeadersIndexPage />
+        <SectionsUIUXDX />
     </NuxtLayout>
 </template>

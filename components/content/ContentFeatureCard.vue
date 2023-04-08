@@ -2,6 +2,7 @@
 import { computed, defineComponent, PropType } from 'vue';
 import { RouteLocation } from 'vue-router';
 import { useLocalePath } from 'vue-i18n-routing';
+import { useTelemetry } from '~/composables';
 
 export default defineComponent({
     props: {
@@ -23,6 +24,7 @@ export default defineComponent({
         }
     },
     setup(props) {
+        const { track } = useTelemetry();
         const localePath = useLocalePath();
         const url = computed(() => {
             if (typeof props.to === 'string' && props.to.startsWith('http')) {
@@ -32,14 +34,21 @@ export default defineComponent({
             return localePath(props.to);
         });
 
-        return { url };
+        function onClick() {
+            track('user clicked on feature card', {
+                to: url.value,
+                type: 'navigation'
+            });
+        }
+
+        return { url, onClick };
     }
 });
 </script>
 
 <template>
     <ICard class="feature-card">
-        <NuxtLink class="_overlay-link" :to="url" />
+        <NuxtLink class="_overlay-link" :to="url" @click="onClick" />
 
         <template #header>
             <div class="_text:center _color:primary">

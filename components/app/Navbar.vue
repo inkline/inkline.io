@@ -1,21 +1,46 @@
 <script lang="ts">
-import { defineComponent, markRaw } from 'vue';
+import { computed, defineComponent, markRaw, onBeforeUnmount, onMounted, ref } from 'vue';
 import { INavItem } from '@inkline/inkline';
 import { useI18n } from 'vue-i18n';
 import { useLocalePath } from 'vue-i18n-routing';
-import { useTelemetry } from '~/composables';
+import { useNavbarNavigation, useTelemetry } from '~/composables';
+import { off, on } from '@grozav/utils';
+import logoBlack from '~/assets/images/logo/logo-black.svg';
+import logoWhite from '~/assets/images/logo/logo-white.svg';
 
 export default defineComponent({
     props: {
-        docs: {
-            type: Boolean,
-            default: false
+        type: {
+            type: String,
+            default: ''
         }
     },
     setup() {
+        const navigation = useNavbarNavigation();
         const { track } = useTelemetry();
         const localePath = useLocalePath();
         const { t } = useI18n();
+
+        const addScrollVariant = ref(false);
+        const classes = computed(() => ({
+            '-scroll': addScrollVariant.value
+        }));
+
+        onMounted(() => {
+            on(window, 'scroll', onScroll);
+        });
+        onBeforeUnmount(() => {
+            off(window, 'scroll', onScroll);
+        });
+
+        function onScroll() {
+            const threshold = 100;
+            if (window.scrollY > threshold && !addScrollVariant.value) {
+                addScrollVariant.value = true;
+            } else if (window.scrollY <= threshold && addScrollVariant.value) {
+                addScrollVariant.value = false;
+            }
+        }
 
         function onNavbarBrandClick() {
             track('user clicked on navbar brand', {
@@ -24,8 +49,9 @@ export default defineComponent({
             });
         }
 
-        function onLinkClick(name: string, external = false) {
-            track(`user clicked on ${name} link${external ? ' (external)' : ''}`, {
+        function onLinkClick(url: string, external = false) {
+            track(`user clicked on navbar link${external ? ' (external)' : ''}`, {
+                to: url,
                 section: 'navbar',
                 type: 'navigation'
             });
@@ -33,7 +59,11 @@ export default defineComponent({
 
         return {
             t,
+            classes,
+            navigation,
             colorSwitcherComponent: markRaw(INavItem),
+            logoBlack,
+            logoWhite,
             localePath,
             onNavbarBrandClick,
             onLinkClick
@@ -43,32 +73,44 @@ export default defineComponent({
 </script>
 
 <template>
-    <INavbar class="app-navbar">
-        <INavbarBrand :to="localePath('/')" @click="onNavbarBrandClick"> Inkline </INavbarBrand>
+    <INavbar class="app-navbar" :class="classes">
+        <INavbarBrand :to="localePath('/')" @click="onNavbarBrandClick">
+            <img alt="Inkline Logo" class="logo -black" height="24" width="22.5" :src="logoBlack" />
+            <img alt="Inkline Logo" class="logo -white" height="24" width="22.5" :src="logoWhite" />
+            Inkline
+        </INavbarBrand>
         <INavbarCollapsible>
             <INav class="_margin-left:auto">
-                <INavItem :to="localePath('/')" @click="onLinkClick('home')">
-                    {{ t('navigation.home') }}
-                </INavItem>
-                <FeatureFlag name="premium">
-                    <INavItem :to="localePath('/pricing')" @click="onLinkClick('pricing')">
-                        {{ t('navigation.pricing') }}
+                <template v-for="page in navigation">
+                    <IDropdown v-if="page.children" :key="page.title" :events="['focus', 'hover']">
+                        <INavItem>{{ page.title }}</INavItem>
+                        <template #body>
+                            <IDropdownItem
+                                v-for="subPage in page.children"
+                                :key="subPage.title"
+                                :to="localePath(subPage.url)"
+                            >
+                                {{ subPage.title }}
+                            </IDropdownItem>
+                        </template>
+                    </IDropdown>
+                    <INavItem
+                        v-else
+                        :key="page.title"
+                        :id="page.id"
+                        :to="localePath(page.url)"
+                        @click="onLinkClick(page.url)"
+                    >
+                        {{ page.title }}
                     </INavItem>
-                </FeatureFlag>
-                <INavItem
-                    :class="docs ? '_lg:visible' : ''"
-                    :to="localePath('/docs')"
-                    @click="onLinkClick('docs')"
-                >
-                    {{ t('navigation.documentation') }}
-                </INavItem>
+                </template>
             </INav>
-            <INav class="navbar-icons">
+            <INav class="app-navbar-icons">
                 <INavItem
                     href="https://github.com/inkline/inkline"
                     target="_blank"
                     :title="t('navigation.github')"
-                    @click="onLinkClick('github', true)"
+                    @click="onLinkClick('https://github.com/inkline/inkline', true)"
                 >
                     <Icon name="bi:github" size="20px" />
                 </INavItem>
@@ -76,7 +118,7 @@ export default defineComponent({
                     href="https://chat.inkline.io"
                     target="_blank"
                     :title="t('navigation.discord')"
-                    @click="onLinkClick('discord', true)"
+                    @click="onLinkClick('https://chat.inkline.io', true)"
                 >
                     <Icon name="bi:discord" size="20px" />
                 </INavItem>
@@ -84,30 +126,25 @@ export default defineComponent({
             </INav>
             <INav>
                 <FeatureFlag name="premium">
-                    <INavItem :to="localePath('/login')" @click="onLinkClick('login')">
+                    <INavItem :to="localePath('/login')" @click="onLinkClick('/login')">
                         {{ t('navigation.signin') }}
                     </INavItem>
                     <IButton
                         :to="localePath('/signup')"
                         color="primary"
                         class="_margin-left:1"
-                        @click="onLinkClick('signup')"
+                        @click="onLinkClick('/signup')"
                     >
                         {{ t('navigation.signup') }}
                     </IButton>
                 </FeatureFlag>
             </INav>
-            <INav v-if="docs" class="_lg:hidden">
-                <span class="_text:weakest _margin-left:1 _margin-y:1/2">
-                    {{ t('navigation.documentation') }}
-                </span>
-                <AppSidebarNavigation />
-            </INav>
+            <slot name="collapsible" />
         </INavbarCollapsible>
     </INavbar>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@inkline/inkline/css/mixins';
 
 .app-navbar {
@@ -115,15 +152,40 @@ export default defineComponent({
     --navbar--light--item--background: var(--color-white);
     --navbar--light--item--hover--background: var(--color-light);
     --navbar--light--collapsed--background: transparent;
-
     --navbar--dark--collapsed--background: transparent;
+    --navbar--transition-property: top, left, right, height, border-color, border-width,
+        border-radius, background, color;
+
+    position: fixed;
+    top: var(--margin-top);
+    right: var(--margin-right);
+    left: var(--margin-left);
+    z-index: 9999;
 
     &.-open {
-        height: 100%;
+        max-height: calc(100% - var(--margin-top) - var(--margin-bottom));
         align-items: flex-start;
+        overflow: auto;
 
         :deep(> .container) {
             overflow: auto;
+            max-height: 100%;
+        }
+    }
+
+    &.-scroll {
+        top: 0;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        border-top-color: var(--body--background);
+        border-top-width: 0;
+        border-left-color: var(--body--background);
+        border-left-width: 0;
+        border-right-color: var(--body--background);
+        border-right-width: 0;
+
+        &.-open {
             max-height: 100%;
         }
     }
@@ -139,8 +201,16 @@ export default defineComponent({
     }
 
     .app-sidebar-navigation {
-        --app-sidebar-navigation--padding: var(--padding-top-1-2) var(--padding-right)
+        --app-sidebar-navigation--padding-top: 0;
+        --app-sidebar-navigation--padding-right: 0;
+        --app-sidebar-navigation--item--padding: var(--padding-top-1-2) var(--padding-right)
             var(--padding-bottom-1-2) var(--padding-left);
+    }
+
+    .navbar-brand {
+        --navbar--item--padding: var(--padding-1-2);
+
+        font-weight: var(--font-weight-semibold);
     }
 
     @include breakpoint-up('lg') {
@@ -151,21 +221,41 @@ export default defineComponent({
     }
 
     @include breakpoint-down('md') {
-        .nav.navbar-icons {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: var(--margin-top);
-            margin-bottom: var(--margin-bottom);
+        .navbar-collapsible {
+            .nav.app-navbar-icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: var(--margin-top);
+                margin-bottom: var(--margin-bottom);
 
-            .nav-item {
-                width: auto;
+                .nav-item {
+                    width: auto !important;
+                }
             }
         }
 
         .button {
             margin-left: 0;
             width: 100%;
+        }
+    }
+
+    .logo {
+        height: 24px;
+        width: auto;
+        margin-right: var(--margin-right-1-2);
+    }
+
+    &.-light {
+        .logo.-white {
+            display: none;
+        }
+    }
+
+    &.-dark {
+        .logo.-black {
+            display: none;
         }
     }
 }

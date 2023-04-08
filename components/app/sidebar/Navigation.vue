@@ -1,16 +1,23 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, PropType } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
-import { CollapsibleNavigationPage, navigation } from '~/constants';
+import { CollapsibleNavigationPage, NavigationPage } from '~/types';
+import { useSidebarNavigation } from '~/composables';
 
 export default defineComponent({
-    setup() {
+    props: {
+        navigation: {
+            type: Array as PropType<NavigationPage[]>,
+            default: () => []
+        }
+    },
+    setup(props) {
         const route = useRoute();
         const { t } = useI18n();
 
         function isActiveCategory(category: CollapsibleNavigationPage) {
-            const { path } = category.url || {};
+            const path = category.url;
             const { fullPath } = route;
 
             if (category.active) {
@@ -20,8 +27,8 @@ export default defineComponent({
             return !!path && fullPath.startsWith(path);
         }
 
-        const menu = computed(() =>
-            navigation.map(
+        const menu = computed<NavigationPage[]>(() =>
+            props.navigation.map(
                 (category, categoryIndex): CollapsibleNavigationPage => ({
                     ...category,
                     id: `category-${categoryIndex}`,
@@ -104,7 +111,9 @@ export default defineComponent({
     --collapsible--padding-left: 0;
     --collapsible--header--padding-right: var(--padding-right-1-2);
 
-    padding-right: var(--padding-right-1-2);
+    flex-grow: 1;
+    padding-top: var(--app-sidebar-navigation--padding-top, var(--article--padding-top));
+    padding-right: var(--app-sidebar-navigation--padding-right, var(--padding-right-1-2));
 
     > * {
         margin-bottom: 2px;
@@ -131,7 +140,7 @@ export default defineComponent({
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: var(--app-sidebar-navigation--padding, var(--padding-1-2));
+        padding: var(--app-sidebar-navigation--item--padding, var(--padding-1-2));
         font-weight: var(--font-weight-semibold);
         color: var(--body--color);
 

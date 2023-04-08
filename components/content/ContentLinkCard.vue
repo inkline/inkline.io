@@ -2,6 +2,7 @@
 import { computed, defineComponent, PropType } from 'vue';
 import { RouteLocation } from 'vue-router';
 import { useLocalePath } from 'vue-i18n-routing';
+import { useTelemetry } from '~/composables';
 
 export default defineComponent({
     props: {
@@ -31,6 +32,7 @@ export default defineComponent({
         }
     },
     setup(props) {
+        const { track } = useTelemetry();
         const localePath = useLocalePath();
         const url = computed(() => {
             if (typeof props.to === 'string' && props.to.startsWith('http')) {
@@ -40,13 +42,20 @@ export default defineComponent({
             return localePath(props.to);
         });
 
-        return { url };
+        function onClick() {
+            track('user clicked on link card', {
+                to: url.value,
+                type: 'navigation'
+            });
+        }
+
+        return { url, onClick };
     }
 });
 </script>
 
 <template>
-    <NuxtLink class="installation-card" :to="url">
+    <NuxtLink class="link-card" :to="url" @click="onClick">
         <ICard>
             <div class="image">
                 <img v-if="src" :src="src" :alt="`${alt || title} - Inkline`" />
@@ -62,7 +71,7 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-.installation-card {
+.link-card {
     margin-bottom: var(--margin-bottom);
     display: block;
 

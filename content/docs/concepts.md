@@ -1,6 +1,7 @@
 ---
 title: Concepts - Inkline
 description: Learn more about the intuitive concepts used throughout the UI Library and Inkline's design decisions.
+layout: docs
 ---
 
 # Concepts 
