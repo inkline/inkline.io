@@ -24,7 +24,7 @@ export default defineComponent({});
     }
 
     .description {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-lg);
     }
 
     @include breakpoint-down('xl') {

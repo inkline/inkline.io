@@ -58,35 +58,35 @@ export default {
                 }
             },
             uiuxdx: {
-                title: 'More than a UI Library',
+                title: 'More than just a UI Library',
                 description:
-                    "UI libraries are only focusing on UI and UX, and they're missing the most important piece of the puzzle - the developer. We believe code quality is directly related to developer happiness. Inkline makes developers happy by providing a great Developer Experience (DX)."
+                    "While many UI libraries focus solely on UI and UX, they often overlook the most crucial element - the developer. At Inkline, we believe that code quality is directly linked to developer happiness. That's why we've designed Inkline to provide a seamless Developer Experience (DX)"
             },
             features: {
                 ui: {
                     title: 'User Interface',
                     description:
-                        'Designed to be mobile-first, Inkline looks great on phones, tablets, laptops and desktops.'
+                        'Designed to be mobile-first, Inkline looks flawless on phones, tablets, laptops, and desktops.'
                 },
                 ux: {
                     title: 'User Experience',
                     description:
-                        'Beautifully engineered micro-interactions that provide useful visual feedback to your users.'
+                        'Expertly designed micro-interactions, valuable visual feedback, and seamless user flows.'
                 },
                 dx: {
                     title: 'Developer Experience',
                     description:
-                        'The code base is designed to be intuitive, easy to use, clean, and consistent to the core.'
+                        'An intuitive, easy-to-use, and consistent codebase that caters to developers at its core.'
                 },
                 accessible: {
                     title: 'Accessible',
                     description:
-                        'Accessible to its core, you can expect to find configurable WAI-ARIA with sensible defaults.'
+                        'Built with accessibility in mind, Inkline offers configurable WAI-ARIA with sensible defaults.'
                 },
                 customizable: {
                     title: 'Customizable',
                     description:
-                        'Discover an intuitive configuration file and thousands of easily customizable CSS Variables.'
+                        'Discover a powerful configuration file and thousands of easily customizable CSS Variables.'
                 }
             },
             sponsors: {

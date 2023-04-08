@@ -4,8 +4,8 @@
     --article--padding-top: var(--margin-top-3);
     --article--padding-bottom: var(--margin-top-3);
 
-    --section--padding-top: var(--padding-top-5);
-    --section--padding-bottom: var(--padding-bottom-5);
+    --section--padding-top: calc(var(--padding-top) * 8);
+    --section--padding-bottom: calc(var(--padding-bottom) * 8);
 }
 
 .inkline-scrollbar {
