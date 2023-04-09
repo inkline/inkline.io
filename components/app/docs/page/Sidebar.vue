@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, ref, watch, nextTick, onMounted } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRoute, useRouter } from '#imports';
 import { scrollBehaviorOptions } from '~/constants';
 
 interface TableOfContentsEntry {
@@ -9,7 +9,7 @@ interface TableOfContentsEntry {
     children: TableOfContentsEntry[];
 }
 
-const docsPageSelector = '#documentation-page > div';
+const docsPageSelector = '#docs-page > article > div';
 
 export default defineComponent({
     setup() {
@@ -62,7 +62,7 @@ export default defineComponent({
                 });
             }
 
-            router.replace({ ...route, hash });
+            router.replace({ hash });
         };
 
         onMounted(() => {

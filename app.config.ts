@@ -1,7 +1,3 @@
 import { defineAppConfig } from '#imports';
 
-export default defineAppConfig({
-    features: {
-        premium: false
-    }
-});
+export default defineAppConfig({});

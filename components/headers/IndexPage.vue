@@ -1,6 +1,5 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useLocalePath } from 'vue-i18n-routing';
 
@@ -28,7 +27,6 @@ const defaultImage = '/images/header/index.svg';
 
 export default defineComponent({
     setup() {
-        const router = useRouter();
         const localePath = useLocalePath();
         const { t } = useI18n();
 
@@ -43,7 +41,6 @@ export default defineComponent({
 
         return {
             t,
-            router,
             image,
             localePath
         };
@@ -69,13 +66,14 @@ export default defineComponent({
         </IRow>
         <IRow>
             <IColumn>
+                <NuxtLink to="/docs">GO TO DOCS</NuxtLink>
                 <div class="header-buttons">
                     <IButton
                         id="get-started-button"
                         size="lg"
                         color="primary"
                         class="_margin-right:1"
-                        :to="localePath('/docs')"
+                        :to="{ path: '/docs' }"
                     >
                         {{ t('pages.index.header.button') }}
                     </IButton>

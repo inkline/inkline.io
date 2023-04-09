@@ -1,6 +1,9 @@
 <script lang="ts">
-import { useAppConfig } from '#imports';
-import { defineComponent, computed } from 'vue';
+import { defineComponent } from 'vue';
+
+/**
+ * Not yet implemented
+ */
 
 export default defineComponent({
     props: {
@@ -9,9 +12,8 @@ export default defineComponent({
             default: ''
         }
     },
-    setup(props) {
-        const app = useAppConfig();
-        const enabled = computed(() => (app.features as Record<string, boolean>)[props.name]);
+    setup() {
+        const enabled = false;
 
         return {
             enabled

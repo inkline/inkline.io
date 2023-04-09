@@ -1,5 +1,4 @@
 import en from './i18n/en';
-import { resolve } from 'pathe';
 
 /**
  * @docs https://nuxt.com/docs/api/configuration/nuxt-config

@@ -16,7 +16,7 @@ In October 2019, Inkline was awarded as a finalist for the <a href="https://osaw
 ### Getting started
 The only prerequisite for using Inkline is having a basic understanding of Vue.js. If you are new to Vue.js, the best way to learn is reading through the <a href="https://vuejs.org/v2/guide/" rel="nofollow" target="_blank">Official Vue.js Documentation</a>.
 
-Finally, make sure to go through the <RouterLink to="/docs">Documentation Homepage</RouterLink> and discover everything Inkline has to offer.
+Finally, make sure to go through the [Documentation Homepage](/docs) and discover everything Inkline has to offer.
 
 ### Core Values
 When developing Inkline, our top priority was to create a UI Library that delivers an exceptional User Experience (UX) through an intuitive and appealing User Interface (UI), and efficient Development Experience (DX).
