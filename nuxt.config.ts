@@ -88,5 +88,9 @@ export default defineNuxtConfig({
      */
     imports: {
         autoImport: false
+    },
+    sourcemap: {
+        server: true,
+        client: true
     }
 });

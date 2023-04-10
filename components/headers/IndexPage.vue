@@ -126,6 +126,7 @@ $navbar-height: 72px;
 
     .description {
         font-size: var(--font-size-xl);
+        line-height: 1.5;
     }
 
     @include breakpoint-down('xl') {

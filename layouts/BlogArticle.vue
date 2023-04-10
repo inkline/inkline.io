@@ -24,9 +24,13 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
+@import '@inkline/inkline/css/mixins';
+
 #blog-article-page {
     display: flex;
     justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .blog-article {
@@ -35,13 +39,13 @@ export default defineComponent({
     max-width: 720px;
 
     .blog-article-image {
-        margin-left: -80px;
-        margin-right: -80px;
+        margin-left: -72px;
+        margin-right: -72px;
 
         img {
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
-            max-width: calc(100% + 160px);
+            max-width: calc(100% + 144px);
             margin-bottom: var(--margin-bottom-3);
         }
     }
@@ -51,6 +55,30 @@ export default defineComponent({
 
         &::after {
             display: none !important;
+        }
+    }
+}
+
+@include breakpoint-down('xl') {
+    #blog-article-layout {
+        .app-docs-page-sidebar {
+            display: none;
+        }
+    }
+}
+
+@include breakpoint-down('md') {
+    .blog-article {
+        max-width: 100%;
+        padding: var(--padding);
+
+        .blog-article-image {
+            margin-left: 0;
+            margin-right: 0;
+
+            img {
+                max-width: 100%;
+            }
         }
     }
 }

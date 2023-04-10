@@ -1,5 +1,5 @@
 <script lang="ts">
-import { useHead } from '#imports';
+import { onBeforeRouteLeave, useHead } from '#imports';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

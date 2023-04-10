@@ -39,4 +39,23 @@ export default defineComponent({
         margin-bottom: var(--margin-bottom-2);
     }
 }
+
+#blog-layout-container {
+    display: flex;
+    justify-content: center;
+}
+
+#blog-page {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 980px;
+}
+
+@include breakpoint-down('xl') {
+    #blog-layout {
+        .app-docs-page-sidebar {
+            display: none;
+        }
+    }
+}
 </style>

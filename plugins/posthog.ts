@@ -1,28 +1,48 @@
-import posthog from 'posthog-js';
 import { defineNuxtPlugin } from '#imports';
-import { onBeforeRouteLeave } from 'vue-router';
+import { onNuxtReady } from '#app';
+import { ref } from 'vue';
+import type { Router } from 'vue-router';
+import type { PostHog } from 'posthog-js';
 
-export default defineNuxtPlugin(() => {
+const postHogRef = ref<PostHog | undefined>();
+export function getPostHog(): PostHog | undefined {
+    return postHogRef.value;
+}
+
+export default defineNuxtPlugin((nuxtApp) => {
     if (typeof window === 'undefined' || process.env.NODE_ENV === 'development') {
         return;
     }
 
-    /**
-     * Initialize PostHog
-     */
-    posthog.init('phc_wyDIkcdL6Ir4Q4uxKODOIiGo4ydCW6HX27FngTmPnAp', {
-        api_host: 'https://eu.posthog.com',
-        autocapture: false
-    });
+    onNuxtReady(async () => {
+        const { default: postHog } = await import('posthog-js');
+        const router = nuxtApp.$router as Router;
 
-    /**
-     * Add a global beforeRouteLeave hook to capture pageviews
-     */
-    onBeforeRouteLeave((to, from, next) => {
-        posthog.capture('$pageleave');
-        posthog.capture('$pageview', {
-            $current_url: to.fullPath
+        postHogRef.value = postHog;
+
+        /**
+         * Initialize PostHog
+         */
+        postHog.init('phc_wyDIkcdL6Ir4Q4uxKODOIiGo4ydCW6HX27FngTmPnAp', {
+            api_host: 'https://eu.posthog.com',
+            autocapture: false,
+            capture_pageview: false,
+            capture_pageleave: false
         });
-        next();
+
+        /**
+         * Add a global beforeRouteLeave hook to capture pageviews
+         */
+        router.beforeEach((to, from, next) => {
+            postHog.capture('$pageleave', {
+                $current_url: `${window.location.origin}${from.fullPath}`
+            });
+
+            postHog.capture('$pageview', {
+                $current_url: `${window.location.origin}${to.fullPath}`
+            });
+
+            next();
+        });
     });
 });
