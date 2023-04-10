@@ -23,5 +23,6 @@ export default defineComponent({
     <NuxtLayout>
         <HeadersIndexPage />
         <SectionsUIUXDX />
+        <SectionsSponsors />
     </NuxtLayout>
 </template>

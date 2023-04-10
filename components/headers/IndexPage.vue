@@ -66,7 +66,6 @@ export default defineComponent({
         </IRow>
         <IRow>
             <IColumn>
-                <NuxtLink to="/docs">GO TO DOCS</NuxtLink>
                 <div class="header-buttons">
                     <IButton
                         id="get-started-button"

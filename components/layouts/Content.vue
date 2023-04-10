@@ -205,6 +205,7 @@ export default defineComponent({
             > pre,
             .pre,
             .install-step pre,
+            .design-token pre,
             .tab > .tab-body > pre {
                 background: var(--shiki-color-background);
                 padding: var(--padding);

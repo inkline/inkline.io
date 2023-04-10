@@ -19,19 +19,6 @@ export default defineNuxtConfig({
      */
     css: ['~/css/index.scss'],
     /**
-     * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#app
-     */
-    app: {
-        head: {
-            charset: 'utf-8',
-            titleTemplate: (titleChunk) => {
-                return titleChunk ? `${titleChunk} - Inkline` : 'Inkline';
-            },
-            viewport: 'width=device-width, initial-scale=1',
-            meta: [{ name: 'description', content: 'My amazing site.' }]
-        }
-    },
-    /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config#components
      */
     components: {
@@ -65,21 +52,14 @@ export default defineNuxtConfig({
      * @docs https://v8.i18n.nuxtjs.org
      */
     i18n: {
-        strategy: 'prefix_and_default',
+        strategy: 'prefix_except_default',
         defaultLocale: 'en',
-        locales: [{ code: 'en', iso: 'en', file: 'i18n/en.ts' }],
-        vueI18n: {
-            legacy: false,
-            locale: 'en',
-            messages: {
-                en
-            }
-        }
+        locales: [{ code: 'en', iso: 'en', file: 'en.ts' }],
         /**
-         * @docs https://v8.i18n.nuxtjs.org/guide/lazy-load-translations Not yet supported
+         * @docs https://v8.i18n.nuxtjs.org/guide/lazy-load-translations
          */
-        // lazy: true,
-        // langDir: '~/i18n/'
+        lazy: true,
+        langDir: 'i18n/'
     },
     /**
      * @docs https://next.inkline.io

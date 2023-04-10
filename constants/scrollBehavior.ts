@@ -10,7 +10,6 @@ export const scrollBehaviorOptions: any = {
 };
 
 export const scrollBehavior: RouterScrollBehavior = (to) => {
-    console.log({ to });
     if (to.hash) {
         return {
             el: to.hash,

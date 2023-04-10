@@ -84,7 +84,7 @@ export default {
                         'Built with accessibility in mind, Inkline offers configurable WAI-ARIA with sensible defaults.'
                 },
                 customizable: {
-                    title: 'Customizable',
+                    title: 'Configurable',
                     description:
                         'Discover a powerful configuration file and thousands of easily customizable CSS Variables.'
                 }

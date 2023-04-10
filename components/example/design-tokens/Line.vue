@@ -23,12 +23,14 @@ export default defineComponent({
     >
 </template>
 
-<style lang="scss" scoped>
-.shiki-token-keyword {
-    color: var(--shiki-token-keyword);
-}
+<style lang="scss">
+.color-design-token-line {
+    .shiki-token-keyword {
+        color: var(--shiki-token-keyword);
+    }
 
-.shiki-token-text {
-    color: var(--shiki-token-text);
+    .shiki-token-text {
+        color: var(--shiki-token-text);
+    }
 }
 </style>

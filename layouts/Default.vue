@@ -21,6 +21,7 @@ export default defineComponent({
     <main id="default-layout">
         <AppNavbar />
         <slot />
+        <AppFooter />
         <IToastContainer />
     </main>
 </template>
