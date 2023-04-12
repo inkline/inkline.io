@@ -21,6 +21,8 @@ export default defineComponent({
     <main id="error-layout">
         <AppNavbar />
         <slot />
+        <AppFooter />
+        <IToastContainer />
     </main>
 </template>
 

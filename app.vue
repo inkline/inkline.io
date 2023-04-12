@@ -17,6 +17,7 @@ export default defineComponent({
 </script>
 <template>
     <main>
+        <NuxtLoadingIndicator color="var(--color-primary)" :height="3" />
         <NuxtPage />
     </main>
 </template>

@@ -98,7 +98,7 @@ export default {
         errors: {
             '404': {
                 name: 'Error 404',
-                title: 'Oops! The box inclined',
+                title: 'Oops! Where did you meow?',
                 description: "The page you're looking for no longer exists.",
                 button: 'Go back'
             }
