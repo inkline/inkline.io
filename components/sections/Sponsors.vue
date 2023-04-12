@@ -180,6 +180,10 @@ export default defineComponent({
         color: var(--color-red);
     }
 
+    .button {
+        --button--danger--color: white;
+    }
+
     .sponsor {
         position: relative;
         display: inline-flex;

@@ -154,7 +154,7 @@ export default defineComponent({
     --navbar--light--collapsed--background: transparent;
     --navbar--dark--collapsed--background: transparent;
     --navbar--transition-property: top, left, right, height, border-color, border-width,
-        border-radius, background, color;
+        border-radius, background;
 
     position: fixed;
     top: var(--margin-top);
