@@ -73,7 +73,8 @@ export default defineNuxtConfig({
      * @docs https://v1.image.nuxtjs.org/configuration
      */
     image: {
-        dir: 'assets'
+        dir: 'assets',
+        domains: ['next.inkline.io', 'inkline.io']
     },
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#vite
