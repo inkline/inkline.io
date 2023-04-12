@@ -89,8 +89,12 @@ export default defineNuxtConfig({
     imports: {
         autoImport: false
     },
-    sourcemap: {
-        server: true,
-        client: true
+    /**
+     * @docs https://content.nuxtjs.org/guide/recipes/sitemap
+     */
+    nitro: {
+        prerender: {
+            routes: ['/sitemap.xml']
+        }
     }
 });
