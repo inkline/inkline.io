@@ -22,7 +22,9 @@ export default defineComponent({
 @import '@inkline/inkline/css/mixins';
 
 #blog-layout {
-    background: var(--color-gray-50);
+    .light-theme & {
+        background: var(--color-light-tint-50);
+    }
 
     @include breakpoint-down('sm') {
         .content-layout-container {

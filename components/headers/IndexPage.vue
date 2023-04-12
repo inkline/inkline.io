@@ -103,7 +103,8 @@ export default defineComponent({
 $navbar-height: 72px;
 
 .index-page-header {
-    --header--light--background: var(--color-white);
+    --header--light--background: var(--body--background);
+    --header--dark--background: var(--body--background);
 
     background-repeat: no-repeat;
     background-size: 100% auto;

@@ -79,6 +79,7 @@ footer {
     background: var(--color-gray-900);
     color: var(--color-white);
     padding: var(--padding-top-4) 0 var(--padding-bottom-4);
+    border-top: var(--border-top-width) var(--border-top-style) var(--border-top-color);
     text-align: center;
 
     ul {

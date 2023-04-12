@@ -148,7 +148,7 @@ export default defineComponent({
 
 .sponsors-section {
     --header--light--background: var(--color-gray-50);
-    --header--dark--background: var(--color-dark-shade-50);
+    --header--dark--background: var(--color-dark-shade-100);
 
     &.-light {
         .sponsor picture {

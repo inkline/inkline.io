@@ -85,22 +85,13 @@ export default defineComponent({
                 height: 100%;
                 display: flex;
                 justify-content: center;
+                align-items: center;
             }
 
             picture,
             img {
                 height: 100%;
                 width: 1024px;
-            }
-
-            img {
-                transform: translateX(calc(-50% + 180px));
-            }
-
-            &:hover {
-                img {
-                    transform: translateX(calc(-50% + 180px)) scale(1.05);
-                }
             }
         }
     }

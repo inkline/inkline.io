@@ -26,6 +26,18 @@ export default defineComponent({
 <style lang="scss">
 @import '@inkline/inkline/css/mixins';
 
+#blog-article-layout {
+    transition: background var(--transition-duration) var(--transition-timing-function);
+
+    .light-theme & {
+        background: var(--color-white);
+    }
+
+    .dark-theme & {
+        background: var(--color-dark-shade-100);
+    }
+}
+
 #blog-article-page {
     display: flex;
     justify-content: center;
@@ -34,6 +46,7 @@ export default defineComponent({
 }
 
 .blog-article {
+    margin-top: var(--margin-top-2);
     font-size: var(--font-size-lg);
     line-height: 1.65;
     max-width: 720px;
@@ -70,13 +83,13 @@ export default defineComponent({
 @include breakpoint-down('md') {
     .blog-article {
         max-width: 100%;
-        padding: var(--padding);
 
         .blog-article-image {
             margin-left: 0;
             margin-right: 0;
 
             img {
+                width: 100%;
                 max-width: 100%;
             }
         }
