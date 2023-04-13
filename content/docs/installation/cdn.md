@@ -1,5 +1,5 @@
 ---
-title: Installation - CDN - Inkline
+title: Installation - CDN
 description: Install Inkline using the official JSDelivr CDN integration. The content delivery network (CDN) provides super fast asset delivery from a server that is closest to you.
 layout: docs
 ---
@@ -34,21 +34,21 @@ The files can be browsed and downloaded from a CDN such as <a href="https://unpk
 </head>
 <body>
 <div id="app">
-    <i-container>
-        <i-row>
-            <i-column>
+    <IContainer>
+        <IRow>
+            <IColumn>
                 <h1>
                     Welcome to Inkline!
                 </h1>
                 <p>
                     This is your starter page. Make sure to read the documentation to learn about what Inkline has to offer.
                 </p>
-                <i-button color="primary" href="https://inkline.io/docs/introduction">
+                <IButton color="primary" href="https://inkline.io/docs/introduction">
                     Read Documentation
-                </i-button>
-            </i-column>
-        </i-row>
-    </i-container>
+                </IButton>
+            </IColumn>
+        </IRow>
+    </IContainer>
 </div>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="https://unpkg.com/@inkline/inkline@next"></script>

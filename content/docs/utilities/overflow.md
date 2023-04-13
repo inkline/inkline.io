@@ -1,5 +1,5 @@
 ---
-title: Utilities - Overflow - Inkline
+title: Utilities - Overflow
 description: You can use the overflow utilities for deciding how content overflows an element.
 ---
 

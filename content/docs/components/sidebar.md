@@ -1,12 +1,12 @@
 ---
-title: Sidebar - Inkline
+title: Sidebar
 description: A responsive navigation sidebar that includes support for branding, navigation, forms and more.
 ---
 
 # Sidebar
 ## A responsive navigation sidebar that includes support for branding, navigation, forms and more.
 
-Here’s an example on how to use the `<i-sidebar>` inside a dashboard layout. The sidebar automatically collapses responsively.
+Here’s an example on how to use the `<ISidebar>` inside a dashboard layout. The sidebar automatically collapses responsively.
 
 ::ContentTabs
 #preview
@@ -16,7 +16,7 @@ Here’s an example on how to use the `<i-sidebar>` inside a dashboard layout. T
 ::
 
 ### Color Variants
-Inkline includes two predefined sidebar styles. You can set the style of a `<i-sidebar>` using the `variant` property, which can have a value of `light` or `dark`. By default, modals use the `light` variant.
+Inkline includes two predefined sidebar styles. You can set the style of a `<ISidebar>` using the `variant` property, which can have a value of `light` or `dark`. By default, modals use the `light` variant.
 
 ::ContentTabs
 #preview
@@ -47,7 +47,7 @@ You can easily place your sidebar on the `left` or `right` side of a layout by s
 ::
 
 ### Collapsible Menu
-You can use an `<i-collapsible>` component with one or more `<i-collapsible-item>` components inside the `<i-nav>` component to create a contextual sidebar menu. [Learn more about the Collapsible component.](/docs/components/collapsible)
+You can use an `<ICollapsible>` component with one or more `<ICollapsibleItem>` components inside the `<INav>` component to create a contextual sidebar menu. [Learn more about the Collapsible component.](/docs/components/collapsible)
 
 ::ContentTabs
 #preview
@@ -106,7 +106,7 @@ This property allows you to control whether the sidebar will affect the content 
 ### Linking and Routing
 Nav items will be automatically converted to link anchors `<a>` when providing a `href` property. You can also specify `target` and `rel` properties.
 
-The `<i-nav-item>` component is well integrated with the Vue Router plugin and will be converted to a `<router-link>` when using the `to` property. [Learn more about the Nav Item component.](/docs/components/nav)
+The `<INavItem>` component is well integrated with the Vue Router plugin and will be converted to a `<RouterLink>` when using the `to` property. [Learn more about the Nav Item component.](/docs/components/nav)
 
 ::ContentTabs
 #preview
@@ -116,7 +116,7 @@ The `<i-nav-item>` component is well integrated with the Vue Router plugin and w
 ::
 
 #### Active State
-You can control the active state of your `<i-nav-item>` using the `active` property. When you provide a `to` property you're converting the component into a `router-link`, therefore you can use the `active-class` and `exact-active-class` properties and set them to `-active`. [Learn more about the Nav Item component.](/docs/components/nav)
+You can control the active state of your `<INavItem>` using the `active` property. When you provide a `to` property you're converting the component into a `router-link`, therefore you can use the `active-class` and `exact-active-class` properties and set them to `-active`. [Learn more about the Nav Item component.](/docs/components/nav)
 
 ::ContentTabs
 #preview

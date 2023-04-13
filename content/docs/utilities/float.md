@@ -1,5 +1,5 @@
 ---
-title: Utilities - Float - Inkline
+title: Utilities - Float
 description: You can use the float utility on any element, for any breakpoint. 
 ---
 

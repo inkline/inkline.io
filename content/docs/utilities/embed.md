@@ -1,5 +1,5 @@
 ---
-title: Utilities - Embed - Inkline
+title: Utilities - Embed
 description: Create responsive video embeds by keeping the aspect ratio based on the parent element width. 
 ---
 

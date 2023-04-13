@@ -1,5 +1,5 @@
 ---
-title: Form Validation - Methods - Inkline
+title: Form Validation - Methods
 description: The form validation framework wouldn't be complete without dynamically added fields and groups.
 ---
 

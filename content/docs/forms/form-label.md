@@ -1,12 +1,12 @@
 ---
-title: Form Label - Inkline
+title: Form Label
 description: Form component used to add text labels to form groups. 
 ---
 
 # Form Label
 ## Form component used to add text labels to form groups. 
 
-You can add a label to your input by grouping an `<i-form-label>` and any input component inside an `<i-form-group>`. 
+You can add a label to your input by grouping an `<IFormLabel>` and any input component inside an `<IFormGroup>`. 
 
 ::ContentTabs
 #preview
@@ -38,7 +38,7 @@ You can add labels to either side of your input, and position it using the optio
 
 
 ### Size Variants
-You're able to use the `size` property to control the size of your form labels, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. Setting the size on a `<i-form-group>` will also affect form labels.
+You're able to use the `size` property to control the size of your form labels, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. Setting the size on a `<IFormGroup>` will also affect form labels.
 
 ::ContentTabs
 #preview

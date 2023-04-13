@@ -1,5 +1,5 @@
 ---
-title: Badge - Inkline
+title: Badge
 description: Documentation and examples for badges, a small component used for counting and labeling.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Module Options - Vite.js - Inkline
+title: Module Options - Vite.js
 description: Effortlessly customize Inkline's Configuration using the Vite.js Plugin options.
 layout: docs
 ---

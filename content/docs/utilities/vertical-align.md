@@ -1,5 +1,5 @@
 ---
-title: Utilities - Vertical Align - Inkline
+title: Utilities - Vertical Align
 description: Change the vertical alignment of inline, inline block, inline table, and table cell elements. 
 ---
 

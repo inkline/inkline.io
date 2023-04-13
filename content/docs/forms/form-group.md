@@ -1,12 +1,12 @@
 ---
-title: Form Group - Inkline
+title: Form Group
 description: Form groups are the easiest way to add structure and spacing to form elements. 
 ---
 
 # Form Group
 ## Form groups are the easiest way to add structure and spacing to form elements. 
 
-The `<i-form-group>` component is a wrapper that provides proper grouping of labels, input, help text, and form validation messaging. By default, form groups add spacing between them.
+The `<IFormGroup>` component is a wrapper that provides proper grouping of labels, input, help text, and form validation messaging. By default, form groups add spacing between them.
 
 ::ContentTabs
 #preview
@@ -26,9 +26,9 @@ Setting a form group as `disabled` will cause all of its child form components t
 ::
 
 ### Size Variants
-You're able to use the `size` modifier to control the size of the form components inside your `<i-form-group>`, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. 
+You're able to use the `size` modifier to control the size of the form components inside your `<IFormGroup>`, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. 
 
-All of the components inside the `<i-form-group>` will inherit the parent form group's size.
+All of the components inside the `<IFormGroup>` will inherit the parent form group's size.
 
 
 ::ContentTabs

@@ -1,5 +1,5 @@
 ---
-title: Form Validation - Schema - Inkline
+title: Form Validation - Schema
 description:  The validation schema defines the form input fields, groups and how they work together.
 ---
 
@@ -35,7 +35,7 @@ Each validator accepts a custom error message using the `message` field. This al
 
 
 ### Error Visibility
-The `<i-form-error>` component has a `visible` property that can be either an array of string values (multiple conditions), or a simple string (single condition). 
+The `<IFormError>` component has a `visible` property that can be either an array of string values (multiple conditions), or a simple string (single condition). 
 
 The string values refer to the schema fields that have to be true before displaying the error (i.e. setting a value of `invalid` will show the error message when the field becomes invalid). By default, it is set to `['touched', 'dirty', 'invalid']`.
 
@@ -66,7 +66,7 @@ The default field validation events can be configured globally when initializing
 You can define schema groups to access the validation result of a group of inputs.
 
 #### Object Schema Groups
-Objects that aren't empty and don't have a `value` or `validators` field are treated as schema groups. Schema groups can be used to see the validation status of multiple related fields. You can also assign the schema group to an `<i-form-group>` component to simulate form nesting.
+Objects that aren't empty and don't have a `value` or `validators` field are treated as schema groups. Schema groups can be used to see the validation status of multiple related fields. You can also assign the schema group to an `<IFormGroup>` component to simulate form nesting.
 
 ::ContentTabs
 #preview

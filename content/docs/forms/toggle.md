@@ -1,5 +1,5 @@
 ---
-title: Toggle - Inkline
+title: Toggle
 description: Toggles are boolean form components used for easily enabling or disabling features. 
 ---
 
@@ -57,7 +57,7 @@ You're able to use the `size` property to control the size of your inputs, using
 <!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/size-variants.vue" lang="vue"} -->
 ::
 
-Applying the size `size` property to an `i-form-group` will also set the chosen size to all of its `i-toggle` inputs.
+Applying the size `size` property to an `IFormGroup` will also set the chosen size to all of its `IToggle` inputs.
 
 
 ### Props

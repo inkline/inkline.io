@@ -46,9 +46,8 @@ export default defineComponent({
     text-align: center;
 
     .column {
-        margin-top: var(--article--padding-top);
-        padding-top: var(--padding-top-5);
-        padding-bottom: var(--padding-bottom-5);
+        padding-top: var(--padding-top-2);
+        padding-bottom: var(--padding-bottom-2);
     }
 
     img {

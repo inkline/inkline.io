@@ -1,5 +1,5 @@
 ---
-title: Button - Inkline
+title: Button
 description: Buttons can represent actions, links, or routes within the application and represent one of the core building blocks of an application. 
 ---
 
@@ -38,7 +38,7 @@ You're able to use the `size` modifier to control the size of your buttons, usin
 
 
 ### Button Type
-The `<i-button>` component creates a `<button>` element behind the scenes. Therefore, you can assign a type to it, just like with the `<button>` element.
+The `<IButton>` component creates a `<button>` element behind the scenes. Therefore, you can assign a type to it, just like with the `<button>` element.
 
 ::ContentTabs
 #preview
@@ -147,7 +147,7 @@ By default, the button will display a standard Inkline Loader Component. You can
 ### Linking and Routing
 Buttons will be automatically converted to link anchors `<a>` when providing a `href` property. You can also specify `target` and `rel` properties.
 
-The `<i-button>` component is also integrated with the [Vue Router](https://router.vuejs.org) plugin and will be converted to a `<router-link>` or `<nuxt-link>` when using the `to` property.
+The `<IButton>` component is also integrated with the [Vue Router](https://router.vuejs.org) plugin and will be converted to a `<RouterLink>` or `<NuxtLink>` when using the `to` property.
 
 ::ContentTabs
 #preview

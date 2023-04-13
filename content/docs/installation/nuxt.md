@@ -1,5 +1,5 @@
 ---
-title: Installation - Nuxt - Inkline
+title: Installation - Nuxt
 description: Install Inkline for any application created using Nuxt.
 layout: docs
 ---

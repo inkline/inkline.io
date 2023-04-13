@@ -1,12 +1,12 @@
 ---
-title: Tooltip - Inkline
+title: Tooltip
 description: Tooltips are useful for conveying information when an user hovers over an element.
 ---
 
 # Tooltip
 ## Tooltips are useful for conveying information when an user hovers over an element.
 
-Wrap the trigger element (such as an `<i-button>`) and provide a `<template #body>` inside an `<i-tooltip>` component to create a tooltip.
+Wrap the trigger element (such as an `<IButton>`) and provide a `<template #body>` inside an `<ITooltip>` component to create a tooltip.
 
 ::ContentTabs
 #preview

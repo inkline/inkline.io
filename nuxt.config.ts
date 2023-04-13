@@ -38,7 +38,7 @@ export default defineNuxtConfig({
      * @docs https://content.nuxtjs.org
      */
     content: {
-        documentDriven: true,
+        documentDriven: false,
         highlight: {
             theme: 'css-variables',
             preload: ['diff', 'json', 'js', 'ts', 'css', 'scss', 'shell', 'html', 'md', 'yaml']

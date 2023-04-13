@@ -1,5 +1,5 @@
 ---
-title: Installation - Inkline
+title: Installation
 description: Inkline offers official integrations for Vite.js, Nuxt, and Webpack.js, but can be easily installed for a custom Vue.js configuration as well.
 layout: docs
 ---

@@ -1,5 +1,5 @@
 ---
-title: Utilities - Display - Inkline
+title: Utilities - Display
 description: Change the display style of components responsively with display utilities. 
 ---
 

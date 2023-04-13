@@ -1,5 +1,5 @@
 ---
-title: Form - Inkline
+title: Form
 description: Forms are the main wrapper components for form elements, with powerful customization and validation options. 
 ---
 
@@ -7,7 +7,7 @@ description: Forms are the main wrapper components for form elements, with power
 # Form
 ## Forms are the main wrapper components for form elements, with powerful customization and validation options. 
 
-The `<i-form>` component is a wrapper that provides proper handling of form validation and form grouping. Here are some things that are good to know:
+The `<IForm>` component is a wrapper that provides proper handling of form validation and form grouping. Here are some things that are good to know:
 
 - All nested form components will inherit the form's `disabled` and `readonly` state
 - All nested form components will inherit the form's `size` variant
@@ -44,9 +44,9 @@ Setting a form as `readonly` will cause all of its child inputs to be readonly. 
 
 
 ### Size Variants
-You're able to use the `size` modifier to control the size of your `<i-form>`, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. 
+You're able to use the `size` modifier to control the size of your `<IForm>`, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. 
 
-All of the form components inside the `<i-form>` will inherit the parent form group's size.
+All of the form components inside the `<IForm>` will inherit the parent form group's size.
 
 ::ContentTabs
 #preview

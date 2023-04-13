@@ -1,5 +1,5 @@
 ---
-title: Header - Inkline
+title: Header
 description: A lightweight, responsive header component used for showcasing hero unit style content.
 ---
 
@@ -16,7 +16,7 @@ Here’s an example of a basic header component. Usually, this component is used
 ::
 
 ### Color Variants
-You can set the style of a `<i-header>` using the `color` property.
+You can set the style of a `<IHeader>` using the `color` property.
 
 ::ContentTabs
 #preview

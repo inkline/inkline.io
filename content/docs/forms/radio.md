@@ -1,12 +1,12 @@
 ---
-title: Radio - Inkline
+title: Radio
 description: Radio inputs allow the user to select multiple options from a set. 
 ---
 
 # Radio
 ## Radio inputs allow the user to select multiple options from a set. 
 
-Using the `i-radio` component together with a `i-radio-group` allows you to choose a value from multiple choices using a single model binding:
+Using the `IRadio` component together with a `IRadioGroup` allows you to choose a value from multiple choices using a single model binding:
 
 ::ContentTabs
 #preview

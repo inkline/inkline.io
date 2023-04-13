@@ -1,5 +1,5 @@
 ---
-title: Typography - Inkline
+title: Typography
 description: Discover Inkline's typography documentation and learn how to use a variety of typefaces, sizes, weights, and styles to make your content stand out.
 ---
 

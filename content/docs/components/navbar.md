@@ -1,12 +1,12 @@
 ---
-title: Navbar - Inkline
+title: Navbar
 description: A responsive navigation header that includes support for branding, navigation, forms and more.
 ---
 
 # Navbar
 ## A responsive navigation header that includes support for branding, navigation, forms and more.
 
-Here’s an example of the basic components included in a  `<i-navbar>` that automatically collapses responsively.
+Here’s an example of the basic components included in a  `<INavbar>` that automatically collapses responsively.
 
 ::ContentTabs
 #preview
@@ -16,7 +16,7 @@ Here’s an example of the basic components included in a  `<i-navbar>` that aut
 ::
 
 ### Color Variants
-Inkline includes two predefined navbar styles. You can set the style of a `<i-navbar>` using the `variant` property, which can have a value of `light` or `dark`. By default, modals use the `light` variant.
+Inkline includes two predefined navbar styles. You can set the style of a `<INavbar>` using the `variant` property, which can have a value of `light` or `dark`. By default, modals use the `light` variant.
 
 ::ContentTabs
 #preview
@@ -37,7 +37,7 @@ The default size is set to `md`.
 ::
 
 ### Dropdown
-You can use an `<i-dropdown>` component inside the `<i-nav>` component to create a contextual navbar menu. [Learn more about the Dropdown component.](/docs/components/dropdown)
+You can use an `<IDropdown>` component inside the `<INav>` component to create a contextual navbar menu. [Learn more about the Dropdown component.](/docs/components/dropdown)
 
 ::ContentTabs
 #preview
@@ -47,7 +47,7 @@ You can use an `<i-dropdown>` component inside the `<i-nav>` component to create
 ::
 
 ### Nav Placement
-You can position the `<i-nav>` component to the `start`, `end`, or `center` of the `<i-navbar-collapsible>` component using flexbox utilities. [Learn more about the Nav component.](/docs/components/nav)
+You can position the `<INav>` component to the `start`, `end`, or `center` of the `<INavbarCollapsible>` component using flexbox utilities. [Learn more about the Nav component.](/docs/components/nav)
 
 ::ContentTabs
 #preview
@@ -103,7 +103,7 @@ Sometimes, it's necessary to control whether the collapsed Navbar is open or not
 ### Linking and Routing
 Nav items will be automatically converted to link anchors `<a>` when providing a `href` property. You can also specify `target` and `rel` properties.
 
-The `<i-nav-item>` component is well integrated with the Vue Router plugin and will be converted to a `<router-link>` when using the `to` property. [Learn more about the Nav Item component.](/docs/components/nav)
+The `<INavItem>` component is well integrated with the Vue Router plugin and will be converted to a `<RouterLink>` when using the `to` property. [Learn more about the Nav Item component.](/docs/components/nav)
 
 
 ::ContentTabs
@@ -114,7 +114,7 @@ The `<i-nav-item>` component is well integrated with the Vue Router plugin and w
 ::
 
 #### Active State
-You can control the active state of your `<i-nav-item>` using the `active` property. When you provide a `to` property you're converting the component into a `router-link`, therefore you can use the `active-class` and `exact-active-class` properties and set them to `-active`. [Learn more about the Nav Item component.](/docs/components/nav)
+You can control the active state of your `<INavItem>` using the `active` property. When you provide a `to` property you're converting the component into a `router-link`, therefore you can use the `active-class` and `exact-active-class` properties and set them to `-active`. [Learn more about the Nav Item component.](/docs/components/nav)
 
 ::ContentTabs
 #preview

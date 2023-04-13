@@ -1,5 +1,5 @@
 ---
-title: Select - Advanced - Inkline
+title: Select - Advanced
 description: The select component easily supports complex scenarios, with asynchronous autocomplete and pagination. 
 ---
 

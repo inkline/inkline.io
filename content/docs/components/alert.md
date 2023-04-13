@@ -1,5 +1,5 @@
 ---
-title: Alert - Inkline
+title: Alert
 description: Provide contextual feedback messages for typical user actions using the alert component.
 ---
 
@@ -38,7 +38,7 @@ It's very common for alerts to have an associated icon to help the user understa
 ### Content
 Your alerts accept any kind of content, giving you the flexibility to create great looking contextual messages.
 
-You can also add an icon to the `<i-alert>` component by providing an `icon` slot. The following example makes use of the bundled Inkline icons, but you can use any icon font that you like:
+You can also add an icon to the `<IAlert>` component by providing an `icon` slot. The following example makes use of the bundled Inkline icons, but you can use any icon font that you like:
 
 ::ContentTabs
 #preview

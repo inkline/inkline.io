@@ -1,5 +1,5 @@
 ---
-title: Code - Inkline
+title: Code
 description: Examples for displaying inline and multi-line blocks of code.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Collapsible - Inkline
+title: Collapsible
 description: Collapsible elements are used to show and hide content using a smooth reveal transition. 
 ---
 
@@ -26,7 +26,7 @@ You can use the `header` slot to provide a custom title for the collapsible pane
 ::
 
 ### Default Open Panels
-Panels can be opened by default, on page load, using the `v-model` directive of the `<i-collapsible>` component. First, you'll need to assign an `id` to the `<i-collapsible-item>` components which will identify the open panels.
+Panels can be opened by default, on page load, using the `v-model` directive of the `<ICollapsible>` component. First, you'll need to assign an `id` to the `<ICollapsibleItem>` components which will identify the open panels.
 
 ::ContentTabs
 #preview

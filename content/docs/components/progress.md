@@ -1,12 +1,12 @@
 ---
-title: Progress - Inkline
+title: Progress
 description: A custom component for displaying progress with support for stacked progress bars.
 ---
 
 # Progress
 ## A custom component for displaying progress with support for stacked progress bars.
 
-Progress components are built with two components: a wrapper `<i-progress>` and at least one `<i-progress-bar>`. You can set the width of a progress bar by setting its `value` property.
+Progress components are built with two components: a wrapper `<IProgress>` and at least one `<IProgressBar>`. You can set the width of a progress bar by setting its `value` property.
 
 ::ContentTabs
 #preview
@@ -16,7 +16,7 @@ Progress components are built with two components: a wrapper `<i-progress>` and 
 ::
 
 ### Color Variants
-Inkline includes multiple progress styles. You set the wrapper `<i-progress>` background using the `color` property.
+Inkline includes multiple progress styles. You set the wrapper `<IProgress>` background using the `color` property.
 
 ::ContentTabs
 #preview
@@ -25,7 +25,7 @@ Inkline includes multiple progress styles. You set the wrapper `<i-progress>` ba
 <!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/color-variants.vue" lang="vue"} -->
 ::
 
-More importantly, you can change the color of an `<i-progress-bar>` using the `color` property.
+More importantly, you can change the color of an `<IProgressBar>` using the `color` property.
 
 ::ContentTabs
 #preview
@@ -56,7 +56,7 @@ Inkline allows you to set a `min` and `max` modifier to calculate the progress b
 ::
 
 ### Stacked Bars
-You can add multiple `<i-progress-bar>` inside the `<i-progress>` component to stack them, adding them up to `100%`.
+You can add multiple `<IProgressBar>` inside the `<IProgress>` component to stack them, adding them up to `100%`.
 
 ::ContentTabs
 #preview

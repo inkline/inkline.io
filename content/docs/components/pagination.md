@@ -1,5 +1,5 @@
 ---
-title: Pagination - Inkline
+title: Pagination
 description: Pagination provides navigation for large series of related content.
 ---
 
@@ -16,7 +16,7 @@ Pagination items are automatically generated based on the `items-total` and the 
 ::
 
 ### Color Variants
-Inkline comes with two predefined pagination styles. You can set the color style of the `<i-pagination>` component using the `color` property, which can be `light` or `dark`. By default, pagination uses the `light` color.
+Inkline comes with two predefined pagination styles. You can set the color style of the `<IPagination>` component using the `color` property, which can be `light` or `dark`. By default, pagination uses the `light` color.
 
 ::ContentTabs
 #preview

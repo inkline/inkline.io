@@ -1,5 +1,5 @@
 ---
-title: Installation - Vite.js - Inkline
+title: Installation - Vite.js
 description: Install Inkline for any Vite.js + Vue.js 3 application, as recommended by the community.
 layout: docs
 ---

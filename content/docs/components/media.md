@@ -1,5 +1,5 @@
 ---
-title: Media - Inkline
+title: Media
 description: Media objects provide you with a flexible component that can be easily nested and repeated, such as blog comments and tweets.
 ---
 

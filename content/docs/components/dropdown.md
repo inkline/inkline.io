@@ -1,12 +1,12 @@
 ---
-title: Dropdown - Inkline
+title: Dropdown
 description: Dropdowns are contextual overlays toggled through clicking or hovering, usually used for displaying a list of links.
 ---
 
 # Dropdown
 ## Dropdowns are contextual overlays toggled through clicking or hovering, usually used for displaying a list of links.
 
-Wrap the trigger element (such as an `<i-button>`) and provide a `<template #body>` inside an `<i-dropdown>` component to create a dropdown.
+Wrap the trigger element (such as an `<IButton>`) and provide a `<template #body>` inside an `<IDropdown>` component to create a dropdown.
 
 ::ContentTabs
 #preview
@@ -51,7 +51,7 @@ You can use the `trigger` property to trigger the dropdown on `hover` or `click`
 ::
 
 ### Freeform Dropdown
-You're not required to use any dropdown-specific components inside of the `<i-dropdown>` body. You can add your own HTML markup without any issues. You might need additional size styles to control the content width.
+You're not required to use any dropdown-specific components inside of the `<IDropdown>` body. You can add your own HTML markup without any issues. You might need additional size styles to control the content width.
 
 ::ContentTabs
 #preview
@@ -73,7 +73,7 @@ You can provide an optional header or footer for your dropdown menus using slots
 ### Linking and Routing
 Dropdown items will be automatically converted to link anchors `<a>` when providing a `href` property. You can also specify `target` and `rel` properties.
 
-The `<i-dropdown-item>` component is well integrated with the Vue Router plugin and will be converted to a `<router-link>` when using the to property.
+The `<IDropdownItem>` component is well integrated with the Vue Router plugin and will be converted to a `<RouterLink>` when using the to property.
 
 ::ContentTabs
 #preview
@@ -83,7 +83,7 @@ The `<i-dropdown-item>` component is well integrated with the Vue Router plugin 
 ::
 
 #### Active State
-You can control the active state of your `<i-dropdown-item>` using the `active` property. If you're providing a `:to` property, converting it into a `router-link`, you can use the `active-class` and `exact-active-class` properties and set them to `-active`.
+You can control the active state of your `<IDropdownItem>` using the `active` property. If you're providing a `:to` property, converting it into a `router-link`, you can use the `active-class` and `exact-active-class` properties and set them to `-active`.
 
 ::ContentTabs
 #preview
@@ -114,7 +114,7 @@ The default size is set to `md`.
 ::
 
 ### Nested Dropdowns
-Inkline allows you to have virtually infinite recursive dropdown submenus structure by defining a `<i-dropdown>` inside of another dropdown's body. This awesome feature gives you great design flexibility.
+Inkline allows you to have virtually infinite recursive dropdown submenus structure by defining a `<IDropdown>` inside of another dropdown's body. This awesome feature gives you great design flexibility.
 
 ::ContentTabs
 #preview

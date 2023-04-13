@@ -1,5 +1,5 @@
 ---
-title: Loader - Inkline
+title: Loader
 description: Provide a loading state for a component or page using a customizable loading spinner. 
 ---
 

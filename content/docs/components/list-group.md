@@ -1,5 +1,5 @@
 ---
-title: List Group - Inkline
+title: List Group
 description: List groups are flexible components used for displaying a list of related content.
 ---
 
@@ -15,7 +15,7 @@ List groups support any content inside of them. Take advantage of their flexibil
 <!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/basic.vue" lang="vue"} -->
 ::
 
-Behind the scenes, the `<i-list-group-item>` is converted into a `<router-link>` if it has the `:to` property, or a plain `<a>` tag if it has a `href` property. Otherwise, it uses a simple `<div>` tag.
+Behind the scenes, the `<IListGroupItem>` is converted into a `<RouterLink>` if it has the `:to` property, or a plain `<a>` tag if it has a `href` property. Otherwise, it uses a simple `<div>` tag.
 
 ### Color Variants
 The list group component comes with a predefined set of basic color variants. You can set the color of a list group using the `color` property.
@@ -38,7 +38,7 @@ You're able to use the `size` modifier to control the padding of your list group
 ::
 
 ### Active State
-You can control the active state of your `<i-list-group-item>` using the `active` property. 
+You can control the active state of your `<IListGroupItem>` using the `active` property. 
 
 If you're providing a `to` property, the list group item will be converted into a `router-link` or `nuxt-link`. You can use the `active-class` and `exact-active-class` properties and set them to `-active` when using it as a routing component.
 
@@ -50,7 +50,7 @@ If you're providing a `to` property, the list group item will be converted into 
 ::
 
 ### Disabled State
-You can control the disabled state of your `<i-list-group-item>` using the `disabled` property. 
+You can control the disabled state of your `<IListGroupItem>` using the `disabled` property. 
 
 ::ContentTabs
 #preview
@@ -70,7 +70,7 @@ You can disable the border of your list group by setting the `border` property t
 ::
 
 ### Item Content
-The `<i-list-group-item>` accepts any type of content, allowing you to create large sized list group items.
+The `<IListGroupItem>` accepts any type of content, allowing you to create large sized list group items.
 
 ::ContentTabs
 #preview

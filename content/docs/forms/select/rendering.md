@@ -1,5 +1,5 @@
 ---
-title: Select - Rendering - Inkline
+title: Select - Rendering
 description: Use the various rendering options for the select options and define your data without restrictions. 
 ---
 

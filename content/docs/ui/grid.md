@@ -1,5 +1,5 @@
 ---
-title: Grid - Inkline
+title: Grid
 description: Create responsive layouts with Inkline's 12-column grid system. Built with flexbox, featuring equally divided columns separated by a small gutter.
 ---
 

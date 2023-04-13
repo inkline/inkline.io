@@ -1,12 +1,12 @@
 ---
-title: Nav - Inkline
+title: Nav
 description: Navs are basic navigation components that provide alignment and spacing between items.
 ---
 
 # Nav
 ## Navs are basic navigation components that provide alignment and spacing between items.
 
-Navigation components make use of the base `<i-nav>` component for building all types of navigation styles. 
+Navigation components make use of the base `<INav>` component for building all types of navigation styles. 
 
 ::ContentTabs
 #preview
@@ -15,10 +15,10 @@ Navigation components make use of the base `<i-nav>` component for building all 
 <!-- Autodocs{src="@inkline/inkline/components/INav/examples/basic.vue" lang="vue"} -->
 ::
 
-Behind the scenes, the `<i-nav-item>` is converted into a `<router-link>` if it has the `:to` property, or a plain `<a>` tag if it has a `href` property. Otherwise, it uses a simple `<div>` tag.
+Behind the scenes, the `<INavItem>` is converted into a `<RouterLink>` if it has the `:to` property, or a plain `<a>` tag if it has a `href` property. Otherwise, it uses a simple `<div>` tag.
 
 ### Vertical Variant
-You can stack nav items into a vertical navigation component by setting the `vertical` property on your `<i-nav>`.
+You can stack nav items into a vertical navigation component by setting the `vertical` property on your `<INav>`.
 
 ::ContentTabs
 #preview
@@ -50,7 +50,7 @@ You're able to use the `size` modifier to control the size of your navs, using o
 ### Linking and Routing
 Nav items will be automatically converted to link anchors `<a>` when providing a `href` property. You can also specify `target` and `rel` properties.
 
-The `<i-nav-item>` component is well integrated with the Vue Router plugin and will be converted to a `<router-link>` when using the `to` property.
+The `<INavItem>` component is well integrated with the Vue Router plugin and will be converted to a `<RouterLink>` when using the `to` property.
 
 ::ContentTabs
 #preview
@@ -61,7 +61,7 @@ The `<i-nav-item>` component is well integrated with the Vue Router plugin and w
 
 #### Active State
 
-You can control the active state of your `<i-nav-item>` using the `active` property. When you provide a `to` property you're converting the component into a `router-link`, therefore you can use the `active-class` and `exact-active-class` properties and set them to `-active`.
+You can control the active state of your `<INavItem>` using the `active` property. When you provide a `to` property you're converting the component into a `router-link`, therefore you can use the `active-class` and `exact-active-class` properties and set them to `-active`.
 
 ::ContentTabs
 #preview

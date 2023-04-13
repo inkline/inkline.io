@@ -1,5 +1,5 @@
 ---
-title: Breadcrumb - Inkline
+title: Breadcrumb
 description: Improve your website's navigation with Inkline's breadcrumb component. Displays the hierarchical structure of your pages and automatically adds separators.
 ---
 
@@ -50,7 +50,7 @@ You're able to use the `size` modifier to control the text and spacing size of y
 ### Linking and Routing
 Breadcrumb items will be automatically converted to link anchors `<a>` when providing a `href` property. You can also specify `target` and `rel` properties.
 
-The `<i-breadcrumb-item>` component is well integrated with the Vue Router plugin and will be converted to a `<router-link>` when using the `to` property.
+The `<IBreadcrumbItem>` component is well integrated with the Vue Router plugin and will be converted to a `<RouterLink>` when using the `to` property.
 
 ::ContentTabs
 #preview

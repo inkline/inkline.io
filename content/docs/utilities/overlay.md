@@ -1,5 +1,5 @@
 ---
-title: Utilities - Overlay - Inkline
+title: Utilities - Overlay
 description: Make an element overlay its container by adding overlay utilities. 
 ---
 

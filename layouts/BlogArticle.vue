@@ -1,11 +1,16 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { useContent, useContentHead } from '#imports';
+import { defineComponent, onMounted, ref } from 'vue';
+import { queryContent } from '#imports';
+import { useRoute } from 'vue-router';
 
 export default defineComponent({
     setup() {
-        const { page: article } = useContent();
-        useContentHead(article);
+        const article = ref();
+        const { path } = useRoute();
+
+        onMounted(async () => {
+            article.value = await queryContent().where({ _path: path }).only(['image']).findOne();
+        });
 
         return {
             article

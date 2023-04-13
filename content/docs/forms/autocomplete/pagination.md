@@ -1,5 +1,5 @@
 ---
-title: Select - Pagination - Inkline
+title: Select - Pagination
 description: Pagination is handled using a simple and efficient infinite scrolling algorithm. The select component is used for selecting a value from a large list of options, with autocomplete support. 
 ---
 

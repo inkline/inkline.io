@@ -1,5 +1,5 @@
 ---
-title: Select - Inkline
+title: Select
 description: Form component used for selecting a value from a large list of options, with autocomplete and pagination support. 
 ---
 

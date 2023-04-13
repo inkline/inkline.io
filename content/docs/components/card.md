@@ -1,5 +1,5 @@
 ---
-title: Card - Inkline
+title: Card
 description: Cards provide you with a flexible and extensible content container with multiple color variants and options.
 ---
 

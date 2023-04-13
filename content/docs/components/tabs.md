@@ -1,5 +1,5 @@
 ---
-title: Tabs - Inkline
+title: Tabs
 description: Tab elements are used to switch between multiple sections of related content. 
 ---
 
@@ -8,8 +8,8 @@ description: Tab elements are used to switch between multiple sections of relate
 
 Switching between tabs will fade-in the content associated to the selected tab. Here are some things to keep in mind:
 - A specific tab can be opened by default using the `v-model` directive
-- You must to assign a tab `name` to the `<i-tab>` components
-- You must reference the chosen tab name using the `for` property of the `<i-tab-title>` components
+- You must to assign a tab `name` to the `<ITab>` components
+- You must reference the chosen tab name using the `for` property of the `<ITabTitle>` components
 
 When you have a large number of tabs, the tabs header will scroll horizontally.
 

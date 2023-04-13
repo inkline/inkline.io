@@ -1,5 +1,5 @@
 ---
-title: Button Group - Inkline
+title: Button Group
 description: Group multiple buttons together on a single line using a button group. 
 ---
 
@@ -67,7 +67,7 @@ Just like horizontal block button groups, you can also set vertical button group
 ::
 
 ### Nested
-When placing a `<i-button-group>` inside another `<i-button-group>`, you'll get a mixed series of buttons that will render seamlessly.
+When placing a `<IButtonGroup>` inside another `<IButtonGroup>`, you'll get a mixed series of buttons that will render seamlessly.
 
 ::ContentTabs
 #preview

@@ -1,5 +1,5 @@
 ---
-title: Form Validation - Inkline
+title: Form Validation
 description: Inkline provides you with powerful form validation utilities. 
 ---
 

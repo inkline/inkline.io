@@ -1,5 +1,5 @@
 ---
-title: Utilities - Clearfix - Inkline
+title: Utilities - Clearfix
 description: Use the clearfix utility to clear floated content within a container. 
 ---
 

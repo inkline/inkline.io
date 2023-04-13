@@ -32,6 +32,13 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
 
+    .app-error {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     footer {
         margin-top: auto;
     }

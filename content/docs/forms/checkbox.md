@@ -1,5 +1,5 @@
 ---
-title: Checkbox - Inkline
+title: Checkbox
 description: Checkbox inputs allow the user to select multiple options from a set. 
 ---
 
@@ -38,7 +38,7 @@ You can make a checkbox readonly using the `readonly` property.
 ::
 
 ### Indeterminate State
-You can set the state of a `<i-checkbox>` to be indeterminate by using the `indeterminate` property. 
+You can set the state of a `<ICheckbox>` to be indeterminate by using the `indeterminate` property. 
 
 ::ContentTabs
 #preview
@@ -69,7 +69,7 @@ You're able to use the `size` property to control the size of your checkbox, usi
 ::
 
 ### Group Example
-Using the `i-checkbox` component together with a `i-checkbox-group` allows you to control multiple selected values using a single binding.
+Using the `ICheckbox` component together with a `ICheckboxGroup` allows you to control multiple selected values using a single binding.
 
 ::ContentTabs
 #preview
