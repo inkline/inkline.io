@@ -74,6 +74,7 @@ export default defineNuxtConfig({
      */
     image: {
         dir: 'assets',
+        provider: 'static',
         domains: ['next.inkline.io', 'inkline.io']
     },
     /**
