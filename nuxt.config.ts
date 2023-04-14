@@ -12,7 +12,8 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
         '@inkline/plugin/nuxt',
         '@nuxtjs/i18n',
-        'nuxt-icon'
+        'nuxt-icon',
+        'nuxt-simple-sitemap'
     ],
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#css
@@ -92,11 +93,11 @@ export default defineNuxtConfig({
         autoImport: false
     },
     /**
-     * @docs https://content.nuxtjs.org/guide/recipes/sitemap
+     * @docs https://nuxt.com/docs/guide/going-further/runtime-config
      */
-    nitro: {
-        prerender: {
-            routes: ['/blog', '/sitemap.xml']
+    runtimeConfig: {
+        public: {
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://inkline.io'
         }
     }
 });

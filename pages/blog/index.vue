@@ -1,29 +1,14 @@
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
-import { definePageMeta, queryContent } from '#imports';
-import { Article } from '~/types/blog';
+import { defineComponent } from 'vue';
+import { definePageMeta } from '#imports';
 
 export default defineComponent({
     setup() {
-        const articles = ref<Article[]>([]);
-
         definePageMeta({
             layout: 'blog'
         });
 
-        onMounted(async () => {
-            try {
-                articles.value = (await queryContent('blog')
-                    .only(['title', 'slug', 'date', 'tags', 'featured', 'image'])
-                    .find()) as Article[];
-            } catch (error) {
-                console.log(error);
-            }
-        });
-
-        return {
-            articles
-        };
+        return {};
     }
 });
 </script>
@@ -33,13 +18,24 @@ export default defineComponent({
         <h1 class="_margin-bottom:2">Latest posts</h1>
         <section class="blog-feed" role="feed" aria-busy="false">
             <IRow>
-                <IColumn
-                    v-for="(article, index) in articles"
-                    :key="article.slug"
-                    :md="article.featured ? '12' : '6'"
-                >
-                    <BlogListItem :article="article" :aria-posinset="index + 1" aria-setsize="-1" />
-                </IColumn>
+                <ContentList path="/blog">
+                    <template #default="{ list }">
+                        <IColumn
+                            v-for="(article, index) in list"
+                            :key="article._path"
+                            :md="article.featured ? '12' : '6'"
+                        >
+                            <BlogListItem
+                                :article="article"
+                                :aria-posinset="index + 1"
+                                aria-setsize="-1"
+                            />
+                        </IColumn>
+                    </template>
+                    <template #not-found>
+                        <p>No articles found.</p>
+                    </template>
+                </ContentList>
             </IRow>
         </section>
     </NuxtLayout>
