@@ -61,7 +61,6 @@ export default defineComponent({
                 </IContainer>
             </ILayoutContent>
         </ILayout>
-        <IToastContainer />
     </ILayout>
 </template>
 

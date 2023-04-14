@@ -19,5 +19,6 @@ export default defineComponent({
     <main>
         <NuxtLoadingIndicator color="var(--color-primary)" :height="3" />
         <NuxtPage />
+        <IToastContainer />
     </main>
 </template>

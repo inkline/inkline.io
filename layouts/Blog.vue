@@ -26,6 +26,10 @@ export default defineComponent({
         background: var(--color-light-tint-50);
     }
 
+    .blog-list-item {
+        margin-bottom: var(--margin-bottom-2);
+    }
+
     @include breakpoint-down('sm') {
         .content-layout-container {
             display: flex;
@@ -37,8 +41,10 @@ export default defineComponent({
         }
     }
 
-    .blog-list-item {
-        margin-bottom: var(--margin-bottom-2);
+    @include breakpoint-down('xl') {
+        .app-docs-page-sidebar {
+            display: none;
+        }
     }
 }
 
@@ -51,13 +57,5 @@ export default defineComponent({
     margin-left: 0;
     margin-right: 0;
     max-width: 980px;
-}
-
-@include breakpoint-down('xl') {
-    #blog-layout {
-        .app-docs-page-sidebar {
-            display: none;
-        }
-    }
 }
 </style>
