@@ -16,6 +16,16 @@ export default defineNuxtConfig({
         'nuxt-simple-sitemap'
     ],
     /**
+     * @docs https://nuxt.com/docs/api/configuration/nuxt-config#app
+     */
+    app: {
+        /**
+         * @docs https://nuxt.com/docs/getting-started/transitions
+         */
+        pageTransition: { name: 'page', mode: 'out-in' },
+        layoutTransition: { name: 'layout', mode: 'out-in' }
+    },
+    /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#css
      */
     css: ['~/css/index.scss'],

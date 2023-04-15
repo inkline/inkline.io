@@ -14,7 +14,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <NuxtLayout>
+    <div id="page">
         <ContentDoc />
-    </NuxtLayout>
+    </div>
 </template>

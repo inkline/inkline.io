@@ -15,7 +15,9 @@ export default defineComponent({
 </script>
 
 <template>
-    <ContentPreview :src="path" />
+    <div>
+        <ContentPreview :src="path" />
+    </div>
 </template>
 
 <style lang="scss">

@@ -20,9 +20,9 @@ export default defineComponent({
 </script>
 
 <template>
-    <NuxtLayout>
+    <div>
         <HeadersIndexPage />
         <SectionsUIUXDX />
         <SectionsSponsors />
-    </NuxtLayout>
+    </div>
 </template>

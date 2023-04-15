@@ -14,7 +14,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <NuxtLayout>
+    <div id="page">
         <h1 class="_margin-bottom:2">Latest posts</h1>
         <section class="blog-feed" role="feed" aria-busy="false">
             <IRow>
@@ -38,5 +38,5 @@ export default defineComponent({
                 </ContentList>
             </IRow>
         </section>
-    </NuxtLayout>
+    </div>
 </template>

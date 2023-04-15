@@ -1,0 +1,19 @@
+.page-enter-active,
+.page-leave-active {
+    transition: opacity var(--transition-duration);
+}
+
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+    transition: opacity var(--transition-duration);
+}
+
+.layout-enter-from,
+.layout-leave-to {
+    opacity: 0;
+}
