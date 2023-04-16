@@ -1,20 +1,9 @@
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
-import { queryContent } from '#imports';
-import { useRoute } from 'vue-router';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     setup() {
-        const article = ref();
-        const { path } = useRoute();
-
-        onMounted(async () => {
-            article.value = await queryContent().where({ _path: path }).only(['image']).findOne();
-        });
-
-        return {
-            article
-        };
+        return {};
     }
 });
 </script>
@@ -22,7 +11,6 @@ export default defineComponent({
 <template>
     <LayoutsContent type="blog-article" :sidebar="false">
         <article class="blog-article">
-            <NuxtPicture v-if="article" class="blog-article-image" :src="article.image" />
             <slot />
         </article>
     </LayoutsContent>
