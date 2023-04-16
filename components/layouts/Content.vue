@@ -19,8 +19,6 @@ export default defineComponent({
         }
     },
     setup() {
-        const sidebarOpen = ref(false);
-
         useHead(
             useLocaleHead({
                 addDirAttribute: true,
@@ -29,7 +27,7 @@ export default defineComponent({
             })
         );
 
-        return { sidebarOpen };
+        return {};
     }
 });
 </script>

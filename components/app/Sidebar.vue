@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useI18n, onBeforeRouteLeave } from '#imports';
+import { useI18n } from '#imports';
 
 export default defineComponent({
     props: {
@@ -10,12 +10,8 @@ export default defineComponent({
         }
     },
     emits: ['update:modelValue'],
-    setup(props, { emit }) {
+    setup() {
         const { t } = useI18n();
-
-        onBeforeRouteLeave(() => {
-            emit('update:modelValue', false);
-        });
 
         return {
             t

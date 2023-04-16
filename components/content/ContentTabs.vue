@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 
 export default defineComponent({
     setup(props, { slots }) {
@@ -17,9 +17,12 @@ export default defineComponent({
             { name: 'output', title: 'Output' }
         ]);
 
+        const availableTabs = computed(() => tabs.value.filter((tab) => !!slots[tab.name]));
+
         return {
             active,
-            tabs
+            tabs,
+            availableTabs
         };
     }
 });
@@ -28,17 +31,13 @@ export default defineComponent({
 <template>
     <ITabs v-model="active" class="content-tabs" v-bind="$attrs">
         <template #header>
-            <template v-for="tab in tabs">
-                <ITabTitle v-if="$slots[tab.name]" :key="tab.name" :for="tab.name">
-                    {{ tab.title }}
-                </ITabTitle>
-            </template>
+            <ITabTitle v-for="tab in availableTabs" :key="tab.name" :for="tab.name">
+                {{ tab.title }}
+            </ITabTitle>
         </template>
-        <template v-for="tab in tabs">
-            <ITab v-if="$slots[tab.name]" :key="tab.name" :name="tab.name">
-                <slot :name="tab.name" />
-            </ITab>
-        </template>
+        <ITab v-for="tab in availableTabs" :key="tab.name" :name="tab.name">
+            <slot :name="tab.name" />
+        </ITab>
     </ITabs>
 </template>
 

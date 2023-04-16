@@ -29,7 +29,9 @@ export default defineNitroPlugin((nitroApp) => {
                 }
 
                 const code = await readFile(sourceFilePath, 'utf-8');
-                file.body = file.body.replace(match[0], `~~~${params.lang}\n${code}\n~~~`);
+                const codeBlock = `~~~${params.lang}\n${code}\n~~~`;
+
+                file.body = file.body.replace(match[0], codeBlock);
             }
         }
     });
