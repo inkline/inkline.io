@@ -3,13 +3,6 @@ import { defineComponent } from 'vue';
 import { useI18n } from '#imports';
 
 export default defineComponent({
-    props: {
-        modelValue: {
-            type: Boolean,
-            default: false
-        }
-    },
-    emits: ['update:modelValue'],
     setup() {
         const { t } = useI18n();
 

@@ -1,9 +1,9 @@
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue';
+import { computed, defineComponent, inject, PropType } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 import { CollapsibleNavigationPage, NavigationPage } from '~/types';
-import { useSidebarNavigation } from '~/composables';
+import { NavbarKey } from '@inkline/inkline/components/INavbar/mixin';
 
 export default defineComponent({
     props: {
@@ -13,6 +13,7 @@ export default defineComponent({
         }
     },
     setup(props) {
+        const navbar = inject(NavbarKey, null);
         const route = useRoute();
         const { t } = useI18n();
 
@@ -41,10 +42,17 @@ export default defineComponent({
             menu.value.filter(isActiveCategory).map((category) => category.id)
         );
 
+        function onLinkClick(event: MouseEvent) {
+            if (navbar) {
+                navbar.onItemClick(event);
+            }
+        }
+
         return {
             t,
             menu,
-            activeCategories
+            activeCategories,
+            onLinkClick
         };
     }
 });
@@ -56,7 +64,7 @@ export default defineComponent({
         :model-value="activeCategories"
     >
         <template v-for="(category, categoryIndex) in menu" :key="categoryIndex">
-            <NuxtLink v-if="category.url" :to="localePath(category.url)">
+            <NuxtLink v-if="category.url" :to="localePath(category.url)" @click="onLinkClick">
                 {{ category.title }}
             </NuxtLink>
             <ICollapsibleItem
@@ -76,7 +84,7 @@ export default defineComponent({
                         :key="`${categoryIndex}-${pageIndex}`"
                         class="sidebar-page"
                     >
-                        <NuxtLink v-if="page.url" :to="localePath(page.url)">
+                        <NuxtLink v-if="page.url" :to="localePath(page.url)" @click="onLinkClick">
                             {{ page.title }}
                         </NuxtLink>
                         <span v-else>
@@ -88,7 +96,11 @@ export default defineComponent({
                                 :key="`${categoryIndex}-${pageIndex}-${subpageIndex}`"
                                 class="sidebar-subpage"
                             >
-                                <NuxtLink v-if="subpage.url" :to="localePath(subpage.url)">
+                                <NuxtLink
+                                    v-if="subpage.url"
+                                    :to="localePath(subpage.url)"
+                                    @click="onLinkClick"
+                                >
                                     {{ subpage.title }}
                                 </NuxtLink>
                                 <span v-else>
