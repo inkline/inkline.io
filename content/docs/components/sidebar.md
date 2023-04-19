@@ -12,7 +12,7 @@ Here’s an example on how to use the `<ISidebar>` inside a dashboard layout. Th
 #preview
 :ContentPreview{src="/components/ISidebar/examples/basic" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ Inkline includes two predefined sidebar styles. You can set the style of a `<ISi
 #preview
 :ContentPreview{src="/components/ISidebar/examples/color-variants" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -33,7 +33,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/ISidebar/examples/size-variants" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Placement
@@ -43,7 +43,7 @@ You can easily place your sidebar on the `left` or `right` side of a layout by s
 #preview
 :ContentPreview{src="/components/ISidebar/examples/placement" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/placement.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/placement.raw.vue" lang="vue"} -->
 ::
 
 ### Collapsible Menu
@@ -53,7 +53,7 @@ You can use an `<ICollapsible>` component with one or more `<ICollapsibleItem>` 
 #preview
 :ContentPreview{src="/components/ISidebar/examples/collapsible" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapsible.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapsible.raw.vue" lang="vue"} -->
 ::
 
 ### Sidebar Collapsing
@@ -63,7 +63,7 @@ You can control at which breakpoint your sidebar will collapse at using the `col
 #preview
 :ContentPreview{src="/components/ISidebar/examples/collapse-breakpoint" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-breakpoint.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-breakpoint.raw.vue" lang="vue"} -->
 ::
 
 #### Always Collapsible
@@ -75,7 +75,7 @@ Setting a `collapse` value of `true` will set the sidebar to be always collapsib
 #preview
 :ContentPreview{src="/components/ISidebar/examples/collapse-true" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-true.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-true.raw.vue" lang="vue"} -->
 ::
 
 #### Never Collapsible
@@ -85,7 +85,7 @@ Setting a `collapse` value of `false` will set the sidebar to never be collapsib
 #preview
 :ContentPreview{src="/components/ISidebar/examples/collapse-false" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-false.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-false.raw.vue" lang="vue"} -->
 ::
 
 ### Collapse Position
@@ -100,7 +100,7 @@ This property allows you to control whether the sidebar will affect the content 
 #preview
 :ContentPreview{src="/components/ISidebar/examples/collapse-position" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-position.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/collapse-position.raw.vue" lang="vue"} -->
 ::
 
 ### Linking and Routing
@@ -112,7 +112,7 @@ The `<INavItem>` component is well integrated with the Vue Router plugin and wil
 #preview
 :ContentPreview{src="/components/ISidebar/examples/routing" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/routing.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/routing.raw.vue" lang="vue"} -->
 ::
 
 #### Active State
@@ -122,7 +122,7 @@ You can control the active state of your `<INavItem>` using the `active` propert
 #preview
 :ContentPreview{src="/components/ISidebar/examples/routing-active" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/routing-active.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISidebar/examples/routing-active.raw.vue" lang="vue"} -->
 ::
 
 

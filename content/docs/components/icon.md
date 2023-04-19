@@ -12,7 +12,7 @@ Here’s an example of the basic icons included with the `<IIcon>` component.
 #preview
 :ContentPreview{src="/components/IIcon/examples/icons"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IIcon/examples/icons.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IIcon/examples/icons.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ You can use text color utility classes to set the color of Inkline's icons.
 #preview
 :ContentPreview{src="/components/IIcon/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IIcon/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IIcon/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -34,7 +34,7 @@ You can also use text size utility classes to set the size of Inkline's icons.
 #preview
 :ContentPreview{src="/components/IIcon/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IIcon/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IIcon/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props

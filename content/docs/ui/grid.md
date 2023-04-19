@@ -20,7 +20,7 @@ The grid system is defined using `<IContainer>`, `<IRow>` and `<IColumn>` compon
 #preview
 :ContentPreview{src="/components/IColumn/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Basic Grid
@@ -30,7 +30,7 @@ Create basic grid layout using columns.
 #preview
 :ContentPreview{src="/components/IColumn/examples/width"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/width.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/width.raw.vue" lang="vue"} -->
 ::
 
 ### Nested Grid
@@ -44,7 +44,7 @@ You can place rows only inside a container or a column, and columns only inside 
 #preview
 :ContentPreview{src="/components/IColumn/examples/nested"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/nested.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/nested.raw.vue" lang="vue"} -->
 ::
 
 ### Column Offset
@@ -54,7 +54,7 @@ Grid offsets are used to move a column to the right without creating an empty co
 #preview
 :ContentPreview{src="/components/IColumn/examples/offset"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/offset.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/offset.raw.vue" lang="vue"} -->
 ::
 
 You may need to use `offset="0"` and `offset-{breakpoint}="0"` to clear an offset. See this in action in the example below.
@@ -63,7 +63,7 @@ You may need to use `offset="0"` and `offset-{breakpoint}="0"` to clear an offse
 #preview
 :ContentPreview{src="/components/IColumn/examples/offset-reset"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/offset-reset.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/offset-reset.raw.vue" lang="vue"} -->
 ::
 
 ### Column Push / Pull
@@ -73,7 +73,7 @@ Inkline's grid system provides push and pull props that allow you to shift colum
 #preview
 :ContentPreview{src="/components/IColumn/examples/push-pull"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/push-pull.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/push-pull.raw.vue" lang="vue"} -->
 ::
 
 You may need to use `push="0"`, `push-{breakpoint}="0"`, `pull="0"`, `pull-{breakpoint}="0"` to clear a push or pull.
@@ -86,7 +86,7 @@ The grid will automatically fit any number of auto sizing columns to a row.
 #preview
 :ContentPreview{src="/components/IColumn/examples/auto-width"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/auto-width.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/auto-width.raw.vue" lang="vue"} -->
 ::
 
 ### Row Horizontal Alignment
@@ -99,7 +99,7 @@ The `start` prop of the row component can be used to align columns inside it at 
 #preview
 :ContentPreview{src="/components/IRow/examples/horizontal-alignment-start"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/horizontal-alignment-start.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/horizontal-alignment-start.raw.vue" lang="vue"} -->
 ::
 
 #### Row Center
@@ -109,7 +109,7 @@ The `center` prop of the row component can be used to align columns inside it at
 #preview
 :ContentPreview{src="/components/IRow/examples/horizontal-alignment-center"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/horizontal-alignment-center.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/horizontal-alignment-center.raw.vue" lang="vue"} -->
 ::
 
 #### Row End
@@ -119,7 +119,7 @@ The `end` prop of the row component can be used to align columns inside it at th
 #preview
 :ContentPreview{src="/components/IRow/examples/horizontal-alignment-end"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/horizontal-alignment-end.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/horizontal-alignment-end.raw.vue" lang="vue"} -->
 ::
 
 
@@ -133,7 +133,7 @@ The `top` prop of the row component can be used to align columns inside it at th
 #preview
 :ContentPreview{src="/components/IRow/examples/vertical-alignment-top"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/vertical-alignment-top.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/vertical-alignment-top.raw.vue" lang="vue"} -->
 ::
 
 #### Row Middle
@@ -143,7 +143,7 @@ The `middle` prop of the row component can be used to align columns inside it at
 #preview
 :ContentPreview{src="/components/IRow/examples/vertical-alignment-middle"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/vertical-alignment-middle.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/vertical-alignment-middle.raw.vue" lang="vue"} -->
 ::
 
 #### Row Bottom
@@ -153,7 +153,7 @@ The `bottom` prop of the row component can be used to align columns inside it at
 #preview
 :ContentPreview{src="/components/IRow/examples/vertical-alignment-bottom"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/vertical-alignment-bottom.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/vertical-alignment-bottom.raw.vue" lang="vue"} -->
 ::
 
 
@@ -167,7 +167,7 @@ The `around` prop for the row component distributes columns evenly with equal sp
 #preview
 :ContentPreview{src="/components/IRow/examples/distribution-around"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/distribution-around.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/distribution-around.raw.vue" lang="vue"} -->
 ::
 
 #### Space between
@@ -177,7 +177,7 @@ The `between` prop for the row component distributes columns evenly with equal s
 #preview
 :ContentPreview{src="/components/IRow/examples/distribution-between"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/distribution-between.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/distribution-between.raw.vue" lang="vue"} -->
 ::
 
 ### Reordering
@@ -190,7 +190,7 @@ The `reverse` prop of the row component can be used to reverse the order of colu
 #preview
 :ContentPreview{src="/components/IRow/examples/reordering-reverse"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/reordering-reverse.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRow/examples/reordering-reverse.raw.vue" lang="vue"} -->
 ::
 
 #### First in order
@@ -200,7 +200,7 @@ The `first` prop of the column component can be used to order the column as the 
 #preview
 :ContentPreview{src="/components/IColumn/examples/reordering-first"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/reordering-first.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/reordering-first.raw.vue" lang="vue"} -->
 ::
 
 #### Last in order
@@ -210,7 +210,7 @@ The `last` prop of the column component can be used to order the column as the l
 #preview
 :ContentPreview{src="/components/IColumn/examples/reordering-last"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/reordering-last.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/reordering-last.raw.vue" lang="vue"} -->
 ::
 
 ### Responsive Column Width
@@ -222,7 +222,7 @@ Try to resize your browser window!
 #preview
 :ContentPreview{src="/components/IColumn/examples/responsive"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/responsive.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IColumn/examples/responsive.raw.vue" lang="vue"} -->
 ::
 
 ::ContentAlert
@@ -236,7 +236,7 @@ You can make the `IContainer` component fill the whole width of the parent eleme
 #preview
 :ContentPreview{src="/components/IContainer/examples/fluid"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IContainer/examples/fluid.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IContainer/examples/fluid.raw.vue" lang="vue"} -->
 ::
 
 ### Props

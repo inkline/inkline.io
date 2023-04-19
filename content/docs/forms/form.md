@@ -17,7 +17,7 @@ The `<IForm>` component is a wrapper that provides proper handling of form valid
 #preview
 :ContentPreview{src="/components/IForm/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 
@@ -28,7 +28,7 @@ Setting a form as `disabled` will cause all of its child inputs to be disabled. 
 #preview
 :ContentPreview{src="/components/IForm/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 
@@ -39,7 +39,7 @@ Setting a form as `readonly` will cause all of its child inputs to be readonly. 
 #preview
 :ContentPreview{src="/components/IForm/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 
@@ -52,21 +52,21 @@ All of the form components inside the `<IForm>` will inherit the parent form gro
 #preview
 :ContentPreview{src="/components/IForm/examples/size-variants-sm"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/size-variants-sm.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/size-variants-sm.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IForm/examples/size-variants-md"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/size-variants-md.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/size-variants-md.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IForm/examples/size-variants-lg"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/size-variants-lg.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IForm/examples/size-variants-lg.raw.vue" lang="vue"} -->
 ::
 
 

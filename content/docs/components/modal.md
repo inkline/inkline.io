@@ -12,7 +12,7 @@ To create a modal, create an element (such as an `<IButton>`) as a trigger and t
 #preview
 :ContentPreview{src="/components/IModal/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ Inkline includes multiple predefined modal styles, each serving its own semantic
 #preview
 :ContentPreview{src="/components/IModal/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -33,7 +33,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/IModal/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props

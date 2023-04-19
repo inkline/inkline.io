@@ -12,7 +12,7 @@ Badges are simple components used for counting, notifications, and labeling item
 #preview
 :ContentPreview{src="/components/IBadge/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -23,7 +23,7 @@ Inkline includes several predefined badge color variants, each serving its own s
 #preview
 :ContentPreview{src="/components/IBadge/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -34,7 +34,7 @@ You're able to use the `size` modifier to control the text and spacing size of y
 #preview
 :ContentPreview{src="/components/IBadge/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Relative Size
@@ -45,7 +45,7 @@ Badges always match the size of the immediate parent element by using relative f
 #preview
 :ContentPreview{src="/components/IBadge/examples/heading"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/heading.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBadge/examples/heading.raw.vue" lang="vue"} -->
 ::
 
 

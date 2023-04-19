@@ -12,7 +12,7 @@ Here’s an example of a basic header component. Usually, this component is used
 #preview
 :ContentPreview{src="/components/IHeader/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ You can set the style of a `<IHeader>` using the `color` property.
 #preview
 :ContentPreview{src="/components/IHeader/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -32,7 +32,7 @@ You're able to use the `size` modifier to control the size of your header, using
 #preview
 :ContentPreview{src="/components/IHeader/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Fullscreen
@@ -42,7 +42,7 @@ You can make headers cover the whole screen width and height (using `vw` and `vh
 #preview
 :ContentPreview{src="/components/IHeader/examples/fullscreen"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/fullscreen.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/fullscreen.raw.vue" lang="vue"} -->
 ::
 
 ### Cover Background
@@ -52,7 +52,7 @@ The goal of cover background images on a website is to cover the entire browser 
 #preview
 :ContentPreview{src="/components/IHeader/examples/cover"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/cover.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHeader/examples/cover.raw.vue" lang="vue"} -->
 ::
 
 ### Props

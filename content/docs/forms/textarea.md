@@ -12,7 +12,7 @@ Textareas are the form controls used for inputting multiple lines. Inkline provi
 #preview
 :ContentPreview{src="/components/ITextarea/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Disabled State
@@ -22,7 +22,7 @@ Setting the `disabled` property will disable all interactions with the textarea 
 #preview
 :ContentPreview{src="/components/ITextarea/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 
@@ -33,7 +33,7 @@ Setting the `readonly` property will disable all interactions with the textarea 
 #preview
 :ContentPreview{src="/components/ITextarea/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 
@@ -44,7 +44,7 @@ If you need to be able to quickly clear the value of an textarea, you can add th
 #preview
 :ContentPreview{src="/components/ITextarea/examples/clearable"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/clearable.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/clearable.raw.vue" lang="vue"} -->
 ::
 
 
@@ -55,7 +55,7 @@ Inkline allows you to easily add a prefix or suffix to your textareas. Using pre
 #preview
 :ContentPreview{src="/components/ITextarea/examples/prefix-suffix"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prefix-suffix.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prefix-suffix.raw.vue" lang="vue"} -->
 ::
 
 
@@ -66,21 +66,21 @@ You can add additional content such as select fields, buttons or plain text, to 
 #preview
 :ContentPreview{src="/components/ITextarea/examples/prepend-append-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prepend-append-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prepend-append-text.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ITextarea/examples/prepend-append-button"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prepend-append-button.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prepend-append-button.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ITextarea/examples/prepend-append-dropdown"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prepend-append-dropdown.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/prepend-append-dropdown.raw.vue" lang="vue"} -->
 ::
 
 
@@ -91,7 +91,7 @@ You can use the `color` property to set a `light` or `dark` color for your texta
 #preview
 :ContentPreview{src="/components/ITextarea/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -102,7 +102,7 @@ You're able to use the `size` modifier to control the size of your textareas, us
 #preview
 :ContentPreview{src="/components/ITextarea/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITextarea/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 

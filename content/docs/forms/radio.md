@@ -12,7 +12,7 @@ Using the `IRadio` component together with a `IRadioGroup` allows you to choose 
 #preview
 :ContentPreview{src="/components/IRadio/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Disabled State
@@ -22,7 +22,7 @@ You can disable a radio using the `disabled` property.
 #preview
 :ContentPreview{src="/components/IRadio/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 ### Readonly State
@@ -32,7 +32,7 @@ You can make a radio readonly using the `readonly` property.
 #preview
 :ContentPreview{src="/components/IRadio/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 
@@ -43,7 +43,7 @@ You're able to use the `size` property to control the size of your radio, using 
 #preview
 :ContentPreview{src="/components/IRadio/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -54,7 +54,7 @@ Inkline uses a custom radio design by default. You can use the `native` property
 #preview
 :ContentPreview{src="/components/IRadio/examples/native"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/native.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/native.raw.vue" lang="vue"} -->
 ::
 
 
@@ -65,7 +65,7 @@ You can disable an entire radio group using the `disabled` property.
 #preview
 :ContentPreview{src="/components/IRadio/examples/group-disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/group-disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/group-disabled.raw.vue" lang="vue"} -->
 ::
 
 
@@ -76,7 +76,7 @@ You can use the `color` property to set a `light` or `dark` color for your radio
 #preview
 :ContentPreview{src="/components/IRadio/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -89,7 +89,7 @@ The chosen size will be applied to all of its child inputs.
 #preview
 :ContentPreview{src="/components/IRadio/examples/group-size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/group-size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IRadio/examples/group-size-variants.raw.vue" lang="vue"} -->
 ::
 
 

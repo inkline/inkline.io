@@ -17,7 +17,7 @@ When you have a large number of tabs, the tabs header will scroll horizontally.
 #preview
 :ContentPreview{src="/components/ITabs/examples/advanced"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/advanced.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/advanced.raw.vue" lang="vue"} -->
 ::
 
 ### Stretch Header
@@ -27,7 +27,7 @@ You can have a full width tabs header using the `stretch` property. Make sure yo
 #preview
 :ContentPreview{src="/components/ITabs/examples/stretch"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/stretch.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/stretch.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -37,7 +37,7 @@ Inkline includes basic predefined tabs styles that you can use within your appli
 #preview
 :ContentPreview{src="/components/ITabs/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -48,7 +48,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/ITabs/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Disabling SSR
@@ -58,7 +58,7 @@ Inkline can infer your tabs definition automatically, however it will not work w
 #preview
 :ContentPreview{src="/components/ITabs/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITabs/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Props

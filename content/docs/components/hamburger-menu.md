@@ -12,7 +12,7 @@ Here’s an example of a basic use case for the `<IHamburgerMenu>` component. Th
 #preview
 :ContentPreview{src="/components/IHamburgerMenu/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHamburgerMenu/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHamburgerMenu/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ You can set the style of a `<IHamburgerMenu>` using the `color` property, which 
 #preview
 :ContentPreview{src="/components/IHamburgerMenu/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHamburgerMenu/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHamburgerMenu/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Animation
@@ -32,7 +32,7 @@ The `<IHamburgerMenu>` component supports various closed state animations. You c
 #preview
 :ContentPreview{src="/components/IHamburgerMenu/examples/animation"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IHamburgerMenu/examples/animation.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IHamburgerMenu/examples/animation.raw.vue" lang="vue"} -->
 ::
 
 

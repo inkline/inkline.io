@@ -12,7 +12,7 @@ Wrap the trigger element (such as an `<IButton>`) and provide a `<template #body
 #preview
 :ContentPreview{src="/components/IDropdown/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Placement
@@ -37,7 +37,7 @@ Each position also has a `-start` or `-end` variant that sets the dropdown to th
 #preview
 :ContentPreview{src="/components/IDropdown/examples/placement"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/placement.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/placement.raw.vue" lang="vue"} -->
 ::
 
 ### Trigger Type
@@ -47,7 +47,7 @@ You can use the `trigger` property to trigger the dropdown on `hover` or `click`
 #preview
 :ContentPreview{src="/components/IDropdown/examples/trigger"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/trigger.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/trigger.raw.vue" lang="vue"} -->
 ::
 
 ### Freeform Dropdown
@@ -57,7 +57,7 @@ You're not required to use any dropdown-specific components inside of the `<IDro
 #preview
 :ContentPreview{src="/components/IDropdown/examples/freeform"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/freeform.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/freeform.raw.vue" lang="vue"} -->
 ::
 
 ### Header and Footer
@@ -67,7 +67,7 @@ You can provide an optional header or footer for your dropdown menus using slots
 #preview
 :ContentPreview{src="/components/IDropdown/examples/header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/header-footer.raw.vue" lang="vue"} -->
 ::
 
 ### Linking and Routing
@@ -79,7 +79,7 @@ The `<IDropdownItem>` component is well integrated with the Vue Router plugin an
 #preview
 :ContentPreview{src="/components/IDropdown/examples/routing"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/routing.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/routing.raw.vue" lang="vue"} -->
 ::
 
 #### Active State
@@ -89,7 +89,7 @@ You can control the active state of your `<IDropdownItem>` using the `active` pr
 #preview
 :ContentPreview{src="/components/IDropdown/examples/state-active"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/state-active.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/state-active.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -99,7 +99,7 @@ You can choose a light or dark color for your dropdown using the `color` modifie
 #preview
 :ContentPreview{src="/components/IDropdown/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -110,7 +110,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/IDropdown/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Nested Dropdowns
@@ -120,7 +120,7 @@ Inkline allows you to have virtually infinite recursive dropdown submenus struct
 #preview
 :ContentPreview{src="/components/IDropdown/examples/nested"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/nested.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IDropdown/examples/nested.raw.vue" lang="vue"} -->
 ::
 
 

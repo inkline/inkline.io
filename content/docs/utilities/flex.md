@@ -12,14 +12,14 @@ Apply `display: flex` using CSS or the `_display:flex` helper to create a flexbo
 #preview
 :ContentPreview{src="/stories/utilities/flex/flex"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/flex/inline-flex"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/inline-flex.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/inline-flex.raw.vue" lang="vue"} -->
 ::
 
 
@@ -38,7 +38,7 @@ Setting a row direction will cause the flexbox items to flow horizontally.
 #preview
 :ContentPreview{src="/stories/utilities/flex/flex-direction-row"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-direction-row.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-direction-row.raw.vue" lang="vue"} -->
 ::
 
 
@@ -49,7 +49,7 @@ Setting a column direction will cause the flexbox items to flow vertically.
 #preview
 :ContentPreview{src="/stories/utilities/flex/flex-direction-column"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-direction-column.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-direction-column.raw.vue" lang="vue"} -->
 ::
 
 Flexbox direction utilities can also be applied responsively. Here are the available helper classes::
@@ -66,7 +66,7 @@ Use `_justify-content` utilities on flexbox containers to change the alignment o
 #preview
 :ContentPreview{src="/stories/utilities/flex/justify-content"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/justify-content.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/justify-content.raw.vue" lang="vue"} -->
 ::
 
 Flexbox justify content utilities can also be applied responsively. Here are the available helper classes::
@@ -84,7 +84,7 @@ Use `_align-items` utilities on flexbox containers to change the alignment of fl
 #preview
 :ContentPreview{src="/stories/utilities/flex/align-items"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/align-items.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/align-items.raw.vue" lang="vue"} -->
 ::
 
 **Note:** The wrappers of the items above have a fixed height.
@@ -104,7 +104,7 @@ Use `_align-self` utilities on a flexbox item to change the alignment of the ite
 #preview
 :ContentPreview{src="/stories/utilities/flex/align-self"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/align-self.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/align-self.raw.vue" lang="vue"} -->
 ::
 
 Flexbox align self utilities can also be applied responsively. Here are the available helper classes::
@@ -124,7 +124,7 @@ For demonstration purposes, the examples below use `._flex-wrap:wrap`, an increa
 #preview
 :ContentPreview{src="/stories/utilities/flex/align-content"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/align-content.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/align-content.raw.vue" lang="vue"} -->
 ::
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::
@@ -143,7 +143,7 @@ Use `_flex:fill` utilities on a series of flexbox items to force them into width
 #preview
 :ContentPreview{src="/stories/utilities/flex/flex-fill"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-fill.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-fill.raw.vue" lang="vue"} -->
 ::
 
 Flexbox fill utilities can also be applied responsively. Here are the available helper classes::
@@ -157,7 +157,7 @@ Use `_flex-grow:1` and `_flex-grow:0` utilities to toggle a flex item’s abilit
 #preview
 :ContentPreview{src="/stories/utilities/flex/flex-grow"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-grow.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-grow.raw.vue" lang="vue"} -->
 ::
 
 Use the `_flex-shrink:1` and `_flex-shrink:0` utilities to toggle a flex item’s ability to shrink if necessary. This can be used together with a `width: 100%` div to make some flex items cover as little space as possible.
@@ -166,7 +166,7 @@ Use the `_flex-shrink:1` and `_flex-shrink:0` utilities to toggle a flex item’
 #preview
 :ContentPreview{src="/stories/utilities/flex/flex-shrink"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-shrink.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-shrink.raw.vue" lang="vue"} -->
 ::
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::
@@ -183,7 +183,7 @@ When you mix flex alignments with auto margins you can obtain some pretty unique
 #preview
 :ContentPreview{src="/stories/utilities/flex/margin-auto"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/margin-auto.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/margin-auto.raw.vue" lang="vue"} -->
 ::
 
 ### Wrapping
@@ -193,7 +193,7 @@ Change how flex items wrap in a flex container. To have wrapping disabled (brows
 #preview
 :ContentPreview{src="/stories/utilities/flex/flex-wrap"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-wrap.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/flex-wrap.raw.vue" lang="vue"} -->
 ::
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::
@@ -209,7 +209,7 @@ You can change the order of flex items with a handful of order utilities. You ca
 #preview
 :ContentPreview{src="/stories/utilities/flex/order"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/order.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/flex/order.raw.vue" lang="vue"} -->
 ::
 
 Flexbox shrink and grow utilities can also be applied responsively. Here are the available helper classes::

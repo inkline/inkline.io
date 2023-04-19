@@ -12,7 +12,7 @@ Here’s an example of the basic components included in a  `<INavbar>` that auto
 #preview
 :ContentPreview{src="/components/INavbar/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ Inkline includes two predefined navbar styles. You can set the style of a `<INav
 #preview
 :ContentPreview{src="/components/INavbar/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -33,7 +33,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/INavbar/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Dropdown
@@ -43,7 +43,7 @@ You can use an `<IDropdown>` component inside the `<INav>` component to create a
 #preview
 :ContentPreview{src="/components/INavbar/examples/dropdown"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/dropdown.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/dropdown.raw.vue" lang="vue"} -->
 ::
 
 ### Nav Placement
@@ -53,7 +53,7 @@ You can position the `<INav>` component to the `start`, `end`, or `center` of th
 #preview
 :ContentPreview{src="/components/INavbar/examples/nav-placement"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/nav-placement.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/nav-placement.raw.vue" lang="vue"} -->
 ::
 
 ### Navbar Collapsing
@@ -63,7 +63,7 @@ You can control at which breakpoint your navbar will collapse at using the `coll
 #preview
 :ContentPreview{src="/components/INavbar/examples/collapse-breakpoint"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapse-breakpoint.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapse-breakpoint.raw.vue" lang="vue"} -->
 ::
 
 #### Always Collapsible
@@ -76,7 +76,7 @@ Setting a `collapse` value of `true` will set the navbar to be always collapsibl
 #preview
 :ContentPreview{src="/components/INavbar/examples/collapse-true"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapse-true.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapse-true.raw.vue" lang="vue"} -->
 ::
 
 #### Never Collapsible
@@ -87,7 +87,7 @@ Setting a `collapse` value of `false` will set the navbar to never be collapsibl
 #preview
 :ContentPreview{src="/components/INavbar/examples/collapse-false"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapse-false.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapse-false.raw.vue" lang="vue"} -->
 ::
 
 #### Manual Collapse
@@ -97,7 +97,7 @@ Sometimes, it's necessary to control whether the collapsed Navbar is open or not
 #preview
 :ContentPreview{src="/components/INavbar/examples/collapsed-state"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapsed-state.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/collapsed-state.raw.vue" lang="vue"} -->
 ::
 
 ### Linking and Routing
@@ -110,7 +110,7 @@ The `<INavItem>` component is well integrated with the Vue Router plugin and wil
 #preview
 :ContentPreview{src="/components/INavbar/examples/routing"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/routing.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/routing.raw.vue" lang="vue"} -->
 ::
 
 #### Active State
@@ -120,7 +120,7 @@ You can control the active state of your `<INavItem>` using the `active` propert
 #preview
 :ContentPreview{src="/components/INavbar/examples/routing-active"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/routing-active.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INavbar/examples/routing-active.raw.vue" lang="vue"} -->
 ::
 
 ### Props

@@ -17,7 +17,7 @@ Here are some considerations to be made:
 #preview
 :ContentPreview{src="/components/ISelect/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 
@@ -28,7 +28,7 @@ Setting the `disabled` property will disable all interactions with the select co
 #preview
 :ContentPreview{src="/components/ISelect/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 You can also disable individual options by setting the option's `disabled` field to `true`.
@@ -37,7 +37,7 @@ You can also disable individual options by setting the option's `disabled` field
 #preview
 :ContentPreview{src="/components/ISelect/examples/disabled-option"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/disabled-option.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/disabled-option.raw.vue" lang="vue"} -->
 ::
 
 
@@ -48,7 +48,7 @@ Setting the `readonly` property will disable all interactions with the select co
 #preview
 :ContentPreview{src="/components/ISelect/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 
@@ -59,7 +59,7 @@ If you need to be able to quickly clear the value of an select, you can add the 
 #preview
 :ContentPreview{src="/components/ISelect/examples/clearable"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/clearable.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/clearable.raw.vue" lang="vue"} -->
 ::
 
 
@@ -71,7 +71,7 @@ your select type using an icon or text.
 #preview
 :ContentPreview{src="/components/ISelect/examples/prefix-suffix"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/prefix-suffix.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/prefix-suffix.raw.vue" lang="vue"} -->
 ::
 
 
@@ -82,14 +82,14 @@ You can add additional content such as select fields, buttons or plain text, to 
 #preview
 :ContentPreview{src="/components/ISelect/examples/prepend-append-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/prepend-append-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/prepend-append-text.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ISelect/examples/prepend-append-button"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/prepend-append-button.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/prepend-append-button.raw.vue" lang="vue"} -->
 ::
 
 
@@ -100,7 +100,7 @@ You can use the `color` property to set a `light` or `dark` color for your selec
 #preview
 :ContentPreview{src="/components/ISelect/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -111,7 +111,7 @@ You're able to use the `size` modifier to control the size of your select, using
 #preview
 :ContentPreview{src="/components/ISelect/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -122,7 +122,7 @@ You can provide a custom header and footer for the select menu using the `header
 #preview
 :ContentPreview{src="/components/ISelect/examples/header-and-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/header-and-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/header-and-footer.raw.vue" lang="vue"} -->
 ::
 
 
@@ -155,7 +155,7 @@ The expected results are:
 #preview
 :ContentPreview{src="/components/ISelect/examples/rendering-value-by-path"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-value-by-path.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-value-by-path.raw.vue" lang="vue"} -->
 ::
 
 
@@ -166,7 +166,7 @@ If you assign a render method to the `label` property, you can easily construct 
 #preview
 :ContentPreview{src="/components/ISelect/examples/rendering-render-function"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-render-function.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-render-function.raw.vue" lang="vue"} -->
 ::
 
 
@@ -177,7 +177,7 @@ For more advanced option label designs, you can use the `#option` scoped slot to
 #preview
 :ContentPreview{src="/components/ISelect/examples/rendering-scoped-slot"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-scoped-slot.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-scoped-slot.raw.vue" lang="vue"} -->
 ::
 
 

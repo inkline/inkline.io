@@ -18,14 +18,14 @@ Use text alignment utilities to easily align text in components.
 #preview
 :ContentPreview{src="/stories/utilities/text/text-align-justify"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-align-justify.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-align-justify.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/text/text-align"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-align.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-align.raw.vue" lang="vue"} -->
 ::
 
 
@@ -45,7 +45,7 @@ You can wrap text using the `_white-space:normal` utility class.
 #preview
 :ContentPreview{src="/stories/utilities/text/text-wrap"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-wrap.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-wrap.raw.vue" lang="vue"} -->
 ::
 
 ##### Text Nowrap
@@ -55,7 +55,7 @@ You can prevent text from wrapping with a `_white-space:nowrap` utility class.
 #preview
 :ContentPreview{src="/stories/utilities/text/text-nowrap"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-nowrap.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-nowrap.raw.vue" lang="vue"} -->
 ::
 
 ##### Text Truncate
@@ -65,7 +65,7 @@ For longer content, adding the `_text:truncate` utility class will truncate the 
 #preview
 :ContentPreview{src="/stories/utilities/text/text-truncate"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-truncate.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-truncate.raw.vue" lang="vue"} -->
 ::
 
 
@@ -78,7 +78,7 @@ Prevent long strings of text from breaking your layout by using `_text:break-wor
 #preview
 :ContentPreview{src="/stories/utilities/text/text-break"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-break.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-break.raw.vue" lang="vue"} -->
 ::
 
 
@@ -93,7 +93,7 @@ You can transform text in components using text capitalization utility classes.
 #preview
 :ContentPreview{src="/stories/utilities/text/text-transform"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-transform.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-transform.raw.vue" lang="vue"} -->
 ::
 
 
@@ -113,14 +113,14 @@ Font Weight utility classes enable you to emphasize or de-emphasize text by cont
 #preview
 :ContentPreview{src="/stories/utilities/text/font-weight"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-weight.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-weight.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/text/font-weight-relative"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-weight-relative.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-weight-relative.raw.vue" lang="vue"} -->
 ::
 
 
@@ -133,7 +133,7 @@ Italic utility classes allow you to style text with an italic font style. This c
 #preview
 :ContentPreview{src="/stories/utilities/text/font-style-italic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-style-italic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-style-italic.raw.vue" lang="vue"} -->
 ::
 
 
@@ -150,7 +150,7 @@ Font size utilities provide a convenient way to increase or decrease the font si
 #preview
 :ContentPreview{src="/stories/utilities/text/font-size"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-size.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-size.raw.vue" lang="vue"} -->
 ::
 
 
@@ -163,7 +163,7 @@ Change your text to be monospaced using the `_font-family:monospace` utility.
 #preview
 :ContentPreview{src="/stories/utilities/text/font-monospace"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-monospace.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/font-monospace.raw.vue" lang="vue"} -->
 ::
 
 ### Text Decoration
@@ -179,7 +179,7 @@ You can easily remove or add text decoration using the text decoration utility.
 #preview
 :ContentPreview{src="/stories/utilities/text/text-decoration"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-decoration.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-decoration.raw.vue" lang="vue"} -->
 ::
 
 ### Weak Text
@@ -195,7 +195,7 @@ Make your text stand out less using the weak or muted text color utility.
 #preview
 :ContentPreview{src="/stories/utilities/text/text-muted"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-muted.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-muted.raw.vue" lang="vue"} -->
 ::
 
 
@@ -208,7 +208,7 @@ Make your text or link inherit the parent's color using the text reset utility.
 #preview
 :ContentPreview{src="/stories/utilities/text/text-reset"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-reset.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/text-reset.raw.vue" lang="vue"} -->
 ::
 
 
@@ -227,6 +227,6 @@ You can use list utilities to obtain inline and unstyled lists.
 #preview
 :ContentPreview{src="/stories/utilities/text/lists"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/lists.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/text/lists.raw.vue" lang="vue"} -->
 ::
 

@@ -12,7 +12,7 @@ Wrap the trigger element (such as an `<IButton>`) and provide a `<template #body
 #preview
 :ContentPreview{src="/components/ITooltip/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Placement
@@ -37,7 +37,7 @@ Each position also has a `-start` or `-end` variant that sets the tooltip to the
 #preview
 :ContentPreview{src="/components/ITooltip/examples/placement"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/placement.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/placement.raw.vue" lang="vue"} -->
 ::
 
 ### Freeform
@@ -47,7 +47,7 @@ Tooltips can contain text of virtually any size. You can control the wrapping an
 #preview
 :ContentPreview{src="/components/ITooltip/examples/freeform"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/freeform.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/freeform.raw.vue" lang="vue"} -->
 ::
 
 ### Trigger Type
@@ -57,7 +57,7 @@ You can use the `trigger` property to trigger the tooltip on `hover` or `click`.
 #preview
 :ContentPreview{src="/components/ITooltip/examples/trigger"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/trigger.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/trigger.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -67,7 +67,7 @@ You can choose a light or dark color for your tooltip using the `color` modifier
 #preview
 :ContentPreview{src="/components/ITooltip/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -78,7 +78,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/ITooltip/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITooltip/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props

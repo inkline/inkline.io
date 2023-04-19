@@ -13,7 +13,7 @@ Embed styles are directly applied to `<iframe>`, `<embed>`, `<video>`, and `<obj
 #preview
 :ContentPreview{src="/stories/utilities/embed/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/embed/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/embed/basic.raw.vue" lang="vue"} -->
 ::
 
 

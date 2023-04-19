@@ -14,7 +14,7 @@ The separators are automatically added using the CSS `::before` pseudo-element a
 #preview
 :ContentPreview{src="/components/IBreadcrumb/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Dynamically Generated
@@ -24,7 +24,7 @@ You can generate and bind breadcrumbs from your JS data using a combination of `
 #preview
 :ContentPreview{src="/components/IBreadcrumb/examples/dynamically-generated"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/dynamically-generated.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -34,7 +34,7 @@ Inkline includes predefined breadcrumb color variants, each serving its own sema
 #preview
 :ContentPreview{src="/components/IBreadcrumb/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -44,7 +44,7 @@ You're able to use the `size` modifier to control the text and spacing size of y
 #preview
 :ContentPreview{src="/components/IBreadcrumb/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Linking and Routing
@@ -56,7 +56,7 @@ The `<IBreadcrumbItem>` component is well integrated with the Vue Router plugin 
 #preview
 :ContentPreview{src="/components/IBreadcrumb/examples/routing"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/routing.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IBreadcrumb/examples/routing.raw.vue" lang="vue"} -->
 ::
 
 ### Props

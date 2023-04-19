@@ -19,7 +19,7 @@ Providing a default value for a validation schema field can be done using the `v
 #preview
 :ContentPreview{src="/stories/forms/validation/schema/default-value"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/default-value.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/default-value.raw.vue" lang="vue"} -->
 ::
 
 
@@ -30,7 +30,7 @@ Each validator accepts a custom error message using the `message` field. This al
 #preview
 :ContentPreview{src="/stories/forms/validation/schema/validation-message"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/validation-message.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/validation-message.raw.vue" lang="vue"} -->
 ::
 
 
@@ -43,7 +43,7 @@ The string values refer to the schema fields that have to be true before display
 #preview
 :ContentPreview{src="/stories/forms/validation/schema/error-visibility"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/error-visibility.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/error-visibility.raw.vue" lang="vue"} -->
 ::
 
 The default field validation events can be configured globally when initializing Inkline or by updating the value of `this.$inkline.options.validateOn`.
@@ -56,7 +56,7 @@ By using the `validateOn` field you can specify the event that triggers the vali
 #preview
 :ContentPreview{src="/stories/forms/validation/schema/validation-event"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/validation-event.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/validation-event.raw.vue" lang="vue"} -->
 ::
 
 
@@ -72,7 +72,7 @@ Objects that aren't empty and don't have a `value` or `validators` field are tre
 #preview
 :ContentPreview{src="/stories/forms/validation/schema/groups-object"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/groups-object.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/groups-object.raw.vue" lang="vue"} -->
 ::
 
 
@@ -83,6 +83,6 @@ Form groups can also be an `Array` of fields, allowing you to loop over them usi
 #preview
 :ContentPreview{src="/stories/forms/validation/schema/groups-array"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/groups-array.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/schema/groups-array.raw.vue" lang="vue"} -->
 ::
 

@@ -15,7 +15,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/alpha"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/alpha.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/alpha.raw.vue" lang="vue"} -->
 ::
 
 
@@ -25,7 +25,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/alphanumeric"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/alphanumeric.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/alphanumeric.raw.vue" lang="vue"} -->
 ::
 
 
@@ -35,7 +35,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/email"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/email.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/email.raw.vue" lang="vue"} -->
 ::
 
 
@@ -45,7 +45,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/min"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/min.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/min.raw.vue" lang="vue"} -->
 ::
 
 
@@ -55,7 +55,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/max"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/max.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/max.raw.vue" lang="vue"} -->
 ::
 
 
@@ -65,7 +65,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/min-length"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/min-length.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/min-length.raw.vue" lang="vue"} -->
 ::
 
 
@@ -75,7 +75,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/max-length"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/max-length.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/max-length.raw.vue" lang="vue"} -->
 ::
 
 
@@ -85,7 +85,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/number"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/number.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/number.raw.vue" lang="vue"} -->
 ::
 
 
@@ -95,7 +95,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/required"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/required.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/required.raw.vue" lang="vue"} -->
 ::
 
 
@@ -105,7 +105,7 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/same-as"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/same-as.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/same-as.raw.vue" lang="vue"} -->
 ::
 
 
@@ -115,6 +115,6 @@ There are several validation options that can be used in the `validators` field:
 #preview
 :ContentPreview{src="/stories/forms/validation/validators/custom"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/custom.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/validators/custom.raw.vue" lang="vue"} -->
 ::
 

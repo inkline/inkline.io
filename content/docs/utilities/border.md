@@ -19,7 +19,7 @@ Inkline provides a set of utility classes to easily apply borders to all sides o
 #preview
 :ContentPreview{src="/stories/utilities/border/add"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/add.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/add.raw.vue" lang="vue"} -->
 ::
 
 
@@ -36,7 +36,7 @@ Inkline provides a set of utility classes to easily remove borders from all side
 #preview
 :ContentPreview{src="/stories/utilities/border/remove"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/remove.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/remove.raw.vue" lang="vue"} -->
 ::
 
 
@@ -53,21 +53,21 @@ Inkline provides a set of utility classes to easily add specific border colors t
 #preview
 :ContentPreview{src="/stories/utilities/border/color-brand"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/color-brand.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/color-brand.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/border/color-state"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/color-state.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/color-state.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/border/color-neutral"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/color-neutral.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/color-neutral.raw.vue" lang="vue"} -->
 ::
 
 ### Border Radius
@@ -91,5 +91,5 @@ Inkline provides a set of utility classes to easily add specific border radiuses
 #preview
 :ContentPreview{src="/stories/utilities/border/radius"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/radius.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/border/radius.raw.vue" lang="vue"} -->
 ::

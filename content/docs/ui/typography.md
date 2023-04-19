@@ -17,7 +17,7 @@ All HTML heading sizes, `<h1>` through `<h6>`, are calculated using a multiplica
 #preview
 :ContentPreview{src="/stories/core/typography/headings"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/headings.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/headings.raw.vue" lang="vue"} -->
 ::
 
 You can use helper classes to achieve heading styles. Classes `.h1` through `.h6` are available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
@@ -26,7 +26,7 @@ You can use helper classes to achieve heading styles. Classes `.h1` through `.h6
 #preview
 :ContentPreview{src="/stories/core/typography/heading-helpers"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/heading-helpers.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/heading-helpers.raw.vue" lang="vue"} -->
 ::
 
 ### Displays
@@ -36,7 +36,7 @@ Displays are text elements larger than headings used for grabbing the viewer's a
 #preview
 :ContentPreview{src="/stories/core/typography/displays"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/displays.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/displays.raw.vue" lang="vue"} -->
 ::
 
 ### Lead
@@ -46,7 +46,7 @@ A lead paragraph sets the tone for the rest of the content that follows. It is u
 #preview
 :ContentPreview{src="/stories/core/typography/lead"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/lead.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/lead.raw.vue" lang="vue"} -->
 ::
 
 ### Inline Text Elements
@@ -56,7 +56,7 @@ Inkline provides basic styling for all common HTML5 inline text elements.
 #preview
 :ContentPreview{src="/stories/core/typography/inline-text-elements"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/inline-text-elements.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/inline-text-elements.raw.vue" lang="vue"} -->
 ::
 
 To avoid any unwanted semantic implications that the tags would bring, `.mark` and `.small` classes are also
@@ -75,7 +75,7 @@ You can easily realign text to components with text alignment classes.
 #preview
 :ContentPreview{src="/stories/core/typography/text-alignment"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/text-alignment.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/text-alignment.raw.vue" lang="vue"} -->
 ::
 
 #### Text Wrapping
@@ -85,7 +85,7 @@ You can prevent text wrapping using the `._text:nowrap` utility class.
 #preview
 :ContentPreview{src="/stories/core/typography/text-wrapping"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/text-wrapping.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/text-wrapping.raw.vue" lang="vue"} -->
 ::
 
 #### Responsive Utilities
@@ -96,7 +96,7 @@ You can align, wrap or truncate text responsively for any given `xs`, `sm`, `md`
 #preview
 :ContentPreview{src="/stories/core/typography/responsive-utilities"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/responsive-utilities.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/responsive-utilities.raw.vue" lang="vue"} -->
 ::
 
 ### Abbreviations
@@ -108,7 +108,7 @@ assistive technologies.
 #preview
 :ContentPreview{src="/stories/core/typography/abbreviations"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/abbreviations.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/abbreviations.raw.vue" lang="vue"} -->
 ::
 
 ### Blockquotes
@@ -119,7 +119,7 @@ HTML as the quote.
 #preview
 :ContentPreview{src="/stories/core/typography/blockquotes"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/blockquotes.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/blockquotes.raw.vue" lang="vue"} -->
 ::
 
 ### Lists
@@ -133,7 +133,7 @@ When enumerating elements in no specific order, use an unordered list.
 #preview
 :ContentPreview{src="/stories/core/typography/unordered-list"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/unordered-list.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/unordered-list.raw.vue" lang="vue"} -->
 ::
 
 #### Ordered Lists
@@ -143,7 +143,7 @@ When enumerating elements in a specific order, use an ordered list.
 #preview
 :ContentPreview{src="/stories/core/typography/ordered-list"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/ordered-list.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/ordered-list.raw.vue" lang="vue"} -->
 ::
 
 #### Unstyled Lists
@@ -153,7 +153,7 @@ To remove the default `list-style` and `margin` on list items, use the `.list.-u
 #preview
 :ContentPreview{src="/stories/core/typography/unstyled-list"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/unstyled-list.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/unstyled-list.raw.vue" lang="vue"} -->
 ::
 
 #### Inline Lists
@@ -163,7 +163,7 @@ Inline lists are a great way to display a series of related items in a single li
 #preview
 :ContentPreview{src="/stories/core/typography/inline-list"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/inline-list.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/inline-list.raw.vue" lang="vue"} -->
 ::
 
 #### Description Lists
@@ -177,5 +177,5 @@ In the example below you can see that we're using the globally defined `.row` an
 #preview
 :ContentPreview{src="/stories/core/typography/description-list"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/typography/description-list.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/typography/description-list.raw.vue" lang="vue"} -->
 ::

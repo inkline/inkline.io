@@ -12,7 +12,7 @@ Inkline provides you with custom button styles with support for multiple colors,
 #preview
 :ContentPreview{src="/components/IButton/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ Inkline includes several predefined button colors, each serving its own semantic
 #preview
 :ContentPreview{src="/components/IButton/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -33,7 +33,7 @@ You're able to use the `size` modifier to control the size of your buttons, usin
 #preview
 :ContentPreview{src="/components/IButton/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -44,7 +44,7 @@ The `<IButton>` component creates a `<button>` element behind the scenes. Theref
 #preview
 :ContentPreview{src="/components/IButton/examples/button-type"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/button-type.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/button-type.raw.vue" lang="vue"} -->
 ::
 
 If you need to change the `<button>` node used to render the component, you can use the `tag` property to change it.
@@ -53,7 +53,7 @@ If you need to change the `<button>` node used to render the component, you can 
 #preview
 :ContentPreview{src="/components/IButton/examples/button-tag"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/button-tag.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/button-tag.raw.vue" lang="vue"} -->
 ::
 
 
@@ -64,7 +64,7 @@ Sometimes, buttons should not stand out so much. Replace the default look and fe
 #preview
 :ContentPreview{src="/components/IButton/examples/outline"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/outline.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/outline.raw.vue" lang="vue"} -->
 ::
 
 
@@ -75,7 +75,7 @@ You can create link buttons that look like normal links. Use the `color` propert
 #preview
 :ContentPreview{src="/components/IButton/examples/link"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/link.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/link.raw.vue" lang="vue"} -->
 ::
 
 ### Circle Variant
@@ -85,7 +85,7 @@ Circle buttons are very common when working with icons. You can transform your b
 #preview
 :ContentPreview{src="/components/IButton/examples/circle"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/circle.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/circle.raw.vue" lang="vue"} -->
 ::
 
 ### Block Variant
@@ -95,7 +95,7 @@ You can create block level buttons that span the full width of a parent by addin
 #preview
 :ContentPreview{src="/components/IButton/examples/block"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/block.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/block.raw.vue" lang="vue"} -->
 ::
 
 
@@ -106,7 +106,7 @@ You can easily use the `IButton` component together with any icon component (i.e
 #preview
 :ContentPreview{src="/components/IButton/examples/icon"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/icon.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/icon.raw.vue" lang="vue"} -->
 ::
 
 ### Active State
@@ -116,7 +116,7 @@ Buttons will appear pressed when active. You can force a button to have an activ
 #preview
 :ContentPreview{src="/components/IButton/examples/state-active"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/state-active.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/state-active.raw.vue" lang="vue"} -->
 ::
 
 
@@ -127,7 +127,7 @@ You can make buttons look inactive or disabled by adding the `disabled` boolean 
 #preview
 :ContentPreview{src="/components/IButton/examples/state-disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/state-disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/state-disabled.raw.vue" lang="vue"} -->
 ::
 
 
@@ -140,7 +140,7 @@ By default, the button will display a standard Inkline Loader Component. You can
 #preview
 :ContentPreview{src="/components/IButton/examples/state-loading"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/state-loading.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/state-loading.raw.vue" lang="vue"} -->
 ::
 
 
@@ -153,7 +153,7 @@ The `<IButton>` component is also integrated with the [Vue Router](https://route
 #preview
 :ContentPreview{src="/components/IButton/examples/routing"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/routing.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButton/examples/routing.raw.vue" lang="vue"} -->
 ::
 
 

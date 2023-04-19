@@ -241,6 +241,10 @@ export function useSidebarNavigation(): NavigationPage[] {
                     url: '/docs/components/tabs'
                 },
                 {
+                    title: 'Toast',
+                    url: '/docs/components/toast'
+                },
+                {
                     title: 'Tooltip',
                     url: '/docs/components/tooltip'
                 }

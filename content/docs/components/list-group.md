@@ -12,7 +12,7 @@ List groups support any content inside of them. Take advantage of their flexibil
 #preview
 :ContentPreview{src="/components/IListGroup/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 Behind the scenes, the `<IListGroupItem>` is converted into a `<RouterLink>` if it has the `:to` property, or a plain `<a>` tag if it has a `href` property. Otherwise, it uses a simple `<div>` tag.
@@ -24,7 +24,7 @@ The list group component comes with a predefined set of basic color variants. Yo
 #preview
 :ContentPreview{src="/components/IListGroup/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -34,7 +34,7 @@ You're able to use the `size` modifier to control the padding of your list group
 #preview
 :ContentPreview{src="/components/IListGroup/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Active State
@@ -46,7 +46,7 @@ If you're providing a `to` property, the list group item will be converted into 
 #preview
 :ContentPreview{src="/components/IListGroup/examples/state-active"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/state-active.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/state-active.raw.vue" lang="vue"} -->
 ::
 
 ### Disabled State
@@ -56,7 +56,7 @@ You can control the disabled state of your `<IListGroupItem>` using the `disable
 #preview
 :ContentPreview{src="/components/IListGroup/examples/state-disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/state-disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/state-disabled.raw.vue" lang="vue"} -->
 ::
 
 ### Borderless Variant
@@ -66,7 +66,7 @@ You can disable the border of your list group by setting the `border` property t
 #preview
 :ContentPreview{src="/components/IListGroup/examples/borderless"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/borderless.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/borderless.raw.vue" lang="vue"} -->
 ::
 
 ### Item Content
@@ -76,7 +76,7 @@ The `<IListGroupItem>` accepts any type of content, allowing you to create large
 #preview
 :ContentPreview{src="/components/IListGroup/examples/content"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/content.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IListGroup/examples/content.raw.vue" lang="vue"} -->
 ::
 
 ### Props

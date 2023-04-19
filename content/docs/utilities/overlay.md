@@ -12,7 +12,7 @@ Add the `_overlay` utility class to an element to make it cover the entire conta
 #preview
 :ContentPreview{src="/stories/utilities/overlay/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/overlay/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/overlay/basic.raw.vue" lang="vue"} -->
 ::
 
 
@@ -23,5 +23,5 @@ Add the `_overlay-link` utility class to a link to make the entire containing bl
 #preview
 :ContentPreview{src="/stories/utilities/overlay/link"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/overlay/link.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/overlay/link.raw.vue" lang="vue"} -->
 ::

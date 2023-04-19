@@ -12,7 +12,7 @@ Pagination items are automatically generated based on the `items-total` and the 
 #preview
 :ContentPreview{src="/components/IPagination/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ Inkline comes with two predefined pagination styles. You can set the color style
 #preview
 :ContentPreview{src="/components/IPagination/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -32,7 +32,7 @@ You're able to use the `size` property to control the size of your pagination it
 #preview
 :ContentPreview{src="/components/IPagination/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Limit
@@ -44,7 +44,7 @@ Make sure this value is an `odd number` to have the active item centered.
 #preview
 :ContentPreview{src="/components/IPagination/examples/limit"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/limit.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/limit.raw.vue" lang="vue"} -->
 ::
 
 To make things even better, you can responsively control the number of items at each breakpoint, to make sure your design always looks great.
@@ -53,7 +53,7 @@ To make things even better, you can responsively control the number of items at 
 #preview
 :ContentPreview{src="/components/IPagination/examples/limit-responsive"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/limit-responsive.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/limit-responsive.raw.vue" lang="vue"} -->
 ::
 
 ### Quick Links
@@ -63,7 +63,7 @@ You're able to use the `quickLink` property to allow the user to click the `…`
 #preview
 :ContentPreview{src="/components/IPagination/examples/quick-links"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/quick-links.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPagination/examples/quick-links.raw.vue" lang="vue"} -->
 ::
 
 

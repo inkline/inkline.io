@@ -9,7 +9,7 @@ interface TableOfContentsEntry {
     children: TableOfContentsEntry[];
 }
 
-const docsPageSelector = '#docs-page > article > div';
+const docsPageSelector = '#page > div';
 
 export default defineComponent({
     setup() {

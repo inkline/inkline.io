@@ -27,7 +27,7 @@ this.form.group[field] = this.$inkline.form(fieldSchema);
 #preview
 :ContentPreview{src="/stories/forms/validation/methods/groups-object"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/methods/groups-object.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/methods/groups-object.raw.vue" lang="vue"} -->
 ::
 
 You can use `options.group` to specify whether the value being set is a group of fields. If not specified or set to `false`, the field will be a standalone field.
@@ -51,7 +51,7 @@ this.form.group.splice(0, 1, this.$inkline.form(fieldSchema));
 #preview
 :ContentPreview{src="/stories/forms/validation/methods/groups-array"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/methods/groups-array.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/methods/groups-array.raw.vue" lang="vue"} -->
 ::
 
 You can use `options.group` to specify whether the value being added is a group of fields. If not specified or set to `false`, the field will be a standalone field.

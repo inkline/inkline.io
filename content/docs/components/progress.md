@@ -12,7 +12,7 @@ Progress components are built with two components: a wrapper `<IProgress>` and a
 #preview
 :ContentPreview{src="/components/IProgress/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -22,7 +22,7 @@ Inkline includes multiple progress styles. You set the wrapper `<IProgress>` bac
 #preview
 :ContentPreview{src="/components/IProgress/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 More importantly, you can change the color of an `<IProgressBar>` using the `color` property.
@@ -31,7 +31,7 @@ More importantly, you can change the color of an `<IProgressBar>` using the `col
 #preview
 :ContentPreview{src="/components/IProgress/examples/bar-color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/bar-color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/bar-color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -42,7 +42,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/IProgress/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Value
@@ -52,7 +52,7 @@ Inkline allows you to set a `min` and `max` modifier to calculate the progress b
 #preview
 :ContentPreview{src="/components/IProgress/examples/value"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/value.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/value.raw.vue" lang="vue"} -->
 ::
 
 ### Stacked Bars
@@ -62,7 +62,7 @@ You can add multiple `<IProgressBar>` inside the `<IProgress>` component to stac
 #preview
 :ContentPreview{src="/components/IProgress/examples/stacked"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/stacked.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IProgress/examples/stacked.raw.vue" lang="vue"} -->
 ::
 
 

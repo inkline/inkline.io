@@ -10,7 +10,7 @@ description: Toggles are boolean form components used for easily enabling or dis
 #preview
 :ContentPreview{src="/components/IToggle/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 
@@ -21,7 +21,7 @@ You can set the toggle input to be readonly by using the `readonly` property.
 #preview
 :ContentPreview{src="/components/IToggle/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 
@@ -32,7 +32,7 @@ You can set the toggle input to be disabled by using the `disabled` property.
 #preview
 :ContentPreview{src="/components/IToggle/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 
@@ -43,7 +43,7 @@ You can use the `color` property to set a `light` or `dark` color for your toggl
 #preview
 :ContentPreview{src="/components/IToggle/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -54,7 +54,7 @@ You're able to use the `size` property to control the size of your inputs, using
 #preview
 :ContentPreview{src="/components/IToggle/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IToggle/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 Applying the size `size` property to an `IFormGroup` will also set the chosen size to all of its `IToggle` inputs.

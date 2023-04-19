@@ -14,7 +14,7 @@ Width and height utilities provide support for `25%`, `50%`, `75%`, `100%`, and 
 #preview
 :ContentPreview{src="/stories/utilities/sizing/width"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/width.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/width.raw.vue" lang="vue"} -->
 ::
 
 ### Height
@@ -23,7 +23,7 @@ Width and height utilities provide support for `25%`, `50%`, `75%`, `100%`, and 
 #preview
 :ContentPreview{src="/stories/utilities/sizing/height"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/height.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/height.raw.vue" lang="vue"} -->
 ::
 
 ### Max Width
@@ -32,7 +32,7 @@ Width and height utilities provide support for `25%`, `50%`, `75%`, `100%`, and 
 #preview
 :ContentPreview{src="/stories/utilities/sizing/max-width"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/max-width.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/max-width.raw.vue" lang="vue"} -->
 ::
 
 ### Max Height
@@ -41,7 +41,7 @@ Width and height utilities provide support for `25%`, `50%`, `75%`, `100%`, and 
 #preview
 :ContentPreview{src="/stories/utilities/sizing/max-height"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/max-height.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/sizing/max-height.raw.vue" lang="vue"} -->
 ::
 
 ### Viewport Relative Sizing

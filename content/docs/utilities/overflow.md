@@ -15,5 +15,5 @@ Overflow functionality is provided for two values by default, and they are not r
 #preview
 :ContentPreview{src="/stories/utilities/overflow/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/overflow/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/overflow/basic.raw.vue" lang="vue"} -->
 ::

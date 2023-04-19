@@ -20,7 +20,7 @@ You can use vertical align utilities to change the alignment of elements. Please
 #preview
 :ContentPreview{src="/stories/utilities/vertical-align/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/vertical-align/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/vertical-align/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Table Cell Alignment
@@ -30,5 +30,5 @@ You can use vertical align utilities to change the alignment of table cells.
 #preview
 :ContentPreview{src="/stories/utilities/vertical-align/table"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/vertical-align/table.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/vertical-align/table.raw.vue" lang="vue"} -->
 ::

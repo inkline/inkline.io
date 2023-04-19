@@ -14,7 +14,7 @@ Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle bracket
 #preview
 :ContentPreview{src="/stories/core/code/inline"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/code/inline.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/code/inline.raw.vue" lang="vue"} -->
 ::
 
 ### Block
@@ -25,7 +25,7 @@ rendering. You may optionally add the `.-scrollable` modifier, which will set a 
 #preview
 :ContentPreview{src="/stories/core/code/block"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/code/block.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/code/block.raw.vue" lang="vue"} -->
 ::
 
 ### Variables
@@ -35,7 +35,7 @@ For indicating variables use the HTML5 `<var>` tag.
 #preview
 :ContentPreview{src="/stories/core/code/variables"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/code/variables.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/code/variables.raw.vue" lang="vue"} -->
 ::
 
 ### User Input
@@ -45,7 +45,7 @@ You can use the `<kbd>` to indicate input that is typically entered via keyboard
 #preview
 :ContentPreview{src="/stories/core/code/user-input"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/code/user-input.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/code/user-input.raw.vue" lang="vue"} -->
 ::
 
 ### Sample Output
@@ -55,5 +55,5 @@ You can use the `<samp>` for indicating sample output from a program.
 #preview
 :ContentPreview{src="/stories/core/code/sample-output"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/code/sample-output.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/code/sample-output.raw.vue" lang="vue"} -->
 ::

@@ -24,42 +24,42 @@ Brand utility classes make it simple to maintain a consistent brand identity acr
 #preview
 :ContentPreview{src="/stories/utilities/color/brand-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/brand-primary-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-primary-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-primary-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/brand-secondary-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-secondary-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-secondary-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/brand-light-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-light-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-light-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/brand-dark-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-dark-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-dark-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/brand-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/brand-text.raw.vue" lang="vue"} -->
 ::
 
 
@@ -72,42 +72,42 @@ State color utilities help convey important information to users, such as the su
 #preview
 :ContentPreview{src="/stories/utilities/color/state-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/state-info-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-info-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-info-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/state-success-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-success-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-success-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/state-warning-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-warning-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-warning-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/state-danger-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-danger-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-danger-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/state-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/state-text.raw.vue" lang="vue"} -->
 ::
 
 
@@ -121,7 +121,7 @@ Basic color utilities provide flexibility in your design system, enabling you to
 #preview
 :ContentPreview{src="/stories/utilities/color/basic-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/basic-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/basic-background.raw.vue" lang="vue"} -->
 ::
 
 
@@ -129,7 +129,7 @@ Basic color utilities provide flexibility in your design system, enabling you to
 #preview
 :ContentPreview{src="/stories/utilities/color/basic-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/basic-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/basic-text.raw.vue" lang="vue"} -->
 ::
 
 
@@ -142,12 +142,12 @@ Neutral color utilities help maintain a clean and professional appearance, makin
 #preview
 :ContentPreview{src="/stories/utilities/color/neutral-background"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/neutral-background.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/neutral-background.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/color/neutral-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/neutral-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/color/neutral-text.raw.vue" lang="vue"} -->
 ::

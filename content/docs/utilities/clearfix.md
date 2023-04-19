@@ -16,7 +16,7 @@ In the following example, without adding the clearfix helper, the wrapping div w
 #preview
 :ContentPreview{src="/stories/utilities/clearfix/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/clearfix/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/clearfix/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Sass Mixin

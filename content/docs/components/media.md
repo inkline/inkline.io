@@ -12,7 +12,7 @@ Media objects are useful for repetitive components that have a media element pos
 #preview
 :ContentPreview{src="/components/IMedia/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IMedia/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IMedia/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Nesting
@@ -22,7 +22,7 @@ Media components can be nested inside one another to create a parent-child relat
 #preview
 :ContentPreview{src="/components/IMedia/examples/nesting"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IMedia/examples/nesting.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IMedia/examples/nesting.raw.vue" lang="vue"} -->
 ::
 
 ### Alignment
@@ -32,7 +32,7 @@ The media element in a media component can be aligned with flexbox helper classe
 #preview
 :ContentPreview{src="/components/IMedia/examples/alignment"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IMedia/examples/alignment.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IMedia/examples/alignment.raw.vue" lang="vue"} -->
 ::
 
 ### Slots

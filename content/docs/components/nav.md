@@ -12,7 +12,7 @@ Navigation components make use of the base `<INav>` component for building all t
 #preview
 :ContentPreview{src="/components/INav/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INav/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INav/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 Behind the scenes, the `<INavItem>` is converted into a `<RouterLink>` if it has the `:to` property, or a plain `<a>` tag if it has a `href` property. Otherwise, it uses a simple `<div>` tag.
@@ -24,7 +24,7 @@ You can stack nav items into a vertical navigation component by setting the `ver
 #preview
 :ContentPreview{src="/components/INav/examples/vertical"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INav/examples/vertical.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INav/examples/vertical.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -34,7 +34,7 @@ You're able to use the `color` modifier to control the color of your navs, using
 #preview
 :ContentPreview{src="/components/INav/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INav/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INav/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -44,7 +44,7 @@ You're able to use the `size` modifier to control the size of your navs, using o
 #preview
 :ContentPreview{src="/components/INav/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INav/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INav/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Linking and Routing
@@ -56,7 +56,7 @@ The `<INavItem>` component is well integrated with the Vue Router plugin and wil
 #preview
 :ContentPreview{src="/components/INav/examples/routing"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INav/examples/routing.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INav/examples/routing.raw.vue" lang="vue"} -->
 ::
 
 #### Active State
@@ -67,7 +67,7 @@ You can control the active state of your `<INavItem>` using the `active` propert
 #preview
 :ContentPreview{src="/components/INav/examples/state-active"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INav/examples/state-active.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INav/examples/state-active.raw.vue" lang="vue"} -->
 ::
 
 ### Props

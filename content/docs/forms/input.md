@@ -12,7 +12,7 @@ Inputs are the simplest and most used type of form control. Inkline provides you
 #preview
 :ContentPreview{src="/components/IInput/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Input Type
@@ -24,7 +24,7 @@ Keep in mind that native input types look and are treated differently in each br
 #preview
 :ContentPreview{src="/components/IInput/examples/type"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/type.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/type.raw.vue" lang="vue"} -->
 ::
 
 ### Disabled State
@@ -34,7 +34,7 @@ Setting the `disabled` property will disable all interactions with the input com
 #preview
 :ContentPreview{src="/components/IInput/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 ### Readonly State
@@ -44,7 +44,7 @@ Setting the `readonly` property will disable all interactions with the input com
 #preview
 :ContentPreview{src="/components/IInput/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 ### Clearable
@@ -54,7 +54,7 @@ If you need to be able to quickly clear the value of an input, you can add the `
 #preview
 :ContentPreview{src="/components/IInput/examples/clearable"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/clearable.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/clearable.raw.vue" lang="vue"} -->
 ::
 
 ### Prefix and Suffix
@@ -64,7 +64,7 @@ Inkline allows you to easily add a prefix or suffix to your inputs. Using prefix
 #preview
 :ContentPreview{src="/components/IInput/examples/prefix-suffix"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prefix-suffix.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prefix-suffix.raw.vue" lang="vue"} -->
 ::
 
 ### Prepend and Append
@@ -74,21 +74,21 @@ You can add additional content such as select fields, buttons or plain text, to 
 #preview
 :ContentPreview{src="/components/IInput/examples/prepend-append-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prepend-append-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prepend-append-text.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IInput/examples/prepend-append-button"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prepend-append-button.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prepend-append-button.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IInput/examples/prepend-append-dropdown"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prepend-append-dropdown.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/prepend-append-dropdown.raw.vue" lang="vue"} -->
 ::
 
 
@@ -99,7 +99,7 @@ You can use the `color` property to set a `light` or `dark` color for your input
 #preview
 :ContentPreview{src="/components/IInput/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -109,7 +109,7 @@ You're able to use the `size` modifier to control the size of your inputs, using
 #preview
 :ContentPreview{src="/components/IInput/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IInput/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props

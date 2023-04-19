@@ -25,63 +25,63 @@ provide the element positioning only, without colors and paddings.
 #preview
 :ContentPreview{src="/components/ILayout/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/content-header"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-header.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-header.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/content-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/content-with-left-aside-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-with-left-aside-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-with-left-aside-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/content-with-right-aside-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-with-right-aside-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-with-right-aside-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/content-with-left-and-right-asides-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-with-left-and-right-asides-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/content-with-left-and-right-asides-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/left-aside-with-content-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/left-aside-with-content-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/left-aside-with-content-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/right-aside-with-content-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/right-aside-with-content-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/right-aside-with-content-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/ILayout/examples/left-and-right-asides-with-content-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/left-and-right-asides-with-content-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ILayout/examples/left-and-right-asides-with-content-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ### Props

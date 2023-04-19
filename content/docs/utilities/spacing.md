@@ -65,28 +65,28 @@ Here are some examples of these utility classes:
 #preview
 :ContentPreview{src="/stories/utilities/spacing/top"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/top.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/top.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/spacing/right"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/right.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/right.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/spacing/bottom"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/bottom.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/bottom.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/spacing/left"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/left.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/left.raw.vue" lang="vue"} -->
 ::
 
 ### Horizontal Centering
@@ -96,5 +96,5 @@ You can set a `left` and `right` margin using the `x` side parameter, such as `_
 #preview
 :ContentPreview{src="/stories/utilities/spacing/horizontal-center"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/horizontal-center.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/spacing/horizontal-center.raw.vue" lang="vue"} -->
 ::

@@ -12,7 +12,7 @@ The `<IFormGroup>` component is a wrapper that provides proper grouping of label
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Disabled State
@@ -22,7 +22,7 @@ Setting a form group as `disabled` will cause all of its child form components t
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -35,21 +35,21 @@ All of the components inside the `<IFormGroup>` will inherit the parent form gro
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/size-variants-sm"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/size-variants-sm.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/size-variants-sm.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/size-variants-md"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/size-variants-md.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/size-variants-md.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/size-variants-lg"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/size-variants-lg.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/size-variants-lg.raw.vue" lang="vue"} -->
 ::
 
 ### Form Group Nesting
@@ -60,28 +60,28 @@ You can nest form groups in order to control the `disabled`, `readonly` and `siz
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/nesting"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/nesting-disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting-disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting-disabled.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/nesting-readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting-readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting-readonly.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/IFormGroup/examples/nesting-size-variants-lg"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting-size-variants-lg.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IFormGroup/examples/nesting-size-variants-lg.raw.vue" lang="vue"} -->
 ::
 
 

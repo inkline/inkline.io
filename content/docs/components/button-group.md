@@ -12,7 +12,7 @@ You can group a series of `<IButton>` components inside a `<IButtonGroup>` to di
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -22,7 +22,7 @@ You're able to use the `size` modifier to control the size of your button group,
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Block Variant
@@ -32,7 +32,7 @@ You can create block button groups that span the full width of a parent by addin
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/block"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/block.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/block.raw.vue" lang="vue"} -->
 ::
 
 ### Vertical Basic Example
@@ -43,7 +43,7 @@ Using the `vertical` property, you can stack a set of buttons vertically rather 
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/vertical"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical.raw.vue" lang="vue"} -->
 ::
 
 ### Vertical Size Variants
@@ -53,7 +53,7 @@ Just like horizontal button groups, the size of vertical button groups can also 
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/vertical-size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical-size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical-size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Vertical Block 
@@ -63,7 +63,7 @@ Just like horizontal block button groups, you can also set vertical button group
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/vertical-block"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical-block.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/vertical-block.raw.vue" lang="vue"} -->
 ::
 
 ### Nested
@@ -73,7 +73,7 @@ When placing a `<IButtonGroup>` inside another `<IButtonGroup>`, you'll get a mi
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/nested"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/nested.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/nested.raw.vue" lang="vue"} -->
 ::
 
 ### Nested Block
@@ -83,7 +83,7 @@ You can also nest `block` button groups.
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/nested-block"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/nested-block.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/nested-block.raw.vue" lang="vue"} -->
 ::
 
 
@@ -94,7 +94,7 @@ You can make button groups look inactive or disabled by adding the `disabled` bo
 #preview
 :ContentPreview{src="/components/IButtonGroup/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IButtonGroup/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 

@@ -12,7 +12,7 @@ Using the `ICheckbox` component to determine a boolean value is very straightfor
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Disabled State
@@ -23,7 +23,7 @@ You can disable a checkbox using the `disabled` property.
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 ### Readonly State
@@ -34,7 +34,7 @@ You can make a checkbox readonly using the `readonly` property.
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 ### Indeterminate State
@@ -44,7 +44,7 @@ You can set the state of a `<ICheckbox>` to be indeterminate by using the `indet
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/indeterminate"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/indeterminate.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/indeterminate.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -54,7 +54,7 @@ You can use the `color` property to set a `light` or `dark` color for your check
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -65,7 +65,7 @@ You're able to use the `size` property to control the size of your checkbox, usi
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Group Example
@@ -75,7 +75,7 @@ Using the `ICheckbox` component together with a `ICheckboxGroup` allows you to c
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/group"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group.raw.vue" lang="vue"} -->
 ::
 
 ### Group Disabled State
@@ -85,7 +85,7 @@ You can disable an entire checkbox group using the `disabled` property.
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/group-disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-disabled.raw.vue" lang="vue"} -->
 ::
 
 
@@ -96,7 +96,7 @@ You can use the `color` property to set a `light` or `dark` color for your check
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/group-color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Group Size Variants
@@ -108,7 +108,7 @@ The chosen size will be applied to all of its child inputs.
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/group-size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Custom vs. Native
@@ -118,7 +118,7 @@ Inkline uses a custom checkbox design by default. You can use the `native` prope
 #preview
 :ContentPreview{src="/components/ICheckbox/examples/native"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/native.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/native.raw.vue" lang="vue"} -->
 ::
 
 

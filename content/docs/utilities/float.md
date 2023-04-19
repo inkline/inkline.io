@@ -16,7 +16,7 @@ You can use the float utility classes to float an element to the left or right, 
 #preview
 :ContentPreview{src="/stories/utilities/float/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/float/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/float/basic.raw.vue" lang="vue"} -->
 ::
 
 ::ContentAlert

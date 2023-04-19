@@ -30,14 +30,14 @@ Where `value` can be one of:
 #preview
 :ContentPreview{src="/stories/utilities/display/inline"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/display/inline.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/display/inline.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/utilities/display/block"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/display/block.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/display/block.raw.vue" lang="vue"} -->
 ::
 
 

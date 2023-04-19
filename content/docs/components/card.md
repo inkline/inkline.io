@@ -16,7 +16,7 @@ By default, cards are set to have `width: 100%`, fully spanning the width of the
 #preview
 :ContentPreview{src="/components/ICard/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Body
@@ -26,7 +26,7 @@ The building block of a card is the card body. All the content placed in the def
 #preview
 :ContentPreview{src="/components/ICard/examples/card-body"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/card-body.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/card-body.raw.vue" lang="vue"} -->
 ::
 
 ### Header and Footer
@@ -36,7 +36,7 @@ Optionally, you can provide a header or a footer for your cards.
 #preview
 :ContentPreview{src="/components/ICard/examples/card-header-footer"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/card-header-footer.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/card-header-footer.raw.vue" lang="vue"} -->
 ::
 
 ### Image Header
@@ -46,7 +46,7 @@ You can provide an image at the top of the card, using the `image` slot.
 #preview
 :ContentPreview{src="/components/ICard/examples/image"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/image.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/image.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -56,7 +56,7 @@ Inkline includes several predefined card colors that you can use within your app
 #preview
 :ContentPreview{src="/components/ICard/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -67,7 +67,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/ICard/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICard/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props

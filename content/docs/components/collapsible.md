@@ -12,7 +12,7 @@ Collapsing an element will animate the height from zero to its default value. Th
 #preview
 :ContentPreview{src="/components/ICollapsible/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Item Header
@@ -22,7 +22,7 @@ You can use the `header` slot to provide a custom title for the collapsible pane
 #preview
 :ContentPreview{src="/components/ICollapsible/examples/header"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/header.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/header.raw.vue" lang="vue"} -->
 ::
 
 ### Default Open Panels
@@ -32,7 +32,7 @@ Panels can be opened by default, on page load, using the `v-model` directive of 
 #preview
 :ContentPreview{src="/components/ICollapsible/examples/default-open"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/default-open.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/default-open.raw.vue" lang="vue"} -->
 ::
 
 ### Accordion
@@ -42,7 +42,7 @@ Accordion collapsible groups can have only one content panel open at a single ti
 #preview
 :ContentPreview{src="/components/ICollapsible/examples/accordion"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/accordion.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/accordion.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -52,7 +52,7 @@ Inkline includes basic predefined collapsible colors that you can use within you
 #preview
 :ContentPreview{src="/components/ICollapsible/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -63,7 +63,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/ICollapsible/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ICollapsible/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props

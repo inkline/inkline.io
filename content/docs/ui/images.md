@@ -16,7 +16,7 @@ To achieve that, we apply `max-width: 100%;` and `height: auto;` to the image so
 #preview
 :ContentPreview{src="/stories/core/images/responsive"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/fluid.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/fluid.raw.vue" lang="vue"} -->
 ::
 
 #### SVG Images and IE 10
@@ -31,7 +31,7 @@ Images in Inkline can be made fluid using the `.image` class and the `.-fluid` m
 #preview
 :ContentPreview{src="/stories/core/images/fluid"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/fluid.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/fluid.raw.vue" lang="vue"} -->
 ::
 
 
@@ -42,7 +42,7 @@ You can use the `.image` class and the `.-thumbnail` modifier class to give an i
 #preview
 :ContentPreview{src="/stories/core/images/thumbnail"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/thumbnail.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/thumbnail.raw.vue" lang="vue"} -->
 ::
 
 ### Polaroid
@@ -52,7 +52,7 @@ Besides thumbnails, you can opt for a retro look having a larger bottom border u
 #preview
 :ContentPreview{src="/stories/core/images/polaroid"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/polaroid.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/polaroid.raw.vue" lang="vue"} -->
 ::
 
 ### Image Alignment
@@ -62,28 +62,28 @@ Align images with the helper classes or text alignment classes. Block-level imag
 #preview
 :ContentPreview{src="/stories/core/images/alignment-left"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-left.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-left.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/core/images/alignment-right"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-right.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-right.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/core/images/alignment-center"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-center.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-center.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/stories/core/images/alignment-margin-auto"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-margin-auto.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/alignment-margin-auto.raw.vue" lang="vue"} -->
 ::
 
 ### Picture
@@ -94,5 +94,5 @@ the `.image` class to the `<img>` and not to the `<picture>` tag.
 #preview
 :ContentPreview{src="/stories/core/images/picture"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/core/images/picture.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/core/images/picture.raw.vue" lang="vue"} -->
 ::

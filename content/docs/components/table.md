@@ -12,7 +12,7 @@ Using the most basic table markup, here’s how tables look in Inkline. All tabl
 #preview
 :ContentPreview{src="/components/ITable/examples/basic" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 [//]: # (::ContentAlert)
@@ -26,7 +26,7 @@ Add the `border` property for borders on all sides of the table and table cells.
 #preview
 :ContentPreview{src="/components/ITable/examples/bordered" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/bordered.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/bordered.raw.vue" lang="vue"} -->
 ::
 
 ### Striped Variant
@@ -36,7 +36,7 @@ Add the `striped` property to add zebra-striping to any table row within the tab
 #preview
 :ContentPreview{src="/components/ITable/examples/striped" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/striped.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/striped.raw.vue" lang="vue"} -->
 ::
 
 ### Hoverable Variant
@@ -46,7 +46,7 @@ Add the `hover` property to enable a hover state on table rows within a `<tbody>
 #preview
 :ContentPreview{src="/components/ITable/examples/hover" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/hover.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/hover.raw.vue" lang="vue"} -->
 ::
 
 ### Responsive Table
@@ -58,7 +58,7 @@ You can target specific responsive breakpoints by setting a value to the `respon
 #preview
 :ContentPreview{src="/components/ITable/examples/responsive" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/responsive.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/responsive.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -68,7 +68,7 @@ Tables can be themed using the `color` property. You can use colors such as `lig
 #preview
 :ContentPreview{src="/components/ITable/examples/color-variants" off="layout"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ITable/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props

@@ -79,7 +79,7 @@ Next, the created `form` object needs to be bound to the form input components i
 #preview
 :ContentPreview{src="/stories/forms/validation/basic-binding"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/basic-binding.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/basic-binding.raw.vue" lang="vue"} -->
 ::
 
 For the example above, `this.form.username` and `this.form.password` would be objects containing the field value, errors and validation statuses.
@@ -147,7 +147,7 @@ export default defineComponent({
 #preview
 :ContentPreview{src="/stories/forms/validation/basic-validators"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/basic-validators.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/forms/validation/basic-validators.raw.vue" lang="vue"} -->
 ::
 
 You can also register custom validators for your form schema.

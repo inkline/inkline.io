@@ -32,5 +32,5 @@ Visibility utilities can be applied responsively using the following helper clas
 #preview
 :ContentPreview{src="/stories/utilities/visibility/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/stories/utilities/visibility/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/stories/utilities/visibility/basic.raw.vue" lang="vue"} -->
 ::

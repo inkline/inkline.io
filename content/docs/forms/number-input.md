@@ -12,7 +12,7 @@ Inkline provides you with simple solutions for all the scenarios you will encoun
 #preview
 :ContentPreview{src="/components/INumberInput/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Minimum and Maximum Value
@@ -22,7 +22,7 @@ Setting the `min` and `max` properties will restrict the value within the given 
 #preview
 :ContentPreview{src="/components/INumberInput/examples/minmax"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/minmax.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/minmax.raw.vue" lang="vue"} -->
 ::
 
 
@@ -33,7 +33,7 @@ You can set the number `precision` using the precision property, allowing you to
 #preview
 :ContentPreview{src="/components/INumberInput/examples/precision"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/precision.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/precision.raw.vue" lang="vue"} -->
 ::
 
 
@@ -44,7 +44,7 @@ You can set the value to increment / decrement by using the `step` property. The
 #preview
 :ContentPreview{src="/components/INumberInput/examples/step-size"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/step-size.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/step-size.raw.vue" lang="vue"} -->
 ::
 
 
@@ -55,7 +55,7 @@ Setting the `disabled` property will disable all interactions with the number in
 #preview
 :ContentPreview{src="/components/INumberInput/examples/disabled"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/disabled.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/disabled.raw.vue" lang="vue"} -->
 ::
 
 
@@ -66,7 +66,7 @@ Setting the `readonly` property will disable all interactions with the number in
 #preview
 :ContentPreview{src="/components/INumberInput/examples/readonly"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/readonly.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/readonly.raw.vue" lang="vue"} -->
 ::
 
 
@@ -77,7 +77,7 @@ If you need to be able to quickly clear the value of a number input, you can add
 #preview
 :ContentPreview{src="/components/INumberInput/examples/clearable"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/clearable.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/clearable.raw.vue" lang="vue"} -->
 ::
 
 
@@ -88,7 +88,7 @@ Inkline allows you to easily add a prefix or suffix to your number inputs. Using
 #preview
 :ContentPreview{src="/components/INumberInput/examples/prefix-suffix"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prefix-suffix.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prefix-suffix.raw.vue" lang="vue"} -->
 ::
 
 
@@ -99,21 +99,21 @@ You can add additional content such as select fields, buttons or plain text, to 
 #preview
 :ContentPreview{src="/components/INumberInput/examples/prepend-append-text"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prepend-append-text.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prepend-append-text.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/INumberInput/examples/prepend-append-button"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prepend-append-button.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prepend-append-button.raw.vue" lang="vue"} -->
 ::
 
 ::ContentTabs
 #preview
 :ContentPreview{src="/components/INumberInput/examples/prepend-append-dropdown"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prepend-append-dropdown.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/prepend-append-dropdown.raw.vue" lang="vue"} -->
 ::
 
 
@@ -124,7 +124,7 @@ You can use the `color` property to set a `light` or `dark` color for your numbe
 #preview
 :ContentPreview{src="/components/INumberInput/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 
@@ -135,7 +135,7 @@ You're able to use the `size` modifier to control the size of your number inputs
 #preview
 :ContentPreview{src="/components/INumberInput/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/INumberInput/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 

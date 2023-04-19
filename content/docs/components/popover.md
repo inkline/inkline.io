@@ -14,7 +14,7 @@ Optionally, you can provide a popover `header` and `footer` using slots.
 #preview
 :ContentPreview{src="/components/IPopover/examples/basic"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/basic.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/basic.raw.vue" lang="vue"} -->
 ::
 
 ### Placement
@@ -39,7 +39,7 @@ Each position also has a `-start` or `-end` variant that sets the popover to the
 #preview
 :ContentPreview{src="/components/IPopover/examples/placement"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/placement.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/placement.raw.vue" lang="vue"} -->
 ::
 
 ### Trigger Type
@@ -49,7 +49,7 @@ You can use the `trigger` property to trigger the popover on `hover` or `click`.
 #preview
 :ContentPreview{src="/components/IPopover/examples/trigger"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/trigger.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/trigger.raw.vue" lang="vue"} -->
 ::
 
 ### Color Variants
@@ -59,7 +59,7 @@ You can choose a light or dark color for your popover using the `color` modifier
 #preview
 :ContentPreview{src="/components/IPopover/examples/color-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/color-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/color-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Size Variants
@@ -70,7 +70,7 @@ The default size is set to `md`.
 #preview
 :ContentPreview{src="/components/IPopover/examples/size-variants"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/size-variants.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/IPopover/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
 ### Props
