@@ -46,6 +46,12 @@ export default defineComponent({
                 alt="Open Source Awards - Developer Experience - Vue.js London 2019"
             />
         </template>
+        <a
+            href="https://osawards.com/vue/#nominees"
+            target="_blank"
+            rel="nofollow"
+            class="_overlay-link"
+        />
         <div class="description">
             <strong class="title">Open Source Awards </strong>
             <span class="category">Developer Experience Nominee</span>

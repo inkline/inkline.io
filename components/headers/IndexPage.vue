@@ -2,6 +2,7 @@
 import { computed, defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useLocalePath } from 'vue-i18n-routing';
+import { useTelemetry } from '~/composables';
 
 interface SeasonalTheme {
     image: string;
@@ -29,6 +30,7 @@ export default defineComponent({
     setup() {
         const localePath = useLocalePath();
         const { t } = useI18n();
+        const { track } = useTelemetry();
 
         const image = computed(() => {
             const seasonalTheme = seasonalThemes.find(
@@ -39,10 +41,25 @@ export default defineComponent({
             return seasonalTheme?.image || defaultImage;
         });
 
+        function onGetStartedClick() {
+            track('user clicked "Get started" button on homepage');
+        }
+
+        function onGitHubClick() {
+            track('user clicked "GitHub" button on homepage');
+        }
+
+        function onOSAwardsClick() {
+            track('user clicked "Open Source Awards" card on homepage');
+        }
+
         return {
             t,
             image,
-            localePath
+            localePath,
+            onGetStartedClick,
+            onGitHubClick,
+            onOSAwardsClick
         };
     }
 });
@@ -53,13 +70,22 @@ export default defineComponent({
         <NuxtImg :src="image" class="header-illustration" />
         <IRow class="header-content">
             <IColumn lg="8" xl="8">
-                <h2 class="title">
+                <div class="_margin-bottom:2">
+                    <NuxtLink
+                        class="header-release-link"
+                        to="/blog/2023-04-04/introducing-inkline-4"
+                    >
+                        <IBadge color="warning" class="_margin-right:1/2">New in v4.0</IBadge>
+                        Configuration file, design tokens, toast notifications and more!
+                    </NuxtLink>
+                </div>
+                <h2 class="header-title">
                     {{ t('pages.index.header.title') }}
                     <span class="_color:primary">
                         {{ t('pages.index.header.titleHighlight') }}
                     </span>
                 </h2>
-                <h1 class="lead description _margin-bottom:2">
+                <h1 class="lead header-description _margin-bottom:2">
                     {{ t('pages.index.header.description') }}
                 </h1>
             </IColumn>
@@ -73,6 +99,7 @@ export default defineComponent({
                         color="primary"
                         class="_margin-right:1"
                         :to="{ path: '/docs' }"
+                        @click="onGetStartedClick"
                     >
                         {{ t('pages.index.header.button') }}
                     </IButton>
@@ -82,6 +109,8 @@ export default defineComponent({
                         size="lg"
                         href="https://github.com/inkline/inkline"
                         rel="noopener"
+                        target="_blank"
+                        @click="onGitHubClick"
                     >
                         <Icon name="fa-brands:github" class="_margin-right:1/2" />
                         <span>GitHub</span>
@@ -91,7 +120,7 @@ export default defineComponent({
         </IRow>
         <IRow id="index-header-osawards" class="_margin-top:3">
             <IColumn>
-                <CardsOsAwards />
+                <CardsOsAwards @click="onOSAwardsClick" />
             </IColumn>
         </IRow>
     </IHeader>
@@ -121,13 +150,17 @@ $navbar-height: 72px;
         position: absolute;
     }
 
-    .title {
+    .header-title {
         font-size: calc(var(--font-size) * var(--scale-ratio-pow-6) * var(--scale-ratio));
     }
 
-    .description {
+    .header-description {
         font-size: var(--font-size-xl);
         line-height: 1.5;
+    }
+
+    .header-release-link {
+        color: var(--text-color-weak);
     }
 
     @include breakpoint-down('xl') {
@@ -135,7 +168,7 @@ $navbar-height: 72px;
             transform: translateX(50%);
         }
 
-        .title {
+        .header-title {
             font-size: calc(var(--font-size) * var(--scale-ratio-pow-6));
         }
     }
@@ -145,7 +178,7 @@ $navbar-height: 72px;
             transform: translate(50%, -10%);
         }
 
-        .title {
+        .header-title {
             font-size: calc(var(--font-size) * var(--scale-ratio-pow-5));
         }
     }
@@ -168,11 +201,11 @@ $navbar-height: 72px;
             margin-left: -50%;
         }
 
-        .title {
+        .header-title {
             font-size: calc(var(--font-size) * var(--scale-ratio-pow-4));
         }
 
-        .description {
+        .header-description {
             font-size: var(--font-size-md);
         }
     }

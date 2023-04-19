@@ -1,11 +1,16 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { definePageMeta } from '#imports';
+import { docsEventBus } from '~/utils';
 
 export default defineComponent({
     setup() {
         definePageMeta({
             layout: 'docs'
+        });
+
+        onMounted(() => {
+            docsEventBus.emit('page:mounted', new Event('page:mounted'));
         });
 
         return {};

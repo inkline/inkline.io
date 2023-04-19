@@ -2,6 +2,8 @@
 import { defineComponent, ref, watch, nextTick, onMounted } from 'vue';
 import { useRoute, useRouter } from '#imports';
 import { scrollBehaviorOptions } from '~/constants';
+import { onBeforeRouteLeave } from '#app';
+import { docsEventBus } from '~/utils';
 
 interface TableOfContentsEntry {
     id: string;
@@ -66,21 +68,13 @@ export default defineComponent({
         };
 
         onMounted(() => {
-            nextTick(() => {
+            const update = () => {
                 setTitle();
                 setTableOfContents();
-            });
-        });
+            };
 
-        watch(
-            () => route.path,
-            () => {
-                nextTick(() => {
-                    setTitle();
-                    setTableOfContents();
-                });
-            }
-        );
+            docsEventBus.on('page:mounted', () => setTimeout(update, 600));
+        });
 
         return {
             title,

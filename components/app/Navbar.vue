@@ -7,6 +7,7 @@ import { useNavbarNavigation, useTelemetry } from '~/composables';
 import { off, on } from '@grozav/utils';
 import logoBlack from '~/assets/images/logo/logo-black.svg';
 import logoWhite from '~/assets/images/logo/logo-white.svg';
+import { useRoute } from 'vue-router';
 
 export default defineComponent({
     props: {
@@ -20,10 +21,16 @@ export default defineComponent({
         const { track } = useTelemetry();
         const localePath = useLocalePath();
         const { t } = useI18n();
+        const route = useRoute();
 
         const addScrollVariant = ref(false);
         const classes = computed(() => ({
             '-scroll': addScrollVariant.value
+        }));
+
+        const isActiveItem = computed(() => ({
+            '/docs': route.fullPath.includes('/docs'),
+            '/blog': route.fullPath.includes('/blog')
         }));
 
         onMounted(() => {
@@ -61,6 +68,7 @@ export default defineComponent({
             t,
             classes,
             navigation,
+            isActiveItem,
             colorSwitcherComponent: markRaw(INavItem),
             logoBlack,
             logoWhite,
@@ -96,6 +104,7 @@ export default defineComponent({
                     </IDropdown>
                     <INavItem
                         v-else
+                        :class="{ '-active': isActiveItem[page.url] }"
                         :key="page.title"
                         :id="page.id"
                         :to="localePath(page.url)"

@@ -16,7 +16,7 @@ I've been working on Inkline 4 for over a year, and the number of developer expe
 
 Inkline has always been my favourite project to work on. There’s just something about writing good components that makes me happy, especially when I see such an overwhelmingly positive response from the community.
 
-Let's dive into the exciting new features and improvements Inkline 4 has to offer!
+**Let's dive into the exciting new features that Inkline 4 has to offer!**
 
 ## Design Tokens
 
@@ -30,24 +30,15 @@ To make Inkline more future proof and less pre-processor dependant, I’ve decid
 var(--[component]--[variant]--[state]--[element]--[elementVariant]--[elementState]--[property], var(--fallback-value))
 ```
 
-**Examples:**
+**Example:**
 
-```css
-var(--alert--sm--font-size, calc(var(--font-size) * var(--size-multiplier-sm)))
-var(--button--light--active--background, var(--color-light-shade-100))
-var(--card--transition-duration, var(--transition-duration));
+```scss
+var(--alert--sm--font-size, calc(var(--font-size) * var(--size-multiplier-sm)));
 ```
-
-**Override Examples:**
 
 ```css
 :root {
 	--alert--sm--font-size: 14px;
-	--button--light--active--background: var(--color-light-shade-50);
-}
-
-.carousel {
-	--card--transition-duration: 0.5s;
 }
 ```
 
@@ -120,11 +111,20 @@ export default defineConfig({
 };
 ```
 
+## Inkline CLI
+
+I'm excited to announce the release of the Inkline CLI, a powerful new tool designed to speed up the installation of Inkline in your project. The Inkline CLI provides a set of commands for generating code and managing configuration files with ease.
+
+- `init`: Generates a default inkline.config.ts theme configuration file, allowing you to jumpstart your project with a ready-to-use configuration.
+- `generate scss`: This command generates CSS Variables based on your inkline.config.ts theme configuration file.
+
+By simplifying tasks such as configuration and code generation, you can focus on what truly matters: crafting a stunning user interface and an engaging user experience.
+
 ## Components
 
 Inkline 4 has been completely rewritten using Composition API and composable functions. I've chosen a **`defineComponent+setup()`** approach, rather than `<script setup>`, to expose component fields directly and allow for Inkline's compatibility with different frameworks in the future.
 
-While you'll still find the same components you know and love, I've also added a new **`IToastContainer`** component to display toasts on demand, providing a more cohesive experience without relying on third-party plugins.
+While you'll still find the same components you know and love, I've also added a new **`IToastContainer`** component to display toast notifications on demand, providing a more cohesive experience without relying on third-party plugins.
 
 ## Manifest
 
@@ -134,7 +134,7 @@ The manifest file generation has been completely overhauled, making it more reli
 
 Documentation has been rebuilt from the ground up using the latest and greatest version of Nuxt.  With a tremendous amount of performance improvements under the hood, Nuxt generates a static version of the documentation that is super fast and reliable.
 
-I’m adding a Tutorials section to the documentation where I’d love to get some help from the community. My free time is very limited as it is, but I’ll do my best to keep writing valuable guides for everyone.
+I’m also adding a Blog to the website, where I’ll feature relevant articles and guides. I would love to post some articles from the community as well. Even though my free time is very limited, I’ll do my best to keep writing valuable articles for everyone.
 
 ## Unocss Preset
 
@@ -142,11 +142,13 @@ I wrote a Unocss preset that allows you to generate utility classes on demand, u
 
 I initially planned to offer this as part of Inkline Pro, but I thought it’s such a great quality of life improvement that I simply cannot hide it behind a paywall.
 
+To be released soon!
+
 ## Inkline Pro
 
 Monetizing open-source projects can be controversial, but I want Inkline to survive and thrive. Moving forward, I plan to create and maintain a Pro version of Inkline, with access granted through a yearly subscription.
 
-The Pro components that I’ve planned include:
+The Pro features and components that I plan to include:
 
 1. **Advanced data table**: Offers features such as server-side pagination, sorting, filtering, inline editing, and row selection.
 2. **Advanced date and time picker**: Includes features like range selection, time zone support, and advanced formatting options.
@@ -163,6 +165,17 @@ The Pro components that I’ve planned include:
 13. **Drag and Drop components**: Provides blocks for creating a site or forms builder 
 14. **Premium support**: Access to priority customer support, including timely bug fixes, feature requests, and assistance with implementation.
 
-## Conclusion
+I'd love to hear which ones you want to see the most!
 
-This is a big year for Inkline. I'm incredibly proud of what I've achieved and am deeply grateful for the support of the amazing community. Let's continue making UI development a beautiful experience together!
+## Final Thoughts
+
+This is a big year for Inkline. I'm incredibly proud of what I've achieved and am deeply grateful for the support of the amazing community. 
+
+**Let's continue making UI development a beautiful experience together!**
+
+<div class="_margin-top:2"></div>
+
+- [Read more about Design Tokens](/docs/ui/design-tokens)
+- [Read more about the Configuration File](/docs/configuration/file)
+- [Read more about the Inkline CLI](https://github.com/inkline/cli)
+- [Read more about the Toast Component](/docs/components/toast)
