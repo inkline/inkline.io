@@ -80,7 +80,7 @@ export default defineComponent({
                         {{ t('pages.index.header.titleHighlight') }}
                     </span>
                 </h2>
-                <h1 class="lead header-description _margin-bottom:2">
+                <h1 class="lead header-description">
                     {{ t('pages.index.header.description') }}
                 </h1>
             </IColumn>
@@ -152,6 +152,7 @@ $navbar-height: 72px;
     .header-description {
         font-size: var(--font-size-xl);
         line-height: 1.5;
+        margin-bottom: var(--margin-bottom-2);
     }
 
     .header-release-link {
@@ -196,7 +197,7 @@ $navbar-height: 72px;
             width: 200%;
             height: auto;
             margin-left: -50%;
-            margin-top: calc(-1 * var(--margin-top-1));
+            margin-top: calc(-1 * var(--margin-top-2));
         }
 
         .header-title {
@@ -205,6 +206,7 @@ $navbar-height: 72px;
 
         .header-description {
             font-size: var(--font-size-md);
+            margin-bottom: calc(var(--margin-bottom) * 1.5);
         }
 
         .header-release-link {
