@@ -35,11 +35,7 @@ export default defineComponent({
 <template>
     <ILayout :id="`${type}-layout`" class="content-layout">
         <ILayoutHeader :id="`${type}-layout-header`" class="content-layout-header">
-            <AppNavbar :type="type">
-                <template #collapsible>
-                    <slot name="navbar" />
-                </template>
-            </AppNavbar>
+            <AppNavbar :type="type" />
         </ILayoutHeader>
         <ILayout vertical>
             <ILayoutContent>

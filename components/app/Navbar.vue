@@ -3,11 +3,12 @@ import { computed, defineComponent, markRaw, onBeforeUnmount, onMounted, ref } f
 import { INavItem } from '@inkline/inkline';
 import { useI18n } from 'vue-i18n';
 import { useLocalePath } from 'vue-i18n-routing';
-import { useNavbarNavigation, useTelemetry } from '~/composables';
+import { useNavbarNavigation, useSidebarNavigation, useTelemetry } from '~/composables';
 import { off, on } from '@grozav/utils';
 import logoBlack from '~/assets/images/logo/logo-black.svg';
 import logoWhite from '~/assets/images/logo/logo-white.svg';
 import { useRoute } from 'vue-router';
+import { NavigationPage } from '~/types';
 
 export default defineComponent({
     props: {
@@ -18,6 +19,7 @@ export default defineComponent({
     },
     setup() {
         const navigation = useNavbarNavigation();
+        const docsNavigation = useSidebarNavigation().slice(1);
         const { track } = useTelemetry();
         const localePath = useLocalePath();
         const { t } = useI18n();
@@ -68,6 +70,7 @@ export default defineComponent({
             t,
             classes,
             navigation,
+            docsNavigation,
             isActiveItem,
             colorSwitcherComponent: markRaw(INavItem),
             logoBlack,
@@ -90,7 +93,17 @@ export default defineComponent({
         <INavbarCollapsible>
             <INav class="_margin-left:auto">
                 <template v-for="page in navigation">
-                    <IDropdown v-if="page.children" :key="page.title" :events="['focus', 'hover']">
+                    <Component
+                        :is="page.component"
+                        v-if="page.component"
+                        :key="page.title"
+                        v-bind="page.componentProps"
+                    />
+                    <IDropdown
+                        v-else-if="page.children"
+                        :key="page.title"
+                        :events="['focus', 'hover']"
+                    >
                         <INavItem>{{ page.title }}</INavItem>
                         <template #body>
                             <IDropdownItem
@@ -212,8 +225,22 @@ export default defineComponent({
     .app-sidebar-navigation {
         --app-sidebar-navigation--padding-top: 0;
         --app-sidebar-navigation--padding-right: 0;
-        --app-sidebar-navigation--item--padding: var(--padding-top-1-2) var(--padding-right)
-            var(--padding-bottom-1-2) var(--padding-left);
+        --app-sidebar-navigation--item--padding: var(--padding-top-1-2) var(--padding-right-1-2)
+            var(--padding-bottom-1-2) var(--padding-left-1-2);
+
+        padding-left: var(--padding-left-1-2);
+        margin-left: var(--margin-left);
+        border-left: var(--border-left-width) var(--border-left-style) var(--border-left-color);
+        width: calc(100% - var(--margin-left));
+
+        .collapsible-header span,
+        > a {
+            font-weight: var(--font-weight-normal);
+        }
+
+        .router-link-exact-active {
+            font-weight: var(--font-weight-semibold);
+        }
     }
 
     .navbar-brand {

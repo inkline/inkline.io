@@ -1,3 +1,5 @@
+import { Component } from 'vue';
+
 export interface AppsPage {
     title: string;
     url?: string;
@@ -7,6 +9,7 @@ export interface AppsPage {
 }
 
 export interface NavigationPage {
+    name?: string;
     title: string;
     url?: string;
     navigation?: {
@@ -19,6 +22,8 @@ export interface NavigationPage {
     hidden?: boolean;
     index?: boolean;
     children?: Omit<NavigationPage, 'active'>[];
+    component?: Component;
+    componentProps?: Record<string, unknown>;
 }
 
 export interface CollapsibleNavigationPage extends NavigationPage {
