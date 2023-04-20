@@ -197,7 +197,7 @@ $navbar-height: 72px;
             width: 200%;
             height: auto;
             margin-left: -50%;
-            margin-top: calc(-1 * var(--margin-top-2));
+            margin-top: calc(-1 * var(--margin-top));
         }
 
         .header-title {
@@ -206,7 +206,7 @@ $navbar-height: 72px;
 
         .header-description {
             font-size: var(--font-size-md);
-            margin-bottom: calc(var(--margin-bottom) * 1.5);
+            margin-bottom: var(--margin-bottom);
         }
 
         .header-release-link {
