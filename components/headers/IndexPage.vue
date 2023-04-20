@@ -70,15 +70,10 @@ export default defineComponent({
         <NuxtImg :src="image" class="header-illustration" />
         <IRow class="header-content">
             <IColumn lg="8" xl="8">
-                <div class="_margin-bottom:2">
-                    <NuxtLink
-                        class="header-release-link"
-                        to="/blog/2023-04-04/introducing-inkline-4"
-                    >
-                        <IBadge color="warning" class="_margin-right:1/2">New in v4.0</IBadge>
-                        Configuration file, design tokens, toast notifications and more!
-                    </NuxtLink>
-                </div>
+                <NuxtLink class="header-release-link" to="/blog/2023-04-04/introducing-inkline-4">
+                    <IBadge color="warning" class="_margin-right:1/2">New in v4.0</IBadge>
+                    Configuration file, design tokens, toast notifications and more!
+                </NuxtLink>
                 <h2 class="header-title">
                     {{ t('pages.index.header.title') }}
                     <span class="_color:primary">
@@ -160,7 +155,9 @@ $navbar-height: 72px;
     }
 
     .header-release-link {
+        display: block;
         color: var(--text-color-weak);
+        margin-bottom: var(--margin-bottom-2);
     }
 
     @include breakpoint-down('xl') {
@@ -199,6 +196,7 @@ $navbar-height: 72px;
             width: 200%;
             height: auto;
             margin-left: -50%;
+            margin-top: calc(-1 * var(--margin-top-1));
         }
 
         .header-title {
@@ -207,6 +205,10 @@ $navbar-height: 72px;
 
         .header-description {
             font-size: var(--font-size-md);
+        }
+
+        .header-release-link {
+            margin-bottom: var(--margin-bottom);
         }
     }
 }
