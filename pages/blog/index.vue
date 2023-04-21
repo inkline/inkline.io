@@ -1,11 +1,22 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { definePageMeta } from '#imports';
+import { definePageMeta, useSeoMeta } from '#imports';
 
 export default defineComponent({
     setup() {
         definePageMeta({
             layout: 'blog'
+        });
+
+        const title = 'Blog';
+        const description =
+            'Discover the latest updates, tips, and insights on Inkline, the intuitive UI Library for Vue.js 3 Design Systems. Stay informed on developer-friendly features, best practices, and the vibrant Inkline community.';
+
+        useSeoMeta({
+            title,
+            description,
+            ogTitle: title,
+            ogDescription: description
         });
 
         return {};

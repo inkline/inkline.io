@@ -20,6 +20,12 @@ export default defineNuxtConfig({
      */
     app: {
         /**
+         * @docs https://nuxt.com/docs/api/configuration/nuxt-config#head
+         */
+        head: {
+            titleTemplate: '%s - Inkline'
+        },
+        /**
          * @docs https://nuxt.com/docs/getting-started/transitions
          */
         pageTransition: { name: 'page', mode: 'out-in' },
