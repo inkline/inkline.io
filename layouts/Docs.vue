@@ -32,5 +32,7 @@ export default defineComponent({
         <article>
             <slot />
         </article>
+
+        <AppDocsPageFooter />
     </LayoutsContent>
 </template>

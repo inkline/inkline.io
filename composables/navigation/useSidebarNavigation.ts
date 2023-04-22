@@ -28,7 +28,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                             url: '/docs/installation/vite',
                             navigation: {
                                 previous: '/docs/concepts',
-                                next: '/docs/configuration'
+                                next: '/docs/configuration/file'
                             }
                         },
                         {
@@ -36,7 +36,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                             url: '/docs/installation/nuxt',
                             navigation: {
                                 previous: '/docs/concepts',
-                                next: '/docs/configuration'
+                                next: '/docs/configuration/file'
                             }
                         },
                         {
@@ -44,7 +44,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                             url: '/docs/installation/webpack',
                             navigation: {
                                 previous: '/docs/concepts',
-                                next: '/docs/configuration'
+                                next: '/docs/configuration/file'
                             }
                         },
                         {
@@ -52,7 +52,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                             url: '/docs/installation/manual',
                             navigation: {
                                 previous: '/docs/concepts',
-                                next: '/docs/configuration'
+                                next: '/docs/configuration/file'
                             }
                         },
                         {
@@ -60,7 +60,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                             url: '/docs/installation/cdn',
                             navigation: {
                                 previous: '/docs/concepts',
-                                next: '/docs/configuration'
+                                next: '/docs/configuration/file'
                             }
                         }
                     ]
@@ -73,7 +73,10 @@ export function useSidebarNavigation(): NavigationPage[] {
             children: [
                 {
                     title: 'Configuration File',
-                    url: '/docs/configuration/file'
+                    url: '/docs/configuration/file',
+                    navigation: {
+                        previous: '/docs/installation'
+                    }
                 },
                 {
                     title: 'Module Options',

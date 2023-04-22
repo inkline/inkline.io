@@ -1,66 +1,82 @@
 <script lang="ts">
 import { defineComponent, ref, watch, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
-// import { navigation } from '~/constants';
-import { RouteLocationNormalizedLoaded, useRoute } from 'vue-router';
-
-// const pages = navigation
-//     .map((group) =>
-//         group.children
-//             ? group.children.map((child) => ({
-//                   ...child,
-//                   title:
-//                       group.title === 'Utilities' ? `${group.title} - ${child.title}` : child.title,
-//                   group: group.title
-//               }))
-//             : group
-//     )
-//     .flat()
-//     .map((entry) =>
-//         entry.children
-//             ? entry.children.map((child) => ({
-//                   ...child,
-//                   title: `${entry.title} - ${child.title}`
-//               }))
-//             : entry
-//     )
-//     .flat();
-
-const pages = [];
+import { useRoute } from 'vue-router';
+import { useSidebarNavigation } from '~/composables';
+import type { RouteLocationNormalizedLoaded } from 'vue-router';
+import type { NavigationPage } from '~/types';
 
 const githubUrlTemplate = (path: string, isIndex?: boolean) =>
     `https://github.com/inkline/inkline.io/tree/main/content${path}${isIndex ? '/index' : ''}.md`;
 
 export default defineComponent({
     setup() {
+        const navigation = useSidebarNavigation();
         const { t } = useI18n();
         const route = useRoute();
         const previous = ref();
         const next = ref();
         const githubUrl = ref('');
 
-        const setAdjacentRoutes = (route: RouteLocationNormalizedLoaded) => {
-            const currentPageIndex = pages.findIndex((page) => page.url!.path === route.fullPath);
-            const currentPage = pages[currentPageIndex];
+        const pages = navigation
+            .reduce<NavigationPage[]>((pages, page) => {
+                const { children, ...pageData } = page;
 
+                if (pageData.url) {
+                    pages.push(pageData);
+                }
+
+                if (children) {
+                    pages.push(...children);
+                }
+
+                return pages;
+            }, [])
+            .filter((page) => !page.hidden)
+            .reduce<NavigationPage[]>((pages, page) => {
+                const { children, ...pageData } = page;
+
+                if (pageData.url) {
+                    pages.push({
+                        ...pageData,
+                        title: pageData.url.includes('/utilities')
+                            ? `Utilities - ${pageData.title}`
+                            : pageData.title
+                    });
+                }
+
+                if (children) {
+                    pages.push(
+                        ...children.map((child) => ({
+                            ...child,
+                            title: `${pageData.title} - ${child.title}`
+                        }))
+                    );
+                }
+
+                return pages;
+            }, []);
+
+        const setAdjacentRoutes = (route: RouteLocationNormalizedLoaded) => {
+            const currentPageIndex = pages.findIndex((page) => page.url === route.path);
+            const currentPage = pages[currentPageIndex];
             if (!currentPage) {
                 return;
             }
 
+            console.log(pages);
+
             previous.value = currentPage.navigation?.previous
-                ? pages.find((page) => page.url!.path === currentPage.navigation?.previous)
+                ? pages.find((page) => page.url === currentPage.navigation?.previous)
                 : pages[currentPageIndex - 1];
             next.value = currentPage.navigation?.next
-                ? pages.find((page) => page.url!.path === currentPage.navigation?.next)
+                ? pages.find((page) => page.url === currentPage.navigation?.next)
                 : pages[currentPageIndex + 1];
 
             githubUrl.value = githubUrlTemplate(route.path, currentPage.index);
         };
 
-        watch(
-            () => route.name,
-            () => setAdjacentRoutes(route)
-        );
+        watch(route, () => setAdjacentRoutes(route));
 
         onMounted(() => {
             setAdjacentRoutes(route);
@@ -78,52 +94,52 @@ export default defineComponent({
 
 <template>
     <footer class="app-docs-page-footer">
-        <i-row>
-            <i-column>
+        <IRow>
+            <IColumn>
                 <div v-if="previous" class="app-docs-page-footer-group -previous">
-                    <icon-mdi-chevron-left />
+                    <Icon name="mdi:chevron-left" />
                     <small class="_text:muted">
                         {{ t('common.previous') }}
                     </small>
-                    <router-link :to="previous.url" class="_overlay-link">
+                    <NuxtLink :to="previous.url" class="_overlay-link">
                         {{ previous.title }}
-                    </router-link>
+                    </NuxtLink>
                 </div>
-            </i-column>
-            <i-column class="_text:right">
+            </IColumn>
+            <IColumn class="_text:right">
                 <div v-if="next" class="app-docs-page-footer-group -next">
                     <small class="_text:muted">
                         {{ t('common.next') }}
                     </small>
-                    <router-link :to="next.url" class="_overlay-link">
+                    <NuxtLink :to="next.url" class="_overlay-link">
                         {{ next.title }}
-                    </router-link>
-                    <icon-mdi-chevron-right />
+                    </NuxtLink>
+                    <Icon name="mdi:chevron-right" />
                 </div>
-            </i-column>
-        </i-row>
+            </IColumn>
+        </IRow>
         <hr class="_margin-top:2" />
-        <i-row>
-            <i-column>
+        <IRow>
+            <IColumn>
                 <p class="contribute">
                     {{ t('pageNavigation.footer.cta') }}
                     <a :href="githubUrl" rel="nofollow" target="_blank">
                         {{ t('pageNavigation.footer.edit') }}
-                        <icon-fa-solid-external-link-alt height="10" />
+                        <Icon name="fa-solid:external-link-alt" />
                         <span class="_visually-hidden">
                             {{ t('common.opensNewWindow') }}
                         </span>
                     </a>
                 </p>
-            </i-column>
-        </i-row>
+            </IColumn>
+        </IRow>
     </footer>
 </template>
 
 <style lang="scss">
 .app-docs-page-footer {
     position: relative;
-    margin-top: calc(var(--spacing) * 4);
+    margin-top: var(--margin-top-4);
 
     .app-docs-page-footer-group {
         position: relative;
@@ -132,13 +148,13 @@ export default defineComponent({
 
         svg {
             position: absolute;
-            color: var(--text-muted);
+            color: var(--text-color-weak);
             top: 50%;
             margin-top: -10px;
         }
 
         &.-previous {
-            padding-left: calc(var(--spacing) * 2);
+            padding-left: var(--padding-left-2);
 
             svg {
                 left: 0;
@@ -146,7 +162,7 @@ export default defineComponent({
         }
 
         &.-next {
-            padding-right: calc(var(--spacing) * 2);
+            padding-right: var(--padding-right-2);
             text-align: right;
             margin-left: auto;
 
@@ -157,8 +173,8 @@ export default defineComponent({
     }
 
     .contribute {
-        color: var(--text-muted);
-        font-size: var(--font-size--sm);
+        color: var(--text-color-weak);
+        font-size: var(--font-size-sm);
     }
 }
 </style>

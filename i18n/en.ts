@@ -5,7 +5,9 @@ export default {
         copiedToClipboard: 'Copied to clipboard',
         example: 'Example',
         token: 'Token',
-        description: 'Description'
+        description: 'Description',
+        next: 'Next',
+        previous: 'Previous'
     },
     navigation: {
         home: 'Home',
