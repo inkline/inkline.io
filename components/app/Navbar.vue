@@ -145,6 +145,7 @@ export default defineComponent({
                     <Icon name="bi:discord" size="20px" />
                 </INavItem>
                 <AppColorModeSwitcher stop-propagation :tag="colorSwitcherComponent" />
+                <AppDocsSearch />
             </INav>
             <INav>
                 <FeatureFlag name="premium">

@@ -15,6 +15,8 @@
         "lint:markdown": "markdownlint '**/*.md'"
     },
     "dependencies": {
+        "@docsearch/css": "^3.3.3",
+        "@docsearch/js": "^3.3.3",
         "@grozav/utils": "^1.3.0",
         "@inkline/inkline": "^4.0.0-rc.23",
         "copy-to-clipboard": "^3.3.3",
