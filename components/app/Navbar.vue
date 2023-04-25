@@ -179,6 +179,8 @@ export default defineComponent({
     --navbar--transition-property: top, left, right, height, border-color, border-width,
         border-radius, background;
 
+    padding-left: 0;
+    padding-right: 0;
     position: fixed;
     top: var(--margin-top);
     right: var(--margin-right);

@@ -44,7 +44,12 @@ export default {
                 titleHighlight: 'developer experience',
                 description:
                     'Inkline is the intuitive UI Components library for building a high-quality, developer-friendly, configurable, and accessible Vue.js Design System.',
-                button: 'Get started'
+                button: 'Get started',
+                stars: '1.2k+',
+                news: {
+                    badge: 'New in v4.0',
+                    headline: 'Configuration file, design tokens, toast notifications and more!'
+                }
             },
             designSystem: {
                 title: 'Build your design system.',

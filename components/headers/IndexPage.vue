@@ -71,8 +71,10 @@ export default defineComponent({
         <IRow class="header-content">
             <IColumn lg="8" xl="8">
                 <NuxtLink class="header-release-link" to="/blog/2023-04-04/introducing-inkline-4">
-                    <IBadge color="warning" class="_margin-right:1/2">New in v4.0</IBadge>
-                    Configuration file, design tokens, toast notifications and more!
+                    <IBadge color="warning" class="_margin-right:1/2">
+                        {{ t('pages.index.header.news.badge') }}
+                    </IBadge>
+                    {{ t('pages.index.header.news.headline') }}
                 </NuxtLink>
                 <h2 class="header-title">
                     {{ t('pages.index.header.title') }}
@@ -99,16 +101,16 @@ export default defineComponent({
                         {{ t('pages.index.header.button') }}
                     </IButton>
                     <IButton
-                        id="github-button"
-                        aria-label="GitHub"
+                        class="github-stars-button"
+                        outline
                         size="lg"
+                        aria-label="GitHub"
                         href="https://github.com/inkline/inkline"
                         rel="noopener"
                         target="_blank"
-                        @click="onGitHubClick"
                     >
-                        <Icon name="fa-brands:github" class="_margin-right:1/2" />
-                        <span>GitHub</span>
+                        <Icon name="fa-solid:star" class="_margin-right:1/2" />
+                        {{ t('pages.index.header.stars') }}
                     </IButton>
                 </div>
             </IColumn>
@@ -150,7 +152,7 @@ $navbar-height: 72px;
     }
 
     .header-description {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-lg);
         line-height: 1.5;
         margin-bottom: var(--margin-bottom-2);
     }
@@ -159,6 +161,13 @@ $navbar-height: 72px;
         display: block;
         color: var(--text-color-weak);
         margin-bottom: var(--margin-bottom-2);
+    }
+
+    .github-stars-button {
+        --button--light--background: var(--text-color-weaker);
+        --button--dark--background: var(--text-color-weaker);
+        border-width: 0;
+        font-weight: var(--font-weight-regular);
     }
 
     @include breakpoint-down('xl') {
