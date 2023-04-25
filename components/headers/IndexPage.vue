@@ -46,11 +46,11 @@ export default defineComponent({
         }
 
         function onGitHubClick() {
-            track('user clicked "GitHub" button on homepage');
+            track('user clicked "GitHub stars" button on homepage');
         }
 
-        function onOSAwardsClick() {
-            track('user clicked "Open Source Awards" card on homepage');
+        function onNewsClick() {
+            track('user clicked "News" banner on homepage');
         }
 
         return {
@@ -59,18 +59,22 @@ export default defineComponent({
             localePath,
             onGetStartedClick,
             onGitHubClick,
-            onOSAwardsClick
+            onNewsClick
         };
     }
 });
 </script>
 
 <template>
-    <IHeader class="index-page-header">
+    <IHeader class="index-page-header" size="lg">
         <NuxtImg :src="image" class="header-illustration" />
         <IRow class="header-content">
             <IColumn lg="8" xl="8">
-                <NuxtLink class="header-release-link" to="/blog/2023-04-04/introducing-inkline-4">
+                <NuxtLink
+                    class="header-release-link"
+                    to="/blog/2023-04-04/introducing-inkline-4"
+                    @click="onNewsClick"
+                >
                     <IBadge color="warning" class="_margin-right:1/2">
                         {{ t('pages.index.header.news.badge') }}
                     </IBadge>
@@ -101,7 +105,7 @@ export default defineComponent({
                         {{ t('pages.index.header.button') }}
                     </IButton>
                     <IButton
-                        class="github-stars-button"
+                        id="github-stars-button"
                         outline
                         size="lg"
                         aria-label="GitHub"
@@ -109,15 +113,10 @@ export default defineComponent({
                         rel="noopener"
                         target="_blank"
                     >
-                        <Icon name="fa-solid:star" class="_margin-right:1/2" />
+                        <Icon name="fa-brands:github" class="_margin-right:1/2" />
                         {{ t('pages.index.header.stars') }}
                     </IButton>
                 </div>
-            </IColumn>
-        </IRow>
-        <IRow id="index-header-osawards" class="_margin-top:3">
-            <IColumn>
-                <CardsOsAwards @click="onOSAwardsClick" />
             </IColumn>
         </IRow>
     </IHeader>
@@ -161,13 +160,6 @@ $navbar-height: 72px;
         display: block;
         color: var(--text-color-weak);
         margin-bottom: var(--margin-bottom-2);
-    }
-
-    .github-stars-button {
-        --button--light--background: var(--text-color-weaker);
-        --button--dark--background: var(--text-color-weaker);
-        border-width: 0;
-        font-weight: var(--font-weight-regular);
     }
 
     @include breakpoint-down('xl') {
@@ -222,5 +214,23 @@ $navbar-height: 72px;
             margin-bottom: var(--margin-bottom);
         }
     }
+}
+
+#get-started-button {
+    font-weight: var(--font-weight-semibold);
+    min-width: 180px;
+    height: 50px;
+
+    @include breakpoint-down('xs') {
+        min-width: unset;
+    }
+}
+
+#github-stars-button {
+    --button--light--background: var(--text-color-weaker);
+    --button--dark--background: var(--text-color-weaker);
+    height: 50px;
+    border-width: 0;
+    font-weight: var(--font-weight-semibold);
 }
 </style>

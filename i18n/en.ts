@@ -70,6 +70,11 @@ export default {
                     "While many UI libraries focus solely on UI and UX, they often overlook the most crucial element - the developer. At Inkline, we believe that code quality is directly linked to developer happiness. That's why we've designed Inkline to provide a seamless Developer Experience (DX)"
             },
             features: {
+                osawards: {
+                    title: 'Open Source Awards',
+                    description:
+                        'Inkline was community-nominated for its Developer Experience at Vue.js London 2019'
+                },
                 ui: {
                     title: 'User Interface',
                     description:

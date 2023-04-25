@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
     props: {
@@ -14,15 +14,37 @@ export default defineComponent({
         image: {
             type: String,
             default: ''
+        },
+        link: {
+            type: String,
+            default: ''
         }
+    },
+    setup(props) {
+        const imgAlt = computed(() => `Inkline - Vue.js UI UX DX Library - ${props.title}`);
+        const linkAttrs = computed(() => ({
+            href: props.link,
+            ...(props.link.startsWith('http') ? { target: '_blank', rel: 'nofollow' } : {})
+        }));
+
+        return {
+            imgAlt,
+            linkAttrs
+        };
     }
 });
 </script>
 
 <template>
     <div class="section-feature">
-        <img :src="image" :alt="`Inkline - Vue.js UI UX DX Library - ${title}`" />
-        <h3>{{ title }}</h3>
+        <a v-if="link" v-bind="linkAttrs">
+            <img :src="image" :alt="imgAlt" />
+        </a>
+        <img v-else :src="image" :alt="imgAlt" />
+        <h3>
+            <a v-if="link" v-bind="linkAttrs">{{ title }}</a>
+            <span v-else>{{ title }}</span>
+        </h3>
         <p>{{ description }}</p>
     </div>
 </template>
@@ -32,6 +54,15 @@ export default defineComponent({
 
 .section-feature {
     text-align: center;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        > img {
+            margin-bottom: 0;
+        }
+    }
 
     h1,
     h2,
@@ -46,7 +77,7 @@ export default defineComponent({
         color: var(--text-muted);
     }
 
-    img {
+    > img {
         height: 75px;
         width: auto;
         margin-bottom: var(--margin-bottom);

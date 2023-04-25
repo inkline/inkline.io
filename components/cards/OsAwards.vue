@@ -89,8 +89,6 @@ export default defineComponent({
     }
 
     &.-dark {
-        --alert--info--color: var(--color-white);
-
         .logo.-dark {
             display: none;
         }
@@ -111,7 +109,6 @@ export default defineComponent({
 
         .location {
             font-size: var(--font-size-md);
-            opacity: 0.5;
         }
     }
 }
