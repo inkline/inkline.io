@@ -64,8 +64,6 @@ export default defineComponent({
                 return;
             }
 
-            console.log(pages);
-
             previous.value = currentPage.navigation?.previous
                 ? pages.find((page) => page.url === currentPage.navigation?.previous)
                 : pages[currentPageIndex - 1];

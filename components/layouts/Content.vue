@@ -48,7 +48,6 @@ export default defineComponent({
                     <slot name="content">
                         <div :id="`${type}-page`" class="content-page">
                             <slot />
-                            <!--                        <PageFooterNavigation />-->
                         </div>
                         <AppDocsPageSidebar />
                     </slot>
