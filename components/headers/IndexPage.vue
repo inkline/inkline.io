@@ -182,8 +182,7 @@ $navbar-height: 72px;
     }
 
     @include breakpoint-down('md') {
-        --header--md--padding-top: 0;
-
+        padding-top: 0;
         text-align: center;
         overflow: hidden;
 
