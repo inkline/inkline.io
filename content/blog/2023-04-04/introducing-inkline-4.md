@@ -28,18 +28,32 @@ To make Inkline more future proof and less pre-processor dependant, I’ve decid
 **Naming scheme:**
 
 ```css
-var(--[component]--[variant]--[state]--[element]--[elementVariant]--[elementState]--[property], var(--fallback-value))
+var(--[component]--[property], var(--fallback-value));
+
+var(--[component]--[variant]--[property], var(--fallback-value));
+
+var(--[component]--[variant]--[state]--[property], var(--fallback-value));
+
+var(--[component]--[variant]--[state]--[element]--[elementVariant]--[elementState]--[property], var(--fallback-value));
 ```
 
 **Example:**
 
 ```scss
-var(--alert--sm--font-size, calc(var(--font-size) * var(--size-multiplier-sm)));
+var(--alert--font-size, var(--font-size));
+
+var(--badge--sm--padding-top, calc(var(--padding-top) * var(--size-multiplier-sm)));
+
+var(--button--light--hover--background, var(--color-light-shade-50));
 ```
 
 ```css
 :root {
-	--alert--sm--font-size: 14px;
+    --alert--font-size: 16px;
+    
+	--badge--sm--padding-top: 4px;
+    
+    --button--light--hover--background: #f2f2f2;
 }
 ```
 
@@ -102,14 +116,14 @@ export default defineConfig({
                 warning: '<% theme.color.yellow %>',
                 danger: '<% theme.color.red %>'
             }
-				},
-				dark: {
+        },
+        dark: {
             border: {
                 color: 'var(--color-gray-700)'
             }
-				}
-		}
-};
+        }
+    }
+});
 ```
 
 ## Inkline CLI
