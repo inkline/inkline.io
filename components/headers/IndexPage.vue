@@ -98,7 +98,6 @@ export default defineComponent({
                         id="get-started-button"
                         size="lg"
                         color="primary"
-                        class="_margin-right:1"
                         :to="{ path: '/docs' }"
                         @click="onGetStartedClick"
                     >
@@ -157,7 +156,7 @@ $navbar-height: 72px;
     }
 
     .header-release-link {
-        display: block;
+        display: inline-block;
         color: var(--text-color-weak);
         margin-bottom: var(--margin-bottom-2);
     }
@@ -221,6 +220,10 @@ $navbar-height: 72px;
     min-width: 180px;
     height: 50px;
 
+    @include breakpoint-down('md') {
+        width: 100%;
+    }
+
     @include breakpoint-down('xs') {
         min-width: unset;
     }
@@ -232,5 +235,12 @@ $navbar-height: 72px;
     height: 50px;
     border-width: 0;
     font-weight: var(--font-weight-semibold);
+    margin-right: var(--margin-right);
+
+    @include breakpoint-down('md') {
+        width: 100%;
+        margin-right: 0;
+        margin-top: var(--margin-top);
+    }
 }
 </style>
