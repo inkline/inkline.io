@@ -1,15 +1,11 @@
-import { fileURLToPath } from 'node:url';
 import { readFileSync } from 'fs';
-import { resolve, dirname } from 'pathe';
+import { resolve } from 'pathe';
 import glob from 'fast-glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const rootDirPath = resolve(__dirname, '..', '..');
+const rootDirPath = process.cwd();
 const nodeModulesPath = resolve(rootDirPath, 'node_modules');
-const inklineOrgPath = resolve(nodeModulesPath, '@inkline');
-const inklineConfigPath = resolve(inklineOrgPath, 'config');
-const inklinePath = resolve(inklineOrgPath, 'inkline');
+const inklineConfigPath = resolve(nodeModulesPath, '@inkline', 'config');
+const inklinePath = resolve(nodeModulesPath, '@inkline', 'inkline');
 const codeCache = new Map<string, string>();
 const codeFilePaths = [
     resolve(inklineConfigPath, 'examples', 'defaults.ts'),
