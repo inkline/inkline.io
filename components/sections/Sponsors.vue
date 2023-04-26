@@ -78,7 +78,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <IHeader class="sponsors-section">
+    <SectionsComponentsSection class="sponsors-section" tag="div">
         <IRow>
             <IColumn class="_text:center _margin-bottom:5">
                 <Icon class="header-icon" name="fa-solid:heart" />
@@ -140,15 +140,15 @@ export default defineComponent({
                 </IButton>
             </IColumn>
         </IRow>
-    </IHeader>
+    </SectionsComponentsSection>
 </template>
 
 <style lang="scss">
 @import '@inkline/inkline/css/mixins';
 
 .sponsors-section {
-    --header--light--background: var(--color-gray-50);
-    --header--dark--background: var(--color-dark-shade-100);
+    --section--light--background: var(--color-gray-50);
+    --section--dark--background: var(--color-dark-shade-100);
 
     &.-light {
         .sponsor picture {

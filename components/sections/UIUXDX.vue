@@ -27,7 +27,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <IHeader class="ui-ux-dx-section">
+    <SectionsComponentsSection class="ui-ux-dx-section">
         <IRow>
             <IColumn class="_text:center" lg="8" offset-lg="2">
                 <SectionsComponentsHeader>
@@ -88,14 +88,15 @@ export default defineComponent({
                 />
             </IColumn>
         </IRow>
-    </IHeader>
+    </SectionsComponentsSection>
 </template>
 
 <style lang="scss">
 @import '@inkline/inkline/css/mixins';
 
 .ui-ux-dx-section {
-    background: transparent;
+    --section--light--background: transparent;
+    --section--dark--background: transparent;
     padding-top: var(--section--padding-top);
     padding-bottom: var(--section--padding-bottom);
     border-top: var(--border-top-width) var(--border-top-style) var(--border-top-color);

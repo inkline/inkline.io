@@ -235,11 +235,11 @@ $navbar-height: 72px;
     height: 50px;
     border-width: 0;
     font-weight: var(--font-weight-semibold);
-    margin-right: var(--margin-right);
+    margin-left: var(--margin-right);
 
     @include breakpoint-down('md') {
         width: 100%;
-        margin-right: 0;
+        margin-left: 0;
         margin-top: var(--margin-top);
     }
 }
