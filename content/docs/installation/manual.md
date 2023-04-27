@@ -97,8 +97,8 @@ import App from './App.vue';
 import './css/variables/index.scss?inline';
 
 import { Inkline, components } from '@inkline/inkline';
-import '@inkline/inkline/base.scss?inline';
-import '@inkline/inkline/utilities.scss?inline';
+import '@inkline/inkline/css/index.scss?inline';
+import '@inkline/inkline/css/utilities.scss?inline';
 
 const app = createApp(App);
 
