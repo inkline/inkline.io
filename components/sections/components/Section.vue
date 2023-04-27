@@ -32,7 +32,9 @@ export default defineComponent({
 
 <template>
     <section :class="['section', classes]">
-        <slot />
+        <IContainer>
+            <slot />
+        </IContainer>
     </section>
 </template>
 
@@ -40,6 +42,10 @@ export default defineComponent({
 @import '@inkline/inkline/css/mixins';
 
 .section {
+    width: 100%;
+    display: block;
+    position: relative;
+
     &.-light {
         background-color: var(--section--light--background, var(--color-light));
     }
