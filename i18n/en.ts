@@ -37,6 +37,17 @@ export default {
             changelog: 'Changelog'
         }
     },
+    forms: {
+        newsletter: {
+            name: {
+                placeholder: 'Enter your name'
+            },
+            email: {
+                placeholder: 'Enter your email address'
+            },
+            submit: 'Subscribe'
+        }
+    },
     pages: {
         index: {
             header: {
@@ -68,6 +79,11 @@ export default {
                 title: 'More than just a UI Library',
                 description:
                     "While many UI libraries focus solely on UI and UX, they often overlook the most crucial element - the developer. At Inkline, we believe that code quality is directly linked to developer happiness. That's why we've designed Inkline to provide a seamless Developer Experience (DX)"
+            },
+            subscribePro: {
+                title: 'Get Ready for Inkline Pro',
+                description:
+                    "It's official! Inkline Pro is coming with cutting-edge components and features. Subscribe to our newsletter and be the first to know when the game-changing Inkline Pro is released and get an exclusive subscriber discount."
             },
             features: {
                 osawards: {
@@ -114,6 +130,20 @@ export default {
                 description: "The page you're looking for no longer exists.",
                 button: 'Go back'
             }
+        }
+    },
+    roadmap: {
+        inkline4Release: {
+            title: 'Inkline 4 Release',
+            description:
+                'The official release of Inkline 4, packed with exciting new features, improved Developer Experience, and enhanced components.',
+            date: 'Q2 2023'
+        },
+        inklineProRelease: {
+            title: 'Inkline Pro Release',
+            description:
+                'The official release of Inkline Pro, offering a comprehensive suite of advanced components, and features for subscribers, such as Datatables and Autocomplete.',
+            date: 'Q3 2023'
         }
     }
 };

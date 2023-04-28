@@ -29,5 +29,6 @@ export default defineComponent({
         <HeadersIndexPage />
         <SectionsUIUXDX />
         <SectionsSponsors />
+        <SectionsSubscribeInklinePro />
     </div>
 </template>

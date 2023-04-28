@@ -13,6 +13,10 @@ export default defineComponent({
         size: {
             type: String,
             default: ''
+        },
+        fluid: {
+            type: Boolean,
+            default: false
         }
     },
     setup(props) {
@@ -21,7 +25,10 @@ export default defineComponent({
         const { color } = useComponentColor({ componentName, currentColor });
         const { size } = useComponentSize({ componentName, currentSize });
 
-        const classes = computed(() => ({ [`-${color.value}`]: true, [`-${size.value}`]: true }));
+        const classes = computed(() => ({
+            [`-${color.value}`]: true,
+            [`-${size.value}`]: true
+        }));
 
         return {
             classes
@@ -32,7 +39,7 @@ export default defineComponent({
 
 <template>
     <section :class="['section', classes]">
-        <IContainer>
+        <IContainer :fluid="fluid">
             <slot />
         </IContainer>
     </section>
@@ -64,6 +71,10 @@ export default defineComponent({
 
     &.-lg {
         padding: calc(var(--padding-top) * 10) 0 calc(var(--padding-bottom) * 10) 0;
+    }
+
+    .container.-fluid {
+        padding: 0;
     }
 }
 </style>
