@@ -124,8 +124,6 @@ export default defineComponent({
 <style lang="scss">
 @import '@inkline/inkline/css/mixins';
 
-$navbar-height: 72px;
-
 .index-page-header {
     --header--light--background: var(--body--background);
     --header--dark--background: var(--body--background);
@@ -182,7 +180,9 @@ $navbar-height: 72px;
     }
 
     @include breakpoint-down('md') {
-        padding-top: 0;
+        --header--lg--padding-top: 0;
+        --header--lg--padding-bottom: calc(var(--padding-bottom) * 6);
+
         text-align: center;
         overflow: hidden;
 
