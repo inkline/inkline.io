@@ -14,10 +14,10 @@ export default defineComponent({
 </script>
 
 <template>
-    <div id="page">
+    <article id="page">
         <ContentDoc v-slot="{ doc }">
             <NuxtPicture v-if="doc.image" class="blog-article-image" :src="doc.image" />
             <ContentRenderer :value="doc" />
         </ContentDoc>
-    </div>
+    </article>
 </template>

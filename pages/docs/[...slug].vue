@@ -19,7 +19,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div id="page">
+    <article id="page">
         <ContentDoc />
-    </div>
+    </article>
 </template>

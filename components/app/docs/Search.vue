@@ -9,7 +9,7 @@ export default defineComponent({
                 container: '#docsearch',
                 appId: 'QKUB0WAATR',
                 apiKey: 'e1b23dbc16b7deacb0063d5e74f42f7b',
-                indexName: 'inkline'
+                indexName: 'next-inkline'
             });
         });
     }

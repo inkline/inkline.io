@@ -29,9 +29,7 @@ export default defineComponent({
             <AppSidebarApps />
         </template>
 
-        <article>
-            <slot />
-        </article>
+        <slot />
 
         <AppDocsPageFooter />
     </LayoutsContent>
