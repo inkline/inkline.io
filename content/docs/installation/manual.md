@@ -82,7 +82,7 @@ Run the following command to generate `.scss` files containing Sass variables fr
 npx inkline generate scss -o src/css/variables
 ~~~
 
-Optionally, add it to your **`package.json`** file and re-run it every time your config changes.
+Optionally, add the command as a script to your **`package.json`** file and re-run it every time your config changes.
 
 </div>
 <div class="install-step">
