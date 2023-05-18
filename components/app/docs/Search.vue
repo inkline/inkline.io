@@ -7,9 +7,9 @@ export default defineComponent({
         onMounted(() => {
             docsearch({
                 container: '#docsearch',
-                appId: 'QKUB0WAATR',
-                apiKey: 'e1b23dbc16b7deacb0063d5e74f42f7b',
-                indexName: 'next-inkline'
+                appId: 'I4DWB11IJB',
+                apiKey: '49a9d80e5003fde38c3bfbf18f05f02d',
+                indexName: 'inkline'
             });
         });
     }
