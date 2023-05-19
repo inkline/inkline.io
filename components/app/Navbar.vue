@@ -179,8 +179,6 @@ export default defineComponent({
     --navbar--transition-property: top, left, right, height, border-color, border-width,
         border-radius, background;
 
-    padding-left: 0;
-    padding-right: 0;
     position: fixed;
     top: var(--margin-top);
     right: var(--margin-right);
@@ -192,7 +190,7 @@ export default defineComponent({
         align-items: flex-start;
         overflow: auto;
 
-        :deep(> .container) {
+        > .container {
             overflow: auto;
             max-height: 100%;
         }
@@ -250,6 +248,11 @@ export default defineComponent({
         --navbar--item--padding: var(--padding-1-2);
 
         font-weight: var(--font-weight-semibold);
+    }
+
+    > .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     @include breakpoint-up('lg') {
