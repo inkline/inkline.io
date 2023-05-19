@@ -145,7 +145,7 @@ export default defineComponent({
                     <Icon name="bi:discord" size="20px" />
                 </INavItem>
                 <AppColorModeSwitcher stop-propagation :tag="colorSwitcherComponent" />
-                <!-- AppDocsSearch / Disabled until Algolia crawler is updated -->
+                <AppDocsSearch />
             </INav>
             <INav>
                 <FeatureFlag name="premium">
