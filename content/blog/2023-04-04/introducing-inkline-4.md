@@ -79,7 +79,7 @@ export default defineConfig({
                 duration: '300ms',
                 timingFunction: 'ease'
             },
-						border: '1px solid var(--color-gray-200)',
+			border: '1px solid var(--color-gray-200)',
             boxShadow: {
                 offsetX: '0',
                 offsetY: '0.5rem',
