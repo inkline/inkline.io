@@ -1,13 +1,15 @@
 import { NavigationPage } from '~/types';
 import { useI18n } from 'vue-i18n';
 import { AppSidebarNavigation } from '#components';
-import { markRaw } from 'vue';
+import { computed, markRaw } from 'vue';
 import { useSidebarNavigation } from '~/composables';
 
-export function useNavbarNavigation(): NavigationPage[] {
+const AppSidebarNavigationRaw = markRaw(AppSidebarNavigation);
+
+export function useNavbarNavigation() {
     const { t } = useI18n();
 
-    return [
+    return computed<NavigationPage[]>(() => [
         {
             title: t('navigation.home'),
             url: '/'
@@ -18,8 +20,8 @@ export function useNavbarNavigation(): NavigationPage[] {
             id: 'navbar-docs-link'
         },
         {
-            title: 'Mobile documentation navigation',
-            component: markRaw(AppSidebarNavigation),
+            component: AppSidebarNavigationRaw,
+            hidden: { desktop: true },
             componentProps: {
                 navigation: useSidebarNavigation().slice(1)
             }
@@ -28,5 +30,5 @@ export function useNavbarNavigation(): NavigationPage[] {
             title: t('navigation.blog'),
             url: '/blog'
         }
-    ];
+    ]);
 }

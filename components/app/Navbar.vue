@@ -1,14 +1,22 @@
 <script lang="ts">
-import { computed, defineComponent, markRaw, onBeforeUnmount, onMounted, ref } from 'vue';
+import { computed, defineComponent, markRaw, onBeforeUnmount, onMounted, ref, unref } from 'vue';
 import { INavItem } from '@inkline/inkline';
 import { useI18n } from 'vue-i18n';
 import { useLocalePath } from 'vue-i18n-routing';
-import { useNavbarNavigation, useSidebarNavigation, useTelemetry } from '~/composables';
+import { useNavbarAccountNavigation, useNavbarNavigation, useTelemetry } from '~/composables';
 import { off, on } from '@grozav/utils';
 import logoBlack from '~/assets/images/logo/logo-black.svg';
 import logoWhite from '~/assets/images/logo/logo-white.svg';
 import { useRoute } from 'vue-router';
 import { NavigationPage } from '~/types';
+import { useAuthStore } from '~/stores';
+import { storeToRefs } from 'pinia';
+
+interface NavbarNav {
+    id: string;
+    items: NavigationPage[];
+    class?: string;
+}
 
 export default defineComponent({
     props: {
@@ -19,11 +27,18 @@ export default defineComponent({
     },
     setup() {
         const navigation = useNavbarNavigation();
-        const docsNavigation = useSidebarNavigation().slice(1);
+        const accountNavigation = useNavbarAccountNavigation();
         const { track } = useTelemetry();
         const localePath = useLocalePath();
         const { t } = useI18n();
         const route = useRoute();
+        const authStore = useAuthStore();
+        const { isAuthenticated, currentUser } = storeToRefs(authStore);
+
+        const navs = computed<NavbarNav[]>(() => [
+            { id: 'main', items: unref(navigation), class: '_margin-left:auto' },
+            ...(isAuthenticated.value ? [{ id: 'auth', items: unref(accountNavigation) }] : [])
+        ]);
 
         const addScrollVariant = ref(false);
         const classes = computed(() => ({
@@ -58,7 +73,7 @@ export default defineComponent({
             });
         }
 
-        function onLinkClick(url: string, external = false) {
+        function trackLinkClick(url: string, external = false) {
             track(`user clicked on navbar link${external ? ' (external)' : ''}`, {
                 to: url,
                 section: 'navbar',
@@ -66,18 +81,40 @@ export default defineComponent({
             });
         }
 
+        async function logout() {
+            trackLinkClick('/logout');
+            await authStore.logout();
+        }
+
+        async function login() {
+            trackLinkClick('/login');
+            await authStore.login();
+        }
+
+        function getPageClass(page: NavigationPage) {
+            const hidden = (page.hidden as { mobile?: boolean; desktop?: boolean }) || {};
+            return {
+                '-hidden-mobile': hidden?.mobile,
+                '-hidden-desktop': hidden?.desktop
+            };
+        }
+
         return {
             t,
             classes,
-            navigation,
-            docsNavigation,
+            navs,
             isActiveItem,
+            isAuthenticated,
+            currentUser,
             colorSwitcherComponent: markRaw(INavItem),
             logoBlack,
             logoWhite,
             localePath,
             onNavbarBrandClick,
-            onLinkClick
+            trackLinkClick,
+            logout,
+            login,
+            getPageClass
         };
     }
 });
@@ -91,48 +128,67 @@ export default defineComponent({
             Inkline
         </INavbarBrand>
         <INavbarCollapsible>
-            <INav class="_margin-left:auto">
-                <template v-for="page in navigation">
-                    <Component
-                        :is="page.component"
-                        v-if="page.component"
-                        :key="page.title"
-                        v-bind="page.componentProps"
-                    />
-                    <IDropdown
-                        v-else-if="page.children"
-                        :key="page.title"
-                        :events="['focus', 'hover']"
-                    >
-                        <INavItem>{{ page.title }}</INavItem>
-                        <template #body>
-                            <IDropdownItem
-                                v-for="subPage in page.children"
-                                :key="subPage.title"
-                                :to="localePath(subPage.url)"
-                            >
-                                {{ subPage.title }}
-                            </IDropdownItem>
-                        </template>
-                    </IDropdown>
-                    <INavItem
-                        v-else
-                        :class="{ '-active': isActiveItem[page.url] }"
-                        :key="page.title"
-                        :id="page.id"
-                        :to="localePath(page.url)"
-                        @click="onLinkClick(page.url)"
-                    >
-                        {{ page.title }}
-                    </INavItem>
-                </template>
-            </INav>
+            <template v-for="nav in navs" :key="nav.id">
+                <INav :class="[`${nav.id}-nav`, nav.class]">
+                    <template v-for="page in nav.items">
+                        <IDropdown
+                            v-if="page.children"
+                            :key="page.title"
+                            :events="['focus', 'hover']"
+                            :class="getPageClass(page)"
+                        >
+                            <Component
+                                :is="page.component"
+                                v-if="page.component"
+                                v-bind="page.componentProps"
+                            />
+                            <INavItem v-else>{{ page.title }}</INavItem>
+                            <template #body>
+                                <IDropdownItem
+                                    v-for="subPage in page.children"
+                                    :key="subPage.title"
+                                    :to="localePath(subPage.url)"
+                                    v-bind="subPage.componentProps"
+                                    :class="getPageClass(subPage)"
+                                >
+                                    {{ subPage.title }}
+                                </IDropdownItem>
+                            </template>
+                        </IDropdown>
+                        <Component
+                            :is="page.component"
+                            v-else-if="page.component"
+                            :key="page.title"
+                            v-bind="page.componentProps"
+                            :class="getPageClass(page)"
+                        />
+                        <INavItem
+                            v-else
+                            :id="page.id"
+                            :key="page.title"
+                            :class="[getPageClass(page), { '-active': isActiveItem[page.url] }]"
+                            :to="localePath(page.url)"
+                            v-bind="page.componentProps"
+                            @click="trackLinkClick(page.url)"
+                        >
+                            {{ page.title }}
+                        </INavItem>
+                    </template>
+                    <FeatureFlag v-if="!isAuthenticated" name="auth">
+                        <INav>
+                            <INavItem class="_cursor:pointer" @click="login">
+                                {{ t('navigation.login') }}
+                            </INavItem>
+                        </INav>
+                    </FeatureFlag>
+                </INav>
+            </template>
             <INav class="app-navbar-icons">
                 <INavItem
                     href="https://github.com/inkline/inkline"
                     target="_blank"
                     :title="t('navigation.github')"
-                    @click="onLinkClick('https://github.com/inkline/inkline', true)"
+                    @click="trackLinkClick('https://github.com/inkline/inkline', true)"
                 >
                     <Icon name="bi:github" size="20px" />
                 </INavItem>
@@ -140,28 +196,14 @@ export default defineComponent({
                     href="https://chat.inkline.io"
                     target="_blank"
                     :title="t('navigation.discord')"
-                    @click="onLinkClick('https://chat.inkline.io', true)"
+                    @click="trackLinkClick('https://chat.inkline.io', true)"
                 >
                     <Icon name="bi:discord" size="20px" />
                 </INavItem>
                 <AppColorModeSwitcher stop-propagation :tag="colorSwitcherComponent" />
                 <AppDocsSearch />
             </INav>
-            <INav>
-                <FeatureFlag name="premium">
-                    <INavItem :to="localePath('/login')" @click="onLinkClick('/login')">
-                        {{ t('navigation.signin') }}
-                    </INavItem>
-                    <IButton
-                        :to="localePath('/signup')"
-                        color="primary"
-                        class="_margin-left:1"
-                        @click="onLinkClick('/signup')"
-                    >
-                        {{ t('navigation.signup') }}
-                    </IButton>
-                </FeatureFlag>
-            </INav>
+
             <slot name="collapsible" />
         </INavbarCollapsible>
     </INavbar>
@@ -256,8 +298,11 @@ export default defineComponent({
     }
 
     @include breakpoint-up('lg') {
-        .app-sidebar-navigation,
         .app-sidebar-apps {
+            display: none;
+        }
+
+        .-hidden-desktop {
             display: none;
         }
     }
@@ -277,9 +322,13 @@ export default defineComponent({
             }
         }
 
-        .button {
+        .signup-button {
             margin-left: 0;
             width: 100%;
+        }
+
+        .-hidden-mobile {
+            display: none;
         }
     }
 
@@ -287,6 +336,24 @@ export default defineComponent({
         height: 24px;
         width: auto;
         margin-right: var(--margin-right-1-2);
+    }
+
+    .auth-nav {
+        order: 10;
+    }
+
+    .signup-button {
+        height: 40px;
+    }
+
+    .user-avatar {
+        height: 40px;
+        width: 40px;
+        margin-left: var(--margin-left-1-2);
+
+        @include breakpoint-down('md') {
+            display: none;
+        }
     }
 
     &.-light {

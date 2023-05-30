@@ -20,7 +20,10 @@ export default {
         discord: 'Discord',
         switchColorMode: 'Switch to {colorMode} mode',
         getStarted: 'Get started',
-        signin: 'Log in',
+        myAccount: 'My account',
+        dashboard: 'Dashboard',
+        logout: 'Log out',
+        login: 'Log in',
         signup: 'Sign up'
     },
     pageNavigation: {

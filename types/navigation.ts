@@ -10,7 +10,7 @@ export interface AppsPage {
 
 export interface NavigationPage {
     name?: string;
-    title: string;
+    title?: string;
     url?: string;
     navigation?: {
         next?: string;
@@ -19,7 +19,7 @@ export interface NavigationPage {
     id?: string;
     classes?: string[];
     active?: RegExp;
-    hidden?: boolean;
+    hidden?: boolean | { mobile?: boolean; desktop?: boolean };
     index?: boolean;
     children?: Omit<NavigationPage, 'active'>[];
     component?: Component;

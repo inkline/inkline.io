@@ -1,9 +1,6 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-
-/**
- * Not yet implemented
- */
+import { defineComponent, onMounted, ref } from 'vue';
+import { useFeatureFlag } from '~/composables';
 
 export default defineComponent({
     props: {
@@ -12,17 +9,17 @@ export default defineComponent({
             default: ''
         }
     },
-    setup() {
-        const enabled = false;
+    setup(props) {
+        const { isEnabled } = useFeatureFlag(props.name);
 
         return {
-            enabled
+            isEnabled
         };
     }
 });
 </script>
 
 <template>
-    <slot v-if="enabled" />
+    <slot v-if="isEnabled" />
     <slot name="fallback" v-else />
 </template>
