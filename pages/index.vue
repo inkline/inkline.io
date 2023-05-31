@@ -28,6 +28,7 @@ export default defineComponent({
     <div>
         <HeadersIndexPage />
         <SectionsUIUXDX />
+        <SectionsNewsletter />
         <SectionsSponsors />
     </div>
 </template>

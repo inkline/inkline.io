@@ -1,0 +1,9 @@
+.fade-transition-enter-active,
+.fade-transition-leave-active {
+    transition: opacity var(--transition-duration) var(--transition-timing-function);
+}
+
+.fade-transition-enter-from,
+.fade-transition-leave-to {
+    opacity: 0;
+}

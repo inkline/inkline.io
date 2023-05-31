@@ -7,7 +7,8 @@ export default {
         token: 'Token',
         description: 'Description',
         next: 'Next',
-        previous: 'Previous'
+        previous: 'Previous',
+        error: 'Error'
     },
     navigation: {
         home: 'Home',
@@ -106,14 +107,44 @@ export default {
                     'Inkline is an MIT licensed open source project and is completely free to use. Inkline only grows thanks to the help and support of its partners, sponsors and backers. Please, consider supporting us!',
                 button: 'Become a sponsor'
             }
-        },
-        errors: {
-            '404': {
-                name: 'Error 404',
-                title: 'Oops! Where did you meow?',
-                description: "The page you're looking for no longer exists.",
-                button: 'Go back'
+        }
+    },
+    forms: {
+        newsletter: {
+            email: {
+                label: 'Email',
+                placeholder: "e.g. you{'@'}example.com"
+            },
+            firstName: {
+                label: 'First name',
+                placeholder: 'e.g. John'
+            },
+            submit: 'Subscribe',
+            success: {
+                title: "Awesome! You're in.",
+                description:
+                    "You've successfully subscribed to our newsletter! Thanks for joining our community — we can't wait to share all the exciting stuff we're working on."
+            },
+            error: {
+                title: 'Oops! Something went wrong.',
+                description:
+                    'We could not subscribe you to our newsletter at this time. Please try again later.'
             }
+        }
+    },
+    errors: {
+        '404': {
+            name: 'Error 404',
+            title: 'Oops! Where did you meow?',
+            description: "The page you're looking for no longer exists.",
+            button: 'Go back'
+        }
+    },
+    sections: {
+        newsletter: {
+            title: 'Get Ready for Inkline Pro',
+            description:
+                'Join our newsletter and be the first to know when the game-changing Inkline Pro is released! Unlock a world of cutting-edge components and advanced features.'
         }
     }
 };
