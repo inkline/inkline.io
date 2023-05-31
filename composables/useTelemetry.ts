@@ -14,5 +14,14 @@ export function useTelemetry() {
         analytics.capture(eventName, properties);
     }
 
+    function identify(eventName: TelemetryEventName, properties?: TelemetryEventProperties) {
+        const analytics = getPostHog();
+        if (!analytics) {
+            return;
+        }
+
+        analytics.identify(eventName, properties);
+    }
+
     return { track };
 }

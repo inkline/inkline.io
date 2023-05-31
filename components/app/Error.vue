@@ -19,20 +19,20 @@ export default defineComponent({
             <IColumn>
                 <NuxtImg class="image -fluid" src="/images/illustrations/404.svg" alt="Error 404" />
                 <p class="_text:weakest">
-                    {{ t('pages.errors.404.name') }}
+                    {{ t('errors.404.name') }}
                 </p>
                 <h1 class="d5 _margin-top:1/2">
-                    {{ t('pages.errors.404.title') }}
+                    {{ t('errors.404.title') }}
                 </h1>
                 <p class="_font-size:lg">
-                    {{ t('pages.errors.404.description') }}
+                    {{ t('errors.404.description') }}
                 </p>
                 <NuxtLink
                     to="/"
                     class="_font-size:lg _display:inline-flex _align-items:center _justify-content:center"
                 >
                     <Icon name="la:arrow-left" class="_margin-right:1/2" />
-                    {{ t('pages.errors.404.button') }}
+                    {{ t('errors.404.button') }}
                 </NuxtLink>
             </IColumn>
         </IRow>
