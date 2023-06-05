@@ -47,9 +47,10 @@ Next, open your `vite.config.ts` file and add Unocss to the `plugins` array:
 
 ```ts
 import { defineConfig } from 'vite';
-import inkline from '@inkline/plugin/vite';
 import type { UserOptions } from '@inkline/plugin';
+import inkline from '@inkline/plugin/vite';
 import unocss from 'unocss/vite';
+import vue from '@vitejs/plugin-vue';
 
 const inklineConfig: UserOptions = {
     outputDir: 'src/css/variables'
