@@ -35,6 +35,10 @@ export default (async () => {
 })();
 ```
 
+::ContentAlert
+If you're using a custom Inkline config file path, make sure to provide it as an options argument to the `createPreset()` function.
+::
+
 </div>
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">3</span> Add Unocss to your Webpack.js Configuration</div>

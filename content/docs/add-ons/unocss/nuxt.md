@@ -35,7 +35,9 @@ export default (async () => {
 })();
 ```
 
-In case you're using a custom config Inkline file or a custom output path, you can provide these options to the `createPreset` function.
+::ContentAlert
+If you're using a custom Inkline config file path, make sure to provide it as an options argument to the `createPreset()` function.
+::
 
 </div>
 <div class="install-step">
