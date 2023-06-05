@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
         '@inkline/plugin/nuxt',
         '@nuxtjs/i18n',
+        '@unocss/nuxt',
         'nuxt-icon',
         'nuxt-simple-sitemap'
     ],
@@ -84,6 +85,9 @@ export default defineNuxtConfig({
     inkline: {
         globals: {
             colorMode: 'light'
+        },
+        import: {
+            utilities: false
         }
     },
     /**
