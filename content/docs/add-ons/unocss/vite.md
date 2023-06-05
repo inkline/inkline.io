@@ -35,20 +35,33 @@ export default (async () => {
 })();
 ```
 
+::ContentAlert
+If you're using a custom Inkline config file path, make sure to provide it as an options argument to the `createPreset()` function.
+::
+
 </div>
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">3</span> Add Unocss to your Vite.js Configuration</div>
 
-Next, open your `vite.config.ts` file and add the following to the `plugins` array:
+Next, open your `vite.config.ts` file and add Unocss to the `plugins` array:
 
 ```ts
 import { defineConfig } from 'vite';
+import inkline from '@inkline/plugin/vite';
+import type { UserOptions } from '@inkline/plugin';
 import unocss from 'unocss/vite';
 
+const inklineConfig: UserOptions = {
+    outputDir: 'src/css/variables'
+};
+
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-      unocss()
-  ]
+    plugins: [
+        inkline(inklineConfig),
+        unocss(),
+        vue()
+    ]
 });
 ```
 
