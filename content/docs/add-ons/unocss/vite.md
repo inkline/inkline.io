@@ -69,11 +69,11 @@ export default defineConfig({
 <div class="install-step">
 <div class="install-step-title"><span class="install-step-number">4</span> Replace utilities import</div>
 
-If existing, replace the `utilities.scss` import from your `main.ts` file with the `uno.css` import.
+If existing, replace the `utilities.scss` import from your `main.ts` file with the virtual `uno.css` import.
 
 ```ts
 - import '@inkline/inkline/css/utilities.scss?inline';
-+ import 'uno.css';
++ import 'virtual:uno.css';
 ```
 
 </div>
