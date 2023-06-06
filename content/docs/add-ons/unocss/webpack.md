@@ -1,11 +1,11 @@
 ---
-title: Unocss Preset Installation - Webpack.js
-description: Install the Inkline Preset for Unocss in any Webpack.js application.
+title: UnoCSS Preset Installation - Webpack.js
+description: Install the Inkline Preset for UnoCSS in any Webpack.js application.
 layout: docs
 ---
 
-# Unocss Preset Installation - Webpack.js
-## Install the Inkline Preset for Unocss in any Webpack.js application.
+# UnoCSS Preset Installation - Webpack.js
+## Install the Inkline Preset for UnoCSS in any Webpack.js application.
 
 ### Installation
 
@@ -41,7 +41,7 @@ If you're using a custom Inkline config file path, make sure to provide it as an
 
 </div>
 <div class="install-step">
-<div class="install-step-title"><span class="install-step-number">3</span> Add Unocss to your Webpack.js Configuration</div>
+<div class="install-step-title"><span class="install-step-number">3</span> Add UnoCSS to your Webpack.js Configuration</div>
 
 Next, open your `webpack.config.ts` file and add the following to the `plugins` array:
 
@@ -77,7 +77,7 @@ If existing, replace the `utilities.scss` import from your `main.ts` file with t
 
 That's it! You can now enjoy to ease and efficiency of on-demand utility classes in your Inkline project. 
 
-[Read more about the Unocss Preset](/docs/add-ons/unocss)
+[Read more about the UnoCSS Preset](/docs/add-ons/unocss)
 
 </div>
 
