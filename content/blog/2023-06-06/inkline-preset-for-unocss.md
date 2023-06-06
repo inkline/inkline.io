@@ -13,7 +13,7 @@ layout: blog-article
 
 Hello, everyone! I'm thrilled to share an exciting new update with you: the Inkline Preset for [UnoCSS](https://unocss.dev/)! You can now create and apply utility classes instantly, right where you need them - directly in your markup.
 
-[UnoCSS](https://unocss.dev/) has made a name for itself in the realm of utility-first CSS libraries, and we at Inkline are all for it. With UnoCSS's unique approach to CSS utility classes and Inkline's focus on delivering a seamless Vue.js Design System, this is an integration that packs a punch!
+[UnoCSS](https://unocss.dev/) has made a name for itself in the realm of utility-first CSS libraries as a strong competitor to Tailwind and Windi, and we at Inkline are all for it. With UnoCSS's unique approach to CSS utility classes and Inkline's focus on delivering a seamless Vue.js Design System, this is an integration that packs a punch!
 
 What I find particularly exciting about this integration is the added level of control and speed it brings. It allows for on-the-go styling that matches your Design System configuration and CSS Variables, as simple as using the format:
 
