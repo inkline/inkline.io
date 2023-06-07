@@ -67,7 +67,7 @@ export default defineComponent({
 
 <template>
     <IHeader class="index-page-header" size="lg">
-        <NuxtImg :src="image" class="header-illustration" />
+        <NuxtImg :src="image" class="header-illustration" alt="Inkline - Header" />
         <IRow class="header-content">
             <IColumn lg="8" xl="8">
                 <NuxtLink

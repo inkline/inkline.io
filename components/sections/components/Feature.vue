@@ -38,9 +38,9 @@ export default defineComponent({
 <template>
     <div class="section-feature">
         <a v-if="link" v-bind="linkAttrs">
-            <img :src="image" :alt="imgAlt" />
+            <img :src="image" :alt="imgAlt" height="75" width="75" />
         </a>
-        <img v-else :src="image" :alt="imgAlt" />
+        <img v-else :src="image" :alt="imgAlt" height="75" width="75" />
         <h3>
             <a v-if="link" v-bind="linkAttrs">{{ title }}</a>
             <span v-else>{{ title }}</span>
