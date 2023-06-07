@@ -36,5 +36,3 @@ Let's dive into how you can [get started and learn more](/docs/add-ons/unocss). 
 The power of Inkline combined with the flexibility of [UnoCSS](https://unocss.dev/) brings you unparalleled development speed for your application. It opens up a world where you can write custom CSS utility classes on the fly, without being limited by pre-defined stylesheets.
 
 Happy coding!
-
-Alex
