@@ -35,7 +35,11 @@ export default defineComponent({
         <NuxtLink class="_overlay-link" :to="postUrl" />
         <ICard>
             <template #image>
-                <NuxtPicture sizes="xs:720px xl:920px" :src="article.image" />
+                <NuxtPicture
+                    sizes="xs:720px xl:920px"
+                    :src="article.image.src"
+                    :alt="article.image.alt"
+                />
             </template>
             <div class="blog-list-item-tags">
                 <span v-for="tag in article.tags" :key="tag" class="blog-list-item-tag">
