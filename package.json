@@ -6,6 +6,7 @@
         "build": "nuxt build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
+        "postgenerate": "ts-node scripts/postgenerate.ts",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
         "lint": "run-p lint:script lint:style lint:markdown",
@@ -55,6 +56,7 @@
         "sass": "^1.57.0",
         "sitemap": "^7.1.1",
         "stylelint": "^14.16.0",
+        "ts-node": "^10.9.1",
         "typescript": "^5.0.4",
         "unocss": "^0.53.0"
     },
