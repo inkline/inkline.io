@@ -11,7 +11,7 @@ const srcBlogImages = path.join(root, 'assets', 'images', 'blog');
 const distBlogImages = path.join(root, '.output', 'static', 'assets', 'images', 'blog');
 
 if (!fs.existsSync(distBlogImages)) {
-    fs.mkdirSync(distBlogImages);
+    fs.mkdirSync(distBlogImages, { recursive: true });
 }
 
 glob(`${srcBlogImages}/**/*`).then((files: string[]) => {
