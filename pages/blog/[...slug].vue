@@ -22,7 +22,7 @@ export default defineComponent({
                 :src="doc.image.src"
                 :alt="doc.image.alt"
                 :width="doc.image.width"
-                height="doc.image.height"
+                :height="doc.image.height"
             />
             <ContentRenderer :value="doc" />
         </ContentDoc>
