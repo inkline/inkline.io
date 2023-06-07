@@ -11,7 +11,7 @@ export default defineComponent({
             twitterCreator: '@alexgrozav',
             twitterCard: 'summary_large_image',
             ogType: 'website',
-            ogImage: 'https://inkline.io/assets/images/og-image.png'
+            ogImage: 'https://inkline.io/assets/images/social/og-image.png'
         });
 
         return {};

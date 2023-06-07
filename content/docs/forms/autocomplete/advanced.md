@@ -1,9 +1,9 @@
 ---
-title: Select - Advanced
+title: Autocomplete - Advanced
 description: The select component easily supports complex scenarios, with asynchronous autocomplete and pagination. 
 ---
 
-# Select - Advanced 
+# Autocomplete - Advanced 
 ## The select component easily supports complex scenarios, with asynchronous autocomplete and pagination
 
 ### Advanced Example

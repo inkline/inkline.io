@@ -71,8 +71,9 @@ export default defineNuxtConfig({
      */
     i18n: {
         strategy: 'prefix_except_default',
+        baseUrl: 'https://www.inkline.io',
         defaultLocale: 'en',
-        locales: [{ code: 'en', iso: 'en', file: 'en.ts' }],
+        locales: [{ code: 'en', iso: 'en', file: 'en.ts', isCatchallLocale: true }],
         /**
          * @docs https://v8.i18n.nuxtjs.org/guide/lazy-load-translations
          */

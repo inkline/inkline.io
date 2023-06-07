@@ -1,9 +1,9 @@
 ---
-title: Select
-description: Form component used for selecting a value from a large list of options, with autocomplete and pagination support. 
+title: Autocomplete
+description: Form x component used for selecting a value from a large list of options, with autocomplete and pagination support. 
 ---
 
-# Select
+# Autocomplete - Advanced
 ## Form component used for selecting a value from a large list of options, with autocomplete and pagination support
 
 The most basic use case for a select component is to have all the select options predefined using the `options` property. This component allows you to easily choose from a set of values and display a computed option label of your choice.

@@ -1,9 +1,9 @@
 ---
-title: Select - Autocomplete
+title: Autocomplete - Autocomplete
 description: The select autocomplete functionality allows you to search for a specific option with result highlighting. 
 ---
 
-# Select - Autocomplete
+# Autocomplete - Autocomplete
 ## The select autocomplete functionality allows you to search for a specific option with result highlighting
 
 ### Basic Example

@@ -1,9 +1,9 @@
 ---
-title: Select - Rendering
+title: Autocomplete - Rendering
 description: Use the various rendering options for the select options and define your data without restrictions. 
 ---
 
-# Select - Rendering
+# Autocomplete - Rendering
 ## Use the various rendering options for the select options and define your data without restrictions
 
 ### Value by Path
