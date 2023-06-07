@@ -14,7 +14,7 @@ Inkline is officially maintained by [Alex Grozav](https://github.com/sponsors/al
 In October 2019, Inkline was awarded as a finalist for the <a href="https://osawards.com/vue/" rel="nofollow">Vue.js London 2019 Open Source Awards</a>, for the Developer Experience category.
 
 ### Getting started
-The only prerequisite for using Inkline is having a basic understanding of Vue.js. If you are new to Vue.js, the best way to learn is reading through the <a href="https://vuejs.org/v2/guide/" rel="nofollow" target="_blank">Official Vue.js Documentation</a>.
+The only prerequisite for using Inkline is having a basic understanding of Vue.js. If you are new to Vue.js, the best way to learn is reading through the [Official Vue.js Documentation](https://vuejs.org).
 
 Finally, make sure to go through the [Documentation Homepage](/docs) and discover everything Inkline has to offer.
 
