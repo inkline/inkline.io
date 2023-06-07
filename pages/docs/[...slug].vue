@@ -20,6 +20,10 @@ export default defineComponent({
 
 <template>
     <article id="page">
-        <ContentDoc />
+        <ContentDoc>
+            <template #not-found>
+                <AppError />
+            </template>
+        </ContentDoc>
     </article>
 </template>

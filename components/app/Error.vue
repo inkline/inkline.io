@@ -18,9 +18,6 @@ export default defineComponent({
         <IRow>
             <IColumn>
                 <NuxtImg class="image -fluid" src="/images/illustrations/404.svg" alt="Error 404" />
-                <p class="_text:weakest">
-                    {{ t('errors.404.name') }}
-                </p>
                 <h1 class="d5 _margin-top:1/2">
                     {{ t('errors.404.title') }}
                 </h1>
