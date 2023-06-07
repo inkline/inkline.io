@@ -1,5 +1,5 @@
 ---
-title: Tables
+title: Tables - Inkline
 description: Documentation and examples for opt-in styling of tables with Inkline.
 ---
 

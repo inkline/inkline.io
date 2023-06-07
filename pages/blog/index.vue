@@ -8,7 +8,7 @@ export default defineComponent({
             layout: 'blog'
         });
 
-        const title = 'Blog';
+        const title = 'Blog - Inkline';
         const description =
             'Discover the latest updates, tips, and insights on Inkline, the intuitive UI Library for Vue.js 3 Design Systems. Stay informed on developer-friendly features, best practices, and the vibrant Inkline community.';
 

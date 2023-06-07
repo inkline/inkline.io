@@ -1,5 +1,5 @@
 ---
-title: Alert
+title: Alert - Inkline
 description: Provide contextual feedback messages for typical user actions using the alert component.
 ---
 

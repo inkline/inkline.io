@@ -1,5 +1,5 @@
 ---
-title: Icon
+title: Icon - Inkline
 description: Inkline comes bundled with a lightweight icon component that provides you with the most commonly used icons.
 ---
 

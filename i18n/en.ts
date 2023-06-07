@@ -135,8 +135,8 @@ export default {
     errors: {
         '404': {
             title: '404',
-            description: "Sorry! The page you're looking for no longer exists.",
-            button: 'Go back'
+            description: "Oops! The page you're looking for no longer exists.",
+            button: 'Return to homepage'
         }
     },
     sections: {

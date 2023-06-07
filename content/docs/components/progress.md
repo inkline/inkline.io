@@ -1,5 +1,5 @@
 ---
-title: Progress
+title: Progress - Inkline
 description: A custom component for displaying progress with support for stacked progress bars.
 ---
 

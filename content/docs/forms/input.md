@@ -1,5 +1,5 @@
 ---
-title: Input
+title: Input - Inkline
 description: Form component used for inputting data directly from the keyboard. 
 ---
 

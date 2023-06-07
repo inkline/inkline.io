@@ -1,5 +1,5 @@
 ---
-title: UnoCSS Preset Installation - Nuxt
+title: UnoCSS Preset Installation - Nuxt - Inkline
 description: Install the Inkline Preset for UnoCSS in any Nuxt application.
 layout: docs
 ---

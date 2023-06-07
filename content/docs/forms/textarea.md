@@ -1,5 +1,5 @@
 ---
-title: Textarea
+title: Textarea - Inkline
 description: Form components used for inputting data directly from the keyboard, on multiple lines.
 ---
 

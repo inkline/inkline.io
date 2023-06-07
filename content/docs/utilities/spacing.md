@@ -1,5 +1,5 @@
 ---
-title: Utilities - Spacing
+title: Utilities - Spacing - Inkline
 description: You can use a wide range of responsive margin and padding utility classes to modify an element’s appearance. 
 ---
 

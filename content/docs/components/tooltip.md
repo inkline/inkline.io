@@ -1,5 +1,5 @@
 ---
-title: Tooltip
+title: Tooltip - Inkline
 description: Tooltips are useful for conveying information when an user hovers over an element.
 ---
 

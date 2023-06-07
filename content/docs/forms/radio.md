@@ -1,5 +1,5 @@
 ---
-title: Radio
+title: Radio - Inkline
 description: Radio inputs allow the user to select multiple options from a set. 
 ---
 

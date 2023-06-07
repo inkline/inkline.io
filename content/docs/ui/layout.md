@@ -1,5 +1,5 @@
 ---
-title: Layout
+title: Layout - Inkline
 description: Learn how to build basic layouts with Inkline's layout components. Create responsive and accessible designs for your web applications using ILayout, ILayoutHeader, ILayoutAside, ILayoutContent, and ILayoutFooter. Check out examples and code snippets for common layouts in our documentation.
 ---
 

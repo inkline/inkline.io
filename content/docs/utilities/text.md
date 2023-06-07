@@ -1,5 +1,5 @@
 ---
-title: Utilities - Text
+title: Utilities - Text - Inkline
 description: Use common text utilities to control alignment, wrapping, weight, and more. 
 ---
 

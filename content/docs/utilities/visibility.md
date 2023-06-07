@@ -1,5 +1,5 @@
 ---
-title: Utilities - Visibility
+title: Utilities - Visibility - Inkline
 description: Control the visibility, with or without modifying the display of elements. 
 ---
 

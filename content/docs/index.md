@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Documentation - Inkline
 description: Documentation for Inkline, the intuitive UI Library for Vue.js 3 Design Systems.
 layout: docs
 ---

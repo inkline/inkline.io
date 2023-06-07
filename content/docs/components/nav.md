@@ -1,5 +1,5 @@
 ---
-title: Nav
+title: Nav - Inkline
 description: Navs are basic navigation components that provide alignment and spacing between items.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Toast
+title: Toast - Inkline
 description: Learn how to create and manage small, non-intrusive toast notifications that appear on the screen to inform users of a specific event or action.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Utilities - Flex
+title: Utilities - Flex - Inkline
 description: Use flexbox utilities to modify the layout, alignment, and sizing of components and more. 
 ---
 

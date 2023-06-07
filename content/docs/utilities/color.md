@@ -1,5 +1,5 @@
 ---
-title: Utilities - Color
+title: Utilities - Color - Inkline
 description: Inkline uses a beautiful, consistent color scheme across the framework. 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Form Validation - Validators
+title: Form Validation - Validators - Inkline
 description: Validators are configurable functions used to check whether an input value matches a specific criteria.
 ---
 

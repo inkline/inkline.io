@@ -1,5 +1,5 @@
 ---
-title: Header
+title: Header - Inkline
 description: A lightweight, responsive header component used for showcasing hero unit style content.
 ---
 

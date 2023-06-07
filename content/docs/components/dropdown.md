@@ -1,5 +1,5 @@
 ---
-title: Dropdown
+title: Dropdown - Inkline
 description: Dropdowns are contextual overlays toggled through clicking or hovering, usually used for displaying a list of links.
 ---
 

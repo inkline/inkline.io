@@ -1,5 +1,5 @@
 ---
-title: Autocomplete - Rendering
+title: Autocomplete - Rendering - Inkline
 description: Use the various rendering options for the select options and define your data without restrictions. 
 ---
 

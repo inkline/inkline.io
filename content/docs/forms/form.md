@@ -1,5 +1,5 @@
 ---
-title: Form
+title: Form - Inkline
 description: Forms are the main wrapper components for form elements, with powerful customization and validation options. 
 ---
 

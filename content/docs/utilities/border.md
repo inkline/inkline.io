@@ -1,5 +1,5 @@
 ---
-title: Utilities - Border
+title: Utilities - Border - Inkline
 description: Use border utilities to quickly apply border styles to an element. Great for images, buttons, or any other element. 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Design Tokens - UI
+title: Design Tokens - UI - Inkline
 description: Learn how to customize the look and feel of your design system with Inkline's design tokens to create a beautiful and consistent user interface.
 layout: docs
 ---

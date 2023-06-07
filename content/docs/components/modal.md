@@ -1,5 +1,5 @@
 ---
-title: Modal
+title: Modal - Inkline
 description: Modals are dialogs that can be used for user notifications, lightboxes, or completely custom content.
 ---
 

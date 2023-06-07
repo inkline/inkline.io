@@ -1,5 +1,5 @@
 ---
-title: Toggle
+title: Toggle - Inkline
 description: Toggles are boolean form components used for easily enabling or disabling features. 
 ---
 

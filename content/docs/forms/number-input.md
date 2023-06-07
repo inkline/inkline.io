@@ -1,5 +1,5 @@
 ---
-title: Number Input
+title: Number Input - Inkline
 description: Number Inputs are form components used to for easily inputting and manipulating numbers.
 ---
 

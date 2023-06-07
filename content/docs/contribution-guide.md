@@ -1,5 +1,5 @@
 ---
-title: Contribution Guide
+title: Contribution Guide - Inkline
 description: Actively participate in the development and the future of Inkline by contributing regularly.
 layout: docs
 ---

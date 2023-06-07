@@ -16,7 +16,14 @@ export default defineComponent({
 <template>
     <article id="page">
         <ContentDoc v-slot="{ doc }">
-            <NuxtPicture v-if="doc.image" class="blog-article-image" :src="doc.image" />
+            <NuxtPicture
+                v-if="doc.image"
+                class="blog-article-image"
+                :src="doc.image.src"
+                :alt="doc.image.alt"
+                :width="doc.image.width"
+                height="doc.image.height"
+            />
             <ContentRenderer :value="doc" />
         </ContentDoc>
     </article>

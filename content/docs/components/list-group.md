@@ -1,5 +1,5 @@
 ---
-title: List Group
+title: List Group - Inkline
 description: List groups are flexible components used for displaying a list of related content.
 ---
 

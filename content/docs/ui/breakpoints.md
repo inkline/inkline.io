@@ -1,5 +1,5 @@
 ---
-title: Breakpoints
+title: Breakpoints - Inkline
 description: Inkline provides a set of predefined breakpoints that you can use in your Sass code to create responsive designs that adapt to different screen sizes.
 ---
 

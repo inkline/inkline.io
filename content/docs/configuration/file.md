@@ -1,5 +1,5 @@
 ---
-title: Theme Options - Configuration
+title: Theme Options - Configuration - Inkline
 description: Customize your Vue.js 3 Design System with Inkline's configuration file. Easily adjust colors, typography, spacing, and more.
 layout: docs
 ---

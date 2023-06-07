@@ -25,10 +25,24 @@ export default defineNuxtConfig({
          * @docs https://nuxt.com/docs/api/configuration/nuxt-config#head
          */
         head: {
-            titleTemplate: '%s - Inkline',
+            // description:
+            //     'Inkline is the intuitive UI Components library for building a high-quality, developer-friendly, configurable, and accessible Vue.js Design System.',
+            // twitterSite: '@inkline',
+            // twitterCreator: '@alexgrozav',
+            // twitterCard: 'summary_large_image',
+            // ogType: 'website',
+            // ogImage: 'https://inkline.io/assets/images/social/og-image.png'
+
+            title: 'Inkline',
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
                 { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: 'black' }
+            ],
+            meta: [
+                {
+                    property: 'og:image',
+                    content: 'https://www.inkline.io/assets/images/social/og-image.png'
+                }
             ]
         },
         /**

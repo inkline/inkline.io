@@ -1,12 +1,18 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { clearError } from '#imports';
 
 export default defineComponent({
     setup() {
         const { t } = useI18n();
 
+        function handleError() {
+            clearError({ redirect: '/' });
+        }
+
         return {
+            handleError,
             t
         };
     }
@@ -24,13 +30,13 @@ export default defineComponent({
                 <p class="_font-size:lg">
                     {{ t('errors.404.description') }}
                 </p>
-                <NuxtLink
-                    to="/"
-                    class="_font-size:lg _display:inline-flex _align-items:center _justify-content:center"
+                <a
+                    class="_font-size:lg _display:inline-flex _align-items:center _justify-content:center _cursor:pointer"
+                    @click="handleError"
                 >
                     <Icon name="la:arrow-left" class="_margin-right:1/2" />
                     {{ t('errors.404.button') }}
-                </NuxtLink>
+                </a>
             </IColumn>
         </IRow>
     </IContainer>

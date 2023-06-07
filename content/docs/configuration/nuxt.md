@@ -1,5 +1,5 @@
 ---
-title: Module Options - Nuxt
+title: Module Options - Nuxt - Inkline
 description: Effortlessly customize Inkline's Configuration using the Nuxt Module options.
 layout: docs
 ---

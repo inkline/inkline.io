@@ -1,5 +1,5 @@
 ---
-title: Pagination
+title: Pagination - Inkline
 description: Pagination provides navigation for large series of related content.
 ---
 

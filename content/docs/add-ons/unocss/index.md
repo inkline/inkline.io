@@ -1,5 +1,5 @@
 ---
-title: UnoCSS Preset
+title: UnoCSS Preset - Inkline
 description: The Inkline UnoCSS preset brings the flexibility of UnoCSS, a powerful utility-first CSS engine, to your projects, allowing you to generate atomic Inkline CSS Utility Classes on the fly.
 ---
 

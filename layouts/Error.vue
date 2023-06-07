@@ -36,6 +36,7 @@ export default defineComponent({
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 800px;
     }
 
     footer {

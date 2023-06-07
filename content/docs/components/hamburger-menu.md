@@ -1,5 +1,5 @@
 ---
-title: Hamburger Menu
+title: Hamburger Menu - Inkline
 description: Inkline's hamburger menu is used to control opening and closing elements using various animation options.
 ---
 

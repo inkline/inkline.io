@@ -1,5 +1,5 @@
 ---
-title: Collapsible
+title: Collapsible - Inkline
 description: Collapsible elements are used to show and hide content using a smooth reveal transition. 
 ---
 

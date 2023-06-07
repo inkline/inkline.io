@@ -1,5 +1,5 @@
 ---
-title: Breadcrumb
+title: Breadcrumb - Inkline
 description: Improve your website's navigation with Inkline's breadcrumb component. Displays the hierarchical structure of your pages and automatically adds separators.
 ---
 

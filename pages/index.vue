@@ -8,7 +8,7 @@ export default defineComponent({
             layout: 'default'
         });
 
-        const title = 'Vue.js UI UX DX Library';
+        const title = 'Vue.js UI UX DX Library - Inkline';
         const description =
             'Inkline is the intuitive UI Components library for building a high-quality, developer-friendly, configurable, and accessible Vue.js Design System.';
 

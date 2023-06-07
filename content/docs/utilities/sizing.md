@@ -1,5 +1,5 @@
 ---
-title: Utilities - Sizing
+title: Utilities - Sizing - Inkline
 description: Make an element as wide or as tall as you need using width and height utilities. 
 ---
 

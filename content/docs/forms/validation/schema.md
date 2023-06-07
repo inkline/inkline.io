@@ -1,5 +1,5 @@
 ---
-title: Form Validation - Schema
+title: Form Validation - Schema - Inkline
 description:  The validation schema defines the form input fields, groups and how they work together.
 ---
 

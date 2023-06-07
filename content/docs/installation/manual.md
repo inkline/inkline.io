@@ -1,5 +1,5 @@
 ---
-title: Installation - Manual
+title: Installation - Manual - Inkline
 description: Install Inkline for an application created using any other bundler or framework.
 layout: docs
 ---

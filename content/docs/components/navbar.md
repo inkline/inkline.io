@@ -1,5 +1,5 @@
 ---
-title: Navbar
+title: Navbar - Inkline
 description: A responsive navigation header that includes support for branding, navigation, forms and more.
 ---
 

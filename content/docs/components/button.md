@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Button - Inkline
 description: Buttons can represent actions, links, or routes within the application and represent one of the core building blocks of an application. 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Autocomplete - Autocomplete
+title: Autocomplete - Autocomplete - Inkline
 description: The select autocomplete functionality allows you to search for a specific option with result highlighting. 
 ---
 

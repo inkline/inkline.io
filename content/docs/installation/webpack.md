@@ -1,5 +1,5 @@
 ---
-title: Installation - Webpack
+title: Installation - Webpack - Inkline
 description: Install Inkline for any application created using Webpack.
 layout: docs
 ---

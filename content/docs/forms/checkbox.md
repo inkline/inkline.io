@@ -1,5 +1,5 @@
 ---
-title: Checkbox
+title: Checkbox - Inkline
 description: Checkbox inputs allow the user to select multiple options from a set. 
 ---
 

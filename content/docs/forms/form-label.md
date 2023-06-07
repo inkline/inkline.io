@@ -1,5 +1,5 @@
 ---
-title: Form Label
+title: Form Label - Inkline
 description: Form component used to add text labels to form groups. 
 ---
 

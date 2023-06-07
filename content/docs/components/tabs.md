@@ -1,5 +1,5 @@
 ---
-title: Tabs
+title: Tabs - Inkline
 description: Tab elements are used to switch between multiple sections of related content. 
 ---
 

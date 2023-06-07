@@ -1,5 +1,5 @@
 ---
-title: Popover
+title: Popover - Inkline
 description: Popovers are useful for conveying information when an user clicks an element.
 ---
 

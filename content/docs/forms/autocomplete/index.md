@@ -1,5 +1,5 @@
 ---
-title: Autocomplete
+title: Autocomplete - Inkline
 description: Form x component used for selecting a value from a large list of options, with autocomplete and pagination support. 
 ---
 

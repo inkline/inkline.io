@@ -1,5 +1,5 @@
 ---
-title: Images
+title: Images - Inkline
 description: Documentation and examples for images, using lightweight styles and modifier classes.
 ---
 

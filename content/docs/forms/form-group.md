@@ -1,5 +1,5 @@
 ---
-title: Form Group
+title: Form Group - Inkline
 description: Form groups are the easiest way to add structure and spacing to form elements. 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Sidebar
+title: Sidebar - Inkline
 description: A responsive navigation sidebar that includes support for branding, navigation, forms and more.
 ---
 

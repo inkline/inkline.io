@@ -1,5 +1,5 @@
 ---
-title: Button Group
+title: Button Group - Inkline
 description: Group multiple buttons together on a single line using a button group. 
 ---
 

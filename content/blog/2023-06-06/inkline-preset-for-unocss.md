@@ -1,7 +1,11 @@
 ---
-title: On-demand Inkline CSS Utility Classes with UnoCSS
+title: On-demand CSS Utility Classes with UnoCSS - Inkline
 description: Discover the Inkline Preset for UnoCSS, a world where you can write custom CSS utility classes on the fly, without being limited by pre-defined stylesheets. You can now create and apply utility classes right where you need them!
-image: /images/blog/inkline-preset-for-unocss.webp
+image: 
+    src: /images/blog/inkline-preset-for-unocss.webp
+    alt: On-demand CSS Utility Classes with UnoCSS
+    width: 1280
+    height: 600
 date: 2023-06-06
 slug: inkline-preset-for-unocss
 tags: ['news']

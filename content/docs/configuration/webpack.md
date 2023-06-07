@@ -1,5 +1,5 @@
 ---
-title: Module Options - Webpack.js
+title: Module Options - Webpack.js - Inkline
 description: Effortlessly customize Inkline's Configuration using the Webpack.js Plugin options.
 layout: docs
 ---
