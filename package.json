@@ -5,8 +5,8 @@
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
+        "pregenerate": "ts-node scripts/pregenerate.ts",
         "generate": "nuxt generate",
-        "postgenerate": "ts-node scripts/postgenerate.ts",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
         "lint": "run-p lint:script lint:style lint:markdown",

@@ -8,7 +8,7 @@ const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
 
 const srcBlogImages = path.join(root, 'assets', 'images', 'blog');
-const distBlogImages = path.join(root, '.output', 'static', 'assets', 'images', 'blog');
+const distBlogImages = path.join(root, 'public', 'assets', 'images', 'blog');
 
 if (!fs.existsSync(distBlogImages)) {
     fs.mkdirSync(distBlogImages, { recursive: true });
