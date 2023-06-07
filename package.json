@@ -37,6 +37,7 @@
         "@nuxtjs/i18n": "^8.0.0-beta.7",
         "@types/node": "^18.14.0",
         "@unocss/nuxt": "^0.53.0",
+        "@vite-pwa/nuxt": "^0.0.10",
         "@vue/eslint-config-typescript": "^11.0.2",
         "esbuild": "^0.16.13",
         "eslint": "^8.30.0",

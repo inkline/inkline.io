@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         '@nuxt/image-edge',
         '@inkline/plugin/nuxt',
         '@nuxtjs/i18n',
+        '@vite-pwa/nuxt',
         '@unocss/nuxt',
         'nuxt-icon',
         'nuxt-simple-sitemap'
@@ -24,7 +25,11 @@ export default defineNuxtConfig({
          * @docs https://nuxt.com/docs/api/configuration/nuxt-config#head
          */
         head: {
-            titleTemplate: '%s - Inkline'
+            titleTemplate: '%s - Inkline',
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
+                { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: 'black' }
+            ]
         },
         /**
          * @docs https://nuxt.com/docs/getting-started/transitions
@@ -112,6 +117,35 @@ export default defineNuxtConfig({
      */
     imports: {
         autoImport: false
+    },
+    /**
+     * @docs https://vite-pwa-org.netlify.app/
+     */
+    pwa: {
+        registerType: 'autoUpdate',
+        manifest: {
+            name: 'Inkline',
+            short_name: 'Inkline',
+            theme_color: '#ffffff',
+            icons: [
+                {
+                    src: 'pwa-192x192.png',
+                    sizes: '192x192',
+                    type: 'image/png'
+                },
+                {
+                    src: 'pwa-512x512.png',
+                    sizes: '512x512',
+                    type: 'image/png'
+                },
+                {
+                    src: 'pwa-512x512.png',
+                    sizes: '512x512',
+                    type: 'image/png',
+                    purpose: 'any maskable'
+                }
+            ]
+        }
     },
     /**
      * @docs https://nuxt.com/docs/guide/going-further/runtime-config
