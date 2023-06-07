@@ -25,14 +25,6 @@ export default defineNuxtConfig({
          * @docs https://nuxt.com/docs/api/configuration/nuxt-config#head
          */
         head: {
-            // description:
-            //     'Inkline is the intuitive UI Components library for building a high-quality, developer-friendly, configurable, and accessible Vue.js Design System.',
-            // twitterSite: '@inkline',
-            // twitterCreator: '@alexgrozav',
-            // twitterCard: 'summary_large_image',
-            // ogType: 'website',
-            // ogImage: 'https://inkline.io/assets/images/social/og-image.png'
-
             title: 'Inkline',
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
@@ -40,8 +32,29 @@ export default defineNuxtConfig({
             ],
             meta: [
                 {
+                    name: 'description',
+                    content:
+                        'Inkline is the intuitive UI Components library for building a high-quality, developer-friendly, configurable, and accessible Vue.js Design System.'
+                },
+                {
+                    property: 'og:type',
+                    content: 'website'
+                },
+                {
                     property: 'og:image',
                     content: 'https://www.inkline.io/assets/images/social/og-image.png'
+                },
+                {
+                    name: 'twitter:site',
+                    content: '@inkline'
+                },
+                {
+                    name: 'twitter:creator',
+                    content: '@alexgrozav'
+                },
+                {
+                    name: 'twitter:card',
+                    content: 'summary_large_image'
                 }
             ]
         },
