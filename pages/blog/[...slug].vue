@@ -21,8 +21,6 @@ export default defineComponent({
                 class="blog-article-image"
                 :src="doc.image.src"
                 :alt="doc.image.alt"
-                :width="doc.image.width"
-                :height="doc.image.height"
             />
             <ContentRenderer :value="doc" />
         </ContentDoc>
