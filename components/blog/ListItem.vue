@@ -36,6 +36,7 @@ export default defineComponent({
         <ICard>
             <template #image>
                 <NuxtPicture
+                    v-if="article.image"
                     sizes="xs:720px xl:920px"
                     :src="article.image.src"
                     :alt="article.image.alt"
