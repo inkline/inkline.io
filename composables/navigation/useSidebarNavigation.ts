@@ -4,7 +4,8 @@ export function useSidebarNavigation(): NavigationPage[] {
     return [
         {
             title: 'Home',
-            url: '/docs'
+            url: '/docs',
+            index: true
         },
         {
             title: 'Getting started',
@@ -22,6 +23,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                 {
                     title: 'Installation',
                     url: '/docs/installation',
+                    index: true,
                     children: [
                         {
                             title: 'Vite.js',
@@ -327,6 +329,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                 {
                     title: 'Form Validation',
                     url: '/docs/forms/validation',
+                    index: true,
                     children: [
                         {
                             title: 'Schema',
@@ -421,6 +424,7 @@ export function useSidebarNavigation(): NavigationPage[] {
                 {
                     title: 'Unocss Preset',
                     url: '/docs/add-ons/unocss',
+                    index: true,
                     children: [
                         {
                             title: 'Vite.js',
