@@ -8,7 +8,7 @@
         "pregenerate": "ts-node scripts/pregenerate.ts",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
-        "postinstall": "nuxt prepare",
+        "postinstall": "patch-package && nuxt prepare",
         "lint": "run-p lint:script lint:style lint:markdown",
         "lint:script": "eslint --ext .vue,.js,.ts src",
         "lint:prettier": "prettier --write --loglevel warn \"**/*.{js,json,css,scss,vue,html}\"",
@@ -16,7 +16,6 @@
         "lint:markdown": "markdownlint '**/*.md'"
     },
     "dependencies": {
-        "@auth0/auth0-spa-js": "^2.0.4",
         "@auth0/auth0-vue": "^2.2.0",
         "@docsearch/css": "3.5.1",
         "@docsearch/js": "3.5.1",
@@ -24,9 +23,11 @@
         "@inkline/inkline": "4.3.3",
         "copy-to-clipboard": "3.3.3",
         "date-fns": "2.30.0",
+        "express-oauth2-jwt-bearer": "^1.5.0",
         "posthog-js": "1.75.3",
         "prism-theme-vars": "0.2.4",
         "vue-i18n": "9.3.0-beta.25",
+        "stripe": "^12.9.0",
         "pinia": "^2.1.3"
     },
     "devDependencies": {
@@ -53,6 +54,7 @@
         "nuxt": "3.5.3",
         "nuxt-icon": "0.3.3",
         "nuxt-simple-sitemap": "2.7.0",
+        "patch-package": "^7.0.0",
         "pathe": "1.1.1",
         "postcss-html": "1.5.0",
         "postcss-preset-env": "8.5.1",

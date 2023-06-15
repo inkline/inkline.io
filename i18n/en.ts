@@ -110,6 +110,11 @@ export default {
                     'Inkline is an MIT licensed open source project and is completely free to use. Inkline only grows thanks to the help and support of its partners, sponsors and backers. Please, consider supporting us!',
                 button: 'Become a sponsor'
             }
+        },
+        pricing: {
+            title: 'Create design systems with super-powers. Start',
+            titleHighlight: 'free',
+            description: 'Choose a plan that works best for you, your team and your projects.'
         }
     },
     forms: {

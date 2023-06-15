@@ -1,3 +1,5 @@
+import { useFetch } from '#imports';
+
 export async function subscribe(email: string, firstName: string) {
     const query = new URLSearchParams({
         u: '7bd6f3ee22cc7c1976ab33fd4',
@@ -8,11 +10,14 @@ export async function subscribe(email: string, firstName: string) {
         FNAME: firstName
     });
 
-    await fetch('https://inkline.us14.list-manage.com/subscribe/post-json?' + query.toString(), {
-        method: 'GET',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/json; charset=utf-8'
+    return useFetch(
+        'https://inkline.us14.list-manage.com/subscribe/post-json?' + query.toString(),
+        {
+            method: 'GET',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            }
         }
-    });
+    );
 }

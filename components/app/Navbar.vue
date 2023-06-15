@@ -88,7 +88,11 @@ export default defineComponent({
 
         async function login() {
             trackLinkClick('/login');
-            await authStore.login();
+            await authStore.login({
+                authorizationParams: {
+                    redirect_uri: route.fullPath
+                }
+            });
         }
 
         function getPageClass(page: NavigationPage) {

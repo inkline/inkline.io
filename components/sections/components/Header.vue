@@ -1,14 +1,21 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
 
-export default defineComponent({});
+export default defineComponent({
+    props: {
+        heading: {
+            type: String as PropType<'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'>,
+            default: 'h2'
+        }
+    }
+});
 </script>
 
 <template>
     <div class="section-header">
-        <h2 class="title">
+        <component :is="heading" class="title">
             <slot name="title" />
-        </h2>
+        </component>
         <p class="description lead">
             <slot name="description" />
         </p>

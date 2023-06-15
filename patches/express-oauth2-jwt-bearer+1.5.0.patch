@@ -1,0 +1,32 @@
+diff --git a/node_modules/express-oauth2-jwt-bearer/dist/index.d.ts b/node_modules/express-oauth2-jwt-bearer/dist/index.d.ts
+index cc015a9..92ac083 100644
+--- a/node_modules/express-oauth2-jwt-bearer/dist/index.d.ts
++++ b/node_modules/express-oauth2-jwt-bearer/dist/index.d.ts
+@@ -226,6 +226,7 @@ declare global {
+     }
+ }
+ declare const auth: (opts?: AuthOptions) => Handler;
++declare const verifyToken: (opts?: AuthOptions) => Handler;
+ declare const claimCheck: ClaimCheck<Handler>;
+ declare const claimEquals: ClaimEquals<Handler>;
+ declare const claimIncludes: ClaimIncludes<Handler>;
+@@ -233,3 +234,8 @@ declare const requiredScopes: RequiredScopes<Handler>;
+ declare const scopeIncludesAny: RequiredScopes<Handler>;
+ 
+ export { AuthOptions, VerifyJwtResult as AuthResult, FunctionValidator, InsufficientScopeError, InvalidRequestError, InvalidTokenError, JSONPrimitive, JWSHeaderParameters as JWTHeader, JWTPayload, UnauthorizedError, Validator, Validators, auth, claimCheck, claimEquals, claimIncludes, requiredScopes, scopeIncludesAny };
++
++declare const jwtVerifier = (options?: JwtVerifierOptions) => (token: string) => Promise<VerifyJwtResult>;
++declare const getToken: (headers: HeadersLike, query?: QueryLike, body?: BodyLike, urlEncoded?: boolean) => string;
++
++export { jwtVerifier, getToken, JwtVerifierOptions, VerifyJwtResult };
+diff --git a/node_modules/express-oauth2-jwt-bearer/dist/index.js b/node_modules/express-oauth2-jwt-bearer/dist/index.js
+index 47c127a..72c2739 100644
+--- a/node_modules/express-oauth2-jwt-bearer/dist/index.js
++++ b/node_modules/express-oauth2-jwt-bearer/dist/index.js
+@@ -439,3 +439,6 @@ exports.claimEquals = claimEquals;
+ exports.claimIncludes = claimIncludes;
+ exports.requiredScopes = requiredScopes;
+ exports.scopeIncludesAny = scopeIncludesAny;
++
++exports.jwtVerifier = jwtVerifier;
++exports.getToken = getToken;

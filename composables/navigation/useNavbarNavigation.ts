@@ -15,6 +15,14 @@ export function useNavbarNavigation() {
             url: '/'
         },
         {
+            title: t('navigation.pricing'),
+            url: '/pricing'
+        },
+        {
+            title: t('navigation.blog'),
+            url: '/blog'
+        },
+        {
             title: t('navigation.documentation'),
             url: '/docs',
             id: 'navbar-docs-link'
@@ -25,10 +33,6 @@ export function useNavbarNavigation() {
             componentProps: {
                 navigation: useSidebarNavigation().slice(1)
             }
-        },
-        {
-            title: t('navigation.blog'),
-            url: '/blog'
         }
     ]);
 }

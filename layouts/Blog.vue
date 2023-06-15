@@ -22,9 +22,11 @@ export default defineComponent({
 @import '@inkline/inkline/css/mixins';
 
 #blog-layout {
-    .light-theme & {
-        background: var(--color-light-tint-50);
-    }
+    background-repeat: no-repeat;
+    background-image: radial-gradient(at 36% 0%, hsla(246, 100%, 74%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 99% 13%, hsla(22, 100%, 56%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 63% 58%, hsla(240, 0%, 100%, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(21, 0%, 100%, 0.15) 0px, transparent 50%);
 
     .blog-list-item {
         margin-bottom: var(--margin-bottom-2);

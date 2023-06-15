@@ -23,11 +23,11 @@ export default defineComponent({
     transition: background var(--transition-duration) var(--transition-timing-function);
 
     .light-theme & {
-        background: var(--color-white);
+        background-color: var(--color-white);
     }
 
     .dark-theme & {
-        background: var(--color-dark-shade-100);
+        background-color: var(--color-dark-shade-100);
     }
 }
 

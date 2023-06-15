@@ -125,8 +125,8 @@ export default defineComponent({
 @import '@inkline/inkline/css/mixins';
 
 .index-page-header {
-    --header--light--background: var(--body--background);
-    --header--dark--background: var(--body--background);
+    --header--light--background: transparent;
+    --header--dark--background: transparent;
 
     background-repeat: no-repeat;
     background-size: 100% auto;
