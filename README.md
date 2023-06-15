@@ -19,7 +19,7 @@
     <a href="https://stackblitz.com/edit/inkline?file=src/App.vue">Playground</a>
     ·
     <a href="https://github.com/inkline/inkline/issues">Issue Tracker</a>
-</p>
+</p> 
 
 <br/>
 
