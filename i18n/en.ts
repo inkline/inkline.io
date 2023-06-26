@@ -22,6 +22,7 @@ export default {
         getStarted: 'Get started',
         myAccount: 'My account',
         dashboard: 'Dashboard',
+        billing: 'Billing',
         logout: 'Log out',
         login: 'Log in',
         signup: 'Sign up'
@@ -114,7 +115,29 @@ export default {
         pricing: {
             title: 'Create design systems with super-powers. Start',
             titleHighlight: 'free',
-            description: 'Choose a plan that works best for you, your team and your projects.'
+            description: 'Choose a plan that works best for you, your team and your projects.',
+            interval: {
+                monthly: 'Monthly',
+                yearly: 'Yearly'
+            },
+            table: {
+                interval: {
+                    monthly: 'per month, billed monthly',
+                    yearly: 'per month, billed yearly',
+                    user: 'per developer'
+                }
+            },
+            plans: {
+                free: {
+                    action: 'Get started'
+                },
+                pro: {
+                    action: 'Coming soon'
+                },
+                enterprise: {
+                    action: 'Coming soon'
+                }
+            }
         }
     },
     forms: {

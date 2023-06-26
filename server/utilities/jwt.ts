@@ -14,10 +14,10 @@ export const createAuthMiddleware = (options: JwtVerifierOptions) => {
             event.context.auth = await verifyJwt(jwt);
 
             try {
-                const response = await handler(event);
-                return { response };
+                return await handler(event);
             } catch (err) {
-                return { err };
+                setResponseStatus(event, 500);
+                return { error: (err as Error).toString() };
             }
         });
 };

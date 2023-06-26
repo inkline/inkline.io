@@ -1,5 +1,11 @@
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { computed, defineComponent, PropType } from 'vue';
+
+const currencyMap = {
+    usd: '$',
+    eur: '€',
+    gbp: '£'
+};
 
 export default defineComponent({
     props: {
@@ -26,67 +32,131 @@ export default defineComponent({
         features: {
             type: Array as PropType<{ title: string }[]>,
             default: () => []
+        },
+        featured: {
+            type: Boolean,
+            default: false
         }
     },
-    setup() {
-        return {};
+    setup(props) {
+        const mappedCurrency = computed(() => currencyMap[props.currency] || props.currency);
+
+        const classes = computed(() => {
+            return {
+                '-featured': props.featured
+            };
+        });
+
+        return { classes, mappedCurrency };
     }
 });
 </script>
 
 <template>
-    <ICard class="pricing-table">
-        <template #header v-if="$slots.header">
+    <ICard class="pricing-table" :class="classes">
+        <template v-if="$slots.header" #header>
             <!-- @slot header Slot for pricing table header -->
             <slot name="header" />
         </template>
-        <div class="pricing-table-title" v-if="title || $slots.title">
-            <!-- @slot title Slot for pricing table title -->
-            <slot name="title">
-                <h2>{{ title }}</h2>
-            </slot>
-        </div>
-        <div class="pricing-table-billing">
-            <div class="pricing-table-price">
-                <!-- @slot price Slot for pricing table price -->
-                <slot name="price">
-                    <h3>
+        <div>
+            <!-- @slot title:before Slot for content before title -->
+            <slot name="title:before" />
+            <div v-if="title || $slots.title" class="pricing-table-title">
+                <!-- @slot title Slot for pricing table title -->
+                <slot name="title">
+                    <h2>{{ title }}</h2>
+                </slot>
+            </div>
+            <!-- @slot title:after Slot for content after title -->
+            <slot name="title:after" />
+            <div class="pricing-table-billing">
+                <div class="pricing-table-price">
+                    <!-- @slot price Slot for pricing table price -->
+                    <slot name="price">
                         <span
                             v-if="currency && currencyLocation === 'prefix'"
                             class="pricing-table-price-currency"
                         >
-                            {{ currency }}
+                            {{ mappedCurrency }}
                         </span>
                         <span class="pricing-table-price-number">{{ price }}</span>
                         <span
                             v-if="currency && currencyLocation === 'suffix'"
                             class="pricing-table-price-currency"
                         >
-                            {{ currency }}
+                            {{ mappedCurrency }}
                         </span>
-                    </h3>
-                </slot>
+                    </slot>
+                </div>
+                <div v-if="interval || $slots.interval" class="pricing-table-interval">
+                    <!-- @slot interval Slot for pricing table billing interval -->
+                    <slot name="interval">
+                        {{ interval }}
+                    </slot>
+                </div>
             </div>
-            <div class="pricing-table-interval" v-if="interval || $slots.interval">
-                <!-- @slot interval Slot for pricing table billing interval -->
-                <slot name="interval">
-                    {{ interval }}
-                </slot>
-            </div>
+            <!-- @slot features:before Slot for content before features -->
+            <slot name="features:before" />
+            <ul v-if="features.length > 0" class="pricing-table-features">
+                <li v-for="(feature, key) in features" :key="key">
+                    <!-- @slot feature Scoped slot for pricing table feature -->
+                    <slot name="feature" :feature="feature">
+                        <i-icon name="ink-check" />
+                        {{ feature.title }}
+                    </slot>
+                </li>
+            </ul>
+            <!-- @slot features:after Slot for content after features -->
+            <slot name="features:after" />
         </div>
-        <hr />
-        <ul class="pricing-table-features" v-if="features.length > 0">
-            <li v-for="(feature, key) in features" :key="key">
-                <!-- @slot feature Scoped slot for pricing table feature -->
-                <slot name="feature" :feature="feature">
-                    {{ feature.title }}
-                </slot>
-            </li>
-        </ul>
-        <template #footer v-if="$slots.footer">
+        <template v-if="$slots.footer" #footer>
             <!-- @slot footer Slot for pricing table footer -->
             <slot name="footer" />
         </template>
     </ICard>
 </template>
-<script setup></script>
+
+<style lang="scss">
+.pricing-table {
+    height: 100%;
+
+    .pricing-table-billing {
+        display: flex;
+        flex-direction: column;
+
+        .pricing-table-price {
+            font-size: var(--h3--font-size);
+        }
+
+        .pricing-table-interval {
+            font-size: var(--font-size-sm);
+            color: var(--text-color-weaker);
+        }
+    }
+
+    .pricing-table-features {
+        list-style: none;
+        padding: 0;
+        margin-top: var(--margin-top-2);
+        margin-bottom: var(--margin-top-2);
+
+        .inkline-icon {
+            color: var(--color-success);
+        }
+    }
+
+    // @TODO Fix this in Inkline
+    .card-body {
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &.-featured {
+        --card--border-top-color: var(--color-primary);
+        --card--border-right-color: var(--color-primary);
+        --card--border-bottom-color: var(--color-primary);
+        --card--border-left-color: var(--color-primary);
+    }
+}
+</style>

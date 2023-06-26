@@ -8,18 +8,26 @@ export default addAuthMiddleware(
 
         const session = await stripe.checkout.sessions.create({
             customer: stripeCustomerId,
-            success_url: `${process.env.NUXT_PUBLIC_BASE_URL}/checkout/success`,
-            cancel_url: `${process.env.NUXT_PUBLIC_BASE_URL}/pricing`,
+            success_url: `${process.env.NUXT_PUBLIC_SITE_URL}/checkout/success`,
+            cancel_url: `${process.env.NUXT_PUBLIC_SITE_URL}/pricing`,
             payment_method_types: ['card'],
             line_items: [
                 {
-                    price: payload.price,
-                    quantity: payload.quantity || 1
+                    price: payload.price.id,
+                    quantity: payload.quantity || 1,
+                    adjustable_quantity: {
+                        enabled: true
+                    }
                 }
             ],
             mode: 'subscription'
         });
 
-        return { sessionId: session.id };
+        return {
+            session: {
+                id: session.id,
+                url: session.url
+            }
+        };
     })
 );

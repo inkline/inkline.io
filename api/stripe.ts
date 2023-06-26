@@ -1,8 +1,14 @@
 import { post, useGet } from '~/api/generic';
 import type { Stripe } from 'stripe';
 
-export async function checkout() {
-    return post('/api/stripe/checkout');
+export async function createCheckoutSession(price: Stripe.Price) {
+    return post('/api/stripe/checkout', {
+        price
+    });
+}
+
+export async function createCustomerPortalSession() {
+    return post('/api/stripe/customer-portal');
 }
 
 export async function useGetPrices() {

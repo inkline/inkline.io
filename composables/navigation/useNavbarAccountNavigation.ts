@@ -3,6 +3,8 @@ import { UserAvatar } from '#components';
 import { computed, markRaw } from 'vue';
 import { useAuthStore } from '~/stores';
 import { useI18n } from 'vue-i18n';
+import { createCustomerPortalSession } from '~/api';
+import { useRouter } from 'vue-router';
 
 const UserAvatarRaw = markRaw(UserAvatar);
 
@@ -13,7 +15,16 @@ export function useNavbarAccountNavigation() {
     const navigation = [
         {
             title: t('navigation.myAccount'),
-            url: '/account'
+            href: '/account'
+        },
+        {
+            title: t('navigation.billing'),
+            componentProps: {
+                onClick: async () => {
+                    const { session } = await createCustomerPortalSession();
+                    window.location.href = session.url;
+                }
+            }
         },
         {
             title: t('navigation.logout'),

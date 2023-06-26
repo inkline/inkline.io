@@ -23,24 +23,47 @@ export async function authenticatedFetch(...args: Parameters<typeof fetch>) {
     });
 }
 
-export async function get(...args: Parameters<typeof fetch>) {
-    return authenticatedFetch(args[0], { ...args[1], method: 'GET' });
+export async function get(url: string, query: Record<string, any> = {}, options: RequestInit = {}) {
+    const urlObject = new URL(url);
+    urlObject.search = new URLSearchParams(query).toString();
+
+    return authenticatedFetch(urlObject, { ...options, method: 'GET' });
 }
 
-export async function post(...args: Parameters<typeof fetch>) {
-    return authenticatedFetch(args[0], { ...args[1], method: 'POST' });
+export async function post(url: string, body: object = {}, options: RequestInit = {}) {
+    const response = await authenticatedFetch(url, {
+        ...options,
+        method: 'POST',
+        body: JSON.stringify(body)
+    });
+    return response.json();
 }
 
-export async function put(...args: Parameters<typeof fetch>) {
-    return authenticatedFetch(args[0], { ...args[1], method: 'PUT' });
+export async function put(url: string, body: object = {}, options: RequestInit = {}) {
+    const response = await authenticatedFetch(url, {
+        ...options,
+        method: 'PUT',
+        body: JSON.stringify(body)
+    });
+    return response.json();
 }
 
-export async function patch(...args: Parameters<typeof fetch>) {
-    return authenticatedFetch(args[0], { ...args[1], method: 'PATCH' });
+export async function patch(url: string, body: object = {}, options: RequestInit = {}) {
+    const response = await authenticatedFetch(url, {
+        ...options,
+        method: 'PATCH',
+        body: JSON.stringify(body)
+    });
+    return response.json();
 }
 
-export async function del(...args: Parameters<typeof fetch>) {
-    return authenticatedFetch(args[0], { ...args[1], method: 'DELETE' });
+export async function del(url: string, body: object = {}, options: RequestInit = {}) {
+    const response = await authenticatedFetch(url, {
+        ...options,
+        method: 'DELETE',
+        body: JSON.stringify(body)
+    });
+    return response.json();
 }
 
 export async function useAuthenticatedFetch(...args: Parameters<typeof useFetch>) {
