@@ -69,9 +69,9 @@ _{property}:{value}!
 You can apply the print media modifier to any utility class by prefixing the class with `print:`:
 
 ```
-_print:{property}:{value}!
+_print:{property}:{value}
 ```
 
 ```html
-<div class="_margin-top:0">This div has a margin-top of 0 with an !important marker.</div>
+<div class="_print:margin-top:0">This div has a margin-top of 0 that only applies in printing mode.</div>
 ```
