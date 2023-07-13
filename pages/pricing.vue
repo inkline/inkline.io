@@ -1,11 +1,9 @@
 <script lang="ts">
-import { computed, defineComponent, onMounted, ref } from 'vue';
+import { computed, defineComponent, nextTick, onMounted, ref } from 'vue';
 import { definePageMeta, useSeoMeta } from '#imports';
-import { createCheckoutSession, useGetPrices } from '~/api';
 import type { Stripe } from 'stripe';
-import { useAuthStore } from '~/stores';
+import { useSubscriptionStore } from '~/stores';
 import { useI18n } from 'vue-i18n';
-import { useRoute } from 'vue-router';
 
 const title = 'Pricing - Inkline';
 const description =
@@ -13,9 +11,8 @@ const description =
 
 export default defineComponent({
     async setup() {
-        const route = useRoute();
         const { t } = useI18n();
-        const authStore = useAuthStore();
+        const subscriptionStore = useSubscriptionStore();
 
         useSeoMeta({
             title,
@@ -28,46 +25,12 @@ export default defineComponent({
             layout: 'default'
         });
 
-        const { data: prices } = await useGetPrices();
-
-        if (route.query.checkout) {
-            console.log(prices.value, Object.values(prices.value));
-            const price = Object.values(prices.value).find(
-                (price) => price.id === route.query.checkout
-            ) as Stripe.Price;
-            if (price) {
-                await subscribe(price);
-            }
-        }
+        await subscriptionStore.getProducts();
 
         const isYearlyBillingInterval = ref(true);
         const interval = computed<Stripe.Price.Recurring.Interval>(() => {
             return isYearlyBillingInterval.value ? 'year' : 'month';
         });
-
-        const tierFeatures = {
-            openSource: [
-                { title: '25+ Basic Components' },
-                { title: '10+ Form Components' },
-                { title: 'Form Validation' },
-                { title: 'Utility Classes' },
-                { title: 'Community Support' },
-                { title: 'Regular Updates' }
-            ],
-            pro: [
-                { title: 'All Features of Open Source' },
-                { title: 'Autocomplete Component' },
-                { title: 'Data Table Component' },
-                { title: 'Date Picker Component' },
-                { title: 'Premium Support' }
-            ],
-            enterprise: [
-                { title: 'All Features of Pro' },
-                { title: 'Custom Integrations' },
-                { title: 'Custom Components' },
-                { title: 'Dedicated Support' }
-            ]
-        };
 
         const billingIntervalOptions = [
             {
@@ -88,30 +51,12 @@ export default defineComponent({
             }
         ];
 
-        async function subscribe(price: Stripe.Price) {
-            if (!authStore.isAuthenticated) {
-                await authStore.login({
-                    appState: {
-                        target: `${route.fullPath}?checkout=${price.id}`
-                    }
-                });
-            }
-
-            const response = await createCheckoutSession(price);
-            console.log(response);
-            if (response) {
-                window.location.href = response.session.url;
-            }
-        }
-
         return {
             t,
             interval,
             billingIntervalOptions,
             isYearlyBillingInterval,
-            prices,
-            tierFeatures,
-            subscribe
+            tierFeatures: subscriptionStore.tierFeatures
         };
     }
 });
@@ -149,67 +94,17 @@ export default defineComponent({
                     />
                 </IColumn>
             </IRow>
-            <IRow>
-                <IColumn md="4">
-                    <PricingTable
-                        title="Free"
-                        price="Open Source"
-                        :features="tierFeatures.openSource"
-                    >
-                        <template #interval>
-                            <br />
-                            <br />
-                        </template>
-                        <template #footer>
-                            <IButton block>Get started</IButton>
-                        </template>
-                    </PricingTable>
+            <IRow id="pricing-tables">
+                <IColumn lg="4">
+                    <PricingTablesOpenSource />
                 </IColumn>
-                <IColumn>
-                    <PricingTable
-                        title="Pro"
-                        :price="
-                            isYearlyBillingInterval
-                                ? prices[interval].unit_amount / 1200
-                                : prices[interval].unit_amount / 100
-                        "
-                        :currency="prices[interval].currency"
-                        :features="tierFeatures.pro"
-                        featured
-                    >
-                        <template #footer>
-                            <IButton color="primary" block @click="subscribe(prices[interval])">
-                                {{ t('pages.pricing.plans.pro.action') }}
-                            </IButton>
-                        </template>
-                        <template #interval>
-                            {{
-                                t(
-                                    `pages.pricing.table.interval.${
-                                        isYearlyBillingInterval ? 'yearly' : 'monthly'
-                                    }`
-                                )
-                            }}
-                            <br />
-                            {{ t('pages.pricing.table.interval.user') }}
-                        </template>
-                    </PricingTable>
+                <IColumn lg="4">
+                    <Suspense>
+                        <PricingTablesPro :interval="interval" />
+                    </Suspense>
                 </IColumn>
-                <IColumn md="4">
-                    <PricingTable
-                        title="Enterprise"
-                        price="Contact us"
-                        action="Contact us"
-                        :features="tierFeatures.enterprise"
-                    >
-                        <template #interval>
-                            <br />
-                            <br />
-                        </template>
-                        <template #footer>
-                            <IButton block>Contact us</IButton>
-                        </template>
-                    </PricingTable>
+                <IColumn lg="4">
+                    <PricingTablesEnterprise />
                 </IColumn>
             </IRow>
         </SectionsComponentsSection>
@@ -231,6 +126,12 @@ export default defineComponent({
         right: 0;
         top: -3px;
         transform: rotate(60deg);
+    }
+}
+
+#pricing-tables {
+    > .column {
+        margin-bottom: var(--margin-bottom);
     }
 }
 </style>

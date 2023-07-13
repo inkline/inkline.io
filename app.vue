@@ -1,8 +1,30 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, nextTick, onMounted, ref, watch } from 'vue';
+import { useAuthStore, useFirebaseStore, useSubscriptionStore } from '~/stores';
 
 export default defineComponent({
-    setup() {
+    async setup() {
+        const initialized = ref(false);
+        const authStore = useAuthStore();
+
+        onMounted(async () => {
+            authStore.initialize();
+            if (authStore.isAuthenticated) {
+                await initialize();
+            }
+        });
+
+        async function initialize() {
+            if (initialized.value) {
+                return;
+            }
+
+            void useFirebaseStore().setAuthToken();
+            void useSubscriptionStore().getSubscriptions();
+
+            initialized.value = true;
+        }
+
         return {};
     }
 });

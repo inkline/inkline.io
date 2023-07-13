@@ -121,22 +121,55 @@ export default {
                 yearly: 'Yearly'
             },
             table: {
+                current: 'Current plan',
+                upgrade: 'Upgrade to Pro',
                 interval: {
                     monthly: 'per month, billed monthly',
                     yearly: 'per month, billed yearly',
-                    user: 'per developer'
+                    user: 'per seat'
                 }
             },
             plans: {
                 free: {
+                    title: 'Free',
+                    price: 'Open Source',
                     action: 'Get started'
                 },
                 pro: {
-                    action: 'Coming soon'
+                    title: 'Pro',
+                    action: 'Try for free'
                 },
                 enterprise: {
-                    action: 'Coming soon'
+                    title: 'Enterprise',
+                    price: 'Contact us',
+                    action: 'Contact us'
                 }
+            }
+        },
+        onboarding: {
+            description: "We're super humbled to have you here. Let’s get you set up!",
+            cards: {
+                install: {
+                    title: 'Install Inkline Pro',
+                    description:
+                        'Install Inkline Pro using your favorite package manager and start building amazing things!',
+                    button: 'Get started'
+                },
+                inviteTeam: {
+                    title: 'Set up my team',
+                    description:
+                        'Grant your team members access to Inkline Pro and set the foundation for your developer team.',
+                    button: 'Invite team'
+                }
+            }
+        },
+        dashboard: {
+            title: 'Welcome to Inkline',
+            upsell: {
+                title: 'Ready to take your design system to the next level?',
+                description:
+                    'Upgrade to Inkline Pro and access exclusive features designed to supercharge your Front End development workflow. Get started today and watch your productivity skyrocket!',
+                button: 'Upgrade to Pro'
             }
         }
     },

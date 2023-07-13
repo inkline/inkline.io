@@ -1,41 +1,46 @@
 import { NavigationPage } from '~/types';
 import { UserAvatar } from '#components';
 import { computed, markRaw } from 'vue';
-import { useAuthStore } from '~/stores';
+import { useAuthStore, useSubscriptionStore } from '~/stores';
 import { useI18n } from 'vue-i18n';
 import { createCustomerPortalSession } from '~/api';
-import { useRouter } from 'vue-router';
 
 const UserAvatarRaw = markRaw(UserAvatar);
 
 export function useNavbarAccountNavigation() {
     const authStore = useAuthStore();
+    const subscriptionStore = useSubscriptionStore();
+
     const { t } = useI18n();
 
-    const navigation = [
+    const navigation = computed(() => [
         {
-            title: t('navigation.myAccount'),
-            href: '/account'
+            title: t('navigation.dashboard'),
+            url: '/dashboard'
         },
-        {
-            title: t('navigation.billing'),
-            componentProps: {
-                onClick: async () => {
-                    const { session } = await createCustomerPortalSession();
-                    window.location.href = session.url;
-                }
-            }
-        },
+        ...(subscriptionStore.subscriptions.length > 0
+            ? [
+                  {
+                      title: t('navigation.billing'),
+                      componentProps: {
+                          onClick: async () => {
+                              const { session } = await createCustomerPortalSession();
+                              window.location.href = session.url;
+                          }
+                      }
+                  }
+              ]
+            : []),
         {
             title: t('navigation.logout'),
             componentProps: {
                 onClick: async () => await authStore.logout()
             }
         }
-    ];
+    ]);
 
     return computed<NavigationPage[]>(() => [
-        ...navigation.map((page) => ({
+        ...navigation.value.map((page) => ({
             ...page,
             hidden: { desktop: true }
         })),
@@ -45,7 +50,7 @@ export function useNavbarAccountNavigation() {
             componentProps: {
                 user: authStore.currentUser
             },
-            children: navigation
+            children: navigation.value
         }
     ]);
 }

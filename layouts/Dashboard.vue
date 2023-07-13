@@ -18,7 +18,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <main id="default-layout">
+    <main id="dashboard-layout">
         <AppNavbar />
         <slot />
         <AppFooter />
@@ -26,7 +26,7 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-#default-layout {
+#dashboard-layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh;

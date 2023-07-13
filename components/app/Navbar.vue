@@ -292,11 +292,6 @@ export default defineComponent({
         font-weight: var(--font-weight-semibold);
     }
 
-    > .container {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
     @include breakpoint-up('lg') {
         .app-sidebar-apps {
             display: none;
@@ -304,6 +299,13 @@ export default defineComponent({
 
         .-hidden-desktop {
             display: none;
+        }
+    }
+
+    @include breakpoint-down('md') {
+        > .container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
         }
     }
 

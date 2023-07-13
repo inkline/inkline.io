@@ -36,6 +36,10 @@ export default defineComponent({
         featured: {
             type: Boolean,
             default: false
+        },
+        showPrice: {
+            type: Boolean,
+            default: true
         }
     },
     setup(props) {
@@ -69,7 +73,7 @@ export default defineComponent({
             </div>
             <!-- @slot title:after Slot for content after title -->
             <slot name="title:after" />
-            <div class="pricing-table-billing">
+            <div v-if="showPrice" class="pricing-table-billing">
                 <div class="pricing-table-price">
                     <!-- @slot price Slot for pricing table price -->
                     <slot name="price">
@@ -109,9 +113,17 @@ export default defineComponent({
             <!-- @slot features:after Slot for content after features -->
             <slot name="features:after" />
         </div>
+        <template v-if="$slots['footer:before']" #footer:before>
+            <!-- @slot footer:before Slot for content before pricing table footer -->
+            <slot name="footer:before" />
+        </template>
         <template v-if="$slots.footer" #footer>
             <!-- @slot footer Slot for pricing table footer -->
             <slot name="footer" />
+        </template>
+        <template v-if="$slots['footer:after']" #footer:after>
+            <!-- @slot footer:before Slot for content after pricing table footer -->
+            <slot name="footer:after" />
         </template>
     </ICard>
 </template>
@@ -143,13 +155,6 @@ export default defineComponent({
         .inkline-icon {
             color: var(--color-success);
         }
-    }
-
-    // @TODO Fix this in Inkline
-    .card-body {
-        border-bottom: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
     }
 
     &.-featured {

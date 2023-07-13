@@ -11,59 +11,67 @@ async function getAccessToken() {
     return accessToken;
 }
 
-export async function authenticatedFetch(...args: Parameters<typeof fetch>) {
+export async function authenticatedFetch<T>(...args: Parameters<typeof fetch>): Promise<T> {
     const accessToken = await getAccessToken();
 
-    return fetch(args[0], {
+    const response = await fetch(args[0], {
         ...args[1],
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
         headers: {
+            'Content-Type': 'application/json',
             ...(accessToken ? { authorization: `Bearer ${accessToken}` } : {}),
             ...args[1]?.headers
         }
     });
+
+    return await response.json();
 }
 
-export async function get(url: string, query: Record<string, any> = {}, options: RequestInit = {}) {
-    const urlObject = new URL(url);
-    urlObject.search = new URLSearchParams(query).toString();
+export async function get<T>(
+    url: string,
+    query: Record<string, any> = {},
+    options: RequestInit = {}
+) {
+    let resolvedUrl = url;
+    if (Object.keys(query).length > 0) {
+        resolvedUrl = `${resolvedUrl}?${new URLSearchParams(query).toString()}`;
+    }
 
-    return authenticatedFetch(urlObject, { ...options, method: 'GET' });
+    return authenticatedFetch<T>(resolvedUrl, { ...options, method: 'GET' });
 }
 
-export async function post(url: string, body: object = {}, options: RequestInit = {}) {
-    const response = await authenticatedFetch(url, {
+export async function post<T>(url: string, body: object = {}, options: RequestInit = {}) {
+    return authenticatedFetch<T>(url, {
         ...options,
         method: 'POST',
         body: JSON.stringify(body)
     });
-    return response.json();
 }
 
-export async function put(url: string, body: object = {}, options: RequestInit = {}) {
-    const response = await authenticatedFetch(url, {
+export async function put<T>(url: string, body: object = {}, options: RequestInit = {}) {
+    return authenticatedFetch<T>(url, {
         ...options,
         method: 'PUT',
         body: JSON.stringify(body)
     });
-    return response.json();
 }
 
-export async function patch(url: string, body: object = {}, options: RequestInit = {}) {
-    const response = await authenticatedFetch(url, {
+export async function patch<T>(url: string, body: object = {}, options: RequestInit = {}) {
+    return authenticatedFetch<T>(url, {
         ...options,
         method: 'PATCH',
         body: JSON.stringify(body)
     });
-    return response.json();
 }
 
-export async function del(url: string, body: object = {}, options: RequestInit = {}) {
-    const response = await authenticatedFetch(url, {
+export async function del<T>(url: string, body: object = {}, options: RequestInit = {}) {
+    return authenticatedFetch<T>(url, {
         ...options,
         method: 'DELETE',
         body: JSON.stringify(body)
     });
-    return response.json();
 }
 
 export async function useAuthenticatedFetch(...args: Parameters<typeof useFetch>) {
@@ -71,7 +79,11 @@ export async function useAuthenticatedFetch(...args: Parameters<typeof useFetch>
 
     return useFetch(args[0], {
         ...args[1],
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
         headers: {
+            'Content-Type': 'application/json',
             ...(accessToken ? { authorization: `Bearer ${accessToken}` } : {}),
             ...args[1]?.headers
         }

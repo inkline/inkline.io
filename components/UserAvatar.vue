@@ -19,7 +19,7 @@ export default defineComponent({
     },
     setup(props) {
         const initials = computed(() => {
-            return props.user.name
+            return (props.user.name || ' ')
                 .split(' ')
                 .map((name) => name[0])
                 .slice(0, 2)

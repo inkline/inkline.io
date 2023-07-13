@@ -1,7 +1,7 @@
-import { defineNuxtPlugin, useRuntimeConfig } from '#imports';
+import { addRouteMiddleware, defineNuxtPlugin, useRuntimeConfig } from '#imports';
 import { createAuth0 } from '@auth0/auth0-vue';
-import { watch } from 'vue';
-import { useAuthStore } from '~/stores';
+import { useRoute } from 'vue-router';
+import { abortNavigation, navigateTo } from '#app';
 
 export default defineNuxtPlugin(async (nuxtApp) => {
     if (typeof window === 'undefined') {
@@ -22,9 +22,18 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     });
 
     nuxtApp.vueApp.use(auth0);
-    //
-    // const authStore = useAuthStore();
-    // watch(auth0.isAuthenticated, (value) => {
-    //     authStore.isAuthenticated.value = value;
-    // });
+
+    addRouteMiddleware('authenticated', async (to) => {
+        if (typeof window !== 'undefined') {
+            await auth0.checkSession();
+            if (!auth0.isAuthenticated.value) {
+                await auth0.loginWithRedirect({
+                    appState: {
+                        target: to.fullPath
+                    }
+                });
+                return abortNavigation();
+            }
+        }
+    });
 });

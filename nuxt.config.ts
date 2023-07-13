@@ -186,14 +186,30 @@ export default defineNuxtConfig({
      */
     runtimeConfig: {
         public: {
-            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.inkline.io',
+            siteUrl: 'https://www.inkline.io',
             auth0: {
                 domain: '',
                 issuerBaseURL: '',
                 clientId: '',
                 audience: '',
                 callbackUrl: ''
+            },
+            firebase: {
+                apiKey: '',
+                authDomain: '',
+                projectId: '',
+                storageBucket: '',
+                messagingSenderId: '',
+                appId: '',
+                measurementId: ''
             }
         }
+    },
+    /**
+     * @docs https://nuxt.com/docs/guide/concepts/rendering
+     */
+    routeRules: {
+        '/api/**': { cors: true },
+        '/dashboard/**': { ssr: false }
     }
 });
