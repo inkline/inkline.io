@@ -8,7 +8,7 @@ export default defineComponent({
 });
 </script>
 <template>
-    <ISidebar :collapse="false">
+    <ISidebar class="dashboard-sidebar" :collapse="false">
         <FormsTeamSelect />
         <INav vertical>
             <INavItem to="/"> Set up </INavItem>
@@ -16,3 +16,16 @@ export default defineComponent({
         </INav>
     </ISidebar>
 </template>
+
+<style lang="scss">
+.dashboard-sidebar {
+    --sidebar--width: 300px;
+    --sidebar--light--background: white;
+
+    overflow: visible;
+
+    .sidebar .sidebar-content {
+        overflow: visible;
+    }
+}
+</style>

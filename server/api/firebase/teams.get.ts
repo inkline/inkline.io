@@ -6,9 +6,7 @@ export default addAuthMiddleware(
         const { sub: userId } = event.context.auth.payload;
 
         try {
-            const token = await firebase.auth.createCustomToken(userId);
-
-            return { token };
+            return [];
         } catch (err) {
             setResponseStatus(event, 500);
 

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { inject, ref, watch } from 'vue';
+import { computed, inject, ref, watch } from 'vue';
 import { AUTH0_INJECTION_KEY } from '@auth0/auth0-vue';
 import type { User } from '@auth0/auth0-spa-js';
 import { RedirectLoginOptions } from '@auth0/auth0-vue/src/interfaces/auth0-vue-client-options';
@@ -21,6 +21,8 @@ export const useAuthStore = defineStore('auth', () => {
             currentUser.value = value;
         });
     }
+
+    const currentUserId = computed(() => currentUser.value?.sub);
 
     function initialize() {
         isAuthenticated.value = auth0?.isAuthenticated.value;
@@ -56,6 +58,7 @@ export const useAuthStore = defineStore('auth', () => {
     return {
         isAuthenticated,
         currentUser,
+        currentUserId,
         initialize,
         getAccessToken,
         handleRedirectCallback,
