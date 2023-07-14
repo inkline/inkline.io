@@ -47,3 +47,6 @@ public/sitemap.xml
 .output
 .env
 .vercel
+
+# Certificates
+server/certificates
