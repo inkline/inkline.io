@@ -170,6 +170,13 @@ export default {
                 description:
                     'Upgrade to Inkline Pro and access exclusive features designed to supercharge your Front End development workflow. Get started today and watch your productivity skyrocket!',
                 button: 'Upgrade to Pro'
+            },
+            navigation: {
+                setup: 'Set up',
+                team: 'My team',
+                manageTeam: 'Manage team',
+                createTeam: 'Set up my team',
+                token: 'Auth token'
             }
         }
     },
@@ -194,6 +201,11 @@ export default {
                 description:
                     'We could not subscribe you to our newsletter at this time. Please try again later.'
             }
+        },
+        teamSelect: {
+            personal: 'Personal account',
+            team: 'Team account',
+            createTeam: 'Create new team'
         }
     },
     errors: {

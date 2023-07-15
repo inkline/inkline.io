@@ -1,9 +1,26 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
+import { useMembershipStore } from '~/stores/membership';
+import { storeToRefs } from 'pinia';
+import { useI18n } from 'vue-i18n';
+import { useSubscriptionStore } from '~/stores';
 
 export default defineComponent({
     setup() {
-        return {};
+        const { t } = useI18n();
+        const membershipStore = useMembershipStore();
+        const subscriptionStore = useSubscriptionStore();
+        const { ownedTeams, isTeamServiceAccount, isPersonalServiceAccount } =
+            storeToRefs(membershipStore);
+        const { hasSubscription } = storeToRefs(subscriptionStore);
+
+        return {
+            t,
+            ownedTeams,
+            isTeamServiceAccount,
+            isPersonalServiceAccount,
+            hasSubscription
+        };
     }
 });
 </script>
@@ -11,9 +28,23 @@ export default defineComponent({
     <ISidebar class="dashboard-sidebar" :collapse="false">
         <FormsTeamSelect />
         <INav vertical>
-            <INavItem to="/"> Set up </INavItem>
-            <INavItem to="/"> Create team </INavItem>
+            <INavItem to="/dashboard"> {{ t('pages.dashboard.navigation.setup') }} </INavItem>
+            <INavItem v-if="hasSubscription" to="/dashboard/token">
+                {{ t('pages.dashboard.navigation.token') }}
+            </INavItem>
+            <INavItem v-if="isTeamServiceAccount" to="/dashboard/team">
+                {{ t(`pages.dashboard.navigation.team`) }}
+            </INavItem>
         </INav>
+        <IButton
+            v-if="hasSubscription && isPersonalServiceAccount && ownedTeams.length === 0"
+            to="/dashboard/create-team"
+            class="_margin-top:2"
+            color="primary"
+            block
+        >
+            {{ t('pages.dashboard.navigation.createTeam') }}
+        </IButton>
     </ISidebar>
 </template>
 
@@ -24,8 +55,20 @@ export default defineComponent({
 
     overflow: visible;
 
-    .sidebar .sidebar-content {
-        overflow: visible;
+    .sidebar {
+        height: auto;
+
+        .sidebar-content {
+            overflow: visible;
+        }
+    }
+
+    .nav {
+        .nav-item {
+            &.router-link-exact-active {
+                font-weight: var(--font-weight-semibold);
+            }
+        }
     }
 }
 </style>

@@ -1,5 +1,5 @@
 import { addAuthMiddleware, firebase } from '~/server/utilities';
-import { defineEventHandler } from 'h3';
+import { defineEventHandler, setResponseStatus } from 'h3';
 
 export default addAuthMiddleware(
     defineEventHandler(async (event) => {

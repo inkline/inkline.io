@@ -1,6 +1,6 @@
 import { addAuthMiddleware, stripe } from '~/server/utilities';
 import { defineEventHandler } from 'h3';
-import type { StripeSubscriptionsResponse } from '~/types';
+import type { StripeSubscriptionsGetResponse } from '~/types';
 
 export default addAuthMiddleware(
     defineEventHandler(async (event) => {
@@ -18,6 +18,6 @@ export default addAuthMiddleware(
                 quantity: item.quantity,
                 product: item.price.product
             }))
-        })) as StripeSubscriptionsResponse;
+        })) as StripeSubscriptionsGetResponse;
     })
 );

@@ -1,6 +1,5 @@
 import { jwtVerifier, getToken, JwtVerifierOptions } from 'express-oauth2-jwt-bearer';
-import { defineEventHandler, EventHandler } from 'h3';
-import jwks from 'jwks-rsa';
+import { defineEventHandler, setResponseStatus, EventHandler } from 'h3';
 
 export const createAuthMiddleware = (options: JwtVerifierOptions) => {
     const verifyJwt = jwtVerifier(options);

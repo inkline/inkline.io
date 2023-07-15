@@ -40,6 +40,10 @@ export default defineComponent({
         showPrice: {
             type: Boolean,
             default: true
+        },
+        showFeatures: {
+            type: Boolean,
+            default: true
         }
     },
     setup(props) {
@@ -101,7 +105,7 @@ export default defineComponent({
             </div>
             <!-- @slot features:before Slot for content before features -->
             <slot name="features:before" />
-            <ul v-if="features.length > 0" class="pricing-table-features">
+            <ul v-if="features.length > 0 && showFeatures" class="pricing-table-features">
                 <li v-for="(feature, key) in features" :key="key">
                     <!-- @slot feature Scoped slot for pricing table feature -->
                     <slot name="feature" :feature="feature">

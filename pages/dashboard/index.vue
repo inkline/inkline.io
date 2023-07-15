@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue';
+import { computed, defineComponent, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { definePageMeta } from '#imports';
 import { useSubscriptionStore } from '~/stores';
@@ -11,7 +11,9 @@ export default defineComponent({
         const { t } = useI18n();
         const subscriptionStore = useSubscriptionStore();
         const membershipStore = useMembershipStore();
-        const { subscriptions } = storeToRefs(subscriptionStore);
+
+        const hasSubscriptions = computed(() => subscriptionStore.subscriptions.length > 0);
+        const hasTeams = computed(() => membershipStore.teams.length > 0);
 
         definePageMeta({
             layout: 'dashboard',
@@ -24,7 +26,7 @@ export default defineComponent({
 
         await Promise.all([subscriptionStore.getProducts(), membershipStore.getTeams()]);
 
-        return { t, subscriptions };
+        return { t, hasTeams, hasSubscriptions };
     }
 });
 </script>
@@ -44,17 +46,13 @@ export default defineComponent({
                     </SectionsComponentsHeader>
                 </IColumn>
             </IRow>
-            <IRow v-if="subscriptions.length > 0">
+            <IRow v-if="hasSubscriptions || hasTeams">
                 <IColumn>
                     <ILayout vertical class="_margin-top:2">
                         <DashboardSidebar class="_margin-right:1" />
                         <ILayoutContent>
                             <ICard>
-                                <h1>Set up</h1>
-                                <p>
-                                    Example content for a page with a sidebar, a layout typically
-                                    seen in Documentation pages and Web Application dashboards.
-                                </p>
+                                <NuxtPage />
                             </ICard>
                         </ILayoutContent>
                     </ILayout>

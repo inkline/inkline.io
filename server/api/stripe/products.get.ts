@@ -1,9 +1,9 @@
 import { stripe } from '~/server/utilities';
 import { defineEventHandler } from 'h3';
-import type { StripeProductsResponse } from '~/types';
+import type { StripeProductsGetResponse } from '~/types';
 
 export default defineEventHandler(async () => {
-    const data: StripeProductsResponse = [];
+    const data: StripeProductsGetResponse = [];
     const products = await stripe.products.list();
 
     for (const product of products.data) {
@@ -21,7 +21,7 @@ export default defineEventHandler(async () => {
                 recurring: {
                     interval: price.recurring?.interval
                 }
-            })) as StripeProductsResponse[0]['prices']
+            })) as StripeProductsGetResponse[0]['prices']
         });
     }
 

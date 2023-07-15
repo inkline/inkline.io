@@ -1,6 +1,6 @@
 import { get, post, useGet } from '~/api/generic';
 import type { Stripe } from 'stripe';
-import type { StripeSubscriptionsResponse } from '~/types';
+import type { StripeSubscriptionsGetResponse } from '~/types';
 
 export async function createCheckoutSession(price: Stripe.Price) {
     return post<{ session: { url: string } }>('/api/stripe/checkout', {
@@ -13,7 +13,7 @@ export async function createCustomerPortalSession() {
 }
 
 export async function getSubscriptions() {
-    return get<StripeSubscriptionsResponse>('/api/stripe/subscriptions');
+    return get<StripeSubscriptionsGetResponse>('/api/stripe/subscriptions');
 }
 
 export async function useGetProducts() {

@@ -1,31 +1,49 @@
 import { Stripe } from 'stripe';
 
-export type StripeSubscriptionsResponse = Array<{
+export interface SubscriptionDataEntryType {
+    id: string;
+    price: string;
+    quantity: number;
+    product: string;
+}
+
+export interface SubscriptionType {
     id: string;
     status: Stripe.Subscription.Status;
-    data: Array<{
-        id: string;
-        price: string;
-        quantity: number;
-        product: string;
-    }>;
-}>;
+    data: SubscriptionDataEntryType[];
+}
 
-export type StripeProductsResponse = Array<{
+export interface ProductPriceType {
+    id: string;
+    currency: string;
+    unit_amount: number;
+    recurring: {
+        interval: string;
+    };
+}
+
+export interface ProductType {
     id: string;
     name: string;
-    prices: Array<{
-        id: string;
-        currency: string;
-        unit_amount: number;
-        recurring: {
-            interval: string;
-        };
-    }>;
-}>;
+    prices: ProductPriceType[];
+}
 
-export type StripeTeamsResponse = Array<{
+export interface TeamType {
     id: string;
     name: string;
     ownerId: string;
-}>;
+}
+
+export interface MembershipType {
+    id: string;
+    userId: string;
+    teamId: string;
+}
+
+export type StripeSubscriptionsGetResponse = SubscriptionType[];
+export type StripeProductsGetResponse = ProductType[];
+export type TeamsGetResponse = TeamType[];
+export type TeamsPostResponse = {
+    team: TeamType;
+    membership: MembershipType;
+};

@@ -10,5 +10,6 @@ const app = firebaseAdmin.initializeApp({
 export const firebase = {
     app,
     auth: firebaseAdmin.auth(),
+    firestore: firebaseAdmin.firestore(),
     database: firebaseAdmin.database()
 };

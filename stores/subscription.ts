@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import * as stripeApi from '~/api/stripe';
 import { computed, ref } from 'vue';
-import { StripeProductsResponse, StripeSubscriptionsResponse } from '~/types';
+import { ProductPriceType, ProductType, SubscriptionType } from '~/types';
 
 export const useSubscriptionStore = defineStore('subscription', () => {
     const tierFeatures = {
@@ -28,8 +28,8 @@ export const useSubscriptionStore = defineStore('subscription', () => {
         ]
     };
 
-    const products = ref<StripeProductsResponse>([]);
-    const subscriptions = ref<StripeSubscriptionsResponse>([]);
+    const products = ref<ProductType[]>([]);
+    const subscriptions = ref<SubscriptionType[]>([]);
 
     const seatCount = computed(() =>
         subscriptions.value.reduce((acc, subscription) => {
@@ -43,6 +43,8 @@ export const useSubscriptionStore = defineStore('subscription', () => {
             return acc;
         }, 0)
     );
+
+    const hasSubscription = computed(() => subscriptions.value.length > 0);
 
     function productById(id: string) {
         return products.value.find((product) => product.id === id);
@@ -61,13 +63,10 @@ export const useSubscriptionStore = defineStore('subscription', () => {
         const product = productById(id);
         const prices = product?.prices;
 
-        return prices?.reduce<Record<string, StripeProductsResponse[0]['prices'][0]>>(
-            (acc, price) => {
-                acc[price.recurring.interval] = price;
-                return acc;
-            },
-            {}
-        );
+        return prices?.reduce<Record<string, ProductPriceType>>((acc, price) => {
+            acc[price.recurring.interval] = price;
+            return acc;
+        }, {});
     }
 
     function subscriptionByProductId(productId: string) {
@@ -78,7 +77,7 @@ export const useSubscriptionStore = defineStore('subscription', () => {
 
     async function getProducts() {
         const { data } = await stripeApi.useGetProducts();
-        products.value = data.value as unknown as StripeProductsResponse;
+        products.value = data.value as unknown as ProductType[];
         return data;
     }
 
@@ -99,6 +98,7 @@ export const useSubscriptionStore = defineStore('subscription', () => {
         pricesAsObjectByProductId,
         subscriptionByProductId,
         subscriptions,
+        hasSubscription,
         tierFeatures
     };
 });
