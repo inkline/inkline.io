@@ -47,3 +47,4 @@ export type TeamsPostResponse = {
     team: TeamType;
     membership: MembershipType;
 };
+export type TeamsEstimatePostResponse = ProductPriceType & { quantity_diff: number };

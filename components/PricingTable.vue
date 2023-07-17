@@ -1,11 +1,6 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from 'vue';
-
-const currencyMap = {
-    usd: '$',
-    eur: '€',
-    gbp: '£'
-};
+import { CURRENCY_MAP } from '~/constants';
 
 export default defineComponent({
     props: {
@@ -47,7 +42,7 @@ export default defineComponent({
         }
     },
     setup(props) {
-        const mappedCurrency = computed(() => currencyMap[props.currency] || props.currency);
+        const mappedCurrency = computed(() => CURRENCY_MAP[props.currency] || props.currency);
 
         const classes = computed(() => {
             return {

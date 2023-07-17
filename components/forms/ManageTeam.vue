@@ -1,20 +1,44 @@
 <script lang="ts">
-import { computed, defineComponent, nextTick, onMounted, ref } from 'vue';
+import { computed, defineComponent, nextTick, onMounted, ref, watch, watchEffect } from 'vue';
 import { useRouter } from 'vue-router';
 import { useSubscriptionStore, useMembershipStore } from '~/stores';
 import { useForm, useToast, validate } from '@inkline/inkline';
 import { useI18n } from 'vue-i18n';
+import { debounce } from '@grozav/utils';
+import { CURRENCY_MAP } from '~/constants';
 
 export default defineComponent({
-    setup() {
+    props: {
+        action: {
+            type: Function,
+            required: true
+        }
+    },
+    async setup(props) {
         const { t } = useI18n();
         const toast = useToast();
         const router = useRouter();
-        const membershipStore = useMembershipStore();
         const subscriptionStore = useSubscriptionStore();
+
         const memberEmails = ref<string[]>([]);
-        const step = ref(0);
         const emailRefs = ref<HTMLElement[]>([]);
+
+        const loading = ref(false);
+
+        const costEstimate = ref();
+        const costEstimatePrice = computed(() => {
+            const currency =
+                CURRENCY_MAP[costEstimate.value?.price.currency] ||
+                costEstimate.value?.price.currency;
+            const price =
+                costEstimate.value?.plan.interval === 'year'
+                    ? (costEstimate.value?.price.unit_amount * costEstimate.value?.quantity_diff) /
+                      1200
+                    : (costEstimate.value?.price.unit_amount * costEstimate.value?.quantity_diff) /
+                      100;
+
+            return price ? `${price > 0 ? '+' : ''}${currency}${price.toFixed(2)}` : '';
+        });
 
         const emailSchema = {
             value: '',
@@ -40,11 +64,26 @@ export default defineComponent({
         const teamName = computed(() => form.value.name.value.trim());
         const teamMembers = computed(() =>
             form.value.emails
-                .filter((email) => email.value)
+                .filter((email) => email.value && email.valid)
                 .map((email) => email.value.trim().toLowerCase())
         );
 
+        const debouncedCreateTeamEstimate = debounce(async () => {
+            costEstimate.value = await subscriptionStore.createTeamEstimate({
+                members: teamMembers.value
+            });
+        }, 500);
+
+        watch(teamMembers, async (value, oldValue) => {
+            const difference = value.filter((member) => !oldValue.includes(member));
+            if (difference.length > 0) {
+                debouncedCreateTeamEstimate();
+            }
+        });
+
         onMounted(() => {
+            form.value = validate(form.value);
+
             if (!subscriptionStore.hasSubscription) {
                 router.replace('/dashboard');
             }
@@ -98,35 +137,34 @@ export default defineComponent({
             });
         }
 
-        function setStep(value: number) {
-            step.value = value;
-        }
-
         async function onSubmit() {
+            loading.value = true;
             try {
-                await membershipStore.createTeam({
+                props.action({
                     name: teamName.value,
                     members: teamMembers.value
                 });
-
-                await router.push('/dashboard');
             } catch (error) {
                 toast.show({
                     title: t('common.error'),
                     message: error.message,
                     color: 'danger'
                 });
+            } finally {
+                loading.value = false;
             }
         }
 
         return {
+            t,
             form,
-            step,
             memberEmails,
             emailRefs,
             teamName,
             teamMembers,
-            setStep,
+            costEstimate,
+            costEstimatePrice,
+            loading,
             addMember,
             addMemberOrFocus,
             removeMember,
@@ -136,28 +174,26 @@ export default defineComponent({
 });
 </script>
 <template>
-    <div>
+    <LayoutsCards>
         <IForm v-model="form">
-            <h1>Create a team</h1>
-            <div v-show="step === 0">
+            <ICard>
                 <IFormGroup>
-                    <IFormLabel>Team name</IFormLabel>
-                    <IInput name="name" placeholder="e.g. My awesome team" />
+                    <IFormLabel>
+                        {{ t('forms.manageTeam.teamName.label') }}
+                    </IFormLabel>
+                    <IInput name="name" :placeholder="t('forms.manageTeam.teamName.placeholder')" />
                     <IFormError for="name" />
                 </IFormGroup>
-                <IFormGroup>
-                    <IButton :disabled="!form.name.value" color="primary" block @click="setStep(1)">
-                        Next step
-                    </IButton>
-                </IFormGroup>
-            </div>
-            <div v-show="step === 1">
-                <p>Enter the email address of your team members to invite them to Inkline:</p>
+            </ICard>
+            <ICard>
                 <IFormGroup v-for="(email, index) in form.emails" :key="index" ref="emailRefs">
+                    <IFormLabel v-if="index === 0">
+                        {{ t('forms.manageTeam.emailAddresses.label') }}
+                    </IFormLabel>
                     <div class="_display:flex _flex-direction:row">
                         <IInput
                             :name="`emails.${index}`"
-                            placeholder="e.g. mail@example.com"
+                            :placeholder="t('forms.manageTeam.emailAddresses.placeholder')"
                             @keydown.enter="addMemberOrFocus(index)"
                         >
                             <template #suffix>
@@ -170,51 +206,57 @@ export default defineComponent({
                     <IFormError :for="`emails.${index}`" />
                 </IFormGroup>
                 <IFormGroup>
-                    <IButton color="primary" @click="addMember">
+                    <IButton :disabled="loading" color="primary" @click="addMember">
                         <Icon name="ic:baseline-person-add" class="_margin-right:1/2" />
-                        Add more
+                        {{ t('forms.manageTeam.emailAddresses.addMore') }}
                     </IButton>
                 </IFormGroup>
-                <IFormGroup>
-                    <IButton :disabled="form.invalid" color="primary" block @click="setStep(2)">
-                        Next step
-                    </IButton>
-                    <IButton link block @click="setStep(0)"> Back to previous step </IButton>
-                </IFormGroup>
-            </div>
-            <div v-show="step === 2">
-                <p>
-                    <span v-if="teamMembers.length > 0">
-                        Your subscription will be adjusted to reflect the new number of seats.
-                    </span>
-                    Review the details of your team:
-                </p>
+            </ICard>
 
-                <IRow>
-                    <IColumn>
-                        <IListGroup>
-                            <IListGroupItem>
-                                <div class="_text:weaker _font-size:xs">Team name</div>
-                                <strong>{{ teamName }}</strong>
-                            </IListGroupItem>
-                            <IListGroupItem v-for="email in teamMembers" :key="email">
-                                <Icon name="ic:baseline-person" class="_margin-right:1/4" />
-                                {{ email }}
-                            </IListGroupItem>
-                        </IListGroup>
-                    </IColumn>
-                    <IColumn v-if="teamMembers.length > 0" lg="4">
-                        <ICard class="_height:100%">
-                            $18.99 per month, billed monthly 5x seats
-                        </ICard>
-                    </IColumn>
-                </IRow>
+            <IAlert v-if="teamMembers.length > 0" color="info">
+                <template #icon>
+                    <IIcon name="ink-info" />
+                </template>
+                {{ t('forms.manageTeam.subscription.notice') }}
+            </IAlert>
 
-                <IButton class="_margin-top:1" color="primary" block @click="onSubmit">
-                    Create team
-                </IButton>
-                <IButton link block @click="setStep(1)"> Back to previous step </IButton>
+            <IButton
+                :loading="loading"
+                :disabled="form.invalid"
+                color="primary"
+                block
+                @click="onSubmit"
+            >
+                {{ t('forms.manageTeam.submit') }}
+            </IButton>
+
+            <div v-if="teamMembers.length > 0" class="billing-changes-summary">
+                <div v-if="costEstimate">
+                    <h2 class="_margin:0">
+                        {{ costEstimatePrice }}
+                    </h2>
+                    <div class="_text:weaker">
+                        {{ t(`pages.pricing.table.interval.${costEstimate.plan.interval}ly`) }}
+                    </div>
+                    <div class="_text:weaker">
+                        {{
+                            t('forms.manageTeam.subscription.seats', {
+                                count: costEstimate.quantity_diff
+                            })
+                        }}
+                    </div>
+                </div>
+                <ILoader v-else color="primary" size="sm" />
             </div>
         </IForm>
-    </div>
+    </LayoutsCards>
 </template>
+
+<style lang="scss">
+.billing-changes-summary {
+    text-align: right;
+    border-right: 4px solid var(--color-primary);
+    padding-right: var(--padding-right);
+    margin-top: var(--margin-top);
+}
+</style>

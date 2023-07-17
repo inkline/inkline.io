@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
 import * as stripeApi from '~/api/stripe';
+import * as firebaseApi from '~/api/firebase';
 import { computed, ref } from 'vue';
 import { ProductPriceType, ProductType, SubscriptionType } from '~/types';
 
@@ -87,6 +88,10 @@ export const useSubscriptionStore = defineStore('subscription', () => {
         return data;
     }
 
+    async function createTeamEstimate(payload: { members: string[] }) {
+        return firebaseApi.createTeamEstimate(payload);
+    }
+
     return {
         getProducts,
         getSubscriptions,
@@ -99,6 +104,7 @@ export const useSubscriptionStore = defineStore('subscription', () => {
         subscriptionByProductId,
         subscriptions,
         hasSubscription,
-        tierFeatures
+        tierFeatures,
+        createTeamEstimate
     };
 });

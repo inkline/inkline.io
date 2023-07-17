@@ -1,10 +1,11 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, nextTick, ref } from 'vue';
 import { useAuthStore, useSubscriptionStore } from '~/stores';
 import { useMembershipStore } from '~/stores/membership';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
+import type { ISelect } from '@inkline/inkline';
 
 export default defineComponent({
     setup() {
@@ -15,6 +16,8 @@ export default defineComponent({
         const authStore = useAuthStore();
         const { teams, serviceAccount, serviceAccountType } = storeToRefs(membershipStore);
         const { hasSubscription } = storeToRefs(subscriptionStore);
+
+        const selectRef = ref<InstanceType<ISelect> | null>(null);
 
         const options = computed(() => [
             { id: authStore.currentUserId, type: 'personal', label: authStore.currentUser?.name },
@@ -31,12 +34,19 @@ export default defineComponent({
             await router.push('/dashboard');
         }
 
+        async function onClickCreateTeam() {
+            selectRef.value?.onEscape();
+            await router.push('/dashboard/team/create');
+        }
+
         return {
             t,
             options,
             hasSubscription,
             serviceAccount,
             serviceAccountType,
+            selectRef,
+            onClickCreateTeam,
             onUpdateModelValue
         };
     }
@@ -49,6 +59,7 @@ export default defineComponent({
             {{ t(`forms.teamSelect.${serviceAccountType}`) }}
         </div>
         <ISelect
+            ref="selectRef"
             :options="options"
             :model-value="serviceAccount"
             @update:modelValue="onUpdateModelValue"
@@ -64,7 +75,7 @@ export default defineComponent({
                 </div>
             </template>
             <template v-if="hasSubscription" #footer>
-                <IButton block to="/dashboard/create-team">
+                <IButton block @click="onClickCreateTeam">
                     <Icon class="_margin-right:1/4" name="material-symbols:group-add-outline" />
                     {{ t('forms.teamSelect.createTeam') }}
                 </IButton>

@@ -3,14 +3,15 @@ import { computed, defineComponent, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { definePageMeta } from '#imports';
 import { useSubscriptionStore } from '~/stores';
-import { storeToRefs } from 'pinia';
 import { useMembershipStore } from '~/stores/membership';
+import { useRoute } from 'vue-router';
 
 export default defineComponent({
     async setup() {
         const { t } = useI18n();
         const subscriptionStore = useSubscriptionStore();
         const membershipStore = useMembershipStore();
+        const route = useRoute();
 
         const hasSubscriptions = computed(() => subscriptionStore.subscriptions.length > 0);
         const hasTeams = computed(() => membershipStore.teams.length > 0);
@@ -24,9 +25,13 @@ export default defineComponent({
             membershipStore.initializeServiceAccount();
         });
 
-        await Promise.all([subscriptionStore.getProducts(), membershipStore.getTeams()]);
+        await Promise.all([
+            subscriptionStore.getProducts(),
+            subscriptionStore.getSubscriptions(),
+            membershipStore.getTeams()
+        ]);
 
-        return { t, hasTeams, hasSubscriptions };
+        return { t, route, hasTeams, hasSubscriptions };
     }
 });
 </script>
@@ -38,10 +43,10 @@ export default defineComponent({
                 <IColumn>
                     <SectionsComponentsHeader heading="h1">
                         <template #title>
-                            {{ t('pages.dashboard.title') }}
+                            {{ route.meta.title ?? t('pages.dashboard.title') }}
                         </template>
                         <template #description>
-                            {{ t('pages.onboarding.description') }}
+                            {{ route.meta.description ?? t('pages.onboarding.description') }}
                         </template>
                     </SectionsComponentsHeader>
                 </IColumn>
@@ -49,11 +54,12 @@ export default defineComponent({
             <IRow v-if="hasSubscriptions || hasTeams">
                 <IColumn>
                     <ILayout vertical class="_margin-top:2">
-                        <DashboardSidebar class="_margin-right:1" />
+                        <DashboardSidebar
+                            v-if="route.meta.sidebar !== false"
+                            class="_margin-right:1"
+                        />
                         <ILayoutContent>
-                            <ICard>
-                                <NuxtPage />
-                            </ICard>
+                            <NuxtPage />
                         </ILayoutContent>
                     </ILayout>
                 </IColumn>

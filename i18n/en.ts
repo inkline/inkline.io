@@ -206,6 +206,22 @@ export default {
             personal: 'Personal account',
             team: 'Team account',
             createTeam: 'Create new team'
+        },
+        manageTeam: {
+            teamName: {
+                label: 'Team name',
+                placeholder: 'e.g. My awesome team'
+            },
+            emailAddresses: {
+                label: 'Enter the email addresses of your team members to invite them to Inkline',
+                placeholder: "e.g. mail{'@'}example.com",
+                addMore: 'Add more'
+            },
+            submit: 'Create team',
+            subscription: {
+                notice: 'Your subscription will be adjusted to reflect the new number of seats.',
+                seats: 'no new seats | {count} new seat | {count} new seats'
+            }
         }
     },
     errors: {

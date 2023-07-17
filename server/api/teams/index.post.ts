@@ -67,14 +67,12 @@ export default addAuthMiddleware(
                     });
                 }
 
-                // @TODO This didn't work
                 await adjustSeatsCount(userId, stripeCustomerId);
             }
 
             // @TODO Send email notifications to members
 
             return {
-                // @TODO Return data instead of firestore document references
                 team: teamSnapshot.data(),
                 membership: membershipSnapshot.data()
             };

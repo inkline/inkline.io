@@ -38,7 +38,7 @@ export default defineComponent({
         </INav>
         <IButton
             v-if="hasSubscription && isPersonalServiceAccount && ownedTeams.length === 0"
-            to="/dashboard/create-team"
+            to="/dashboard/team/create"
             class="_margin-top:2"
             color="primary"
             block

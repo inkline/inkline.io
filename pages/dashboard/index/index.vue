@@ -17,14 +17,14 @@ export default defineComponent({
 });
 </script>
 <template>
-    <div v-if="!hasSubscription && isPersonalServiceAccount">
+    <ICard v-if="!hasSubscription && isPersonalServiceAccount">
         <DashboardUpsellMessage class="_padding-y:4" />
-    </div>
-    <div v-else>
+    </ICard>
+    <ICard v-else>
         <h1>Set up</h1>
         <p>
             Example content for a page with a sidebar, a layout typically seen in Documentation
             pages and Web Application dashboards.
         </p>
-    </div>
+    </ICard>
 </template>
