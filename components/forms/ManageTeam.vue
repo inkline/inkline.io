@@ -74,7 +74,7 @@ export default defineComponent({
             });
         }, 500);
 
-        watch(teamMembers, async (value, oldValue) => {
+        watch(teamMembers, (value, oldValue) => {
             const difference = value.filter((member) => !oldValue.includes(member));
             if (difference.length > 0) {
                 debouncedCreateTeamEstimate();

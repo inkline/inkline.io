@@ -3,7 +3,7 @@ import { defineEventHandler, setResponseStatus } from 'h3';
 
 export default addAuthMiddleware(
     defineEventHandler(async (event) => {
-        const { sub: userId } = event.context.auth.payload;
+        const { sub: userId, email } = event.context.auth.payload;
         const stripeCustomerId = event.context.auth.payload.stripe_customer_id;
         const payload = await readBody(event);
 
@@ -44,26 +44,29 @@ export default addAuthMiddleware(
 
         try {
             const teamsRef = firebase.firestore.collection('teams');
-            const teamRes = await teamsRef.add({
+            const teamDoc = await teamsRef.add({
                 name: payload.name,
                 ownerId: userId
             });
-            const teamSnapshot = await teamRes.get();
+            const teamSnapshot = await teamDoc.get();
+            const teamData = teamSnapshot.data();
 
             // Create membership for owner
             const membershipRef = firebase.firestore.collection('memberships');
-            const membershipRes = await membershipRef.add({
+            const membershipDoc = await membershipRef.add({
+                email,
                 userId,
-                teamId: teamRes.id
+                teamId: teamDoc.id
             });
-            const membershipSnapshot = await membershipRes.get();
+            const membershipSnapshot = await membershipDoc.get();
+            const membershipData = membershipSnapshot.data();
 
+            // Create membership for each member
             if (payload.members.length > 0) {
-                // Create membership for each member
                 for (const member of payload.members) {
                     await membershipRef.add({
-                        userId: member,
-                        teamId: teamRes.id
+                        email: member,
+                        teamId: teamDoc.id
                     });
                 }
 
@@ -73,8 +76,14 @@ export default addAuthMiddleware(
             // @TODO Send email notifications to members
 
             return {
-                team: teamSnapshot.data(),
-                membership: membershipSnapshot.data()
+                team: {
+                    id: teamDoc.id,
+                    ...teamData
+                },
+                membership: {
+                    id: membershipDoc.id,
+                    ...membershipData
+                }
             };
         } catch (error) {
             setResponseStatus(event, 500);

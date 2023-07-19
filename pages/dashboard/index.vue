@@ -14,7 +14,7 @@ export default defineComponent({
         const route = useRoute();
 
         const hasSubscriptions = computed(() => subscriptionStore.subscriptions.length > 0);
-        const hasTeams = computed(() => membershipStore.teams.length > 0);
+        const hasTeams = computed(() => membershipStore.memberships.length > 0);
 
         definePageMeta({
             layout: 'dashboard',
@@ -22,7 +22,7 @@ export default defineComponent({
         });
 
         onMounted(() => {
-            membershipStore.initializeServiceAccount();
+            void membershipStore.initializeServiceAccount();
         });
 
         await Promise.all([

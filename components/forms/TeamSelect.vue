@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent, nextTick, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { useAuthStore, useSubscriptionStore } from '~/stores';
 import { useMembershipStore } from '~/stores/membership';
 import { storeToRefs } from 'pinia';
@@ -14,17 +14,18 @@ export default defineComponent({
         const membershipStore = useMembershipStore();
         const subscriptionStore = useSubscriptionStore();
         const authStore = useAuthStore();
-        const { teams, serviceAccount, serviceAccountType } = storeToRefs(membershipStore);
+        const { ownedMemberships, serviceAccount, serviceAccountType } =
+            storeToRefs(membershipStore);
         const { hasSubscription } = storeToRefs(subscriptionStore);
 
         const selectRef = ref<InstanceType<ISelect> | null>(null);
 
         const options = computed(() => [
             { id: authStore.currentUserId, type: 'personal', label: authStore.currentUser?.name },
-            ...teams.value.map((team) => ({
-                id: team.id,
+            ...ownedMemberships.value.map((membership) => ({
+                id: membership.teamId,
                 type: 'team',
-                label: team.name
+                label: membershipStore.teamById(membership.teamId)?.name
             }))
         ]);
 

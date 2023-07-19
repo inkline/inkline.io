@@ -1,20 +1,28 @@
 <script lang="ts">
-import { defineComponent, onBeforeMount } from 'vue';
+import { computed, defineComponent, onBeforeMount, onMounted } from 'vue';
 import { useMembershipStore } from '~/stores/membership';
 import { useRouter } from 'vue-router';
 
 export default defineComponent({
-    setup() {
+    async setup() {
         const router = useRouter();
         const membershipStore = useMembershipStore();
+        const team = computed(() =>
+            membershipStore.teamById(membershipStore.serviceAccount as string)
+        );
+        const memberships = computed(() =>
+            membershipStore.membershipsByTeamId(team.value?.id as string)
+        );
 
-        onBeforeMount(() => {
+        onMounted(() => {
             if (!membershipStore.isTeamServiceAccount) {
                 router.replace('/dashboard');
             }
+
+            membershipStore.getTeam(membershipStore.serviceAccount as string);
         });
 
-        return {};
+        return { team, memberships };
     }
 });
 </script>
@@ -25,5 +33,7 @@ export default defineComponent({
             Example content for a page with a sidebar, a layout typically seen in Documentation
             pages and Web Application dashboards.
         </p>
+        {{ team }}
+        {{ memberships }}
     </ICard>
 </template>
