@@ -178,6 +178,32 @@ export default {
                 createTeam: 'Set up my team',
                 token: 'Auth token'
             }
+        },
+        team: {
+            create: {
+                success: {
+                    title: 'Your team has been created!',
+                    message: 'Members will now have access to a shared Inkline Pro subscription.'
+                }
+            },
+            index: {
+                description: {
+                    owner: "Each team member is able to access an auth token based on their email address and the team's subscription.",
+                    member: "You're a member of this team. Here's who else is on the team:"
+                },
+                dropdown: {
+                    edit: 'Edit team',
+                    delete: 'Delete team'
+                }
+            }
+        },
+        checkout: {
+            success: {
+                title: 'Thank you for your purchase!',
+                description:
+                    "We're genuinely thrilled to have you on board. Your subscription is more than just a payment - it's your ticket to a world of effortless design. Welcome to the Inkline Pro family. We can't wait to see what you'll create!",
+                button: 'Upgrade to Pro'
+            }
         }
     },
     forms: {
@@ -217,10 +243,13 @@ export default {
                 placeholder: "e.g. mail{'@'}example.com",
                 addMore: 'Add more'
             },
-            submit: 'Create team',
             subscription: {
                 notice: 'Your subscription will be adjusted to reflect the new number of seats.',
                 seats: 'no new seats | {count} new seat | {count} new seats'
+            },
+            submit: {
+                create: 'Create team',
+                update: 'Update team'
             }
         }
     },

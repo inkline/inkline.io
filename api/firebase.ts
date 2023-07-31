@@ -1,5 +1,5 @@
-import { post, useGet } from '~/api/generic';
-import type {TeamsEstimatePostResponse, TeamsPostResponse} from '~/types';
+import { post, put, useGet } from '~/api/generic';
+import type { TeamsEstimatePostResponse, TeamsPostResponse, TeamsPutResponse } from '~/types';
 
 export async function getFirebaseToken() {
     return post<{ token: string }>('/api/firebase');
@@ -15,6 +15,10 @@ export async function useGetTeam(id: string) {
 
 export async function createTeam(payload: { name: string; members: string[] }) {
     return post<TeamsPostResponse>('/api/teams', payload);
+}
+
+export async function updateTeam(payload: { name: string; members: string[] }) {
+    return put<TeamsPutResponse>('/api/teams', payload);
 }
 
 export async function createTeamEstimate(payload: { members: string[] }) {

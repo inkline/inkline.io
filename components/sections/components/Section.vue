@@ -54,7 +54,8 @@ export default defineComponent({
         background-color: var(--section--dark--background, var(--color-dark));
     }
 
-    &.-sm {
+    &.-sm,
+    &.-fullscreen {
         padding: calc(var(--padding-top) * 6) 0 calc(var(--padding-bottom) * 6) 0;
     }
 
@@ -64,6 +65,12 @@ export default defineComponent({
 
     &.-lg {
         padding: calc(var(--padding-top) * 10) 0 calc(var(--padding-bottom) * 10) 0;
+    }
+
+    &.-fullscreen {
+        flex: 1;
+        display: flex;
+        align-items: center;
     }
 }
 </style>

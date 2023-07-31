@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent, onMounted } from 'vue';
+import { computed, defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { definePageMeta } from '#imports';
 import { useSubscriptionStore } from '~/stores';
@@ -20,16 +20,6 @@ export default defineComponent({
             layout: 'dashboard',
             middleware: 'authenticated'
         });
-
-        onMounted(() => {
-            void membershipStore.initializeServiceAccount();
-        });
-
-        await Promise.all([
-            subscriptionStore.getProducts(),
-            subscriptionStore.getSubscriptions(),
-            membershipStore.getTeams()
-        ]);
 
         return { t, route, hasTeams, hasSubscriptions };
     }

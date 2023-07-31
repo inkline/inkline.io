@@ -1,9 +1,11 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { useMembershipStore } from '~/stores';
+import { useMembershipStore, useSubscriptionStore } from '~/stores';
 import { useI18n } from 'vue-i18n';
 import { definePageMeta } from '#imports';
+import { useToast } from '@inkline/inkline';
+import { useRouteGuard } from '~/composables/navigation/useRouteGuard';
 
 export default defineComponent({
     async setup() {
@@ -15,16 +17,26 @@ export default defineComponent({
         });
 
         const { t } = useI18n();
+        const toast = useToast();
         const router = useRouter();
         const membershipStore = useMembershipStore();
+        const subscriptionStore = useSubscriptionStore();
+
+        await useRouteGuard(() => subscriptionStore.hasSubscription);
 
         async function onSubmit(data: { name; members }) {
-            await membershipStore.createTeam({
+            const { team } = await membershipStore.createTeam({
                 name: data.name,
                 members: data.members
             });
 
-            await router.push('/dashboard');
+            toast.show({
+                title: t('pages.team.create.success.title'),
+                message: t('pages.team.create.success.message'),
+                color: 'success'
+            });
+
+            await router.push(`/app/team/${team.id}`);
         }
 
         return {
@@ -39,12 +51,3 @@ export default defineComponent({
         <FormsManageTeam :action="onSubmit" />
     </LayoutsCards>
 </template>
-
-<style lang="scss">
-.billing-changes-summary {
-    text-align: right;
-    border-right: 4px solid var(--color-primary);
-    padding-right: var(--padding-right);
-    margin-top: var(--margin-top);
-}
-</style>

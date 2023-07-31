@@ -13,9 +13,9 @@ export default addAuthMiddleware(
                 getSeatsOptions.exclude = [payload.team];
             }
 
-            const seats = await getSeats(userId, getSeatsOptions);
+            const { seats, rawSeats } = await getSeats(userId, getSeatsOptions);
 
-            const currentSeatsCount = seats.size;
+            const currentSeatsCount = rawSeats.size;
             payload.members.forEach((member: string) => seats.add(member));
             const newSeatsCount = seats.size;
 

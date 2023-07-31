@@ -1,26 +1,32 @@
 <script lang="ts">
-import { defineComponent, nextTick, onMounted, ref, watch } from 'vue';
-import { useAuthStore, useFirebaseStore, useSubscriptionStore } from '~/stores';
+import { defineComponent, ref } from 'vue';
+import { useAuthStore, useFirebaseStore, useMembershipStore, useSubscriptionStore } from '~/stores';
 
 export default defineComponent({
     async setup() {
         const initialized = ref(false);
         const authStore = useAuthStore();
 
-        onMounted(async () => {
-            authStore.initialize();
-            if (authStore.isAuthenticated) {
-                await initialize();
-            }
-        });
+        authStore.initialize();
+        if (authStore.isAuthenticated) {
+            await initialize();
+        }
 
         async function initialize() {
             if (initialized.value) {
                 return;
             }
 
-            void useFirebaseStore().setAuthToken();
-            void useSubscriptionStore().getSubscriptions();
+            const firebaseStore = useFirebaseStore();
+            const subscriptionStore = useSubscriptionStore();
+            const membershipStore = useMembershipStore();
+
+            await Promise.all([
+                firebaseStore.setAuthToken(),
+                subscriptionStore.getSubscriptions(),
+                membershipStore.getTeams()
+            ]);
+            await membershipStore.initializeServiceAccount();
 
             initialized.value = true;
         }

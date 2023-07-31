@@ -210,6 +210,6 @@ export default defineNuxtConfig({
      */
     routeRules: {
         '/api/**': { cors: true },
-        '/dashboard/**': { ssr: false }
+        '/app/**': { ssr: false }
     }
 });

@@ -1,22 +1,25 @@
 import { NavigationPage } from '~/types';
 import { UserAvatar } from '#components';
 import { computed, markRaw } from 'vue';
-import { useAuthStore, useSubscriptionStore } from '~/stores';
+import { useAuthStore, useMembershipStore, useSubscriptionStore } from '~/stores';
 import { useI18n } from 'vue-i18n';
 import { createCustomerPortalSession } from '~/api';
+import { storeToRefs } from 'pinia';
 
 const UserAvatarRaw = markRaw(UserAvatar);
 
 export function useNavbarAccountNavigation() {
     const authStore = useAuthStore();
     const subscriptionStore = useSubscriptionStore();
+    const membershipStore = useMembershipStore();
 
     const { t } = useI18n();
+    const { serviceAccount, isPersonalServiceAccount } = storeToRefs(membershipStore);
 
     const navigation = computed(() => [
         {
             title: t('navigation.dashboard'),
-            url: '/dashboard'
+            url: isPersonalServiceAccount.value ? '/app' : `/app/team/${serviceAccount.value}`
         },
         ...(subscriptionStore.subscriptions.length > 0
             ? [

@@ -92,7 +92,7 @@ export default defineComponent({
             {{ t('pages.pricing.table.interval.user') }}
         </template>
         <template #footer>
-            <IButton v-if="subscription" color="secondary" block to="/dashboard">
+            <IButton v-if="subscription" color="secondary" block to="/app">
                 {{ t('pages.pricing.table.current') }}
             </IButton>
             <IButton v-else color="primary" block @click="subscribe(prices[interval])">

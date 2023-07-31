@@ -6,6 +6,7 @@ import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import type { ISelect } from '@inkline/inkline';
+import { useServiceAccountRoutes } from '~/composables';
 
 export default defineComponent({
     setup() {
@@ -17,6 +18,7 @@ export default defineComponent({
         const { ownedMemberships, serviceAccount, serviceAccountType } =
             storeToRefs(membershipStore);
         const { hasSubscription } = storeToRefs(subscriptionStore);
+        const { routes } = useServiceAccountRoutes();
 
         const selectRef = ref<InstanceType<ISelect> | null>(null);
 
@@ -32,12 +34,12 @@ export default defineComponent({
         async function onUpdateModelValue(value: string) {
             membershipStore.setServiceAccount(value);
 
-            await router.push('/dashboard');
+            await router.push(routes.value['/']);
         }
 
         async function onClickCreateTeam() {
             selectRef.value?.onEscape();
-            await router.push('/dashboard/team/create');
+            await router.push('/app/team/create');
         }
 
         return {

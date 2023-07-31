@@ -84,12 +84,25 @@ export const useMembershipStore = defineStore('membership', () => {
 
     async function createTeam(payload: { name: string; members: string[] }) {
         const { team, membership } = await firebaseApi.createTeam(payload);
-        teams.value.push(team);
-        memberships.value.push(membership);
+        addTeam(team);
+        addMembership(membership);
         setServiceAccount(team.id);
+
+        return { team, membership };
+    }
+
+    async function updateTeam(payload: { name: string; members: string[] }) {
+        const { team } = await firebaseApi.updateTeam(payload);
+        setServiceAccount(team.id);
+
+        return { team };
     }
 
     async function initializeServiceAccount() {
+        if (serviceAccount.value) {
+            return;
+        }
+
         const previousServiceAccount = localStorage.getItem('inkline:serviceAccount');
         const currentUserId = useAuthStore().currentUserId;
 
@@ -151,6 +164,7 @@ export const useMembershipStore = defineStore('membership', () => {
         membershipById,
         membershipsByTeamId,
         teamById,
-        createTeam
+        createTeam,
+        updateTeam
     };
 });

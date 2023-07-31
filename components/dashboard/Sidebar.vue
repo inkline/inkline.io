@@ -4,6 +4,7 @@ import { useMembershipStore } from '~/stores/membership';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
 import { useSubscriptionStore } from '~/stores';
+import { useServiceAccountRoutes } from '~/composables';
 
 export default defineComponent({
     setup() {
@@ -13,9 +14,11 @@ export default defineComponent({
         const { ownedTeams, isTeamServiceAccount, isPersonalServiceAccount } =
             storeToRefs(membershipStore);
         const { hasSubscription } = storeToRefs(subscriptionStore);
+        const { routes } = useServiceAccountRoutes();
 
         return {
             t,
+            routes,
             ownedTeams,
             isTeamServiceAccount,
             isPersonalServiceAccount,
@@ -28,17 +31,17 @@ export default defineComponent({
     <ISidebar class="dashboard-sidebar" :collapse="false">
         <FormsTeamSelect />
         <INav vertical>
-            <INavItem to="/dashboard"> {{ t('pages.dashboard.navigation.setup') }} </INavItem>
-            <INavItem v-if="hasSubscription" to="/dashboard/token">
+            <INavItem :to="routes['/']"> {{ t('pages.dashboard.navigation.setup') }} </INavItem>
+            <INavItem v-if="hasSubscription" :to="routes['/token']">
                 {{ t('pages.dashboard.navigation.token') }}
             </INavItem>
-            <INavItem v-if="isTeamServiceAccount" to="/dashboard/team">
+            <INavItem v-if="isTeamServiceAccount" :to="routes['/team']">
                 {{ t(`pages.dashboard.navigation.team`) }}
             </INavItem>
         </INav>
         <IButton
             v-if="hasSubscription && isPersonalServiceAccount && ownedTeams.length === 0"
-            to="/dashboard/team/create"
+            to="/app/team/create"
             class="_margin-top:2"
             color="primary"
             block
@@ -50,7 +53,7 @@ export default defineComponent({
 
 <style lang="scss">
 .dashboard-sidebar {
-    --sidebar--width: 300px;
+    --sidebar--md--width: 300px;
     --sidebar--light--background: white;
 
     overflow: visible;

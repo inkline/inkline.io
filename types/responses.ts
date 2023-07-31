@@ -55,6 +55,9 @@ export type TeamsPostResponse = {
     team: TeamType;
     membership: MembershipType;
 };
+export type TeamsPutResponse = {
+    team: TeamType;
+};
 export type TeamGetResponse = {
     team: TeamType;
     memberships: MembershipType[];

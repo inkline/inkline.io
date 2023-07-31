@@ -34,10 +34,13 @@ export default defineComponent({
         const route = useRoute();
         const authStore = useAuthStore();
         const { isAuthenticated, currentUser } = storeToRefs(authStore);
+        const mounted = ref(false);
 
         const navs = computed<NavbarNav[]>(() => [
             { id: 'main', items: unref(navigation), class: '_margin-left:auto' },
-            ...(isAuthenticated.value ? [{ id: 'auth', items: unref(accountNavigation) }] : [])
+            ...(isAuthenticated.value && mounted.value
+                ? [{ id: 'auth', items: unref(accountNavigation) }]
+                : [])
         ]);
 
         const addScrollVariant = ref(false);
@@ -52,6 +55,7 @@ export default defineComponent({
 
         onMounted(() => {
             on(window, 'scroll', onScroll);
+            mounted.value = true;
         });
         onBeforeUnmount(() => {
             off(window, 'scroll', onScroll);
@@ -128,61 +132,59 @@ export default defineComponent({
             Inkline
         </INavbarBrand>
         <INavbarCollapsible>
-            <template v-for="nav in navs" :key="nav.id">
-                <INav :class="[`${nav.id}-nav`, nav.class]">
-                    <template v-for="page in nav.items">
-                        <IDropdown
-                            v-if="page.children"
-                            :key="page.title"
-                            :events="['focus', 'hover']"
-                            :class="getPageClass(page)"
-                        >
-                            <Component
-                                :is="page.component"
-                                v-if="page.component"
-                                v-bind="page.componentProps"
-                            />
-                            <INavItem v-else>{{ page.title }}</INavItem>
-                            <template #body>
-                                <IDropdownItem
-                                    v-for="subPage in page.children"
-                                    :key="subPage.title"
-                                    :to="localePath(subPage.url)"
-                                    v-bind="subPage.componentProps"
-                                    :class="getPageClass(subPage)"
-                                >
-                                    {{ subPage.title }}
-                                </IDropdownItem>
-                            </template>
-                        </IDropdown>
+            <INav v-for="nav in navs" :key="nav.id" :class="[`${nav.id}-nav`, nav.class]">
+                <template v-for="page in nav.items">
+                    <IDropdown
+                        v-if="page.children"
+                        :key="page.title"
+                        :events="['focus', 'hover']"
+                        :class="getPageClass(page)"
+                    >
                         <Component
                             :is="page.component"
-                            v-else-if="page.component"
-                            :key="page.title"
+                            v-if="page.component"
                             v-bind="page.componentProps"
-                            :class="getPageClass(page)"
                         />
-                        <INavItem
-                            v-else
-                            :id="page.id"
-                            :key="page.title"
-                            :class="[getPageClass(page), { '-active': isActiveItem[page.url] }]"
-                            :to="localePath(page.url)"
-                            v-bind="page.componentProps"
-                            @click="trackLinkClick(page.url)"
-                        >
-                            {{ page.title }}
+                        <INavItem v-else>{{ page.title }}</INavItem>
+                        <template #body>
+                            <IDropdownItem
+                                v-for="subPage in page.children"
+                                :key="subPage.title"
+                                :to="localePath(subPage.url)"
+                                v-bind="subPage.componentProps"
+                                :class="getPageClass(subPage)"
+                            >
+                                {{ subPage.title }}
+                            </IDropdownItem>
+                        </template>
+                    </IDropdown>
+                    <Component
+                        :is="page.component"
+                        v-else-if="page.component"
+                        :key="page.title"
+                        v-bind="page.componentProps"
+                        :class="getPageClass(page)"
+                    />
+                    <INavItem
+                        v-else
+                        :id="page.id"
+                        :key="page.title"
+                        :class="[getPageClass(page), { '-active': isActiveItem[page.url] }]"
+                        :to="localePath(page.url)"
+                        v-bind="page.componentProps"
+                        @click="trackLinkClick(page.url)"
+                    >
+                        {{ page.title }}
+                    </INavItem>
+                </template>
+                <FeatureFlag v-if="!isAuthenticated" name="auth">
+                    <INav>
+                        <INavItem class="_cursor:pointer" @click="login">
+                            {{ t('navigation.login') }}
                         </INavItem>
-                    </template>
-                    <FeatureFlag v-if="!isAuthenticated" name="auth">
-                        <INav>
-                            <INavItem class="_cursor:pointer" @click="login">
-                                {{ t('navigation.login') }}
-                            </INavItem>
-                        </INav>
-                    </FeatureFlag>
-                </INav>
-            </template>
+                    </INav>
+                </FeatureFlag>
+            </INav>
             <INav class="app-navbar-icons">
                 <INavItem
                     href="https://github.com/inkline/inkline"

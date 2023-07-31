@@ -21,8 +21,6 @@ export default addAuthMiddleware(
                 .where('teamId', '==', teamId)
                 .get();
 
-            console.log(membershipSnapshot.docs, membershipSnapshot.docs.length, userId, teamId);
-
             if (membershipSnapshot.docs.length === 0) {
                 setResponseStatus(event, 404);
                 return {

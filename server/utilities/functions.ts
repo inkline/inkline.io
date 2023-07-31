@@ -4,14 +4,10 @@ import { firebase } from '~/server/utilities/firebase';
 export async function getSeats(userId: string, options: { exclude?: string[] } = {}) {
     const teams = await firebase.firestore.collection('teams').where('ownerId', '==', userId).get();
 
-    const members = new Set<string>();
+    const rawSeats = new Set<string>();
+    const seats = new Set<string>();
     for (const team of teams.docs) {
         const teamId = team.id;
-
-        if (options.exclude?.includes(teamId)) {
-            continue;
-        }
-
         const memberships = await firebase.firestore
             .collection('memberships')
             .where('teamId', '==', teamId)
@@ -21,15 +17,18 @@ export async function getSeats(userId: string, options: { exclude?: string[] } =
             const membershipData = membership.data();
             const userId = membershipData.userId;
 
-            members.add(userId);
+            rawSeats.add(userId);
+            if (!options.exclude?.includes(teamId)) {
+                seats.add(userId);
+            }
         }
     }
 
-    return members;
+    return { rawSeats, seats };
 }
 
 export async function adjustSeatsCount(userId: string, stripeCustomerId: string) {
-    const seats = await getSeats(userId);
+    const { seats } = await getSeats(userId);
     const seatsCount = seats.size;
 
     const subscriptions = await stripe.subscriptions.list({

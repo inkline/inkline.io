@@ -1,7 +1,7 @@
 <script lang="ts">
-import { computed, defineComponent, nextTick, onMounted, ref, watch, watchEffect } from 'vue';
+import { computed, defineComponent, nextTick, onMounted, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { useSubscriptionStore, useMembershipStore } from '~/stores';
+import { useSubscriptionStore } from '~/stores';
 import { useForm, useToast, validate } from '@inkline/inkline';
 import { useI18n } from 'vue-i18n';
 import { debounce } from '@grozav/utils';
@@ -9,6 +9,14 @@ import { CURRENCY_MAP } from '~/constants';
 
 export default defineComponent({
     props: {
+        team: {
+            type: Object,
+            default: undefined
+        },
+        members: {
+            type: Array,
+            default: () => []
+        },
         action: {
             type: Function,
             required: true
@@ -25,6 +33,7 @@ export default defineComponent({
 
         const loading = ref(false);
 
+        const loadingCostEstimate = ref(false);
         const costEstimate = ref();
         const costEstimatePrice = computed(() => {
             const currency =
@@ -37,7 +46,7 @@ export default defineComponent({
                     : (costEstimate.value?.price.unit_amount * costEstimate.value?.quantity_diff) /
                       100;
 
-            return price ? `${price > 0 ? '+' : ''}${currency}${price.toFixed(2)}` : '';
+            return `${price > 0 ? '+' : ''}${currency}${price.toFixed(2)}`;
         });
 
         const emailSchema = {
@@ -56,9 +65,16 @@ export default defineComponent({
 
         const form = useForm({
             name: {
+                value: props.team?.name || '',
                 validators: ['required']
             },
-            emails: [{ ...emailSchema }]
+            emails:
+                props.members.length > 0
+                    ? props.members.map((email) => ({
+                          ...emailSchema,
+                          value: email
+                      }))
+                    : [{ ...emailSchema }]
         });
 
         const teamName = computed(() => form.value.name.value.trim());
@@ -69,14 +85,17 @@ export default defineComponent({
         );
 
         const debouncedCreateTeamEstimate = debounce(async () => {
+            loadingCostEstimate.value = true;
             costEstimate.value = await subscriptionStore.createTeamEstimate({
+                ...(props.team ? { team: props.team.id } : {}),
                 members: teamMembers.value
             });
+            loadingCostEstimate.value = false;
         }, 500);
 
         watch(teamMembers, (value, oldValue) => {
             const difference = value.filter((member) => !oldValue.includes(member));
-            if (difference.length > 0) {
+            if (difference.length > 0 || value.length !== oldValue.length) {
                 debouncedCreateTeamEstimate();
             }
         });
@@ -85,11 +104,12 @@ export default defineComponent({
             form.value = validate(form.value);
 
             if (!subscriptionStore.hasSubscription) {
-                router.replace('/dashboard');
+                router.replace('/app');
             }
         });
 
         function addMember() {
+            form.value.dirty = true;
             form.value.emails.push({ ...emailSchema });
 
             nextTick(() => {
@@ -113,6 +133,7 @@ export default defineComponent({
         }
 
         function removeMember(index: number) {
+            form.value.dirty = true;
             if (form.value.emails.length === 1) {
                 form.value = validate({
                     ...form.value,
@@ -164,6 +185,7 @@ export default defineComponent({
             teamMembers,
             costEstimate,
             costEstimatePrice,
+            loadingCostEstimate,
             loading,
             addMember,
             addMemberOrFocus,
@@ -213,7 +235,10 @@ export default defineComponent({
                 </IFormGroup>
             </ICard>
 
-            <IAlert v-if="teamMembers.length > 0" color="info">
+            <IAlert
+                v-if="teamMembers.length > 0 && form.dirty && (loadingCostEstimate || costEstimate)"
+                color="info"
+            >
                 <template #icon>
                     <IIcon name="ink-info" />
                 </template>
@@ -222,16 +247,35 @@ export default defineComponent({
 
             <IButton
                 :loading="loading"
-                :disabled="form.invalid"
+                :disabled="form.invalid || (team && !form.dirty)"
                 color="primary"
                 block
                 @click="onSubmit"
             >
-                {{ t('forms.manageTeam.submit') }}
+                {{ t(`forms.manageTeam.submit.${team ? 'update' : 'create'}`) }}
             </IButton>
 
-            <div v-if="teamMembers.length > 0" class="billing-changes-summary">
-                <div v-if="costEstimate">
+            <div v-if="loadingCostEstimate || costEstimate" class="billing-changes-summary">
+                <div class="_margin-right:2 _font-size:sm">
+                    <ul>
+                        <li>
+                            Any applicable taxes and discounts will be applied on your monthly
+                            invoice. Prices exclude applicable taxes and VAT (varies based on your
+                            country). Learn more
+                        </li>
+                        <li>
+                            By clicking
+                            {{ t(`forms.manageTeam.submit.${team ? 'update' : 'create'}`) }}, you
+                            agree to the Terms of service agreements.
+                        </li>
+                        <li>
+                            Notwithstanding anything to the contrary, any previous purchase of any
+                            Inkline Pro will also be subject to the above terms and these terms will
+                            supersede any previous terms agreed to by the Customer and Inkline.
+                        </li>
+                    </ul>
+                </div>
+                <div v-if="costEstimate" class="_text:right">
                     <h2 class="_margin:0">
                         {{ costEstimatePrice }}
                     </h2>
@@ -254,9 +298,10 @@ export default defineComponent({
 
 <style lang="scss">
 .billing-changes-summary {
-    text-align: right;
     border-right: 4px solid var(--color-primary);
     padding-right: var(--padding-right);
     margin-top: var(--margin-top);
+    display: flex;
+    justify-content: space-between;
 }
 </style>

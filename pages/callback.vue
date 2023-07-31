@@ -2,7 +2,7 @@
 import { defineComponent, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
-const redirectBlocklist = [/^\/callback.*$/, /^\/dashboard.*$/, /^\/account.*$/];
+const redirectBlocklist = [/^\/callback.*$/, /^\/app.*$/, /^\/account.*$/];
 
 export default defineComponent({
     setup() {

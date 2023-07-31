@@ -88,7 +88,7 @@ export const useSubscriptionStore = defineStore('subscription', () => {
         return data;
     }
 
-    async function createTeamEstimate(payload: { members: string[] }) {
+    async function createTeamEstimate(payload: { team?: string; members: string[] }) {
         return firebaseApi.createTeamEstimate(payload);
     }
 
