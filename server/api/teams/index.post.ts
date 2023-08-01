@@ -1,4 +1,10 @@
-import { addAuthMiddleware, adjustSeatsCount, firebase, stripe } from '~/server/utilities';
+import { addAuthMiddleware } from '~/server/utilities';
+import {
+    adjustSeatsCount,
+    createMembership,
+    createTeam,
+    customerHasActiveSubscription
+} from '~/server/services';
 import { defineEventHandler, setResponseStatus } from 'h3';
 
 export default addAuthMiddleware(
@@ -6,6 +12,10 @@ export default addAuthMiddleware(
         const { sub: userId, email } = event.context.auth.payload;
         const stripeCustomerId = event.context.auth.payload.stripe_customer_id;
         const payload = await readBody(event);
+
+        /**
+         * Data validation
+         */
 
         if (!payload.name) {
             setResponseStatus(event, 400);
@@ -21,14 +31,13 @@ export default addAuthMiddleware(
             };
         }
 
-        const subscriptions = await stripe.subscriptions.list({
-            customer: stripeCustomerId
-        });
+        /**
+         * Permissions validation
+         */
 
         try {
-            const hasActiveSubscription = subscriptions.data.some(
-                (subscription) => subscription.status === 'active'
-            );
+            const hasActiveSubscription = await customerHasActiveSubscription(stripeCustomerId);
+
             if (!hasActiveSubscription) {
                 setResponseStatus(event, 405);
                 return {
@@ -42,32 +51,23 @@ export default addAuthMiddleware(
             };
         }
 
+        /**
+         * Create team
+         */
+
         try {
-            const teamsRef = firebase.firestore.collection('teams');
-            const teamDoc = await teamsRef.add({
-                name: payload.name,
-                ownerId: userId
-            });
-            const teamSnapshot = await teamDoc.get();
-            const teamData = teamSnapshot.data();
+            const newMemberEmailsSet = new Set<string>(payload.members);
+
+            // Create team
+            const team = await createTeam({ name: payload.name, ownerId: userId });
 
             // Create membership for owner
-            const membershipRef = firebase.firestore.collection('memberships');
-            const membershipDoc = await membershipRef.add({
-                email,
-                userId,
-                teamId: teamDoc.id
-            });
-            const membershipSnapshot = await membershipDoc.get();
-            const membershipData = membershipSnapshot.data();
+            const membership = await createMembership({ email, userId, teamId: team.id });
 
             // Create membership for each member
-            if (payload.members.length > 0) {
-                for (const member of payload.members) {
-                    await membershipRef.add({
-                        email: member,
-                        teamId: teamDoc.id
-                    });
+            if (newMemberEmailsSet.size > 0) {
+                for (const email of newMemberEmailsSet) {
+                    await createMembership({ email, teamId: team.id });
                 }
 
                 await adjustSeatsCount(userId, stripeCustomerId);
@@ -76,14 +76,8 @@ export default addAuthMiddleware(
             // @TODO Send email notifications to members
 
             return {
-                team: {
-                    id: teamDoc.id,
-                    ...teamData
-                },
-                membership: {
-                    id: membershipDoc.id,
-                    ...membershipData
-                }
+                team,
+                membership
             };
         } catch (error) {
             setResponseStatus(event, 500);

@@ -182,8 +182,13 @@ export default {
         team: {
             create: {
                 success: {
-                    title: 'Your team has been created!',
+                    title: 'Your team has been created',
                     message: 'Members will now have access to a shared Inkline Pro subscription.'
+                }
+            },
+            update: {
+                success: {
+                    title: 'Your team has been updated'
                 }
             },
             index: {

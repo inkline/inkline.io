@@ -47,18 +47,17 @@ export default defineComponent({
         await membershipStore.getTeam(membershipStore.serviceAccount as string);
 
         async function onSubmit(data: { name; members }) {
-            const { team } = await membershipStore.updateTeam({
+            const { team } = await membershipStore.updateTeam(defaultTeam.value.id, {
                 name: data.name,
                 members: data.members
             });
 
             toast.show({
-                title: t('pages.team.create.success.title'),
-                message: t('pages.team.create.success.message'),
+                title: t('pages.team.update.success.title'),
                 color: 'success'
             });
 
-            await router.push(`/app/team/${team.id}`);
+            await router.push(`/app/team/${team.id}/members`);
         }
 
         return {

@@ -1,15 +1,16 @@
-import { addAuthMiddleware } from '~/server/utilities';
+import { addAuthMiddleware, firebase } from '~/server/utilities';
 import { defineEventHandler, setResponseStatus } from 'h3';
-import type { TeamGetResponse } from '~/types';
 import {
-    getMembershipByUserIdAndTeamId,
-    getMembershipsByTeamId,
+    adjustSeatsCount,
+    deleteMembershipsByTeamId,
+    deleteTeamById,
     getTeamById
 } from '~/server/services';
 
 export default addAuthMiddleware(
     defineEventHandler(async (event) => {
         const { sub: userId } = event.context.auth.payload;
+        const stripeCustomerId = event.context.auth.payload.stripe_customer_id;
         const teamId = event.context.params?.id;
 
         /**
@@ -37,30 +38,33 @@ export default addAuthMiddleware(
              * Permissions validation
              */
 
-            const membership = await getMembershipByUserIdAndTeamId(userId, teamId);
-            if (!membership) {
-                setResponseStatus(event, 404);
+            if (team.ownerId !== userId) {
+                setResponseStatus(event, 403);
                 return {
-                    message: 'Team not found.'
+                    message: 'You are not the owner of this team.'
                 };
             }
 
             /**
-             * Get team
+             * Delete team
              */
 
-            const memberships = await getMembershipsByTeamId(teamId);
+            // Delete team
+            await deleteTeamById(teamId);
 
-            return {
-                team,
-                memberships
-            } as TeamGetResponse;
+            // Delete memberships
+            await deleteMembershipsByTeamId(teamId);
+
+            // Adjust seats count
+            await adjustSeatsCount(userId, stripeCustomerId);
+
+            return {};
         } catch (error) {
             setResponseStatus(event, 500);
             console.log(error);
 
             return {
-                message: 'Something went wrong when retrieving teams.',
+                message: 'Something went wrong when creating a team.',
                 error
             };
         }

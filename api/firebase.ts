@@ -17,8 +17,8 @@ export async function createTeam(payload: { name: string; members: string[] }) {
     return post<TeamsPostResponse>('/api/teams', payload);
 }
 
-export async function updateTeam(payload: { name: string; members: string[] }) {
-    return put<TeamsPutResponse>('/api/teams', payload);
+export async function updateTeam(id: string, payload: { name: string; members: string[] }) {
+    return put<TeamsPutResponse>(`/api/teams/${id}`, payload);
 }
 
 export async function createTeamEstimate(payload: { members: string[] }) {

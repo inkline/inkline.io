@@ -33,6 +33,7 @@ export interface ProductType {
 
 export interface MembershipType {
     id: string;
+    email: UserType['email'];
     userId: UserType['id'];
     teamId: TeamType['id'];
     teamName: TeamType['name'];
@@ -57,6 +58,7 @@ export type TeamsPostResponse = {
 };
 export type TeamsPutResponse = {
     team: TeamType;
+    memberships: MembershipType[];
 };
 export type TeamGetResponse = {
     team: TeamType;

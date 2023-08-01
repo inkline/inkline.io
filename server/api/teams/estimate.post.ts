@@ -1,4 +1,5 @@
-import { addAuthMiddleware, getSeats, stripe } from '~/server/utilities';
+import { addAuthMiddleware, stripe } from '~/server/utilities';
+import { getSeats } from '~/server/services';
 import { defineEventHandler, setResponseStatus } from 'h3';
 
 export default addAuthMiddleware(

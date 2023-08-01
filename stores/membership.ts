@@ -83,19 +83,22 @@ export const useMembershipStore = defineStore('membership', () => {
     }
 
     async function createTeam(payload: { name: string; members: string[] }) {
-        const { team, membership } = await firebaseApi.createTeam(payload);
-        addTeam(team);
-        addMembership(membership);
-        setServiceAccount(team.id);
+        const data = await firebaseApi.createTeam(payload);
+        addTeam(data.team);
+        addMembership(data.membership);
+        setServiceAccount(data.team.id);
 
-        return { team, membership };
+        return data;
     }
 
-    async function updateTeam(payload: { name: string; members: string[] }) {
-        const { team } = await firebaseApi.updateTeam(payload);
-        setServiceAccount(team.id);
+    async function updateTeam(id: string, payload: { name: string; members: string[] }) {
+        const data = await firebaseApi.updateTeam(id, payload);
 
-        return { team };
+        memberships.value = memberships.value.filter((membership) => membership.teamId === id);
+        addTeam(data.team);
+        data.memberships.forEach((membership) => addMembership(membership));
+
+        return data;
     }
 
     async function initializeServiceAccount() {
@@ -129,14 +132,28 @@ export const useMembershipStore = defineStore('membership', () => {
     }
 
     function addTeam(team: TeamType) {
-        if (!teams.value.find((t) => t.id === team.id)) {
+        const teamIndex = teams.value.findIndex((t) => t.id === team.id);
+
+        if (teamIndex === -1) {
             teams.value.push(team);
+        } else {
+            teams.value.splice(teamIndex, 1, {
+                ...teams.value[teamIndex],
+                ...team
+            });
         }
     }
 
     function addMembership(membership: MembershipType) {
-        if (!memberships.value.find((m) => m.id === membership.id)) {
+        const membershipIndex = memberships.value.findIndex((t) => t.id === membership.id);
+
+        if (membershipIndex === -1) {
             memberships.value.push(membership);
+        } else {
+            memberships.value.splice(membershipIndex, 1, {
+                ...memberships.value[membershipIndex],
+                ...membership
+            });
         }
     }
 
