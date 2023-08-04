@@ -104,13 +104,23 @@ export default defineNuxtConfig({
     i18n: {
         strategy: 'prefix_except_default',
         baseUrl: 'https://www.inkline.io',
-        defaultLocale: 'en',
-        locales: [{ code: 'en', iso: 'en', file: 'en.ts', isCatchallLocale: true }],
-        /**
-         * @docs https://v8.i18n.nuxtjs.org/guide/lazy-load-translations
-         */
+        locales: [
+            {
+                code: 'en',
+                iso: 'en',
+                file: 'en.ts'
+            }
+        ],
         lazy: true,
-        langDir: 'i18n/'
+        langDir: 'i18n/',
+        defaultLocale: 'en'
+
+        // /**
+        //  * @docs https://v8.i18n.nuxtjs.org/guide/lazy-load-translations
+        //  */
+        // lazy: true,
+        // langDir: 'i18n/',
+        // locales: [{ code: 'en', iso: 'en', file: 'en.ts', isCatchallLocale: true }]
     },
     /**
      * @docs https://next.inkline.io

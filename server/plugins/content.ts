@@ -1,3 +1,4 @@
+import type { NitroAppPlugin } from 'nitropack';
 import { readFileSync } from 'fs';
 import { resolve } from 'pathe';
 import glob from 'fast-glob';
@@ -21,7 +22,7 @@ codeFilePaths.forEach((filePath) => {
 const autodocsRegEx = /<!--\s*Autodocs\s*\{(.+)}\s*-->/g;
 const paramsRegEx = /(\w+)="([^"]+)"/g;
 
-export default defineNitroPlugin((nitroApp) => {
+export default <NitroAppPlugin>function (nitroApp) {
     nitroApp.hooks.hook('content:file:beforeParse', (file) => {
         if (file._id.endsWith('.md')) {
             let match;
@@ -54,4 +55,4 @@ export default defineNitroPlugin((nitroApp) => {
             file.body = body;
         }
     });
-});
+};
