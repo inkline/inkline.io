@@ -31,7 +31,6 @@ export default addAuthMiddleware(
         } catch (error) {
             setResponseStatus(event, 500);
             console.log(error);
-
             return {
                 message: 'Something went wrong when retrieving teams.',
                 error

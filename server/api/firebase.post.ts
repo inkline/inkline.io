@@ -9,12 +9,12 @@ export default addAuthMiddleware(
             const token = await firebase.auth.createCustomToken(userId);
 
             return { token };
-        } catch (err) {
+        } catch (error) {
             setResponseStatus(event, 500);
-
+            console.log(error);
             return {
                 message: 'Something went wrong acquiring a Firebase token.',
-                error: err
+                error
             };
         }
     })

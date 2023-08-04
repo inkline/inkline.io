@@ -23,6 +23,7 @@ export default defineComponent({
 
             await Promise.all([
                 firebaseStore.setAuthToken(),
+                subscriptionStore.getProducts(),
                 subscriptionStore.getSubscriptions(),
                 membershipStore.getTeams()
             ]);

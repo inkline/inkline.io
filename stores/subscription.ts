@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia';
 import * as stripeApi from '~/api/stripe';
-import * as firebaseApi from '~/api/firebase';
+import * as teamsApi from '~/api/teams';
 import { computed, ref } from 'vue';
 import { ProductPriceType, ProductType, SubscriptionType } from '~/types';
+import { PRODUCTS } from '~/constants';
 
 export const useSubscriptionStore = defineStore('subscription', () => {
     const tierFeatures = {
@@ -47,6 +48,20 @@ export const useSubscriptionStore = defineStore('subscription', () => {
 
     const hasSubscription = computed(() => subscriptions.value.length > 0);
 
+    const hasProSubscription = computed(() => {
+        const product = productByName(PRODUCTS.INKLINE_PRO);
+        const subscription = subscriptionByProductId(product?.id as string);
+
+        return !!subscription;
+    });
+
+    const hasEnterpriseSubscription = computed(() => {
+        const product = productByName(PRODUCTS.INKLINE_ENTERPRISE);
+        const subscription = subscriptionByProductId(product?.id as string);
+
+        return !!subscription;
+    });
+
     function productById(id: string) {
         return products.value.find((product) => product.id === id);
     }
@@ -89,7 +104,7 @@ export const useSubscriptionStore = defineStore('subscription', () => {
     }
 
     async function createTeamEstimate(payload: { team?: string; members: string[] }) {
-        return firebaseApi.createTeamEstimate(payload);
+        return teamsApi.createTeamEstimate(payload);
     }
 
     return {
@@ -104,6 +119,8 @@ export const useSubscriptionStore = defineStore('subscription', () => {
         subscriptionByProductId,
         subscriptions,
         hasSubscription,
+        hasProSubscription,
+        hasEnterpriseSubscription,
         tierFeatures,
         createTeamEstimate
     };

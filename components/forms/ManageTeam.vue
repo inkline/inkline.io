@@ -6,6 +6,7 @@ import { useForm, useToast, validate } from '@inkline/inkline';
 import { useI18n } from 'vue-i18n';
 import { debounce } from '@grozav/utils';
 import { CURRENCY_MAP } from '~/constants';
+import { storeToRefs } from 'pinia';
 
 export default defineComponent({
     props: {
@@ -27,6 +28,8 @@ export default defineComponent({
         const toast = useToast();
         const router = useRouter();
         const subscriptionStore = useSubscriptionStore();
+
+        const { hasEnterpriseSubscription } = storeToRefs(subscriptionStore);
 
         const memberEmails = ref<string[]>([]);
         const emailRefs = ref<HTMLElement[]>([]);
@@ -85,6 +88,11 @@ export default defineComponent({
         );
 
         const debouncedCreateTeamEstimate = debounce(async () => {
+            console.log(hasEnterpriseSubscription.value);
+            if (hasEnterpriseSubscription.value) {
+                return;
+            }
+
             loadingCostEstimate.value = true;
             costEstimate.value = await subscriptionStore.createTeamEstimate({
                 ...(props.team ? { team: props.team.id } : {}),
@@ -92,6 +100,15 @@ export default defineComponent({
             });
             loadingCostEstimate.value = false;
         }, 500);
+
+        const subscriptionUpdateAlertVisible = computed(() => {
+            return (
+                teamMembers.value.length > 0 &&
+                form.value.dirty &&
+                (loadingCostEstimate.value || costEstimate.value) &&
+                !hasEnterpriseSubscription.value
+            );
+        });
 
         watch(teamMembers, (value, oldValue) => {
             const difference = value.filter((member) => !oldValue.includes(member));
@@ -187,6 +204,8 @@ export default defineComponent({
             costEstimatePrice,
             loadingCostEstimate,
             loading,
+            hasEnterpriseSubscription,
+            subscriptionUpdateAlertVisible,
             addMember,
             addMemberOrFocus,
             removeMember,
@@ -235,10 +254,7 @@ export default defineComponent({
                 </IFormGroup>
             </ICard>
 
-            <IAlert
-                v-if="teamMembers.length > 0 && form.dirty && (loadingCostEstimate || costEstimate)"
-                color="info"
-            >
+            <IAlert v-if="subscriptionUpdateAlertVisible" color="info">
                 <template #icon>
                     <IIcon name="ink-info" />
                 </template>
@@ -255,7 +271,10 @@ export default defineComponent({
                 {{ t(`forms.manageTeam.submit.${team ? 'update' : 'create'}`) }}
             </IButton>
 
-            <div v-if="loadingCostEstimate || costEstimate" class="billing-changes-summary">
+            <div
+                v-if="(loadingCostEstimate || costEstimate) && !hasEnterpriseSubscription"
+                class="billing-changes-summary"
+            >
                 <div class="_margin-right:2 _font-size:sm">
                     <ul>
                         <li>

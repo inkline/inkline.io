@@ -1,6 +1,6 @@
 import { addAuthMiddleware, firebase } from '~/server/utilities';
 import {
-    adjustSeatsCount,
+    updateSubscription,
     createMembership,
     deleteMembershipById,
     getMembershipsByTeamId,
@@ -111,7 +111,7 @@ export default addAuthMiddleware(
             }
 
             // Adjust seats count
-            await adjustSeatsCount(userId, stripeCustomerId);
+            await updateSubscription(userId, stripeCustomerId);
 
             const updatedTeam = await getTeamById(teamId);
             const updatedMemberships = await getMembershipsByTeamId(teamId);
@@ -123,7 +123,6 @@ export default addAuthMiddleware(
         } catch (error) {
             setResponseStatus(event, 500);
             console.log(error);
-
             return {
                 message: 'Something went wrong when creating a team.',
                 error

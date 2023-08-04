@@ -45,8 +45,16 @@ export interface TeamType {
     ownerId: UserType['id'];
 }
 
+export interface NonceType {
+    id: string;
+    userId: UserType['id'];
+    teamId?: TeamType['id'];
+    nonce: string;
+}
+
 export type StripeSubscriptionsGetResponse = SubscriptionType[];
 export type StripeProductsGetResponse = ProductType[];
+
 export type TeamsGetResponse = {
     teams: TeamType[];
     memberships: MembershipType[];
@@ -65,3 +73,7 @@ export type TeamGetResponse = {
     memberships: MembershipType[];
 };
 export type TeamsEstimatePostResponse = ProductPriceType & { quantity_diff: number };
+
+export type TokenGetResponse = {
+    token: string;
+};

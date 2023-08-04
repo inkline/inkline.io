@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import * as firebaseApi from '~/api/firebase';
+import * as teamsApi from '~/api/teams';
 import { computed, ref } from 'vue';
 import type { MembershipType, TeamGetResponse, TeamType } from '~/types';
 import { useAuthStore } from '~/stores/auth';
@@ -65,7 +65,7 @@ export const useMembershipStore = defineStore('membership', () => {
      */
 
     async function getTeams() {
-        const { data } = (await firebaseApi.useGetTeams()) as { data: Ref<TeamsGetResponse> };
+        const { data } = (await teamsApi.useGetTeams()) as { data: Ref<TeamsGetResponse> };
 
         data.value.teams.forEach((team) => addTeam(team));
         data.value.memberships.forEach((membership) => addMembership(membership));
@@ -74,7 +74,7 @@ export const useMembershipStore = defineStore('membership', () => {
     }
 
     async function getTeam(id: string) {
-        const { data } = (await firebaseApi.useGetTeam(id)) as { data: Ref<TeamGetResponse> };
+        const { data } = (await teamsApi.useGetTeam(id)) as { data: Ref<TeamGetResponse> };
 
         addTeam(data.value.team);
         data.value.memberships.forEach((membership) => addMembership(membership));
@@ -83,7 +83,7 @@ export const useMembershipStore = defineStore('membership', () => {
     }
 
     async function createTeam(payload: { name: string; members: string[] }) {
-        const data = await firebaseApi.createTeam(payload);
+        const data = await teamsApi.createTeam(payload);
         addTeam(data.team);
         addMembership(data.membership);
         setServiceAccount(data.team.id);
@@ -92,7 +92,7 @@ export const useMembershipStore = defineStore('membership', () => {
     }
 
     async function updateTeam(id: string, payload: { name: string; members: string[] }) {
-        const data = await firebaseApi.updateTeam(id, payload);
+        const data = await teamsApi.updateTeam(id, payload);
 
         memberships.value = memberships.value.filter((membership) => membership.teamId === id);
         addTeam(data.team);

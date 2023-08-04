@@ -1,6 +1,6 @@
 import { addAuthMiddleware } from '~/server/utilities';
 import {
-    adjustSeatsCount,
+    updateSubscription,
     createMembership,
     createTeam,
     customerHasActiveSubscription
@@ -46,8 +46,10 @@ export default addAuthMiddleware(
             }
         } catch (error) {
             setResponseStatus(event, 500);
+            console.log(error);
             return {
-                message: 'Something went wrong when checking subscription status.'
+                message: 'Something went wrong when checking subscription status.',
+                error
             };
         }
 
@@ -70,7 +72,7 @@ export default addAuthMiddleware(
                     await createMembership({ email, teamId: team.id });
                 }
 
-                await adjustSeatsCount(userId, stripeCustomerId);
+                await updateSubscription(userId, stripeCustomerId);
             }
 
             // @TODO Send email notifications to members
@@ -82,7 +84,6 @@ export default addAuthMiddleware(
         } catch (error) {
             setResponseStatus(event, 500);
             console.log(error);
-
             return {
                 message: 'Something went wrong when creating a team.',
                 error

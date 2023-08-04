@@ -31,15 +31,47 @@ export async function getSeats(userId: string, options: { exclude?: string[] } =
     return { rawSeats, seats };
 }
 
-export async function adjustSeatsCount(userId: string, stripeCustomerId: string) {
-    const { seats } = await getSeats(userId);
-    const seatsCount = seats.size;
-
+export async function getSubscriptionsByCustomerId(stripeCustomerId: string) {
     const subscriptions = await stripe.subscriptions.list({
         customer: stripeCustomerId
     });
 
-    await stripe.subscriptions.update(subscriptions.data[0].id, {
-        items: [{ id: subscriptions.data[0].items.data[0].id, quantity: seatsCount }]
+    return subscriptions.data;
+}
+
+export async function getProductByName(name: string) {
+    const products = await stripe.products.list();
+    return products.data.find((product) => product.name === name);
+}
+
+export async function getSubscriptionByProductId(stripeCustomerId: string, productId: string) {
+    const subscriptions = await getSubscriptionsByCustomerId(stripeCustomerId);
+    return subscriptions.find((subscription) =>
+        subscription.items.data.some((item) => item.plan.product === productId && item.plan.active)
+    );
+}
+
+export async function hasEnterpriseSubscription(stripeCustomerId: string) {
+    const enterpriseProduct = await getProductByName('Inkline Enterprise');
+    const subscription = await getSubscriptionByProductId(
+        stripeCustomerId,
+        enterpriseProduct?.id as string
+    );
+
+    return !!subscription;
+}
+
+export async function updateSubscription(userId: string, stripeCustomerId: string) {
+    const isEnterprise = await hasEnterpriseSubscription(stripeCustomerId);
+    if (isEnterprise) {
+        return;
+    }
+
+    const subscriptions = await getSubscriptionsByCustomerId(stripeCustomerId);
+    const { seats } = await getSeats(userId);
+    const seatsCount = seats.size;
+
+    await stripe.subscriptions.update(subscriptions[0].id, {
+        items: [{ id: subscriptions[0].items.data[0].id, quantity: seatsCount }]
     });
 }
