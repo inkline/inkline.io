@@ -1,11 +1,12 @@
 #!/bin/bash
 
-tag=$(git tag --contains HEAD)
+# Retrieve tag name
+tag=$(git tag)
 
 if [[ $tag == "latest" ]]; then
-    echo "Deploying to production";
+    # Deploy to production
     exit 1;
 else
-    echo "Skipping deployment because the commit is not tagged with 'latest'";
+    # Skip deployment because the commit is not tagged with 'latest'
     exit 0;
 fi

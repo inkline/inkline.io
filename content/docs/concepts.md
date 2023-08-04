@@ -10,7 +10,7 @@ layout: docs
 ### Component Naming Convention
 When designing Inkline, component names and prop names were chosen to be as intuitive as possible. The naming rules are:
 
-- **Namespacing** - Component names should be namespaced using the <code>I</code> prefix to be easily recognizable and to avoid conflicts.
+- **Namespacing** - Component names should be namespaced using the <code>I</code> prefix to be easily recognizable and to avoid conflicts. 
 - **Simplicity** - Component names should be simple words where possible in order for them to be easy to remember: <code>IContainer</code>, <code>IButton</code>, <code>INavbar</code>, etc.
 - **Clarity** - Component names should clearly reflect parent-child component relationships: <code>INav</code> and <code>INavItem</code>.
 - **Consistency** - Component prop names should be reused as often as possible to promote consistency: <code>color</code>, <code>size</code>, <code>disabled</code>, etc.
