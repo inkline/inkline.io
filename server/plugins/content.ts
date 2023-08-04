@@ -1,6 +1,6 @@
 import type { NitroAppPlugin } from 'nitropack';
 import { readFileSync } from 'fs';
-import { resolve } from 'pathe';
+import { resolve } from 'path';
 import glob from 'fast-glob';
 
 const rootDirPath = process.cwd();
