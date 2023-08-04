@@ -61,4 +61,4 @@ If you use Inkline in your daily work and feel that it has made your life easier
 ## Copyright and license
 
 Homepage and documentation copyright 2017-2022 [Inkline Authors](https://github.com/inkline/inkline.io/graphs/contributors).
-Docs released under [MIT License](https://github.com/inkline/inkline/blob/master/packages/docs/LICENSE).
+Docs released under [MIT License](https://github.com/inkline/inkline/blob/master/packages/docs/LICENSE). 
