@@ -128,7 +128,6 @@ export default defineNuxtConfig({
      */
     image: {
         dir: 'assets',
-        provider: 'ipx',
         domains: ['next.inkline.io', 'inkline.io']
     },
     /**
