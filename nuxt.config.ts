@@ -1,5 +1,3 @@
-import en from './i18n/en';
-
 /**
  * @docs https://nuxt.com/docs/api/configuration/nuxt-config
  */
@@ -17,6 +15,12 @@ export default defineNuxtConfig({
         'nuxt-icon',
         'nuxt-simple-sitemap'
     ],
+    /**
+     * @docs https://nuxt.com/docs/api/configuration/nuxt-config#payloadextraction
+     */
+    experimental: {
+        payloadExtraction: true
+    },
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config#app
      */
