@@ -118,13 +118,6 @@ export default defineNuxtConfig({
         lazy: true,
         langDir: 'i18n/',
         defaultLocale: 'en'
-
-        // /**
-        //  * @docs https://v8.i18n.nuxtjs.org/guide/lazy-load-translations
-        //  */
-        // lazy: true,
-        // langDir: 'i18n/',
-        // locales: [{ code: 'en', iso: 'en', file: 'en.ts', isCatchallLocale: true }]
     },
     /**
      * @docs https://next.inkline.io
@@ -141,8 +134,8 @@ export default defineNuxtConfig({
      * @docs https://v1.image.nuxtjs.org/configuration
      */
     image: {
+        provider: 'ipx',
         dir: 'assets',
-        preset: 'ipx',
         domains: ['next.inkline.io', 'inkline.io']
     },
     /**
