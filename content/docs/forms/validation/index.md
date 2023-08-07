@@ -90,7 +90,7 @@ Next, let's add the previously mentioned validators to the created form schema:
 
 ~~~js
 import { defineComponent } from 'vue';
-import { useFrom } from '@inkline/inkline';
+import { useForm } from '@inkline/inkline';
 
 export default defineComponent({
     setup() {
