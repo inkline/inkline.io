@@ -8,6 +8,9 @@ export function useServiceAccountRoutes() {
 
     const routes = computed(() => ({
         '/': isPersonalServiceAccount.value ? '/app' : `/app/team/${serviceAccount.value}`,
+        '/installation': isPersonalServiceAccount.value
+            ? '/app/installation'
+            : `/app/team/${serviceAccount.value}/installation`,
         '/token': isPersonalServiceAccount.value
             ? '/app/token'
             : `/app/team/${serviceAccount.value}/token`,

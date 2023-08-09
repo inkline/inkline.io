@@ -1,14 +1,15 @@
 export default {
     common: {
         opensNewWindow: 'Opens in a new window',
-        copyToClipboard: 'Copy to clipboard',
+        copyToClipboard: 'Click to copy',
         copiedToClipboard: 'Copied to clipboard',
         example: 'Example',
         token: 'Token',
         description: 'Description',
         next: 'Next',
         previous: 'Previous',
-        error: 'Error'
+        error: 'Error',
+        contactEmail: "mailto:support{'@'}inkline.io"
     },
     navigation: {
         home: 'Home',
@@ -147,6 +148,7 @@ export default {
             }
         },
         onboarding: {
+            title: 'Welcome to Inkline Pro!',
             description: "We're super humbled to have you here. Let’s get you set up!",
             cards: {
                 install: {
@@ -160,11 +162,22 @@ export default {
                     description:
                         'Grant your team members access to Inkline Pro and set the foundation for your developer team.',
                     button: 'Invite team'
+                },
+                updateTeam: {
+                    title: 'Set up my team',
+                    description: 'Organize your team members and grant them access to Inkline Pro.',
+                    button: 'Update team'
+                },
+                createTeam: {
+                    title: 'Create new team',
+                    description: 'Organize your team members and grant them access to Inkline Pro.',
+                    button: 'Create team'
                 }
             }
         },
         dashboard: {
-            title: 'Welcome to Inkline',
+            title: 'Get started',
+            description: "We're super humbled to have you here. Let’s get you set up!",
             upsell: {
                 title: 'Ready to take your design system to the next level?',
                 description:
@@ -172,21 +185,83 @@ export default {
                 button: 'Upgrade to Pro'
             },
             navigation: {
-                setup: 'Set up',
+                home: 'Home',
+                installation: 'Installation',
                 team: 'My team',
                 manageTeam: 'Manage team',
                 createTeam: 'Set up my team',
                 token: 'Auth token'
             }
         },
+        installation: {
+            title: 'Installation',
+            description:
+                'Set up your Inkline Pro subscription and gain access to the private Inkline NPM Registry.',
+            options: {
+                cli: 'CLI',
+                manual: 'Manual'
+            },
+            steps: {
+                cli: {
+                    title: 'Setup your project',
+                    description:
+                        "Run the following command in your project's root directory to setup your project for Inkline Pro."
+                },
+                npmrc: {
+                    title: 'Create npm configuration file',
+                    description:
+                        "Create a {code} file in your project's root directory with the following content:"
+                },
+                authToken: {
+                    title: 'Set your authentication token',
+                    description:
+                        "This authentication token grants you access to Inkline's private npm packages.",
+                    instructions: 'Open your {file} file, and replace {code} with your {link}.',
+                    link: 'auth token'
+                },
+                install: {
+                    title: 'Install Inkline Pro',
+                    description: 'Install Inkline Pro using your favorite package manager.'
+                },
+                import: {
+                    title: 'Import Inkline Pro',
+                    description:
+                        'Import Inkline Pro in your project and start building amazing things!'
+                }
+            }
+        },
+        token: {
+            title: 'Auth token',
+            description:
+                'Your Auth Token is used to gain read access to the private Inkline NPM Registry.',
+            descriptionAction: 'Read setup instructions',
+            regenerate: 'Regenerate token',
+            fetching: 'Fetching auth token...',
+            alerts: {
+                confidential: {
+                    title: 'Keep this token confidential.',
+                    description:
+                        'The token is bound to your account and should never be shared with anyone.'
+                }
+            },
+            needHelp: {
+                title: 'Need help?',
+                description: 'If you have any questions or run into issues, please',
+                link: 'contact us'
+            }
+        },
         team: {
             create: {
+                title: 'Create Team',
+                description: 'Create a team and invite your team members.',
                 success: {
                     title: 'Your team has been created',
                     message: 'Members will now have access to a shared Inkline Pro subscription.'
                 }
             },
             update: {
+                title: 'Update Team',
+                description: 'Update your team name and manage your team members.',
                 success: {
                     title: 'Your team has been updated'
                 }

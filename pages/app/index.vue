@@ -29,27 +29,13 @@ export default defineComponent({
 <template>
     <div id="dashboard-page">
         <SectionsComponentsSection color="transparent" size="md">
-            <IRow>
-                <IColumn>
-                    <SectionsComponentsHeader heading="h1">
-                        <template #title>
-                            {{ route.meta.title ?? t('pages.dashboard.title') }}
-                        </template>
-                        <template #description>
-                            {{ route.meta.description ?? t('pages.onboarding.description') }}
-                        </template>
-                    </SectionsComponentsHeader>
-                </IColumn>
-            </IRow>
             <IRow v-if="hasSubscriptions || hasTeams">
                 <IColumn>
-                    <ILayout vertical class="_margin-top:2">
-                        <DashboardSidebar
-                            v-if="route.meta.sidebar !== false"
-                            class="_margin-right:1"
-                        />
+                    <ILayout>
+                        <DashboardNavbar class="_margin-bottom:1" />
                         <ILayoutContent>
                             <NuxtPage />
+                            <DashboardNeedHelp />
                         </ILayoutContent>
                     </ILayout>
                 </IColumn>

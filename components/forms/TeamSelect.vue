@@ -58,9 +58,6 @@ export default defineComponent({
 
 <template>
     <div class="team-select">
-        <div class="_font-size:xs _text:weaker">
-            {{ t(`forms.teamSelect.${serviceAccountType}`) }}
-        </div>
         <ISelect
             ref="selectRef"
             :options="options"

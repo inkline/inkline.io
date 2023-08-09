@@ -1,30 +1,18 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { useSubscriptionStore } from '~/stores';
-import { useMembershipStore } from '~/stores/membership';
-import { storeToRefs } from 'pinia';
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
 
-export default defineComponent({
-    setup() {
-        const subscriptionStore = useSubscriptionStore();
-        const membershipStore = useMembershipStore();
-
-        const { hasSubscription } = storeToRefs(subscriptionStore);
-        const { isPersonalServiceAccount } = storeToRefs(membershipStore);
-
-        return { hasSubscription, isPersonalServiceAccount };
-    }
-});
+const { t } = useI18n();
 </script>
 <template>
-    <ICard v-if="!hasSubscription && isPersonalServiceAccount">
-        <DashboardUpsellMessage class="_padding-y:4" />
-    </ICard>
-    <ICard v-else>
-        <h1>Set up</h1>
-        <p>
-            Example content for a page with a sidebar, a layout typically seen in Documentation
-            pages and Web Application dashboards.
-        </p>
-    </ICard>
+    <LayoutsCards>
+        <ICard>
+            <h1>
+                {{ t(`pages.dashboard.title`) }}
+            </h1>
+            <p class="_margin-bottom:0">
+                {{ t(`pages.dashboard.description`) }}
+            </p>
+        </ICard>
+        <DashboardOnboarding />
+    </LayoutsCards>
 </template>

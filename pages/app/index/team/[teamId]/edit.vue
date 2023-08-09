@@ -12,8 +12,7 @@ export default defineComponent({
         definePageMeta({
             title: 'Update your team',
             description:
-                'Grant your team members access to Inkline Pro and set the foundation for your developer team.',
-            sidebar: false
+                'Grant your team members access to Inkline Pro and set the foundation for your developer team.'
         });
 
         const { t } = useI18n();
@@ -71,6 +70,10 @@ export default defineComponent({
 </script>
 <template>
     <LayoutsCards>
+        <ICard>
+            <h1>{{ t('pages.team.update.title') }}</h1>
+            <p class="_margin-bottom:0">{{ t('pages.team.update.description') }}</p>
+        </ICard>
         <FormsManageTeam :team="defaultTeam" :members="defaultMembers" :action="onSubmit" />
     </LayoutsCards>
 </template>

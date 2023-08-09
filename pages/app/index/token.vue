@@ -1,10 +1,11 @@
-<script setup></script>
+<script setup>
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'Auth Token',
+    description: 'Get access to Inkline Pro and set the foundation for your design system'
+});
+</script>
 <template>
-    <ICard>
-        <h1>Auth token</h1>
-        <p>
-            Example content for a page with a sidebar, a layout typically seen in Documentation
-            pages and Web Application dashboards.
-        </p>
-    </ICard>
+    <DashboardAuthToken />
 </template>

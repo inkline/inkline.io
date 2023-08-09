@@ -8,7 +8,8 @@
 .cards-layout,
 .cards-layout > form {
     > .card,
-    > .alert {
+    > .alert,
+    > p {
         margin-bottom: var(--margin-bottom);
     }
 }

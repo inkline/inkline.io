@@ -11,39 +11,30 @@ export default defineComponent({
     setup(props) {
         const icon = computed(() => {
             switch (props.color) {
+                case 'danger':
+                    return 'ink-danger';
+                case 'info':
+                    return 'ink-info';
                 case 'success':
                     return 'ink-check';
                 case 'warning':
                     return 'ink-warning';
-                case 'danger':
-                    return 'ink-danger';
                 default:
-                    return 'ink-info';
+                    return '';
             }
         });
 
-        return {
-            icon
-        };
+        return { icon };
     }
 });
 </script>
-
 <template>
-    <IAlert class="content-alert" :color="color">
+    <IAlert :color="color">
         <template #icon>
-            <IIcon :name="icon" />
+            <slot name="icon">
+                <IIcon :name="icon" />
+            </slot>
         </template>
         <slot />
     </IAlert>
 </template>
-
-<style lang="scss">
-.content-alert {
-    .content {
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-</style>
