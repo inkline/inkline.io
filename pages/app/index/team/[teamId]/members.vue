@@ -30,7 +30,11 @@ export default defineComponent({
             membershipStore.getTeam(membershipStore.serviceAccount as string);
         });
 
-        return { t, isServiceAccountOwner, team, memberships, routes };
+        function onDelete() {
+            membershipStore.deleteTeam(membershipStore.serviceAccount as string);
+        }
+
+        return { t, isServiceAccountOwner, team, memberships, routes, onDelete };
     }
 });
 </script>
@@ -47,7 +51,7 @@ export default defineComponent({
                         {{ t('pages.team.index.dropdown.edit') }}
                     </IDropdownItem>
                     <IDropdownDivider />
-                    <IDropdownItem>
+                    <IDropdownItem @click="onDelete">
                         {{ t('pages.team.index.dropdown.delete') }}
                     </IDropdownItem>
                 </template>

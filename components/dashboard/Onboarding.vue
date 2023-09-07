@@ -53,7 +53,7 @@ const { isServiceAccountOwner, isPersonalServiceAccount, ownedTeams } =
             to="/app/team/create"
         >
             <template #image>
-                <NuxtImg src="/images/icons/icon-invite.svg" alt="Invite Team" width="56" />
+                <NuxtImg src="/images/icons/icon-invite-add.svg" alt="Invite Team" width="56" />
             </template>
         </CardsOnboarding>
         <CardsOnboarding

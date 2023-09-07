@@ -4,6 +4,7 @@ import {
     mapFirebaseQuerySnapshotToArray
 } from '~/server/utilities';
 import type { NonceType } from '~/types';
+import { Logger } from '@grozav/logger';
 
 export async function createNonce(userId: string, teamId?: string) {
     const nonce = `${new Date().getTime()}-${Math.random().toString(36).substring(2, 15)}`;
@@ -15,6 +16,8 @@ export async function createNonce(userId: string, teamId?: string) {
     });
     const nonceSnapshot = await nonceDoc.get();
 
+    Logger.log('Creating nonce: ', { userId, teamId });
+
     return mapFirebaseDocumentSnapshotToObject<NonceType>(nonceSnapshot);
 }
 
@@ -24,6 +27,8 @@ export async function updateNonceById(nonceId: string) {
     const nonceDoc = noncesRef.doc(nonceId);
 
     await nonceDoc.update({ nonce });
+
+    Logger.log('Updating nonce: ', { nonceId });
 
     const nonceSnapshot = await nonceDoc.get();
     return mapFirebaseDocumentSnapshotToObject<NonceType>(nonceSnapshot);

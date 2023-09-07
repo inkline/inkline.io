@@ -1,14 +1,19 @@
-import { firebase } from '~/server/utilities';
+import {
+    firebase,
+    mapFirebaseDocumentSnapshotToObject,
+    mapFirebaseQuerySnapshotToArray
+} from '~/server/utilities';
 import { TeamType } from '~/types';
+import { Logger } from '@grozav/logger';
 
 export async function createTeam(payload: { name: string; ownerId: string }) {
     const teamsRef = firebase.firestore.collection('teams');
     const teamDoc = await teamsRef.add(payload);
+    const teamSnapshot = await teamDoc.get();
 
-    return {
-        id: teamDoc.id,
-        ...payload
-    } as TeamType;
+    Logger.log('Creating team: ', payload);
+
+    return mapFirebaseDocumentSnapshotToObject<TeamType, false>(teamSnapshot);
 }
 
 export async function getTeamById(teamId: string) {
@@ -20,10 +25,7 @@ export async function getTeamById(teamId: string) {
         return null;
     }
 
-    return {
-        id: teamDoc.id,
-        ...teamSnapshot.data()
-    } as TeamType;
+    return mapFirebaseDocumentSnapshotToObject<TeamType>(teamSnapshot);
 }
 
 export async function getTeamsOwnedByUser(userId: string) {
@@ -31,20 +33,14 @@ export async function getTeamsOwnedByUser(userId: string) {
     const teamsDocs = teamsRef.where('ownerId', '==', userId);
     const teamsSnapshot = await teamsDocs.get();
 
-    const teams: TeamType[] = [];
-    for (const teamDoc of teamsSnapshot.docs) {
-        teams.push({
-            id: teamDoc.id,
-            ...teamDoc.data()
-        } as TeamType);
-    }
-
-    return teams;
+    return mapFirebaseQuerySnapshotToArray<TeamType>(teamsSnapshot);
 }
 
 export async function updateTeamById(teamId: string, payload: { name: string }) {
     const teamsRef = firebase.firestore.collection('teams');
     const teamDoc = teamsRef.doc(teamId);
+
+    Logger.log('Updating team: ', teamId, payload);
 
     return teamDoc.update(payload);
 }
@@ -52,6 +48,8 @@ export async function updateTeamById(teamId: string, payload: { name: string }) 
 export async function deleteTeamById(teamId: string) {
     const teamsRef = firebase.firestore.collection('teams');
     const teamsDoc = teamsRef.doc(teamId);
+
+    Logger.log('Deleting team: ', teamId);
 
     return teamsDoc.delete();
 }

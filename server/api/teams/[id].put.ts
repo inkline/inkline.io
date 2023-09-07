@@ -12,7 +12,7 @@ import { TeamsPutResponse } from '~/types';
 
 export default addAuthMiddleware(
     defineEventHandler(async (event) => {
-        const { sub: userId } = event.context.auth.payload;
+        const { sub: currentUserId, email: currentUserEmail } = event.context.auth.payload;
         const stripeCustomerId = event.context.auth.payload.stripe_customer_id;
         const payload = await readBody(event);
         const teamId = event.context.params?.id;
@@ -55,7 +55,7 @@ export default addAuthMiddleware(
              * Permissions validation
              */
 
-            if (team?.ownerId !== userId) {
+            if (team?.ownerId !== currentUserId) {
                 setResponseStatus(event, 403);
                 return {
                     message: 'You are not the owner of this team.'
@@ -88,8 +88,9 @@ export default addAuthMiddleware(
                 [...currentMemberEmailsSet].filter((email) => !payloadMemberEmailsSet.has(email))
             );
 
-            newMemberEmailsSet.delete(userId);
-            deletedMemberEmailsSet.delete(userId);
+            currentMemberEmailsSet.delete(currentUserEmail);
+            newMemberEmailsSet.delete(currentUserEmail);
+            deletedMemberEmailsSet.delete(currentUserEmail);
 
             // Delete membership for each member that is in the database but not in the payload
             for (const email of deletedMemberEmailsSet) {
@@ -111,7 +112,7 @@ export default addAuthMiddleware(
             }
 
             // Adjust seats count
-            await updateSubscription(userId, stripeCustomerId);
+            await updateSubscription(currentUserId, stripeCustomerId);
 
             const updatedTeam = await getTeamById(teamId);
             const updatedMemberships = await getMembershipsByTeamId(teamId);

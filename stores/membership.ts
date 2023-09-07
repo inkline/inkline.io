@@ -101,6 +101,13 @@ export const useMembershipStore = defineStore('membership', () => {
         return data;
     }
 
+    async function deleteTeam(id: string) {
+        await teamsApi.deleteTeam(id);
+
+        teams.value = teams.value.filter((team) => team.id !== id);
+        memberships.value = memberships.value.filter((membership) => membership.teamId !== id);
+    }
+
     async function initializeServiceAccount() {
         if (serviceAccount.value) {
             return;
@@ -182,6 +189,7 @@ export const useMembershipStore = defineStore('membership', () => {
         membershipsByTeamId,
         teamById,
         createTeam,
-        updateTeam
+        updateTeam,
+        deleteTeam
     };
 });

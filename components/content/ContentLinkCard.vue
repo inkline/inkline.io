@@ -3,12 +3,14 @@ import { computed, defineComponent, PropType } from 'vue';
 import { RouteLocation } from 'vue-router';
 import { useLocalePath } from 'vue-i18n-routing';
 import { useTelemetry } from '~/composables';
+import ContentImageCard from '~/components/content/ContentImageCard.vue';
 
 export default defineComponent({
+    components: { ContentImageCard },
     props: {
         to: {
             type: [String, Object] as PropType<RouteLocation | string>,
-            required: true
+            default: ''
         },
         src: {
             type: String,
@@ -56,17 +58,9 @@ export default defineComponent({
 
 <template>
     <NuxtLink class="link-card" :to="url" @click="onClick">
-        <ICard>
-            <div class="image">
-                <img v-if="src" :src="src" :alt="`${alt || title} - Inkline`" />
-                <Icon v-else :name="icon" size="30" />
-            </div>
-            <div class="title">
-                {{ title }}
-                <small v-if="subtitle" class="_text:weaker">{{ subtitle }}</small>
-            </div>
+        <ContentImageCard :title="title" :src="src" :alt="alt" :icon="icon" :subtitle="subtitle">
             <IIcon name="ink-chevron-down" />
-        </ICard>
+        </ContentImageCard>
     </NuxtLink>
 </template>
 

@@ -1,6 +1,7 @@
 import { stripe } from '~/server/utilities';
 import { getTeamsOwnedByUser } from '~/server/services/teams';
 import { getMembershipsByTeamId } from '~/server/services/memberships';
+import { Logger } from '@grozav/logger';
 
 export async function customerHasActiveSubscription(stripeCustomerId: string) {
     const subscriptions = await stripe.subscriptions.list({
@@ -64,12 +65,15 @@ export async function hasEnterpriseSubscription(stripeCustomerId: string) {
 export async function updateSubscription(userId: string, stripeCustomerId: string) {
     const isEnterprise = await hasEnterpriseSubscription(stripeCustomerId);
     if (isEnterprise) {
+        Logger.log(`Skipping enterprise subscription update for ${stripeCustomerId}.`);
         return;
     }
 
     const subscriptions = await getSubscriptionsByCustomerId(stripeCustomerId);
     const { seats } = await getSeats(userId);
     const seatsCount = seats.size;
+
+    Logger.log(`Updating subscription for ${stripeCustomerId} to ${seatsCount} seats.`);
 
     await stripe.subscriptions.update(subscriptions[0].id, {
         items: [{ id: subscriptions[0].items.data[0].id, quantity: seatsCount }]

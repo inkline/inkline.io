@@ -1,8 +1,8 @@
-export function mapFirebaseDocumentSnapshotToObject<T>(
+export function mapFirebaseDocumentSnapshotToObject<T, Nullable = true>(
     doc: FirebaseFirestore.DocumentSnapshot<FirebaseFirestore.DocumentData>
-): T | null {
+): Nullable extends true ? T | null : T {
     if (!doc.exists) {
-        return null;
+        return null as T;
     }
 
     return {

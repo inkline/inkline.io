@@ -88,7 +88,6 @@ export default defineComponent({
         );
 
         const debouncedCreateTeamEstimate = debounce(async () => {
-            console.log(hasEnterpriseSubscription.value);
             if (hasEnterpriseSubscription.value) {
                 return;
             }

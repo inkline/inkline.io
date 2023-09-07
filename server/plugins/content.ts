@@ -10,6 +10,7 @@ const inklinePath = resolve(nodeModulesPath, '@inkline', 'inkline');
 const codeCache = new Map<string, string>();
 const codeFilePaths = [
     resolve(inklineConfigPath, 'examples', 'defaults.ts'),
+    ...glob.sync(resolve(rootDirPath, 'content', '_partials', '**', '*.md')),
     ...glob.sync(resolve(inklinePath, 'stories', '**', '*.raw.vue')),
     ...glob.sync(resolve(inklinePath, 'components', '**', 'examples', '*.raw.vue'))
 ];

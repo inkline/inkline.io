@@ -72,6 +72,7 @@ export type TeamGetResponse = {
     team: TeamType;
     memberships: MembershipType[];
 };
+export type TeamDeleteResponse = {};
 export type TeamsEstimatePostResponse = ProductPriceType & { quantity_diff: number };
 
 export type TokenGetResponse = {

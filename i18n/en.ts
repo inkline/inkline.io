@@ -160,17 +160,18 @@ export default {
                 inviteTeam: {
                     title: 'Set up my team',
                     description:
-                        'Grant your team members access to Inkline Pro and set the foundation for your developer team.',
+                        'Grant your team members access to Inkline Pro and set the foundation for your developer team',
                     button: 'Invite team'
                 },
                 updateTeam: {
-                    title: 'Set up my team',
-                    description: 'Organize your team members and grant them access to Inkline Pro.',
+                    title: 'Update my team',
+                    description: 'Add new team members and grant them access to Inkline Pro',
                     button: 'Update team'
                 },
                 createTeam: {
                     title: 'Create new team',
-                    description: 'Organize your team members and grant them access to Inkline Pro.',
+                    description:
+                        'Take control over your organization structure and grant team members access to Inkline Pro',
                     button: 'Create team'
                 }
             }
