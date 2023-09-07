@@ -10,8 +10,8 @@ The most basic use case for a select component is to have all the select options
 
 Here are some considerations to be made:
 - Each option must be an Object `{}`
-- Each option must have a unique identifier field, such as `id`
-- The `selected` value will be the option itself
+- Each option must have a unique identifier field, `id` by default
+- The selected `modelValue` will be the id of the option
 
 ::ContentTabs
 #preview
