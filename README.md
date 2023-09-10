@@ -47,6 +47,11 @@
 2. From the root directory, run `npm run dev` in the command line.
 3. Open `http://localhost:3000` in your browser.
 
+## Release
+
+1. Tag the release as latest with `git tag -af latest -m "Latest"`
+2. Push the latest tag with `git push -f origin latest`
+
 ## Creator
 
 ### Alex Grozav
