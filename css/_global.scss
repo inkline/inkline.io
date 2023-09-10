@@ -32,3 +32,14 @@
         }
     }
 }
+
+.toast-container {
+    .toast-position {
+        &.-top-left,
+        &.-top,
+        &.-top-right {
+            top: var(--navbar--height);
+        }
+    }
+}
+

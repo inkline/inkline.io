@@ -10,20 +10,8 @@ They are typically used for displaying brief messages such as success, warning, 
 
 The toast container component displays toast notifications within your application, in any of the 4 corners, and 4 sides of your screen.
 
-### Setup and Usage
-
-1. Add the `<IToastContainer>` component to your project's root layout (usually `app.vue`). 
-
-```vue
-<template>
-     <div id="app">
-         <!-- Your other layout components -->
-         <IToastContainer />
-     </div>
-</template>
-```
-
-2. Use the `useToast()` composable in your components to show or hide toast notifications.
+### Usage
+Use the `useToast()` composable in your components to show or hide toast notifications.
 
 ::ContentTabs
 #preview
@@ -50,6 +38,24 @@ You're able to use the `size` modifier to control the text and spacing size of y
 :ContentPreview{src="/components/IToastContainer/examples/size-variants"}
 #vue
 <!-- Autodocs{src="@inkline/inkline/components/IToastContainer/examples/size-variants.raw.vue" lang="vue"} -->
+::
+
+### Position
+You're able to use the `position` modifier to control the position of your toasts, using one of the available positions: 
+- `top-left`
+- `top`
+- `top-right`
+- `left`
+- `bottom-right`
+- `bottom`
+- `bottom-left`
+- `right`
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IToastContainer/examples/position"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IToastContainer/examples/position.raw.vue" lang="vue"} -->
 ::
 
 ### Dismissible
