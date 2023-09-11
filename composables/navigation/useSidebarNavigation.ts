@@ -348,6 +348,20 @@ export function useSidebarNavigation(): NavigationPage[] {
             ]
         },
         {
+            title: 'Services',
+            active: /\/docs\/services(\/.+)?/,
+            children: [
+                {
+                    title: 'Toast Service',
+                    url: '/docs/services/toast'
+                },
+                {
+                    title: 'Modal Service',
+                    url: '/docs/services/modal'
+                }
+            ]
+        },
+        {
             title: 'Utilities',
             active: /\/docs\/utilities(\/.+)?/,
             children: [

@@ -8,6 +8,10 @@ export default defineComponent({
         component: {
             type: String,
             required: true
+        },
+        additionalProps: {
+            type: Array,
+            default: () => []
         }
     },
     setup(props) {
@@ -22,8 +26,15 @@ export default defineComponent({
             { label: '', key: 'description' }
         ]);
 
+        const resolvedComponentProps = computed(() =>
+            [...props.additionalProps, ...componentProps.value].sort((a, b) =>
+                a.name.localeCompare(b.name)
+            )
+        );
+
         return {
             componentProps,
+            resolvedComponentProps,
             columns
         };
     }
@@ -31,5 +42,5 @@ export default defineComponent({
 </script>
 
 <template>
-    <ConfigurationTable :rows="componentProps" :columns="columns" />
+    <ConfigurationTable :rows="resolvedComponentProps" :columns="columns" />
 </template>

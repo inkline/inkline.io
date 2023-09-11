@@ -183,7 +183,7 @@ export default defineComponent({
     top: var(--margin-top);
     right: var(--margin-right);
     left: var(--margin-left);
-    z-index: 9999;
+    z-index: 1;
 
     &.-open {
         max-height: calc(100% - var(--margin-top) - var(--margin-bottom));

@@ -6,7 +6,14 @@ description: Modals are dialogs that can be used for user notifications, lightbo
 # Modal
 ## Modals are dialogs that can be used for lightboxes, user notifications, or completely custom content.
 
-To create a modal, create an element (such as an `<IButton>`) as a trigger and the `v-model` on an `<IModal>` component to control its visibility. Everything inside the `<IModal>` is rendered as the modal body. Optionally, you can provide a modal header and footer using `#header` and `#footer` slots.
+::ContentAlert
+To create a modal programmatically, you can use the [Modal Service](/docs/services/modal).
+::
+
+To create a modal, create an a trigger element (such as a button), and use the modal component's `v-model` binding to control its visibility. 
+
+Everything inside the `<IModal>` is rendered as the modal body. Optionally, you can provide a modal header and footer using `#header` and `#footer` slots.
+
 
 ::ContentTabs
 #preview
@@ -34,6 +41,26 @@ The default size is set to `md`.
 :ContentPreview{src="/components/IModal/examples/size-variants"}
 #vue
 <!-- Autodocs{src="@inkline/inkline/components/IModal/examples/size-variants.raw.vue" lang="vue"} -->
+::
+
+### Icon
+You can easily add an icon to your modal header using the `icon` slot or property. The icon will be displayed on the left side of the body.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IModal/examples/icon"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/icon.raw.vue" lang="vue"} -->
+::
+
+### Fullscreen
+You can set the `fullscreen` property to `true` to display the modal as a fullscreen overlay.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/IModal/examples/fullscreen"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/IModal/examples/fullscreen.raw.vue" lang="vue"} -->
 ::
 
 ### Props

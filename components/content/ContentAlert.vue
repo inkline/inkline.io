@@ -30,10 +30,20 @@ export default defineComponent({
 </script>
 
 <template>
-    <IAlert :color="color">
+    <IAlert class="content-alert" :color="color">
         <template #icon>
             <IIcon :name="icon" />
         </template>
         <slot />
     </IAlert>
 </template>
+
+<style lang="scss">
+.content-alert {
+    .content {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+</style>
