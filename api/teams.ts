@@ -1,5 +1,10 @@
 import { del, post, put, useGet } from '~/api/generic';
-import type { TeamsEstimatePostResponse, TeamsPostResponse, TeamsPutResponse } from '~/types';
+import type {
+    MembershipPutResponse,
+    TeamsEstimatePostResponse,
+    TeamsPostResponse,
+    TeamsPutResponse
+} from '~/types';
 import { TeamDeleteResponse } from '~/types';
 
 export async function useGetTeams() {
@@ -24,4 +29,8 @@ export async function deleteTeam(id: string) {
 
 export async function createTeamEstimate(payload: { members: string[] }) {
     return post<TeamsEstimatePostResponse>('/api/teams/estimate', payload);
+}
+
+export async function updateMembership(id: string, payload: { accept: boolean }) {
+    return put<MembershipPutResponse>(`/api/memberships/${id}`, payload);
 }

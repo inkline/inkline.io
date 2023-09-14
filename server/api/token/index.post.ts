@@ -3,6 +3,7 @@ import {
     customerHasActiveSubscription,
     getMembershipByUserIdAndTeamId,
     getNonceByUserIdAndTeamId,
+    updateNonceById,
     createJWT,
     getTeamWithStatusById
 } from '~/server/services';
@@ -33,7 +34,7 @@ export default addAuthMiddleware(
                 if (!team.active) {
                     setResponseStatus(event, 405);
                     return {
-                        message: 'Subscription is required to retrieve auth token.'
+                        message: 'Subscription is required to regenerate auth token.'
                     };
                 }
 
@@ -50,7 +51,7 @@ export default addAuthMiddleware(
                 if (!hasActiveSubscription) {
                     setResponseStatus(event, 405);
                     return {
-                        message: 'Subscription is required to retrieve auth token.'
+                        message: 'Subscription is required to regenerate auth token.'
                     };
                 }
             }
@@ -68,7 +69,8 @@ export default addAuthMiddleware(
          */
 
         try {
-            const { nonce } = (await getNonceByUserIdAndTeamId(userId, teamId)) as NonceType;
+            const { id } = (await getNonceByUserIdAndTeamId(userId, teamId)) as NonceType;
+            const { nonce } = (await updateNonceById(id)) as NonceType;
             const token = createJWT(nonce, userId, teamId);
 
             return {
@@ -78,7 +80,7 @@ export default addAuthMiddleware(
             setResponseStatus(event, 500);
             console.log(error);
             return {
-                message: 'Something went wrong when retrieving your auth token.',
+                message: 'Something went wrong when regenerating your auth token.',
                 error
             };
         }

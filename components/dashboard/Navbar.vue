@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 import { useMembershipStore } from '~/stores/membership';
 import { storeToRefs } from 'pinia';
 import { useI18n } from 'vue-i18n';
@@ -11,10 +11,15 @@ export default defineComponent({
         const { t } = useI18n();
         const membershipStore = useMembershipStore();
         const subscriptionStore = useSubscriptionStore();
-        const { ownedTeams, isTeamServiceAccount, isPersonalServiceAccount } =
+        const { ownedTeams, serviceAccount, isTeamServiceAccount, isPersonalServiceAccount } =
             storeToRefs(membershipStore);
         const { hasSubscription } = storeToRefs(subscriptionStore);
         const { routes } = useServiceAccountRoutes();
+        const team = computed(() => membershipStore.teamById(serviceAccount.value as string));
+
+        const canAccessSubscriptionRoutes = computed(() => {
+            return isPersonalServiceAccount.value ? hasSubscription.value : team.value?.active;
+        });
 
         return {
             t,
@@ -22,7 +27,8 @@ export default defineComponent({
             ownedTeams,
             isTeamServiceAccount,
             isPersonalServiceAccount,
-            hasSubscription
+            hasSubscription,
+            canAccessSubscriptionRoutes
         };
     }
 });
@@ -33,10 +39,10 @@ export default defineComponent({
             <INav>
                 <FormsTeamSelect />
                 <INavItem :to="routes['/']"> {{ t('pages.dashboard.navigation.home') }} </INavItem>
-                <INavItem :to="routes['/installation']">
+                <INavItem v-if="canAccessSubscriptionRoutes" :to="routes['/installation']">
                     {{ t(`pages.dashboard.navigation.installation`) }}
                 </INavItem>
-                <INavItem v-if="hasSubscription" :to="routes['/token']">
+                <INavItem v-if="canAccessSubscriptionRoutes" :to="routes['/token']">
                     {{ t('pages.dashboard.navigation.token') }}
                 </INavItem>
                 <INavItem v-if="isTeamServiceAccount" :to="routes['/team']">

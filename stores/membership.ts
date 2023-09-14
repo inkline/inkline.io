@@ -6,6 +6,7 @@ import { useAuthStore } from '~/stores/auth';
 import { SERVICE_ACCOUNT } from '~/constants';
 import { Ref } from 'vue/dist/vue';
 import { TeamsGetResponse } from '~/types';
+import { updateMembership } from '~/api/teams';
 
 export const useMembershipStore = defineStore('membership', () => {
     const serviceAccount = ref<string | null>();
@@ -40,6 +41,13 @@ export const useMembershipStore = defineStore('membership', () => {
             isTeamOwner(serviceAccount.value as string)
     );
 
+    const invitesWithTeam = computed<Array<MembershipType & { teamName: string }>>(() => {
+        return invites.value.map((invite) => ({
+            ...invite,
+            teamName: teamById(invite.teamId)?.name || 'Unknown'
+        }));
+    });
+
     function isTeamOwner(teamId: string) {
         return teamById(teamId)?.ownerId === useAuthStore().currentUserId;
     }
@@ -48,15 +56,15 @@ export const useMembershipStore = defineStore('membership', () => {
         return membershipById(membershipId)?.userId === useAuthStore().currentUserId;
     }
 
-    function membershipById(id: string) {
+    function membershipById(id: string): MembershipType | undefined {
         return memberships.value.find((team) => team.id === id);
     }
 
-    function membershipsByTeamId(teamId: string) {
+    function membershipsByTeamId(teamId: string): MembershipType[] {
         return memberships.value.filter((membership) => membership.teamId === teamId);
     }
 
-    function teamById(id: string) {
+    function teamById(id: string): TeamType | undefined {
         return teams.value.find((team) => team.id === id);
     }
 
@@ -69,6 +77,7 @@ export const useMembershipStore = defineStore('membership', () => {
 
         data.value.teams.forEach((team) => addTeam(team));
         data.value.memberships.forEach((membership) => addMembership(membership));
+        data.value.invites.forEach((invite) => addInvite(invite));
 
         return data;
     }
@@ -94,7 +103,7 @@ export const useMembershipStore = defineStore('membership', () => {
     async function updateTeam(id: string, payload: { name: string; members: string[] }) {
         const data = await teamsApi.updateTeam(id, payload);
 
-        memberships.value = memberships.value.filter((membership) => membership.teamId === id);
+        memberships.value = memberships.value.filter((membership) => membership.teamId !== id);
         addTeam(data.team);
         data.memberships.forEach((membership) => addMembership(membership));
 
@@ -170,6 +179,25 @@ export const useMembershipStore = defineStore('membership', () => {
         }
     }
 
+    function removeInvite(id: string) {
+        invites.value = invites.value.filter((invite) => invite.id !== id);
+    }
+
+    async function acceptInvite(id: string) {
+        const { membership } = await updateMembership(id, { accept: true });
+
+        removeInvite(id);
+        addMembership(membership);
+
+        return membership;
+    }
+
+    async function declineInvite(id: string) {
+        await updateMembership(id, { accept: false });
+
+        removeInvite(id);
+    }
+
     return {
         getTeam,
         getTeams,
@@ -190,6 +218,9 @@ export const useMembershipStore = defineStore('membership', () => {
         teamById,
         createTeam,
         updateTeam,
-        deleteTeam
+        deleteTeam,
+        invitesWithTeam,
+        acceptInvite,
+        declineInvite
     };
 });

@@ -13,9 +13,10 @@ const { t } = useI18n();
                     </template>
                     <template #description>
                         {{ t('pages.checkout.success.description') }}
-                        <div class="_margin-top:2">
-                            <IButton size="lg" color="primary" to="/app"> Get started </IButton>
-                        </div>
+                        <br />
+                        <IButton class="_margin-top:2" size="lg" color="primary" to="/app">
+                            Get started
+                        </IButton>
                     </template>
                 </SectionsComponentsHeader>
             </IColumn>

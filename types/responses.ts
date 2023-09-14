@@ -3,6 +3,12 @@ import type { User } from '@auth0/auth0-vue';
 
 export type UserType = User;
 
+export type FirebaseUserType = {
+    id: UserType['sub'];
+    email: UserType['email'];
+    stripeCustomerId: UserType['user_metadata']['stripe_customer_id'];
+};
+
 export interface SubscriptionDataEntryType {
     id: string;
     price: string;
@@ -43,6 +49,7 @@ export interface TeamType {
     id: string;
     name: string;
     ownerId: UserType['id'];
+    active?: boolean;
 }
 
 export interface NonceType {
@@ -75,6 +82,14 @@ export type TeamGetResponse = {
 export type TeamDeleteResponse = {};
 export type TeamsEstimatePostResponse = ProductPriceType & { quantity_diff: number };
 
+export type MembershipPutResponse = {
+    membership?: MembershipType;
+};
+
 export type TokenGetResponse = {
+    token: string;
+};
+
+export type TokenPostResponse = {
     token: string;
 };

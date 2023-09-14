@@ -63,6 +63,21 @@ export async function getMembershipsByTeamId(teamId: string) {
     return mapFirebaseQuerySnapshotToArray<MembershipType>(membershipsSnapshot);
 }
 
+export async function updateMembershipById(
+    membershipId: string,
+    payload: {
+        userId: string;
+        email: string;
+    }
+) {
+    const membershipRef = firebase.firestore.collection('memberships');
+    const membershipDoc = membershipRef.doc(membershipId);
+
+    Logger.log('Updating membership: ', payload);
+
+    return membershipDoc.update(payload);
+}
+
 export async function deleteMembershipById(membershipId: string) {
     const membershipRef = firebase.firestore.collection('memberships');
     const membershipDoc = membershipRef.doc(membershipId);

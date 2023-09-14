@@ -138,7 +138,7 @@ export default {
                 },
                 pro: {
                     title: 'Pro',
-                    action: 'Try for free'
+                    action: 'Subscribe'
                 },
                 enterprise: {
                     title: 'Enterprise',
@@ -180,10 +180,18 @@ export default {
             title: 'Get started',
             description: "We're super humbled to have you here. Let’s get you set up!",
             upsell: {
-                title: 'Ready to take your design system to the next level?',
-                description:
-                    'Upgrade to Inkline Pro and access exclusive features designed to supercharge your Front End development workflow. Get started today and watch your productivity skyrocket!',
-                button: 'Upgrade to Pro'
+                owner: {
+                    title: 'Ready to take your design system to the next level?',
+                    description:
+                        'Upgrade to Inkline Pro and access exclusive features designed to supercharge your Front End development workflow. Get started today and watch your productivity skyrocket!',
+                    button: 'Upgrade to Pro'
+                },
+                member: {
+                    title: 'Ready to take your design system to the next level?',
+                    description:
+                        'Ask your team owner to upgrade to Inkline Pro and access exclusive features designed to supercharge your Front End development workflow. Get started today and watch your productivity skyrocket!',
+                    button: 'Upgrade to Pro'
+                }
             },
             navigation: {
                 home: 'Home',
@@ -245,6 +253,16 @@ export default {
                         'The token is bound to your account and should never be shared with anyone.'
                 }
             },
+            regenerateConfirm: {
+                title: 'Regenerate auth token',
+                message: 'Are you sure you want to regenerate your auth token?',
+                success: {
+                    title: 'Your auth token has been regenerated'
+                },
+                error: {
+                    title: 'Failed to regenerate auth token'
+                }
+            },
             needHelp: {
                 title: 'Need help?',
                 description: 'If you have any questions or run into issues, please',
@@ -267,6 +285,14 @@ export default {
                     title: 'Your team has been updated'
                 }
             },
+            delete: {
+                title: 'Delete Team',
+                message: 'Are you sure you want to delete the team? This action cannot be undone.',
+                confirmButtonText: 'Delete',
+                success: {
+                    title: 'Your team has been deleted'
+                }
+            },
             index: {
                 description: {
                     owner: "Each team member is able to access an auth token based on their email address and the team's subscription.",
@@ -275,6 +301,18 @@ export default {
                 dropdown: {
                     edit: 'Edit team',
                     delete: 'Delete team'
+                }
+            },
+            invite: {
+                card: {
+                    title: 'You have been invited to join {team}.',
+                    accept: 'Join team',
+                    decline: 'Decline',
+                    declineConfirm: {
+                        title: 'Decline team invite',
+                        message: 'Are you sure you want to decline the team invite?',
+                        confirmButtonText: 'Decline'
+                    }
                 }
             }
         },

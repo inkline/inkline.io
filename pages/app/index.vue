@@ -29,6 +29,7 @@ export default defineComponent({
 <template>
     <div id="dashboard-page">
         <SectionsComponentsSection color="transparent" size="md">
+            <DashboardInvites />
             <IRow v-if="hasSubscriptions || hasTeams">
                 <IColumn>
                     <ILayout>

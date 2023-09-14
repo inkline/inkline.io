@@ -5,6 +5,8 @@ import {
 } from '~/server/utilities';
 import { TeamType } from '~/types';
 import { Logger } from '@grozav/logger';
+import { customerHasActiveSubscription } from '~/server/services/subscriptions';
+import { getUserById } from '~/server/services/users';
 
 export async function createTeam(payload: { name: string; ownerId: string }) {
     const teamsRef = firebase.firestore.collection('teams');
@@ -26,6 +28,21 @@ export async function getTeamById(teamId: string) {
     }
 
     return mapFirebaseDocumentSnapshotToObject<TeamType>(teamSnapshot);
+}
+
+export async function getTeamWithStatusById(teamId: string) {
+    const team = await getTeamById(teamId);
+
+    if (team) {
+        const teamOwner = await getUserById(team.ownerId);
+        if (teamOwner) {
+            team.active = await customerHasActiveSubscription(teamOwner.stripeCustomerId);
+        } else {
+            team.active = false;
+        }
+    }
+
+    return team;
 }
 
 export async function getTeamsOwnedByUser(userId: string) {

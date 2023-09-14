@@ -3,7 +3,8 @@ import {
     updateSubscription,
     createMembership,
     createTeam,
-    customerHasActiveSubscription
+    customerHasActiveSubscription,
+    createUserIfNotExists
 } from '~/server/services';
 import { defineEventHandler, setResponseStatus } from 'h3';
 
@@ -74,6 +75,10 @@ export default addAuthMiddleware(
 
                 await updateSubscription(userId, stripeCustomerId);
             }
+
+            // Create user if not exists, to avoid spamming GET queries to auth0
+            await createUserIfNotExists({ userId, stripeCustomerId });
+            team.active = true;
 
             // @TODO Send email notifications to members
 

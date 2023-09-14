@@ -2,13 +2,16 @@ import { stripe } from '~/server/utilities';
 import { getTeamsOwnedByUser } from '~/server/services/teams';
 import { getMembershipsByTeamId } from '~/server/services/memberships';
 import { Logger } from '@grozav/logger';
+import { Stripe } from 'stripe';
 
 export async function customerHasActiveSubscription(stripeCustomerId: string) {
-    const subscriptions = await stripe.subscriptions.list({
-        customer: stripeCustomerId
-    });
+    const subscriptions = await getSubscriptionsByCustomerId(stripeCustomerId);
 
-    return subscriptions.data.some((subscription) => subscription.status === 'active');
+    return hasActiveSubscriptions(subscriptions);
+}
+
+export function hasActiveSubscriptions(subscriptions: Stripe.Subscription[]) {
+    return subscriptions.some((subscription) => subscription.status === 'active');
 }
 
 export async function getSeats(userId: string, options: { exclude?: string[] } = {}) {

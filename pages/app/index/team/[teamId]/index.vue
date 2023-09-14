@@ -14,7 +14,8 @@ export default defineComponent({
         const { t } = useI18n();
 
         const { hasSubscription } = storeToRefs(subscriptionStore);
-        const { isPersonalServiceAccount, serviceAccount } = storeToRefs(membershipStore);
+        const { isPersonalServiceAccount, isServiceAccountOwner, serviceAccount } =
+            storeToRefs(membershipStore);
         const team = computed(() => membershipStore.teamById(serviceAccount.value as string));
 
         onMounted(() => {
@@ -23,12 +24,12 @@ export default defineComponent({
             }
         });
 
-        return { t, team, hasSubscription, serviceAccount };
+        return { t, team, hasSubscription, isServiceAccountOwner, serviceAccount };
     }
 });
 </script>
 <template>
-    <LayoutsCards>
+    <LayoutsCards v-if="team?.active">
         <ICard>
             <h1>{{ t(`pages.dashboard.title`) }}</h1>
             <p class="_margin-bottom:0">
@@ -37,4 +38,6 @@ export default defineComponent({
         </ICard>
         <DashboardOnboarding />
     </LayoutsCards>
+    <DashboardUpsell v-else-if="isServiceAccountOwner" />
+    <DashboardUpsellMember v-else />
 </template>

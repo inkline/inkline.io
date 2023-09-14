@@ -1,16 +1,21 @@
 <script lang="ts">
-import { computed, defineComponent, onMounted } from 'vue';
+import { computed, defineComponent, h, onMounted } from 'vue';
 import { useMembershipStore } from '~/stores/membership';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { storeToRefs } from 'pinia';
-import { useServiceAccountRoutes } from '~/composables';
+import { useDeletePrompt, useServiceAccountRoutes } from '~/composables';
+import { useAuthStore } from '~/stores';
+import { useToast } from '@inkline/inkline';
 
 export default defineComponent({
     async setup() {
         const { t } = useI18n();
         const router = useRouter();
+        const toast = useToast();
+        const authStore = useAuthStore();
         const membershipStore = useMembershipStore();
+        const deletePrompt = useDeletePrompt();
         const { routes } = useServiceAccountRoutes();
 
         const team = computed(() =>
@@ -30,8 +35,26 @@ export default defineComponent({
             membershipStore.getTeam(membershipStore.serviceAccount as string);
         });
 
-        function onDelete() {
-            membershipStore.deleteTeam(membershipStore.serviceAccount as string);
+        async function onDelete() {
+            try {
+                const schema = await deletePrompt.show({
+                    title: t('pages.team.delete.title'),
+                    message: t('pages.team.delete.message'),
+                    confirmButtonText: t('pages.team.delete.confirmButtonText'),
+                    value: team.value.name
+                });
+
+                if (schema.input.value === team.value.name) {
+                    await membershipStore.deleteTeam(membershipStore.serviceAccount as string);
+                    await router.push('/app');
+                    await membershipStore.setServiceAccount(authStore.currentUserId!);
+
+                    toast.show({
+                        message: t('pages.team.delete.success.title'),
+                        color: 'success'
+                    });
+                }
+            } catch (e) {}
         }
 
         return { t, isServiceAccountOwner, team, memberships, routes, onDelete };

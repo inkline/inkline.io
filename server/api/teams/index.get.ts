@@ -1,7 +1,11 @@
 import { addAuthMiddleware } from '~/server/utilities';
 import { defineEventHandler, setResponseStatus } from 'h3';
 import type { TeamsGetResponse, TeamType } from '~/types';
-import { getMembershipsByEmail, getMembershipsByUserId, getTeamById } from '~/server/services';
+import {
+    getMembershipsByEmail,
+    getMembershipsByUserId,
+    getTeamWithStatusById
+} from '~/server/services';
 
 export default addAuthMiddleware(
     defineEventHandler(async (event) => {
@@ -18,16 +22,20 @@ export default addAuthMiddleware(
             };
 
             for (const membership of memberships) {
-                const team = (await getTeamById(membership.teamId)) as TeamType;
+                const team = await getTeamWithStatusById(membership.teamId);
+                if (team) {
+                    response.teams.push(team);
+                }
 
-                response.teams.push(team);
                 response.memberships.push(membership);
             }
 
             for (const invite of invites) {
-                const team = (await getTeamById(invite.teamId)) as TeamType;
+                const team = await getTeamWithStatusById(invite.teamId);
+                if (team) {
+                    response.teams.push(team);
+                }
 
-                response.teams.push(team);
                 response.invites.push(invite);
             }
 

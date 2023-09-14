@@ -177,8 +177,8 @@ export default defineComponent({
                         {{ page.title }}
                     </INavItem>
                 </template>
-                <FeatureFlag v-if="!isAuthenticated" name="auth">
-                    <INav>
+                <FeatureFlag name="auth">
+                    <INav v-if="!isAuthenticated">
                         <INavItem class="_cursor:pointer" @click="login">
                             {{ t('navigation.login') }}
                         </INavItem>

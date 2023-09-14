@@ -5,9 +5,14 @@ import {
 } from '~/server/utilities';
 import type { NonceType } from '~/types';
 import { Logger } from '@grozav/logger';
+import jwt from 'jsonwebtoken';
+
+function getRandomNonce(): string {
+    return `${new Date().getTime()}-${Math.random().toString(36).substring(2, 15)}`;
+}
 
 export async function createNonce(userId: string, teamId?: string) {
-    const nonce = `${new Date().getTime()}-${Math.random().toString(36).substring(2, 15)}`;
+    const nonce = getRandomNonce();
     const noncesRef = firebase.firestore.collection('nonces');
     const nonceDoc = await noncesRef.add({
         nonce,
@@ -22,7 +27,7 @@ export async function createNonce(userId: string, teamId?: string) {
 }
 
 export async function updateNonceById(nonceId: string) {
-    const nonce = `${new Date().getTime()}-${Math.random().toString(36).substring(2, 15)}`;
+    const nonce = getRandomNonce();
     const noncesRef = firebase.firestore.collection('nonces');
     const nonceDoc = noncesRef.doc(nonceId);
 
@@ -47,4 +52,15 @@ export async function getNonceByUserIdAndTeamId(userId: string, teamId?: string)
     }
 
     return createNonce(userId, teamId);
+}
+
+export function createJWT(nonce: string, userId: string, teamId?: string) {
+    const secret = process.env.NUXT_VERDACCIO_SECRET_KEY as string;
+    const payload = {
+        userId,
+        nonce,
+        ...(teamId ? { teamId } : {})
+    };
+
+    return jwt.sign(payload, secret, {});
 }

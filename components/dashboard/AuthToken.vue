@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { getToken } from '~/api';
+import { getToken, regenerateToken } from '~/api';
 import { useMembershipStore } from '~/stores';
-import { useToast } from '@inkline/inkline';
+import { useModal, useToast } from '@inkline/inkline';
 import { useServiceAccountRoutes } from '~/composables';
 import { useI18n } from 'vue-i18n';
 
@@ -15,6 +15,7 @@ const props = defineProps({
 
 const membershipStore = useMembershipStore();
 const toast = useToast();
+const modal = useModal();
 const { t } = useI18n();
 const { routes } = useServiceAccountRoutes();
 
@@ -32,6 +33,31 @@ onMounted(async () => {
         });
     }
 });
+
+async function onRegenerateToken() {
+    try {
+        const confirmed = await modal.confirm({
+            title: t('pages.token.regenerateConfirm.title'),
+            message: t('pages.token.regenerateConfirm.message')
+        });
+
+        if (confirmed) {
+            const data = await regenerateToken(props.teamId ? { teamId: props.teamId } : {});
+            token.value = data.token;
+
+            toast.show({
+                message: t('pages.token.regenerateConfirm.success.title'),
+                color: 'success'
+            });
+        }
+    } catch (error) {
+        toast.show({
+            title: t('pages.token.regenerateConfirm.error.title'),
+            message: error.message,
+            color: 'danger'
+        });
+    }
+}
 </script>
 <template>
     <LayoutsCards>
@@ -49,7 +75,7 @@ onMounted(async () => {
                         :placeholder="t('pages.token.fetching')"
                         class="_flex:1 _margin-right:1"
                     />
-                    <IButton>
+                    <IButton @click="onRegenerateToken">
                         <Icon name="mdi:sync" size="18" class="_margin-right:1/2" />
                         {{ t('pages.token.regenerate') }}
                     </IButton>

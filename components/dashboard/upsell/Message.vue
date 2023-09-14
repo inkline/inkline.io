@@ -1,8 +1,14 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
+    props: {
+        context: {
+            type: String as PropType<'owner' | 'member'>,
+            default: 'owner'
+        }
+    },
     async setup() {
         const { t } = useI18n();
 
@@ -21,13 +27,19 @@ export default defineComponent({
             class="_margin-bottom:2"
         />
         <h2>
-            {{ t('pages.dashboard.upsell.title') }}
+            {{ t(`pages.dashboard.upsell.${context}.title`) }}
         </h2>
         <p>
-            {{ t('pages.dashboard.upsell.description') }}
+            {{ t(`pages.dashboard.upsell.${context}.description`) }}
         </p>
-        <IButton to="/pricing" size="lg" color="primary" class="_margin-top:1">
-            {{ t('pages.dashboard.upsell.button') }}
+        <IButton
+            v-if="context === 'owner'"
+            to="/pricing"
+            size="lg"
+            color="primary"
+            class="_margin-top:1"
+        >
+            {{ t(`pages.dashboard.upsell.${context}.button`) }}
         </IButton>
     </div>
 </template>

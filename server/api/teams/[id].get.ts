@@ -4,12 +4,13 @@ import type { TeamGetResponse } from '~/types';
 import {
     getMembershipByUserIdAndTeamId,
     getMembershipsByTeamId,
-    getTeamById
+    getTeamWithStatusById
 } from '~/server/services';
 
 export default addAuthMiddleware(
     defineEventHandler(async (event) => {
         const { sub: userId } = event.context.auth.payload;
+        const stripeCustomerId = event.context.auth.payload.stripe_customer_id;
         const teamId = event.context.params?.id;
 
         /**
@@ -24,7 +25,7 @@ export default addAuthMiddleware(
         }
 
         try {
-            const team = await getTeamById(teamId);
+            const team = await getTeamWithStatusById(teamId);
 
             if (!team) {
                 setResponseStatus(event, 404);

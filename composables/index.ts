@@ -1,3 +1,4 @@
+export * from './useDeletePrompt';
 export * from './useDesignToken';
 export * from './useErrorHandler';
 export * from './useFeatureFlag';
