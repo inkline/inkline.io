@@ -7,7 +7,7 @@ export default defineNuxtConfig({
      */
     modules: [
         '@nuxt/content',
-        '@nuxt/image-edge',
+        '@nuxt/image',
         '@inkline/plugin/nuxt',
         '@nuxtjs/i18n',
         '@vite-pwa/nuxt',
@@ -181,12 +181,12 @@ export default defineNuxtConfig({
             ]
         }
     },
+
     /**
-     * @docs https://nuxt.com/docs/guide/going-further/runtime-config
+     * @docs https://nuxtseo.com/site-config/getting-started/how-it-works
      */
-    runtimeConfig: {
-        public: {
-            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.inkline.io'
-        }
-    }
+    site: {
+        // process.env.NUXT_PUBLIC_SITE_URL will take precedence
+        url: 'https://www.inkline.io'
+    },
 });
