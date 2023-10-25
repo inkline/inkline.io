@@ -3,7 +3,7 @@ import { computed, defineComponent, inject, PropType } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 import { CollapsibleNavigationPage, NavigationPage } from '~/types';
-import { NavbarKey } from '@inkline/inkline/components/INavbar/mixin';
+import { NavbarKey } from '@inkline/inkline/constants';
 
 export default defineComponent({
     props: {

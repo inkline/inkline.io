@@ -7,10 +7,20 @@ description:  The validation schema defines the form input fields, groups and ho
 ## The validation schema defines the form input fields, groups and how they work together.
 
 From the [Overview](/docs/forms/validation) page we've learned:
-- The schema object provides form validation status fields such as `valid`, `invalid`, `touched`, `untouched`, `dirty`, `pristine` and `errors`
+- The schema object provides form validation state fields such as `valid`, `invalid`, `touched`, `untouched`, `dirty`, `pristine` and `errors`
 - The form component handles field value changes using the `v-model` directive
 - Each field name inside the defined schema connects to an input using the `name` property in your template
 - Using the `validators` field, you can specify an array of validators to be used on the field input
+
+### Form Validation State
+All form schema parts (root, groups, and fields) contain a very useful validation state, computed automatically. These following schema fields will be set to `true` when:
+
+- `valid` - the input value is correct
+- `invalid` - the input value is not correct
+- `touched` - the input has been touched and blurred
+- `untouched` - the input has not been touched
+- `dirty` - the input value has been changed
+- `pristine` - the input value has not been changed
 
 ### Default Field Value
 Providing a default value for a validation schema field can be done using the `value` field:
