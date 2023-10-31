@@ -1,9 +1,9 @@
 ---
-title: Utilities - Position - Inkline
+title: CSS Utility Classes - Position - Inkline
 description: Use position utilities for quickly setting the position of an element.
 ---
 
-# Position Utilities
+:ContentHeading{ title="Position" subtitle="CSS Utility Classes" }
 ## Use position utilities for quickly setting the position of an element.
 
 The most common positioning classes are available:

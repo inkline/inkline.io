@@ -1,9 +1,9 @@
 ---
-title: Utilities - Flex - Inkline
+title: CSS Utility Classes - Flex - Inkline
 description: Use flexbox utilities to modify the layout, alignment, and sizing of components and more. 
 ---
 
-# Flex Utilities
+:ContentHeading{ title="Flex" subtitle="CSS Utility Classes" }
 ## Use flexbox utilities to modify the layout, alignment, and sizing of components and more. 
 
 Apply `display: flex` using CSS or the `_display:flex` helper to create a flexbox container and transform direct children elements into flex items. 

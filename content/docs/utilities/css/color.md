@@ -1,9 +1,9 @@
 ---
-title: Utilities - Color - Inkline
+title: CSS Utility Classes - Color - Inkline
 description: Inkline uses a beautiful, consistent color scheme across the framework. 
 ---
 
-# Color Utilities
+:ContentHeading{ title="Color" subtitle="CSS Utility Classes" }
 ## Inkline uses a beautiful, consistent color scheme across the framework. 
 
 In Inkline, color utility classes provide an easy way to apply predefined backgrounds and text colors to various elements throughout your application. These utility classes are based on the color values defined in your Inkline configuration file, allowing you to maintain a consistent color scheme across your project. 

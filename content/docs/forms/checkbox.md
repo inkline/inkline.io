@@ -1,6 +1,6 @@
 ---
 title: Checkbox - Inkline
-description: Checkbox inputs allow the user to select multiple options from a set. 
+description: Checkbox inputs allow the user to set a true or false value. 
 ---
 
 # Checkbox
@@ -68,49 +68,6 @@ You're able to use the `size` property to control the size of your checkbox, usi
 <!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/size-variants.raw.vue" lang="vue"} -->
 ::
 
-### Group Example
-Using the `ICheckbox` component together with a `ICheckboxGroup` allows you to control multiple selected values using a single binding.
-
-::ContentTabs
-#preview
-:ContentPreview{src="/components/ICheckbox/examples/group"}
-#vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group.raw.vue" lang="vue"} -->
-::
-
-### Group Disabled State
-You can disable an entire checkbox group using the `disabled` property.
-
-::ContentTabs
-#preview
-:ContentPreview{src="/components/ICheckbox/examples/group-disabled"}
-#vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-disabled.raw.vue" lang="vue"} -->
-::
-
-
-### Group Color Variants
-You can use the `color` property to set a `light` or `dark` color for your checkboxes.
-
-::ContentTabs
-#preview
-:ContentPreview{src="/components/ICheckbox/examples/group-color-variants"}
-#vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-color-variants.raw.vue" lang="vue"} -->
-::
-
-### Group Size Variants
-You're able to use the `size` property to control the size of your checkbox group, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`. 
-
-The chosen size will be applied to all of its child inputs.
-
-::ContentTabs
-#preview
-:ContentPreview{src="/components/ICheckbox/examples/group-size-variants"}
-#vue
-<!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/group-size-variants.raw.vue" lang="vue"} -->
-::
-
 ### Custom vs. Native
 Inkline uses a custom checkbox design by default. You can use the `native` property to use native browser checkbox indicators.
 
@@ -120,7 +77,6 @@ Inkline uses a custom checkbox design by default. You can use the `native` prope
 #vue
 <!-- Autodocs{src="@inkline/inkline/components/ICheckbox/examples/native.raw.vue" lang="vue"} -->
 ::
-
 
 ### Props
 ::ContentComponentProps{component="ICheckbox"}

@@ -1,9 +1,9 @@
 ---
-title: Utilities - Vertical Align - Inkline
+title: CSS Utility Classes - Vertical Align - Inkline
 description: Change the vertical alignment of inline, inline block, inline table, and table cell elements. 
 ---
 
-# Vertical Align Utilities
+:ContentHeading{ title="Vertical Align" subtitle="CSS Utility Classes" }
 ## Change the vertical alignment of inline, inline block, inline table, and table cell elements. 
 
 ### Text Alignment

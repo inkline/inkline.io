@@ -4,7 +4,7 @@ description: Install the Inkline Preset for UnoCSS in any Vite.js application.
 layout: docs
 ---
 
-# UnoCSS Preset Installation - Vite.js
+:ContentHeading{ title="Installation - Vite.js" subtitle="UnoCSS Preset" }
 ## Install the Inkline Preset for UnoCSS in any Vite.js application.
 
 ### Installation

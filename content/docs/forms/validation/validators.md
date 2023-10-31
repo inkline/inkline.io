@@ -3,7 +3,7 @@ title: Form Validation - Validators - Inkline
 description: Validators are configurable functions used to check whether an input value matches a specific criteria.
 ---
 
-# Form Validation - Validators
+:ContentHeading{ title="Validators" subtitle="Form Validation" }
 ## Validators are configurable functions used to check whether an input value matches a specific criteria.
 
 There are several validation options that can be used in the `validators` field:

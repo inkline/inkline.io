@@ -1,9 +1,9 @@
 ---
-title: Utilities - Overlay - Inkline
+title: CSS Utility Classes - Overlay - Inkline
 description: Make an element overlay its container by adding overlay utilities. 
 ---
 
-# Overlay Utilities
+:ContentHeading{ title="Overlay" subtitle="CSS Utility Classes" }
 ## Make an element overlay its container by adding overlay utilities. 
 
 Add the `_overlay` utility class to an element to make it cover the entire containing block. The containing block refers to a parent element with `position: relative;`.

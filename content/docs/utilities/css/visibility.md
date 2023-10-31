@@ -1,9 +1,9 @@
 ---
-title: Utilities - Visibility - Inkline
+title: CSS Utility Classes - Visibility - Inkline
 description: Control the visibility, with or without modifying the display of elements. 
 ---
 
-# Visibility Utilities
+:ContentHeading{ title="Visibility" subtitle="CSS Utility Classes" }
 ## Control the visibility, with or without modifying the display of elements. 
 
 Set element visibility using visibility utilities. Content will be hidden both visually and for assistive technology/screen reader users.

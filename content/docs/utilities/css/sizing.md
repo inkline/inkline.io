@@ -1,9 +1,9 @@
 ---
-title: Utilities - Sizing - Inkline
+title: CSS Utility Classes - Sizing - Inkline
 description: Make an element as wide or as tall as you need using width and height utilities. 
 ---
 
-# Sizing Utilities
+:ContentHeading{ title="Sizing" subtitle="CSS Utility Classes" }
 ## Make an element as wide or as tall as you need using width and height utilities. 
 
 Width and height utilities provide support for `25%`, `50%`, `75%`, `100%`, and auto by default.

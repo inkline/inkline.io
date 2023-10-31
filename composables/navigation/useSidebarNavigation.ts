@@ -288,7 +288,20 @@ export function useSidebarNavigation(): NavigationPage[] {
                 },
                 {
                     title: 'Checkbox',
-                    url: '/docs/forms/checkbox'
+                    children: [
+                        {
+                            title: 'Individual',
+                            url: '/docs/forms/checkbox'
+                        },
+                        {
+                            title: 'Group',
+                            url: '/docs/forms/checkbox-group'
+                        }
+                        // {
+                        //     title: 'Buttons',
+                        //     url: '/docs/forms/checkbox-buttons'
+                        // }
+                    ]
                 },
                 {
                     title: 'Input',
@@ -299,8 +312,18 @@ export function useSidebarNavigation(): NavigationPage[] {
                     url: '/docs/forms/number-input'
                 },
                 {
-                    title: 'Radio',
-                    url: '/docs/forms/radio'
+                    title: 'Radio Group',
+                    url: '/docs/forms/radio-group'
+                    // children: [
+                    //     {
+                    //         title: 'Group',
+                    //         url: '/docs/forms/radio-group'
+                    //     },
+                    //     {
+                    //         title: 'Buttons',
+                    //         url: '/docs/forms/radio-buttons'
+                    //     }
+                    // ]
                 },
                 {
                     title: 'Select',
@@ -328,9 +351,12 @@ export function useSidebarNavigation(): NavigationPage[] {
                 },
                 {
                     title: 'Form Validation',
-                    url: '/docs/forms/validation',
-                    index: true,
                     children: [
+                        {
+                            title: 'Overview',
+                            index: true,
+                            url: '/docs/forms/validation'
+                        },
                         {
                             title: 'Schema',
                             url: '/docs/forms/validation/schema'
@@ -366,68 +392,82 @@ export function useSidebarNavigation(): NavigationPage[] {
             active: /\/docs\/utilities(\/.+)?/,
             children: [
                 {
-                    title: 'Border',
-                    url: '/docs/utilities/border'
+                    title: 'CSS',
+                    children: [
+                        {
+                            title: 'Border',
+                            url: '/docs/utilities/css/border'
+                        },
+                        {
+                            title: 'Clearfix',
+                            url: '/docs/utilities/css/clearfix'
+                        },
+                        {
+                            title: 'Color',
+                            url: '/docs/utilities/css/color'
+                        },
+                        {
+                            title: 'Display',
+                            url: '/docs/utilities/css/display'
+                        },
+                        {
+                            title: 'Embed',
+                            url: '/docs/utilities/css/embed'
+                        },
+                        {
+                            title: 'Flex',
+                            url: '/docs/utilities/css/flex'
+                        },
+                        {
+                            title: 'Float',
+                            url: '/docs/utilities/css/float'
+                        },
+                        {
+                            title: 'Overflow',
+                            url: '/docs/utilities/css/overflow'
+                        },
+                        {
+                            title: 'Overlay',
+                            url: '/docs/utilities/css/overlay'
+                        },
+                        {
+                            title: 'Position',
+                            url: '/docs/utilities/css/position'
+                        },
+                        {
+                            title: 'Screen Reader',
+                            url: '/docs/utilities/css/screen-reader'
+                        },
+                        {
+                            title: 'Sizing',
+                            url: '/docs/utilities/css/sizing'
+                        },
+                        {
+                            title: 'Spacing',
+                            url: '/docs/utilities/css/spacing'
+                        },
+                        {
+                            title: 'Text',
+                            url: '/docs/utilities/css/text'
+                        },
+                        {
+                            title: 'Vertical Align',
+                            url: '/docs/utilities/css/vertical-align'
+                        },
+                        {
+                            title: 'Visibility',
+                            url: '/docs/utilities/css/visibility'
+                        }
+                    ]
                 },
                 {
-                    title: 'Clearfix',
-                    url: '/docs/utilities/clearfix'
-                },
-                {
-                    title: 'Color',
-                    url: '/docs/utilities/color'
-                },
-                {
-                    title: 'Display',
-                    url: '/docs/utilities/display'
-                },
-                {
-                    title: 'Embed',
-                    url: '/docs/utilities/embed'
-                },
-                {
-                    title: 'Flex',
-                    url: '/docs/utilities/flex'
-                },
-                {
-                    title: 'Float',
-                    url: '/docs/utilities/float'
-                },
-                {
-                    title: 'Overflow',
-                    url: '/docs/utilities/overflow'
-                },
-                {
-                    title: 'Overlay',
-                    url: '/docs/utilities/overlay'
-                },
-                {
-                    title: 'Position',
-                    url: '/docs/utilities/position'
-                },
-                {
-                    title: 'Screen Reader',
-                    url: '/docs/utilities/screen-reader'
-                },
-                {
-                    title: 'Sizing',
-                    url: '/docs/utilities/sizing'
-                },
-                {
-                    title: 'Spacing',
-                    url: '/docs/utilities/spacing'
-                },
-                {
-                    title: 'Text',
-                    url: '/docs/utilities/text'
-                },
-                {
-                    title: 'Vertical Align',
-                    url: '/docs/utilities/vertical-align'
-                },
-                {
-                    title: 'Visibility',
-                    url: '/docs/utilities/visibility'
+                    title: 'Components',
+                    children: [
+                        {
+                            title: 'Renderable',
+                            url: '/docs/utilities/components/renderable'
+                        }
+                    ]
                 }
             ]
         },
@@ -436,10 +476,13 @@ export function useSidebarNavigation(): NavigationPage[] {
             active: /\/docs\/add-ons(\/.+)?/,
             children: [
                 {
-                    title: 'Unocss Preset',
-                    url: '/docs/add-ons/unocss',
-                    index: true,
+                    title: 'UnoCSS Preset',
                     children: [
+                        {
+                            title: 'Overview',
+                            index: true,
+                            url: '/docs/add-ons/unocss'
+                        },
                         {
                             title: 'Vite.js',
                             url: '/docs/add-ons/unocss/vite',

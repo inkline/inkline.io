@@ -1,9 +1,9 @@
 ---
-title: Utilities - Border - Inkline
+title: CSS Utility Classes - Border - Inkline
 description: Use border utilities to quickly apply border styles to an element. Great for images, buttons, or any other element. 
 ---
 
-# Border Utilities
+:ContentHeading{ title="Border" subtitle="CSS Utility Classes" }
 ## Use border utilities to quickly apply border styles to an element. Great for images, buttons, or any other element.
 
 ### Adding Border

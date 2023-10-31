@@ -1,9 +1,9 @@
 ---
-title: Utilities - Text - Inkline
+title: CSS Utility Classes - Text - Inkline
 description: Use common text utilities to control alignment, wrapping, weight, and more. 
 ---
 
-# Text Utilities
+:ContentHeading{ title="Text" subtitle="CSS Utility Classes" }
 ## Use common text utilities to control alignment, wrapping, weight, and more. 
 
 ### Text Alignment

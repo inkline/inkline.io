@@ -1,9 +1,9 @@
 ---
-title: Utilities - Display - Inkline
+title: CSS Utility Classes - Display - Inkline
 description: Change the display style of components responsively with display utilities. 
 ---
 
-# Display Utilities
+:ContentHeading{ title="Display" subtitle="CSS Utility Classes" }
 ## Change the display style of components responsively with display utilities. 
 
 ### How it works

@@ -1,9 +1,9 @@
 ---
-title: Utilities - Spacing - Inkline
+title: CSS Utility Classes - Spacing - Inkline
 description: You can use a wide range of responsive margin and padding utility classes to modify an element’s appearance. 
 ---
 
-# Spacing Utilities
+:ContentHeading{ title="Spacing" subtitle="CSS Utility Classes" }
 ## You can use a wide range of responsive margin and padding Utilities to modify an element’s appearance. 
 
 The spacing utility classes are named using the following format:

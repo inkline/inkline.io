@@ -3,7 +3,7 @@ title: Form Validation - Methods - Inkline
 description: The form validation framework wouldn't be complete without dynamically added fields and groups.
 ---
 
-# Form Validation - Methods
+:ContentHeading{ title="Methods" subtitle="Form Validation" }
 ## The form validation framework wouldn't be complete without dynamically added fields and groups.
 
 Inkline provides a simple API for adding and removing fields.

@@ -1,9 +1,9 @@
 ---
-title: Utilities - Overflow - Inkline
+title: CSS Utility Classes - Overflow - Inkline
 description: You can use the overflow utilities for deciding how content overflows an element.
 ---
 
-# Overflow Utilities
+:ContentHeading{ title="Overflow" subtitle="CSS Utility Classes" }
 ## You can use the overflow utilities for deciding how content overflows an element.
 
 Overflow functionality is provided for two values by default, and they are not responsive.

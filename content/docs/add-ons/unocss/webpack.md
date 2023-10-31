@@ -4,7 +4,7 @@ description: Install the Inkline Preset for UnoCSS in any Webpack.js application
 layout: docs
 ---
 
-# UnoCSS Preset Installation - Webpack.js
+:ContentHeading{ title="Installation - Webpack.js" subtitle="UnoCSS Preset" }
 ## Install the Inkline Preset for UnoCSS in any Webpack.js application.
 
 ### Installation

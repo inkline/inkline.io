@@ -3,7 +3,7 @@ title: Form Validation - Schema - Inkline
 description:  The validation schema defines the form input fields, groups and how they work together.
 ---
 
-# Form Validation - Schema
+:ContentHeading{ title="Schema" subtitle="Form Validation" }
 ## The validation schema defines the form input fields, groups and how they work together.
 
 From the [Overview](/docs/forms/validation) page we've learned:

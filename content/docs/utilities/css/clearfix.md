@@ -1,9 +1,9 @@
 ---
-title: Utilities - Clearfix - Inkline
+title: CSS Utility Classes - Clearfix - Inkline
 description: Use the clearfix utility to clear floated content within a container. 
 ---
 
-# Clearfix Utilities
+:ContentHeading{ title="Clearfix" subtitle="CSS Utility Classes" }
 ## Use the clearfix utility to clear floated content within a container.
 
 You can easily clear floats by adding the clearfix utility class to the parent element.

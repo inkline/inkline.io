@@ -1,9 +1,9 @@
 ---
-title: Utilities - Embed - Inkline
+title: CSS Utility Classes - Embed - Inkline
 description: Create responsive video embeds by keeping the aspect ratio based on the parent element width. 
 ---
 
-# Embed Utilities
+:ContentHeading{ title="Embed" subtitle="CSS Utility Classes" }
 ## Create responsive video embeds by keeping the aspect ratio based on the parent element width. 
 
 ### Basic Example

@@ -1,9 +1,9 @@
 ---
-title: Utilities - Float - Inkline
+title: CSS Utility Classes - Float - Inkline
 description: You can use the float utility on any element, for any breakpoint. 
 ---
 
-# Float Utilities
+:ContentHeading{ title="Float" subtitle="CSS Utility Classes" }
 ## You can use the float utility on any element, for any breakpoint. 
 
 You can use the float utility classes to float an element to the left or right, or to disable floating, responsively. The utilities use the same viewport breakpoints as the grid system. 
