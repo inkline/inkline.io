@@ -6,7 +6,18 @@ description: Validators are configurable functions used to check whether an inpu
 :ContentHeading{ title="Validators" subtitle="Form Validation" }
 ## Validators are configurable functions used to check whether an input value matches a specific criteria.
 
-There are several validation options that can be used in the `validators` field:
+There are several validation options that can be used in the `validators` field of the form field schema. 
+
+```ts
+const { schema } = useForm<{ name: string; }>({
+    name: {
+        validators: [
+            { name: 'required' },
+            { name: 'minLength', value: 3 }
+        ]
+    }
+});
+```
 
 
 ### Alpha Validator

@@ -256,8 +256,8 @@ export function useSidebarNavigation(): NavigationPage[] {
             ]
         },
         {
-            title: 'Forms',
-            active: /\/docs\/forms(\/.+)?/,
+            title: 'Form Components',
+            active: /\/docs\/forms\/components(\/.+)?/,
             children: [
                 {
                     title: 'Autocomplete',
@@ -265,24 +265,24 @@ export function useSidebarNavigation(): NavigationPage[] {
                     children: [
                         {
                             title: 'Overview',
-                            url: '/docs/forms/autocomplete',
+                            url: '/docs/forms/components/autocomplete',
                             index: true
                         },
                         {
                             title: 'Pagination',
-                            url: '/docs/forms/autocomplete/pagination'
+                            url: '/docs/forms/components/autocomplete/pagination'
                         },
                         {
                             title: 'Filtering',
-                            url: '/docs/forms/autocomplete/filtering'
+                            url: '/docs/forms/components/autocomplete/filtering'
                         },
                         {
                             title: 'Rendering',
-                            url: '/docs/forms/autocomplete/rendering'
+                            url: '/docs/forms/components/autocomplete/rendering'
                         },
                         {
                             title: 'Advanced',
-                            url: '/docs/forms/autocomplete/advanced'
+                            url: '/docs/forms/components/autocomplete/advanced'
                         }
                     ]
                 },
@@ -291,85 +291,111 @@ export function useSidebarNavigation(): NavigationPage[] {
                     children: [
                         {
                             title: 'Individual',
-                            url: '/docs/forms/checkbox'
+                            url: '/docs/forms/components/checkbox'
                         },
                         {
                             title: 'Group',
-                            url: '/docs/forms/checkbox-group'
+                            url: '/docs/forms/components/checkbox-group'
                         }
                         // {
                         //     title: 'Buttons',
-                        //     url: '/docs/forms/checkbox-buttons'
+                        //     url: '/docs/forms/components/checkbox-buttons'
                         // }
                     ]
                 },
                 {
                     title: 'Input',
-                    url: '/docs/forms/input'
+                    url: '/docs/forms/components/input'
                 },
                 {
                     title: 'Number Input',
-                    url: '/docs/forms/number-input'
+                    url: '/docs/forms/components/number-input'
                 },
                 {
                     title: 'Radio Group',
-                    url: '/docs/forms/radio-group'
+                    url: '/docs/forms/components/radio-group'
                     // children: [
                     //     {
                     //         title: 'Group',
-                    //         url: '/docs/forms/radio-group'
+                    //         url: '/docs/forms/components/radio-group'
                     //     },
                     //     {
                     //         title: 'Buttons',
-                    //         url: '/docs/forms/radio-buttons'
+                    //         url: '/docs/forms/components/radio-buttons'
                     //     }
                     // ]
                 },
                 {
                     title: 'Select',
-                    url: '/docs/forms/select'
+                    url: '/docs/forms/components/select'
                 },
                 {
                     title: 'Textarea',
-                    url: '/docs/forms/textarea'
+                    url: '/docs/forms/components/textarea'
                 },
                 {
                     title: 'Toggle',
-                    url: '/docs/forms/toggle'
+                    url: '/docs/forms/components/toggle'
                 },
                 {
                     title: 'Form',
-                    url: '/docs/forms/form'
+                    url: '/docs/forms/components/form'
                 },
                 {
                     title: 'Form Group',
-                    url: '/docs/forms/form-group'
+                    url: '/docs/forms/components/form-group'
                 },
                 {
                     title: 'Form Label',
-                    url: '/docs/forms/form-label'
+                    url: '/docs/forms/components/form-label'
                 },
                 {
-                    title: 'Form Validation',
+                    title: 'Form Error',
+                    url: '/docs/forms/components/form-error'
+                }
+            ]
+        },
+        {
+            title: 'Form Validation',
+            active: /\/docs\/forms\/validation(\/.+)?/,
+            children: [
+                {
+                    title: 'Overview',
+                    index: true,
+                    url: '/docs/forms/validation'
+                },
+                {
+                    title: 'Schema',
                     children: [
                         {
                             title: 'Overview',
-                            index: true,
-                            url: '/docs/forms/validation'
-                        },
-                        {
-                            title: 'Schema',
                             url: '/docs/forms/validation/schema'
                         },
                         {
-                            title: 'Validators',
-                            url: '/docs/forms/validation/validators'
+                            title: 'Individual Fields',
+                            url: '/docs/forms/validation/schema/individual-fields'
                         },
                         {
-                            title: 'Methods',
-                            url: '/docs/forms/validation/methods'
+                            title: 'Grouped Fields',
+                            url: '/docs/forms/validation/schema/grouped-fields'
+                        },
+                        {
+                            title: 'Repeater Fields',
+                            url: '/docs/forms/validation/schema/repeater-fields'
                         }
                     ]
+                },
+                {
+                    title: 'Validators',
+                    url: '/docs/forms/validation/validators'
+                },
+                {
+                    title: 'Validation State',
+                    url: '/docs/forms/validation/state'
+                },
+                {
+                    title: 'Serialization',
+                    url: '/docs/forms/validation/serialization'
                 }
             ]
         },

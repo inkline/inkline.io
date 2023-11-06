@@ -50,7 +50,7 @@ Inkline provides a great User Interface, User Experience, and Developer Experien
         ::
     ::
     ::ContentColumn{ md="6" }
-        ::ContentFeatureCard{ to="/docs/forms/checkbox" title="Forms" icon="bi:ui-checks-grid" }
+        ::ContentFeatureCard{ to="/docs/forms/components/checkbox" title="Forms" icon="bi:ui-checks-grid" }
         Inputs, validation, and more
         ::
     ::

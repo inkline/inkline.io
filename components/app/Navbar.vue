@@ -8,7 +8,6 @@ import { off, on } from '@grozav/utils';
 import logoBlack from '~/assets/images/logo/logo-black.svg';
 import logoWhite from '~/assets/images/logo/logo-white.svg';
 import { useRoute } from 'vue-router';
-import { NavigationPage } from '~/types';
 
 export default defineComponent({
     props: {
