@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, PropType, toRef } from 'vue';
-import { useManifest } from '~/composables';
+import { useUtilsManifest } from '~/composables';
 import type { ComponentManifestProp } from '@inkline/inkline';
 
 export default defineComponent({
@@ -16,7 +16,7 @@ export default defineComponent({
     },
     setup(props) {
         const componentName = toRef(props, 'component');
-        const { manifest } = useManifest(componentName);
+        const { manifest } = useUtilsManifest(componentName);
 
         return {
             manifest

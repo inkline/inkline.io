@@ -25,7 +25,7 @@ It can take various types of input for rendering, ranging from primitives to ren
 
 Renderable props are rendered using a `IRenderResolver` component. The `IRenderResolver` component is used internally by many Inkline components to render their content. It can also be used directly to render any type of content.
 
-#### Examples
+#### Usage
 
 ##### Primitive
 
@@ -128,24 +128,5 @@ const ctx = ref({ name: 'Alex' });
 ```
 
 #### Props
-
-##### `render`
-**Type**: `number | boolean | string | LabelRenderFunction | Raw<Component>`
-
-**Default**: `''`
-
-The primitive or render function to render. It can accept either primitive types (String, Number, Boolean), a render function, or a Vue component.
-
-##### `ctx`
-**Type**: `Object`
-
-**Default**: `{}`
-
-The context object that is passed to the render function or used for string interpolation.
-
-##### `tag`
-**Type**: `String`
-
-**Default**: `undefined`
-
-The HTML tag to use for rendering primitives. If not specified, a span will be used.
+::ContentUtilityComponentProps{component="IRenderResolver"}
+::

@@ -1,10 +1,10 @@
 ---
 title: Radio Group - Inkline
-description: Radio inputs allow the user to select multiple options from a set. 
+description: Radio group inputs allow the user to select a single options from a set of options.
 ---
 
 # Radio Group
-## Radio group inputs allow the user to select multiple options from a set. 
+## Radio group inputs allow the user to select a single options from a set of options. 
 
 Using the `IRadioGroup` allows you to choose a value from multiple choices using a single model binding:
 
@@ -60,7 +60,6 @@ The `IRadioGroup` component accepts an array of objects as its `options` prop.
 export interface RadioGroupOption {
     id: string | number;
     label?: Renderable;
-    value?: FormValue;
     disabled?: boolean;
     readonly?: boolean;
     [key: string]: any;

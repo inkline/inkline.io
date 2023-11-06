@@ -1,7 +1,6 @@
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
+import { defineComponent, toRef } from 'vue';
 import { useManifest } from '~/composables';
-import { ConfigurationTableColumn } from '~/types';
 
 export default defineComponent({
     props: {
@@ -11,23 +10,16 @@ export default defineComponent({
         }
     },
     setup(props) {
-        const componentName = computed(() => props.component);
+        const componentName = toRef(props, 'component');
         const { manifest } = useManifest(componentName);
-        const componentEvents = computed(() => manifest.value?.events || []);
-
-        const columns = ref<ConfigurationTableColumn[]>([
-            { label: 'Event', key: 'name', type: 'code' },
-            { label: '', key: 'description' }
-        ]);
 
         return {
-            componentEvents,
-            columns
+            manifest
         };
     }
 });
 </script>
 
 <template>
-    <ConfigurationTable :rows="componentEvents" :columns="columns" />
+    <ConfigurationManifestEvents v-if="manifest" :manifest="manifest" />
 </template>

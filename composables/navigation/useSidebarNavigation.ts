@@ -296,11 +296,11 @@ export function useSidebarNavigation(): NavigationPage[] {
                         {
                             title: 'Group',
                             url: '/docs/forms/components/checkbox-group'
+                        },
+                        {
+                            title: 'Buttons',
+                            url: '/docs/forms/components/checkbox-buttons'
                         }
-                        // {
-                        //     title: 'Buttons',
-                        //     url: '/docs/forms/components/checkbox-buttons'
-                        // }
                     ]
                 },
                 {
@@ -313,17 +313,16 @@ export function useSidebarNavigation(): NavigationPage[] {
                 },
                 {
                     title: 'Radio Group',
-                    url: '/docs/forms/components/radio-group'
-                    // children: [
-                    //     {
-                    //         title: 'Group',
-                    //         url: '/docs/forms/components/radio-group'
-                    //     },
-                    //     {
-                    //         title: 'Buttons',
-                    //         url: '/docs/forms/components/radio-buttons'
-                    //     }
-                    // ]
+                    children: [
+                        {
+                            title: 'Group',
+                            url: '/docs/forms/components/radio-group'
+                        },
+                        {
+                            title: 'Buttons',
+                            url: '/docs/forms/components/radio-buttons'
+                        }
+                    ]
                 },
                 {
                     title: 'Select',

@@ -92,7 +92,7 @@ export default defineComponent({
 @import '@inkline/inkline/components/IButton/css/preview';
 @import '@inkline/inkline/components/IButtonGroup/css/preview';
 @import '@inkline/inkline/components/ICard/css/preview';
-@import '@inkline/inkline/components/ICard/css/preview';
+@import '@inkline/inkline/components/utils/ICheckableButtonGroup/css/preview';
 @import '@inkline/inkline/components/IContainer/css/preview';
 @import '@inkline/inkline/components/ICollapsible/css/preview';
 @import '@inkline/inkline/components/IDropdown/css/preview';
@@ -131,6 +131,7 @@ export default defineComponent({
     @extend %button-preview;
     @extend %button-group-preview;
     @extend %card-preview;
+    @extend %checkable-button-group-preview;
     @extend %collapsible-preview;
     @extend %dropdown-preview;
     @extend %hamburger-menu-preview;

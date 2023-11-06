@@ -68,7 +68,6 @@ The `ICheckboxGroup` component accepts an array of objects as its `options` prop
 export interface CheckboxGroupOption {
     id: string | number;
     label?: Renderable;
-    value?: FormValue;
     disabled?: boolean;
     readonly?: boolean;
     [key: string]: any;

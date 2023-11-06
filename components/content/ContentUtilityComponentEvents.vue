@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, toRef } from 'vue';
-import { useManifest } from '~/composables';
+import { useUtilsManifest } from '~/composables';
 
 export default defineComponent({
     props: {
@@ -11,7 +11,7 @@ export default defineComponent({
     },
     setup(props) {
         const componentName = toRef(props, 'component');
-        const { manifest } = useManifest(componentName);
+        const { manifest } = useUtilsManifest(componentName);
 
         return {
             manifest
@@ -21,5 +21,5 @@ export default defineComponent({
 </script>
 
 <template>
-    <ConfigurationManifestSlots v-if="manifest" :manifest="manifest" />
+    <ConfigurationManifestEvents v-if="manifest" :manifest="manifest" />
 </template>
