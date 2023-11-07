@@ -2,7 +2,7 @@
 import { defineComponent, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useForm } from '@inkline/inkline';
-import { subscribe } from '~/api';
+import { subscribe } from '~/utils/api';
 import { useErrorHandler } from '~/composables';
 
 export default defineComponent({
@@ -38,8 +38,8 @@ export default defineComponent({
                 try {
                     await subscribe(form.value.email.value, form.value.firstName.value);
                     status.value = 'success';
-                } catch (error: Error) {
-                    showError(error);
+                } catch (error) {
+                    showError(error as Error);
                     status.value = 'error';
                 } finally {
                     loading.value = false;
