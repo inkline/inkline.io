@@ -5,8 +5,8 @@ import { useI18n } from 'vue-i18n';
 import { useLocalePath } from 'vue-i18n-routing';
 import { useNavbarNavigation, useSidebarNavigation, useTelemetry } from '~/composables';
 import { off, on } from '@grozav/utils';
-import logoBlack from '~/assets/images/logo/logo-black.svg';
-import logoWhite from '~/assets/images/logo/logo-white.svg';
+import logoBlack from '~/public/assets/images/logo/logo-black.svg';
+import logoWhite from '~/public/assets/images/logo/logo-white.svg';
 import { useRoute } from 'vue-router';
 
 export default defineComponent({

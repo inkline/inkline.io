@@ -1,10 +1,10 @@
 <script lang="ts">
-import UIIcon from '~/assets/images/features/icon-ui.svg';
-import UXIcon from '~/assets/images/features/icon-ux.svg';
-import DXIcon from '~/assets/images/features/icon-dx.svg';
-import ModularIcon from '~/assets/images/features/icon-modular.svg';
-import CustomizableIcon from '~/assets/images/features/icon-customizable.svg';
-import OSAwardsIcon from '~/assets/images/features/icon-osawards.svg';
+import UIIcon from '~/public/assets/images/features/icon-ui.svg';
+import UXIcon from '~/public/assets/images/features/icon-ux.svg';
+import DXIcon from '~/public/assets/images/features/icon-dx.svg';
+import ModularIcon from '~/public/assets/images/features/icon-modular.svg';
+import CustomizableIcon from '~/public/assets/images/features/icon-customizable.svg';
+import OSAwardsIcon from '~/public/assets/images/features/icon-osawards.svg';
 
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';

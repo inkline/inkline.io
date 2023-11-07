@@ -23,7 +23,11 @@ export default defineComponent({
     <IContainer class="app-error">
         <IRow>
             <IColumn>
-                <NuxtImg class="image -fluid" src="/images/illustrations/404.svg" alt="Error 404" />
+                <NuxtImg
+                    class="image -fluid"
+                    src="/assets/images/illustrations/404.svg"
+                    alt="Error 404"
+                />
                 <h1 class="d5 _margin-top:1/2">
                     {{ t('errors.404.title') }}
                 </h1>

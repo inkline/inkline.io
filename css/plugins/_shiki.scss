@@ -1,3 +1,8 @@
-.shiki {
+.shiki,
+.configuration-table pre,
+#page > div >pre,
+.content-tabs .tab pre,
+.design-token-content pre,
+pre[class*="language-"] {
   --shiki-color-background: var(--code--background);
 }

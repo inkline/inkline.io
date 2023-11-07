@@ -7,8 +7,8 @@ const sponsors = [
         name: 'VueSchool',
         url: 'https://vueschool.io',
         image: {
-            light: '/images/sponsors/vueschool-light.png',
-            dark: '/images/sponsors/vueschool-dark.png',
+            light: '/assets/images/sponsors/vueschool-light.png',
+            dark: '/assets/images/sponsors/vueschool-dark.png',
             height: 60,
             width: 282
         }
@@ -17,8 +17,8 @@ const sponsors = [
         name: 'DigitalOcean',
         url: 'https://m.do.co/c/b3ab46156be7',
         image: {
-            light: '/images/sponsors/digitalocean-light.png',
-            dark: '/images/sponsors/digitalocean-dark.png',
+            light: '/assets/images/sponsors/digitalocean-light.png',
+            dark: '/assets/images/sponsors/digitalocean-dark.png',
             height: 60,
             width: 358
         }
@@ -27,8 +27,8 @@ const sponsors = [
         name: 'Icons8',
         url: 'https://icons8.com?ref=alexgrozav',
         image: {
-            light: '/images/sponsors/icons8-light.png',
-            dark: '/images/sponsors/icons8-dark.png',
+            light: '/assets/images/sponsors/icons8-light.png',
+            dark: '/assets/images/sponsors/icons8-dark.png',
             height: 60,
             width: 195
         }
@@ -47,8 +47,8 @@ const sponsors = [
         name: 'Nuxt',
         url: 'https://nuxtjs.org',
         image: {
-            light: '/images/sponsors/nuxt-light.png',
-            dark: '/images/sponsors/nuxt-dark.png',
+            light: '/assets/images/sponsors/nuxt-light.png',
+            dark: '/assets/images/sponsors/nuxt-dark.png',
             height: 60,
             width: 288
         }

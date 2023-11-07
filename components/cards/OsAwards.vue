@@ -1,7 +1,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import logoWhite from '~/assets/images/brands/osawards-white.svg';
-import logoBlack from '~/assets/images/brands/osawards-black.svg';
+import logoWhite from '~/public/assets/images/brands/osawards-white.svg';
+import logoBlack from '~/public/assets/images/brands/osawards-black.svg';
 import { useComponentColor } from '@inkline/inkline';
 
 const componentName = 'OsAwards';
