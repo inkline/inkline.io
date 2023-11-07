@@ -14,17 +14,17 @@ const today = new Date();
 const year = today.getFullYear();
 const seasonalThemes: SeasonalTheme[] = [
     {
-        image: '/images/header/index-christmas.svg',
+        image: '/assets/images/header/index-christmas.svg',
         from: new Date(year, 0, 1),
         to: new Date(year, 0, 10)
     },
     {
-        image: '/images/header/index-christmas.svg',
+        image: '/assets/images/header/index-christmas.svg',
         from: new Date(year, 11, 1),
         to: new Date(year, 11, 31)
     }
 ];
-const defaultImage = '/images/header/index.svg';
+const defaultImage = '/assets/images/header/index.svg';
 
 export default defineComponent({
     setup() {

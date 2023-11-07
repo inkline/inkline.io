@@ -17,7 +17,7 @@ export default defineComponent({
     <SectionsComponentsSection class="newsletter-section">
         <NuxtImg
             class="newsletter-image"
-            src="/images/illustrations/pro-preview.svg"
+            src="/assets/images/illustrations/pro-preview.svg"
             alt="Inkline Pro - Preview"
         />
         <IRow>

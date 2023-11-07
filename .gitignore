@@ -34,7 +34,6 @@ dist
 dist-ssr
 .vite-ssg-dist
 .vite-ssg-temp
-public/assets/images/blog
 
 # Generated
 src/components.d.ts
