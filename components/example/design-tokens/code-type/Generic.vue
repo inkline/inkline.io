@@ -13,6 +13,6 @@ export default defineComponent({
 
 <template>
     <div class="design-token-generic-code">
-        <pre><code><ExampleDesignTokensLine :token="token"/></code></pre>
+        <pre><code><ExampleDesignTokensLine :token="token" /></code></pre>
     </div>
 </template>

@@ -1,4 +1,5 @@
 <script lang="ts">
+/* eslint-disable vue/html-closing-bracket-newline */
 import { computed, defineComponent } from 'vue';
 import { useDesignToken } from '~/composables';
 

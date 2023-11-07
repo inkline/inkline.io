@@ -94,8 +94,23 @@ export default defineNuxtConfig({
     content: {
         documentDriven: false,
         highlight: {
-            theme: 'css-variables',
-            preload: ['diff', 'json', 'js', 'ts', 'css', 'scss', 'shell', 'html', 'md', 'yaml']
+            theme: {
+                default: 'github-light',
+                'dark-theme': 'github-dark'
+            },
+            preload: [
+                'diff',
+                'json',
+                'js',
+                'ts',
+                'css',
+                'scss',
+                'shell',
+                'html',
+                'md',
+                'yaml',
+                'vue'
+            ]
         }
     },
     /**
@@ -189,4 +204,12 @@ export default defineNuxtConfig({
         // process.env.NUXT_PUBLIC_SITE_URL will take precedence
         url: 'https://www.inkline.io'
     },
+    /**
+     * @docs https://nuxt.com/docs/api/nuxt-config#postcss
+     */
+    postcss: {
+        plugins: {
+            'postcss-preset-env': {}
+        }
+    }
 });

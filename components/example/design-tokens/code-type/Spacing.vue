@@ -1,4 +1,6 @@
 <script lang="ts">
+/* eslint-disable vue/html-closing-bracket-newline */
+
 import { computed, defineComponent } from 'vue';
 import { useDesignToken } from '~/composables/useDesignToken';
 import { sizeModifierDisplayName } from '~/utils';
@@ -37,26 +39,30 @@ export default defineComponent({
 <template>
     <div class="design-token-color-code">
         <pre v-if="isComposedToken"><code
-        ><ExampleDesignTokensLine
-            :token="`--${spacingToken}-top${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--${spacingToken}-top) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="`--${spacingToken}-right${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--${spacingToken}-right) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="`--${spacingToken}-bottom${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--${spacingToken}-bottom) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="`--${spacingToken}-left${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--${spacingToken}-left) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="token"
-            :value="`
+><ExampleDesignTokensLine
+    :token="`--${spacingToken}-top${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--${spacingToken}-top) * ${sizeDisplayName})` : ''"
+/>
+<ExampleDesignTokensLine
+    :token="`--${spacingToken}-right${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--${spacingToken}-right) * ${sizeDisplayName})` : ''"
+/>
+<ExampleDesignTokensLine
+    :token="`--${spacingToken}-bottom${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--${spacingToken}-bottom) * ${sizeDisplayName})` : ''"
+/>
+<ExampleDesignTokensLine
+    :token="`--${spacingToken}-left${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--${spacingToken}-left) * ${sizeDisplayName})` : ''"
+/>
+<ExampleDesignTokensLine
+    :token="token"
+    :value="`
     var(--${spacingToken}-top${ modifierName ? `-${modifierName}` : ''})
     var(--${spacingToken}-right${ modifierName ? `-${modifierName}` : ''})
     var(--${spacingToken}-bottom${ modifierName ? `-${modifierName}` : ''})
     var(--${spacingToken}-left${ modifierName ? `-${modifierName}` : ''})`"
-        /></code></pre>
+/></code></pre>
         <ExampleDesignTokensCodeTypeSizeMultiplier v-else-if="modifierName" :token="token" />
         <pre v-else><code><ExampleDesignTokensLine :token="token" /></code></pre>
     </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue';
-import { RouteLocation } from 'vue-router';
+import { computed, defineComponent } from 'vue';
+import type { PropType } from 'vue';
+import type { RouteLocation } from 'vue-router';
 import { useLocalePath } from 'vue-i18n-routing';
 import { useTelemetry } from '~/composables';
 

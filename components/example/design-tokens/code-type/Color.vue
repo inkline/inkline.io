@@ -1,4 +1,5 @@
 <script lang="ts">
+/* eslint-disable vue/html-closing-bracket-newline */
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -13,13 +14,14 @@ export default defineComponent({
 
 <template>
     <div class="design-token-color-code">
-        <pre><code><ExampleDesignTokensLine :token="`${token}-h`"
-        /><ExampleDesignTokensLine :token="`${token}-s`"
-        /><ExampleDesignTokensLine :token="`${token}-l`"
-        /><ExampleDesignTokensLine :token="`${token}-a`"
-        /><ExampleDesignTokensLine
-            :token="token"
-            :value="`hsla(
+        <pre><code
+><ExampleDesignTokensLine :token="`${token}-h`"
+/><ExampleDesignTokensLine :token="`${token}-s`"
+/><ExampleDesignTokensLine :token="`${token}-l`"
+/><ExampleDesignTokensLine :token="`${token}-a`"
+/><ExampleDesignTokensLine
+        :token="token"
+        :value="`hsla(
     var(${token}-h),
     var(${token}-s),
     var(${token}-l),

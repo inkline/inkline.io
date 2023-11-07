@@ -20,6 +20,10 @@ export default defineComponent({
         token: {
             type: String,
             default: ''
+        },
+        type: {
+            type: String,
+            default: ''
         }
     },
     setup(props) {
@@ -32,6 +36,10 @@ export default defineComponent({
         const { propertyName, modifierName, tokenType, cssVariable } = useDesignToken(token);
 
         const codeType = computed(() => {
+            if (props.type) {
+                return props.type;
+            }
+
             if (tokenType.value === 'generic' && modifierName.value) {
                 if (propertyName.value === 'size-multiplier') {
                     return 'pow-multiplier';
@@ -135,7 +143,7 @@ export default defineComponent({
                     <div v-if="$slots.default">
                         <slot />
                     </div>
-                    <div class="design-token-code" v-show="isActive.code">
+                    <div v-show="isActive.code" class="design-token-code">
                         <ExampleDesignTokensCode :type="codeType" :token="token" />
                     </div>
                     <div v-if="$slots.variants" v-show="isActive.variants">
@@ -162,7 +170,8 @@ export default defineComponent({
 
     .design-token-content {
         display: block;
-        flex: 1 1 100%;
+        flex: 1;
+        overflow: hidden;
 
         .design-token-header {
             display: flex;

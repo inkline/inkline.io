@@ -24,5 +24,5 @@ export default defineComponent({
 
 <template>
     <slot v-if="enabled" />
-    <slot name="fallback" v-else />
+    <slot v-else name="fallback" />
 </template>

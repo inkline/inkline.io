@@ -2,8 +2,6 @@
 import { defineComponent } from 'vue';
 import { useSidebarNavigation } from '~/composables';
 import { useI18n } from 'vue-i18n';
-import { useContentHead } from '#imports';
-import { useRoute } from 'vue-router';
 
 export default defineComponent({
     name: 'Docs',

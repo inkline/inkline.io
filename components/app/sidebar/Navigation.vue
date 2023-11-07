@@ -1,8 +1,9 @@
 <script lang="ts">
-import { computed, defineComponent, inject, PropType } from 'vue';
+import { computed, defineComponent, inject } from 'vue';
+import type { PropType } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
-import { CollapsibleNavigationPage, NavigationPage } from '~/types';
+import type { CollapsibleNavigationPage, NavigationPage } from '~/types';
 import { NavbarKey } from '@inkline/inkline/constants';
 
 export default defineComponent({

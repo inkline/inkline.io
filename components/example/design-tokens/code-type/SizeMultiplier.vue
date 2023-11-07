@@ -1,29 +1,8 @@
 <script lang="ts">
+/* eslint-disable vue/html-closing-bracket-newline */
 import { computed, defineComponent } from 'vue';
 import { useDesignToken } from '~/composables/useDesignToken';
 import { sizeModifierDisplayName } from '~/utils';
-
-const cssVariableSizes = [
-    '2xs',
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    '2xl',
-    '1-2',
-    '1-3',
-    '1-4',
-    '1-5',
-    '2-3',
-    '3-4',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6'
-];
 
 export default defineComponent({
     props: {
@@ -51,7 +30,10 @@ export default defineComponent({
 
 <template>
     <div class="design-token-color-code">
-        <pre><code><ExampleDesignTokensLine :token="token" :value="`calc(var(${ isBasicToken ? `--${propertyName}` : `--${componentName}--${propertyName}`}) * ${ sizeDisplayName })`"
+        <pre><code
+        ><ExampleDesignTokensLine
+            :token="token"
+            :value="`calc(var(${ isBasicToken ? `--${propertyName}` : `--${componentName}--${propertyName}`}) * ${ sizeDisplayName })`"
         /></code></pre>
     </div>
 </template>

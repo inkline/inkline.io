@@ -1,7 +1,8 @@
 <script lang="ts">
-import { defineComponent, PropType, ref } from 'vue';
+import { defineComponent } from 'vue';
+import type { PropType } from 'vue';
 import { useHead, useLocaleHead } from '#imports';
-import { NavigationPage } from '~/types';
+import type { NavigationPage } from '~/types';
 
 export default defineComponent({
     props: {

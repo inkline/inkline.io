@@ -1,4 +1,4 @@
-import { AppsPage } from '~/types';
+import type { AppsPage } from '~/types';
 
 export function useAppsNavigation(): AppsPage[] {
     return [

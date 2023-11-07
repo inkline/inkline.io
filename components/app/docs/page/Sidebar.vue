@@ -1,8 +1,7 @@
 <script lang="ts">
-import { defineComponent, ref, watch, nextTick, onMounted } from 'vue';
-import { useRoute, useRouter } from '#imports';
+import { defineComponent, ref, onMounted } from 'vue';
+import { useRouter } from '#imports';
 import { scrollBehaviorOptions } from '~/constants';
-import { onBeforeRouteLeave } from '#app';
 import { docsEventBus } from '~/utils';
 
 interface TableOfContentsEntry {
@@ -16,7 +15,6 @@ const docsPageSelector = '#page > div';
 export default defineComponent({
     setup() {
         const router = useRouter();
-        const route = useRoute();
         const title = ref();
         const titleId = ref();
         const tableOfContents = ref<TableOfContentsEntry[]>([]);

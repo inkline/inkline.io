@@ -1,4 +1,5 @@
 <script lang="ts">
+/* eslint-disable vue/html-closing-bracket-newline */
 import { computed, defineComponent } from 'vue';
 
 export default defineComponent({
@@ -27,21 +28,18 @@ export default defineComponent({
 
 <template>
     <div class="design-token-color-code">
-        <pre><code
-            v-if="isComposedToken"
-        ><ExampleDesignTokensLine :token="`--border-top-${propertyName}`"
-        /><ExampleDesignTokensLine :token="`--border-right-${propertyName}`"
-        /><ExampleDesignTokensLine :token="`--border-bottom-${propertyName}`"
-        /><ExampleDesignTokensLine :token="`--border-left-${propertyName}`"
-        /><ExampleDesignTokensLine
-            :token="token"
-            :value="`
+        <pre><code v-if="isComposedToken"
+><ExampleDesignTokensLine :token="`--border-top-${propertyName}`"
+/><ExampleDesignTokensLine :token="`--border-right-${propertyName}`"
+/><ExampleDesignTokensLine :token="`--border-bottom-${propertyName}`"
+/><ExampleDesignTokensLine :token="`--border-left-${propertyName}`"
+/><ExampleDesignTokensLine
+        :token="token"
+        :value="`
     var(--border-top-${propertyName})
     var(--border-right-${propertyName})
     var(--border-bottom-${propertyName})
     var(--border-left--${propertyName})`"
-        /></code><code
-            v-else
-        ><ExampleDesignTokensLine :token="token" /></code></pre>
+        /></code><code v-else><ExampleDesignTokensLine :token="token" /></code></pre>
     </div>
 </template>

@@ -1,4 +1,4 @@
-import { NavigationPage } from '~/types';
+import type { NavigationPage } from '~/types';
 
 export function useSidebarNavigation(): NavigationPage[] {
     return [

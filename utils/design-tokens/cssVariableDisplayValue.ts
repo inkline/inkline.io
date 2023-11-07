@@ -1,4 +1,4 @@
-import { ComponentManifestCssVariable } from '@inkline/inkline/types';
+import type { ComponentManifestCssVariable } from '@inkline/inkline';
 
 export function parseDesignTokenValue(variable: ComponentManifestCssVariable): string {
     let resolvedValue;

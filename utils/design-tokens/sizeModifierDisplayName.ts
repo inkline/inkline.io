@@ -1,4 +1,4 @@
-import { Ref } from 'vue';
+import type { Ref } from 'vue';
 import { sizeModifiersList } from '~/constants';
 
 export function sizeModifierDisplayName(modifier: Ref<string | undefined>) {

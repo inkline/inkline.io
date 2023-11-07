@@ -1,4 +1,5 @@
 <script lang="ts">
+/* eslint-disable vue/html-closing-bracket-newline, vue/html-indent */
 import { defineComponent } from 'vue';
 
 export default defineComponent({

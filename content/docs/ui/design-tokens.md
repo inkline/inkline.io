@@ -615,7 +615,7 @@ Inkline's configuration also provides variables for common elements such as the 
 This value sets the background color of the body element.
 ::
 
-::ContentDesignToken{ title="Body Color" token="--body--color" }
+::ContentDesignToken{ title="Body Color" token="--body--color" type="generic" }
 This value sets the text color of the body element.
 ::
 
@@ -723,23 +723,23 @@ The value that is used to compute size-based variants of components, such as fon
     ::
 ::
 
-::ContentDesignToken{ title="0% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-0" }
+::ContentDesignToken{ title="0% Size Percentage" icon="ic:baseline-percentage" token="--size-percentages-0" type="generic" }
 The predefined value used for 0% size percentages.
 ::
 
-::ContentDesignToken{ title="25% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-25" }
+::ContentDesignToken{ title="25% Size Percentage" icon="ic:baseline-percentage" token="--size-percentages-25" type="generic" value="25%" }
 The predefined value used for 25% size percentages.
 ::
 
-::ContentDesignToken{ title="50% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-50" }
+::ContentDesignToken{ title="50% Size Percentage" icon="ic:baseline-percentage" token="--size-percentages-50" type="generic" }
 The predefined value used for 50% size percentages.
 ::
 
-::ContentDesignToken{ title="75% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-75" }
+::ContentDesignToken{ title="75% Size Percentage" icon="ic:baseline-percentage" token="--size-percentages-75" type="generic" }
 The predefined value used for 75% size percentages.
 ::
 
-::ContentDesignToken{ title="100% Size Percentage" icon="ic:baseline-percentage" token="--size-percentage-100" }
+::ContentDesignToken{ title="100% Size Percentage" icon="ic:baseline-percentage" token="--size-percentages-100" type="generic" }
 The predefined value used for 100% size percentages.
 ::
 

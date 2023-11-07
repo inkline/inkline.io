@@ -126,59 +126,49 @@ You can provide a custom header and footer for the select menu using the `header
 ::
 
 
+
 ### Rendering
 
-#### Value by Path
-Use the `label` property to define the path to an option value of your choice to use as label. Nested value paths are also supported.
-
-Let's see an example. Given the data structure below:
-
-~~~js
-const options = [
-    {
-        id: 0,
-        name: 'John Doe',
-        address: {
-            city: 'London'
-        }
-    }
-];
-~~~
-
-The expected results are:
-
-- `name` -> `John Doe`
-- `address.city` -> `London`
-
+#### Expression
+Expressions are strings that can be interpolated using the `{{ }}` syntax.
 
 ::ContentTabs
 #preview
-:ContentPreview{src="/components/ISelect/examples/rendering-value-by-path"}
+:ContentPreview{src="/components/ISelect/examples/render-expression"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-value-by-path.raw.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/render-expression.raw.vue" lang="vue"} -->
 ::
-
 
 #### Render Function
-If you assign a render method to the `label` property, you can easily construct your label using the option object's fields.
+Render functions are functions that return a string or `VNode`. They receive the option being rendered as an argument.
 
 ::ContentTabs
 #preview
-:ContentPreview{src="/components/ISelect/examples/rendering-render-function"}
+:ContentPreview{src="/components/ISelect/examples/render-function"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-render-function.raw.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/render-function.raw.vue" lang="vue"} -->
 ::
 
-
-#### Scoped Slot
-For more advanced option label designs, you can use the `#option` scoped slot to render each select option. The `label` property is still required for the input value and autocomplete functionality.
+#### Component
+You can also use a component to render each option. The component will receive the option being rendered as a prop named `ctx` (context).
 
 ::ContentTabs
 #preview
-:ContentPreview{src="/components/ISelect/examples/rendering-scoped-slot"}
+:ContentPreview{src="/components/ISelect/examples/render-component"}
 #vue
-<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/rendering-scoped-slot.raw.vue" lang="vue"} -->
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/render-component.raw.vue" lang="vue"} -->
 ::
+
+#### Render Per Option
+Each option's `label` field is a `Renderable` property. This means you can also use a render function to render each option's label.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/render-function-per-option"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/components/ISelect/examples/render-function-per-option.raw.vue" lang="vue"} -->
+::
+
 
 
 ### Props

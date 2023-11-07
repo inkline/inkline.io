@@ -34,26 +34,26 @@ export default defineComponent({
     <div class="design-token-color-code">
         <pre><code
             v-if="isComposedToken"
-        ><ExampleDesignTokensLine
-            :token="`--border-top-left-radius${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--border-top-left-radius) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="`--border-top-right-radius${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--border-top-right-radius) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="`--border-bottom-right-radius${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--border-bottom-right-radius) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="`--border-bottom-left-radius${ modifierName ? `-${modifierName}` : ''}`"
-            :value="modifierName ? `calc(var(--border-bottom-left-radius) * ${sizeDisplayName})` : ''"
-        /><ExampleDesignTokensLine
-            :token="token"
-            :value="`
+><ExampleDesignTokensLine
+    :token="`--border-top-left-radius${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--border-top-left-radius) * ${sizeDisplayName})` : ''"
+/><ExampleDesignTokensLine
+    :token="`--border-top-right-radius${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--border-top-right-radius) * ${sizeDisplayName})` : ''"
+/><ExampleDesignTokensLine
+    :token="`--border-bottom-right-radius${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--border-bottom-right-radius) * ${sizeDisplayName})` : ''"
+/><ExampleDesignTokensLine
+    :token="`--border-bottom-left-radius${ modifierName ? `-${modifierName}` : ''}`"
+    :value="modifierName ? `calc(var(--border-bottom-left-radius) * ${sizeDisplayName})` : ''"
+/><ExampleDesignTokensLine
+    :token="token"
+    :value="`
     var(--border-top-left-radius${ modifierName ? `-${modifierName}` : ''})
     var(--border-top-right-radius${ modifierName ? `-${modifierName}` : ''})
     var(--border-bottom-right-radius${ modifierName ? `-${modifierName}` : ''})
     var(--border-bottom-left-radius${ modifierName ? `-${modifierName}` : ''})`"
-        /></code><code
+/></code><code
             v-else
         ><ExampleDesignTokensLine :token="token" /></code></pre>
     </div>

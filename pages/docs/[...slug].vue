@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { definePageMeta, useContent, useContentHead } from '#imports';
+import { definePageMeta } from '#imports';
 import { docsEventBus } from '~/utils';
 
 export default defineComponent({

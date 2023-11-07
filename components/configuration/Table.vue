@@ -1,6 +1,7 @@
 <script lang="ts">
-import { computed, defineComponent, PropType, VNode } from 'vue';
-import { ConfigurationTableColumn } from '~/types';
+import { computed, defineComponent } from 'vue';
+import type { PropType, VNode } from 'vue';
+import type { ConfigurationTableColumn } from '~/types';
 
 export default defineComponent({
     props: {
@@ -85,8 +86,8 @@ export default defineComponent({
                         prerenderedTdValues[row.name][column.key]
                     }}</code>
                     <component
-                        v-else-if="typeof prerenderedTdValues[row.name][column.key] === 'object'"
                         :is="prerenderedTdValues[row.name][column.key]"
+                        v-else-if="typeof prerenderedTdValues[row.name][column.key] === 'object'"
                     />
                     <span v-else>{{ prerenderedTdValues[row.name][column.key] }}</span>
                 </IColumn>

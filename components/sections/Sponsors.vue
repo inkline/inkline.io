@@ -1,16 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
-import vueSchoolImageLight from '~/assets/images/sponsors/vueschool-light.png';
-import vueSchoolImageDark from '~/assets/images/sponsors/vueschool-dark.png';
-import nuxtImageLight from '~/assets/images/sponsors/nuxt-light.png';
-import nuxtImageDark from '~/assets/images/sponsors/nuxt-dark.png';
-import DigitalOceanImageLight from '~/assets/images/sponsors/digitalocean-light.png';
-import DigitalOceanImageDark from '~/assets/images/sponsors/digitalocean-dark.png';
-import icons8ImageLight from '~/assets/images/sponsors/icons8-light.png';
-import icons8ImageDark from '~/assets/images/sponsors/icons8-dark.png';
-// import tideliftImageLight from '~/assets/images/sponsors/tidelift-light.png';
-// import tideliftImageDark from '~/assets/images/sponsors/tidelift-dark.png';
 
 const sponsors = [
     {

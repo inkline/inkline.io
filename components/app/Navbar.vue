@@ -116,9 +116,9 @@ export default defineComponent({
                     </IDropdown>
                     <INavItem
                         v-else
-                        :class="{ '-active': isActiveItem[page.url] }"
-                        :key="page.title"
                         :id="page.id"
+                        :key="page.title"
+                        :class="{ '-active': isActiveItem[page.url] }"
                         :to="localePath(page.url)"
                         @click="onLinkClick(page.url)"
                     >

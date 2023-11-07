@@ -1,4 +1,5 @@
-import { computed, Ref } from 'vue';
+import { computed } from 'vue';
+import type { Ref } from 'vue';
 import { modifiersList } from '~/constants';
 
 export function useDesignToken(token: Ref<string>) {
@@ -14,7 +15,10 @@ export function useDesignToken(token: Ref<string>) {
         let name = rawPropertyName.value;
 
         modifiersList.forEach((modifier) => {
-            name = name.replace(`-${modifier}`, '');
+            const modifierPart = `-${modifier}`;
+            if (name.endsWith(modifierPart)) {
+                name = name.replace(modifierPart, `-${modifier}`);
+            }
         });
 
         return name;

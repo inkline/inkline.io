@@ -1,5 +1,6 @@
 <script lang="ts">
-import { defineComponent, PropType, toRef } from 'vue';
+import { defineComponent, toRef } from 'vue';
+import type { PropType } from 'vue';
 import { useManifest } from '~/composables';
 import type { ComponentManifestProp } from '@inkline/inkline';
 

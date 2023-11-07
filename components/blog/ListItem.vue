@@ -1,7 +1,8 @@
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue';
+import { computed, defineComponent } from 'vue';
+import type { PropType } from 'vue';
 import { format } from 'date-fns';
-import { Article } from '~/types/blog';
+import type { Article } from '~/types/blog';
 
 export default defineComponent({
     props: {

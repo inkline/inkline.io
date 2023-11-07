@@ -1,16 +1,6 @@
 <script lang="ts">
-import {
-    RenderFunction,
-    DefineComponent,
-    defineComponent,
-    PropType,
-    ref,
-    Component,
-    h,
-    computed,
-    onMounted,
-    markRaw
-} from 'vue';
+import { defineComponent, ref, h, computed, onMounted, markRaw } from 'vue';
+import type { Component } from 'vue';
 import { ILoader } from '@inkline/inkline';
 
 export default defineComponent({

@@ -32,15 +32,20 @@ export default defineComponent({
             return cssVariable.value;
         });
 
+        const isResolvedCssVariableDefined = computed(() => {
+            return typeof resolvedCssVariable.value !== 'undefined';
+        });
+
         return {
-            resolvedCssVariable
+            resolvedCssVariable,
+            isResolvedCssVariableDefined
         };
     }
 });
 </script>
 
 <template>
-    <span class="design-token-color-value" v-show="resolvedCssVariable">{{
+    <span v-show="isResolvedCssVariableDefined" class="design-token-color-value">{{
         resolvedCssVariable
     }}</span>
 </template>

@@ -23,5 +23,5 @@ export function useTelemetry() {
         analytics.identify(eventName, properties);
     }
 
-    return { track };
+    return { track, identify };
 }

@@ -1,4 +1,4 @@
-import { NavigationPage } from '~/types';
+import type { NavigationPage } from '~/types';
 import { useI18n } from 'vue-i18n';
 import { AppSidebarNavigation } from '#components';
 import { markRaw } from 'vue';
