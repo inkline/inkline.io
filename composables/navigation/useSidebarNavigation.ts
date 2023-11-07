@@ -260,33 +260,6 @@ export function useSidebarNavigation(): NavigationPage[] {
             active: /\/docs\/forms\/components(\/.+)?/,
             children: [
                 {
-                    title: 'Autocomplete',
-                    hidden: true,
-                    children: [
-                        {
-                            title: 'Overview',
-                            url: '/docs/forms/components/autocomplete',
-                            index: true
-                        },
-                        {
-                            title: 'Pagination',
-                            url: '/docs/forms/components/autocomplete/pagination'
-                        },
-                        {
-                            title: 'Filtering',
-                            url: '/docs/forms/components/autocomplete/filtering'
-                        },
-                        {
-                            title: 'Rendering',
-                            url: '/docs/forms/components/autocomplete/rendering'
-                        },
-                        {
-                            title: 'Advanced',
-                            url: '/docs/forms/components/autocomplete/advanced'
-                        }
-                    ]
-                },
-                {
                     title: 'Checkbox',
                     children: [
                         {

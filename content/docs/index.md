@@ -55,7 +55,7 @@ Inkline provides a great User Interface, User Experience, and Developer Experien
         ::
     ::
     ::ContentColumn{ md="6" }
-        ::ContentFeatureCard{ to="/docs/utilities/border" title="Utilities" icon="material-symbols:format-paint" }
+        ::ContentFeatureCard{ to="/docs/utilities/css/border" title="Utilities" icon="material-symbols:format-paint" }
         Tailwind style utility classes
         ::
     ::

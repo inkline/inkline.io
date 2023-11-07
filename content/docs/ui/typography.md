@@ -66,7 +66,7 @@ While not shown above, you can also use `<b>` and `<i>` in HTML5. `<b>` is meant
 without adding additional semantics, while `<i>` is mostly for voice, technical terms, etc.
 
 ### Text Utilities
-You can change text alignment, transform, style, weight, and color with text utilities and [color utilities](/docs/utilities/color).
+You can change text alignment, transform, style, weight, and color with text utilities and [color utilities](/docs/utilities/css/color).
 
 #### Text Alignment
 You can easily realign text to components with text alignment classes.

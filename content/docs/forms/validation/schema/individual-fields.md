@@ -108,7 +108,7 @@ Providing a default initial value for a validation schema field can be done by p
 ### Validators 
 Validators are defined as an array of objects or strings. Each validator has specific properties that can be used to configure the validation rule.
 
-[See the list of available validators.](/docs/form-validation/validators)
+[See the list of available validators.](/docs/forms/validation/validators)
 
 
 ```ts
