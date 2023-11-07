@@ -28,7 +28,7 @@
         <img src="https://img.shields.io/npm/v/@inkline/inkline.svg" alt="npm version">
     </a>
     <a href="https://github.com/inkline/inkline/actions">
-        <img src="https://github.com/inkline/inkline.io/workflows/Build/badge.svg" alt="Build">
+        <img src="https://github.com/inkline/inkline.io/workflows/Production Deployment/badge.svg" alt="Production Deployment">
     </a>
     <a href="https://www.npmjs.com/package/@inkline/inkline">
         <img src="https://img.shields.io/npm/dm/@inkline/inkline.svg" alt="Downloads">
