@@ -149,7 +149,8 @@ export default defineNuxtConfig({
      * @docs https://image.nuxt.com/get-started/configuration
      */
     image: {
-        domains: ['next.inkline.io', 'inkline.io']
+        provider: 'ipx',
+        domains: ['*.inkline.io', 'inkline.io']
     },
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config/#vite
