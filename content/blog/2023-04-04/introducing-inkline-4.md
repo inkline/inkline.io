@@ -2,7 +2,7 @@
 title: Introducing Inkline 4 - Inkline
 description: Discover Inkline 4, the next-gen Vue.js 3 UI Components library with exciting features like Design Tokens, Configuration File, Inkline CLI, and more. Explore the future of developer-friendly, accessible, and customizable design systems through Inkline!
 image: 
-    src: /images/blog/introducing-inkline-4.webp
+    src: /assets/images/blog/introducing-inkline-4.webp
     alt: Introducing Inkline 4
     width: 1280
     height: 600
