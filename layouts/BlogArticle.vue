@@ -51,7 +51,7 @@ export default defineComponent({
         img {
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
-            max-width: calc(100% + 144px);
+            width: calc(100% + 144px);
             margin-bottom: var(--margin-bottom-3);
         }
     }
