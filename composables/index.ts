@@ -3,4 +3,6 @@ export * from './useErrorHandler';
 export * from './useManifest';
 export * from './usePageMeta';
 export * from './useTelemetry';
-export * from './navigation';
+export * from './useAppsNavigation';
+export * from './useNavbarNavigation';
+export * from './useSidebarNavigation';
