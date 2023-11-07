@@ -5,7 +5,7 @@
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
-        "pregenerate": "ts-node scripts/pregenerate.ts",
+        "pregenerate": "ts-node --esm scripts/pregenerate.mts",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",

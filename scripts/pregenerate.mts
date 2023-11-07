@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+import path from 'path';
+import fs from 'fs';
+import glob from 'fast-glob';
+import { fileURLToPath } from 'url';
 
-const path = require('path');
-const fs = require('fs');
-const glob = require('fast-glob');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
