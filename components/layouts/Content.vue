@@ -55,6 +55,9 @@ export default defineComponent({
                 </IContainer>
             </ILayoutContent>
         </ILayout>
+        <ILayoutFooter v-if="$slots.footer">
+            <slot name="footer" />
+        </ILayoutFooter>
     </ILayout>
 </template>
 

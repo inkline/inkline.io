@@ -15,6 +15,9 @@ export default defineComponent({
 <template>
     <LayoutsContent type="blog" :sidebar="false">
         <slot />
+        <template #footer>
+            <AppFooter />
+        </template>
     </LayoutsContent>
 </template>
 

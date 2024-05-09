@@ -52,30 +52,31 @@ export default defineComponent({
                         class="_display:flex _align-items:center _justify-content:center _flex-wrap:wrap"
                     >
                         Designed and built with
-                        <Icon name="fa-solid:heart" class="_margin-x:1/2" />
-                        by
-                        <a
-                            href="https://github.com/alexgrozav"
-                            target="_blank"
-                            rel="noopener"
-                            class="_margin-left:1/2"
-                        >
-                            @alexgrozav
-                        </a>
+                        <Icon name="fa-solid:heart" class="_margin-left:1/2" />
                     </div>
                 </IColumn>
             </IRow>
-            <IRow class="_text:muted _margin-top:1">
-                <IColumn> Copyright &copy; 2017-{{ year }}, Inkline </IColumn>
+            <IRow class="_margin-top:1" center>
+                <IColumn>
+                    <INav>
+                        <INavItem> &copy; 2017-{{ year }}, Inkline </INavItem>
+                        <INavItem class="_padding:0!">&middot;</INavItem>
+                        <INavItem to="/privacy">Privacy</INavItem>
+                        <INavItem class="_padding:0!">&middot;</INavItem>
+                        <INavItem to="/license">License</INavItem>
+                        <INavItem class="_padding:0!">&middot;</INavItem>
+                        <INavItem to="/terms">Terms</INavItem>
+                    </INav>
+                </IColumn>
             </IRow>
         </IContainer>
     </footer>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@inkline/inkline/css/mixins';
 
-footer {
+.app-footer {
     background: var(--color-gray-900);
     color: var(--color-white);
     padding: var(--padding-top-4) 0 var(--padding-bottom-4);
@@ -101,6 +102,22 @@ footer {
 
             &:active {
                 opacity: 0.6;
+            }
+        }
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .nav-item {
+            --nav--color: var(--text-color-weakest);
+
+            &[href] {
+                &:hover {
+                    --nav--color: var(--color-white);
+                }
             }
         }
     }

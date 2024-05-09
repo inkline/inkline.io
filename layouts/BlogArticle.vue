@@ -1,18 +1,34 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
+import { useRoute } from 'vue-router';
 
 export default defineComponent({
     setup() {
-        return {};
+        const route = useRoute();
+        const layoutOptions = computed(
+            () => route.meta.layoutOptions as { color: 'default' | 'primary' }
+        );
+        const classes = computed(() => {
+            return {
+                [`-${layoutOptions.value?.color || 'default'}`]: true
+            };
+        });
+
+        return {
+            classes
+        };
     }
 });
 </script>
 
 <template>
-    <LayoutsContent type="blog-article" :sidebar="false">
+    <LayoutsContent :class="classes" type="blog-article" :sidebar="false">
         <article class="blog-article">
             <slot />
         </article>
+        <template #footer>
+            <AppFooter />
+        </template>
     </LayoutsContent>
 </template>
 
@@ -28,6 +44,24 @@ export default defineComponent({
 
     .dark-theme & {
         background: var(--color-dark-shade-100);
+    }
+
+    &.-primary {
+        background: var(--color-primary);
+
+        #page {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            a,
+            li {
+                color: var(--contrast-text-color-primary);
+            }
+        }
     }
 }
 
