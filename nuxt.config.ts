@@ -13,7 +13,8 @@ export default defineNuxtConfig({
         '@nuxtjs/sitemap',
         '@vite-pwa/nuxt',
         '@unocss/nuxt',
-        'nuxt-icon'
+        'nuxt-icon',
+        '@nuxthq/studio'
     ],
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config#payloadextraction
