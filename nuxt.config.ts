@@ -10,10 +10,10 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@inkline/plugin/nuxt',
         '@nuxtjs/i18n',
+        '@nuxtjs/sitemap',
         '@vite-pwa/nuxt',
         '@unocss/nuxt',
-        'nuxt-icon',
-        'nuxt-simple-sitemap'
+        'nuxt-icon'
     ],
     /**
      * @docs https://nuxt.com/docs/api/configuration/nuxt-config#payloadextraction
@@ -195,7 +195,6 @@ export default defineNuxtConfig({
             ]
         }
     },
-
     /**
      * @docs https://nuxtseo.com/site-config/getting-started/how-it-works
      */
@@ -210,5 +209,9 @@ export default defineNuxtConfig({
         plugins: {
             'postcss-preset-env': {}
         }
-    }
+    },
+    /**
+     * @docs https://nuxt.com/docs/api/nuxt-config#srcdir
+     */
+    srcDir: 'src'
 });

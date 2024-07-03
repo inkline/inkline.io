@@ -1,0 +1,188 @@
+---
+title: Select - Inkline
+description: Form component used for selecting a value from a large list of options, with autocomplete and pagination support. 
+---
+
+# Select
+## Form component used for selecting a value from a large list of options, with autocomplete and pagination support
+
+The most basic use case for a select component is to have all the select options predefined using the `options` property. This component allows you to easily choose from a set of values and display a computed option label of your choice.
+
+Here are some considerations to be made:
+- Each option must be an Object `{}`
+- Each option must have a unique identifier field, `id` by default
+- The selected `modelValue` will be the id of the option
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/basic"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/basic.raw.vue" lang="vue"} -->
+::
+
+
+### Disabled State
+Setting the `disabled` property will disable all interactions with the select component.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/disabled"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/disabled.raw.vue" lang="vue"} -->
+::
+
+You can also disable individual options by setting the option's `disabled` field to `true`.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/disabled-option"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/disabled-option.raw.vue" lang="vue"} -->
+::
+
+
+### Readonly State
+Setting the `readonly` property will disable all interactions with the select component, except being able to focus the select.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/readonly"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/readonly.raw.vue" lang="vue"} -->
+::
+
+
+### Clearable
+If you need to be able to quickly clear the value of an select, you can add the `clearable` property to the select component.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/clearable"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/clearable.raw.vue" lang="vue"} -->
+::
+
+
+### Prefix and Suffix
+Inkline allows you to easily add a prefix or suffix to your select. Using prefixes and suffixes you can, for example, indicate 
+your select type using an icon or text. 
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/prefix-suffix"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/prefix-suffix.raw.vue" lang="vue"} -->
+::
+
+
+### Prepend and Append
+You can add additional content such as select fields, buttons or plain text, to either side of the select by using prepend and append slots.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/prepend-append-text"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/prepend-append-text.raw.vue" lang="vue"} -->
+::
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/prepend-append-button"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/prepend-append-button.raw.vue" lang="vue"} -->
+::
+
+
+### Color Variants
+You can use the `color` property to set a `light` or `dark` color for your select.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/color-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/color-variants.raw.vue" lang="vue"} -->
+::
+
+
+### Size Variants
+You're able to use the `size` modifier to control the size of your select, using one of the available sizes: `sm`, `md`, and `lg`. The default size is set to `md`.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/size-variants"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/size-variants.raw.vue" lang="vue"} -->
+::
+
+
+### Header and Footer
+You can provide a custom header and footer for the select menu using the `header` and `footer` slots.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/header-and-footer"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/header-and-footer.raw.vue" lang="vue"} -->
+::
+
+
+
+### Rendering
+
+#### Expression
+Expressions are strings that can be interpolated using the `{{ }}` syntax.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/render-expression"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/render-expression.raw.vue" lang="vue"} -->
+::
+
+#### Render Function
+Render functions are functions that return a string or `VNode`. They receive the option being rendered as an argument.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/render-function"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/render-function.raw.vue" lang="vue"} -->
+::
+
+#### Component
+You can also use a component to render each option. The component will receive the option being rendered as a prop named `ctx` (context).
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/render-component"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/render-component.raw.vue" lang="vue"} -->
+::
+
+#### Render Per Option
+Each option's `label` field is a `Renderable` property. This means you can also use a render function to render each option's label.
+
+::ContentTabs
+#preview
+:ContentPreview{src="/components/ISelect/examples/render-function-per-option"}
+#vue
+<!-- Autodocs{src="@inkline/inkline/lib/components/ISelect/examples/render-function-per-option.raw.vue" lang="vue"} -->
+::
+
+
+
+### Props
+::ContentComponentProps{component="ISelect"}
+::
+
+### Slots
+::ContentComponentSlots{component="ISelect"}
+::
+
+### Events
+::ContentComponentEvents{component="ISelect"}
+::
+
+### Design Tokens
+::ContentComponentDesignTokens{component="ISelect"}
+::

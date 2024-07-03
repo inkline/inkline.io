@@ -38,6 +38,7 @@ dist-ssr
 # Generated
 src/components.d.ts
 public/sitemap.xml
+.inkline
 
 *.log*
 .nuxt
